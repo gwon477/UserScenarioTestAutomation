@@ -1,0 +1,771 @@
+# ScenarioForge Pi Runtime 및 테스트 수행 통합 설계
+
+- 작성일: 2026-08-25
+- 상태: 설계 원칙 승인, 작성 문서 사용자 검토 대기
+- 대상 브랜치: `dev`
+- 대상 제품: ScenarioForge 설치형 데스크톱 솔루션
+
+## 1. 문서 목적
+
+ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 뒤, 해당 LLM을 Pi Agent Runtime 위에서 실행하여 `SRC → FACT → WIKI → SCENARIO` 정보 셋을 생성하고 시나리오 질의, 순차 테스트 수행, 증적 관리까지 이어가는 전체 구조를 정의한다.
+
+이 문서는 다음 두 구조를 함께 확정한다.
+
+1. ScenarioForge 애플리케이션 소스의 목표 디렉터리와 패키지 경계
+2. 사용자가 선택한 프로젝트에 생성되는 `.scenarioforge/` 런타임·세션·산출물 구조
+
+실제 역할별 하네스 문구, 스킬의 세부 지침, 서브에이전트 프롬프트와 참조 규칙은 기반 구조가 완성된 뒤 마지막 구현 단계에서 별도로 설계한다.
+
+## 2. 제품 목표
+
+사용자는 다음 흐름을 끊김 없이 수행할 수 있어야 한다.
+
+1. 로컬 프로젝트 디렉터리를 선택한다.
+2. LLM provider, endpoint, model, credential을 설정한다.
+3. ScenarioForge가 프로젝트 전용 Pi 작업환경과 세션을 준비한다.
+4. Pi 세션이 프로젝트 구조에 맞춰 도구·스킬·서브에이전트를 동적으로 사용한다.
+5. 검증된 `SRC`, `FACT`, `WIKI`, `SCENARIO` 산출물을 프로젝트 내부에 저장한다.
+6. 시나리오 도출 화면에서 ID를 기준으로 질의한다.
+7. 하나 이상의 시나리오를 선택해 순차 테스트를 실행한다.
+8. 각 스텝의 화면과 성공·실패·판정 불가 원인을 증적으로 확인한다.
+9. 테스트가 실행 중이어도 시나리오, 테스트 센터, 증적 화면을 자유롭게 오간다.
+10. 앱 종료 또는 프로세스 장애 후 프로젝트 상태와 세션을 복구한다.
+
+## 3. 범위
+
+### 3.1 포함
+
+- Electron 앱에 번들된 Pi Runtime과 프로젝트별 Resource Bundle 연결
+- 프로젝트 초기화, runtime manifest, 버전 검사 및 마이그레이션 경계
+- Pi 세션 생성·복구·분리와 도메인 이벤트 변환
+- 고정된 분석 단계와 동적인 Pi 작업의 결합
+- ID 기반 산출물 인덱스
+- 순차 테스트 대기열과 결정론적 TestVista Runner 경계
+- 스텝별 화면 캡처와 실패 추가 증적
+- 테스트 센터, 증적 상세, 자유로운 화면 전환
+- 선택 프로젝트 내부의 로컬 저장 구조
+- 경로 제한, credential 분리, 개인정보 마스킹, 증적 무결성
+
+### 3.2 제외
+
+- LangGraph 도입
+- 분산 Runner와 원격 실행 노드
+- 클라우드 동기화
+- 다중 사용자의 동시 프로젝트 편집
+- 운영체제별 installer, code signing, 자동 업데이트의 상세 구현
+- 실제 하네스 문구, 스킬 콘텐츠, 역할별 서브에이전트 프롬프트
+
+## 4. 확정된 제품 결정
+
+| 영역 | 결정 |
+| --- | --- |
+| 에이전트 구조 | Pi-first 하이브리드 구조 |
+| Pi 배치 | 앱에 검증된 버전을 번들하고 프로젝트에는 리소스·세션·산출물만 저장 |
+| 분석 제어 | 외부 도메인 단계는 고정, 단계 내부 작업은 Pi가 동적으로 결정 |
+| 애플리케이션 상태 | Pi 메시지가 아니라 manifest와 도메인 이벤트가 원본 |
+| 세션 | 사용자에게는 하나의 프로젝트, 내부적으로 분석·질의·테스트 계획 세션 분리 |
+| 질의응답 위치 | 시나리오 도출 페이지에서만 제공 |
+| 테스트 실행 | 프로젝트별 하나의 Runner가 시나리오를 순차 실행 |
+| 실패 처리 | 실패 케이스의 후속 스텝은 건너뛰고 다음 대기 케이스를 계속 실행 |
+| 성공 증적 | 각 스텝의 동작 완료 시 화면 1장 저장 |
+| 실패 증적 | 동작 완료 화면, 실패 직전 화면, 실패 시점 화면, 오류 컨텍스트 저장 |
+| 재실행 | 기존 기록을 덮어쓰지 않고 새 `executionId` 생성 및 이전 실행과 연결 |
+| 중단 | 수집된 증적을 보존하고 현재·잔여 케이스를 중단 처리 |
+| 보존 | 자동 삭제하지 않으며 실행 회차 단위의 명시적 삭제만 허용 |
+| 결과 상태 | 성공, 실패, 판정 불가, 중단됨을 구분 |
+
+## 5. 최상위 아키텍처
+
+```text
+Electron Renderer
+        │
+        │ typed IPC commands / domain events
+        ▼
+Electron Main — Application Orchestrator
+        ├── ProjectBootstrapper
+        ├── CredentialStore
+        ├── PiProcessManager
+        ├── AnalysisCoordinator
+        ├── TestCoordinator
+        └── ArtifactQueryService
+                │
+                ├──────────────┐
+                ▼              ▼
+       Pi UtilityProcess    TestVista UtilityProcess
+       PiRuntimeHost        Deterministic Runner
+        ├── sessions         ├── browser control
+        ├── resources        ├── step verdict
+        ├── tools            ├── screenshots
+        └── events           └── trace/log
+                │              │
+                └──────┬───────┘
+                       ▼
+        selected-project/.scenarioforge/
+        manifests / sessions / artifacts / evidence / index
+```
+
+### 5.1 권한 경계
+
+- Renderer에는 Node.js, 파일 시스템, 프로세스 실행 권한을 노출하지 않는다.
+- Electron Main은 요청 검증, 프로세스 수명, 경로 정책, credential 전달을 담당한다.
+- Pi와 TestVista는 서로 다른 UtilityProcess에서 실행한다.
+- Pi는 프로젝트 분석과 질의를 담당하며 실제 테스트 실행 상태의 원본이 아니다.
+- TestVista는 고정된 테스트 계획을 실행하며 LLM의 자유 응답으로 판정을 확정하지 않는다.
+- 모든 파일 접근은 선택 프로젝트와 `.scenarioforge/`의 허용 경로로 제한한다.
+
+## 6. 프로젝트 초기화
+
+### 6.1 사용자 흐름
+
+```text
+프로젝트 선택
+  → 모델 설정
+  → 프로젝트 신뢰·범위 확인
+  → .scenarioforge manifest 검사
+  → Runtime Resource Bundle 설치 또는 마이그레이션
+  → 세션·인덱스·산출물 저장소 준비
+  → Pi 세션 생성 또는 복구
+  → 프로젝트 작업대
+```
+
+### 6.2 ProjectBootstrapper 책임
+
+- 선택 경로의 실재 여부, 디렉터리 여부, 읽기·쓰기 가능 여부 검사
+- symlink와 `..`를 포함한 경로 이탈 방지
+- 프로젝트 ID 생성 또는 기존 ID 복구
+- `.scenarioforge/manifest.json` 스키마와 runtime version 검사
+- 동일 버전 초기화의 멱등성 보장
+- 마이그레이션 전에 manifest와 상태 파일의 복구 사본 생성
+- runtime resource를 임시 디렉터리에 작성하고 검증 후 원자적으로 교체
+- 세션 디렉터리와 산출물 인덱스 준비
+- bootstrap 도메인 이벤트 발행
+
+### 6.3 프로젝트 파일 보호
+
+- 사용자의 소스 파일을 초기화 과정에서 변경하지 않는다.
+- 프로젝트 `.gitignore`를 자동 수정하지 않는다.
+- `.scenarioforge/`의 커밋 여부는 사용자에게 별도 안내하고 이후 설정으로 다룬다.
+- 프로젝트가 이미 `.scenarioforge/`를 포함하면 소유권과 버전을 확인한 뒤 재사용한다.
+- 호환되지 않는 버전은 조용히 덮어쓰지 않고 마이그레이션 필요 상태로 표시한다.
+
+## 7. LLM과 Pi Runtime
+
+### 7.1 모델 구성
+
+사용자가 설정한 다음 값으로 Pi의 모델 런타임을 구성한다.
+
+- provider
+- endpoint
+- model ID
+- API credential reference
+- thinking level 또는 제품이 허용하는 추론 설정
+
+provider, endpoint, model ID는 애플리케이션 설정에 보존할 수 있다. API key 원문은 프로젝트에 저장하지 않는다. 운영체제 보안 저장소를 사용할 수 있으면 credential reference만 저장하고, 사용할 수 없으면 현재 앱 세션 메모리에만 유지하며 재시작 후 재입력을 요구한다.
+
+### 7.2 PiRuntimeHost
+
+PiRuntimeHost는 Pi SDK를 별도 UtilityProcess에 내장한다.
+
+- 프로젝트 루트를 `cwd`로 사용
+- 프로젝트별 SessionManager 사용
+- ScenarioForge ResourceLoader로 runtime resource 경로를 명시
+- 기본 파일·명령 도구를 경로 정책과 명령 정책으로 감싼다.
+- 세션 이벤트를 구독해 내부 이벤트를 ScenarioForge 도메인 이벤트로 변환한다.
+- `prompt`, `steer`, `followUp`, `abort`, `compact`, `dispose` 수명을 관리한다.
+- Pi 프로세스가 종료되면 애플리케이션 상태와 세션 파일을 대조해 복구 가능 상태를 계산한다.
+
+### 7.3 SDK와 RPC 선택
+
+- Pi와 애플리케이션이 모두 TypeScript/Node.js 기반이므로 UtilityProcess 내부에서는 SDK를 사용한다.
+- Electron Main과 Pi UtilityProcess 사이에는 ScenarioForge 전용 IPC protocol을 사용한다.
+- Pi CLI RPC는 언어가 다른 외부 프로세스를 붙일 필요가 생길 때만 고려한다.
+
+### 7.4 LangGraph 제외 근거
+
+Pi가 이미 agent loop, session, resource loading, tool execution, compaction, event streaming을 담당한다. LangGraph를 동시에 도입하면 Pi 세션과 그래프 checkpoint라는 두 개의 실행 상태 원본이 생긴다.
+
+다음 요구가 실제로 발생하기 전에는 LangGraph를 도입하지 않는다.
+
+- 노드 단위 exact-resume
+- 장시간 사용자 승인 interrupt
+- 분산 작업자와 중앙 checkpoint
+- 보상 트랜잭션 또는 복잡한 rollback
+- 여러 프로세스가 공유하는 durable graph state
+
+## 8. 세션 토폴로지
+
+### 8.1 사용자 모델과 내부 모델
+
+사용자는 하나의 프로젝트가 지속되는 것으로 이해한다. 내부에서는 책임을 분리한 프로젝트 세션 집합을 사용한다.
+
+```text
+projectSessionId
+├── analysisSession
+├── chatSession/{conversationId}
+└── testPlanningSession/{executionId}
+```
+
+### 8.2 Analysis Session
+
+- `SRC → FACT → WIKI → SCENARIO` 작업의 연속성을 유지한다.
+- 완료 산출물은 세션 메시지가 아니라 파일과 인덱스에 저장한다.
+- 사용자가 분석을 중단하면 Pi 작업을 abort하고 마지막 검증된 checkpoint를 유지한다.
+- 재개 시 manifest와 세션을 대조해 다음 미완료 단계를 계산한다.
+
+### 8.3 Chat Session
+
+- 시나리오 도출 페이지에서만 생성·사용한다.
+- 요청은 `scenarioRunId`, `scenarioId[]`, `conversationId`, `question`을 포함한다.
+- 답변에 필요한 사실은 ID 기반 도구로 조회한다.
+- 테스트 센터와 증적 화면에는 질문 요청 API를 노출하지 않는다.
+- 테스트 센터와 증적 화면의 `시나리오에서 보기`는 해당 시나리오를 강조한 도출 페이지로만 이동한다.
+
+### 8.4 Test Planning Session
+
+- LLM의 해석이 필요한 테스트 계획 생성 또는 보완에만 사용한다.
+- TestVista가 실행할 계획은 반드시 구조화 스키마로 검증하고 immutable snapshot으로 저장한다.
+- 테스트 실행 중 LLM의 자유로운 계획 변경을 허용하지 않는다.
+- 재계획은 새 execution 또는 명시적 retry에서만 수행한다.
+
+## 9. 분석 파이프라인
+
+### 9.1 고정 외부 단계
+
+```text
+BOOTSTRAP → SRC → FACT → WIKI → SCENARIO → READY
+```
+
+각 단계 내부에서는 Pi가 프로젝트 특성에 따라 도구·스킬·서브에이전트를 선택한다. 단계의 시작·완료·실패·복구는 AnalysisCoordinator가 통제한다.
+
+### 9.2 완료 조건
+
+Pi의 텍스트 응답은 완료 조건으로 사용하지 않는다. 각 단계는 다음 조건을 충족해야 한다.
+
+1. 스키마 검증 통과
+2. 필수 ID와 원천 참조 존재
+3. 임시 파일에서 최종 파일로 원자적 저장 완료
+4. 인덱스 반영 완료
+5. stage manifest 갱신 완료
+6. 완료 도메인 이벤트 발행
+
+### 9.3 단계별 산출물
+
+| 단계 | 최소 산출물 |
+| --- | --- |
+| SRC | 파일·언어·모듈·의존 경계 목록과 source ID |
+| FACT | 코드에서 확인한 사실, 원천 위치, 관련 source ID |
+| WIKI | 업무·기술 설명, 관련 fact ID |
+| SCENARIO | 시나리오 ID, 사전 조건, 스텝, 기대 결과, 관련 fact/wiki/source ID |
+
+## 10. ID와 인덱스
+
+### 10.1 원칙
+
+- 모든 정보는 문자열 ID로 연결한다.
+- ID는 UI 표시값이면서 조회 계약의 키다.
+- 경로와 파일명만으로 관계를 추론하지 않는다.
+- 동일 분석 run 안에서 ID는 변경되지 않는다.
+- 재분석 시 의미가 같은 엔터티의 ID 유지 여부는 인덱스의 identity mapping으로 결정한다.
+- 생성 충돌은 애플리케이션 validator가 거부한다.
+
+### 10.2 주요 관계
+
+```text
+scenarioId
+├── sourceIds
+├── factIds
+├── wikiIds
+├── executionIds
+└── evidenceIds
+```
+
+### 10.3 ArtifactQueryService
+
+최소 조회 계약은 다음을 포함한다.
+
+- `scenario.getById`
+- `source.listByScenarioId`
+- `fact.listByScenarioId`
+- `wiki.listByScenarioId`
+- `execution.listByScenarioId`
+- `evidence.listByScenarioId`
+
+Pi 도구와 Renderer 읽기 API는 동일 query service를 사용해 관계 해석 차이를 방지한다.
+
+## 11. 테스트 수행
+
+### 11.1 실행 생성
+
+시나리오 도출 페이지에서 선택한 케이스, 대상 URL, 테스트 전용 개인정보 JSON을 제출하면 다음 순서로 처리한다.
+
+1. 요청 스키마와 URL 검증
+2. 개인정보 필드 정책 검사
+3. 선택 시나리오의 immutable snapshot과 hash 생성
+4. 필요 시 Pi test planning session에서 구조화 테스트 계획 생성
+5. 계획 validator 통과
+6. `executionId`와 순차 대기열 생성
+7. TestVista UtilityProcess 시작
+8. 진행 이벤트와 증적 저장
+
+### 11.2 순차 실행 상태
+
+```text
+QUEUED
+  → PREPARING
+  → RUNNING
+      ├── PASSED
+      ├── FAILED
+      ├── INCONCLUSIVE
+      └── CANCELLED
+```
+
+- 프로젝트별 Runner는 한 번에 하나의 시나리오만 실행한다.
+- 실행 중 사용자가 다른 시나리오를 추가하면 대기열 뒤에 추가한다.
+- 테스트 실패 시 현재 케이스의 후속 스텝은 `SKIPPED`로 기록한다.
+- 실패 증적을 확정한 후 다음 대기 케이스를 계속 실행한다.
+- 케이스 단위 환경 오류는 `INCONCLUSIVE`로 기록하고 Runner 재준비 후 다음 케이스를 시도한다.
+- Runner 사망, 증적 저장소 접근 실패, 개인정보 마스킹 실패는 전체 실행을 중단한다.
+
+### 11.3 중단과 재실행
+
+- 중단 요청은 현재 도구 동작을 안전하게 종료한 후 적용한다.
+- 이미 수집된 증적은 삭제하지 않는다.
+- 현재 케이스와 남은 대기 케이스를 `CANCELLED`로 기록한다.
+- `미실행 케이스 다시 수행`은 새 `executionId`를 생성한다.
+- 실패 케이스 재실행도 새 `executionId`를 생성한다.
+- 새 실행 manifest의 `retryOfExecutionId`로 이전 실행을 연결한다.
+- 화면에서는 `1차 실패 → 2차 성공`처럼 회차를 비교할 수 있다.
+
+## 12. 증적
+
+### 12.1 캡처 규칙
+
+- 성공한 각 스텝의 사용자 동작이 끝나면 `action-complete.png` 1장을 저장한다.
+- 실패한 스텝은 동작 완료 화면 외에 `before-failure.png`, `failure.png`를 추가한다.
+- 실패 시 `failure-context.json`에 오류 종류, selector 또는 assertion, timeout, URL, 환경 메타데이터를 저장한다.
+- 전체 실행에 trace와 마스킹된 execution log를 저장한다.
+
+### 12.2 판정
+
+| 상태 | 의미 |
+| --- | --- |
+| PASSED | 기대 결과를 검증함 |
+| FAILED | 실제 결과가 기대 결과와 다름 |
+| INCONCLUSIVE | 브라우저·네트워크·캡처 등 환경 문제로 판정할 수 없음 |
+| CANCELLED | 사용자 또는 치명적 시스템 오류로 실행이 중단됨 |
+
+### 12.3 불변성과 무결성
+
+- 완료된 execution manifest와 결과를 덮어쓰지 않는다.
+- 캡처와 오류 파일의 hash를 manifest에 기록한다.
+- 결과 수정이 필요하면 새 실행을 생성한다.
+- 자동 삭제하지 않는다.
+- 사용자는 execution 단위로만 삭제할 수 있다.
+- 삭제 전 시나리오, 파일 수, 총 용량과 재실행 연결 관계를 보여준다.
+- 저장 공간 경고는 제공하지만 자동 정리는 하지 않는다.
+
+## 13. 프런트엔드 정보 구조
+
+### 13.1 프로젝트 설정
+
+기존 세 단계 onboarding을 다음 의미로 사용한다.
+
+1. 프로젝트
+2. 모델
+3. 작업환경 준비
+
+세 번째 화면은 다음 bootstrap 진행 상태를 표시한다.
+
+- 프로젝트 신뢰·범위 확인
+- Pi Runtime 연결
+- 하네스·스킬·확장 resource 로드
+- 프로젝트 분석 세션 생성 또는 복구
+- 산출물 저장소와 인덱스 준비
+
+기술 상세는 접을 수 있는 별도 영역에 제공하고 기본 화면은 제품 용어 중심으로 유지한다.
+
+### 13.2 프로젝트 상위 탐색
+
+runtime 준비 후 다음 project navigation을 사용한다.
+
+```text
+작업대 / 시나리오 / 테스트 수행 / 증적 보관함
+```
+
+- 시나리오가 없으면 시나리오·테스트·증적 탭을 비활성화한다.
+- 테스트 실행 중에는 `테스트 수행` 탭에 진행 상태를 표시한다.
+- 다른 화면으로 이동해도 Runner는 계속 실행한다.
+- 완료·실패·중단 알림은 비차단 방식으로 표시한다.
+
+### 13.3 작업대와 분석 진행
+
+작업대는 다음 상태를 표시한다.
+
+- 프로젝트 경로와 작업 범위
+- 연결 model
+- Pi Runtime 상태
+- 현재 analysis session
+- 복구 가능한 작업 유무
+- 생성 이력
+
+분석 진행 화면은 LLM chain-of-thought를 표시하지 않는다. 다음 정보만 보여준다.
+
+- 도메인 단계와 검증된 진행률
+- 현재 처리 범위
+- 완료된 산출물 수
+- 사용한 스킬·서브에이전트·도구의 실행 사실 요약
+- 오류와 사용자가 취할 수 있는 조치
+
+### 13.4 시나리오 도출 페이지
+
+- 시나리오 시트와 질의 채팅을 함께 유지한다.
+- 시나리오 ID drag & drop 또는 명시적 참조 추가를 제공한다.
+- Chat Session은 선택 ID를 기준으로 ArtifactQueryService를 호출한다.
+- 테스트 센터에서 `시나리오에서 보기`로 이동하면 관련 케이스를 강조한다.
+- 질문 자동 제출은 하지 않는다.
+
+### 13.5 테스트 센터
+
+선택한 C안에 따라 프로젝트 독립 상위 화면으로 구성한다.
+
+- 왼쪽: execution 이력
+- 중앙: 현재 execution의 순차 케이스 목록
+- 오른쪽: 선택 케이스의 증적 미리보기
+- 실행 중 상태와 대기열 추가
+- 중단, 재실행, 증적 상세, 시나리오에서 보기
+- 질문 기능 없음
+
+### 13.6 증적 상세
+
+- 왼쪽: 스텝별 성공·실패·건너뜀 타임라인
+- 중앙: 대상 화면 캡처와 스텝별 filmstrip
+- 오른쪽: 기대 결과, 실제 결과, 판정 근거, 오류, 환경 정보
+- 성공과 실패를 동일 정보 구조로 표시
+- 실패 화면에서는 실패 직전·실패 시점 캡처를 우선 노출
+- `다시 실행`, `시나리오에서 보기`만 제공
+- 질문 기능 없음
+
+### 13.7 라우팅
+
+Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
+
+```text
+#/projects/:projectId/setup
+#/projects/:projectId/workspace
+#/projects/:projectId/runs/:scenarioRunId/scenarios
+#/projects/:projectId/tests
+#/projects/:projectId/tests/:executionId
+#/projects/:projectId/tests/:executionId/cases/:scenarioId/steps/:stepOrder
+```
+
+## 14. IPC 및 도메인 이벤트
+
+### 14.1 주요 명령
+
+- `project.selectDirectory`
+- `project.bootstrap`
+- `project.getState`
+- `model.saveSettings`
+- `analysis.start`
+- `analysis.resume`
+- `analysis.cancel`
+- `scenario.load`
+- `scenario.ask`
+- `test.createExecution`
+- `test.enqueueScenarios`
+- `test.cancelExecution`
+- `test.retryCases`
+- `test.listExecutions`
+- `evidence.getStep`
+- `evidence.deleteExecution`
+
+`scenario.ask`는 시나리오 도출 route에서만 호출한다. Main process는 route를 신뢰하지 않고 프로젝트·run·scenario ID의 관계를 재검증한다.
+
+### 14.2 주요 이벤트
+
+- `project.bootstrap.started`
+- `project.bootstrap.progress`
+- `project.bootstrap.ready`
+- `project.bootstrap.failed`
+- `runtime.session.started`
+- `runtime.session.restored`
+- `runtime.session.settled`
+- `runtime.session.failed`
+- `analysis.stage.started`
+- `analysis.stage.progress`
+- `analysis.activity.recorded`
+- `analysis.artifact.saved`
+- `analysis.stage.completed`
+- `analysis.completed`
+- `test.execution.created`
+- `test.case.started`
+- `test.step.started`
+- `test.step.completed`
+- `test.step.failed`
+- `test.evidence.saved`
+- `test.case.completed`
+- `test.execution.completed`
+
+이벤트에는 credential, 개인정보 원문, 모델의 숨은 사고 과정, 전체 도구 출력 원문을 포함하지 않는다.
+
+## 15. 오류 처리
+
+### 15.1 오류 범주
+
+| 범주 | 예시 | 사용자 결과 |
+| --- | --- | --- |
+| 입력 오류 | 잘못된 URL, JSON 형식 | 실행 전 인라인 오류 |
+| 프로젝트 오류 | 경로 권한, manifest 손상 | bootstrap 중단 및 복구 안내 |
+| 모델 오류 | credential, endpoint, rate limit | 세션 일시 중단 및 설정 이동 |
+| 산출물 오류 | schema 불일치, ID 충돌 | 현재 분석 단계 실패 |
+| 테스트 실패 | 기대·실제 결과 불일치 | FAILED, 다음 케이스 계속 |
+| 케이스 환경 오류 | 페이지 접근 실패, 브라우저 crash | INCONCLUSIVE, 복구 후 다음 케이스 시도 |
+| 치명적 실행 오류 | Runner 사망, 증적 저장 실패 | 전체 execution 중단 |
+| 보안 오류 | 경로 이탈, 마스킹 실패 | 즉시 차단 및 전체 실행 중단 |
+
+### 15.2 사용자 메시지와 기술 상세
+
+- 기본 화면에는 원인과 사용자가 취할 조치를 짧게 표시한다.
+- 기술 상세는 별도 펼침 영역이나 로그 화면에 둔다.
+- 재시도 가능한 오류와 설정 변경이 필요한 오류를 구분한다.
+- 실패한 원본 기록을 수정하지 않는다.
+
+## 16. 보안
+
+- `contextIsolation: true`, renderer sandbox, `nodeIntegration: false`를 유지한다.
+- Renderer가 전달한 프로젝트 경로, run ID, scenario ID, execution ID를 신뢰하지 않는다.
+- 모든 경로를 project root 아래로 canonicalize하고 symlink escape를 검사한다.
+- Pi 기본 도구를 그대로 노출하지 않고 ScenarioForge policy wrapper를 적용한다.
+- shell 명령은 command policy와 작업 디렉터리 제한을 적용한다.
+- credential 원문을 프로젝트 파일, 세션 파일, 로그, 이벤트, 증적에 기록하지 않는다.
+- 테스트 개인정보는 Runner 메모리에서만 사용하고 로그와 증적에 field masking을 적용한다.
+- masking이 실패하면 증적 저장과 전체 실행을 중단한다.
+- 외부 URL 접근과 다운로드는 별도의 network policy 대상으로 취급한다.
+- runtime resource는 앱 번들의 hash와 manifest로 무결성을 검사한다.
+
+## 17. ScenarioForge 소스 디렉터리
+
+```text
+ScenarioForge/
+├── apps/
+│   └── desktop/
+│       ├── src/
+│       │   ├── main/
+│       │   │   ├── app/
+│       │   │   ├── ipc/
+│       │   │   ├── processes/
+│       │   │   └── windows/
+│       │   ├── preload/
+│       │   └── renderer/
+│       │       ├── app/
+│       │       ├── routes/
+│       │       ├── stores/
+│       │       ├── features/
+│       │       │   ├── project-setup/
+│       │       │   ├── workspace/
+│       │       │   ├── scenario/
+│       │       │   ├── test-center/
+│       │       │   └── evidence/
+│       │       └── styles/
+│       └── electron.vite.config.ts
+├── packages/
+│   ├── contracts/
+│   │   └── src/{ipc,events,artifacts,schemas}/
+│   ├── project-runtime/
+│   │   ├── src/{bootstrap,migrations,manifest,path-policy}/
+│   │   └── runtime-template/
+│   ├── pi-runtime/
+│   │   └── src/{host,models,sessions,resources,tools,events,security}/
+│   ├── scenario-pipeline/
+│   │   └── src/{stages,validators,artifacts,indexing}/
+│   ├── test-runtime/
+│   │   └── src/{coordinator,runner,browser,verdict,events}/
+│   └── evidence-store/
+│       └── src/{writer,reader,masking,integrity,retention}/
+├── docs/
+│   ├── architecture/
+│   ├── screens/
+│   └── superpowers/specs/
+├── artifacts/
+├── package.json
+├── package-lock.json
+└── tsconfig.json
+```
+
+## 18. 선택 프로젝트 디렉터리
+
+```text
+selected-project/
+└── .scenarioforge/
+    ├── manifest.json
+    ├── project.json
+    ├── runtime/
+    │   ├── runtime-manifest.json
+    │   ├── AGENTS.md
+    │   ├── SYSTEM.md
+    │   ├── skills/
+    │   ├── extensions/
+    │   └── agents/
+    ├── sessions/
+    │   ├── analysis/
+    │   ├── chat/
+    │   └── test-planning/
+    ├── state/
+    │   ├── project-state.json
+    │   ├── scenario-index.sqlite
+    │   ├── checkpoints/
+    │   └── locks/
+    ├── runs/
+    │   └── {scenarioRunId}/
+    │       ├── manifest.json
+    │       ├── facts/
+    │       ├── wiki/
+    │       ├── scenario-set.json
+    │       └── tests/
+    │           └── {executionId}/
+    │               ├── manifest.json
+    │               ├── execution-result.json
+    │               ├── cases/
+    │               │   └── {scenarioId}/
+    │               │       ├── case-result.json
+    │               │       └── steps/
+    │               │           └── {stepOrder}/
+    │               │               ├── step-result.json
+    │               │               ├── action-complete.png
+    │               │               ├── before-failure.png
+    │               │               ├── failure.png
+    │               │               └── failure-context.json
+    │               ├── execution.log
+    │               └── trace.zip
+    └── logs/
+        ├── bootstrap/
+        ├── agent/
+        └── system/
+```
+
+성공 스텝에는 실패 전용 파일을 생성하지 않는다. 위 트리는 가능한 전체 파일 종류를 나타낸다.
+
+## 19. 구현 순서
+
+하네스·스킬·에이전트 상세 설계를 마지막에 수행하기 위해 다음 순서를 고정한다.
+
+### Phase 1. Workspace와 계약
+
+- npm workspace 구성
+- 기존 Electron 코드를 `apps/desktop`으로 이동
+- contracts 패키지와 schema validator 구축
+- 기존 화면과 테스트가 이동 후에도 동작하는지 검증
+
+### Phase 2. Project Runtime
+
+- ProjectBootstrapper
+- manifest와 migration 경계
+- 경로·신뢰·권한 정책
+- 선택 프로젝트 fixture를 이용한 멱등 초기화 검증
+
+### Phase 3. Pi Runtime Host 기반
+
+- Pi SDK를 UtilityProcess에 연결
+- model 설정과 credential reference 전달
+- session create, restore, abort, dispose
+- Resource Bundle interface와 event adapter
+- 실제 역할별 resource 대신 schema-valid test fixture 사용
+
+### Phase 4. Analysis Domain
+
+- 단계 상태 머신
+- stage manifest와 artifact validator
+- ID 인덱스와 query service
+- fake Pi adapter로 전체 분석 흐름 검증
+
+### Phase 5. 프런트 보정
+
+- route와 project navigation
+- bootstrap 화면
+- runtime·session 상태
+- 타이머 목업 제거
+- 도메인 이벤트 기반 분석 진행 및 복구 UI
+- 시나리오 페이지 질의 경계 유지
+
+### Phase 6. 테스트 및 증적
+
+- TestCoordinator와 순차 queue
+- TestVista process contract
+- verdict와 error taxonomy
+- screenshot, trace, log, masking, hash
+- 테스트 센터와 증적 상세 화면
+
+### Phase 7. 하네스·스킬·에이전트 상세 설계
+
+- 각 분석 단계가 참조할 정보와 금지 범위
+- ID 조회 도구와 산출물 작성 도구
+- 하네스의 완료 조건과 검증 규칙
+- 스킬 목록, trigger, 입력·출력 계약
+- 서브에이전트 역할, 위임 조건, 결과 통합 방식
+- 실제 Resource Bundle 작성과 버전 manifest 생성
+
+### Phase 8. 실제 Pi 통합 E2E
+
+- 실제 프로젝트 fixture 분석
+- 앱 재시작 후 session 복구
+- 시나리오 질의
+- 순차 테스트와 증적 저장
+- 보안·마스킹·경로 이탈 검증
+
+## 20. 검증 전략
+
+### 20.1 단위 테스트
+
+- schema validators
+- canonical path와 symlink escape
+- runtime manifest migration
+- domain event reducer
+- analysis stage completion gates
+- scenario ID 관계 조회
+- queue와 retry 정책
+- verdict 분류
+- masking과 evidence hash
+
+### 20.2 통합 테스트
+
+- 동일 프로젝트 bootstrap의 멱등성
+- runtime upgrade와 rollback
+- UtilityProcess session lifecycle
+- Pi 이벤트의 domain event 변환
+- 앱 재시작 후 analysis session 복구
+- 테스트 실패 후 다음 케이스 계속
+- Runner crash 후 `INCONCLUSIVE` 또는 전체 중단 분류
+- 증적 저장 실패 시 fail-closed
+
+### 20.3 UI 테스트
+
+- 프로젝트·모델·runtime 준비 흐름
+- 준비 전 상위 탭 비활성화
+- 분석 진행 중 자유로운 화면 전환
+- Q&A가 시나리오 화면에만 존재
+- 실행 중 테스트 탭 상태 유지
+- 성공·실패 증적 전환
+- 재실행 이력 비교
+- 중단 후 잔여 케이스 상태
+
+### 20.4 E2E 성공 기준
+
+1. 사용자가 프로젝트와 LLM을 설정하면 해당 model로 Pi session이 생성된다.
+2. `.scenarioforge/` 초기화가 소스 파일을 변경하지 않는다.
+3. 분석 산출물은 schema와 ID 관계 검증을 통과해야만 UI에 완료로 표시된다.
+4. 앱을 재시작해도 완료 산출물과 복구 가능한 session을 확인할 수 있다.
+5. 질의는 시나리오 페이지에서만 실행되고 ID 관련 산출물을 조회한다.
+6. 테스트는 선택 순서대로 실행된다.
+7. 각 성공 스텝과 실패 추가 캡처가 규칙대로 저장된다.
+8. 실패, 판정 불가, 중단됨이 구분된다.
+9. 재실행이 기존 증적을 덮어쓰지 않는다.
+10. credential과 개인정보 원문이 프로젝트 파일과 증적에 남지 않는다.
+
+## 21. 공식 기술 참고
+
+- [Pi SDK](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/sdk.md)
+- [Pi Extensions](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/extensions.md)
+- [Pi Skills](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md)
+- [Pi Agent Harness 보안 및 격리](https://github.com/earendil-works/pi)
+- [LangGraph Workflows and Agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents)
+- [LangGraph Persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
