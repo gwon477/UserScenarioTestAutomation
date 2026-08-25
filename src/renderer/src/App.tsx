@@ -16,7 +16,14 @@ import {
   type GenerationRecord,
 } from "./components/GenerationHistory";
 import { ModelSettingsModal } from "./components/ModelSettingsModal";
+import { EvidenceDetail } from "./components/EvidenceDetail";
+import { EvidenceLibrary } from "./components/EvidenceLibrary";
+import {
+  ProjectNavigation,
+  type ProjectView,
+} from "./components/ProjectNavigation";
 import { ScenarioResults } from "./components/ScenarioResults";
+import { TestCenter } from "./components/TestCenter";
 import {
   loadScenarioResult,
   saveModelSettings,
@@ -29,6 +36,15 @@ import {
   createDemoScenarioResult,
   type ScenarioResult,
 } from "./scenario-result";
+import {
+  createDemoExecutionHistory,
+  createDemoTestExecution,
+  findFirstFailure,
+} from "./test-execution-fixture";
+import type {
+  StepEvidence,
+  TestExecution,
+} from "../../shared/test-execution";
 
 type SelectionStatus = "idle" | "selecting" | "error";
 type AnalysisState = { status: AnalysisStatus; progress: number };
@@ -38,8 +54,19 @@ type PreviewMode =
   | "progress"
   | "result"
   | "result-selected"
+  | "test-running"
+  | "test-failed"
+  | "evidence-library"
+  | "evidence-failure"
   | null;
-type ViewMode = "workspace" | "result" | "loading" | "error";
+type ViewMode =
+  | "workspace"
+  | "result"
+  | "loading"
+  | "error"
+  | "test-center"
+  | "evidence-library"
+  | "evidence-detail";
 
 const STORAGE = {
   project: "scenarioforge.project.v1",
@@ -81,6 +108,35 @@ const previewHistory: GenerationRecord[] = [
     scenarios: 19,
   },
 ];
+
+const executionPreviewModes: PreviewMode[] = [
+  "test-running",
+  "test-failed",
+  "evidence-library",
+  "evidence-failure",
+];
+const hasExecutionPreview = executionPreviewModes.includes(previewMode);
+const previewScenarioResult = createDemoScenarioResult(previewHistory[0].id);
+const previewExecution = hasExecutionPreview
+  ? createDemoTestExecution(
+      previewHistory[0].id,
+      previewMode === "test-running" ? "running" : "failed",
+      undefined,
+      previewMode === "test-running"
+        ? "EXE-20260825-0007"
+        : "EXE-20260825-0006",
+    )
+  : null;
+const previewExecutionHistory = hasExecutionPreview
+  ? createDemoExecutionHistory(previewHistory[0].id).filter(
+      (execution) => execution.executionId !== previewExecution?.executionId,
+    )
+  : [];
+
+function createRendererExecutionId() {
+  const date = new Date().toISOString().slice(0, 10).replaceAll("-", "");
+  return `EXE-${date}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
+}
 
 function readStored<T>(key: string): T | null {
   try {
@@ -211,13 +267,33 @@ function OnboardingHeader() {
 function WorkspaceHeader({
   project,
   onOpenSettings,
+  activeView,
+  scenarioReady,
+  executionReady,
+  evidenceReady,
+  executionRunning,
+  onNavigate,
 }: {
   project: SelectedDirectory;
   onOpenSettings: () => void;
+  activeView: ProjectView;
+  scenarioReady: boolean;
+  executionReady: boolean;
+  evidenceReady: boolean;
+  executionRunning: boolean;
+  onNavigate: (view: ProjectView) => void;
 }) {
   return (
     <header className="topbar workspace-topbar">
       <Brand />
+      <ProjectNavigation
+        active={activeView}
+        scenarioReady={scenarioReady}
+        executionReady={executionReady}
+        evidenceReady={evidenceReady}
+        executionRunning={executionRunning}
+        onNavigate={onNavigate}
+      />
       <div className="workspace-nav">
         <span className="active-project-name">
           <Folder size={16} aria-hidden="true" /> {project.name}
@@ -405,14 +481,66 @@ export default function App() {
   const [viewMode, setViewMode] = useState<ViewMode>(() =>
     previewMode === "result" || previewMode === "result-selected"
       ? "result"
-      : "workspace",
+      : previewMode === "test-running" || previewMode === "test-failed"
+        ? "test-center"
+        : previewMode === "evidence-library"
+          ? "evidence-library"
+          : previewMode === "evidence-failure"
+            ? "evidence-detail"
+            : "workspace",
   );
   const [scenarioResult, setScenarioResult] = useState<ScenarioResult | null>(() =>
-    previewMode === "result" || previewMode === "result-selected"
-      ? createDemoScenarioResult(previewHistory[0].id)
+    previewMode === "result" ||
+    previewMode === "result-selected" ||
+    hasExecutionPreview
+      ? previewScenarioResult
       : null,
   );
+  const [testExecution, setTestExecution] = useState<TestExecution | null>(
+    previewExecution,
+  );
+  const [executionHistory, setExecutionHistory] = useState<TestExecution[]>(
+    previewExecutionHistory,
+  );
+  const [selectedExecutionId, setSelectedExecutionId] = useState<string | null>(
+    previewExecution?.executionId ?? null,
+  );
+  const [selectedEvidence, setSelectedEvidence] = useState<StepEvidence | null>(
+    previewMode === "evidence-failure" && previewExecution
+      ? findFirstFailure(previewExecution)
+      : null,
+  );
+  const [focusedScenarioId, setFocusedScenarioId] = useState<string>();
   const historyRecorded = useRef(false);
+
+  const allExecutions = [
+    ...(testExecution ? [testExecution] : []),
+    ...executionHistory.filter(
+      (execution) => execution.executionId !== testExecution?.executionId,
+    ),
+  ];
+  const evidenceExecution = selectedEvidence
+    ? allExecutions.find(
+        (execution) => execution.executionId === selectedEvidence.executionId,
+      ) ?? null
+    : null;
+  const activeExecution =
+    allExecutions.find(
+      (execution) => execution.executionId === selectedExecutionId,
+    ) ?? testExecution;
+  const evidenceReady = allExecutions.some((execution) =>
+    execution.cases.some((testCase) =>
+      testCase.steps.some((step) => Boolean(step.evidence)),
+    ),
+  );
+  const activeProjectView: ProjectView =
+    viewMode === "result"
+      ? "scenario"
+      : viewMode === "test-center"
+        ? "test"
+        : viewMode === "evidence-library" || viewMode === "evidence-detail"
+          ? "evidence"
+          : "workspace";
 
   useEffect(() => {
     if (analysis.status !== "running" || previewMode === "progress") return;
@@ -525,6 +653,126 @@ export default function App() {
     }
   }
 
+  function handleProjectNavigation(target: ProjectView) {
+    if (target === "workspace") {
+      setViewMode("workspace");
+      return;
+    }
+    if (target === "scenario" && scenarioResult) {
+      setViewMode("result");
+      return;
+    }
+    if (target === "test" && testExecution) {
+      setViewMode("test-center");
+      return;
+    }
+    if (target === "evidence" && evidenceReady) {
+      setViewMode("evidence-library");
+    }
+  }
+
+  function handleExecutionStarted(targetUrl: string, scenarioIds: string[]) {
+    if (!scenarioResult) return;
+    const execution = {
+      ...createDemoTestExecution(
+        scenarioResult.runId,
+        "running",
+        scenarioIds,
+        createRendererExecutionId(),
+      ),
+      targetUrl,
+      createdAt: new Date().toISOString(),
+    };
+    if (testExecution) {
+      setExecutionHistory((current) => [testExecution, ...current]);
+    }
+    setTestExecution(execution);
+    setSelectedExecutionId(execution.executionId);
+    setSelectedEvidence(null);
+    setViewMode("test-center");
+  }
+
+  function handleOpenEvidence(evidence: StepEvidence) {
+    setSelectedEvidence(evidence);
+    setViewMode("evidence-detail");
+  }
+
+  function handleOpenScenario(scenarioId: string) {
+    if (!scenarioResult) return;
+    setFocusedScenarioId(scenarioId);
+    setViewMode("result");
+  }
+
+  function handleRetry(
+    sourceExecution?: TestExecution,
+    scenarioIds?: string[],
+  ) {
+    const executionToRetry = sourceExecution ?? testExecution;
+    if (!executionToRetry) return;
+    const retriedExecution = {
+      ...createDemoTestExecution(
+        executionToRetry.scenarioRunId,
+        "running",
+        scenarioIds ?? executionToRetry.cases.map((testCase) => testCase.scenarioId),
+        createRendererExecutionId(),
+      ),
+      targetUrl: executionToRetry.targetUrl,
+      retryOfExecutionId: executionToRetry.executionId,
+      createdAt: new Date().toISOString(),
+    };
+    setExecutionHistory((current) => {
+      const next = [...(testExecution ? [testExecution] : []), ...current];
+      return next.filter(
+        (execution, index) =>
+          next.findIndex(
+            (candidate) => candidate.executionId === execution.executionId,
+          ) === index,
+      );
+    });
+    setTestExecution(retriedExecution);
+    setSelectedExecutionId(retriedExecution.executionId);
+    setSelectedEvidence(null);
+    setViewMode("test-center");
+  }
+
+  function handleSelectExecution(execution: TestExecution) {
+    setSelectedExecutionId(execution.executionId);
+    setSelectedEvidence(null);
+  }
+
+  function handleReturnToExecution(execution: TestExecution) {
+    handleSelectExecution(execution);
+    setViewMode("test-center");
+  }
+
+  function handleCancelExecution() {
+    setTestExecution((current) => {
+      if (!current || current.status !== "running") return current;
+      return {
+        ...current,
+        status: "cancelled",
+        completedAt: new Date().toISOString(),
+        cases: current.cases.map((testCase) =>
+          testCase.status === "running" || testCase.status === "queued"
+            ? {
+                ...testCase,
+                status: "cancelled",
+                steps: testCase.steps.map((step) => ({
+                  ...step,
+                  status:
+                    step.status === "running"
+                      ? "cancelled"
+                      : step.status === "queued"
+                        ? "skipped"
+                        : step.status,
+                })),
+              }
+            : testCase,
+        ),
+      };
+    });
+  }
+
   return (
     <>
       <div
@@ -538,7 +786,16 @@ export default function App() {
         </a>
 
         {project ? (
-          <WorkspaceHeader project={project} onOpenSettings={() => setSettingsOpen(true)} />
+          <WorkspaceHeader
+            project={project}
+            onOpenSettings={() => setSettingsOpen(true)}
+            activeView={activeProjectView}
+            scenarioReady={Boolean(scenarioResult)}
+            executionReady={Boolean(testExecution)}
+            evidenceReady={evidenceReady}
+            executionRunning={testExecution?.status === "running"}
+            onNavigate={handleProjectNavigation}
+          />
         ) : (
           <OnboardingHeader />
         )}
@@ -552,7 +809,42 @@ export default function App() {
                 ? ["SCN-ORD-001", "SCN-PAY-001"]
                 : []
             }
+            focusedScenarioId={focusedScenarioId}
             onBack={() => setViewMode("workspace")}
+            onExecutionStarted={handleExecutionStarted}
+          />
+        ) : project && viewMode === "test-center" && activeExecution ? (
+          <TestCenter
+            execution={activeExecution}
+            history={allExecutions.filter(
+              (execution) => execution.executionId !== activeExecution.executionId,
+            )}
+            currentExecutionId={testExecution?.executionId}
+            onBackToScenarios={() => setViewMode("result")}
+            onOpenScenario={handleOpenScenario}
+            onOpenEvidence={handleOpenEvidence}
+            onSelectExecution={handleSelectExecution}
+            onCancel={handleCancelExecution}
+            onRetry={() => handleRetry(activeExecution)}
+          />
+        ) : project && viewMode === "evidence-library" ? (
+          <EvidenceLibrary
+            executions={allExecutions}
+            onBackToScenarios={() => setViewMode("result")}
+            onOpenEvidence={handleOpenEvidence}
+          />
+        ) : project &&
+          viewMode === "evidence-detail" &&
+          selectedEvidence &&
+          evidenceExecution ? (
+          <EvidenceDetail
+            execution={evidenceExecution}
+            evidence={selectedEvidence}
+            onBack={() => handleReturnToExecution(evidenceExecution)}
+            onOpenScenario={handleOpenScenario}
+            onRetry={() =>
+              handleRetry(evidenceExecution, [selectedEvidence.scenarioId])
+            }
           />
         ) : project && viewMode === "loading" ? (
           <main className="result-loading" id="main-content" aria-live="polite">

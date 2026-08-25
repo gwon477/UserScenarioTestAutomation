@@ -5,6 +5,7 @@ import type { ScenarioCase, ScenarioResult } from "../scenario-result";
 type Props = {
   result: ScenarioResult;
   selectedIds: Set<string>;
+  focusedScenarioId?: string;
   onSelectionChange: (next: Set<string>) => void;
 };
 
@@ -33,11 +34,26 @@ function SelectAllCheckbox({
   );
 }
 
-export function ScenarioSheet({ result, selectedIds, onSelectionChange }: Props) {
+export function ScenarioSheet({
+  result,
+  selectedIds,
+  focusedScenarioId,
+  onSelectionChange,
+}: Props) {
   const allScenarios = result.groups.flatMap((group) => group.scenarios);
   const [expandedIds, setExpandedIds] = useState<Set<string>>(
     () => new Set(allScenarios[0] ? [allScenarios[0].id] : []),
   );
+
+  useEffect(() => {
+    if (!focusedScenarioId) return;
+    setExpandedIds((current) => new Set(current).add(focusedScenarioId));
+    window.setTimeout(() => {
+      document
+        .getElementById(`scenario-${focusedScenarioId}`)
+        ?.scrollIntoView({ block: "center", behavior: "smooth" });
+    }, 80);
+  }, [focusedScenarioId]);
 
   function toggleSelected(id: string) {
     const next = new Set(selectedIds);
@@ -119,7 +135,10 @@ export function ScenarioSheet({ result, selectedIds, onSelectionChange }: Props)
               const selected = selectedIds.has(scenario.id);
               return (
                 <article
-                  className={`scenario-case${selected ? " is-selected" : ""}`}
+                  id={`scenario-${scenario.id}`}
+                  className={`scenario-case${selected ? " is-selected" : ""}${
+                    focusedScenarioId === scenario.id ? " is-focused" : ""
+                  }`}
                   key={scenario.id}
                   draggable
                   onDragStart={(event) => handleDragStart(event, scenario)}

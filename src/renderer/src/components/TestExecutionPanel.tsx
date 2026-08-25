@@ -18,11 +18,11 @@ type ExecutionErrors = {
 const exampleJson = `{
   "user": {
     "email": "tester@example.com",
-    "password": "test-only-password",
+    "password": "<TEST_SECRET_FROM_MEMORY>",
     "name": "테스트 사용자"
   },
   "payment": {
-    "cardToken": "test_card_token"
+    "cardToken": "<TEST_TOKEN_FROM_MEMORY>"
   }
 }`;
 

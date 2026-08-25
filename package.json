@@ -16,6 +16,7 @@
     "typecheck": "tsc -b",
     "build": "npm run typecheck && electron-vite build",
     "build:web": "tsc -b && vite build --config vite.config.ts",
+    "capture:readme": "electron scripts/capture-readme.cjs",
     "preview": "electron-vite preview",
     "preview:web": "vite preview --config vite.config.ts --host 127.0.0.1"
   },

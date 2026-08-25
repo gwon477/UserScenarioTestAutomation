@@ -13,14 +13,18 @@ type Props = {
   project: SelectedDirectory;
   result: ScenarioResult;
   initialSelectedIds?: string[];
+  focusedScenarioId?: string;
   onBack: () => void;
+  onExecutionStarted: (targetUrl: string, scenarioIds: string[]) => void;
 };
 
 export function ScenarioResults({
   project,
   result,
   initialSelectedIds = [],
+  focusedScenarioId,
   onBack,
+  onExecutionStarted,
 }: Props) {
   const [selectedIds, setSelectedIds] = useState<Set<string>>(
     () => new Set(initialSelectedIds),
@@ -39,6 +43,10 @@ export function ScenarioResults({
       targetUrl,
       personalData,
     });
+    onExecutionStarted(
+      targetUrl,
+      selectedScenarios.map((scenario) => scenario.id),
+    );
   }
 
   return (
@@ -91,6 +99,7 @@ export function ScenarioResults({
           <ScenarioSheet
             result={result}
             selectedIds={selectedIds}
+            focusedScenarioId={focusedScenarioId}
             onSelectionChange={setSelectedIds}
           />
         </div>
