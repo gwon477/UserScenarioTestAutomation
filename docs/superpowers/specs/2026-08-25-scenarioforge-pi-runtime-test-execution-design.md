@@ -1,7 +1,7 @@
 # ScenarioForge Pi Runtime 및 테스트 수행 통합 설계
 
 - 작성일: 2026-08-25
-- 상태: 상태 관리 계약 보완, 수정 문서 사용자 검토 대기
+- 상태: 설계 승인, 구현 계획 작성 완료
 - 대상 브랜치: `dev`
 - 대상 제품: ScenarioForge 설치형 데스크톱 솔루션
 
@@ -334,13 +334,31 @@ interface WorkStateService {
   begin(input: {
     projectId: string;
     workId: string;
+    operationId: string;
     expectedRevision: number;
     contextToken: string;
+  }): Promise<StateCommit>;
+
+  requestChildWork(input: {
+    projectId: string;
+    parentWorkId: string;
+    operationId: string;
+    expectedRevision: number;
+    descriptor: ChildWorkDescriptor;
+  }): Promise<StateCommit>;
+
+  updateProgress(input: {
+    projectId: string;
+    workId: string;
+    operationId: string;
+    expectedRevision: number;
+    progress: WorkProgressPatch;
   }): Promise<StateCommit>;
 
   recordActivity(input: {
     projectId: string;
     workId: string;
+    operationId: string;
     expectedRevision: number;
     activity: VerifiableActivity;
   }): Promise<StateCommit>;
@@ -348,13 +366,24 @@ interface WorkStateService {
   submitArtifacts(input: {
     projectId: string;
     workId: string;
+    operationId: string;
     expectedRevision: number;
     artifacts: ArtifactSubmission[];
+  }): Promise<StateCommit>;
+
+  discardDraftArtifact(input: {
+    projectId: string;
+    workId: string;
+    operationId: string;
+    expectedRevision: number;
+    artifactId: string;
+    reason: string;
   }): Promise<StateCommit>;
 
   reportFailure(input: {
     projectId: string;
     workId: string;
+    operationId: string;
     expectedRevision: number;
     error: DomainError;
   }): Promise<StateCommit>;
@@ -362,6 +391,7 @@ interface WorkStateService {
   requestCompletion(input: {
     projectId: string;
     workId: string;
+    operationId: string;
     expectedRevision: number;
   }): Promise<CompletionDecision>;
 }
@@ -401,12 +431,26 @@ type VerifiableActivity = {
   summary?: string;
 };
 
+type ChildWorkDescriptor = {
+  functionId: LlmFunctionId;
+  inputIds: string[];
+  objective: string;
+  readScopes: string[];
+  writeScope: string;
+};
+
+type WorkProgressPatch = {
+  currentActivity: string;
+  producedIds: string[];
+};
+
 type ArtifactSubmission = {
   artifactId: string;
   artifactType: AnalysisStage;
   stagingPath: string;
   relatedIds: string[];
   contentHash: string;
+  supersedesArtifactId?: string;
 };
 
 type DomainError = {
@@ -602,6 +646,8 @@ provider, endpoint, model ID는 애플리케이션 설정에 보존할 수 있�
 
 PiRuntimeHost는 Pi SDK를 별도 UtilityProcess에 내장한다.
 
+- 최초 구현은 `@earendil-works/pi-coding-agent@0.84.3`을 exact pin하고 runtime manifest에 package hash를 기록한다.
+
 - 프로젝트 루트를 `cwd`로 사용
 - 프로젝트별 SessionManager 사용
 - ScenarioForge ResourceLoader로 runtime resource 경로를 명시
@@ -663,6 +709,109 @@ projectSessionId
 - TestVista가 실행할 계획은 반드시 구조화 스키마로 검증하고 immutable snapshot으로 저장한다.
 - 테스트 실행 중 LLM의 자유로운 계획 변경을 허용하지 않는다.
 - 재계획은 새 execution 또는 명시적 retry에서만 수행한다.
+
+### 8.5 LLM 기능 목록과 고정 외부 워크플로우
+
+LLM의 내부 탐색과 tool 선택은 동적이지만 각 기능의 입력, 쓰기 범위, 출력, 완료 gate는 고정한다.
+
+```ts
+type LlmFunctionId =
+  | "analysis.source-map"
+  | "analysis.fact-extract"
+  | "analysis.wiki-compose"
+  | "analysis.scenario-compose"
+  | "scenario.answer"
+  | "test.plan";
+```
+
+| 기능 | 입력 | 허용 출력 | 완료 gate |
+| --- | --- | --- | --- |
+| `analysis.source-map` | project snapshot, include/exclude policy | source/module/dependency ID와 위치 | source schema, 경로 존재, 프로젝트 범위 확인 |
+| `analysis.fact-extract` | persisted source ID, 해당 source 내용 | fact ID, source relation, 근거 위치 | fact schema, 모든 source relation과 근거 범위 확인 |
+| `analysis.wiki-compose` | persisted fact/source ID | wiki ID와 fact relation | wiki schema, fact coverage, 금지된 무근거 문장 검사 |
+| `analysis.scenario-compose` | persisted wiki/fact/source ID | scenario ID, precondition, steps, expected result, 관계 | scenario schema, ID graph, 중복·순서 검사 |
+| `scenario.answer` | 선택 scenario ID와 질문 | ID별 근거가 있는 chat response record | 모든 인용 ID가 query 결과에 존재, 분석 artifact 변경 없음 |
+| `test.plan` | immutable scenario snapshot, target contract | 구조화 test plan draft | plan schema, scenario hash, 허용 action 검사 |
+
+각 root 기능은 다음 순서를 공통으로 따른다.
+
+```text
+AnalysisCoordinator creates immutable WorkDescriptor
+  → function-specific read/write policy 적용
+  → getContext + contextToken
+  → begin
+  → Pi turn 실행
+  → 필요 시 requestChildWork
+  → child 결과를 각각 검증
+  → root가 결과를 staging에 통합
+  → submitArtifacts
+  → Pi work tree settled 확인
+  → requestCompletion
+  → backend completion gate
+  → state revision commit
+  → domain event publish
+```
+
+`scenario.answer`와 `test.plan`도 같은 시작·settle 계약을 사용하지만 analysis stage를 변경하지 않는다. `scenario.answer`는 conversation record만 append하고, `test.plan`은 execution 생성 전 plan snapshot만 생성한다.
+
+### 8.6 기능별 격리와 안정성
+
+| 경계 | analysis 4단계 | scenario Q&A | test planning |
+| --- | --- | --- | --- |
+| Pi session | 하나의 analysis session에서 stage별 root work 분리 | conversation별 chat session | execution별 planning session |
+| 읽기 | 현재 stage가 허용한 project source와 persisted input ID | ArtifactQueryService가 반환한 선택 ID 관계 | immutable scenario snapshot과 target contract |
+| 쓰기 | `.scenarioforge/staging/{workId}/`와 상태 요청 | conversation log만 append | `.scenarioforge/staging/{workId}/plan.json` |
+| 금지 | 다른 stage final artifact와 canonical state 직접 수정 | source·fact·wiki·scenario·execution 수정 | analysis artifact, Runner queue, evidence 수정 |
+| child work | module 또는 ID batch 단위 허용 | 기본 금지 | 계획이 큰 경우 scenario 단위 허용 |
+| 완료 | stage completion gate | response schema와 cited ID gate | plan validator와 snapshot hash gate |
+
+안정성 규칙은 다음과 같다.
+
+- root/child work는 각각 고유 `workId`, staging path, tool policy, activity stream을 가진다.
+- child는 부모의 `contextToken`을 재사용하지 않고 자체 context를 조회한다.
+- child 결과는 부모 상태를 직접 바꾸지 않으며 parent integration gate를 통과해야 한다.
+- project별 `RuntimeStateCoordinator`만 canonical state를 쓰고 모든 LLM session은 read-only projection을 본다.
+- 상태 변경 요청은 `{projectId, sessionId, workId, operationId, expectedRevision}` idempotency key로 중복 적용을 막는다.
+- provider timeout, rate limit, 일시적 network 오류만 최대 2회 재시도하며 대기 간격은 1초, 3초다.
+- schema, 권한, 경로 이탈, ID 충돌 오류는 자동 재시도하지 않고 `failed`와 구조화 원인을 기록한다.
+- work timeout 또는 abort 시 child부터 취소하고 root를 `cancelling → settled|failed`로 전이한다.
+- Pi UtilityProcess crash는 Electron Main과 Renderer를 종료시키지 않으며 session을 `recovering`으로 전이한다.
+- tool output은 크기 제한과 민감정보 마스킹을 거친 요약만 activity에 저장한다.
+
+### 8.7 공통 계약 정보의 추가·수정·삭제
+
+`WORK_PROTOCOL.md`는 앱 Resource Bundle이 소유한다. LLM은 읽기만 가능하며 app upgrade가 새 protocol version과 hash를 설치할 때만 변경한다. 호환되지 않는 protocol은 기존 run에 덮어쓰지 않고 새 analysis run부터 적용한다.
+
+`WORK_STATE.md`는 canonical journal의 projection이므로 LLM이 Markdown을 직접 편집하지 않는다. 정보 변경은 다음 규칙을 사용한다.
+
+| 연산 | 허용 방식 | 불변 조건 |
+| --- | --- | --- |
+| 추가 | `requestChildWork`, `recordActivity`, `submitArtifacts` 등 구조화 command | backend가 ID와 owner를 검증하고 새 revision 생성 |
+| 수정 | `updateProgress`와 activity 종료처럼 allowlist field만 compare-and-set | `expectedRevision` 일치, 자신의 `workId` 범위, 이전 값 journal 보존 |
+| 삭제 | 미제출 draft만 `discardDraftArtifact`; work와 제출 기록은 tombstone | persisted artifact, activity, 완료 stage는 LLM hard delete 금지 |
+
+삭제는 기본적으로 물리 삭제가 아니라 다음 tombstone을 새 revision에 추가하는 방식이다.
+
+```ts
+type StateTombstone = {
+  entityId: string;
+  entityType: "work" | "draft-artifact";
+  deletedAt: string;
+  deletedByWorkId: string;
+  reason: string;
+  previousRevision: number;
+};
+```
+
+- unsubmitted draft는 staging에서 격리한 뒤 tombstone commit이 성공하면 제거할 수 있다.
+- 제출·검증·저장된 artifact는 새 attempt가 `supersedesArtifactId`로 대체하며 기존 파일과 관계를 유지한다.
+- activity는 append-only이고 삭제하지 않는다. 민감정보가 발견되면 원본을 노출 차단하고 redaction revision을 추가한다.
+- analysis run, test execution, evidence의 물리 삭제는 사용자 명시 명령과 관계 검사를 거치는 retention 기능만 수행한다.
+- tombstone 또는 superseding 관계가 반영될 때마다 `WORK_STATE.md`를 전체 재생성하고 hash를 StateCommit에 기록한다.
+
+### 8.8 역할별 상세 하네스와의 연결 시점
+
+위 기능 ID, workflow, isolation, CRUD 계약은 하네스보다 먼저 구현하고 fake Pi fixture로 검증한다. Phase 8에서 각 기능의 system instruction, skill trigger, tool schema, child 위임 문구를 이 계약에 연결한다. 하네스는 상태 전이나 완료 조건을 새로 정의할 수 없고 backend 계약을 설명하고 호출하는 역할만 가진다.
 
 ## 9. 분석 파이프라인
 
@@ -1041,7 +1190,9 @@ ScenarioForge/
 ├── docs/
 │   ├── architecture/
 │   ├── screens/
-│   └── superpowers/specs/
+│   └── superpowers/
+│       ├── specs/
+│       └── plans/
 ├── artifacts/
 ├── package.json
 ├── package-lock.json
@@ -1067,6 +1218,8 @@ selected-project/
     │   ├── analysis/
     │   ├── chat/
     │   └── test-planning/
+    ├── staging/
+    │   └── {workId}/
     ├── state/
     │   ├── project-state.json
     │   ├── WORK_STATE.md
@@ -1145,11 +1298,13 @@ selected-project/
 
 ### Phase 5. Analysis Domain
 
+- 6개 `LlmFunctionId`의 immutable WorkDescriptor와 기능별 policy
 - 단계 상태 머신
 - session `settled`와 stage `completed`를 분리한 completion gate
 - stage manifest와 artifact schema·ID 관계 validator
 - ID 인덱스와 query service
 - `workId`/child work 상태 및 stale revision 거절
+- 공통 상태 정보 ADD/UPDATE/TOMBSTONE와 ownership 검사
 - fake Pi adapter로 전체 분석 흐름 검증
 
 ### Phase 6. 프런트 보정
@@ -1199,6 +1354,9 @@ selected-project/
 - runtime manifest migration
 - 각 상태 계층의 reducer와 허용·금지 전이
 - stale `expectedRevision` 거절
+- context 조회 없는 `begin` 거절과 child context 격리
+- work owner 밖의 UPDATE·DELETE 거절
+- persisted artifact hard delete 거절과 draft tombstone
 - `WORK_STATE.md` projection 결정성·민감정보 제외
 - domain event reducer와 revision 계산
 - Pi raw event adapter 정규화
@@ -1214,6 +1372,9 @@ selected-project/
 - runtime upgrade와 rollback
 - UtilityProcess session lifecycle
 - Pi 이벤트가 session/activity 후보로만 변환되고 UI로 직접 전달되지 않음
+- analysis/Q&A/test-planning session의 읽기·쓰기 범위 격리
+- child 결과가 parent integration 전 stage 상태를 변경하지 않음
+- 동일 operation 재전송 시 idempotency 보장
 - 상태·checkpoint·revision 저장 전에 event가 발행되지 않음
 - 중복 event 무시, revision gap replay, snapshot 재동기화
 - commit 각 단계에서 강제 종료한 뒤 마지막 정상 revision 복구
