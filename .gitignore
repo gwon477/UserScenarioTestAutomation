@@ -1,0 +1,18 @@
+node_modules/
+dist/
+out/
+release/
+
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Local ScenarioForge analysis output and credentials
+.scenarioforge/
+**/.scenarioforge/

@@ -1,0 +1,476 @@
+:root,
+[data-brand="forge"] {
+  --background: #f9f7f7;
+  --foreground: #112d4e;
+  --card: #ffffff;
+  --muted: #dbe2ef;
+  --primary: #3f72af;
+  --accent: #112d4e;
+  --on-accent: #f9f7f7;
+  --muted-foreground: rgb(45 67 91);
+  --destructive: #d62828;
+  --radius: 2px;
+  --ring: #3f72af;
+  --shadow: 0 4px 6px rgb(17 45 78 / 0.08);
+  --overlay: rgb(17 45 78 / 0.34);
+  --primary-soft: rgb(63 114 175 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Plus Jakarta Sans", "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 20;
+  top: 8px;
+  left: 8px;
+  padding: 10px 12px;
+  color: var(--on-accent);
+  background: var(--accent);
+  transform: translateY(-150%);
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.topbar,
+.app-footer,
+.onboarding,
+.workspace,
+.result-workspace,
+.result-loading {
+  width: min(100% - 64px, 72rem);
+  margin-inline: auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  border-bottom: 1px solid var(--muted);
+}
+
+.brand {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--foreground);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.forge-mark {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  color: var(--on-accent);
+  background: var(--accent);
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.setup-progress {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.setup-progress li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+}
+
+.setup-progress li > span {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.setup-progress .is-current {
+  color: var(--foreground);
+}
+
+.setup-progress .is-current > span {
+  color: var(--on-accent);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.onboarding {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1.1fr);
+  gap: clamp(48px, 7vw, 96px);
+  align-items: center;
+  padding-block: 56px;
+}
+
+.intro-copy {
+  max-width: 510px;
+  animation: enter-copy 420ms ease-out both;
+}
+
+.product-kicker,
+.eyebrow,
+.drawing-number,
+.version {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.product-kicker {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin-bottom: 22px;
+  color: var(--primary);
+}
+
+h1 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(2.25rem, 3.2vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+h1 em {
+  color: var(--primary);
+  font-style: normal;
+}
+
+.intro-description {
+  max-width: 31rem;
+  margin: 24px 0 0;
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.selected-directory {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  max-width: 460px;
+  margin-top: 24px;
+  padding: 12px 14px;
+  border: 1px solid var(--muted);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.selected-directory > svg {
+  flex: 0 0 auto;
+  color: var(--primary);
+}
+
+.selected-directory div {
+  min-width: 0;
+}
+
+.selected-directory span,
+.selected-directory strong {
+  display: block;
+}
+
+.selected-directory span {
+  color: var(--muted-foreground);
+  font-size: 12px;
+}
+
+.selected-directory strong {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.primary-action {
+  display: inline-flex;
+  min-width: 288px;
+  min-height: 52px;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+  padding: 0 18px;
+  color: var(--on-accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.primary-action:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.primary-action:disabled {
+  cursor: wait;
+  opacity: 0.56;
+}
+
+.primary-action .action-arrow {
+  margin-left: auto;
+  transition: transform 180ms ease;
+}
+
+.primary-action:hover .action-arrow {
+  transform: translateX(3px);
+}
+
+.form-error {
+  max-width: 460px;
+  margin: 12px 0 0;
+  color: var(--destructive);
+  font-size: 13px;
+}
+
+.scope-note {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+.scope-note svg {
+  color: var(--primary);
+}
+
+.blueprint {
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+  padding: 30px;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  animation: enter-blueprint 480ms 80ms ease-out both;
+}
+
+.blueprint-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--muted);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.blueprint-grid path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+}
+
+.blueprint > *:not(.blueprint-grid) {
+  position: relative;
+  z-index: 1;
+}
+
+.blueprint-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--muted);
+}
+
+.eyebrow,
+.drawing-number {
+  color: var(--primary);
+}
+
+.blueprint h2 {
+  margin: 6px 0 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.drawing-number {
+  padding-top: 2px;
+}
+
+.source-window {
+  width: 66%;
+  margin-top: 28px;
+  border: 1px solid var(--primary);
+  background: var(--card);
+}
+
+.source-window-title {
+  display: flex;
+  min-height: 42px;
+  gap: 8px;
+  align-items: center;
+  padding-inline: 12px;
+  color: var(--on-accent);
+  background: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.selected-check {
+  margin-left: auto;
+}
+
+.file-tree {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+  color: var(--muted-foreground);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+}
+
+.file-tree li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.file-tree-child {
+  margin-left: 22px;
+}
+
+.file-tree .is-active {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.route-map {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 38px;
+  color: var(--primary);
+}
+
+.route-node {
+  display: grid;
+  width: 92px;
+  min-height: 64px;
+  align-content: center;
+  padding: 9px 11px;
+  color: var(--foreground);
+  border: 1px solid var(--muted);
+  background: var(--card);
+}
+
+.route-node span {
+  color: var(--primary);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 10px;
+}
+
+.route-node strong {
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.route-node.is-current {
+  color: var(--on-accent);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.route-node.is-current span {
+  color: var(--muted);
+}
+
+.blueprint-caption {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 36px;
+  padding-top: 18px;
+  color: var(--muted-foreground);
+  border-top: 1px solid var(--muted);
+  font-size: 13px;
+}
+
+.blueprint-caption svg {
+  color: var(--primary);
+}
+
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  color: var(--muted-foreground);
+  border-top: 1px solid var(--muted);
+  font-size: 12px;
+}
+
+.version {
+  color: var(--primary);
+  font-size: 10px;
+}

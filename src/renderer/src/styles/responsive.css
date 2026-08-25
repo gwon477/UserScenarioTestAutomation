@@ -1,0 +1,292 @@
+@media (max-width: 900px) {
+  .onboarding {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .intro-copy {
+    max-width: 640px;
+  }
+
+  .blueprint {
+    min-height: auto;
+  }
+
+  .workspace-heading {
+    display: grid;
+    align-items: start;
+  }
+
+  .project-facts {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .analysis-launch {
+    grid-template-columns: 1fr auto;
+  }
+
+  .launch-copy {
+    grid-column: 1 / -1;
+  }
+
+  .model-summary {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .history-card {
+    grid-template-columns: 64px minmax(160px, 1fr) repeat(2, auto) 28px;
+  }
+
+  .history-metric:nth-of-type(5),
+  .history-status {
+    display: none;
+  }
+
+  .result-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .result-meta {
+    width: 100%;
+  }
+
+  .result-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .scenario-chat {
+    position: relative;
+    top: 0;
+    height: 520px;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .scenario-area {
+    display: block;
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .scenario-sheet,
+  .scenario-area-summary {
+    min-width: 720px;
+  }
+
+  .scenario-sheet {
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar,
+  .app-footer,
+  .onboarding,
+  .workspace,
+  .result-workspace,
+  .result-loading {
+    width: min(100% - 32px, 72rem);
+  }
+
+  .topbar {
+    min-height: 72px;
+  }
+
+  .setup-progress li {
+    display: none;
+  }
+
+  .setup-progress .is-current {
+    display: flex;
+  }
+
+  .onboarding {
+    padding-block: 40px;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 12vw, 2.75rem);
+  }
+
+  .primary-action {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .blueprint {
+    padding: 20px;
+  }
+
+  .source-window {
+    width: 100%;
+  }
+
+  .route-map {
+    justify-content: center;
+  }
+
+  .route-node {
+    width: auto;
+    min-width: 72px;
+  }
+
+  .app-footer {
+    min-height: 56px;
+  }
+
+  .app-footer > span:first-child {
+    display: none;
+  }
+
+  .active-project-name {
+    display: none;
+  }
+
+  .workspace-nav {
+    gap: 8px;
+  }
+
+  .workspace {
+    padding-block: 36px 48px;
+  }
+
+  .workspace-heading {
+    gap: 28px;
+  }
+
+  .project-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .project-facts div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 0;
+    border-bottom: 1px solid var(--muted);
+  }
+
+  .project-facts div:last-child {
+    border-bottom: 0;
+  }
+
+  .project-facts dd {
+    margin: 0;
+  }
+
+  .analysis-launch {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .launch-copy,
+  .model-summary,
+  .launch-button {
+    grid-column: auto;
+  }
+
+  .launch-button {
+    width: 100%;
+  }
+
+  .analysis-progress {
+    padding: 22px;
+  }
+
+  .pipeline {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .pipeline-node,
+  .pipeline li:last-child .pipeline-node {
+    width: 100%;
+    min-height: 92px;
+  }
+
+  .pipeline-connector {
+    display: none;
+  }
+
+  .history-card {
+    grid-template-columns: 58px minmax(0, 1fr) 28px;
+    gap: 10px;
+  }
+
+  .history-metric,
+  .history-status {
+    display: none;
+  }
+
+  .modal-layer {
+    align-items: end;
+    padding: 0;
+  }
+
+  .settings-modal {
+    width: 100%;
+    max-height: 92vh;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  .modal-header,
+  .settings-form {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .provider-options {
+    grid-template-columns: 1fr;
+  }
+
+  .result-workspace {
+    padding-block: 28px 48px;
+  }
+
+  .result-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .result-meta div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 0;
+    border-bottom: 1px solid var(--muted);
+  }
+
+  .result-meta div:last-child {
+    border-bottom: 0;
+  }
+
+  .result-meta dd {
+    margin: 0;
+  }
+
+  .test-execution-panel {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 88vh;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
