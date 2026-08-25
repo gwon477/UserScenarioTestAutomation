@@ -1,7 +1,7 @@
 # ScenarioForge Pi Runtime 및 테스트 수행 통합 설계
 
 - 작성일: 2026-08-25
-- 상태: 설계 원칙 승인, 작성 문서 사용자 검토 대기
+- 상태: 상태 관리 계약 보완, 수정 문서 사용자 검토 대기
 - 대상 브랜치: `dev`
 - 대상 제품: ScenarioForge 설치형 데스크톱 솔루션
 
@@ -38,6 +38,8 @@ ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 
 - Electron 앱에 번들된 Pi Runtime과 프로젝트별 Resource Bundle 연결
 - 프로젝트 초기화, runtime manifest, 버전 검사 및 마이그레이션 경계
 - Pi 세션 생성·복구·분리와 도메인 이벤트 변환
+- Pi 원시 이벤트와 화면 상태를 분리하는 영속 도메인 상태 계층
+- 모든 LLM 작업이 공통으로 읽는 작업 규격과 상태 문서
 - 고정된 분석 단계와 동적인 Pi 작업의 결합
 - ID 기반 산출물 인덱스
 - 순차 테스트 대기열과 결정론적 TestVista Runner 경계
@@ -62,7 +64,12 @@ ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 
 | 에이전트 구조 | Pi-first 하이브리드 구조 |
 | Pi 배치 | 앱에 검증된 버전을 번들하고 프로젝트에는 리소스·세션·산출물만 저장 |
 | 분석 제어 | 외부 도메인 단계는 고정, 단계 내부 작업은 Pi가 동적으로 결정 |
-| 애플리케이션 상태 | Pi 메시지가 아니라 manifest와 도메인 이벤트가 원본 |
+| 애플리케이션 상태 | Pi 메시지가 아니라 영속 도메인 상태와 revision이 원본 |
+| Pi 이벤트 | `PiEventAdapter`를 통과한 상태 명령 후보로만 사용하고 Renderer에 직접 전달하지 않음 |
+| 공통 작업 규격 | 모든 LLM 작업은 `WORK_PROTOCOL.md`와 최신 `WORK_STATE.md`를 읽고 시작 |
+| 상태 변경 권한 | LLM은 상태 문서를 직접 편집하지 않고 통제된 상태 갱신 계약을 호출 |
+| 완료 판정 | Pi session `settled`와 업무 단계 `completed`를 분리 |
+| 이벤트 발행 | 상태·checkpoint·revision 저장이 끝난 뒤 도메인 이벤트 발행 |
 | 세션 | 사용자에게는 하나의 프로젝트, 내부적으로 분석·질의·테스트 계획 세션 분리 |
 | 질의응답 위치 | 시나리오 도출 페이지에서만 제공 |
 | 테스트 실행 | 프로젝트별 하나의 Runner가 시나리오를 순차 실행 |
@@ -85,6 +92,7 @@ Electron Main — Application Orchestrator
         ├── ProjectBootstrapper
         ├── CredentialStore
         ├── PiProcessManager
+        ├── RuntimeStateCoordinator
         ├── AnalysisCoordinator
         ├── TestCoordinator
         └── ArtifactQueryService
@@ -101,7 +109,7 @@ Electron Main — Application Orchestrator
                 └──────┬───────┘
                        ▼
         selected-project/.scenarioforge/
-        manifests / sessions / artifacts / evidence / index
+        state / journal / sessions / artifacts / evidence / index
 ```
 
 ### 5.1 권한 경계
@@ -112,6 +120,434 @@ Electron Main — Application Orchestrator
 - Pi는 프로젝트 분석과 질의를 담당하며 실제 테스트 실행 상태의 원본이 아니다.
 - TestVista는 고정된 테스트 계획을 실행하며 LLM의 자유 응답으로 판정을 확정하지 않는다.
 - 모든 파일 접근은 선택 프로젝트와 `.scenarioforge/`의 허용 경로로 제한한다.
+
+### 5.2 상태 처리 경계
+
+Pi의 원시 이벤트는 UI 계약이 아니다. Renderer는 Pi SDK event name, 메시지 chunk, `agent_end`, tool payload를 알지 못한다.
+
+```text
+Pi raw event
+  → PiEventAdapter
+  → domain command candidate
+  → RuntimeStateCoordinator
+  → durable state + checkpoint + revision commit
+  → persisted domain event
+  → typed IPC event
+  → Renderer Project/Execution Store
+  → state-derived view
+```
+
+`PiEventAdapter`의 책임은 Pi 이벤트를 정규화하고 검증 가능한 활동 사실 또는 세션 상태 변경 후보로 바꾸는 데 한정한다. Adapter는 분석 단계 완료를 확정하거나 파일을 직접 저장하거나 Renderer 이벤트를 발행하지 않는다.
+
+- `agent_start`는 session `running` 전이 후보다.
+- tool 시작·종료는 활동 패널용 activity 후보다.
+- compaction 이벤트는 session `compacting` 전이 후보다.
+- `agent_end`는 session `settled` 전이 후보일 뿐 stage completion이 아니다.
+- 모델의 텍스트 응답과 숨은 사고 과정은 상태 판정과 UI 이벤트에 사용하지 않는다.
+
+### 5.3 관리 상태 계층
+
+각 계층은 독립 상태 머신을 가지며 상위 화면은 여러 계층의 영속 상태를 조합해 결정한다.
+
+| 계층 | 대표 상태 | 화면 책임 |
+| --- | --- | --- |
+| 프로젝트 | `unselected`, `configuring`, `ready`, `error` | 프로젝트 선택, 설정, 작업대 진입 |
+| Pi Runtime | `unconfigured`, `preparing`, `ready`, `recovering`, `stopped`, `error` | Runtime 준비와 복구 안내 |
+| LLM 세션 | `creating`, `idle`, `running`, `retrying`, `compacting`, `cancelling`, `settled`, `recovering`, `failed` | 세션 상태 표시 |
+| 분석 파이프라인 | `src`, `fact`, `wiki`, `scenario`와 단계별 lifecycle | 주 분석 화면과 검증된 진행률 |
+| 작업 활동 | tool, skill, subagent, validator 활동 | 활동 패널만 갱신 |
+| 산출물 | `absent`, `generating`, `validating`, `verified`, `persisted`, `invalid` | 다음 단계와 시나리오 화면 활성화 |
+
+최소 상태 계약은 다음과 같다.
+
+```ts
+type ProjectLifecycleStatus =
+  | "unselected"
+  | "configuring"
+  | "ready"
+  | "error";
+
+type RuntimeStatus =
+  | "unconfigured"
+  | "preparing"
+  | "ready"
+  | "recovering"
+  | "stopped"
+  | "error";
+
+type AgentWorkStatus =
+  | "creating"
+  | "idle"
+  | "running"
+  | "retrying"
+  | "compacting"
+  | "cancelling"
+  | "settled"
+  | "recovering"
+  | "failed";
+
+type AnalysisStage = "src" | "fact" | "wiki" | "scenario";
+
+type AnalysisStageStatus =
+  | "pending"
+  | "running"
+  | "validating"
+  | "completed"
+  | "failed";
+
+type ArtifactStatus =
+  | "absent"
+  | "generating"
+  | "validating"
+  | "verified"
+  | "persisted"
+  | "invalid";
+
+type ActivityKind = "tool" | "skill" | "subagent" | "validator";
+
+type ActivityStatus =
+  | "queued"
+  | "running"
+  | "succeeded"
+  | "failed"
+  | "cancelled";
+
+type ProjectRuntimeState = {
+  schemaVersion: number;
+  projectId?: string;
+  revision: number;
+  projectStatus: ProjectLifecycleStatus;
+  runtimeStatus: RuntimeStatus;
+  sessionStatus: AgentWorkStatus;
+  sessionId?: string;
+  analysisRunId?: string;
+  activeStage?: AnalysisStage;
+  stages: Record<AnalysisStage, AnalysisStageStatus>;
+  artifactStatus: Record<AnalysisStage, ArtifactStatus>;
+  progress: number;
+  currentActivity?: string;
+  recoverable: boolean;
+  lastCheckpointId?: string;
+  lastError?: {
+    category: string;
+    message: string;
+  };
+};
+```
+
+`progress`는 tool 호출 수나 모델 token에서 계산하지 않는다. 저장 완료된 stage와 현재 stage의 검증된 산출물 단위만으로 backend가 계산한다.
+
+#### 5.3.1 Project와 Pi Runtime 상태 머신
+
+```text
+Project
+unselected → configuring → ready
+                    └────→ error
+ready ──────────────────→ error
+error → configuring                     # 재설정 또는 새 프로젝트 선택
+
+Pi Runtime
+unconfigured → preparing → ready → stopped → preparing
+                    └───→ error
+ready → recovering | stopped | error
+recovering → ready | error | stopped
+error → preparing | recovering | stopped
+```
+
+프로젝트 `ready`는 Pi Runtime과 산출물이 모두 준비됐다는 뜻이 아니다. 선택 프로젝트의 기본 저장소와 설정 계약이 유효하다는 뜻이며, 화면은 runtime과 artifact 상태를 추가로 조합한다.
+
+#### 5.3.2 LLM 세션 상태 머신
+
+```text
+creating → idle | failed | recovering
+idle → running | recovering | failed
+running
+                  ├→ retrying → running | failed | cancelling | recovering
+                  ├→ compacting → running | settled | failed | recovering
+                  ├→ cancelling → settled | failed | recovering
+                  ├→ settled → idle | retrying | recovering
+                  ├→ failed → retrying | recovering
+                  └→ recovering → idle | running | settled | failed
+```
+
+`settled`는 현재 Pi turn이 더 이상 event를 생성하지 않는다는 뜻이다. session 전체의 성공이나 stage 완료를 뜻하지 않는다. 동일 session의 다음 stage 또는 보완 작업은 completion gate 결과에 따라 `idle` 또는 `retrying`을 거쳐 다시 `running`으로 전이한다.
+
+#### 5.3.3 분석·산출물·활동 상태 머신
+
+```text
+Analysis stage
+pending → running → validating → completed
+             └────────┬───────→ failed
+                      └───────→ running     # gate 미충족 보완 작업
+failed → running                           # 명시적 retry, attempt 증가
+
+Artifact
+absent → generating → validating → verified → persisted
+                           └────→ invalid → generating
+
+Activity
+queued → running → succeeded | failed | cancelled
+```
+
+한 analysis run에서 `completed` stage와 `persisted` artifact는 되돌리지 않는다. 수정·재분석은 새 `attemptId` 또는 새 `analysisRunId`를 생성하고 관계를 연결한다. stage 순서는 `src.completed → fact`, `fact.completed → wiki`, `wiki.completed → scenario`만 허용한다. 허용되지 않은 전이는 state invariant 오류로 거절하며 revision과 UI event를 만들지 않는다.
+
+### 5.4 LLM 공통 작업 문서
+
+모든 analysis, chat, test-planning 작업은 다음 두 문서를 공통 계약 표면으로 사용한다.
+
+1. `.scenarioforge/runtime/WORK_PROTOCOL.md`
+   - Resource Bundle 버전에 고정된 읽기 전용 작업 규격
+   - 작업 시작 전 상태 확인, ID 기반 조회, 산출물 제출, 실패 보고, 완료 요청 원칙
+   - LLM 응답과 업무 완료의 분리, 금지된 직접 파일 수정, 보안 경계를 선언
+2. `.scenarioforge/state/WORK_STATE.md`
+   - backend canonical state에서 생성한 현재 상태의 읽기 전용 Markdown projection
+   - `schemaVersion`, `revision`, project/session/run/stage/work ID, 입력 ID, 검증된 산출물, 남은 완료 조건, 복구 정보, 허용된 다음 행동을 포함
+
+`WORK_STATE.md`는 다음 heading과 순서를 고정한다. 값이 없더라도 heading을 생략하지 않아 parser와 LLM이 같은 위치에서 정보를 찾게 한다.
+
+```md
+# ScenarioForge Work State
+
+## State Identity
+## Current Assignment
+## Required Input IDs
+## Verified Artifacts
+## Pending Completion Gates
+## Recent Verifiable Activities
+## Recovery and Error
+## Allowed Next Actions
+```
+
+문서에는 credential, 개인정보 원문, chain-of-thought, 전체 tool output을 넣지 않는다. `Recent Verifiable Activities`는 제한된 최근 항목의 projection이며 전체 이력은 journal과 activity 조회 API가 보존한다.
+
+`WORK_PROTOCOL.md`의 구체적인 역할 지침과 문구는 Phase 8에서 작성한다. 이 단계에서는 문서 schema, version, 생성·검증 계약만 구현한다.
+
+LLM이나 서브에이전트가 `WORK_STATE.md`, `project-state.json`, checkpoint를 파일 도구로 직접 편집하는 것은 금지한다. 작업자는 PiRuntimeHost가 제공하는 통제된 `WorkStateService` 요청을 통해서만 갱신 의도를 제출한다.
+
+```ts
+interface WorkStateService {
+  getContext(input: {
+    projectId: string;
+    workId: string;
+  }): Promise<WorkContext>;
+
+  begin(input: {
+    projectId: string;
+    workId: string;
+    expectedRevision: number;
+    contextToken: string;
+  }): Promise<StateCommit>;
+
+  recordActivity(input: {
+    projectId: string;
+    workId: string;
+    expectedRevision: number;
+    activity: VerifiableActivity;
+  }): Promise<StateCommit>;
+
+  submitArtifacts(input: {
+    projectId: string;
+    workId: string;
+    expectedRevision: number;
+    artifacts: ArtifactSubmission[];
+  }): Promise<StateCommit>;
+
+  reportFailure(input: {
+    projectId: string;
+    workId: string;
+    expectedRevision: number;
+    error: DomainError;
+  }): Promise<StateCommit>;
+
+  requestCompletion(input: {
+    projectId: string;
+    workId: string;
+    expectedRevision: number;
+  }): Promise<CompletionDecision>;
+}
+
+type WorkContext = {
+  projectId: string;
+  workId: string;
+  parentWorkId?: string;
+  revision: number;
+  protocolVersion: string;
+  protocolHash: string;
+  protocolMarkdown: string;
+  stateHash: string;
+  stateMarkdown: string;
+  requiredInputIds: string[];
+  allowedNextActions: string[];
+  contextToken: string;
+};
+
+type StateCommit = {
+  projectId: string;
+  workId: string;
+  previousRevision: number;
+  revision: number;
+  eventId: string;
+  workStateHash: string;
+};
+
+type VerifiableActivity = {
+  activityId: string;
+  kind: ActivityKind;
+  name: string;
+  targetIds: string[];
+  status: ActivityStatus;
+  startedAt: string;
+  finishedAt?: string;
+  summary?: string;
+};
+
+type ArtifactSubmission = {
+  artifactId: string;
+  artifactType: AnalysisStage;
+  stagingPath: string;
+  relatedIds: string[];
+  contentHash: string;
+};
+
+type DomainError = {
+  category: string;
+  message: string;
+  recoverable: boolean;
+  activityId?: string;
+};
+
+type CompletionDecision =
+  | {
+      accepted: true;
+      commit: StateCommit;
+    }
+  | {
+      accepted: false;
+      revision: number;
+      unmetGates: string[];
+      context: WorkContext;
+    };
+```
+
+`getContext`는 project, work, revision, protocol hash에 묶인 일회성 `contextToken`을 발급하고 `begin`은 이 token이 없거나 오래됐으면 거절한다. 따라서 각 root/child 작업은 공통 문서를 조회하지 않고 시작할 수 없다. 이후 `expectedRevision`이 현재 revision과 다르면 갱신을 거절하고 최신 `WorkContext`를 다시 읽게 한다. 이를 통해 여러 tool과 subagent 결과가 오래된 상태를 덮어쓰지 못하게 한다. 구체적인 Pi tool 이름과 각 역할이 참조하는 상세 정보는 마지막 하네스·스킬·에이전트 설계에서 이 service 계약에 매핑한다.
+
+### 5.5 공통 작업 프로토콜
+
+각 논리 작업은 backend가 발급한 `workId`와 다음 순서를 따른다.
+
+1. `getContext`로 최신 revision과 `WORK_PROTOCOL.md`/`WORK_STATE.md` 내용을 읽고 `contextToken`을 발급받는다.
+2. 같은 revision의 `contextToken`을 포함한 `begin`으로 작업 시작을 기록한다.
+3. tool, skill, subagent 실행 결과 중 검증 가능한 사실만 `recordActivity`로 기록한다.
+4. 생성 결과는 staging 영역에 둔 뒤 `submitArtifacts`로 검증을 요청한다.
+5. 실패하면 원인을 `reportFailure`로 구조화해 남긴다.
+6. 작업자가 끝났다고 판단해도 `requestCompletion`만 호출한다.
+7. backend completion gate가 거절하면 최신 context와 미충족 조건을 받아 계속 작업한다.
+8. gate가 승인되고 상태 commit이 완료된 뒤에만 stage completion event가 발행된다.
+
+“매 작업마다 확인하고 업데이트”의 단위는 모델 token이나 자연어 메시지가 아니라 상태에 영향을 주는 `workId` 단위다. child subagent는 별도 child `workId`를 가지며, 부모 작업은 child 결과가 검증된 뒤에만 이를 자신의 산출물로 통합한다.
+
+### 5.6 영속 상태 commit과 revision
+
+`RuntimeStateCoordinator`는 프로젝트별 single-writer queue를 사용한다. 모든 상태 변경은 다음 순서를 지킨다.
+
+1. 현재 snapshot과 `expectedRevision` 비교
+2. 순수 reducer로 다음 상태와 단일 domain event 계산
+3. state journal과 checkpoint를 임시 경로에 기록하고 검증
+4. revision을 1 증가시킨 commit record를 원자적으로 확정
+5. `project-state.json`과 `WORK_STATE.md` projection 갱신
+6. 저장된 domain event를 typed IPC로 발행
+
+hash 검증을 통과한 최신 journal commit record가 canonical state다. `project-state.json`은 빠른 시작을 위한 snapshot이고 `WORK_STATE.md`는 LLM용 projection이므로, 두 파일은 journal에서 재생성할 수 있다. checkpoint에는 Pi session 위치, analysis run·stage·attempt, artifact hash, index revision, 마지막 완료 gate를 저장한다.
+
+artifact 관계 index의 row는 예정된 `stateRevision`과 `transactionId`를 포함한다. `ArtifactQueryService`는 canonical revision 이하이고 commit record의 artifact hash와 일치하는 row만 노출한다. index 기록 후 state commit 전에 종료되면 해당 row는 보이지 않으며 recovery가 제거한다. 최종 경로에 파일만 남은 경우는 `.scenarioforge/state/orphans/`로 이동하고 자동 삭제하지 않는다. retry 산출물과 hash가 같을 때만 validator를 다시 거쳐 재사용하고, 그 외 파일은 복구 화면에서 대상과 용량을 보여준 뒤 사용자가 명시적으로 삭제한다.
+
+domain event는 다음 envelope를 공통으로 사용한다.
+
+```ts
+type DomainEvent<TType extends string, TPayload> = {
+  schemaVersion: number;
+  eventId: string;
+  projectId: string;
+  revision: number;
+  occurredAt: string;
+  type: TType;
+  payload: TPayload;
+};
+```
+
+하나의 state commit은 하나의 revision과 하나의 domain event만 생성한다. 복합 변경은 하나의 event payload에 함께 담고, 후속 활동은 별도 commit으로 처리한다. event는 commit record에 먼저 저장하므로 앱 종료로 publish가 끊겨도 재시작 후 `revision` 기준으로 replay할 수 있다. Renderer는 동일 `eventId` 또는 이미 적용한 revision을 무시한다.
+
+### 5.7 완료 판정과 상태 분리
+
+세션 상태와 업무 상태는 서로 다른 reducer가 관리한다.
+
+```text
+Pi agent_end
+  → session settled
+  → stage validating
+  → schema validation
+  → required ID/source relation validation
+  → artifact atomic persistence
+  → index update verification
+  → stage completed + project revision commit
+  → analysis.stage.completed event publish
+```
+
+예를 들어 FACT 단계는 아래 조건이 모두 참일 때만 완료된다.
+
+- FACT root work와 모든 child work가 `settled` 또는 명시적 종료 상태이고 진행 중 activity가 없다.
+- FACT artifact schema가 유효하다.
+- 모든 FACT ID와 source ID의 관계가 존재한다.
+- artifact가 staging이 아닌 최종 경로에 원자적으로 저장됐다.
+- 관계 index 조회 결과가 저장 artifact와 일치한다.
+- 새 project revision과 checkpoint가 확정됐다.
+- 동일 revision의 `analysis.stage.completed` event가 commit record에 포함됐다.
+
+하나라도 실패하면 FACT는 `validating` 또는 `failed`에 머물며 시나리오 화면을 활성화하지 않는다. `agent_end`, 모델의 “완료했습니다” 응답, tool 성공 이벤트는 단독 완료 조건이 될 수 없다.
+
+### 5.8 앱 재시작과 복구
+
+앱 시작 시 저장된 상태가 `running`, `retrying`, `compacting`, `cancelling`이면 그대로 Renderer에 복원하지 않는다.
+
+```text
+previous active state
+  → runtime/session recovering
+  → latest valid journal + checkpoint 선택
+  → Pi session 존재와 resume 가능 여부 검사
+  → staged/final artifact와 index 일치 검사
+  → resumable: ready/running 또는 validating으로 전이
+  → not resumable but retryable: error + recoverable=true
+  → corrupt/non-retryable: error + recoverable=false
+```
+
+복구 시 `WORK_STATE.md`는 canonical snapshot에서 다시 생성한다. projection 누락이나 손상만으로 작업을 실패 처리하지 않는다. journal의 revision이 연속되지 않거나 hash가 맞지 않으면 마지막 정상 checkpoint까지만 채택하고 사용자에게 재개 또는 새 분석을 선택하게 한다.
+
+### 5.9 프런트 Store와 화면 판정
+
+Renderer는 다음 store를 분리한다.
+
+- `ProjectStore`: 프로젝트 선택·설정·runtime 준비·복구·오류
+- `AnalysisExecutionStore`: session, stage, artifact, progress, completion gate 결과
+- `ActivityStore`: tool, skill, subagent, validator의 검증 가능한 활동 요약
+- `TestExecutionStore`: 순차 queue, case, step, evidence 상태
+
+Store는 시작 시 `project.getState` snapshot을 받고 이후 domain event만 적용한다. 이벤트 revision이 현재보다 1 크면 적용하고, 같거나 작으면 무시하며, 2 이상 차이나면 `project.getEventsSince`로 누락 event를 요청한다. replay가 불가능하면 전체 snapshot을 다시 받는다.
+
+주 화면 전환 규칙은 다음과 같다.
+
+| 조건 | 화면 |
+| --- | --- |
+| project `unselected` | 프로젝트 선택 |
+| project `configuring`이고 model 미설정 | 모델 설정 modal |
+| runtime `preparing` | Pi 작업환경 준비 |
+| runtime `ready`이고 분석 미시작 | 프로젝트 분석 준비 |
+| session `running`이고 active stage 존재 | SRC/FACT/WIKI/SCENARIO 진행 |
+| runtime 또는 session `recovering` | 작업 복구 |
+| SCENARIO artifact `persisted`이고 analysis 완료 | 시나리오 도출 |
+| `error`, `recoverable=true` | 오류 원인과 재시도/새 분석 선택 |
+| `error`, `recoverable=false` | 복구 불가 원인과 설정/프로젝트 선택 이동 |
+
+활동 상태는 `ActivityStore`와 활동 패널만 갱신한다. tool 실행이나 subagent 완료가 route를 전환하지 않는다. LLM의 사고 과정은 저장·전송·표시하지 않고 도구 이름, 대상의 안전한 식별자, 시작·종료 시각, 구조화 결과만 노출한다.
 
 ## 6. 프로젝트 초기화
 
@@ -170,7 +606,8 @@ PiRuntimeHost는 Pi SDK를 별도 UtilityProcess에 내장한다.
 - 프로젝트별 SessionManager 사용
 - ScenarioForge ResourceLoader로 runtime resource 경로를 명시
 - 기본 파일·명령 도구를 경로 정책과 명령 정책으로 감싼다.
-- 세션 이벤트를 구독해 내부 이벤트를 ScenarioForge 도메인 이벤트로 변환한다.
+- 세션 원시 이벤트를 구독해 `PiEventAdapter`에 전달한다.
+- Adapter가 만든 상태 명령 후보를 `RuntimeStateCoordinator`로 전달하고 직접 domain event를 만들지 않는다.
 - `prompt`, `steer`, `followUp`, `abort`, `compact`, `dispose` 수명을 관리한다.
 - Pi 프로세스가 종료되면 애플리케이션 상태와 세션 파일을 대조해 복구 가능 상태를 계산한다.
 
@@ -241,12 +678,16 @@ BOOTSTRAP → SRC → FACT → WIKI → SCENARIO → READY
 
 Pi의 텍스트 응답은 완료 조건으로 사용하지 않는다. 각 단계는 다음 조건을 충족해야 한다.
 
-1. 스키마 검증 통과
-2. 필수 ID와 원천 참조 존재
-3. 임시 파일에서 최종 파일로 원자적 저장 완료
-4. 인덱스 반영 완료
-5. stage manifest 갱신 완료
-6. 완료 도메인 이벤트 발행
+1. root work와 모든 child work가 `settled` 또는 명시적 종료 상태이며 `queued`/`running` activity가 없음
+2. 스키마 검증 통과
+3. 필수 ID와 원천 참조 존재
+4. 임시 파일에서 최종 파일로 원자적 저장 완료
+5. 인덱스 반영 완료
+6. stage manifest 갱신 완료
+7. state journal과 checkpoint에 새 revision 확정
+8. 동일 revision의 완료 도메인 이벤트를 commit record에 포함
+
+작업자가 `requestCompletion`을 호출하면 stage는 먼저 `validating`으로 전이한다. validator가 위 조건을 확인한 후 `completed`를 commit하고 저장된 이벤트를 발행한다. publish가 중간에 끊기면 완료 상태를 되돌리지 않고 해당 revision의 이벤트를 replay한다. Renderer는 이벤트 수신 또는 최신 snapshot 동기화 전에는 완료 화면으로 전환하지 않는다. gate 거절 시 `CompletionDecision.unmetGates`를 공통 상태 문서에 반영해 같은 작업 또는 복구 작업이 이어서 처리한다.
 
 ### 9.3 단계별 산출물
 
@@ -465,6 +906,8 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 - `project.selectDirectory`
 - `project.bootstrap`
 - `project.getState`
+- `project.getEventsSince`
+- `project.getActivities`
 - `model.saveSettings`
 - `analysis.start`
 - `analysis.resume`
@@ -487,15 +930,23 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 - `project.bootstrap.progress`
 - `project.bootstrap.ready`
 - `project.bootstrap.failed`
-- `runtime.session.started`
-- `runtime.session.restored`
-- `runtime.session.settled`
-- `runtime.session.failed`
+- `project.state.changed`
+- `runtime.status.changed`
+- `runtime.recovery.started`
+- `runtime.recovery.completed`
+- `runtime.recovery.failed`
+- `runtime.session.status.changed`
 - `analysis.stage.started`
 - `analysis.stage.progress`
+- `analysis.work.started`
+- `analysis.work.updated`
+- `analysis.work.completion-rejected`
+- `analysis.work.failed`
 - `analysis.activity.recorded`
+- `analysis.artifact.status.changed`
 - `analysis.artifact.saved`
 - `analysis.stage.completed`
+- `analysis.stage.failed`
 - `analysis.completed`
 - `test.execution.created`
 - `test.case.started`
@@ -506,7 +957,7 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 - `test.case.completed`
 - `test.execution.completed`
 
-이벤트에는 credential, 개인정보 원문, 모델의 숨은 사고 과정, 전체 도구 출력 원문을 포함하지 않는다.
+모든 이벤트는 5.6의 envelope와 project revision을 포함한다. 이벤트에는 credential, 개인정보 원문, 모델의 숨은 사고 과정, 전체 도구 출력 원문을 포함하지 않는다.
 
 ## 15. 오류 처리
 
@@ -518,6 +969,8 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 | 프로젝트 오류 | 경로 권한, manifest 손상 | bootstrap 중단 및 복구 안내 |
 | 모델 오류 | credential, endpoint, rate limit | 세션 일시 중단 및 설정 이동 |
 | 산출물 오류 | schema 불일치, ID 충돌 | 현재 분석 단계 실패 |
+| 상태 충돌 | stale revision, 금지된 전이 | 최신 상태 재조회 후 해당 작업 갱신 재시도 |
+| 복구 오류 | journal hash 불일치, session·checkpoint 불일치 | 마지막 정상 revision 복원 또는 새 분석 선택 |
 | 테스트 실패 | 기대·실제 결과 불일치 | FAILED, 다음 케이스 계속 |
 | 케이스 환경 오류 | 페이지 접근 실패, 브라우저 crash | INCONCLUSIVE, 복구 후 다음 케이스 시도 |
 | 치명적 실행 오류 | Runner 사망, 증적 저장 실패 | 전체 execution 중단 |
@@ -535,6 +988,7 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 - `contextIsolation: true`, renderer sandbox, `nodeIntegration: false`를 유지한다.
 - Renderer가 전달한 프로젝트 경로, run ID, scenario ID, execution ID를 신뢰하지 않는다.
 - 모든 경로를 project root 아래로 canonicalize하고 symlink escape를 검사한다.
+- Pi의 일반 파일 도구에는 `.scenarioforge/state/` 쓰기 권한을 주지 않고 `WorkStateService`만 상태 변경을 수행한다.
 - Pi 기본 도구를 그대로 노출하지 않고 ScenarioForge policy wrapper를 적용한다.
 - shell 명령은 command policy와 작업 디렉터리 제한을 적용한다.
 - credential 원문을 프로젝트 파일, 세션 파일, 로그, 이벤트, 증적에 기록하지 않는다.
@@ -570,12 +1024,14 @@ ScenarioForge/
 │       └── electron.vite.config.ts
 ├── packages/
 │   ├── contracts/
-│   │   └── src/{ipc,events,artifacts,schemas}/
+│   │   └── src/{ipc,events,state,activities,artifacts,schemas}/
+│   ├── runtime-state/
+│   │   └── src/{model,reducer,coordinator,journal,projection,recovery}/
 │   ├── project-runtime/
 │   │   ├── src/{bootstrap,migrations,manifest,path-policy}/
 │   │   └── runtime-template/
 │   ├── pi-runtime/
-│   │   └── src/{host,models,sessions,resources,tools,events,security}/
+│   │   └── src/{host,models,sessions,resources,tools,event-adapter,security}/
 │   ├── scenario-pipeline/
 │   │   └── src/{stages,validators,artifacts,indexing}/
 │   ├── test-runtime/
@@ -603,6 +1059,7 @@ selected-project/
     │   ├── runtime-manifest.json
     │   ├── AGENTS.md
     │   ├── SYSTEM.md
+    │   ├── WORK_PROTOCOL.md
     │   ├── skills/
     │   ├── extensions/
     │   └── agents/
@@ -612,8 +1069,12 @@ selected-project/
     │   └── test-planning/
     ├── state/
     │   ├── project-state.json
+    │   ├── WORK_STATE.md
     │   ├── scenario-index.sqlite
+    │   ├── journal/
     │   ├── checkpoints/
+    │   ├── work-items/
+    │   ├── orphans/
     │   └── locks/
     ├── runs/
     │   └── {scenarioRunId}/
@@ -653,41 +1114,56 @@ selected-project/
 
 - npm workspace 구성
 - 기존 Electron 코드를 `apps/desktop`으로 이동
-- contracts 패키지와 schema validator 구축
+- 상태 계층, command, domain event envelope, IPC schema를 포함한 contracts 패키지 구축
 - 기존 화면과 테스트가 이동 후에도 동작하는지 검증
 
-### Phase 2. Project Runtime
+### Phase 2. 복구 가능한 Runtime State
+
+- 순수 상태 머신과 불변 조건
+- 프로젝트별 single-writer coordinator와 revision compare-and-set
+- journal, checkpoint, atomic snapshot 저장
+- `WORK_STATE.md` projection과 `WorkStateService`
+- domain event 저장 후 publish와 replay
+- 비정상 종료 지점별 복구 fixture 검증
+
+### Phase 3. Project Runtime
 
 - ProjectBootstrapper
 - manifest와 migration 경계
 - 경로·신뢰·권한 정책
+- `WORK_PROTOCOL.md`/`WORK_STATE.md` 보호 경로와 runtime version 연결
 - 선택 프로젝트 fixture를 이용한 멱등 초기화 검증
 
-### Phase 3. Pi Runtime Host 기반
+### Phase 4. Pi Runtime Host 기반
 
 - Pi SDK를 UtilityProcess에 연결
 - model 설정과 credential reference 전달
 - session create, restore, abort, dispose
-- Resource Bundle interface와 event adapter
+- Resource Bundle interface와 `PiEventAdapter`
+- 원시 Pi 이벤트가 Renderer 또는 stage completion으로 직접 전달되지 않는지 검증
 - 실제 역할별 resource 대신 schema-valid test fixture 사용
 
-### Phase 4. Analysis Domain
+### Phase 5. Analysis Domain
 
 - 단계 상태 머신
-- stage manifest와 artifact validator
+- session `settled`와 stage `completed`를 분리한 completion gate
+- stage manifest와 artifact schema·ID 관계 validator
 - ID 인덱스와 query service
+- `workId`/child work 상태 및 stale revision 거절
 - fake Pi adapter로 전체 분석 흐름 검증
 
-### Phase 5. 프런트 보정
+### Phase 6. 프런트 보정
 
 - route와 project navigation
 - bootstrap 화면
-- runtime·session 상태
+- `ProjectStore`, `AnalysisExecutionStore`, `ActivityStore`, `TestExecutionStore`
+- snapshot hydration, revision gap replay, duplicate event 무시
 - 타이머 목업 제거
-- 도메인 이벤트 기반 분석 진행 및 복구 UI
+- 영속 도메인 이벤트 기반 runtime·session·stage·artifact·복구 UI
+- 활동 패널과 주 화면 전환의 분리
 - 시나리오 페이지 질의 경계 유지
 
-### Phase 6. 테스트 및 증적
+### Phase 7. 테스트 및 증적
 
 - TestCoordinator와 순차 queue
 - TestVista process contract
@@ -695,16 +1171,18 @@ selected-project/
 - screenshot, trace, log, masking, hash
 - 테스트 센터와 증적 상세 화면
 
-### Phase 7. 하네스·스킬·에이전트 상세 설계
+### Phase 8. 하네스·스킬·에이전트 상세 설계
 
+- `WORK_PROTOCOL.md` 실제 내용과 역할별 시작·갱신·완료 규칙
 - 각 분석 단계가 참조할 정보와 금지 범위
 - ID 조회 도구와 산출물 작성 도구
-- 하네스의 완료 조건과 검증 규칙
+- `WorkStateService`를 Pi tool로 노출하는 이름과 입력·출력 schema
+- 하네스의 완료 요청과 backend completion gate 연결
 - 스킬 목록, trigger, 입력·출력 계약
 - 서브에이전트 역할, 위임 조건, 결과 통합 방식
 - 실제 Resource Bundle 작성과 버전 manifest 생성
 
-### Phase 8. 실제 Pi 통합 E2E
+### Phase 9. 실제 Pi 통합 E2E
 
 - 실제 프로젝트 fixture 분석
 - 앱 재시작 후 session 복구
@@ -719,7 +1197,11 @@ selected-project/
 - schema validators
 - canonical path와 symlink escape
 - runtime manifest migration
-- domain event reducer
+- 각 상태 계층의 reducer와 허용·금지 전이
+- stale `expectedRevision` 거절
+- `WORK_STATE.md` projection 결정성·민감정보 제외
+- domain event reducer와 revision 계산
+- Pi raw event adapter 정규화
 - analysis stage completion gates
 - scenario ID 관계 조회
 - queue와 retry 정책
@@ -731,7 +1213,12 @@ selected-project/
 - 동일 프로젝트 bootstrap의 멱등성
 - runtime upgrade와 rollback
 - UtilityProcess session lifecycle
-- Pi 이벤트의 domain event 변환
+- Pi 이벤트가 session/activity 후보로만 변환되고 UI로 직접 전달되지 않음
+- 상태·checkpoint·revision 저장 전에 event가 발행되지 않음
+- 중복 event 무시, revision gap replay, snapshot 재동기화
+- commit 각 단계에서 강제 종료한 뒤 마지막 정상 revision 복구
+- 이전 `running` 상태를 `recovering`으로 전이한 뒤 재개 가능성 판정
+- `WORK_STATE.md` 손상·누락 시 canonical state에서 재생성
 - 앱 재시작 후 analysis session 복구
 - 테스트 실패 후 다음 케이스 계속
 - Runner crash 후 `INCONCLUSIVE` 또는 전체 중단 분류
@@ -740,6 +1227,10 @@ selected-project/
 ### 20.3 UI 테스트
 
 - 프로젝트·모델·runtime 준비 흐름
+- project/runtime/session/stage/artifact 조합별 화면 판정
+- 복구 중 화면에서 검증 전 `running` 화면으로 이동하지 않음
+- tool·skill·subagent activity가 주 route를 바꾸지 않음
+- revision gap 중 stale 상태를 완료로 렌더링하지 않음
 - 준비 전 상위 탭 비활성화
 - 분석 진행 중 자유로운 화면 전환
 - Q&A가 시나리오 화면에만 존재
@@ -753,13 +1244,17 @@ selected-project/
 1. 사용자가 프로젝트와 LLM을 설정하면 해당 model로 Pi session이 생성된다.
 2. `.scenarioforge/` 초기화가 소스 파일을 변경하지 않는다.
 3. 분석 산출물은 schema와 ID 관계 검증을 통과해야만 UI에 완료로 표시된다.
-4. 앱을 재시작해도 완료 산출물과 복구 가능한 session을 확인할 수 있다.
-5. 질의는 시나리오 페이지에서만 실행되고 ID 관련 산출물을 조회한다.
-6. 테스트는 선택 순서대로 실행된다.
-7. 각 성공 스텝과 실패 추가 캡처가 규칙대로 저장된다.
-8. 실패, 판정 불가, 중단됨이 구분된다.
-9. 재실행이 기존 증적을 덮어쓰지 않는다.
-10. credential과 개인정보 원문이 프로젝트 파일과 증적에 남지 않는다.
+4. Pi의 `agent_end` 또는 완료 텍스트만으로 분석 stage가 완료되지 않는다.
+5. 각 LLM 작업은 동일 protocol version과 최신 `WORK_STATE.md` revision을 확인하고 상태 변경을 요청한다.
+6. domain event는 상태와 checkpoint의 revision commit 이후에만 Renderer로 전달된다.
+7. 앱을 재시작하면 active 상태는 먼저 `recovering`으로 표시되고 검증 후에만 재개된다.
+8. 완료 산출물과 복구 가능한 session을 앱 재시작 후 확인할 수 있다.
+9. 질의는 시나리오 페이지에서만 실행되고 ID 관련 산출물을 조회한다.
+10. 테스트는 선택 순서대로 실행된다.
+11. 각 성공 스텝과 실패 추가 캡처가 규칙대로 저장된다.
+12. 실패, 판정 불가, 중단됨이 구분된다.
+13. 재실행이 기존 증적을 덮어쓰지 않는다.
+14. credential과 개인정보 원문이 프로젝트 파일, 공통 상태 문서, 이벤트, 증적에 남지 않는다.
 
 ## 21. 공식 기술 참고
 
