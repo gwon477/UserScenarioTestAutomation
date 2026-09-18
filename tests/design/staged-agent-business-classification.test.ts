@@ -172,6 +172,23 @@ describe("staged Pi business-classification contract", () => {
     })).toEqual([]);
     expect([...businessClassificationPermittedSourceRefs(prior)].sort()).toEqual(["SRC-app", "SRC-gap"]);
     expect(businessClassificationSourceSupport(prior)).toEqual([{ source_area_ref: "authentication", source_refs: ["SRC-app"] }]);
+    expect(businessClassificationSourceSupport(prior, [
+      { element_id: "EL-login", source_id: "SRC-app", journey_required: true, local_view_only: false },
+      { element_id: "EL-toggle", source_id: "SRC-app", journey_required: false, local_view_only: true },
+    ])).toEqual([{
+      source_area_ref: "authentication",
+      source_refs: ["SRC-app"],
+      journey_action_count: 1,
+      journey_action_source_refs: ["SRC-app"],
+    }]);
+    expect(businessClassificationSourceSupport(prior, [
+      { element_id: "EL-toggle", source_id: "SRC-app", journey_required: false, local_view_only: true },
+    ])).toEqual([{
+      source_area_ref: "authentication",
+      source_refs: ["SRC-app"],
+      journey_action_count: 0,
+      journey_action_source_refs: [],
+    }]);
 
     expect(validateBusinessClassificationInputs({
       runId: "RUN-1",

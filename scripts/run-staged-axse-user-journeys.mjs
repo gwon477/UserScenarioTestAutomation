@@ -179,7 +179,7 @@ function semanticEntry(entry) {
   return semanticFields;
 }
 
-function sourceBasisView(sourceArtifact, sourceHash) {
+function sourceBasisView(sourceArtifact, sourceHash, sourceBehaviors) {
   return {
     artifact_id: SOURCE_ARTIFACT_ID,
     artifact_status: sourceArtifact.artifact_status,
@@ -187,7 +187,7 @@ function sourceBasisView(sourceArtifact, sourceHash) {
     content_hash: sourceHash,
     source_snapshot_ref: sourceArtifact.provenance.source_snapshot_id,
     source_areas: sourceArtifact.survey.source_areas.map(semanticEntry),
-    source_area_support: businessClassificationSourceSupport(sourceArtifact),
+    source_area_support: businessClassificationSourceSupport(sourceArtifact, sourceBehaviors),
     journey_threads: sourceArtifact.survey.journey_threads.map(semanticEntry),
     source_gaps: sourceArtifact.survey.source_gaps,
   };
@@ -287,7 +287,7 @@ function userJourneyTransitionMappingPatchSchema(runId, snapshotId, rootHash) {
 function userJourneyPrompt(runId, snapshotId, rootHash, sourceHash, classificationHash) {
   return `Complete only 04-user-journeys for ${runId}.
 
-Mandatory tool sequence: read all five required artifacts, use source_area_support from 02-source-gap-review to call artifact.closure for supporting source of every area used by both journeys, then write. Source metadata reads are not source closure. A write before closure is rejected and is not completion.
+Mandatory tool sequence: read all five required artifacts, use source_area_support from 02-source-gap-review to call artifact.closure for supporting source of every area used by both journeys, then write. Each source_area_support entry reports journey_action_count and journey_action_source_refs: the sources in that area where the scanner found a user action that advances the journey. A count of zero means no cited source of that area carries such an action, so treat the area as a view-only surface and do not claim business work, persistence or a saved outcome for it; the listed refs let you re-read the source and correct the count if it is cited too narrowly. Source metadata reads are not source closure. A write before closure is rejected and is not completion.
 
 Write this exact JSON shape with analysis.writeArtifact:
 {
@@ -973,7 +973,7 @@ async function run() {
       const query = {
         async getById(id) {
           const values = {
-            [SOURCE_ARTIFACT_ID]: sourceBasisView(sourceArtifact, sourceHash),
+            [SOURCE_ARTIFACT_ID]: sourceBasisView(sourceArtifact, sourceHash, snapshot.source_behaviors),
             [SOURCE_VALIDATION_ID]: validationView(SOURCE_VALIDATION_ID, sourceValidation),
             [CLASSIFICATION_ARTIFACT_ID]: classificationView(classificationArtifact, classificationHash),
             [CLASSIFICATION_VALIDATION_ID]: validationView(CLASSIFICATION_VALIDATION_ID, classificationValidation),

@@ -150,7 +150,7 @@ function semanticEntry(entry) {
   return semanticFields;
 }
 
-function priorClassificationView(prior, priorHash) {
+function priorClassificationView(prior, priorHash, sourceBehaviors) {
   return {
     artifact_id: PRIOR_ARTIFACT_ID,
     artifact_status: prior.artifact_status,
@@ -158,7 +158,7 @@ function priorClassificationView(prior, priorHash) {
     content_hash: priorHash,
     source_snapshot_ref: prior.provenance.source_snapshot_id,
     source_areas: prior.survey.source_areas.map(semanticEntry),
-    source_area_support: businessClassificationSourceSupport(prior),
+    source_area_support: businessClassificationSourceSupport(prior, sourceBehaviors),
     journey_threads: prior.survey.journey_threads.map(semanticEntry),
     supporting_systems: prior.survey.supporting_systems.map(semanticEntry),
     preserved_source_gaps: prior.survey.source_gaps,
@@ -169,7 +169,7 @@ function priorClassificationView(prior, priorHash) {
 function classificationPrompt(runId, snapshotId, rootHash, priorHash) {
   return `Complete only 03-business-classification for ${runId}.
 
-Mandatory tool sequence: read all three required artifacts, use source_area_support from 02-source-gap-review to call artifact.closure for at least one supporting source of every source area, then write. Source metadata reads are not source closure. A write before closure is rejected and is not completion.
+Mandatory tool sequence: read all three required artifacts, use source_area_support from 02-source-gap-review to call artifact.closure for at least one supporting source of every source area, then write. Each source_area_support entry reports journey_action_count and journey_action_source_refs: the sources in that area where the scanner found a user action that advances the journey. A count of zero means no cited source of that area carries such an action, so treat the area as a view-only surface and do not claim business work, persistence or a saved outcome for it; the listed refs let you re-read the source and correct the count if it is cited too narrowly. Source metadata reads are not source closure. A write before closure is rejected and is not completion.
 
 ${PERSPECTIVE_GUIDANCE}
 
@@ -350,7 +350,7 @@ async function run() {
       const query = {
         async getById(id) {
           const values = {
-            [PRIOR_ARTIFACT_ID]: priorClassificationView(prior, priorHash),
+            [PRIOR_ARTIFACT_ID]: priorClassificationView(prior, priorHash, snapshot.source_behaviors),
             [PRIOR_VALIDATION_ID]: {
               artifact_id: PRIOR_VALIDATION_ID,
               pass: priorValidation.pass,

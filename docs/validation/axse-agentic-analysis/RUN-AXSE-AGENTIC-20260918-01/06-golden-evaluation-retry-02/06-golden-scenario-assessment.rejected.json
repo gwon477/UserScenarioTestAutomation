@@ -1,0 +1,605 @@
+{
+  "schema_version": 1,
+  "scenario_matches": [
+    {
+      "golden_ref": "AXSE-SCN-0001",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate preserves the required empty-field validation guard and stay-on-login result."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0002",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-3721E6A6-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-3721E6A6-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers successful submission and project-entry route, but does not explicitly preserve loading disablement or token-claim fallback."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0003",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "score": 0.68,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "resilience_score": 0.68,
+      "rationale": "Represents a failed login submission remaining unsuccessful, but does not distinguish HTTP detail, default error, and network-reject branches."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0004",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-EEC1C540-001"
+      ],
+      "score": 0.78,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-EEC1C540-001"
+      ],
+      "success_score": 0.78,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Preserves login-to-project selection route and project-selection action; response-field normalization and later header context are generic."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0005",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate covers an empty project response with the no-project terminal and blocked main entry."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0006",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001",
+        "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002"
+      ],
+      "score": 0.84,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001"
+      ],
+      "success_score": 0.76,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002"
+      ],
+      "resilience_score": 0.76,
+      "rationale": "The paired candidates preserve refresh success and refresh exception routes after login, though retry loading text and disabled-state details are abstracted."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0007",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "score": 0.75,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "success_score": 0.75,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers project selection followed by logout and return route; candidate does not explicitly enumerate auth/session cleanup."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0008",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": 0.1,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate clearly covers bootstrap of the first task plus switching to another task and replacing its stage data."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0009",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": 0.1,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate preserves the empty-task prompt, new-task creation, selection refresh, and UPLOAD result."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0010",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate covers task list/create/bootstrap API failure with an error card and no erroneous navigation."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0011",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+        "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+        "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001"
+      ],
+      "score": 0.56,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+        "SCN-COMPONENT-MAINPAGE-0B02B6D1-001"
+      ],
+      "success_score": 0.56,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers menu/settings and refresh-like shell actions, but not the complete stage access guard, next-stage update, and disabled future navigation semantics."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0012",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "score": 0.75,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "success_score": 0.75,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers shell logout returning through the authenticated route to login; cleanup state fields are not explicit."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0013",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "score": 0.58,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "success_score": 0.58,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers authenticated navigation into the upload workflow and next-step route, but not file selection, parsing polling, or PARSED completion details."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0014",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "score": 0.48,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "success_score": 0.48,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Shares the upload entry route but does not preserve task creation, bootstrap, and same-file parse request semantics."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0015",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-F1072540-001",
+        "SCN-COMPONENT-UPLOADPAGE-D6E6A43F-001"
+      ],
+      "score": 0.68,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-F1072540-001",
+        "SCN-COMPONENT-UPLOADPAGE-D6E6A43F-001"
+      ],
+      "success_score": 0.68,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers upload reset and cancellation branches, but not the full pre-parse cancel, parsed reupload, and server-stage restoration distinction."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0016",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate explicitly covers upload rejection, FAILED background stage, polling stop, and propagated poll errors."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0017",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate preserves the post-generation reupload lock and disabled file controls."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0018",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-89F62E5F-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-9184EC77-001"
+      ],
+      "score": 0.73,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-89F62E5F-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-9184EC77-001"
+      ],
+      "success_score": 0.73,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers parsed-data search and pagination routes, but generic supplied actions do not prove all four tabs, diagnostics, or Enter/button parity."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0019",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001"
+      ],
+      "score": 0.42,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001"
+      ],
+      "success_score": 0.42,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "A search/data route is present, but no candidate preserves empty-list rendering or independent overview/diagnostics degradation."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0020",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate covers parsed-list request failures, stale-result protection, and visible error handling."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0021",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001"
+      ],
+      "score": 0.76,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001"
+      ],
+      "success_score": 0.76,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Preserves parsed database to business-mapping navigation and the preceding authenticated route, but not both explicit back and re-entry actions."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0022",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+        "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+        "SCN-COMPONENT-BUSINESSPAGE-547A1466-001"
+      ],
+      "score": 0.66,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+        "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+        "SCN-COMPONENT-BUSINESSPAGE-547A1466-001"
+      ],
+      "success_score": 0.66,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers business selection/toggle routes, but not the full context/category switching, diagnostics, and filter-result behavior."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0023",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002"
+      ],
+      "score": 0.62,
+      "success_candidate_refs": [],
+      "success_score": 0.1,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002"
+      ],
+      "resilience_score": 0.62,
+      "rationale": "Provides a business generation exception/recovery route, but does not preserve empty flows/categories or diagnostics-specific failure behavior."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0024",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": 0.1,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate explicitly covers flow-text modal loading, optional return flow, close, and backdrop dismissal."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0025",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate covers missing flow-text payload or request rejection with the specified modal message."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0026",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-001"
+      ],
+      "score": 0.67,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-001"
+      ],
+      "success_score": 0.67,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers a selected-flow generation success route, but not polling cadence, run history, matrix rows, and completion modal details."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0027",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-13C02421-001"
+      ],
+      "score": 0.42,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-13C02421-001"
+      ],
+      "success_score": 0.42,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Shows a scenario generation/result route but does not preserve active-run reuse without a new request."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0028",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002"
+      ],
+      "score": 0.58,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002"
+      ],
+      "resilience_score": 0.58,
+      "rationale": "Covers a generation failure followed by recovery generation, but not cross-flow conflict, polling failure, or late-response suppression after close."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0029",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-001",
+        "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001"
+      ],
+      "score": 0.62,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-001",
+        "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001"
+      ],
+      "success_score": 0.62,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001"
+      ],
+      "resilience_score": 0.45,
+      "rationale": "Covers selected-flow generation and selection state, but does not prove disabled no-selection behavior or exact selected-ID request payload."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0030",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001"
+      ],
+      "score": 0.46,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001"
+      ],
+      "success_score": 0.46,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Provides scenario progress entry but not the already-active branch that skips POST and reuses existing progress."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0031",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002"
+      ],
+      "score": 0.56,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002"
+      ],
+      "resilience_score": 0.56,
+      "rationale": "Covers failed generation and recovery route, but lacks the BUSINESS-stay result and progress/request failure distinctions."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0032",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": 0.1,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate explicitly covers mapping-validation CSV creation, BOM/header content, or its failure restoration."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0033",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001"
+      ],
+      "score": 0.63,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001"
+      ],
+      "success_score": 0.63,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers generation completion and result/download route, but not automatic and manual progress refresh, run counts, and result-confirm transition."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0034",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate preserves failure/partial-failure evidence, judgement history, or the required active-to-inactive observation condition."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0035",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-155F546E-001",
+        "SCN-COMPONENT-SCENARIOPAGE-130159BC-001",
+        "SCN-COMPONENT-SCENARIOPAGE-ED2EFD9E-001",
+        "SCN-COMPONENT-SCENARIOPAGE-2C40057C-001"
+      ],
+      "score": 0.62,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-155F546E-001",
+        "SCN-COMPONENT-SCENARIOPAGE-130159BC-001",
+        "SCN-COMPONENT-SCENARIOPAGE-ED2EFD9E-001",
+        "SCN-COMPONENT-SCENARIOPAGE-2C40057C-001"
+      ],
+      "success_score": 0.62,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers several scenario result toggles and detail routes, but not type filtering, case-insensitive search, or empty-field fallback text."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0036",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "score": 0.38,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "success_score": 0.38,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "A previous-navigation route exists, but no candidate covers result pagination or page-request failure retaining stale rows."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0037",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001",
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-002"
+      ],
+      "score": 0.66,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001"
+      ],
+      "success_score": 0.62,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-002"
+      ],
+      "resilience_score": 0.62,
+      "rationale": "The paired download candidates preserve success and exception branches, but do not distinguish CSV content, filename fallback, or button restoration details."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0038",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-13C02421-001",
+        "SCN-COMPONENT-SCENARIOPAGE-13C02421-002"
+      ],
+      "score": 0.61,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-13C02421-001"
+      ],
+      "success_score": 0.58,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-13C02421-002"
+      ],
+      "resilience_score": 0.58,
+      "rationale": "Covers result download success/failure routes, but generic download actions do not establish XLSX sheet, freeze, filter, or filename semantics."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0039",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "score": 0.54,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "success_score": 0.54,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A previous-navigation branch is present, but its target is not explicit enough to prove return specifically to BUSINESS."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0040",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-275BC2D0-001"
+      ],
+      "score": 0.68,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-275BC2D0-001"
+      ],
+      "success_score": 0.68,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers authenticated home-navigation route, but does not explicitly preserve same-task identity or both hamburger and product-name triggers."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0041",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-89F62E5F-001"
+      ],
+      "score": 0.38,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-89F62E5F-001"
+      ],
+      "success_score": 0.38,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Contains navigation/toggle and pagination-like actions, but does not preserve both BUSINESS panel paginations and explicit return to PARSED_DB."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0042",
+      "candidate_refs": [],
+      "score": 0.1,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.1,
+      "rationale": "No candidate covers the Promise.all rejection behavior, persistent initial loader, stale refresh response, and unhandled rejection observation."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0043",
+      "candidate_refs": [
+        "SCN-JOURNEY-J001-001"
+      ],
+      "score": 0.91,
+      "success_candidate_refs": [
+        "SCN-JOURNEY-J001-001"
+      ],
+      "success_score": 0.91,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The journey candidate preserves the continuous login, project, upload, parsed DB, business, generation, download, and logout handoffs; generic expectations leave file-format and workbook-content assertions runtime-unverified."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0044",
+      "candidate_refs": [
+        "SCN-JOURNEY-J002-001"
+      ],
+      "score": 0.9,
+      "success_candidate_refs": [
+        "SCN-JOURNEY-J002-001"
+      ],
+      "success_score": 0.78,
+      "resilience_candidate_refs": [
+        "SCN-JOURNEY-J002-001"
+      ],
+      "resilience_score": 0.9,
+      "rationale": "The journey candidate preserves invalid-input failure, recovery selection, continued parse/generation, download, and logout handoffs; exact UTF-8 rejection and Excel content remain generic/runtime-unverified."
+    }
+  ]
+}

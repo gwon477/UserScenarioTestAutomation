@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "model_id": "gpt-5.6-luna",
+  "evaluation_scope": "external-golden-read-only",
+  "product_stage_acceptance": "not-attempted",
+  "generation_artifact_immutable": true,
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "success_scenario_recall": 0.8,
+    "resilience_scenario_recall": "advisory",
+    "required_journey_recall": 1
+  },
+  "counts": {
+    "golden": {
+      "classifications": 6,
+      "workflows": 12,
+      "transitions": 15,
+      "scenarios": 38,
+      "journeys": 2
+    },
+    "candidate": {
+      "classifications": 6,
+      "workflows": 51,
+      "journeys": 2,
+      "scenarios": 58
+    }
+  },
+  "taxonomy_journey": {
+    "passed": false,
+    "classificationRecall": 0.8333333333333334,
+    "workflowRecall": 0.8333333333333334,
+    "requiredJourneyRecall": 0.5,
+    "criticalGaps": [
+      "AXSE2-WF-005와 AXSE2-WF-006에 해당하는 TS 작업 목록/자동 진입 및 신규 작업 생성·전환 workflow가 없다.",
+      "AXSE2-J-002 필수 recovery journey가 없다. 후보 J002는 업로드·파싱 실패 및 파일 재선택이 아니라 ParsedDb 조회 오류 및 검색 조건 수정 복구를 다룬다.",
+      "정상 여정의 프로젝트/TS 작업 handoff가 후보 workflow에서 충분히 구체화되지 않아, 작업 선택 또는 생성 상태가 문서 업로드로 전달되는 근거가 약하다."
+    ]
+  },
+  "scenario": {
+    "passed": false,
+    "successScenarioRecall": 0.5,
+    "matchedSuccessScenarioCount": 11,
+    "totalSuccessScenarios": 22,
+    "unmatchedSuccessScenarioIds": [
+      "AXSE2-SCN-005",
+      "AXSE2-SCN-009",
+      "AXSE2-SCN-011",
+      "AXSE2-SCN-012",
+      "AXSE2-SCN-015",
+      "AXSE2-SCN-019",
+      "AXSE2-SCN-023",
+      "AXSE2-SCN-024",
+      "AXSE2-SCN-029",
+      "AXSE2-SCN-032",
+      "AXSE2-SCN-033"
+    ],
+    "resilienceScenarioRecall": 0.1875,
+    "matchedResilienceScenarioCount": 3,
+    "totalResilienceScenarios": 16,
+    "unmatchedResilienceScenarioIds": [
+      "AXSE2-SCN-002",
+      "AXSE2-SCN-003",
+      "AXSE2-SCN-004",
+      "AXSE2-SCN-007",
+      "AXSE2-SCN-010",
+      "AXSE2-SCN-013",
+      "AXSE2-SCN-017",
+      "AXSE2-SCN-018",
+      "AXSE2-SCN-022",
+      "AXSE2-SCN-026",
+      "AXSE2-SCN-028",
+      "AXSE2-SCN-036",
+      "AXSE2-SCN-037"
+    ],
+    "assessmentIssues": []
+  },
+  "unweighted_scenario_reference": {
+    "passed": false,
+    "scenarioRecall": 0.3684210526315789,
+    "matchedScenarioCount": 14,
+    "totalGoldenScenarios": 38,
+    "unmatchedGoldenScenarioIds": [
+      "AXSE2-SCN-002",
+      "AXSE2-SCN-003",
+      "AXSE2-SCN-004",
+      "AXSE2-SCN-005",
+      "AXSE2-SCN-007",
+      "AXSE2-SCN-009",
+      "AXSE2-SCN-010",
+      "AXSE2-SCN-011",
+      "AXSE2-SCN-012",
+      "AXSE2-SCN-013",
+      "AXSE2-SCN-015",
+      "AXSE2-SCN-017",
+      "AXSE2-SCN-018",
+      "AXSE2-SCN-019",
+      "AXSE2-SCN-022",
+      "AXSE2-SCN-023",
+      "AXSE2-SCN-024",
+      "AXSE2-SCN-026",
+      "AXSE2-SCN-028",
+      "AXSE2-SCN-029",
+      "AXSE2-SCN-032",
+      "AXSE2-SCN-033",
+      "AXSE2-SCN-036",
+      "AXSE2-SCN-037"
+    ],
+    "criticalGaps": []
+  },
+  "feasibility": {
+    "source_supported_scenarios": 10,
+    "runtime_unverified_scenarios": 48,
+    "boundary_generation": "not-implemented-no-deterministic-boundary-obligation"
+  },
+  "passed": false,
+  "provenance": {
+    "golden_hash": "sha256:c7396786ea4966a5693d2e1d7f0d36a30e692cc236669d6b21f02665ba5f7fad",
+    "candidate_hash": "sha256:8035f455bb9d7a93521571121a2379ff3efbadd97ccc972f2c38ab270c466eca",
+    "classification_artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+    "fact_graph_artifact_hash": "sha256:f09dd36affbab9527601f5a58708a1f1ddd7a6fc13d7ce8746e4b3e2f0dbdd2e",
+    "business_workflow_mapping_artifact_hash": "sha256:7bba4d73aa20131dd19f12d74fbf25d5cdb5e872f0282a1ce910997941183040",
+    "journey_artifact_hash": "sha256:5a5f422fe3012a988b328f7462c5fa8b22447ae5c6595fe1b75b9bf9699b5590",
+    "user_journey_workflow_link_artifact_hash": "sha256:3aa2a4863e4673630f6c9e53cf0d3d7c5e3696fd5bd094d94b3ef31ef6726a12",
+    "scenario_artifact_hash": "sha256:b2df0a5fa28f02132b9eaebd3d40f1d7bd7dcaa10b7bd30221817933577a3ddf"
+  }
+}

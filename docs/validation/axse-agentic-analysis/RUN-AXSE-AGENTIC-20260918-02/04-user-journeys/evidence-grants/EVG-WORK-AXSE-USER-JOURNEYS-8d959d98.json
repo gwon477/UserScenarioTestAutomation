@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-b1bf8cba",
+  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-8d959d98",
   "project_id": "P-AXSE-AGENTIC",
   "work_id": "WORK-AXSE-USER-JOURNEYS",
   "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
@@ -12,7 +12,7 @@
       "start_line": 1,
       "end_line": 202,
       "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-b1bf8cba"
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-8d959d98"
     },
     {
       "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
@@ -21,7 +21,7 @@
       "start_line": 1,
       "end_line": 1585,
       "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-b1bf8cba"
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-8d959d98"
     },
     {
       "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
@@ -30,7 +30,7 @@
       "start_line": 1,
       "end_line": 272,
       "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-b1bf8cba"
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-8d959d98"
     },
     {
       "source_id": "SRC-frontend-src-features-upload-upload-api-f7939e13",
@@ -39,17 +39,8 @@
       "start_line": 1,
       "end_line": 37,
       "content_hash": "sha256:21f0825c024eec6bdf3364e0918e6d309017d36f861a2da9c17123052ff79163",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-b1bf8cba"
-    },
-    {
-      "source_id": "SRC-frontend-src-store-feec9a9e",
-      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
-      "path": "frontend/src/store.js",
-      "start_line": 1,
-      "end_line": 123,
-      "content_hash": "sha256:7d77adad48cb2ae4073fc988af0fb50c8ca8083345bcf7c756d2b98ae8140303",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-b1bf8cba"
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-8d959d98"
     }
   ],
-  "created_at": "2026-09-18T03:42:30.446Z"
+  "created_at": "2026-09-18T05:53:57.280Z"
 }

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.input.validate",
+      "result": "ok",
+      "golden_hash": "sha256:09cac5ddc58c812eea8bddef6f9154db137bd51a3e37ceb871fdae1c1351f253",
+      "candidate_hash": "sha256:8035f455bb9d7a93521571121a2379ff3efbadd97ccc972f2c38ab270c466eca"
+    },
+    {
+      "sequence": 2,
+      "tool": "backend.assessment.partial-reuse",
+      "result": "ok",
+      "artifact_id": "06-golden-taxonomy-journey-assessment",
+      "source_stage": "06-golden-evaluation"
+    }
+  ]
+}

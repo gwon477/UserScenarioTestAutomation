@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "report_type": "golden-evaluation-performance",
+  "run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "evaluation_policy": "success-first-v1",
+  "product_stage_acceptance": "not-attempted",
+  "evaluated_generation": {
+    "immutable": true,
+    "candidate_hash": "sha256:980d96accc32c2813a46a4685ab89898668de7e60b7f53c88e16017359c2bf98",
+    "scenario_artifact_hash": "sha256:ea3cbe00b3fb2209b7dadafd7b8668d8eccc7c32aacdce7cabf6ab1c26910986",
+    "candidate_counts": {
+      "classifications": 6,
+      "workflows": 53,
+      "journeys": 2,
+      "scenarios": 68
+    }
+  },
+  "metrics": {
+    "classification_recall": 0.8333333333333334,
+    "workflow_recall": 1,
+    "required_journey_recall": 1,
+    "success_scenario_recall": 0.8636363636363636,
+    "matched_success_scenarios": 19,
+    "total_success_scenarios": 22,
+    "resilience_scenario_recall_advisory": 0.4375,
+    "matched_resilience_scenarios": 7,
+    "total_resilience_scenarios": 16,
+    "unweighted_scenario_recall_reference": 0.6578947368421053
+  },
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "success_scenario_recall": 0.8,
+    "resilience_scenario_recall": "advisory",
+    "required_journey_recall": 1
+  },
+  "passed": true,
+  "remaining_success_golden_refs": [
+    "AXSE2-SCN-005",
+    "AXSE2-SCN-016",
+    "AXSE2-SCN-019"
+  ],
+  "work_performed": [
+    {
+      "sequence": 1,
+      "operation": "backend.input.validate",
+      "result": "ok"
+    },
+    {
+      "sequence": 2,
+      "operation": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-taxonomy-journey-assessment"
+    },
+    {
+      "sequence": 3,
+      "operation": "analysis.writeArtifact",
+      "result": "rejected",
+      "artifact_id": "06-golden-scenario-assessment"
+    },
+    {
+      "sequence": 4,
+      "operation": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-scenario-assessment"
+    }
+  ]
+}

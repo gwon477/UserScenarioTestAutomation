@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "journey_count": 2,
+  "milestone_count": 17,
+  "source_supported_milestone_count": 8,
+  "runtime_unverified_milestone_count": 9,
+  "journey_feasibility": [
+    {
+      "journey_ref": "J001",
+      "kind": "normal",
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "feasibility": "runtime-unverified"
+    }
+  ],
+  "unresolved_count": 0,
+  "journey_artifact_hash": "sha256:7b4dd935b141a30a12ae9485fad6442292c38d3373a5f75ddeb4305d71fd2597",
+  "fact_graph_artifact_hash": "sha256:4571a72a37d8669ed7d930dc38c184ae88a92dd594de1f5c3ca079fc973b9f08",
+  "business_workflow_mapping_artifact_hash": "sha256:1feb6abdd1121cc4782ae6efec9ac7072e813623a5d038f54b7ebc98cf2a3d71",
+  "artifact_hash": "sha256:4b644c9254b96936d89244529fc8612bdaec7fb335521f68ac2cceea6b0c8ff6"
+}

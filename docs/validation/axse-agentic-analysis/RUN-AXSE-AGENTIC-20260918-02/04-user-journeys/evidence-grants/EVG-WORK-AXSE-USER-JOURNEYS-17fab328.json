@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-a8f0cc60",
+  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-17fab328",
   "project_id": "P-AXSE-AGENTIC",
   "work_id": "WORK-AXSE-USER-JOURNEYS",
   "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
@@ -12,7 +12,7 @@
       "start_line": 1,
       "end_line": 134,
       "content_hash": "sha256:61b393d48fd6e8a007ee6efe8021a49fb6dfc1036e9b61ce8125378d1c15a963",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-a8f0cc60"
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-17fab328"
     },
     {
       "source_id": "SRC-backend-app-agents-scenario-validator-d37030b1",
@@ -21,7 +21,7 @@
       "start_line": 1,
       "end_line": 147,
       "content_hash": "sha256:20716707b4027f65901715d9b91aed4d9d05a9d7e1f887e39ed60eb42cbc5bc4",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-a8f0cc60"
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-17fab328"
     },
     {
       "source_id": "SRC-backend-app-services-workflow-service-3f39109c",
@@ -30,17 +30,17 @@
       "start_line": 1,
       "end_line": 143,
       "content_hash": "sha256:864aba1ad0d9e62d38fcf8fd8167ed92d54cf3db8d950e5b0a2f1570d474af34",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-a8f0cc60"
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-17fab328"
     },
     {
-      "source_id": "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20",
+      "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
       "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
-      "path": "frontend/src/features/tasks/tasks.api.js",
+      "path": "frontend/src/features/main/pages/main.page.jsx",
       "start_line": 1,
-      "end_line": 96,
-      "content_hash": "sha256:6c2972cce43b46f0c4f18f249be612d028476b0e0b0833bdbeb22bfe86c0a56d",
-      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-a8f0cc60"
+      "end_line": 1585,
+      "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-17fab328"
     }
   ],
-  "created_at": "2026-09-18T03:42:30.470Z"
+  "created_at": "2026-09-18T05:53:57.299Z"
 }

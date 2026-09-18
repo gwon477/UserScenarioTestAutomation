@@ -1,0 +1,3192 @@
+{
+  "schema_version": 1,
+  "scenario_updates": [
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D514A88-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied login result is expected at the supplied screen; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied project-selection result is expected at the supplied screen; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied navigation result is expected at the supplied screen; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied navigation result is expected at the supplied screen; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied navigation result is expected at the supplied screen; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied filter action.",
+          "expected": "The supplied filter result is expected at the supplied screen; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-940A9FA5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied download action.",
+          "expected": "The supplied download result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-940A9FA5-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Attempt the supplied download action.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied back-navigation action.",
+          "expected": "The supplied back-navigation result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-0ADA3322-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied close action.",
+          "expected": "The supplied close result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-E76552A4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied view-switch action.",
+          "expected": "The supplied view-switch result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-D378820A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied close action.",
+          "expected": "The supplied close result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EC9352E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied close action.",
+          "expected": "The supplied close result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied select-all toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied select-all toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied select-all toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied close action.",
+          "expected": "The supplied close result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Attempt the supplied generation action.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied recovery generation action.",
+          "expected": "The recovery action reaches the supplied result only if supported; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-5C765240-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied expand or collapse toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied selection toggle.",
+          "expected": "The supplied selection result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied selection toggle.",
+          "expected": "The supplied selection result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-547A1466-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied selection toggle.",
+          "expected": "The supplied selection result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Attempt the supplied login submission.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-3721E6A6-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied login result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the supplied user identifier.",
+          "expected": "The supplied text-entry result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the supplied password.",
+          "expected": "The supplied password-entry result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-EEC1C540-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied login result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied project-selection result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied login result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied refresh action.",
+          "expected": "The supplied refresh result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Attempt the supplied refresh action.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied logout action.",
+          "expected": "The supplied logout result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied logout action.",
+          "expected": "The supplied logout result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied home-navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied settings navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied menu toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied search action.",
+          "expected": "The supplied search result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-9184EC77-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied previous-page action.",
+          "expected": "The supplied pagination result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied previous-page navigation.",
+          "expected": "The supplied navigation result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied search action.",
+          "expected": "The supplied search result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-89F62E5F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied next-page action.",
+          "expected": "The supplied pagination result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied navigation result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-FBF48CE7-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Enter the supplied input.",
+          "expected": "The supplied text-entry result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied()"
+        },
+        {
+          "index": 8,
+          "text": "The supplied prerequisite at index 8 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied download action.",
+          "expected": "The supplied download result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        },
+        {
+          "index": 8,
+          "text": "The supplied prerequisite at index 8 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Attempt the supplied download action.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-13C02421-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        },
+        {
+          "index": 8,
+          "text": "The supplied prerequisite at index 8 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied download action.",
+          "expected": "The supplied download result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-13C02421-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        },
+        {
+          "index": 8,
+          "text": "The supplied prerequisite at index 8 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Attempt the supplied download action.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-155F546E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied expand or collapse toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-130159BC-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied expand or collapse toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-ED2EFD9E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied expand or collapse toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied previous navigation.",
+          "expected": "The supplied navigation result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-2C40057C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        },
+        {
+          "index": 7,
+          "text": "The supplied prerequisite at index 7 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied generation result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied expand or collapse toggle.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-695469FC-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied settings navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied selection action.",
+          "expected": "The supplied selection result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-4F42F993-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied settings navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied save action.",
+          "expected": "The supplied save result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-BF70BEC5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied settings navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied reset action.",
+          "expected": "The supplied reset result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-B08DCC4B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied settings navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Toggle the supplied checkbox.",
+          "expected": "The supplied toggle result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-5BF96FBD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied settings navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied selection action.",
+          "expected": "The supplied selection result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied next-step action.",
+          "expected": "The supplied navigation result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-F1072540-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied upload-reset action.",
+          "expected": "The supplied upload-reset result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-D6E6A43F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied upload-cancel action.",
+          "expected": "The supplied cancellation result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-06490A15-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Use the supplied file-entry action.",
+          "expected": "The supplied file-entry result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J001-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the supplied user identifier.",
+          "expected": "The supplied text-entry result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Enter the supplied password.",
+          "expected": "The supplied password-entry result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied project-selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Use the supplied file-entry action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied home-navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 8,
+          "action": "Perform the supplied next-step action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 9,
+          "action": "Perform the supplied search action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 10,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 11,
+          "action": "Perform the supplied selection action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 12,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 13,
+          "action": "Perform the supplied download action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 14,
+          "action": "Perform the supplied download action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 15,
+          "action": "Perform the supplied logout action.",
+          "expected": "The supplied logout result is expected; runtime verification is pending."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J002-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The supplied prerequisite at index 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "The supplied prerequisite at index 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "The supplied prerequisite at index 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "The supplied prerequisite at index 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "The supplied prerequisite at index 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "The supplied prerequisite at index 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "The supplied prerequisite at index 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the supplied user identifier.",
+          "expected": "The supplied text-entry result is expected; runtime verification is pending."
+        },
+        {
+          "n": 2,
+          "action": "Enter the supplied password.",
+          "expected": "The supplied password-entry result is expected; runtime verification is pending."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied login submission.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 4,
+          "action": "Attempt the supplied project-selection action.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 6,
+          "action": "Use the supplied file-entry action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied home-navigation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 8,
+          "action": "Perform the supplied next-step action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 9,
+          "action": "Perform the supplied search action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 10,
+          "action": "Perform the supplied business-mapping navigation.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 11,
+          "action": "Attempt the supplied generation action.",
+          "expected": "The exception path does not complete successfully; the failure outcome is runtime-unverified."
+        },
+        {
+          "n": 12,
+          "action": "Perform the supplied selection recovery action.",
+          "expected": "The supplied recovery result is expected; runtime verification is pending."
+        },
+        {
+          "n": 13,
+          "action": "Perform the supplied generation action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 14,
+          "action": "Perform the supplied download action.",
+          "expected": "The supplied result is expected; runtime verification is pending."
+        },
+        {
+          "n": 15,
+          "action": "Perform the supplied logout action.",
+          "expected": "The supplied logout result is expected; runtime verification is pending."
+        }
+      ]
+    }
+  ]
+}

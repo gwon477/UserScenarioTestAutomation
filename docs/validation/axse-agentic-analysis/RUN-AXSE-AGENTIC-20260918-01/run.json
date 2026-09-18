@@ -27,5 +27,7 @@
   "product_stage_acceptance": "not-attempted",
   "golden_evaluation": "not-run",
   "model_id": "gpt-5.6-luna",
-  "report": "docs/reports/2026-09-18-complete-journey-milestone.md"
+  "report": "docs/reports/2026-09-18-complete-journey-milestone.md",
+  "previous_completed_assignment": "05-scenario-cases-graph",
+  "validated_artifact": "05-scenario-cases-graph-noregression/05-scenario-cases-graph.json"
 }

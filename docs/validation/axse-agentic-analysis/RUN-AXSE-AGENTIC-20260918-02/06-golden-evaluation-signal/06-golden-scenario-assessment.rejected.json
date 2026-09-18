@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "scenario_matches": [
+    {
+      "golden_ref": "AXSE2-SCN-001",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-8DC58904-001"
+      ],
+      "score": 0.82,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-8DC58904-001"
+      ],
+      "success_score": 0.82,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Credentials-present login submission is represented and routes through the login entry transition, though the observable destination is described generically."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-002",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+        "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001"
+      ],
+      "score": 0.78,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+        "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001"
+      ],
+      "resilience_score": 0.78,
+      "rationale": "The two form-display candidates cover required-field boundary variants and preserve remaining on the login form, but do not explicitly state no request or validation text."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-003",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002"
+      ],
+      "score": 0.86,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002"
+      ],
+      "resilience_score": 0.86,
+      "rationale": "The exception branch follows credential submission to a failed login outcome and retains the login-page route semantics."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-004",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "score": 0.78,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "resilience_score": 0.78,
+      "rationale": "An exception login submission is represented with the form remaining displayed; network-specific wording is not explicit."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-005",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": 0.2,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate preserves the distinct successful-login token-claim parsing fallback and username substitution behavior."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-006",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-24D62594-001"
+      ],
+      "score": 0.82,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-24D62594-001"
+      ],
+      "success_score": 0.82,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The login-page candidate covers selecting a project after entry and proceeding to the next shell route."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-007",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate explicitly models an empty project list with no selectable cards."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-008",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate represents project-list retrieval failure followed by refresh and retry."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-009",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-C55225A4-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-C55225A4-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The main-page normal route represents shell entry and subsequent work-area navigation, but automatic recent-work selection is generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-010",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate explicitly covers a project with zero work items and the create-work guidance."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-011",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-0B02B6D1-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-0B02B6D1-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A normal main-page branch covers work-area progression and is the closest candidate for creating and entering a new work item."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-012",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The normal work-area navigation candidate covers selecting another workflow state, though the explicit work-menu switch is generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-013",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-C55225A4-002"
+      ],
+      "score": 0.76,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-C55225A4-002"
+      ],
+      "resilience_score": 0.76,
+      "rationale": "The main-page exception branch preserves failed API handling and an unsuccessful route outcome, consistent with work retrieval or creation failure."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-014",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "score": 0.76,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "success_score": 0.76,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The upload-complete normal branch preserves the upload-page route and completion recovery outcome; staged progress is not explicit."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-015",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-06490A15-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-06490A15-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The upload normal route covers entry without a selected work item and continuation through upload processing, but auto-creation is generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-016",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": 0.2,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate specifically represents drag-and-drop file selection before parsing."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-017",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5BF664E5-002"
+      ],
+      "score": 0.82,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5BF664E5-002"
+      ],
+      "resilience_score": 0.82,
+      "rationale": "The upload failure branch preserves unsuccessful upload behavior followed by recovery, matching parsing failure handling at the route level."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-018",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate isolates polling retrieval error with polling termination and an error message."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-019",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The completed-upload candidate supports a post-completion re-upload route, although renewed file selection is generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-020",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-06490A15-001"
+      ],
+      "score": 0.76,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-06490A15-001"
+      ],
+      "resilience_score": 0.76,
+      "rationale": "The candidate explicitly includes recovery behavior from the upload page, covering reset and continuation at route level."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-021",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.2,
+      "rationale": "No candidate explicitly models canceling a re-upload and restoring the server-stage initial state."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-022",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.2,
+      "rationale": "No candidate preserves the upload lock and guidance after generation has started or completed."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-023",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001"
+      ],
+      "score": 0.76,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001"
+      ],
+      "success_score": 0.76,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The parsed-database normal route covers initial parsed-data entry and business-result display."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-024",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-69504B45-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-69504B45-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A distinct parsed-database normal branch covers tab/list navigation, with reset semantics not spelled out."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-025",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The parsed-database normal branch is consistent with search-driven list refresh, though search and Enter behavior are generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-026",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate explicitly models zero matching results and the tab-specific empty-state message."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-027",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-D00464BF-001"
+      ],
+      "score": 0.82,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-D00464BF-001"
+      ],
+      "success_score": 0.82,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The candidate has valid-page and total-pages-available guards, preserving pagination as a distinct parsed-data route."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-028",
+      "candidate_refs": [],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.2,
+      "rationale": "No parsed-database exception candidate explicitly covers list API failure and its displayed error."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-029",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A distinct parsed-database normal branch covers diagnostic information retrieval, but the issue-count alternatives are generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-030",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001"
+      ],
+      "score": 0.74,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001"
+      ],
+      "success_score": 0.74,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The business-page normal branch represents a workflow-selection operation and preserves the business-result route."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-031",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001"
+      ],
+      "score": 0.74,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001"
+      ],
+      "success_score": 0.74,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A separate normal business-page branch covers bulk selection behavior, though toggle details are generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-032",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The business-page normal route is consistent with category-tree selection and continuation."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-033",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A distinct business-page normal branch covers workflow diagnostic/result display, with diagnostic categories left generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-034",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-001"
+      ],
+      "score": 0.76,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-001"
+      ],
+      "success_score": 0.76,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The business-result candidate includes checked-flow and non-requesting guards, fitting mapping-validation export behavior at the route level."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-035",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-001"
+      ],
+      "score": 0.76,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-001"
+      ],
+      "success_score": 0.76,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The scenario-page normal branch preserves entry from selected flows to business-result output and matrix display."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-036",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-001"
+      ],
+      "score": 0.7,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A guarded normal scenario-page branch represents an already-active generation/download state and continuation, but the in-progress notice is generic."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-037",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-002"
+      ],
+      "score": 0.74,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-002"
+      ],
+      "resilience_score": 0.74,
+      "rationale": "The scenario-page exception branch preserves blocking an unavailable generation action with an unsuccessful outcome."
+    },
+    {
+      "golden_ref": "AXSE2-SCN-038",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-001"
+      ],
+      "score": 0.72,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-001"
+      ],
+      "success_score": 0.72,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The scenario-page normal branch reaches matrix results under an inactive-download guard, consistent with filtering and export continuation."
+    }
+  ]
+}

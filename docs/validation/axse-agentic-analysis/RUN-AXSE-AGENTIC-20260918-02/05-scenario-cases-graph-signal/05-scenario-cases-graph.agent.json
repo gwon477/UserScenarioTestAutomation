@@ -1,0 +1,3236 @@
+{
+  "schema_version": 1,
+  "scenario_updates": [
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D514A88-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-0ADA3322-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-E76552A4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-D378820A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EC9352E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The supplied recovery outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-5C765240-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The supplied recovery outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-547A1466-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the supplied login action.",
+          "expected": "The login attempt is not successful and the login form remains displayed; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-8DC58904-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the supplied login action.",
+          "expected": "The login page is reached; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The login form remains displayed; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The login form remains displayed; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-C55225A4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-C55225A4-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-69504B45-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-D00464BF-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-FBF48CE7-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "Required prerequisite 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "Required prerequisite 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "Required prerequisite 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "Required prerequisite 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "Required prerequisite 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        },
+        {
+          "index": 6,
+          "text": "Required prerequisite 6 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-155F546E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-130159BC-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-ED2EFD9E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-2C40057C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-0B41140C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-0B41140C-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        },
+        {
+          "index": 4,
+          "text": "Required prerequisite 4 is satisfied."
+        },
+        {
+          "index": 5,
+          "text": "Required prerequisite 5 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-695469FC-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The upload succeeds only as runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied failure action.",
+          "expected": "The upload remains unsuccessful; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The recovery reaches the supplied outcome; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-06490A15-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The exception outcome is not successful; source-supported."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J001-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 8,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 9,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 10,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 11,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 12,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 13,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 14,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 15,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 16,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The supplied recovery outcome is reached; runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J002-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Required prerequisite 0 is satisfied."
+        },
+        {
+          "index": 1,
+          "text": "Required prerequisite 1 is satisfied."
+        },
+        {
+          "index": 2,
+          "text": "Required prerequisite 2 is satisfied."
+        },
+        {
+          "index": 3,
+          "text": "Required prerequisite 3 is satisfied."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 8,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 9,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 10,
+          "action": "Perform the supplied failure action.",
+          "expected": "The failure outcome is not successful; runtime-unverified."
+        },
+        {
+          "n": 11,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The recovery outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 12,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 13,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 14,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 15,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 16,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 17,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 18,
+          "action": "Perform the supplied action.",
+          "expected": "The supplied outcome is reached; runtime-unverified."
+        },
+        {
+          "n": 19,
+          "action": "Perform the supplied recovery action.",
+          "expected": "The supplied recovery outcome is reached; runtime-unverified."
+        }
+      ]
+    }
+  ]
+}

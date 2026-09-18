@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "journey_artifact_hash": "sha256:7b4dd935b141a30a12ae9485fad6442292c38d3373a5f75ddeb4305d71fd2597",
+  "fact_graph_artifact_hash": "sha256:4571a72a37d8669ed7d930dc38c184ae88a92dd594de1f5c3ca079fc973b9f08",
+  "business_workflow_mapping_artifact_hash": "sha256:1feb6abdd1121cc4782ae6efec9ac7072e813623a5d038f54b7ebc98cf2a3d71",
+  "milestone_links": [
+    {
+      "target_ref": "JM001",
+      "workflow_refs": [
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-8dc58904",
+        "WF-component-loginpage-f3dfe66b",
+        "WF-component-loginpage-e5ed79c1"
+      ]
+    },
+    {
+      "target_ref": "JM002",
+      "workflow_refs": [
+        "WF-component-mainpage-c55225a4",
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5bf664e5"
+      ]
+    },
+    {
+      "target_ref": "JM003",
+      "workflow_refs": [
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a",
+        "WF-component-parseddbpage-6771c0b3"
+      ]
+    },
+    {
+      "target_ref": "JM004",
+      "workflow_refs": [
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-parseddbpage-083f5434"
+      ]
+    },
+    {
+      "target_ref": "JM006",
+      "workflow_refs": [
+        "WF-component-businesspage-40d5175b",
+        "WF-component-businesspage-664cad1d",
+        "WF-component-scenariopage-d3d27c52"
+      ]
+    },
+    {
+      "target_ref": "JM007",
+      "workflow_refs": [
+        "WF-component-scenariopage-0b41140c",
+        "WF-component-scenariopage-d3efa9f6"
+      ]
+    },
+    {
+      "target_ref": "JM008",
+      "workflow_refs": [
+        "WF-component-mainpage-2b4dbe33"
+      ]
+    },
+    {
+      "target_ref": "JM009",
+      "workflow_refs": [
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-8dc58904",
+        "WF-component-loginpage-f3dfe66b",
+        "WF-component-loginpage-e5ed79c1"
+      ]
+    },
+    {
+      "target_ref": "JM010",
+      "workflow_refs": [
+        "WF-component-mainpage-c55225a4",
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5bf664e5"
+      ]
+    },
+    {
+      "target_ref": "JM011",
+      "workflow_refs": [
+        "WF-component-uploadpage-5bf664e5"
+      ]
+    },
+    {
+      "target_ref": "JM012",
+      "workflow_refs": [
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5bf664e5"
+      ]
+    },
+    {
+      "target_ref": "JM013",
+      "workflow_refs": [
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a",
+        "WF-component-parseddbpage-6771c0b3"
+      ]
+    },
+    {
+      "target_ref": "JM014",
+      "workflow_refs": [
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-parseddbpage-083f5434"
+      ]
+    },
+    {
+      "target_ref": "JM015",
+      "workflow_refs": [
+        "WF-component-businesspage-40d5175b",
+        "WF-component-businesspage-664cad1d",
+        "WF-component-scenariopage-d3d27c52"
+      ]
+    },
+    {
+      "target_ref": "JM016",
+      "workflow_refs": [
+        "WF-component-scenariopage-0b41140c",
+        "WF-component-scenariopage-d3efa9f6"
+      ]
+    },
+    {
+      "target_ref": "JM017",
+      "workflow_refs": [
+        "WF-component-mainpage-2b4dbe33"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "target_ref": "JM005",
+      "reason": "The bounded candidates support selecting business flows but do not establish the stated mapping validation report outcome."
+    }
+  ]
+}

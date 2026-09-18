@@ -921,11 +921,27 @@ function businessClassificationEvidenceSourcesByArea(priorArtifact) {
   ]));
 }
 
-export function businessClassificationSourceSupport(priorArtifact) {
-  return [...businessClassificationEvidenceSourcesByArea(priorArtifact)].map(([sourceAreaRef, sourceRefs]) => ({
-    source_area_ref: sourceAreaRef,
-    source_refs: [...sourceRefs].sort(),
-  }));
+/**
+ * Reports, per source area, which of its evidenced sources actually contain a journey action. The
+ * scanner already decides that, so the count is backend-owned; grouping screens into a business area
+ * stays the model's semantic call. The counted source refs are listed so a low count can be read as
+ * "this area cites no journey-action source" rather than taken as a verdict on the area itself.
+ */
+export function businessClassificationSourceSupport(priorArtifact, sourceBehaviors) {
+  const journeyActionSourceRefs = Array.isArray(sourceBehaviors)
+    ? new Set(sourceBehaviors.filter((behavior) => record(behavior)?.journey_required).map((behavior) => behavior.source_id))
+    : undefined;
+  return [...businessClassificationEvidenceSourcesByArea(priorArtifact)].map(([sourceAreaRef, sourceRefs]) => {
+    const sorted = [...sourceRefs].sort();
+    if (!journeyActionSourceRefs) return { source_area_ref: sourceAreaRef, source_refs: sorted };
+    const counted = sorted.filter((sourceRef) => journeyActionSourceRefs.has(sourceRef));
+    return {
+      source_area_ref: sourceAreaRef,
+      source_refs: sorted,
+      journey_action_count: counted.length,
+      journey_action_source_refs: counted,
+    };
+  });
 }
 
 export function businessClassificationPermittedSourceRefs(priorArtifact) {
@@ -1644,9 +1660,12 @@ export function validateUserJourneyWorkflowLinkPatch(value, plan) {
         ? candidateByWorkflowRef.get(workflowRef).eligible_edges
         : []
     ).map((edge) => record(edge)?.to_screen_ref).filter(Boolean));
-    if (!midJourneyArrivals(target).length) continue;
+    if (!midJourneyArrivals(target).length || !arrivals.length) continue;
+    // Only a milestone whose every landing screen is a dead end strands the journey. One arrival the
+    // journey can continue from is enough, so a milestone may visit a view-only surface on the way.
+    if (arrivals.some((screenRef) => departureScreenRefs.has(screenRef))) continue;
     for (const screenRef of [...new Set(arrivals)]) {
-      if (!departureScreenRefs.has(screenRef)) issues.push(`USER_JOURNEY_WORKFLOW_LINK_DEAD_END:${entry.target_ref}:${screenRef}`);
+      issues.push(`USER_JOURNEY_WORKFLOW_LINK_DEAD_END:${entry.target_ref}:${screenRef}`);
     }
   }
   const accounted = new Set(accountedTargetRefs);

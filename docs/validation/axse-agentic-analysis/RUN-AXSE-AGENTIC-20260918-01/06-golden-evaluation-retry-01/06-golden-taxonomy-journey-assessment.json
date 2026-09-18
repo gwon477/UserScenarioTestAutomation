@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "classification_matches": [
+    {
+      "golden_ref": "AXSE-BC-001",
+      "candidate_refs": [
+        "BC-92ED9930BD56"
+      ],
+      "score": 0.98,
+      "rationale": "인증 입력·로그인·프로젝트 조회/선택·로그아웃을 포함하는 후보 분류가 사용자 인증 및 프로젝트 진입 범위와 직접 대응한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-002",
+      "candidate_refs": [
+        "BC-3667F7119233",
+        "BC-92ED9930BD56"
+      ],
+      "score": 0.76,
+      "rationale": "메인 작업 화면 진입, TS 작업 메뉴 및 업로드 단계 내비게이션이 후보의 작업·문서 수집 분류에 포함되며 인증 분류가 진입 전제를 보완한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-003",
+      "candidate_refs": [
+        "BC-3667F7119233"
+      ],
+      "score": 0.9,
+      "rationale": "UTF-8 Markdown 문서 선택·업로드·파싱 및 재업로드/취소 흐름이 후보 분류의 핵심 범위와 대응한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-004",
+      "candidate_refs": [
+        "BC-227E60D90DEA"
+      ],
+      "score": 0.97,
+      "rationale": "파싱 개요와 업무·화면·필드·이벤트 데이터의 검색 및 페이지 단위 검토가 직접 표현되어 있다."
+    },
+    {
+      "golden_ref": "AXSE-BC-005",
+      "candidate_refs": [
+        "BC-ADF6A3884FBE"
+      ],
+      "score": 0.96,
+      "rationale": "업무흐름·카테고리 탐색, 연결 화면 정합성 확인, 생성 대상 선택 및 생성 요청이 후보 분류에 포함된다."
+    },
+    {
+      "golden_ref": "AXSE-BC-006",
+      "candidate_refs": [
+        "BC-5AD62E2C8E05"
+      ],
+      "score": 0.94,
+      "rationale": "비동기 시나리오·TC 생성 상태 추적과 추적성 매트릭스 및 CSV/Excel 결과 활용이 직접 대응한다."
+    }
+  ],
+  "workflow_matches": [
+    {
+      "golden_ref": "AXSE-WF-001",
+      "candidate_refs": [
+        "WF-component-loginformpage-3721e6a6",
+        "WF-component-loginformpage-104bdb2f",
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef"
+      ],
+      "score": 0.88,
+      "rationale": "로그인 화면에서 자격 증명을 입력하고 정상 프로젝트 선택 단계로 이동하며 로그인 실패 경로도 후보에 있다."
+    },
+    {
+      "golden_ref": "AXSE-WF-002",
+      "candidate_refs": [
+        "WF-component-loginpage-eec1c540",
+        "WF-component-loginpage-f3dfe66b",
+        "WF-component-loginpage-24d62594"
+      ],
+      "score": 0.82,
+      "rationale": "프로젝트 목록 조회/새로고침, 프로젝트 선택에 따른 메인 진입, 목록 조회 실패 및 로그아웃이 대응한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-003",
+      "candidate_refs": [
+        "WF-component-mainpage-0f4d0fcd",
+        "WF-component-mainpage-4e38e24f",
+        "WF-component-mainpage-275bc2d0",
+        "WF-component-mainpage-0b02b6d1"
+      ],
+      "score": 0.76,
+      "rationale": "프로젝트 메인 셸에서 TS 작업 메뉴를 열고 작업/업로드 단계와 설정 단계로 이동하는 후보 흐름이 작업 내비게이션을 지원한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-004",
+      "candidate_refs": [
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a",
+        "WF-component-uploadpage-f1072540",
+        "WF-component-uploadpage-d6e6a43f"
+      ],
+      "score": 0.68,
+      "rationale": "Markdown 파일 진입, 업로드 완료 후 파싱 결과 이동, 재업로드 및 취소는 대응하지만 업로드 거부·실패 terminal이 독립적으로 grounded되어 있지 않다."
+    },
+    {
+      "golden_ref": "AXSE-WF-005",
+      "candidate_refs": [
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-parseddbpage-26d6afdd",
+        "WF-component-parseddbpage-fbf48ce7",
+        "WF-component-parseddbpage-9184ec77",
+        "WF-component-parseddbpage-89f62e5f",
+        "WF-component-parseddbpage-083f5434",
+        "WF-component-parseddbpage-4a38f0de"
+      ],
+      "score": 0.9,
+      "rationale": "파싱 결과 검색, 입력, 탭/페이지 검토 및 업무 매핑 화면으로의 이동을 후보 narrow workflows의 결합이 포괄한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-006",
+      "candidate_refs": [
+        "WF-component-businesspage-86dffaba",
+        "WF-component-businesspage-86c2ff8c",
+        "WF-component-businesspage-5c765240",
+        "WF-component-businesspage-8d384820",
+        "WF-component-businesspage-40d5175b",
+        "WF-component-businesspage-547a1466",
+        "WF-component-businesspage-6d777bfb",
+        "WF-component-businesspage-940a9fa5"
+      ],
+      "score": 0.84,
+      "rationale": "카테고리/컨텍스트 탐색, 전체·개별 흐름 선택, 화면 연결 검토와 CSV 결과 활용이 대응한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-007",
+      "candidate_refs": [],
+      "score": 0.42,
+      "rationale": "후보에는 프리셋 모달을 닫는 조작과 일괄 생성 요청은 있으나 단일 업무흐름 프리셋 생성·폴링·matrix preview의 완결된 흐름이 없다."
+    },
+    {
+      "golden_ref": "AXSE-WF-008",
+      "candidate_refs": [
+        "WF-component-businesspage-6bf3ba20",
+        "WF-component-businesspage-940a9fa5"
+      ],
+      "score": 0.86,
+      "rationale": "선택된 업무흐름에 대한 시나리오·TC 생성 요청과 BusinessPage CSV 내보내기 성공/실패가 후보에 명시되어 있다."
+    },
+    {
+      "golden_ref": "AXSE-WF-009",
+      "candidate_refs": [
+        "WF-component-businesspage-6bf3ba20",
+        "WF-component-scenariopage-155f546e",
+        "WF-component-scenariopage-8d4b7217"
+      ],
+      "score": 0.57,
+      "rationale": "생성 요청이 ScenarioPage로 전환되고 결과 화면 조작은 있으나 진행률·평가/재생성 이력·완료 전환을 추적하는 독립 흐름은 충분히 표현되지 않는다."
+    },
+    {
+      "golden_ref": "AXSE-WF-010",
+      "candidate_refs": [
+        "WF-component-scenariopage-ea14afd0",
+        "WF-component-scenariopage-13c02421",
+        "WF-component-scenariopage-155f546e",
+        "WF-component-scenariopage-130159bc",
+        "WF-component-scenariopage-ed2efd9e",
+        "WF-component-scenariopage-2c40057c"
+      ],
+      "score": 0.71,
+      "rationale": "ScenarioPage에서 CSV와 Excel을 다운로드하고 결과 섹션을 확장/축소하는 후보 흐름들이 결과 활용의 핵심 terminal을 지원하지만 필터·검색·상세·페이징은 제한적으로만 표현된다."
+    }
+  ],
+  "journey_matches": [
+    {
+      "golden_ref": "AXSE-J-001",
+      "candidate_refs": [
+        "J001"
+      ],
+      "score": 0.84,
+      "rationale": "후보 정상 여정은 로그인·프로젝트·TS 문서 업로드/파싱·파싱 검토·업무 매핑·생성·CSV/Excel 활용·로그아웃의 연속 흐름과 결과 산출물을 명시한다."
+    },
+    {
+      "golden_ref": "AXSE-J-002",
+      "candidate_refs": [],
+      "score": 0.25,
+      "rationale": "후보 J002는 파싱 데이터 검색/조회 오류 복구 여정이며, 골든 여정의 UPLOAD 문서 오류 후 파일 재선택·재파싱 복구와 실패 지점 및 회복 단계가 다르다."
+    }
+  ],
+  "critical_gaps": [
+    "필수 복구 여정 AXSE-J-002가 없다. 후보 J002의 복구는 업로드 오류 및 파일 재선택이 아니라 파싱 데이터 조회 오류 이후 검색 조건 수정/탭 복귀에 해당한다."
+  ]
+}

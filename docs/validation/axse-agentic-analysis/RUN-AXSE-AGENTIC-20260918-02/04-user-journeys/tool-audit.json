@@ -35,30 +35,30 @@
       "sequence": 6,
       "tool": "artifact.closure",
       "result": "ok",
-      "requested_ref_count": 5,
-      "resolved_ref_count": 5,
-      "requested_budget": 8000,
-      "effective_budget": 12601,
+      "requested_ref_count": 3,
+      "resolved_ref_count": 3,
+      "requested_budget": 9000,
+      "effective_budget": 9126,
       "omitted_ref_count": 0
     },
     {
       "sequence": 7,
       "tool": "artifact.closure",
       "result": "ok",
-      "requested_ref_count": 5,
-      "resolved_ref_count": 5,
-      "requested_budget": 8000,
-      "effective_budget": 92268,
+      "requested_ref_count": 4,
+      "resolved_ref_count": 4,
+      "requested_budget": 9000,
+      "effective_budget": 89460,
       "omitted_ref_count": 0
     },
     {
       "sequence": 8,
       "tool": "artifact.closure",
       "result": "ok",
-      "requested_ref_count": 5,
-      "resolved_ref_count": 5,
-      "requested_budget": 8000,
-      "effective_budget": 36787,
+      "requested_ref_count": 4,
+      "resolved_ref_count": 4,
+      "requested_budget": 10000,
+      "effective_budget": 32317,
       "omitted_ref_count": 0
     },
     {
@@ -67,8 +67,8 @@
       "result": "ok",
       "requested_ref_count": 4,
       "resolved_ref_count": 4,
-      "requested_budget": 8000,
-      "effective_budget": 21666,
+      "requested_budget": 10000,
+      "effective_budget": 87524,
       "omitted_ref_count": 0
     },
     {
@@ -85,10 +85,10 @@
       "sequence": 11,
       "tool": "artifact.closure",
       "result": "ok",
-      "requested_ref_count": 1,
-      "resolved_ref_count": 1,
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
       "requested_budget": 8000,
-      "effective_budget": 8000,
+      "effective_budget": 73010,
       "omitted_ref_count": 0
     },
     {

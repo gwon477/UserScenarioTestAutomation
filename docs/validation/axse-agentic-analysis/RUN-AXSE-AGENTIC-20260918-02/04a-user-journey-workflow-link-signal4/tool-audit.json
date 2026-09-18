@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.input.validate",
+      "result": "ok",
+      "journey_artifact_id": "04-user-journeys",
+      "fact_graph_artifact_id": "03a-fact-graph",
+      "business_mapping_artifact_id": "03b-business-workflow-mapping"
+    },
+    {
+      "sequence": 2,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "AGENTIC_SOURCE_SURVEY_FAILED",
+      "artifact_id": "04a-user-journey-workflow-link",
+      "attempt": 1
+    },
+    {
+      "sequence": 3,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "04a-user-journey-workflow-link"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "evaluation_passed": false,
+  "validation_scope": "external-golden-read-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "artifact_hash": "sha256:92d53c0f4989b58a2238c7043f188ac4c70199149f1e5e4aaa2ef7b1213d1e81",
+  "result_hash": "sha256:0e5852552a27d1f747a110db926cb8866f4799bdd3ed50973ccb8931fc5200fb",
+  "performance_report_hash": "sha256:11c64bfcf7e54a3210abfbb029f6ac43f752df7cdc5fce9e8314458ed6148172"
+}
