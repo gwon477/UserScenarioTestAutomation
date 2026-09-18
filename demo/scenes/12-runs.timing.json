@@ -1,0 +1,12 @@
+{
+  "sceneId": "12-runs",
+  "cues": [
+    {
+      "text": "회차를 열면 그때 도출된 시나리오가 그대로 열립니다",
+      "startMs": 0,
+      "endMs": 3729
+    }
+  ],
+  "marks": [],
+  "elapsedMs": 4927
+}

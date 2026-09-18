@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "classification_count": 17,
+  "perspective_assessment_count": 14,
+  "perspective_decisions": {
+    "classified": 12,
+    "not-evidenced": 2,
+    "not-applicable": 0
+  },
+  "unresolved_count": 2,
+  "cited_evidence_count": 6,
+  "prior_artifact_hash": "sha256:4625550d74d86a623ee99dc8b164407599819c3e2b56b9ef7d024492ce8c681c",
+  "agent_artifact_hash": "sha256:f18105cb216e7cae1cddd4da8ba7068946958d19770f4410c2ef71370f2f11aa",
+  "artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+  "source_tool_usage": {
+    "artifact_reads": [
+      "02-source-gap-review",
+      "02-source-gap-review-validation",
+      "source-inventory"
+    ],
+    "source_refs_read": [
+      "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "SRC-backend-app-api-v1-workflows-d9740180",
+      "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "SRC-frontend-src-store-feec9a9e"
+    ],
+    "closure_calls": 6,
+    "cumulative_granted_bytes": 96951,
+    "artifact_write_attempts": 1,
+    "fatal_error": null,
+    "max_closure_calls": 10,
+    "max_granted_bytes": 500000
+  }
+}

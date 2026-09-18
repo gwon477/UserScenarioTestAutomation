@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "stage": "scenario-cases",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "extends_artifact_id": "04-user-journeys",
+  "extends_artifact_hash": "sha256:44d01f41d836d66fd583df39e3e441f0c2f161620014f470a913533794ed62f5",
+  "cases": [
+    {
+      "kind": "normal",
+      "title": "정상적인 문서 파싱부터 추적성 매트릭스 다운로드까지 수행",
+      "journey_ref": "J001",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C010",
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020",
+        "C022",
+        "C023",
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C028",
+        "C029",
+        "C030"
+      ],
+      "preconditions": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다."
+      ],
+      "variation": null,
+      "steps": [
+        {
+          "position": 1,
+          "journey_milestone_position": 1,
+          "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 2,
+          "journey_milestone_position": 2,
+          "action": "작업을 부트스트랩하고 MD 또는 TXT 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+          "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ]
+        },
+        {
+          "position": 3,
+          "journey_milestone_position": 3,
+          "action": "Parsed DB에서 검색과 진단을 수행하고 업무흐름을 선택하여 매핑 검증을 확인한 뒤 시나리오·테스트 케이스 생성을 요청한다.",
+          "observable_outcome": "선택 범위와 매핑 검증 결과가 표시되고 생성 요청이 접수된다.",
+          "source_area_refs": [
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request"
+          ]
+        },
+        {
+          "position": 4,
+          "journey_milestone_position": 4,
+          "action": "생성 진행률과 업무흐름별 실행 이력을 확인한다.",
+          "observable_outcome": "생성 진행, 완료 또는 실패 건수가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 5,
+          "journey_milestone_position": 5,
+          "action": "생성 완료 후 시나리오와 테스트 케이스를 조회하고 CSV와 Excel을 다운로드한다.",
+          "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 6,
+          "journey_milestone_position": 6,
+          "action": "메인 셸에서 로그아웃한다.",
+          "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ]
+        }
+      ],
+      "terminal": {
+        "kind": "business-result-and-exit",
+        "expected_result": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물을 확보한 뒤 세션이 초기화되고 로그인 흐름으로 돌아간다.",
+        "final_step_position": 6
+      }
+    },
+    {
+      "kind": "boundary",
+      "title": "UTF-8이 아닌 문서 입력이 디코딩 단계에서 거부됨",
+      "journey_ref": "J001",
+      "classification_refs": [
+        "C002",
+        "C006",
+        "C012",
+        "C017",
+        "C023",
+        "C029"
+      ],
+      "preconditions": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트와 TS 작업이 준비되어 있다.",
+        "UTF-8로 디코딩되지 않는 문서 입력이 준비되어 있다."
+      ],
+      "variation": {
+        "milestone_position": 2,
+        "condition": "선택한 문서가 UTF-8로 디코딩되지 않는 입력이다.",
+        "expected_outcome": "문서 업로드 요청이 거부되고 UTF-8 인코딩이 필요하다는 오류가 표시되며 파싱 완료 상태로 이동하지 않는다.",
+        "recovery_action": null
+      },
+      "steps": [
+        {
+          "position": 1,
+          "journey_milestone_position": 1,
+          "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 2,
+          "journey_milestone_position": 2,
+          "action": "작업을 부트스트랩하고 UTF-8로 디코딩되지 않는 문서를 업로드 및 파싱한다.",
+          "observable_outcome": "문서 업로드 요청이 거부되고 UTF-8 인코딩이 필요하다는 오류가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing"
+          ]
+        }
+      ],
+      "terminal": {
+        "kind": "expected-failure",
+        "expected_result": "UTF-8로 디코딩되지 않는 문서가 거부되고 UTF-8 인코딩이 필요하다는 오류가 사용자에게 표시된다.",
+        "final_step_position": 2
+      }
+    },
+    {
+      "kind": "exception",
+      "title": "시나리오 생성 중 실패 상태가 표시됨",
+      "journey_ref": "J001",
+      "classification_refs": [
+        "C004",
+        "C005",
+        "C013",
+        "C014",
+        "C016",
+        "C026",
+        "C030"
+      ],
+      "preconditions": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+        "파싱 완료 상태와 검토 가능한 구조 데이터가 준비되어 있다."
+      ],
+      "variation": {
+        "milestone_position": 4,
+        "condition": "생성 요청이 접수된 뒤 생성 작업에서 실패 상태가 표시된다.",
+        "expected_outcome": "생성 진행 화면과 업무흐름별 실행 이력에 실패 건수가 표시되고 정상적인 생성 완료 결과로 이동하지 않는다.",
+        "recovery_action": null
+      },
+      "steps": [
+        {
+          "position": 1,
+          "journey_milestone_position": 1,
+          "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 2,
+          "journey_milestone_position": 2,
+          "action": "작업을 부트스트랩하고 MD 또는 TXT 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+          "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ]
+        },
+        {
+          "position": 3,
+          "journey_milestone_position": 3,
+          "action": "Parsed DB를 검토하고 업무흐름을 선택하여 매핑 검증을 확인한 뒤 시나리오·테스트 케이스 생성을 요청한다.",
+          "observable_outcome": "선택 범위와 매핑 검증 결과가 표시되고 생성 요청이 접수된다.",
+          "source_area_refs": [
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request"
+          ]
+        },
+        {
+          "position": 4,
+          "journey_milestone_position": 4,
+          "action": "생성 진행률과 업무흐름별 실행 이력을 조회한다.",
+          "observable_outcome": "생성 실패 상태와 실패 건수가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        }
+      ],
+      "terminal": {
+        "kind": "expected-failure",
+        "expected_result": "생성 작업의 실패 상태와 실패 건수가 진행 화면 및 업무흐름별 실행 이력에 표시된다.",
+        "final_step_position": 4
+      }
+    },
+    {
+      "kind": "recovery",
+      "title": "디코딩 실패 입력을 UTF-8 MD/TXT로 교체하여 결과까지 복구",
+      "journey_ref": "J002",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C009",
+        "C015",
+        "C021",
+        "C027",
+        "C031",
+        "C032",
+        "C033"
+      ],
+      "preconditions": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+        "처음 선택한 문서는 UTF-8로 디코딩되지 않는 입력이고, 다시 선택할 유효한 UTF-8 MD 또는 TXT 문서가 준비되어 있다."
+      ],
+      "variation": {
+        "milestone_position": 3,
+        "condition": "처음 선택한 문서의 업로드 또는 파싱 요청이 UTF-8 디코딩 실패로 거부되어 실패 상태와 오류 메시지가 표시된다.",
+        "expected_outcome": "실패 상태와 오류 메시지가 표시된 뒤 새 파일을 선택할 수 있는 업로드 화면이 유지된다.",
+        "recovery_action": "실패한 파일을 제거하거나 다시 선택하고 유효한 UTF-8 MD 또는 TXT 파일을 업로드하여 파싱을 다시 시작한다."
+      },
+      "steps": [
+        {
+          "position": 1,
+          "journey_milestone_position": 1,
+          "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 2,
+          "journey_milestone_position": 2,
+          "action": "작업을 부트스트랩하고 처음 선택한 문서를 업로드 및 파싱한다.",
+          "observable_outcome": "업로드와 파싱 진행 상태가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 3,
+          "journey_milestone_position": 3,
+          "action": "UTF-8로 디코딩되지 않는 입력으로 인한 업로드 또는 파싱 실패 메시지를 확인한다.",
+          "observable_outcome": "실패 상태와 UTF-8 인코딩이 필요하다는 오류 메시지가 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 4,
+          "journey_milestone_position": 4,
+          "action": "실패한 파일을 제거하거나 다시 선택하고 유효한 UTF-8 MD 또는 TXT 파일을 선택하여 업로드 및 파싱을 다시 시작한다.",
+          "observable_outcome": "새 파일의 파싱이 다시 시작된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 5,
+          "journey_milestone_position": 5,
+          "action": "파싱 완료를 확인하고 Parsed DB에서 데이터를 검색 및 진단한 뒤 업무흐름을 선택하여 매핑 검증과 생성 요청을 수행하고 진행 상태를 확인한다.",
+          "observable_outcome": "파싱 데이터, 매핑 검증 결과, 생성 요청과 진행 상태가 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing",
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request",
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 6,
+          "journey_milestone_position": 6,
+          "action": "생성 결과에서 시나리오와 테스트 케이스를 확인하고 Excel을 다운로드한다.",
+          "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 7,
+          "journey_milestone_position": 7,
+          "action": "메인 셸에서 로그아웃한다.",
+          "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ]
+        }
+      ],
+      "terminal": {
+        "kind": "business-result-and-exit",
+        "expected_result": "유효한 UTF-8 MD 또는 TXT 문서의 파싱 이후 선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보하고 세션이 초기화된다.",
+        "final_step_position": 7
+      }
+    }
+  ],
+  "unresolved": [
+    {
+      "description": "비동기 파싱 실패를 일으키는 정확한 입력 원인은 확정되지 않았다.",
+      "reason": "소스는 UTF-8 디코딩 실패 입력의 즉시 거부와 유효한 UTF-8 대체 입력의 재시작 경로를 입증하지만, 비동기 파싱 실패의 구체적 트리거는 입증하지 않는다.",
+      "journey_refs": [
+        "J002"
+      ],
+      "classification_refs": [
+        "C015",
+        "C032"
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-frontend-src-features-upload-upload-api-f7939e13",
+        "SRC-backend-app-api-v1-tasks-d0e77ec2"
+      ]
+    },
+    {
+      "description": "생성 실패 또는 부분 완료 뒤 재요청 조작과 기존 결과 보존 규칙은 확정되지 않았다.",
+      "reason": "소스는 실패 건수와 진행 상태 조회를 입증하지만 재요청 방식과 기존 결과 처리 규칙은 충분히 입증하지 않는다.",
+      "journey_refs": [
+        "J001"
+      ],
+      "classification_refs": [
+        "C016",
+        "C026"
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+        "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+        "SRC-backend-app-repositories-scenario-repository-c0346a9c"
+      ]
+    },
+    {
+      "description": "인증 이후 실제 권한 규칙과 프로젝트별 접근 경계는 확정되지 않았다.",
+      "reason": "인증 세션과 프로젝트 컨텍스트 전이는 확인되지만 프로젝트별 권한 차이나 조직 경계는 입증되지 않았다.",
+      "journey_refs": [
+        "J001"
+      ],
+      "classification_refs": [
+        "C008"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e",
+        "SRC-backend-app-core-auth-7c627b43",
+        "SRC-backend-app-core-security-3b18f773"
+      ]
+    }
+  ]
+}

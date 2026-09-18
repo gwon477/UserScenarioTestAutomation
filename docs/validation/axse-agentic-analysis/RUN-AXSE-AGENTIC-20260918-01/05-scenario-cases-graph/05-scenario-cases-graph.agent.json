@@ -1,0 +1,3292 @@
+{
+  "schema_version": 1,
+  "scenario_updates": [
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D514A88-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Apply the supplied filter action.",
+          "expected": "Filter result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-940A9FA5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request CSV export.",
+          "expected": "CSV export result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-940A9FA5-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt CSV export.",
+          "expected": "CSV export fails or does not complete; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Navigate back.",
+          "expected": "Parsed-database-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-0ADA3322-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the modal.",
+          "expected": "Business-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-E76552A4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Switch to the supplied context view.",
+          "expected": "Business-page view result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-D378820A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the modal.",
+          "expected": "Business-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EC9352E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the modal.",
+          "expected": "Business-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Switch to the supplied category view.",
+          "expected": "Business-page view result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle select all or clear all.",
+          "expected": "Selection changes from its supplied prior value; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle select all or clear all.",
+          "expected": "Selection changes from its supplied prior value; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the modal.",
+          "expected": "Business-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario-page transition is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt generation.",
+          "expected": "The generation attempt fails or remains on the business page; runtime outcome is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Retry generation.",
+          "expected": "Recovery to the scenario page is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-5C765240-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Apply the supplied expand toggle.",
+          "expected": "Expand result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle selection.",
+          "expected": "Selection changes from its supplied prior value; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle selection.",
+          "expected": "Selection changes from its supplied prior value; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-547A1466-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle selection.",
+          "expected": "Selection changes from its supplied prior value; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login attempt is an evidenced exception; successful completion is not claimed."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-3721E6A6-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login-page result is source-supported; runtime execution is not claimed."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the supplied user ID.",
+          "expected": "The login form reflects the entry; runtime execution is not claimed."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the supplied password.",
+          "expected": "The login form reflects the entry; runtime execution is not claimed."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-EEC1C540-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "Login-page result is source-supported; runtime execution is not claimed."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page transition is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Refresh the project list.",
+          "expected": "Refresh result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Attempt to refresh the project list.",
+          "expected": "The refresh does not complete successfully; runtime execution is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Log out.",
+          "expected": "The login form is reached; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Log out.",
+          "expected": "Login-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate home.",
+          "expected": "The supplied upload-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page transition is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Toggle the TS menu.",
+          "expected": "Menu-toggle result is source-supported; runtime execution is not claimed."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Use the supplied button search.",
+          "expected": "Search result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-9184EC77-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "The database page is valid."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Go to the previous page.",
+          "expected": "Parsed-database-page pagination result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Go to the previous page.",
+          "expected": "Upload-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Search the parsed data.",
+          "expected": "Search result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-89F62E5F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "The database page is valid."
+        },
+        {
+          "index": 7,
+          "text": "Another database page is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Go to the next page.",
+          "expected": "Next-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-FBF48CE7-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Enter text in the supplied input.",
+          "expected": "Input result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        },
+        {
+          "index": 8,
+          "text": "Scenario download is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Download the CSV.",
+          "expected": "CSV download result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-EA14AFD0-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        },
+        {
+          "index": 8,
+          "text": "Scenario download is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Attempt the CSV download.",
+          "expected": "The CSV download does not complete successfully; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-13C02421-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        },
+        {
+          "index": 8,
+          "text": "Scenario download is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Download the Excel file.",
+          "expected": "Excel download result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-13C02421-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        },
+        {
+          "index": 8,
+          "text": "Scenario download is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Attempt the Excel download.",
+          "expected": "The Excel download does not complete successfully; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-155F546E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle the supplied screen expansion.",
+          "expected": "Screen expansion result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-130159BC-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle the supplied action expansion.",
+          "expected": "Action expansion result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-ED2EFD9E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle the supplied data expansion.",
+          "expected": "Data expansion result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Navigate back.",
+          "expected": "Business-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-2C40057C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle case details.",
+          "expected": "Case-detail expansion result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-695469FC-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Use the supplied select control.",
+          "expected": "Selection result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-4F42F993-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Save the settings.",
+          "expected": "Save result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-BF70BEC5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Reset the settings.",
+          "expected": "Reset result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-B08DCC4B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Toggle the checkbox from its supplied prior value.",
+          "expected": "The checkbox is deselected or selected consistently with the toggle; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-5BF96FBD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the supplied option.",
+          "expected": "Selection result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-F1072540-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Reset the upload.",
+          "expected": "Upload-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-D6E6A43F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Cancel and choose again.",
+          "expected": "Upload-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-06490A15-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Enter the supplied parsed document.",
+          "expected": "Parsed-database-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J001-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 1,
+          "text": "Projects are available."
+        },
+        {
+          "index": 2,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 3,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 4,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 5,
+          "text": "Generation is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Scenario download is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the user ID.",
+          "expected": "Login-form result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Enter the password.",
+          "expected": "Login-form result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the project.",
+          "expected": "Main-page result is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Enter the supplied parsed document.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Navigate back.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 8,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 9,
+          "action": "Navigate back.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 10,
+          "action": "Enter the supplied parsed document.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 11,
+          "action": "Navigate back.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 12,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 13,
+          "action": "Navigate back.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 14,
+          "action": "Enter the supplied parsed document.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 15,
+          "action": "Navigate back.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 16,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 17,
+          "action": "Search the parsed data.",
+          "expected": "Search result is unverified."
+        },
+        {
+          "n": 18,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 19,
+          "action": "Toggle selection.",
+          "expected": "Selection result is unverified."
+        },
+        {
+          "n": 20,
+          "action": "Open settings.",
+          "expected": "Settings-page result is unverified."
+        },
+        {
+          "n": 21,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 22,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 23,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 24,
+          "action": "Generate scenarios and test cases.",
+          "expected": "Scenario-page transition is unverified."
+        },
+        {
+          "n": 25,
+          "action": "Download the CSV.",
+          "expected": "CSV result is unverified."
+        },
+        {
+          "n": 26,
+          "action": "Download the Excel file.",
+          "expected": "Excel result is unverified."
+        },
+        {
+          "n": 27,
+          "action": "Download the CSV.",
+          "expected": "CSV result is unverified."
+        },
+        {
+          "n": 28,
+          "action": "Log out.",
+          "expected": "Login-page result is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J002-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 1,
+          "text": "Projects are available."
+        },
+        {
+          "index": 2,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 3,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 4,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 5,
+          "text": "Generation is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Scenario download is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the user ID.",
+          "expected": "Login-form result is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Enter the password.",
+          "expected": "Login-form result is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Submit login.",
+          "expected": "Login-page result is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the project.",
+          "expected": "The journey failure point is reached if supported; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Enter the supplied parsed document.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Navigate back.",
+          "expected": "Upload-page recovery step is unverified."
+        },
+        {
+          "n": 8,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 9,
+          "action": "Search the parsed data.",
+          "expected": "Search result is unverified."
+        },
+        {
+          "n": 10,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 11,
+          "action": "Attempt scenario generation.",
+          "expected": "The generation failure is not completed successfully; runtime outcome is unverified."
+        },
+        {
+          "n": 12,
+          "action": "Navigate back.",
+          "expected": "Parsed-database-page recovery result is unverified."
+        },
+        {
+          "n": 13,
+          "action": "Search the parsed data.",
+          "expected": "Search result is unverified."
+        },
+        {
+          "n": 14,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 15,
+          "action": "Toggle selection.",
+          "expected": "Selection result is unverified."
+        },
+        {
+          "n": 16,
+          "action": "Open settings.",
+          "expected": "Settings-page result is unverified."
+        },
+        {
+          "n": 17,
+          "action": "Navigate to test scenarios.",
+          "expected": "Upload-page result is unverified."
+        },
+        {
+          "n": 18,
+          "action": "Continue to the next step.",
+          "expected": "Parsed-database-page result is unverified."
+        },
+        {
+          "n": 19,
+          "action": "Navigate to business mapping.",
+          "expected": "Business-page result is unverified."
+        },
+        {
+          "n": 20,
+          "action": "Retry scenario generation.",
+          "expected": "Recovery to the scenario page is unverified."
+        },
+        {
+          "n": 21,
+          "action": "Download the CSV.",
+          "expected": "CSV result is unverified."
+        },
+        {
+          "n": 22,
+          "action": "Log out.",
+          "expected": "Login-page result is unverified."
+        }
+      ]
+    }
+  ]
+}

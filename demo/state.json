@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "approvals": {
+    "survey": {
+      "file": "survey.json",
+      "sha256": "ea27da1a9f08cc63f65693124ef42b7ececafc8bcd808fea2475a7de3c257ed3",
+      "at": "2026-09-17T18:20:14+09:00",
+      "note": "G1 승인: 핵심 기능 5개, 브라우저 preview 모드, 240초 한 편"
+    },
+    "scenario": {
+      "file": "scenario.md",
+      "sha256": "1690e518f05926a4fca740d7c263dc38be3c6cc1c660d4a64bffee2b1149d40c",
+      "at": "2026-09-17T18:21:54+09:00",
+      "note": "G2 승인: 27장면 약 222초, 5번은 호버+컷"
+    },
+    "storyboard": {
+      "file": "storyboard.json",
+      "sha256": "7e4cb8f732caded6c70d41d9b1d28f8a6e4fb129603bcb2d6eba194d8e435f82",
+      "at": "2026-09-18T10:12:40+09:00",
+      "note": "26 줌 구간에 하이라이트 추가"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "sceneId": "17-ask",
+  "cues": [
+    {
+      "text": "질문하면 케이스의 전제와 단계를 기준으로 답합니다",
+      "startMs": 0,
+      "endMs": 7397,
+      "box": {
+        "x0": 525,
+        "y0": 926,
+        "x1": 1395,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "drag",
+      "atMs": 2165,
+      "mode": "html5"
+    },
+    {
+      "type": "zoomIn",
+      "atMs": 4955,
+      "scale": 1.4,
+      "ms": 600
+    },
+    {
+      "type": "stream",
+      "atMs": 6845,
+      "startMs": 5606,
+      "endMs": 6845,
+      "speedup": false
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 6845,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 7698
+}

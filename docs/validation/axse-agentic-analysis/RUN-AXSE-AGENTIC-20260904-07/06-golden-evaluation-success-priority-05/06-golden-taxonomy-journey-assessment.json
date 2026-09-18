@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "classification_matches": [
+    {
+      "golden_ref": "AXSE-BC-001",
+      "candidate_refs": [
+        "BC-1C23FFAE5311"
+      ],
+      "score": 0.95,
+      "rationale": "로그인 입력·인증 요청, 프로젝트 조회/선택, 오류·새로고침·로그아웃을 포함해 인증 및 프로젝트 진입 범위를 충족한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-002",
+      "candidate_refs": [
+        "BC-1B1ACC734BB8"
+      ],
+      "score": 0.94,
+      "rationale": "TS 작업 선택·생성, 작업 단계 접근과 업로드/Parsed DB/Business/Scenario 단계 간 내비게이션 및 메인 로그아웃을 포괄한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-003",
+      "candidate_refs": [
+        "BC-A8A94B12A366"
+      ],
+      "score": 0.96,
+      "rationale": "MD/TXT 문서 선택, 업로드·비동기 파싱, 재업로드·취소와 성공/실패 상태를 직접 포함한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-004",
+      "candidate_refs": [
+        "BC-B46FEDEA6797"
+      ],
+      "score": 0.88,
+      "rationale": "파싱된 업무·화면·필드·이벤트·업무흐름의 조회·검색/페이지 변경과 진단 확인 범위를 포괄한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-005",
+      "candidate_refs": [
+        "BC-AF3315D349A0"
+      ],
+      "score": 0.93,
+      "rationale": "업무흐름 및 카테고리 선택, 화면/이벤트 정합성 확인, 프리셋·매핑 CSV·시나리오/TC 생성 요청을 포함한다."
+    },
+    {
+      "golden_ref": "AXSE-BC-006",
+      "candidate_refs": [
+        "BC-991D814D33EA"
+      ],
+      "score": 0.91,
+      "rationale": "생성 진행·실행 이력 확인과 시나리오/TC 결과 조회, CSV·Excel 다운로드를 포함해 결과 활용 범위를 충족한다."
+    }
+  ],
+  "workflow_matches": [
+    {
+      "golden_ref": "AXSE-WF-001",
+      "candidate_refs": [
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-d6fe005d"
+      ],
+      "score": 0.9,
+      "rationale": "아이디·패스워드 입력과 제출, 정상 로그인 화면 전이 및 입력/요청 오류 예외를 함께 다룬다."
+    },
+    {
+      "golden_ref": "AXSE-WF-002",
+      "candidate_refs": [
+        "WF-component-loginpage-41525b39",
+        "WF-component-loginpage-e5ed79c1",
+        "WF-component-loginpage-24d62594"
+      ],
+      "score": 0.89,
+      "rationale": "프로젝트 목록 조회/새로고침과 오류, 프로젝트 선택에 따른 메인 진입, 로그아웃을 포함한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-003",
+      "candidate_refs": [
+        "WF-component-mainpage-3762e523",
+        "WF-component-mainpage-77035738",
+        "WF-component-mainpage-5e43f314",
+        "WF-component-mainpage-4e38e24f",
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-mainpage-2b4dbe33",
+        "WF-component-parseddbpage-4a38f0de",
+        "WF-component-scenariopage-8d4b7217"
+      ],
+      "score": 0.91,
+      "rationale": "기존 작업 선택·신규 작업 생성, 단계 이동, 설정/홈 접근 및 로그아웃을 연결한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-004",
+      "candidate_refs": [
+        "WF-component-uploadpage-833d06aa",
+        "WF-component-uploadpage-1f1eaeca",
+        "WF-component-uploadpage-6c730330",
+        "WF-component-uploadpage-0b0e9837",
+        "WF-component-uploadpage-bc687d2a"
+      ],
+      "score": 0.94,
+      "rationale": "문서 선택, 업로드/파싱 성공·실패, 완료 후 다음 단계, 재업로드와 선택 취소를 모두 포함한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-005",
+      "candidate_refs": [
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-parseddbpage-4a38f0de"
+      ],
+      "score": 0.82,
+      "rationale": "Parsed DB의 뷰/페이지 변경과 Business 단계 이동은 지원하며, 세부 검색·빈 결과 variation은 후보에서 제한적으로만 표현된다."
+    },
+    {
+      "golden_ref": "AXSE-WF-006",
+      "candidate_refs": [
+        "WF-component-businesspage-5ee2ef2f",
+        "WF-component-businesspage-2855894a",
+        "WF-component-businesspage-20f25040",
+        "WF-component-businesspage-067a194d",
+        "WF-component-businesspage-6c5bb760",
+        "WF-component-businesspage-d5b999b1",
+        "WF-component-businesspage-7bea4b09",
+        "WF-component-businesspage-ffb625fb",
+        "WF-component-businesspage-527a091f",
+        "WF-component-businesspage-c434992f",
+        "WF-component-businesspage-3d3d7a88"
+      ],
+      "score": 0.86,
+      "rationale": "컨텍스트/카테고리 흐름 선택과 전체/개별 선택 토글, 업무흐름 텍스트 확인을 포함해 정합성 검토 목적을 충족한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-007",
+      "candidate_refs": [
+        "WF-component-businesspage-7eded949"
+      ],
+      "score": 0.84,
+      "rationale": "Business 화면에서 단일 프리셋 시나리오·TC 생성을 요청하고 정상/오류 결과를 구분한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-008",
+      "candidate_refs": [
+        "WF-component-businesspage-ce6f1e6c",
+        "WF-component-businesspage-3b512bf9"
+      ],
+      "score": 0.9,
+      "rationale": "선택 흐름의 일괄 시나리오/TC 생성 요청과 매핑 검증 CSV 내보내기 및 오류를 연결한다."
+    },
+    {
+      "golden_ref": "AXSE-WF-009",
+      "candidate_refs": [
+        "WF-component-businesspage-ce6f1e6c",
+        "WF-component-scenariopage-8d4b7217"
+      ],
+      "score": 0.75,
+      "rationale": "생성 요청의 진행/오류 상태와 Scenario 단계 전이를 포함하지만, 업무흐름별 평가·재생성 이력의 상세 표현은 제한적이다."
+    },
+    {
+      "golden_ref": "AXSE-WF-010",
+      "candidate_refs": [
+        "WF-component-scenariopage-f72174ff",
+        "WF-component-scenariopage-09e713d0"
+      ],
+      "score": 0.93,
+      "rationale": "Scenario 결과에서 CSV와 Excel 다운로드의 정상·오류 분기를 직접 포함한다."
+    }
+  ],
+  "journey_matches": [
+    {
+      "golden_ref": "AXSE-J-001",
+      "candidate_refs": [
+        "J001"
+      ],
+      "score": 0.96,
+      "rationale": "로그인·프로젝트·TS 작업에서 업로드/파싱, Parsed DB, Business 생성 요청, Scenario 결과의 CSV/Excel, 로그아웃까지 연속 handoff와 business result를 명시한다."
+    },
+    {
+      "golden_ref": "AXSE-J-002",
+      "candidate_refs": [
+        "J002"
+      ],
+      "score": 0.94,
+      "rationale": "업로드/파싱 실패 후 파일 제거·재선택과 재시작을 거쳐 Parsed DB, Business, Scenario Excel 다운로드 및 로그아웃으로 재join하는 별도 recovery 여정이다."
+    }
+  ],
+  "critical_gaps": []
+}

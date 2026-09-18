@@ -1,0 +1,7 @@
+{
+  "pass": false,
+  "issues": [
+    "USER_JOURNEY_WORKFLOW_LINK_UNRESOLVED:JM002",
+    "USER_JOURNEY_WORKFLOW_LINK_UNRESOLVED:JM014"
+  ]
+}

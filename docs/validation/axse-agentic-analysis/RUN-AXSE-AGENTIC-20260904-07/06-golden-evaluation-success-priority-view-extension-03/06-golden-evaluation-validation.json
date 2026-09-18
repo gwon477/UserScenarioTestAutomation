@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "evaluation_passed": false,
+  "validation_scope": "external-golden-read-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "scenario_assessment_correction_from": "06-golden-evaluation-success-priority-view-extension-02",
+  "corrected_scenario_assessment_row_count": 1,
+  "preserved_scenario_assessment_row_count": 43,
+  "out_of_scope_preservation": "verified",
+  "artifact_hash": "sha256:f39b355fdddeb3e395082315f78c82df423e5bdb25cb4fb1e8d915d02c708db6",
+  "result_hash": "sha256:62500e5790c7b1cf07caa8f340358a4590ee6f811a20cf25897f04d69a904afd",
+  "performance_report_hash": "sha256:ee2b09154d682327330fff264626fa2de3a56cd7b13df3c25b7435798671c17c"
+}

@@ -1,0 +1,203 @@
+{
+  "name": "scenarioforge-demo",
+  "baseUrl": "http://127.0.0.1:5173",
+  "resolution": "1920x1080",
+  "fps": 25,
+  "durationSec": 235.52,
+  "draft": false,
+  "narration": null,
+  "bgm": null,
+  "subtitleCues": 43,
+  "notes": [],
+  "scenes": [
+    {
+      "id": "00-intro",
+      "durationSec": 2.48,
+      "startSec": 0.0
+    },
+    {
+      "id": "00a-intro-goal",
+      "durationSec": 8.96,
+      "startSec": 2.08
+    },
+    {
+      "id": "00b-intro-scenarios",
+      "durationSec": 8.44,
+      "startSec": 10.64
+    },
+    {
+      "id": "00c-intro-execution",
+      "durationSec": 7.36,
+      "startSec": 18.68
+    },
+    {
+      "id": "00d-intro-model",
+      "durationSec": 6.64,
+      "startSec": 25.64
+    },
+    {
+      "id": "00d2-intro-start",
+      "durationSec": 4.88,
+      "startSec": 32.24
+    },
+    {
+      "id": "02-add-project",
+      "durationSec": 4.64,
+      "startSec": 36.72
+    },
+    {
+      "id": "03-llm-settings",
+      "durationSec": 5.24,
+      "startSec": 41.32
+    },
+    {
+      "id": "04-pipeline",
+      "durationSec": 9.08,
+      "startSec": 46.52
+    },
+    {
+      "id": "05-start-src",
+      "durationSec": 5.16,
+      "startSec": 55.56
+    },
+    {
+      "id": "06-progress-rate",
+      "durationSec": 5.8,
+      "startSec": 60.68
+    },
+    {
+      "id": "07-progress-steps",
+      "durationSec": 8.56,
+      "startSec": 66.44
+    },
+    {
+      "id": "08-progress-time",
+      "durationSec": 8.92,
+      "startSec": 74.96
+    },
+    {
+      "id": "09-progress-done",
+      "durationSec": 5.12,
+      "startSec": 83.84
+    },
+    {
+      "id": "10-open-project",
+      "durationSec": 5.72,
+      "startSec": 88.56
+    },
+    {
+      "id": "11-runs",
+      "durationSec": 8.44,
+      "startSec": 94.24
+    },
+    {
+      "id": "12-runs-open",
+      "durationSec": 5.04,
+      "startSec": 102.64
+    },
+    {
+      "id": "13-sheet",
+      "durationSec": 8.44,
+      "startSec": 107.64
+    },
+    {
+      "id": "13b-how-scenarios",
+      "durationSec": 8.8,
+      "startSec": 116.04
+    },
+    {
+      "id": "14-case-steps",
+      "durationSec": 5.52,
+      "startSec": 124.8
+    },
+    {
+      "id": "15-sheet-scroll",
+      "durationSec": 4.48,
+      "startSec": 130.28
+    },
+    {
+      "id": "16-drag-case",
+      "durationSec": 6.56,
+      "startSec": 134.72
+    },
+    {
+      "id": "17-ask",
+      "durationSec": 7.8,
+      "startSec": 141.24
+    },
+    {
+      "id": "18-answer",
+      "durationSec": 9.16,
+      "startSec": 149.0
+    },
+    {
+      "id": "19-executions",
+      "durationSec": 7.04,
+      "startSec": 157.76
+    },
+    {
+      "id": "20-open-execution",
+      "durationSec": 6.84,
+      "startSec": 164.76
+    },
+    {
+      "id": "21-test-center",
+      "durationSec": 7.36,
+      "startSec": 171.56
+    },
+    {
+      "id": "22-verdicts",
+      "durationSec": 5.68,
+      "startSec": 178.88
+    },
+    {
+      "id": "22b-how-execution",
+      "durationSec": 4.44,
+      "startSec": 184.52
+    },
+    {
+      "id": "22c-how-execution-2",
+      "durationSec": 5.04,
+      "startSec": 188.92
+    },
+    {
+      "id": "23-open-evidence",
+      "durationSec": 4.32,
+      "startSec": 193.92
+    },
+    {
+      "id": "24-timeline",
+      "durationSec": 6.52,
+      "startSec": 198.2
+    },
+    {
+      "id": "25-verdict-basis",
+      "durationSec": 8.64,
+      "startSec": 204.68
+    },
+    {
+      "id": "26-evidence-library",
+      "durationSec": 8.64,
+      "startSec": 212.92
+    },
+    {
+      "id": "26b-filters",
+      "durationSec": 7.28,
+      "startSec": 221.52
+    },
+    {
+      "id": "27-evidence-filter",
+      "durationSec": 4.2,
+      "startSec": 228.76
+    },
+    {
+      "id": "99-outro",
+      "durationSec": 2.96,
+      "startSec": 232.56
+    }
+  ],
+  "outputs": [
+    "output/scenarioforge-demo.mp4",
+    "output/scenarioforge-demo.srt"
+  ]
+}

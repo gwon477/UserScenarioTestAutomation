@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "pi-fact-graph",
+  "error_code": "FACT_PATCH_REFERENCE_INVALID"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys-validation"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-next-stage-gaps"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "prior-scenario-cases"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "scenario-case-correction-plan"
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 8,
+      "resolved_ref_count": 8,
+      "new_evidence_ref_count": 8,
+      "reused_evidence_ref_count": 0,
+      "requested_budget": 120000,
+      "effective_budget": 120000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 9,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_STEP_AREA_MISMATCH",
+      "validation_issues": [
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:5:input-source",
+        "SCENARIO_CASE_STEP_AREA_MISMATCH:6:3:scenario-generation-and-traceability-results"
+      ],
+      "artifact_id": "05-scenario-cases"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "artifact_type": "orchestrator-source-gaps",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "reviewed_artifact": {
+    "artifact_id": "01-source-survey",
+    "content_hash": "sha256:031ba1cc15cba34123526d23787fca6f5aecf6c26da6846b76a7097bde5a6984",
+    "status": "locally-validated-unregistered-probe"
+  },
+  "golden_derived": false,
+  "decision": "semantic-correction-required",
+  "gaps": [
+    {
+      "gap_id": "GAP-TASK-STAGE-AREA",
+      "kind": "missing-source-area",
+      "affected_sections": [
+        "source_areas",
+        "journey_threads:문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "required_change": "작업 자동 선택, 신규 작업 생성, bootstrap, 단계 접근 guard와 메인 셸 로그아웃을 하나의 source-backed area로 추가한다.",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20"
+      ]
+    },
+    {
+      "gap_id": "GAP-NORMAL-JOURNEY-TERMINAL",
+      "kind": "incomplete-normal-journey",
+      "affected_sections": [
+        "journey_threads:문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "required_change": "하나의 순차 여정 안에서 로그인부터 프로젝트, 작업, 업로드, 파싱 데이터, 업무흐름 선택, 생성, 결과 확인, CSV와 Excel 다운로드를 거쳐 로그아웃으로 끝낸다. 다운로드와 로그아웃을 대안 terminal로 두지 않는다.",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-app-a0eba768",
+        "SRC-frontend-src-features-login-login-page-24848ab2",
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+        "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20"
+      ]
+    },
+    {
+      "gap_id": "GAP-RECOVERY-JOURNEY",
+      "kind": "missing-recovery-journey",
+      "affected_sections": [
+        "journey_threads"
+      ],
+      "required_change": "같은 로그인 진입에서 시작해 업로드 또는 파싱 실패를 화면에서 확인하고 파일 재선택·재업로드로 복구한 뒤 정상 흐름에 합류하여 결과 Excel 다운로드와 로그아웃까지 끝나는 provisional recovery thread를 추가한다.",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-login-login-page-24848ab2",
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+        "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20"
+      ]
+    }
+  ],
+  "preserve": [
+    "현재 5개 source area의 source-backed 의미",
+    "단일 업무흐름 프리셋은 전체 사용자 여정이 아니라 workflow-sized thread라는 구분",
+    "설정 화면의 handler 없는 저장·초기화 control을 업무흐름으로 승격하지 않는 판단",
+    "secret 검출로 제외된 인증 backend를 근거 없이 보완하지 않는 unresolved 상태"
+  ]
+}

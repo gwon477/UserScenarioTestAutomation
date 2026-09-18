@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:16878d5da0850ff5efd1c393db9715e1e0c028d82caca12822e6c22f328251ec",
+  "element_update_upserts": [],
+  "predicate_upserts": [
+    {
+      "key": "preset.modal.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.requesting_id",
+      "values": [
+        "empty",
+        "set"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "db.query.applied",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    },
+    {
+      "key": "db.page.state",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    }
+  ],
+  "predicate_removals": [],
+  "edge_changes": [
+    {
+      "operation": "replace",
+      "edge_index": 14,
+      "edge": {
+        "on_element_ref": "U6",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "preset.modal.open",
+              "value": "false"
+            },
+            {
+              "predicate_key": "preset.requesting_id",
+              "value": "empty"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 16,
+      "edge": {
+        "on_element_ref": "U8",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "preset.modal.open",
+              "value": "false"
+            },
+            {
+              "predicate_key": "preset.requesting_id",
+              "value": "empty"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 34,
+      "edge": {
+        "on_element_ref": "U37",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "db.query.applied",
+              "value": "changed"
+            },
+            {
+              "predicate_key": "db.page.state",
+              "value": "changed"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

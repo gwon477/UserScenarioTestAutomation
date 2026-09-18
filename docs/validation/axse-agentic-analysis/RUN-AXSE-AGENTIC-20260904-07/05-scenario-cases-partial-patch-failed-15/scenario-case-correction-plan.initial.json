@@ -1,0 +1,1160 @@
+{
+  "schema_version": 1,
+  "artifact_type": "scenario-case-correction-plan",
+  "base_artifact_hash": "sha256:2f4e847eacdc6ac15c25f3f95c5eb2e4377e126c8bb1ce940d4c52dacb9b90d1",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "targets": [
+    {
+      "target_ref": "CT001",
+      "operation": "map-transition",
+      "transition_ref": "T001",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 1
+        },
+        {
+          "case_index": 1,
+          "step_position": 1
+        },
+        {
+          "case_index": 2,
+          "step_position": 1
+        },
+        {
+          "case_index": 4,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 1
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ]
+    },
+    {
+      "target_ref": "CT002",
+      "operation": "map-transition",
+      "transition_ref": "T002",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 1
+        },
+        {
+          "case_index": 1,
+          "step_position": 1
+        },
+        {
+          "case_index": 2,
+          "step_position": 1
+        },
+        {
+          "case_index": 4,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 1
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ]
+    },
+    {
+      "target_ref": "CT003",
+      "operation": "map-transition",
+      "transition_ref": "T005",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 1
+        },
+        {
+          "case_index": 1,
+          "step_position": 1
+        },
+        {
+          "case_index": 2,
+          "step_position": 1
+        },
+        {
+          "case_index": 4,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 1
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ]
+    },
+    {
+      "target_ref": "CT004",
+      "operation": "map-transition",
+      "transition_ref": "T008",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 6
+        },
+        {
+          "case_index": 4,
+          "step_position": 6
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ]
+    },
+    {
+      "target_ref": "CT005",
+      "operation": "map-transition",
+      "transition_ref": "T011",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 1
+        },
+        {
+          "case_index": 1,
+          "step_position": 1
+        },
+        {
+          "case_index": 2,
+          "step_position": 1
+        },
+        {
+          "case_index": 4,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 1
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT006",
+      "operation": "map-transition",
+      "transition_ref": "T012",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 1
+        },
+        {
+          "case_index": 1,
+          "step_position": 1
+        },
+        {
+          "case_index": 2,
+          "step_position": 1
+        },
+        {
+          "case_index": 4,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 1
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT007",
+      "operation": "map-transition",
+      "transition_ref": "T013",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 1
+        },
+        {
+          "case_index": 1,
+          "step_position": 1
+        },
+        {
+          "case_index": 2,
+          "step_position": 1
+        },
+        {
+          "case_index": 4,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 1
+        },
+        {
+          "case_index": 6,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 1
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT008",
+      "operation": "map-transition",
+      "transition_ref": "T025",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT009",
+      "operation": "map-transition",
+      "transition_ref": "T026",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT010",
+      "operation": "map-transition",
+      "transition_ref": "T027",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT011",
+      "operation": "map-transition",
+      "transition_ref": "T028",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT012",
+      "operation": "map-transition",
+      "transition_ref": "T032",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 4
+        },
+        {
+          "case_index": 2,
+          "step_position": 4
+        },
+        {
+          "case_index": 4,
+          "step_position": 4
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT013",
+      "operation": "map-transition",
+      "transition_ref": "T037",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT014",
+      "operation": "map-transition",
+      "transition_ref": "T038",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT015",
+      "operation": "map-transition",
+      "transition_ref": "T039",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT016",
+      "operation": "map-transition",
+      "transition_ref": "T040",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT017",
+      "operation": "map-transition",
+      "transition_ref": "T041",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT018",
+      "operation": "map-transition",
+      "transition_ref": "T042",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT019",
+      "operation": "map-transition",
+      "transition_ref": "T043",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT020",
+      "operation": "map-transition",
+      "transition_ref": "T044",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT021",
+      "operation": "map-transition",
+      "transition_ref": "T054",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT022",
+      "operation": "map-transition",
+      "transition_ref": "T055",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT023",
+      "operation": "map-transition",
+      "transition_ref": "T056",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT024",
+      "operation": "map-transition",
+      "transition_ref": "T057",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 5
+        },
+        {
+          "case_index": 4,
+          "step_position": 5
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "CT025",
+      "operation": "map-transition",
+      "transition_ref": "T058",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "CT026",
+      "operation": "map-transition",
+      "transition_ref": "T059",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "CT027",
+      "operation": "map-transition",
+      "transition_ref": "T060",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "CT028",
+      "operation": "map-transition",
+      "transition_ref": "T061",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "CT029",
+      "operation": "map-transition",
+      "transition_ref": "T062",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "CT030",
+      "operation": "map-transition",
+      "transition_ref": "T063",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "CT031",
+      "operation": "map-transition",
+      "transition_ref": "T064",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 3
+        },
+        {
+          "case_index": 2,
+          "step_position": 3
+        },
+        {
+          "case_index": 4,
+          "step_position": 3
+        },
+        {
+          "case_index": 7,
+          "step_position": 3
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "CT032",
+      "operation": "map-transition",
+      "transition_ref": "T066",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 2
+        },
+        {
+          "case_index": 1,
+          "step_position": 2
+        },
+        {
+          "case_index": 2,
+          "step_position": 2
+        },
+        {
+          "case_index": 4,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 2
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ]
+    },
+    {
+      "target_ref": "CT033",
+      "operation": "map-transition",
+      "transition_ref": "T067",
+      "allowed_case_steps": [
+        {
+          "case_index": 0,
+          "step_position": 2
+        },
+        {
+          "case_index": 1,
+          "step_position": 2
+        },
+        {
+          "case_index": 2,
+          "step_position": 2
+        },
+        {
+          "case_index": 4,
+          "step_position": 2
+        },
+        {
+          "case_index": 7,
+          "step_position": 2
+        }
+      ],
+      "reason_codes": [
+        "SCENARIO_CASE_TRANSITION_COVERAGE_MISSING:T001|T002|T005|T008|T011|T012|T013|T025|T026|T027|T028|T032|T037|T038|T039|T040|T041|T042|T043|T044|T054|T055|T056|T057|T058|T059|T060|T061|T062|T063|T064|T066|T067"
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ]
+    },
+    {
+      "target_ref": "CT034",
+      "operation": "update-case",
+      "case_index": 3,
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "allowed_fields": [
+        "preconditions"
+      ],
+      "reason_codes": [
+        "GAP-RECOVERY-INPUT-PRECONDITION"
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing",
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-frontend-src-features-upload-upload-api-f7939e13"
+      ]
+    },
+    {
+      "target_ref": "CT035",
+      "operation": "update-case",
+      "case_index": 5,
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "allowed_fields": [
+        "preconditions"
+      ],
+      "reason_codes": [
+        "GAP-RECOVERY-INPUT-PRECONDITION"
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing",
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-frontend-src-features-upload-upload-api-f7939e13"
+      ]
+    }
+  ]
+}

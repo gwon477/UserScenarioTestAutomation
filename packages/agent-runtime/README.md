@@ -1,12 +1,22 @@
-# ScenarioForge Agent Runtime (planned)
+# ScenarioForge Agent Runtime (compatibility placeholder)
 
-이 디렉터리는 다음 백엔드 작업에서 연결할 `pi-coding-agent` 기반 런타임의 경계입니다.
+이 디렉터리는 초기 UI PoC에서 `pi-coding-agent` 기반 런타임의 예정 경계를 표시하기 위해 만든 placeholder입니다. 실제 backend 코드를 이 디렉터리에 추가하지 않습니다.
 
-현재 커밋에는 하네스, 스킬, 서브에이전트 또는 분석 실행 코드를 포함하지 않습니다. 후속 작업에서 Electron main process가 별도 `UtilityProcess`로 런타임을 시작하고, 선택된 분석 대상 프로젝트 내부에 전용 구성을 설치하도록 구현할 예정입니다.
+목표 npm workspace로 전환할 때 책임을 다음 패키지로 분리합니다.
 
-예정 책임 범위:
+- `packages/pi-runtime`: Pi UtilityProcess host, session, model role binding, tool policy, event adapter
+- `packages/scenario-pipeline`: scan/closure/link/walk/coverage, artifact validator, completion gate
+- `packages/test-runtime`: 사용자 trigger, immutable batch, target capability router, plan compiler/validator, TestVista adapter queue
+- `packages/evidence-store`: masking, capture, hash, retention
+- `packages/project-runtime/runtime-template`: generation과 execution-planning으로 분리된 하네스·스킬·agent resource의 원본
+- `apps/desktop/src/main/app`: 생성과 수행 command를 묶는 논리적 통합 하네스 façade
 
-- 분석 대상 디렉터리에 ScenarioForge 전용 에이전트 구성을 설치·갱신
-- `SRC → FACT → WIKI → SCENARIO` 파이프라인 실행과 진행 이벤트 발행
-- 결과를 대상 프로젝트의 `.scenarioforge/` 아래에 기록
-- Renderer에 파일 시스템이나 프로세스 권한을 직접 노출하지 않고 typed IPC 계약으로 결과 전달
+통합 하네스 서버를 별도 상태 저장소나 세 번째 실행 프로세스로 만들지 않습니다. Electron Main의 Application Orchestrator가 `RuntimeStateCoordinator`의 single-writer 계약을 통해 Pi와 TestVista를 조율합니다.
+
+관련 설계:
+
+- `docs/pi-coding-agent 하네스 설계.md`
+- `docs/architecture/03-integrated-harness-server-design.md`
+- `docs/architecture/04-test-execution-harness-design.md`
+- `docs/architecture/05-multi-target-execution-adapter-design.md`
+- `docs/superpowers/specs/2026-08-25-scenarioforge-pi-runtime-test-execution-design.md`

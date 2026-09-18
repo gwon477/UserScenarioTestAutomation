@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "prior-scenario-cases"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-next-stage-gaps"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND"
+    },
+    {
+      "sequence": 7,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND",
+      "validation_issues": [],
+      "artifact_id": "05-scenario-cases"
+    }
+  ]
+}

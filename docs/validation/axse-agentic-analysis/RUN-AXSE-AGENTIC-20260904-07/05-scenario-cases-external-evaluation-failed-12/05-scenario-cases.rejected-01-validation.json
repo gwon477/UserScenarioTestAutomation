@@ -1,0 +1,15 @@
+{
+  "pass": false,
+  "issues": [
+    "SCENARIO_CASE_PERSPECTIVE_MISSING:5:input-source",
+    "SCENARIO_CASE_PERSPECTIVE_MISSING:6:lifecycle-state"
+  ],
+  "failed_target_refs": [
+    "CT002",
+    "CT003"
+  ],
+  "failed_case_indexes": [
+    5,
+    6
+  ]
+}

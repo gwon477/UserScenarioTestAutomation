@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-d0a05aca",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-SURVEY",
+  "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-api-router-47ed9fbf",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/api/router.py",
+      "start_line": 1,
+      "end_line": 12,
+      "content_hash": "sha256:fcaaa38610099284f850ac85813832a249d6940b9a061ceb8a87567fdbcf881b",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-d0a05aca"
+    },
+    {
+      "source_id": "SRC-backend-app-api-v1-documents-52d5ce70",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/api/v1/documents.py",
+      "start_line": 1,
+      "end_line": 212,
+      "content_hash": "sha256:bb47432c3d83a6b6a9cadf25d102b8b9077b211eb242bc8c9ce9c4c35837ca4d",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-d0a05aca"
+    },
+    {
+      "source_id": "SRC-backend-app-api-v1-projects-af57f10c",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/api/v1/projects.py",
+      "start_line": 1,
+      "end_line": 46,
+      "content_hash": "sha256:0e9fe25d3731edad0a2e7899ed6f244e54a774e9e59b9375210bc4910d23bf33",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-d0a05aca"
+    },
+    {
+      "source_id": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/api/v1/tasks.py",
+      "start_line": 1,
+      "end_line": 202,
+      "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-d0a05aca"
+    },
+    {
+      "source_id": "SRC-backend-app-api-v1-workflows-d9740180",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/api/v1/workflows.py",
+      "start_line": 1,
+      "end_line": 231,
+      "content_hash": "sha256:d0880b970a1596e7c6763a82d39116a5c27902c217ed7f57ab9dc2d7d622e329",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-d0a05aca"
+    }
+  ],
+  "created_at": "2026-09-17T23:48:02.919Z"
+}

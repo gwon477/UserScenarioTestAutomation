@@ -1,0 +1,18 @@
+{
+  "sceneId": "00c-intro-execution",
+  "cues": [
+    {
+      "text": "도출된 케이스를 실제 화면에 수행시켜 판정을 받습니다",
+      "startMs": 0,
+      "endMs": 3859,
+      "box": {
+        "x0": 503,
+        "y0": 926,
+        "x1": 1418,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [],
+  "elapsedMs": 7241
+}

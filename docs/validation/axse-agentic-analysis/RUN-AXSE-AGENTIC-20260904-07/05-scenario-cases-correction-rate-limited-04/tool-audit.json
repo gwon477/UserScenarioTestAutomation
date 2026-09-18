@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys-validation"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-next-stage-gaps"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "prior-scenario-cases"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 22,
+      "resolved_ref_count": 20,
+      "requested_budget": 100000,
+      "effective_budget": 100000,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 4,
+      "resolved_ref_count": 3,
+      "requested_budget": 80000,
+      "effective_budget": 80000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 9,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_GAP_SOURCE_NOT_READ",
+      "validation_issues": [],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 10,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 2,
+      "requested_budget": 120000,
+      "effective_budget": 120000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 11,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_GAP_SOURCE_NOT_READ",
+      "validation_issues": [],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 12,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 3,
+      "requested_budget": 50000,
+      "effective_budget": 50000,
+      "omitted_ref_count": 0
+    }
+  ]
+}

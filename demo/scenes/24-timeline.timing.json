@@ -1,0 +1,30 @@
+{
+  "sceneId": "24-timeline",
+  "cues": [
+    {
+      "text": "타임라인에서 실패 시점과 직전 화면을 오갑니다",
+      "startMs": 0,
+      "endMs": 4403,
+      "box": {
+        "x0": 560,
+        "y0": 926,
+        "x1": 1361,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "zoomIn",
+      "atMs": 26,
+      "scale": 1.3,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 3850,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 6559
+}

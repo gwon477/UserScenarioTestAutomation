@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "fact-graph-input-validation",
+  "error_code": "FACT_GRAPH_SNAPSHOT_DRIFT"
+}

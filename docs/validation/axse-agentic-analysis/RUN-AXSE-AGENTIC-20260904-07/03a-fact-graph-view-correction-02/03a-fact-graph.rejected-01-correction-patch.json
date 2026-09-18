@@ -1,0 +1,709 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:60f7662faffe814f1085e90183c8204a38f5d1a416bb5fab4dece47ee7ea0b95",
+  "element_update_upserts": [],
+  "predicate_upserts": [
+    {
+      "key": "business.category.page_reset",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U10"
+      ]
+    },
+    {
+      "key": "business.cube.page_reset",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U7"
+      ]
+    },
+    {
+      "key": "preset.generation.reset",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.message.cleared",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.progress.reset",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "scenario.matrix.download_message.updated",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U41",
+        "U50",
+        "U57",
+        "U58"
+      ]
+    },
+    {
+      "key": "scenario.matrix.loaded_page.updated",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U41",
+        "U50",
+        "U57",
+        "U58"
+      ]
+    },
+    {
+      "key": "scenario.expanded_sections.changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U45",
+        "U46",
+        "U47",
+        "U49"
+      ]
+    }
+  ],
+  "edge_changes": [
+    {
+      "operation": "replace",
+      "edge_index": 1,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S1",
+        "on_element_ref": "U10",
+        "to_screen_ref": "S1",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "business.panel",
+              "value": "category"
+            },
+            {
+              "predicate_key": "business.category.page_reset",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 23,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S1",
+        "on_element_ref": "U6",
+        "to_screen_ref": "S1",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "preset.open",
+              "value": "false"
+            },
+            {
+              "predicate_key": "preset.generation.reset",
+              "value": "true"
+            },
+            {
+              "predicate_key": "preset.message.cleared",
+              "value": "true"
+            },
+            {
+              "predicate_key": "preset.progress.reset",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 24,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S1",
+        "on_element_ref": "U7",
+        "to_screen_ref": "S1",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "business.panel",
+              "value": "context"
+            },
+            {
+              "predicate_key": "business.cube.page_reset",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 25,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S1",
+        "on_element_ref": "U8",
+        "to_screen_ref": "S1",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "preset.open",
+              "value": "false"
+            },
+            {
+              "predicate_key": "preset.generation.reset",
+              "value": "true"
+            },
+            {
+              "predicate_key": "preset.message.cleared",
+              "value": "true"
+            },
+            {
+              "predicate_key": "preset.progress.reset",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 58,
+      "edge": {
+        "kind": "exception",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U41",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_error_visible",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.download_message.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 59,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U41",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_filter.changed",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix_loaded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded_page.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 64,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U45",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.screen_details.expanded",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.screen_details.expanded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 65,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U45",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.screen_details.expanded",
+              "value": "true"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.screen_details.expanded",
+              "value": "false"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 66,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U46",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.action_details.expanded",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.action_details.expanded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 67,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U46",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.action_details.expanded",
+              "value": "true"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.action_details.expanded",
+              "value": "false"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 68,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U47",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.test_data_details.expanded",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.test_data_details.expanded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 69,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U47",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.test_data_details.expanded",
+              "value": "true"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.test_data_details.expanded",
+              "value": "false"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 71,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U49",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.case_details.expanded",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.case_details.expanded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 72,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U49",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.case_details.expanded",
+              "value": "true"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.case_details.expanded",
+              "value": "false"
+            },
+            {
+              "predicate_key": "scenario.expanded_sections.changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 73,
+      "edge": {
+        "kind": "exception",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U50",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_error_visible",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.download_message.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 74,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U50",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.query.changed",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded_page.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 81,
+      "edge": {
+        "kind": "exception",
+        "from_screen_ref": "S9",
+        "on_element_ref": "U57",
+        "to_screen_ref": "S9",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.next_page.enabled",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_error_visible",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.download_message.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 82,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S9",
+        "on_element_ref": "U57",
+        "to_screen_ref": "S9",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.next_page.enabled",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_loaded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded_page.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 83,
+      "edge": {
+        "kind": "exception",
+        "from_screen_ref": "S9",
+        "on_element_ref": "U58",
+        "to_screen_ref": "S9",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.previous_page.enabled",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_error_visible",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.download_message.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 84,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S9",
+        "on_element_ref": "U58",
+        "to_screen_ref": "S9",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.previous_page.enabled",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_loaded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded_page.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

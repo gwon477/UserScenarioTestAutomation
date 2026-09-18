@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "journeys": [
+    {
+      "journey_ref": "J001",
+      "kind": "normal",
+      "title": "문서 업로드부터 최종 테스트 결과 활용까지의 정상 여정",
+      "feasibility": "runtime-unverified",
+      "milestones": [
+        {
+          "target_ref": "JM001",
+          "position": 1,
+          "phase": "entry",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-loginformpage-aef66388",
+            "WF-component-loginformpage-5199dbef",
+            "WF-component-loginformpage-3721e6a6",
+            "WF-component-loginpage-eec1c540"
+          ],
+          "edge_refs": [
+            "E-0021",
+            "E-0022",
+            "E-0020",
+            "E-0023"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM002",
+          "position": 2,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5aba1e3a"
+          ],
+          "edge_refs": [
+            "E-0056",
+            "E-0053"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM003",
+          "position": 3,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5aba1e3a"
+          ],
+          "edge_refs": [
+            "E-0056",
+            "E-0053"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM004",
+          "position": 4,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5aba1e3a"
+          ],
+          "edge_refs": [
+            "E-0056",
+            "E-0053"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM005",
+          "position": 5,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-parseddbpage-6771c0b3"
+          ],
+          "edge_refs": [
+            "E-0032"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM006",
+          "position": 6,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-businesspage-40d5175b"
+          ],
+          "edge_refs": [
+            "E-0010"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM007",
+          "position": 7,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-mainpage-0b02b6d1",
+            "WF-component-businesspage-6bf3ba20"
+          ],
+          "edge_refs": [
+            "E-0030",
+            "E-0007"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM008",
+          "position": 8,
+          "phase": "business-result",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-businesspage-6bf3ba20"
+          ],
+          "edge_refs": [
+            "E-0007"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM009",
+          "position": 9,
+          "phase": "business-result",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-ea14afd0",
+            "WF-component-scenariopage-13c02421"
+          ],
+          "edge_refs": [
+            "E-0040",
+            "E-0042"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM010",
+          "position": 10,
+          "phase": "exit",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-ea14afd0",
+            "WF-component-mainpage-2b4dbe33"
+          ],
+          "edge_refs": [
+            "E-0040",
+            "E-0027"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "title": "파싱 결과 조회 오류에서 최종 테스트 결과 활용으로 복구하는 여정",
+      "feasibility": "runtime-unverified",
+      "milestones": [
+        {
+          "target_ref": "JM011",
+          "position": 1,
+          "phase": "entry",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-loginformpage-aef66388",
+            "WF-component-loginformpage-5199dbef",
+            "WF-component-loginformpage-3721e6a6",
+            "WF-component-loginpage-eec1c540"
+          ],
+          "edge_refs": [
+            "E-0021",
+            "E-0022",
+            "E-0020",
+            "E-0023"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM012",
+          "position": 2,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5aba1e3a"
+          ],
+          "edge_refs": [
+            "E-0056",
+            "E-0053"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM013",
+          "position": 3,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-parseddbpage-6771c0b3"
+          ],
+          "edge_refs": [
+            "E-0032"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM014",
+          "position": 4,
+          "phase": "failure",
+          "required_outcome": "exception",
+          "workflow_refs": [
+            "WF-component-businesspage-6bf3ba20"
+          ],
+          "edge_refs": [
+            "E-0006"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM015",
+          "position": 5,
+          "phase": "recovery",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-parseddbpage-6771c0b3"
+          ],
+          "edge_refs": [
+            "E-0032"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM016",
+          "position": 6,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-parseddbpage-083f5434"
+          ],
+          "edge_refs": [
+            "E-0037"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM017",
+          "position": 7,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-businesspage-40d5175b"
+          ],
+          "edge_refs": [
+            "E-0010"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM018",
+          "position": 8,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-mainpage-0b02b6d1",
+            "WF-component-businesspage-6bf3ba20"
+          ],
+          "edge_refs": [
+            "E-0030",
+            "E-0007"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM019",
+          "position": 9,
+          "phase": "business-result",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-businesspage-6bf3ba20",
+            "WF-component-scenariopage-ea14afd0"
+          ],
+          "edge_refs": [
+            "E-0007",
+            "E-0040"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM020",
+          "position": 10,
+          "phase": "exit",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-ea14afd0",
+            "WF-component-mainpage-2b4dbe33"
+          ],
+          "edge_refs": [
+            "E-0040",
+            "E-0027"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    }
+  ]
+}

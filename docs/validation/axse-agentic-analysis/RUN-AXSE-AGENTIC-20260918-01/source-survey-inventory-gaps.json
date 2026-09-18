@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "artifact_type": "source-survey-inventory-gap-supplement",
+  "source_snapshot_ref": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "reviewed_artifact": {
+    "artifact_id": "01-source-survey",
+    "content_hash": "sha256:cfe1ead5e3ac981ca34b79202531b5aec15f36fb156a9610771c65821499ff9d",
+    "status": "locally-validated-unregistered-probe"
+  },
+  "golden_derived": false,
+  "gaps": []
+}

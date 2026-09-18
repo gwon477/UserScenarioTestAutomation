@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "journey_artifact_hash": "sha256:5a5f422fe3012a988b328f7462c5fa8b22447ae5c6595fe1b75b9bf9699b5590",
+  "fact_graph_artifact_hash": "sha256:f09dd36affbab9527601f5a58708a1f1ddd7a6fc13d7ce8746e4b3e2f0dbdd2e",
+  "business_workflow_mapping_artifact_hash": "sha256:7bba4d73aa20131dd19f12d74fbf25d5cdb5e872f0282a1ce910997941183040",
+  "milestone_links": [
+    {
+      "target_ref": "JM001",
+      "workflow_refs": [
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-3721e6a6",
+        "WF-component-loginpage-eec1c540"
+      ]
+    },
+    {
+      "target_ref": "JM003",
+      "workflow_refs": [
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a"
+      ]
+    },
+    {
+      "target_ref": "JM004",
+      "workflow_refs": [
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a"
+      ]
+    },
+    {
+      "target_ref": "JM005",
+      "workflow_refs": [
+        "WF-component-parseddbpage-6771c0b3"
+      ]
+    },
+    {
+      "target_ref": "JM006",
+      "workflow_refs": [
+        "WF-component-businesspage-40d5175b"
+      ]
+    },
+    {
+      "target_ref": "JM007",
+      "workflow_refs": [
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-businesspage-6bf3ba20"
+      ]
+    },
+    {
+      "target_ref": "JM008",
+      "workflow_refs": [
+        "WF-component-businesspage-6bf3ba20"
+      ]
+    },
+    {
+      "target_ref": "JM009",
+      "workflow_refs": [
+        "WF-component-scenariopage-ea14afd0",
+        "WF-component-scenariopage-13c02421"
+      ]
+    },
+    {
+      "target_ref": "JM010",
+      "workflow_refs": [
+        "WF-component-scenariopage-ea14afd0",
+        "WF-component-mainpage-2b4dbe33"
+      ]
+    },
+    {
+      "target_ref": "JM011",
+      "workflow_refs": [
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-3721e6a6",
+        "WF-component-loginpage-eec1c540"
+      ]
+    },
+    {
+      "target_ref": "JM012",
+      "workflow_refs": [
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a"
+      ]
+    },
+    {
+      "target_ref": "JM013",
+      "workflow_refs": [
+        "WF-component-parseddbpage-6771c0b3"
+      ]
+    },
+    {
+      "target_ref": "JM015",
+      "workflow_refs": [
+        "WF-component-parseddbpage-6771c0b3"
+      ]
+    },
+    {
+      "target_ref": "JM016",
+      "workflow_refs": [
+        "WF-component-parseddbpage-083f5434"
+      ]
+    },
+    {
+      "target_ref": "JM017",
+      "workflow_refs": [
+        "WF-component-businesspage-40d5175b"
+      ]
+    },
+    {
+      "target_ref": "JM018",
+      "workflow_refs": [
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-businesspage-6bf3ba20"
+      ]
+    },
+    {
+      "target_ref": "JM019",
+      "workflow_refs": [
+        "WF-component-businesspage-6bf3ba20",
+        "WF-component-scenariopage-ea14afd0"
+      ]
+    },
+    {
+      "target_ref": "JM020",
+      "workflow_refs": [
+        "WF-component-scenariopage-ea14afd0",
+        "WF-component-mainpage-2b4dbe33"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "target_ref": "JM002",
+      "reason": "Bounded candidates do not provide a workflow goal and eligible edge outcome for selecting or creating a TS 작업."
+    },
+    {
+      "target_ref": "JM014",
+      "reason": "Exception candidates provide generation or download failures, but none provide a parsed-data query error or empty-result outcome."
+    }
+  ]
+}

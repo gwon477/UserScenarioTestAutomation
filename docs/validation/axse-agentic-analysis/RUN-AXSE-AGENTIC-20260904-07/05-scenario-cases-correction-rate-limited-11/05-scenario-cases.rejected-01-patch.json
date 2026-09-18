@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "stage": "scenario-case-correction-patch",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "base_artifact_hash": "sha256:3abfda0d7ed8419fc3f663c20d6505cb3f233b5838a6c3b67dc4964e7f7cc0cd",
+  "changes": [
+    {
+      "target_ref": "CT001",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "새 TS 작업을 생성하여 추적성 매트릭스까지 완료",
+          "classification_refs": [
+            "C001",
+            "C002",
+            "C003",
+            "C004",
+            "C005",
+            "C006",
+            "C007",
+            "C008",
+            "C010",
+            "C011",
+            "C012",
+            "C013",
+            "C014",
+            "C016",
+            "C017",
+            "C018",
+            "C019",
+            "C020",
+            "C022",
+            "C023",
+            "C024",
+            "C025",
+            "C026",
+            "C027",
+            "C028",
+            "C029",
+            "C030"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "선택할 프로젝트와 처리할 MD 문서가 준비되어 있다.",
+            "선택한 프로젝트에 새 TS 작업을 생성할 수 있다."
+          ],
+          "variation": {
+            "milestone_position": 1,
+            "condition": "TS 작업 메뉴에서 새 작업 생성을 선택한다.",
+            "expected_outcome": "새 TS 작업이 생성되고 선택된 작업 컨텍스트가 메인 셸에 표시된다.",
+            "recovery_action": null
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업 메뉴에서 새 작업 생성을 선택한다.",
+              "observable_outcome": "인증 세션, 선택 프로젝트와 새 TS 작업 컨텍스트가 메인 셸에 표시된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 2,
+              "action": "생성된 작업을 부트스트랩하고 준비된 MD 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+              "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다."
+            },
+            {
+              "position": 3,
+              "journey_milestone_position": 3,
+              "action": "Parsed DB에서 업무흐름을 검색하고 페이지를 조회한 뒤 업무흐름을 선택하여 매핑 검증을 확인하고 시나리오·테스트 케이스 생성을 요청한다.",
+              "observable_outcome": "선택 범위와 매핑 검증 결과가 표시되고 생성 요청이 접수된다."
+            },
+            {
+              "position": 4,
+              "journey_milestone_position": 4,
+              "action": "생성 진행률과 업무흐름별 실행 이력을 확인한다.",
+              "observable_outcome": "생성 진행과 업무흐름별 처리 상태가 표시된다."
+            },
+            {
+              "position": 5,
+              "journey_milestone_position": 5,
+              "action": "생성 완료 후 시나리오와 테스트 케이스를 조회하고 CSV와 Excel을 다운로드한다.",
+              "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다."
+            },
+            {
+              "position": 6,
+              "journey_milestone_position": 6,
+              "action": "메인 셸에서 로그아웃한다.",
+              "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다."
+            }
+          ],
+          "terminal": {
+            "kind": "business-result-and-exit",
+            "expected_result": "새 TS 작업에서 생성된 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물을 확보한 뒤 세션이 초기화되고 로그인 흐름으로 돌아간다.",
+            "final_step_position": 6
+          }
+        }
+      ]
+    },
+    {
+      "target_ref": "CT002",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "프로젝트 목록이 비어 초기 진입이 중단됨",
+          "classification_refs": [
+            "C001",
+            "C006",
+            "C008",
+            "C011",
+            "C017",
+            "C020"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "로그인 성공 후 조회할 프로젝트가 없는 상태다."
+          ],
+          "variation": {
+            "milestone_position": 1,
+            "condition": "프로젝트 조회 응답이 빈 목록이다.",
+            "expected_outcome": "프로젝트 선택 화면에 조회된 프로젝트가 없다는 오류가 표시되고 TS 작업 진입이 진행되지 않는다.",
+            "recovery_action": null
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한다.",
+              "observable_outcome": "인증 후 프로젝트 선택 화면이 표시된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 1,
+              "action": "프로젝트 목록 조회가 완료될 때까지 프로젝트 선택 화면을 확인한다.",
+              "observable_outcome": "프로젝트 목록이 비어 있고 조회된 프로젝트가 없다는 오류가 표시된다."
+            }
+          ],
+          "terminal": {
+            "kind": "expected-failure",
+            "expected_result": "프로젝트 목록이 비어 프로젝트 선택 화면에 조회된 프로젝트가 없다는 오류가 표시되고 TS 작업 컨텍스트가 생성되지 않는다.",
+            "final_step_position": 2
+          }
+        }
+      ]
+    },
+    {
+      "target_ref": "CT003",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "Parsed DB 조회 오류가 검토 화면에 표시됨",
+          "classification_refs": [
+            "C002",
+            "C003",
+            "C006",
+            "C012",
+            "C013",
+            "C017",
+            "C018",
+            "C020",
+            "C025",
+            "C029"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "선택할 프로젝트와 처리할 MD 문서가 준비되어 있다.",
+            "문서가 파싱 완료되어 Parsed DB 단계에 접근할 수 있다."
+          ],
+          "variation": {
+            "milestone_position": 3,
+            "condition": "Parsed DB의 선택 탭 목록 조회 요청이 오류로 종료된다.",
+            "expected_outcome": "Parsed DB 화면에 조회 오류 메시지가 표시되고 해당 목록이 정상적으로 표시되지 않는다.",
+            "recovery_action": null
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 기존 TS 작업을 선택한다.",
+              "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 2,
+              "action": "작업을 부트스트랩하고 MD 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+              "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터 조회 화면이 표시된다."
+            },
+            {
+              "position": 3,
+              "journey_milestone_position": 3,
+              "action": "Parsed DB에서 선택한 탭의 목록을 조회한다.",
+              "observable_outcome": "목록 조회 오류 메시지가 표시되고 조회 결과가 표시되지 않는다."
+            }
+          ],
+          "terminal": {
+            "kind": "expected-failure",
+            "expected_result": "Parsed DB의 선택 탭 목록 조회 오류가 화면에 표시되고 정상적인 매핑 검토 및 생성 요청으로 진행하지 않는다.",
+            "final_step_position": 3
+          }
+        }
+      ]
+    },
+    {
+      "target_ref": "CT004",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "업로드 요청 오류 후 유효한 문서로 결과까지 복구",
+          "classification_refs": [
+            "C001",
+            "C002",
+            "C003",
+            "C004",
+            "C005",
+            "C006",
+            "C009",
+            "C015",
+            "C021",
+            "C027",
+            "C032"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+            "첫 업로드에 사용할 문서와 다시 선택할 유효한 UTF-8 MD 문서가 준비되어 있다."
+          ],
+          "variation": {
+            "milestone_position": 3,
+            "condition": "첫 문서의 업로드 요청이 오류로 종료되어 업로드 화면에 오류 메시지가 표시된다.",
+            "expected_outcome": "업로드 화면이 오류 상태가 되고 파싱 완료 상태로 이동하지 않는다.",
+            "recovery_action": "오류 상태에서 첫 파일을 제거하고 유효한 UTF-8 MD 파일을 다시 선택하여 업로드 및 파싱을 시작한다."
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 기존 TS 작업을 선택한다.",
+              "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 2,
+              "action": "작업을 부트스트랩하고 첫 문서를 업로드 및 파싱한다.",
+              "observable_outcome": "업로드 진행 상태가 표시된다."
+            },
+            {
+              "position": 3,
+              "journey_milestone_position": 3,
+              "action": "첫 업로드 요청의 오류 메시지를 확인한다.",
+              "observable_outcome": "업로드 화면에 오류 상태와 오류 메시지가 표시되고 파싱 완료로 전환되지 않는다."
+            },
+            {
+              "position": 4,
+              "journey_milestone_position": 4,
+              "action": "오류 상태에서 첫 파일을 제거하고 유효한 UTF-8 MD 파일을 다시 선택하여 업로드 및 파싱을 다시 시작한다.",
+              "observable_outcome": "새 파일이 선택되고 파싱 진행 상태가 다시 표시된다."
+            },
+            {
+              "position": 5,
+              "journey_milestone_position": 5,
+              "action": "파싱 완료를 확인하고 Parsed DB에서 데이터를 검색 및 진단한 뒤 업무흐름을 선택하여 매핑 검증과 생성 요청을 수행하고 진행 상태를 확인한다.",
+              "observable_outcome": "파싱 데이터, 매핑 검증 결과, 생성 요청과 진행 상태가 표시된다."
+            },
+            {
+              "position": 6,
+              "journey_milestone_position": 6,
+              "action": "생성 결과에서 시나리오와 테스트 케이스를 확인하고 Excel을 다운로드한다.",
+              "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다."
+            },
+            {
+              "position": 7,
+              "journey_milestone_position": 7,
+              "action": "메인 셸에서 로그아웃한다.",
+              "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다."
+            }
+          ],
+          "terminal": {
+            "kind": "business-result-and-exit",
+            "expected_result": "업로드 요청 오류 후 유효한 UTF-8 MD 문서를 다시 파싱하여 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보하고 세션이 초기화된다.",
+            "final_step_position": 7
+          }
+        }
+      ]
+    }
+  ]
+}

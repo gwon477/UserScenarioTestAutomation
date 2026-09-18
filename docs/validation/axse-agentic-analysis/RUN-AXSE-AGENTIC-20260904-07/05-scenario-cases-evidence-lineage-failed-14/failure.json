@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "scenario-case-input-validation",
+  "error_code": "AGENTIC_SOURCE_SURVEY_FAILED"
+}

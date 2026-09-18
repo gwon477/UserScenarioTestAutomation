@@ -1,0 +1,26 @@
+{
+  "sceneId": "27-evidence-filter",
+  "cues": [
+    {
+      "text": "목록을 내려 보고 케이스 ID로 좁힙니다",
+      "startMs": 0,
+      "endMs": 3104,
+      "box": {
+        "x0": 627,
+        "y0": 926,
+        "x1": 1293,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "scroll",
+      "atMs": 1704,
+      "axis": "y",
+      "from": 0,
+      "to": 559
+    }
+  ],
+  "elapsedMs": 4114
+}

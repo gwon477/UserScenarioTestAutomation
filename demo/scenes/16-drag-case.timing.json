@@ -1,0 +1,35 @@
+{
+  "sceneId": "16-drag-case",
+  "cues": [
+    {
+      "text": "케이스를 질의 패널로 끌어 놓으면 참조로 잡힙니다",
+      "startMs": 0,
+      "endMs": 4579,
+      "box": {
+        "x0": 537,
+        "y0": 926,
+        "x1": 1383,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "drag",
+      "atMs": 2160,
+      "mode": "html5"
+    },
+    {
+      "type": "zoomIn",
+      "atMs": 2167,
+      "scale": 1.4,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 4024,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 6601
+}

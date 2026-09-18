@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "fact_screen_count": 9,
+  "fact_element_count": 63,
+  "fact_edge_count": 56,
+  "fact_predicate_count": 87,
+  "workflow_count": 51,
+  "path_count": 56,
+  "transition_linkage": {
+    "total_obligations": 50,
+    "linked_obligations": 50,
+    "by_scope": {
+      "journey": {
+        "total": 32,
+        "linked": 32,
+        "unresolved": 0
+      },
+      "view": {
+        "total": 18,
+        "linked": 18,
+        "unresolved": 0
+      }
+    },
+    "source_supported": {
+      "total": 41,
+      "linked": 41
+    },
+    "runtime_unverified": {
+      "total": 9,
+      "linked": 9
+    }
+  },
+  "unresolved_transition_count": 0,
+  "prior_artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+  "artifact_hash": "sha256:f09dd36affbab9527601f5a58708a1f1ddd7a6fc13d7ce8746e4b3e2f0dbdd2e"
+}

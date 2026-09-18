@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-2ff0b1b4",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-SURVEY",
+  "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-services-flow-scenario-service-1a04f66c",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/services/flow_scenario_service.py",
+      "start_line": 1,
+      "end_line": 157,
+      "content_hash": "sha256:e98363687711d05dea456c3d5cbbe5a8e37ee9b1d32a09fb5753da25e76bec56",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-2ff0b1b4"
+    },
+    {
+      "source_id": "SRC-backend-app-services-flow-test-case-service-a5c45458",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/services/flow_test_case_service.py",
+      "start_line": 1,
+      "end_line": 162,
+      "content_hash": "sha256:97ab98d3de1a32b8907c83efb477ba93189d4998402c62d698ca0ddc4ce4f36e",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-2ff0b1b4"
+    },
+    {
+      "source_id": "SRC-backend-app-services-project-service-ccb3ebd2",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/services/project_service.py",
+      "start_line": 1,
+      "end_line": 42,
+      "content_hash": "sha256:43a791f6ee7eacd5d500e8e0f091c68e8cf0bb33b222958da44f5276c4655f30",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-2ff0b1b4"
+    },
+    {
+      "source_id": "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/services/scenario_generation_service.py",
+      "start_line": 1,
+      "end_line": 211,
+      "content_hash": "sha256:6555d8589fe83f39af19c9a9e195957e007c5dc0a05bf65c6092f28fa7e8bd13",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-2ff0b1b4"
+    },
+    {
+      "source_id": "SRC-backend-app-services-task-service-1d73591d",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/services/task_service.py",
+      "start_line": 1,
+      "end_line": 259,
+      "content_hash": "sha256:b07294748dcf4eb8490d7fa2a20f31253ca26554eb68c3476101134852bbedaf",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-2ff0b1b4"
+    },
+    {
+      "source_id": "SRC-backend-app-services-workflow-service-3f39109c",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "backend/app/services/workflow_service.py",
+      "start_line": 1,
+      "end_line": 143,
+      "content_hash": "sha256:864aba1ad0d9e62d38fcf8fd8167ed92d54cf3db8d950e5b0a2f1570d474af34",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-2ff0b1b4"
+    }
+  ],
+  "created_at": "2026-09-17T23:48:02.929Z"
+}

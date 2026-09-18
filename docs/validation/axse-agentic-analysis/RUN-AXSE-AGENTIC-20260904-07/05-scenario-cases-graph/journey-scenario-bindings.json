@@ -1,0 +1,1155 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "scenarios": [
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-001",
+      "workflow_ref": "WF-component-businesspage-3b512bf9",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0013"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-002",
+      "workflow_ref": "WF-component-businesspage-3b512bf9",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0014"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0015"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0016"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "workflow_ref": "WF-component-businesspage-86c2ff8c",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0017"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-5EE2EF2F-001",
+      "workflow_ref": "WF-component-businesspage-5ee2ef2f",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0018"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+      "workflow_ref": "WF-component-businesspage-2855894a",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0001"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+      "workflow_ref": "WF-component-businesspage-20f25040",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0002"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-067A194D-001",
+      "workflow_ref": "WF-component-businesspage-067a194d",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0003"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6C5BB760-001",
+      "workflow_ref": "WF-component-businesspage-6c5bb760",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0004"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-001",
+      "workflow_ref": "WF-component-businesspage-ce6f1e6c",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0005",
+        "E-0006"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+      "workflow_ref": "WF-component-businesspage-ce6f1e6c",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-D5B999B1-001",
+      "workflow_ref": "WF-component-businesspage-d5b999b1",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0007"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7BEA4B09-001",
+      "workflow_ref": "WF-component-businesspage-7bea4b09",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0008"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-FFB625FB-001",
+      "workflow_ref": "WF-component-businesspage-ffb625fb",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0009"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-527A091F-001",
+      "workflow_ref": "WF-component-businesspage-527a091f",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0010"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-C434992F-001",
+      "workflow_ref": "WF-component-businesspage-c434992f",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0011"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-3D3D7A88-001",
+      "workflow_ref": "WF-component-businesspage-3d3d7a88",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0012"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "workflow_ref": "WF-component-loginformpage-104bdb2f",
+      "path": [
+        "E-0019"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-001",
+      "workflow_ref": "WF-component-loginformpage-d6fe005d",
+      "path": [
+        "E-0020",
+        "E-0021"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+      "workflow_ref": "WF-component-loginformpage-d6fe005d",
+      "path": [
+        "E-0021"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "workflow_ref": "WF-component-loginformpage-aef66388",
+      "path": [
+        "E-0022"
+      ],
+      "feasibility": "source-supported",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "workflow_ref": "WF-component-loginformpage-5199dbef",
+      "path": [
+        "E-0023"
+      ],
+      "feasibility": "source-supported",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+      "workflow_ref": "WF-component-loginpage-e5ed79c1",
+      "path": [
+        "E-0021",
+        "E-0024"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-41525B39-001",
+      "workflow_ref": "WF-component-loginpage-41525b39",
+      "path": [
+        "E-0021",
+        "E-0025"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-41525B39-002",
+      "workflow_ref": "WF-component-loginpage-41525b39",
+      "path": [
+        "E-0021",
+        "E-0026"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "workflow_ref": "WF-component-loginpage-24d62594",
+      "path": [
+        "E-0021",
+        "E-0027"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-5E43F314-001",
+      "workflow_ref": "WF-component-mainpage-5e43f314",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0028"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-3762E523-001",
+      "workflow_ref": "WF-component-mainpage-3762e523",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0029"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-3762E523-002",
+      "workflow_ref": "WF-component-mainpage-3762e523",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0030"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "workflow_ref": "WF-component-mainpage-2b4dbe33",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0031"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6,
+          "phase": "exit"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "workflow_ref": "WF-component-mainpage-4e38e24f",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-002",
+      "workflow_ref": "WF-component-mainpage-4e38e24f",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0033"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "workflow_ref": "WF-component-mainpage-275bc2d0",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0034"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-002",
+      "workflow_ref": "WF-component-mainpage-275bc2d0",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0035"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-77035738-001",
+      "workflow_ref": "WF-component-mainpage-77035738",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0036"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-77035738-002",
+      "workflow_ref": "WF-component-mainpage-77035738",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0037"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "workflow_ref": "WF-component-mainpage-0b02b6d1",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0038"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2D79D452-001",
+      "workflow_ref": "WF-component-mainpage-2d79d452",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0039"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "workflow_ref": "WF-component-parseddbpage-6771c0b3",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0040"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "workflow_ref": "WF-component-parseddbpage-4a38f0de",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0041"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "workflow_ref": "WF-component-parseddbpage-083f5434",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-F72174FF-001",
+      "workflow_ref": "WF-component-scenariopage-f72174ff",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0043"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5,
+          "phase": "business-result"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-F72174FF-002",
+      "workflow_ref": "WF-component-scenariopage-f72174ff",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0044"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5,
+          "phase": "business-result"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-09E713D0-001",
+      "workflow_ref": "WF-component-scenariopage-09e713d0",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0045"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6,
+          "phase": "business-result"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+      "workflow_ref": "WF-component-scenariopage-09e713d0",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0046"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6,
+          "phase": "business-result"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "workflow_ref": "WF-component-scenariopage-8d4b7217",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0047"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001",
+      "workflow_ref": "WF-component-uploadpage-1f1eaeca",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0048"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "failure",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3,
+          "phase": "failure"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4,
+          "phase": "recovery"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+      "workflow_ref": "WF-component-uploadpage-1f1eaeca",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0049"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "failure",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3,
+          "phase": "failure"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4,
+          "phase": "recovery"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-6C730330-001",
+      "workflow_ref": "WF-component-uploadpage-6c730330",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-0B0E9837-001",
+      "workflow_ref": "WF-component-uploadpage-0b0e9837",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0051"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-BC687D2A-001",
+      "workflow_ref": "WF-component-uploadpage-bc687d2a",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0052"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": []
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+      "workflow_ref": "WF-component-uploadpage-833d06aa",
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0053"
+      ],
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "total_scenarios": 53,
+    "journey_bound_scenarios": 22,
+    "unbound_scenario_refs": [
+      "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-001",
+      "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-002",
+      "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+      "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+      "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "SCN-COMPONENT-BUSINESSPAGE-5EE2EF2F-001",
+      "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+      "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+      "SCN-COMPONENT-BUSINESSPAGE-067A194D-001",
+      "SCN-COMPONENT-BUSINESSPAGE-6C5BB760-001",
+      "SCN-COMPONENT-BUSINESSPAGE-D5B999B1-001",
+      "SCN-COMPONENT-BUSINESSPAGE-7BEA4B09-001",
+      "SCN-COMPONENT-BUSINESSPAGE-FFB625FB-001",
+      "SCN-COMPONENT-BUSINESSPAGE-527A091F-001",
+      "SCN-COMPONENT-BUSINESSPAGE-3D3D7A88-001",
+      "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "SCN-COMPONENT-LOGINPAGE-41525B39-001",
+      "SCN-COMPONENT-LOGINPAGE-41525B39-002",
+      "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "SCN-COMPONENT-MAINPAGE-5E43F314-001",
+      "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "SCN-COMPONENT-MAINPAGE-4E38E24F-002",
+      "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "SCN-COMPONENT-MAINPAGE-275BC2D0-002",
+      "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "SCN-COMPONENT-MAINPAGE-2D79D452-001",
+      "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "SCN-COMPONENT-UPLOADPAGE-0B0E9837-001",
+      "SCN-COMPONENT-UPLOADPAGE-BC687D2A-001"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-19350944",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-BUSINESS-CLASSIFICATION",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/scenario_generation_service.py",
+      "start_line": 1,
+      "end_line": 211,
+      "content_hash": "sha256:6555d8589fe83f39af19c9a9e195957e007c5dc0a05bf65c6092f28fa7e8bd13",
+      "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-19350944"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+      "start_line": 1,
+      "end_line": 361,
+      "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+      "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-19350944"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/upload/pages/upload.page.jsx",
+      "start_line": 1,
+      "end_line": 272,
+      "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+      "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-19350944"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-upload-upload-api-f7939e13",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/upload/upload.api.js",
+      "start_line": 1,
+      "end_line": 37,
+      "content_hash": "sha256:21f0825c024eec6bdf3364e0918e6d309017d36f861a2da9c17123052ff79163",
+      "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-19350944"
+    },
+    {
+      "source_id": "SRC-frontend-src-services-auth-client-ca68acc1",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/services/auth-client.js",
+      "start_line": 1,
+      "end_line": 24,
+      "content_hash": "sha256:8b05b019a1372686a75be185cfc4c8e5a7b58bb0cf6b5529d9eef9f48ca607f3",
+      "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-19350944"
+    }
+  ],
+  "created_at": "2026-09-04T06:21:21.422Z"
+}

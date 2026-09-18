@@ -1,0 +1,2013 @@
+{
+  "schema_version": 2,
+  "screen_updates": [
+    {
+      "screen_ref": "S1",
+      "title": "component:BusinessPage"
+    },
+    {
+      "screen_ref": "S2",
+      "title": "component:LoginFormPage"
+    },
+    {
+      "screen_ref": "S3",
+      "title": "component:LoginPage"
+    },
+    {
+      "screen_ref": "S4",
+      "title": "component:MainPage"
+    },
+    {
+      "screen_ref": "S5",
+      "title": "component:ParsedDbPage"
+    },
+    {
+      "screen_ref": "S6",
+      "title": "component:ScenarioPage"
+    },
+    {
+      "screen_ref": "S7",
+      "title": "component:SettingsPage"
+    },
+    {
+      "screen_ref": "S8",
+      "title": "component:UploadPage"
+    },
+    {
+      "screen_ref": "S9",
+      "title": "main"
+    }
+  ],
+  "element_updates": [
+    {
+      "element_ref": "U1",
+      "action_kind": "filter"
+    },
+    {
+      "element_ref": "U10",
+      "action_kind": "switch_view"
+    },
+    {
+      "element_ref": "U11",
+      "action_kind": "select_all_toggle"
+    },
+    {
+      "element_ref": "U12",
+      "action_kind": "select_all_toggle"
+    },
+    {
+      "element_ref": "U13",
+      "action_kind": "close_modal"
+    },
+    {
+      "element_ref": "U14",
+      "action_kind": "generate_scenarios"
+    },
+    {
+      "element_ref": "U15",
+      "action_kind": "expand_toggle"
+    },
+    {
+      "element_ref": "U16",
+      "action_kind": "selection_toggle"
+    },
+    {
+      "element_ref": "U17",
+      "action_kind": "selection_toggle"
+    },
+    {
+      "element_ref": "U18",
+      "action_kind": "selection_toggle"
+    },
+    {
+      "element_ref": "U19",
+      "action_kind": "submit_login"
+    },
+    {
+      "element_ref": "U2",
+      "action_kind": "download"
+    },
+    {
+      "element_ref": "U20",
+      "action_kind": "text_entry"
+    },
+    {
+      "element_ref": "U21",
+      "action_kind": "password_entry"
+    },
+    {
+      "element_ref": "U22",
+      "action_kind": "select_project"
+    },
+    {
+      "element_ref": "U23",
+      "action_kind": "refresh"
+    },
+    {
+      "element_ref": "U24",
+      "action_kind": "logout"
+    },
+    {
+      "element_ref": "U25",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U26",
+      "action_kind": "select_task"
+    },
+    {
+      "element_ref": "U27",
+      "action_kind": "logout"
+    },
+    {
+      "element_ref": "U28",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U29",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U3",
+      "action_kind": "generate_preset"
+    },
+    {
+      "element_ref": "U31",
+      "action_kind": "create_task"
+    },
+    {
+      "element_ref": "U32",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U33",
+      "action_kind": "toggle_menu"
+    },
+    {
+      "element_ref": "U34",
+      "action_kind": "search"
+    },
+    {
+      "element_ref": "U35",
+      "action_kind": "paginate"
+    },
+    {
+      "element_ref": "U36",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U37",
+      "action_kind": "search"
+    },
+    {
+      "element_ref": "U38",
+      "action_kind": "paginate"
+    },
+    {
+      "element_ref": "U39",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U4",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U40",
+      "action_kind": "text_entry"
+    },
+    {
+      "element_ref": "U41",
+      "action_kind": "filter"
+    },
+    {
+      "element_ref": "U42",
+      "action_kind": "download"
+    },
+    {
+      "element_ref": "U43",
+      "action_kind": "download"
+    },
+    {
+      "element_ref": "U45",
+      "action_kind": "expand_toggle"
+    },
+    {
+      "element_ref": "U46",
+      "action_kind": "expand_toggle"
+    },
+    {
+      "element_ref": "U47",
+      "action_kind": "expand_toggle"
+    },
+    {
+      "element_ref": "U48",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U49",
+      "action_kind": "expand_toggle"
+    },
+    {
+      "element_ref": "U5",
+      "action_kind": "open_diagnostic_output"
+    },
+    {
+      "element_ref": "U50",
+      "action_kind": "search"
+    },
+    {
+      "element_ref": "U51",
+      "action_kind": "select"
+    },
+    {
+      "element_ref": "U52",
+      "action_kind": "save"
+    },
+    {
+      "element_ref": "U53",
+      "action_kind": "reset"
+    },
+    {
+      "element_ref": "U54",
+      "action_kind": "toggle"
+    },
+    {
+      "element_ref": "U55",
+      "action_kind": "select"
+    },
+    {
+      "element_ref": "U56",
+      "action_kind": "upload_and_parse"
+    },
+    {
+      "element_ref": "U57",
+      "action_kind": "navigate"
+    },
+    {
+      "element_ref": "U58",
+      "action_kind": "reset_upload"
+    },
+    {
+      "element_ref": "U59",
+      "action_kind": "upload_progress"
+    },
+    {
+      "element_ref": "U6",
+      "action_kind": "close_modal"
+    },
+    {
+      "element_ref": "U60",
+      "action_kind": "cancel_upload"
+    },
+    {
+      "element_ref": "U61",
+      "action_kind": "file_entry"
+    },
+    {
+      "element_ref": "U62",
+      "action_kind": "paginate"
+    },
+    {
+      "element_ref": "U63",
+      "action_kind": "paginate"
+    },
+    {
+      "element_ref": "U7",
+      "action_kind": "switch_view"
+    },
+    {
+      "element_ref": "U8",
+      "action_kind": "close_modal"
+    },
+    {
+      "element_ref": "U9",
+      "action_kind": "close_modal"
+    }
+  ],
+  "api_updates": [
+    {
+      "api_ref": "A1",
+      "reads": [],
+      "writes": [
+        "POST /api/auth/login"
+      ]
+    },
+    {
+      "api_ref": "A2",
+      "reads": [
+        "GET /api/projects"
+      ],
+      "writes": []
+    }
+  ],
+  "predicates": [
+    {
+      "key": "category.page.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U10"
+      ]
+    },
+    {
+      "key": "category.panel",
+      "values": [
+        "category"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U10"
+      ]
+    },
+    {
+      "key": "category.view.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U10"
+      ]
+    },
+    {
+      "key": "context.page.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U7"
+      ]
+    },
+    {
+      "key": "context.panel",
+      "values": [
+        "context"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U7"
+      ]
+    },
+    {
+      "key": "context.view.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U7"
+      ]
+    },
+    {
+      "key": "context.view.state",
+      "values": [
+        "context"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U7"
+      ]
+    },
+    {
+      "key": "csv.download.completed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "csv.download.failure",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "csv.download.output",
+      "values": [
+        "downloaded"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "csv.download.success",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "csv.downloaded",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "csv.exporting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "cube.page.state",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U7"
+      ]
+    },
+    {
+      "key": "db.cache.state",
+      "values": [
+        "updated"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U35",
+        "U37",
+        "U38"
+      ]
+    },
+    {
+      "key": "db.draft_query.state",
+      "values": [
+        "updated"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U40"
+      ]
+    },
+    {
+      "key": "db.page_valid",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U35",
+        "U38"
+      ]
+    },
+    {
+      "key": "db.page.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U35",
+        "U38"
+      ]
+    },
+    {
+      "key": "db.page.state",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U35",
+        "U38",
+        "U37"
+      ]
+    },
+    {
+      "key": "db.page.view.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U35",
+        "U38"
+      ]
+    },
+    {
+      "key": "db.query.applied",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    },
+    {
+      "key": "db.search.applied",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    },
+    {
+      "key": "db.search.applied.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    },
+    {
+      "key": "db.search.applied.state",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    },
+    {
+      "key": "db.search.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37",
+        "U40"
+      ]
+    },
+    {
+      "key": "db.search.draft",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U40"
+      ]
+    },
+    {
+      "key": "db.search.draft.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U40"
+      ]
+    },
+    {
+      "key": "db.search.draft.state",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U40"
+      ]
+    },
+    {
+      "key": "db.search.draft.updated",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U40"
+      ]
+    },
+    {
+      "key": "db.search.results.refreshed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    },
+    {
+      "key": "db.total_pages_available",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U38"
+      ]
+    },
+    {
+      "key": "flow.text.closed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U9",
+        "U13"
+      ]
+    },
+    {
+      "key": "flow.text.modal.closed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U9",
+        "U13"
+      ]
+    },
+    {
+      "key": "flow.text.open",
+      "values": [
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U9",
+        "U13"
+      ]
+    },
+    {
+      "key": "flows.checked.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U11",
+        "U12",
+        "U16",
+        "U17",
+        "U18"
+      ]
+    },
+    {
+      "key": "flows.selected",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U11",
+        "U12",
+        "U16",
+        "U17",
+        "U18",
+        "U14"
+      ]
+    },
+    {
+      "key": "flows.selection",
+      "values": [
+        "selected"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U11",
+        "U12",
+        "U16",
+        "U17",
+        "U18"
+      ]
+    },
+    {
+      "key": "flows.selection.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U11",
+        "U12",
+        "U16",
+        "U17",
+        "U18"
+      ]
+    },
+    {
+      "key": "flows.selection.state",
+      "values": [
+        "selected",
+        "cleared",
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U11",
+        "U12",
+        "U16",
+        "U17",
+        "U18"
+      ]
+    },
+    {
+      "key": "generation.completed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "generation.failure",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14",
+        "U3",
+        "U2"
+      ]
+    },
+    {
+      "key": "generation.requesting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "issue.filter.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U1"
+      ]
+    },
+    {
+      "key": "login.completed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "login.failure",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "login.loading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "login.password_present",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19",
+        "U21"
+      ]
+    },
+    {
+      "key": "login.user_id_present",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19",
+        "U20"
+      ]
+    },
+    {
+      "key": "modal.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U5",
+        "U6",
+        "U7",
+        "U8",
+        "U9",
+        "U10",
+        "U15",
+        "U33"
+      ]
+    },
+    {
+      "key": "preset.generation.state",
+      "values": [
+        "reset"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.message.state",
+      "values": [
+        "cleared"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.modal.closed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.modal.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.progress.state",
+      "values": [
+        "reset"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.request.state",
+      "values": [
+        "idle"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.requesting_id",
+      "values": [
+        "empty",
+        "set"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.view.changed",
+      "values": [
+        "closed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.view.closed",
+      "values": [
+        "true",
+        "closed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.view.state",
+      "values": [
+        "closed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "project.selected",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U22"
+      ]
+    },
+    {
+      "key": "projects.available",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U23",
+        "U22"
+      ]
+    },
+    {
+      "key": "projects.failure",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U23"
+      ]
+    },
+    {
+      "key": "projects.loading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U23"
+      ]
+    },
+    {
+      "key": "scenario.csv.download.completed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario.csv.download.failure",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario.csv.download.output",
+      "values": [
+        "downloaded"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario.csv.download.success",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario.csv.downloaded",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario.downloading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42",
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario.excel.download.completed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario.excel.download.failure",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario.excel.download.output",
+      "values": [
+        "downloaded"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario.excel.download.success",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario.excel.downloaded",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario.matrix_loading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U41",
+        "U50",
+        "U62",
+        "U63"
+      ]
+    },
+    {
+      "key": "scenario.sections.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U45",
+        "U46",
+        "U47",
+        "U49"
+      ]
+    },
+    {
+      "key": "scenario.sections.expanded",
+      "values": [
+        "expanded"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U45",
+        "U46",
+        "U47",
+        "U49"
+      ]
+    },
+    {
+      "key": "session.logged_out",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U24"
+      ]
+    },
+    {
+      "key": "settings.strategy.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U51"
+      ]
+    },
+    {
+      "key": "task.menu.changed",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U33"
+      ]
+    },
+    {
+      "key": "task.menu.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U33"
+      ]
+    },
+    {
+      "key": "task.menu.state",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U33"
+      ]
+    },
+    {
+      "key": "upload.complete",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U56",
+        "U57"
+      ]
+    },
+    {
+      "key": "upload.failure",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U56"
+      ]
+    },
+    {
+      "key": "upload.file_present",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U56",
+        "U61"
+      ]
+    },
+    {
+      "key": "upload.file.selected",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U61"
+      ]
+    },
+    {
+      "key": "upload.submitting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U57"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U1",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "issue.filter.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U10",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "category.page.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U11",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "flows.checked.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U12",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "flows.checked.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U13",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "flow.text.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U14",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "flows.selected",
+            "value": "true"
+          },
+          {
+            "predicate_key": "generation.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "predicate_key": "generation.failure",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U14",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "flows.selected",
+            "value": "true"
+          },
+          {
+            "predicate_key": "generation.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "predicate_key": "generation.completed",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U15",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U16",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "flows.checked.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U17",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "flows.checked.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U18",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "flows.checked.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U2",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "csv.download.failure",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U2",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "csv.download.output",
+        "value": "downloaded"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U4",
+      "to_screen_ref": "S5",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U6",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "preset.modal.open",
+            "value": "false"
+          },
+          {
+            "predicate_key": "preset.requesting_id",
+            "value": "empty"
+          }
+        ]
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U7",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "cube.page.state",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U8",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "preset.modal.open",
+            "value": "false"
+          },
+          {
+            "predicate_key": "preset.requesting_id",
+            "value": "empty"
+          }
+        ]
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U9",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "flow.text.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U19",
+      "to_screen_ref": "S2",
+      "effect": {
+        "predicate_key": "login.failure",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U19",
+      "to_screen_ref": "S3",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "login.user_id_present",
+            "value": "present"
+          },
+          {
+            "predicate_key": "login.password_present",
+            "value": "present"
+          },
+          {
+            "predicate_key": "login.loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "predicate_key": "login.completed",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U20",
+      "to_screen_ref": "S2",
+      "effect": {
+        "predicate_key": "login.user_id_present",
+        "value": "present"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U21",
+      "to_screen_ref": "S2",
+      "effect": {
+        "predicate_key": "login.password_present",
+        "value": "present"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U22",
+      "to_screen_ref": "S4",
+      "guard": {
+        "predicate_key": "projects.available",
+        "value": "true"
+      },
+      "effect": {
+        "predicate_key": "projects.available",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U23",
+      "to_screen_ref": "S3",
+      "effect": {
+        "predicate_key": "projects.failure",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U23",
+      "to_screen_ref": "S3",
+      "effect": {
+        "predicate_key": "projects.loading",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U24",
+      "to_screen_ref": "S2",
+      "effect": {
+        "predicate_key": "projects.available",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U27",
+      "to_screen_ref": "S3",
+      "effect": {
+        "predicate_key": "projects.available",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U28",
+      "to_screen_ref": "S8",
+      "effect": {
+        "predicate_key": "upload.file_present",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U29",
+      "to_screen_ref": "S8",
+      "effect": {
+        "predicate_key": "upload.file_present",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U32",
+      "to_screen_ref": "S7",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U33",
+      "to_screen_ref": "S4",
+      "effect": {
+        "predicate_key": "task.menu.open",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U34",
+      "to_screen_ref": "S5",
+      "effect": {
+        "predicate_key": "db.page_valid",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U35",
+      "to_screen_ref": "S5",
+      "guard": {
+        "predicate_key": "db.page_valid",
+        "value": "true"
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "db.page.view.changed",
+            "value": "changed"
+          },
+          {
+            "predicate_key": "db.cache.state",
+            "value": "updated"
+          }
+        ]
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U36",
+      "to_screen_ref": "S8",
+      "effect": {
+        "predicate_key": "db.page_valid",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U37",
+      "to_screen_ref": "S5",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "db.query.applied",
+            "value": "changed"
+          },
+          {
+            "predicate_key": "db.page.state",
+            "value": "changed"
+          }
+        ]
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U38",
+      "to_screen_ref": "S5",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "db.page_valid",
+            "value": "true"
+          },
+          {
+            "predicate_key": "db.total_pages_available",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "db.page.view.changed",
+            "value": "changed"
+          },
+          {
+            "predicate_key": "db.cache.state",
+            "value": "updated"
+          }
+        ]
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U39",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "db.page_valid",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U40",
+      "to_screen_ref": "S5",
+      "effect": {
+        "predicate_key": "db.draft_query.state",
+        "value": "updated"
+      }
+    },
+    {
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U42",
+      "to_screen_ref": "S6",
+      "guard": {
+        "predicate_key": "scenario.downloading",
+        "value": "false"
+      },
+      "effect": {
+        "predicate_key": "scenario.csv.download.failure",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U42",
+      "to_screen_ref": "S6",
+      "guard": {
+        "predicate_key": "scenario.downloading",
+        "value": "false"
+      },
+      "effect": {
+        "predicate_key": "scenario.csv.download.output",
+        "value": "downloaded"
+      }
+    },
+    {
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U43",
+      "to_screen_ref": "S6",
+      "guard": {
+        "predicate_key": "scenario.downloading",
+        "value": "false"
+      },
+      "effect": {
+        "predicate_key": "scenario.excel.download.failure",
+        "value": "true"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U43",
+      "to_screen_ref": "S6",
+      "guard": {
+        "predicate_key": "scenario.downloading",
+        "value": "false"
+      },
+      "effect": {
+        "predicate_key": "scenario.excel.download.output",
+        "value": "downloaded"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U45",
+      "to_screen_ref": "S6",
+      "effect": {
+        "predicate_key": "scenario.sections.expanded",
+        "value": "expanded"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U46",
+      "to_screen_ref": "S6",
+      "effect": {
+        "predicate_key": "scenario.sections.expanded",
+        "value": "expanded"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U47",
+      "to_screen_ref": "S6",
+      "effect": {
+        "predicate_key": "scenario.sections.expanded",
+        "value": "expanded"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U48",
+      "to_screen_ref": "S1",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U49",
+      "to_screen_ref": "S6",
+      "effect": {
+        "predicate_key": "scenario.sections.expanded",
+        "value": "expanded"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S7",
+      "on_element_ref": "U51",
+      "to_screen_ref": "S7",
+      "effect": {
+        "predicate_key": "settings.strategy.changed",
+        "value": "changed"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S7",
+      "on_element_ref": "U52",
+      "to_screen_ref": "S7",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S7",
+      "on_element_ref": "U53",
+      "to_screen_ref": "S7",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S7",
+      "on_element_ref": "U54",
+      "to_screen_ref": "S7",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S7",
+      "on_element_ref": "U55",
+      "to_screen_ref": "S7",
+      "effect": {
+        "predicate_key": "modal.open",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U57",
+      "to_screen_ref": "S5",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "upload.complete",
+            "value": "true"
+          },
+          {
+            "predicate_key": "upload.submitting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "predicate_key": "upload.submitting",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U58",
+      "to_screen_ref": "S8",
+      "effect": {
+        "predicate_key": "upload.file_present",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U60",
+      "to_screen_ref": "S8",
+      "effect": {
+        "predicate_key": "upload.file_present",
+        "value": "false"
+      }
+    },
+    {
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U61",
+      "to_screen_ref": "S5",
+      "effect": {
+        "predicate_key": "upload.file_present",
+        "value": "true"
+      }
+    }
+  ]
+}

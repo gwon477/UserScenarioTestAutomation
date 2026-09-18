@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:c9ab6672a00e4844280731362e0f99d8bc53e7c8a9fa2e7b0cae94ef5a637bc5",
+  "element_update_upserts": [],
+  "predicate_upserts": [
+    {
+      "key": "parsed_db.page",
+      "values": [
+        "changed"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U34"
+      ]
+    }
+  ],
+  "edge_changes": [
+    {
+      "operation": "replace",
+      "edge_index": 14,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S4",
+        "on_element_ref": "U28",
+        "to_screen_ref": "S8"
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 15,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S4",
+        "on_element_ref": "U29",
+        "to_screen_ref": "S8"
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 18,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S4",
+        "on_element_ref": "U32",
+        "to_screen_ref": "S7"
+      }
+    }
+  ]
+}

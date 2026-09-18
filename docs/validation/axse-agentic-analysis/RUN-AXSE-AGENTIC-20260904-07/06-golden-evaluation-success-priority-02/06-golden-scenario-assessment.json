@@ -1,0 +1,703 @@
+{
+  "schema_version": 1,
+  "scenario_matches": [
+    {
+      "golden_ref": "AXSE-SCN-0001",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "score": 0.2,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "resilience_score": 0.2,
+      "rationale": "Login submission is represented as an exception, but the candidate assumes available credentials and does not cover blank-field validation or staying on the login form."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0002",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002"
+      ],
+      "score": 0.7,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002"
+      ],
+      "success_score": 0.7,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers credential submission and normal login outcome, but does not preserve disabled-loading behavior or token-claim fallback semantics."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0003",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-001",
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "score": 0.55,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-001",
+        "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001"
+      ],
+      "resilience_score": 0.55,
+      "rationale": "Exception login attempts are present, but HTTP detail/default errors, network rejection, loading reset, and remaining on the form are not materially observed."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0004",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001"
+      ],
+      "score": 0.65,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001"
+      ],
+      "success_score": 0.65,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers entering the project page and selecting a project, but not response-field variations, card metadata, automatic retrieval, or header context propagation."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0005",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers an empty project response, empty-state message, or blocking project entry."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0006",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-41525B39-001",
+        "SCN-COMPONENT-LOGINPAGE-41525B39-002"
+      ],
+      "score": 0.85,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-41525B39-002"
+      ],
+      "success_score": 0.8,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-41525B39-001"
+      ],
+      "resilience_score": 0.8,
+      "rationale": "The paired candidates cover failed and successful project refresh under idle retrieval, including the retry action; detailed disabled/error-message behavior is generic."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0007",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-24D62594-001"
+      ],
+      "score": 0.8,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINPAGE-24D62594-001"
+      ],
+      "success_score": 0.8,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers logout from the project-selection route and return to the login form, though auth-storage clearing is not explicit."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0008",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-5E43F314-001"
+      ],
+      "score": 0.45,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-5E43F314-001"
+      ],
+      "success_score": 0.45,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Reaches the main page and task-stage action, but does not establish two tasks, first-task bootstrap, task-menu switching, or selected-task data replacement."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0009",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-77035738-002"
+      ],
+      "score": 0.8,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-77035738-002"
+      ],
+      "success_score": 0.8,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers creating a new task from the selected project with normal outcome, but does not explicitly show the no-task empty state or UPLOAD bootstrap."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0010",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-3762E523-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-001"
+      ],
+      "score": 0.7,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-3762E523-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-001"
+      ],
+      "resilience_score": 0.7,
+      "rationale": "Covers exception branches for task selection and creation, but not list/bootstrap failure distinctions or the required error-card and no-navigation result."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0011",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+        "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001"
+      ],
+      "score": 0.65,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+        "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001"
+      ],
+      "success_score": 0.65,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001"
+      ],
+      "resilience_score": 0.35,
+      "rationale": "Covers stage navigation, settings, logout, and prior-stage movement, but does not cover future-stage disabled guards or refresh semantics."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0012",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "score": 0.9,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "success_score": 0.9,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Directly covers main-shell logout and return to the login form; reset of every store field is not explicit."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0013",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-6C730330-001"
+      ],
+      "score": 0.75,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-6C730330-001"
+      ],
+      "success_score": 0.75,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Combined candidates cover file selection, upload/parsing, completion, and transition to PARSED_DB, but not picker variants, polling detail, or explicit 100-percent evidence."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0014",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002"
+      ],
+      "score": 0.7,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002"
+      ],
+      "success_score": 0.7,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers new-task creation followed by upload/parsing, but does not preserve the no-task entry condition or same-file task bootstrap handoff."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0015",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-BC687D2A-001",
+        "SCN-COMPONENT-UPLOADPAGE-0B0E9837-001"
+      ],
+      "score": 0.9,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-BC687D2A-001",
+        "SCN-COMPONENT-UPLOADPAGE-0B0E9837-001"
+      ],
+      "success_score": 0.9,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Directly covers clearing a selected upload and resetting a completed upload for re-upload, with the relevant unlocked preconditions."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0016",
+      "candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001"
+      ],
+      "score": 0.7,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001"
+      ],
+      "resilience_score": 0.7,
+      "rationale": "Covers an upload/parsing failure under selected, incomplete, unlocked conditions, but does not distinguish encoding, API, background FAILED, and polling-error outcomes or their exact recovery state."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0017",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate establishes a generation-ready or scenario-ready locked upload and verifies that re-upload controls are unavailable."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0018",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001"
+      ],
+      "score": 0.6,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001"
+      ],
+      "success_score": 0.6,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers changing the parsed-database view, but not all four tabs, search, pagination, overview diagnostics, or corresponding columns."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0019",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers empty parsed lists, partial overview information, or diagnostics failure while retaining list usability."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0020",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers parsed-list initial, search, or page request errors and stale-response protection."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0021",
+      "candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001"
+      ],
+      "score": 0.9,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001"
+      ],
+      "success_score": 0.9,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Directly covers back to upload, entry to business mapping, and business back to parsed database."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0022",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+        "SCN-COMPONENT-BUSINESSPAGE-067A194D-001",
+        "SCN-COMPONENT-BUSINESSPAGE-6C5BB760-001",
+        "SCN-COMPONENT-BUSINESSPAGE-D5B999B1-001",
+        "SCN-COMPONENT-BUSINESSPAGE-7BEA4B09-001",
+        "SCN-COMPONENT-BUSINESSPAGE-FFB625FB-001",
+        "SCN-COMPONENT-BUSINESSPAGE-527A091F-001",
+        "SCN-COMPONENT-BUSINESSPAGE-C434992F-001",
+        "SCN-COMPONENT-BUSINESSPAGE-3D3D7A88-001"
+      ],
+      "score": 0.85,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+        "SCN-COMPONENT-BUSINESSPAGE-067A194D-001",
+        "SCN-COMPONENT-BUSINESSPAGE-6C5BB760-001",
+        "SCN-COMPONENT-BUSINESSPAGE-D5B999B1-001",
+        "SCN-COMPONENT-BUSINESSPAGE-7BEA4B09-001",
+        "SCN-COMPONENT-BUSINESSPAGE-FFB625FB-001",
+        "SCN-COMPONENT-BUSINESSPAGE-527A091F-001",
+        "SCN-COMPONENT-BUSINESSPAGE-C434992F-001",
+        "SCN-COMPONENT-BUSINESSPAGE-3D3D7A88-001"
+      ],
+      "success_score": 0.85,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The combined business-page candidates cover context/category selection, select-all/clear, individual reversal, and category-flow recovery actions; diagnostics/filter evidence is only generic."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0023",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": 0.05,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers empty flows/categories, disabled generation due to missing identifiers, or diagnostics rejection."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0024",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-5EE2EF2F-001"
+      ],
+      "score": 0.6,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-5EE2EF2F-001"
+      ],
+      "success_score": 0.6,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers opening business-flow text output, but not main/return variants, loading, or modal close/backdrop behavior."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0025",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers null or rejected flow text and the missing-data modal result."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0026",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002"
+      ],
+      "score": 0.65,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002"
+      ],
+      "success_score": 0.65,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers a normal preset scenario/test-case generation request, but not progress polling, completion rows, or modal close."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0027",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": 0.05,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate establishes an already-active same-flow preset run and continuation without a new request."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0028",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers cross-flow conflict, failed progress/API, fail count, or safe early modal close."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0029",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-20F25040-001"
+      ],
+      "score": 0.8,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-20F25040-001"
+      ],
+      "success_score": 0.8,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-001"
+      ],
+      "resilience_score": 0.45,
+      "rationale": "Covers selected-flow generation and selection state changes; the exception candidate supplies a generation exception and retry, but no-selection disabled behavior is not explicit."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0030",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002"
+      ],
+      "score": 0.25,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002"
+      ],
+      "success_score": 0.25,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "A normal generation request is present, but the candidate precondition says generation is not already requesting and does not cover active-run reuse or no-new-POST semantics."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0031",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-001"
+      ],
+      "score": 0.65,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-001"
+      ],
+      "resilience_score": 0.65,
+      "rationale": "Covers a generation exception and recovery retry, but not progress lookup, unknown-flow 422, server detail propagation, or remaining on BUSINESS."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0032",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-002",
+        "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-001"
+      ],
+      "score": 0.8,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-002"
+      ],
+      "success_score": 0.8,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-001"
+      ],
+      "resilience_score": 0.75,
+      "rationale": "Directly covers mapping-validation CSV request in normal and exception branches with the correct idle generation precondition; file content and button restoration are generic."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0033",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "score": 0.5,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "success_score": 0.5,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers generation-to-scenario navigation and return, but does not preserve timer/manual progress refresh, run counts, active-to-inactive completion, or result confirmation."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0034",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers failed or partially failed generation evidence, judgement history, or recovery actions."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0035",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": 0.05,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "No candidate covers result-type filtering, case-insensitive search, expansion, or empty-detail fallbacks."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0036",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": 0.05,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers result pagination or page-request failure with stale rows retained."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0037",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": 0.05,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "The business mapping CSV candidates are a materially different export and do not cover scenario-result CSV success or failure."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0038",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-001"
+      ],
+      "score": 0.85,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002"
+      ],
+      "success_score": 0.85,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-001"
+      ],
+      "resilience_score": 0.75,
+      "rationale": "Directly covers scenario-matrix Excel download in normal and exception branches, including recovery classification; workbook sheet/content assertions are not explicit."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0039",
+      "candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "score": 0.9,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001"
+      ],
+      "success_score": 0.9,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Directly covers navigation from the scenario page back to BUSINESS."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0040",
+      "candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+        "SCN-COMPONENT-MAINPAGE-275BC2D0-002"
+      ],
+      "score": 0.8,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+        "SCN-COMPONENT-MAINPAGE-275BC2D0-002"
+      ],
+      "success_score": 0.8,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers both home-navigation variants from the main shell to upload, though preservation of project/task identity is not explicit."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0041",
+      "candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001"
+      ],
+      "score": 0.4,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001"
+      ],
+      "success_score": 0.4,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "Covers BUSINESS previous-stage navigation only; neither context/category pagination nor both five-item lists are represented."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0042",
+      "candidate_refs": [],
+      "score": 0.05,
+      "success_candidate_refs": [],
+      "success_score": null,
+      "resilience_candidate_refs": [],
+      "resilience_score": 0.05,
+      "rationale": "No candidate covers SCENARIO initial or refresh loader rejection, stale response retention, or the observed unhandled rejection behavior."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0043",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-6C730330-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "score": 0.7,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-6C730330-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "success_score": 0.7,
+      "resilience_candidate_refs": [],
+      "resilience_score": null,
+      "rationale": "The combined route candidates span login, project, task, upload, parsed DB, BUSINESS, generation, Excel, and logout, but split graph paths do not prove one continuous handoff and expected results are largely runtime-unverified."
+    },
+    {
+      "golden_ref": "AXSE-SCN-0044",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-UPLOADPAGE-6C730330-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "score": 0.7,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-UPLOADPAGE-6C730330-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "success_score": 0.7,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001"
+      ],
+      "resilience_score": 0.75,
+      "rationale": "Combined candidates cover the invalid-upload exception, later normal upload path, downstream generation, Excel, and logout, but do not prove same-task replacement or continuous recovery handoff; runtime outcomes remain unverified."
+    }
+  ],
+  "critical_success_gaps": [
+    "AXSE-SCN-0001: blank required-field validation is not covered.",
+    "AXSE-SCN-0005: empty project-list behavior is not covered.",
+    "AXSE-SCN-0017: post-generation upload lock is not covered.",
+    "AXSE-SCN-0019: parsed-data empty and partial-information behavior is not covered.",
+    "AXSE-SCN-0020: parsed-list request errors are not covered.",
+    "AXSE-SCN-0023: empty flow/category and diagnostics-failure behavior is not covered.",
+    "AXSE-SCN-0025: missing flow-text behavior is not covered.",
+    "AXSE-SCN-0027: active same-flow preset continuation is not covered.",
+    "AXSE-SCN-0028: preset conflict/failure and safe close behavior is not covered.",
+    "AXSE-SCN-0034: generation failure and partial-completion evidence is not covered.",
+    "AXSE-SCN-0035: result filtering/search/detail behavior is not covered.",
+    "AXSE-SCN-0036: result pagination behavior is not covered.",
+    "AXSE-SCN-0037: result CSV download behavior is not covered.",
+    "AXSE-SCN-0041: BUSINESS list pagination is not covered.",
+    "AXSE-SCN-0042: SCENARIO loader/refresh failure behavior is not covered."
+  ],
+  "advisory_resilience_gaps": [
+    "AXSE-SCN-0003: detailed HTTP/network error variants and loading reset are generic.",
+    "AXSE-SCN-0010: task API failure sub-branches are not distinguished.",
+    "AXSE-SCN-0016: upload failure phase variants and polling recovery are not distinguished.",
+    "AXSE-SCN-0029: no-selection disabled guard is not explicit.",
+    "AXSE-SCN-0031: generation error detail and BUSINESS retention are not explicit.",
+    "AXSE-SCN-0032: export content/error restoration details are generic.",
+    "AXSE-SCN-0038: workbook structure and failure restoration are not explicit.",
+    "AXSE-SCN-0043: split candidates do not prove one continuous E2E handoff.",
+    "AXSE-SCN-0044: same-task retry handoff and final recovery state are not explicit."
+  ]
+}

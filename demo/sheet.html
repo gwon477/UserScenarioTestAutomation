@@ -1,0 +1,180 @@
+<!doctype html><html lang='ko'><head><meta charset='utf-8'><title>scenarioforge-demo sheet</title>
+<style>
+body{font-family:-apple-system,'Apple SD Gothic Neo','Pretendard',sans-serif;background:#f1f5f9;color:#0f172a;margin:0;padding:24px}
+h1{font-size:22px;margin:0 0 4px} .meta{color:#64748b;margin:0 0 20px;font-size:14px}
+.scene{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px;margin-bottom:20px}
+.scene h2{font-size:16px;margin:0 0 4px} .scene .url{color:#64748b;font-size:13px;margin:0 0 10px}
+.badges{margin:0 0 12px} .badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;margin:0 6px 6px 0;border:1px solid transparent}
+.badge.show{background:#dcfce7;color:#166534;border-color:#86efac} .badge.skip{background:#f1f5f9;color:#475569}
+.badge.blocked{background:#fee2e2;color:#991b1b;border-color:#fca5a5} .badge small{opacity:.8}
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:14px}
+.step{border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;background:#fff}
+.frame{position:relative;width:100%;aspect-ratio:1920/1080;background:#0b1220;overflow:hidden;container-type:inline-size}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame .noshot{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:13px}
+.frame .sub{position:absolute;left:50%;bottom:7.0%;transform:translateX(-50%);max-width:86%;white-space:nowrap;
+  padding:.35em .7em;background:rgba(12,14,18,.62);color:#fff;border-radius:.4em;font-weight:600;font-size:2.08cqw}
+.frame .box{position:absolute;border:2px solid #0ea5e9;border-radius:4px;box-sizing:border-box}
+.frame .box.zoom{border-color:#f59e0b;border-style:dashed}
+.frame .box span{position:absolute;left:0;top:-1.4em;font-size:10px;background:#0ea5e9;color:#fff;padding:1px 4px;border-radius:3px;white-space:nowrap}
+.frame .box.zoom span{background:#f59e0b}
+.frame .safe{position:absolute;inset:6%;border:1px dashed rgba(255,255,255,.35);pointer-events:none}
+.info{padding:10px 12px;font-size:13px} .info .t{font-weight:600;margin-bottom:6px}
+.info ul{margin:0;padding-left:18px;color:#334155} .info .hold{color:#64748b;font-size:12px;margin-top:6px}
+.hook{color:#0369a1;font-size:11px;font-weight:700;margin-left:6px}
+.totals{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:12px 16px;font-size:14px}
+</style></head><body>
+<h1>scenarioforge-demo · 콘티 시트</h1>
+<p class='meta'>1920×1080 · 인트로: 소스 하나로 시나리오부터 증적까지 (2500) · 아웃트로: ScenarioForge · CTA: 소스 디렉터리를 연결해 시작하세요</p>
+<section class='scene'><h2>00a-intro-goal</h2><p class='url'>/?preview=demo#/projects · 전환 fade 400ms · 체류 8850ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/00a-intro-goal.png' alt=''><div class='safe'></div><div class='sub'>분석 담당자가 <b style='color:#7dd3fc'>소스 디렉터리 하나로</b> 하루 일을 끝내는 흐름입니다</div></div><div class='info'><div class='t'>1. 분석 담당자가 소스 디렉터리 하나로 하루 일을 끝내는 흐름입니다<span class=hook>HOOK</span></div><ul><li>chapter  title=이 영상에서 할 일 description=등록 → 분석 → 시나리오 → 질의 → 수행 → 증적 durationMs=2200</li></ul><div class='hold'>hold 4475ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/00a-intro-goal.png' alt=''><div class='safe'></div><div class='sub'>먼저 새 프로젝트를 등록하고 분석을 <b style='color:#7dd3fc'>걸어 둡니다</b></div></div><div class='info'><div class='t'>2. 먼저 새 프로젝트를 등록하고 분석을 걸어 둡니다</div><ul></ul><div class='hold'>hold 3475ms</div></div></div>
+</div></section>
+<section class='scene'><h2>00b-intro-scenarios</h2><p class='url'>/?preview=demo#/projects · 전환 cut 400ms · 체류 8188ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/00b-intro-scenarios.png' alt=''><div class='safe'></div><div class='sub'>분석이 끝난 프로젝트에서 <b style='color:#7dd3fc'>업무 분류별</b> 시나리오를 읽습니다</div></div><div class='info'><div class='t'>1. 분석이 끝난 프로젝트에서 업무 분류별 시나리오를 읽습니다</div><ul></ul><div class='hold'>hold 4100ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/00b-intro-scenarios.png' alt=''><div class='safe'></div><div class='sub'>케이스를 질의 패널에 <b style='color:#7dd3fc'>끌어 놓고</b> 궁금한 것을 묻습니다</div></div><div class='info'><div class='t'>2. 케이스를 질의 패널에 끌어 놓고 궁금한 것을 묻습니다</div><ul></ul><div class='hold'>hold 3788ms</div></div></div>
+</div></section>
+<section class='scene'><h2>00c-intro-execution</h2><p class='url'>/?preview=demo#/projects · 전환 cut 400ms · 체류 7688ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/00c-intro-execution.png' alt=''><div class='safe'></div><div class='sub'>도출된 케이스를 <b style='color:#7dd3fc'>실제 화면</b>에 수행시켜 판정을 받습니다</div></div><div class='info'><div class='t'>1. 도출된 케이스를 실제 화면에 수행시켜 판정을 받습니다</div><ul></ul><div class='hold'>hold 3850ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/00c-intro-execution.png' alt=''><div class='safe'></div><div class='sub'>판정 근거는 증적에서 <b style='color:#7dd3fc'>프레임과 좌표</b>로 확인합니다</div></div><div class='info'><div class='t'>2. 판정 근거는 증적에서 프레임과 좌표로 확인합니다</div><ul></ul><div class='hold'>hold 3538ms</div></div></div>
+</div></section>
+<section class='scene'><h2>00d-intro-model</h2><p class='url'>/?preview=demo#/projects · 전환 cut 400ms · 체류 7687ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/00d-intro-model.png' alt=''><div class='safe'></div><div class='sub'>화면마다 어떤 <b style='color:#7dd3fc'>모델 동작</b>이 그 결과를 만들었는지 함께 설명합니다</div></div><div class='info'><div class='t'>1. 화면마다 어떤 모델 동작이 그 결과를 만들었는지 함께 설명합니다</div><ul></ul><div class='hold'>hold 4475ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/00d-intro-model.png' alt=''><div class='safe'></div><div class='sub'>지금부터 <b style='color:#7dd3fc'>프로젝트 등록</b>으로 시작합니다</div></div><div class='info'><div class='t'>2. 지금부터 프로젝트 등록으로 시작합니다</div><ul></ul><div class='hold'>hold 2912ms</div></div></div>
+</div></section>
+<section class='scene'><h2>02-add-project</h2><p class='url'>/?preview=demo#/projects · 전환 cut 400ms · 체류 4550ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/02-add-project.png' alt=''><div class='safe'></div><div class='box' style='left:92.98%;top:25.74%;width:5.56%;height:2.59%'><span>click</span></div><div class='sub'>프로젝트를 추가하면 바로 <b style='color:#7dd3fc'>작업대</b>로 들어갑니다</div></div><div class='info'><div class='t'>1. 프로젝트를 추가하면 바로 작업대로 들어갑니다</div><ul><li>click role=button[name=&quot;프로젝트 추가&quot;]</li><li>waitFor role=dialog</li></ul><div class='hold'>hold 3350ms</div></div></div>
+</div></section>
+<section class='scene'><h2>03-llm-settings</h2><p class='url'>/?preview=demo#/projects · 전환 cut 400ms · 체류 5150ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/03-llm-settings.png' alt=''><div class='safe'></div><div class='sub'>분석에 쓸 모델과 API 키를 <b style='color:#7dd3fc'>한 번만</b> 저장합니다</div></div><div class='info'><div class='t'>1. 분석에 쓸 모델과 API 키를 한 번만 저장합니다</div><ul><li>type role=dialog &gt;&gt; input[type=password] ← ••••</li><li>click role=button[name=&quot;설정 저장&quot;]</li><li>waitFor role=heading[name=&quot;이 설정으로 첫 단계를 실행합니다&quot;]</li></ul><div class='hold'>hold 3350ms</div></div></div>
+</div></section>
+<section class='scene'><h2>04-pipeline</h2><p class='url'>/?preview=demo#/projects · 전환 cut 400ms · 체류 8976ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/04-pipeline.png' alt=''><div class='safe'></div><div class='sub'>분석은 소스, 사실, 업무 분류, 시나리오 <b style='color:#7dd3fc'>네 단계</b>로 진행됩니다</div></div><div class='info'><div class='t'>1. 분석은 소스, 사실, 업무 분류, 시나리오 네 단계로 진행됩니다</div><ul><li>highlight role=heading[name=&quot;이 설정으로 첫 단계를 실행합니다&quot;]</li></ul><div class='hold'>hold 4288ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/04-pipeline.png' alt=''><div class='safe'></div><div class='sub'>각 단계는 <b style='color:#7dd3fc'>검증하고 저장</b>한 뒤 다음 단계로 넘어갑니다</div></div><div class='info'><div class='t'>2. 각 단계는 검증하고 저장한 뒤 다음 단계로 넘어갑니다</div><ul></ul><div class='hold'>hold 3788ms</div></div></div>
+</div></section>
+<section class='scene'><h2>05-start-src</h2><p class='url'>/?preview=demo#/projects · 전환 cut 400ms · 체류 5050ms</p>
+<div class='badges'><span class='badge show' title='클릭하면 표본 모드가 즉시 완료를 띄워 진행 중 화면과 어긋난다. 호버로 짚고 진행 픽스처로 컷'>show · hover role=button[name=&quot;SRC 단계 실행&quot;] <small>클릭하면 표본 모드가 즉시 완료를 띄워 진행 중 화면과 어긋난다. 호버로 짚고 진행 픽스처로 컷</small></span></div>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/05-start-src.png' alt=''><div class='safe'></div><div class='sub'><b style='color:#7dd3fc'>SRC 단계 실행</b>을 누르면 소스 구조 수집부터 시작합니다</div></div><div class='info'><div class='t'>1. SRC 단계 실행을 누르면 소스 구조 수집부터 시작합니다</div><ul><li>hover role=button[name=&quot;SRC 단계 실행&quot;]</li><li>highlight role=button[name=&quot;SRC 단계 실행&quot;]</li></ul><div class='hold'>hold 3850ms</div></div></div>
+</div></section>
+<section class='scene'><h2>06-progress-rate</h2><p class='url'>/?preview=progress#/workspace · 전환 cut 400ms · 체류 5698ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/06-progress-rate.png' alt=''><div class='safe'></div><div class='box' style='left:2.76%;top:24.90%;width:18.84%;height:2.55%'><span>highlight</span></div><div class='sub'><b style='color:#7dd3fc'>진행률</b>과 지금 수행 중인 단계가 개요에 표시됩니다</div></div><div class='info'><div class='t'>1. 진행률과 지금 수행 중인 단계가 개요에 표시됩니다</div><ul><li>highlight role=heading[name=&quot;WIKI 단계 수행 중&quot;]</li></ul><div class='hold'>hold 3600ms</div></div></div>
+</div></section>
+<section class='scene'><h2>07-progress-steps</h2><p class='url'>/?preview=progress#/workspace · 전환 cut 400ms · 체류 7875ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/07-progress-steps.png' alt=''><div class='safe'></div><div class='sub'>소스 스캔, 사실 추출, <b style='color:#7dd3fc'>업무 분류</b>를 거쳐 시나리오를 씁니다</div></div><div class='info'><div class='t'>1. 소스 스캔, 사실 추출, 업무 분류를 거쳐 시나리오를 씁니다</div><ul></ul><div class='hold'>hold 4100ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/07-progress-steps.png' alt=''><div class='safe'></div><div class='sub'>세부 단계는 <b style='color:#7dd3fc'>열 개</b>이고 완료된 것부터 체크됩니다</div></div><div class='info'><div class='t'>2. 세부 단계는 열 개이고 완료된 것부터 체크됩니다</div><ul></ul><div class='hold'>hold 3475ms</div></div></div>
+</div></section>
+<section class='scene'><h2>08-progress-time</h2><p class='url'>/?preview=progress#/workspace · 전환 cut 400ms · 체류 8500ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/08-progress-time.png' alt=''><div class='safe'></div><div class='sub'>전체 분석은 <b style='color:#7dd3fc'>약 70분</b>이 걸리므로 걸어 두고 다른 일을 하세요</div></div><div class='info'><div class='t'>1. 전체 분석은 약 70분이 걸리므로 걸어 두고 다른 일을 하세요</div><ul></ul><div class='hold'>hold 4162ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/08-progress-time.png' alt=''><div class='safe'></div><div class='sub'>진행 중에도 다른 프로젝트의 이력과 증적은 <b style='color:#7dd3fc'>그대로</b> 봅니다</div></div><div class='info'><div class='t'>2. 진행 중에도 다른 프로젝트의 이력과 증적은 그대로 봅니다</div><ul></ul><div class='hold'>hold 4038ms</div></div></div>
+</div></section>
+<section class='scene'><h2>09-progress-done</h2><p class='url'>/?preview=progress#/workspace · 전환 cut 400ms · 체류 5012ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/09-progress-done.png' alt=''><div class='safe'></div><div class='box' style='left:87.92%;top:4.40%;width:6.01%;height:2.96%'><span>hover</span></div><div class='sub'>끝나면 <b style='color:#7dd3fc'>생성 이력</b>에 회차로 쌓이고 목록에서 다시 열 수 있습니다</div></div><div class='info'><div class='t'>1. 끝나면 생성 이력에 회차로 쌓이고 목록에서 다시 열 수 있습니다</div><ul><li>hover role=button[name=&quot;다른 프로젝트 선택&quot;]</li></ul><div class='hold'>hold 4412ms</div></div></div>
+</div></section>
+<section class='scene'><h2>10-open-project</h2><p class='url'>/?preview=demo#/projects · 전환 fade 400ms · 체류 4300ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/10-open-project.png' alt=''><div class='safe'></div><div class='box' style='left:2.55%;top:47.28%;width:3.26%;height:2.59%'><span>click</span></div><div class='sub'>분석이 끝난 프로젝트는 <b style='color:#7dd3fc'>열기</b>로 들어갑니다</div></div><div class='info'><div class='t'>1. 분석이 끝난 프로젝트는 열기로 들어갑니다</div><ul><li>click role=button[name=&quot;열기&quot;]</li><li>waitFor role=tab[name=/생성 이력/]</li></ul><div class='hold'>hold 3100ms</div></div></div>
+</div></section>
+<section class='scene'><h2>11-overview</h2><p class='url'>/?preview=demo#/workspace · 전환 cut 400ms · 체류 5658ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/11-overview.png' alt=''><div class='safe'></div><div class='box' style='left:4.82%;top:8.52%;width:6.60%;height:4.07%'><span>click</span></div><div class='sub'>개요에서 생성 이력, 테스트 실행, 증적 수를 <b style='color:#7dd3fc'>한눈에</b> 봅니다</div></div><div class='info'><div class='t'>1. 개요에서 생성 이력, 테스트 실행, 증적 수를 한눈에 봅니다</div><ul><li>click role=tab[name=/생성 이력/]</li><li>waitFor role=heading[name=&quot;생성 이력&quot;]</li></ul><div class='hold'>hold 4100ms</div></div></div>
+</div></section>
+<section class='scene'><h2>12-runs</h2><p class='url'>/?preview=demo#/runs · 전환 cut 400ms · 체류 4925ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/12-runs.png' alt=''><div class='safe'></div><div class='box' style='left:1.51%;top:29.54%;width:96.98%;height:5.56%'><span>click</span></div><div class='sub'><b style='color:#7dd3fc'>회차</b>를 열면 그때 도출된 시나리오가 그대로 열립니다</div></div><div class='info'><div class='t'>1. 회차를 열면 그때 도출된 시나리오가 그대로 열립니다</div><ul><li>click role=button[name=/RUN-preview-02/]</li><li>waitFor role=heading[name=&quot;사용자 시나리오 9건&quot;]</li></ul><div class='hold'>hold 3725ms</div></div></div>
+</div></section>
+<section class='scene'><h2>13-sheet</h2><p class='url'>/?preview=demo#/scenarios · 전환 cut 400ms · 체류 8351ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/13-sheet.png' alt=''><div class='safe'></div><div class='box' style='left:1.04%;top:21.42%;width:19.85%;height:2.31%'><span>highlight</span></div><div class='sub'>시나리오는 <b style='color:#7dd3fc'>업무 분류별</b> 시트로 정리됩니다</div></div><div class='info'><div class='t'>1. 시나리오는 업무 분류별 시트로 정리됩니다</div><ul><li>highlight role=heading[name=&quot;사용자 시나리오 9건&quot;]</li></ul><div class='hold'>hold 3100ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/13-sheet.png' alt=''><div class='safe'></div><div class='sub'>행마다 ID, 목적, <b style='color:#7dd3fc'>원천 파일</b>, 단계 수가 있습니다</div></div><div class='info'><div class='t'>2. 행마다 ID, 목적, 원천 파일, 단계 수가 있습니다</div><ul></ul><div class='hold'>hold 3475ms</div></div></div>
+</div></section>
+<section class='scene'><h2>13b-how-scenarios</h2><p class='url'>/?preview=demo#/scenarios · 전환 cut 400ms · 체류 8700ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><div class='noshot'>스크린샷 없음 - dv.py sheet --capture</div><div class='safe'></div><div class='sub'>이 시트는 <b style='color:#7dd3fc'>네 단계</b> 모델 작업의 결과입니다</div></div><div class='info'><div class='t'>1. 이 시트는 네 단계 모델 작업의 결과입니다</div><ul><li>zoom ×1.3 role=heading[name=&quot;사용자 시나리오 9건&quot;]</li></ul><div class='hold'>hold 3100ms</div></div></div>
+<div class='step'><div class='frame'><div class='noshot'>스크린샷 없음 - dv.py sheet --capture</div><div class='safe'></div><div class='sub'>SRC와 FACT가 소스 사실을 모으고 <b style='color:#7dd3fc'>WIKI와 SCENARIO</b>가 씁니다</div></div><div class='info'><div class='t'>2. SRC와 FACT가 소스 사실을 모으고 WIKI와 SCENARIO가 씁니다</div><ul><li>zoomOut</li></ul><div class='hold'>hold 4100ms</div></div></div>
+</div></section>
+<section class='scene'><h2>14-case-steps</h2><p class='url'>/?preview=demo#/scenarios · 전환 cut 400ms · 체류 5400ms</p>
+<div class='badges'><span class='badge skip' title='펼치기는 클릭이며 더블클릭 아님'>skip · dblclick role=button[name=&quot;3 steps&quot;] &gt;&gt; nth=1 <small>펼치기는 클릭이며 더블클릭 아님</small></span></div>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/14-case-steps.png' alt=''><div class='safe'></div><div class='box zoom' style='left:16.88%;top:67.26%;width:82.03%;height:5.44%'><span>zoom</span></div><div class='box' style='left:94.11%;top:69.10%;width:3.75%;height:1.68%'><span>click</span></div><div class='sub'>케이스를 펼치면 단계와 <b style='color:#7dd3fc'>기대 결과</b>가 함께 보입니다</div></div><div class='info'><div class='t'>1. 케이스를 펼치면 단계와 기대 결과가 함께 보입니다</div><ul><li>zoom ×1.4 .sheet-rw &gt;&gt; nth=2</li><li>click role=button[name=&quot;3 steps&quot;] &gt;&gt; nth=1</li><li>zoomOut</li></ul><div class='hold'>hold 3600ms</div></div></div>
+</div></section>
+<section class='scene'><h2>15-sheet-scroll</h2><p class='url'>/?preview=demo#/scenarios · 전환 cut 400ms · 체류 4388ms</p>
+<div class='badges'><span class='badge show' title='9건이 한 화면에 안 들어간다'>show · scroll .panel-s <small>9건이 한 화면에 안 들어간다</small></span></div>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/15-sheet-scroll.png' alt=''><div class='safe'></div><div class='box' style='left:16.88%;top:31.39%;width:82.03%;height:66.67%'><span>scroll</span></div><div class='sub'>시트를 내려도 질의 패널과 자막은 <b style='color:#7dd3fc'>그 자리</b>에 있습니다</div></div><div class='info'><div class='t'>1. 시트를 내려도 질의 패널과 자막은 그 자리에 있습니다</div><ul><li>scroll .panel-s toRatio=1</li></ul><div class='hold'>hold 3788ms</div></div></div>
+</div></section>
+<section class='scene'><h2>16-drag-case</h2><p class='url'>/?preview=demo#/scenarios · 전환 cut 400ms · 체류 6600ms</p>
+<div class='badges'><span class='badge show' title='질의가 케이스 ID 기준으로 이뤄지는 핵심 조작'>show · drag .sheet-rw &gt;&gt; nth=0 <small>질의가 케이스 ID 기준으로 이뤄지는 핵심 조작</small></span></div>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/16-drag-case.png' alt=''><div class='safe'></div><div class='box' style='left:1.72%;top:83.60%;width:13.75%;height:2.96%'><span>drag</span></div><div class='box' style='left:16.88%;top:38.05%;width:82.03%;height:5.44%'><span>drag</span></div><div class='sub'>케이스를 질의 패널로 <b style='color:#7dd3fc'>끌어 놓으면</b> 참조로 잡힙니다</div></div><div class='info'><div class='t'>1. 케이스를 질의 패널로 끌어 놓으면 참조로 잡힙니다</div><ul><li>drag (html5) .sheet-rw &gt;&gt; nth=0 → .comp .drop</li><li>waitFor [aria-label=&quot;참조할 시나리오&quot;]</li><li>zoom ×1.4 [aria-label=&quot;참조할 시나리오&quot;]</li><li>highlight [aria-label=&quot;참조할 시나리오&quot;]</li><li>zoomOut</li></ul><div class='hold'>hold 3600ms</div></div></div>
+</div></section>
+<section class='scene'><h2>17-ask</h2><p class='url'>/?preview=demo#/scenarios · 전환 cut 400ms · 체류 6062ms</p>
+<div class='badges'><span class='badge show' title='질의 응답이 제품의 핵심 경험'>show · waitStream .chat-s .msg &gt;&gt; nth=-1 <small>질의 응답이 제품의 핵심 경험</small></span></div>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/17-ask.png' alt=''><div class='safe'></div><div class='box' style='left:1.72%;top:83.60%;width:13.75%;height:2.96%'><span>drag</span></div><div class='box' style='left:16.88%;top:38.05%;width:82.03%;height:5.44%'><span>drag</span></div><div class='box' style='left:1.72%;top:87.49%;width:13.75%;height:5.39%'><span>type</span></div><div class='box' style='left:11.67%;top:94.35%;width:3.80%;height:2.59%'><span>click</span></div><div class='box' style='left:1.93%;top:32.87%;width:12.53%;height:8.90%'><span>waitStream</span></div><div class='sub'>질문하면 <b style='color:#7dd3fc'>케이스의 전제와 단계</b>를 기준으로 답합니다</div></div><div class='info'><div class='t'>1. 질문하면 케이스의 전제와 단계를 기준으로 답합니다</div><ul><li>drag (html5) .sheet-rw &gt;&gt; nth=0 → .comp .drop</li><li>type role=textbox[name=&quot;시나리오 질문&quot;] ← 실패할 수 있는 분기는 무엇인가요?</li><li>click role=button[name=&quot;보내기&quot;]</li><li>waitStream .chat-s .msg &gt;&gt; nth=-1 until=stable stableMs=1200 timeoutMs=30000</li></ul><div class='hold'>hold 3662ms</div></div></div>
+</div></section>
+<section class='scene'><h2>18-answer</h2><p class='url'>/?preview=demo#/scenarios · 전환 cut 400ms · 체류 8112ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/18-answer.png' alt=''><div class='safe'></div><div class='box' style='left:1.72%;top:83.60%;width:13.75%;height:2.96%'><span>drag</span></div><div class='box' style='left:16.88%;top:38.05%;width:82.03%;height:5.44%'><span>drag</span></div><div class='box' style='left:1.72%;top:87.49%;width:13.75%;height:5.39%'><span>type</span></div><div class='box' style='left:11.67%;top:94.35%;width:3.80%;height:2.59%'><span>click</span></div><div class='box' style='left:1.93%;top:32.87%;width:12.53%;height:8.90%'><span>waitStream</span></div><div class='box zoom' style='left:1.93%;top:32.87%;width:12.53%;height:8.90%'><span>zoom</span></div><div class='box' style='left:1.93%;top:32.87%;width:12.53%;height:8.90%'><span>highlight</span></div><div class='sub'>답변은 케이스의 전제, 단계, <b style='color:#7dd3fc'>원천 코드</b>를 근거로 합니다</div></div><div class='info'><div class='t'>1. 답변은 케이스의 전제, 단계, 원천 코드를 근거로 합니다</div><ul><li>drag (html5) .sheet-rw &gt;&gt; nth=0 → .comp .drop</li><li>type role=textbox[name=&quot;시나리오 질문&quot;] ← 실패할 수 있는 분기는 무엇인가요?</li><li>click role=button[name=&quot;보내기&quot;]</li><li>waitStream .chat-s .msg &gt;&gt; nth=-1 until=stable stableMs=1200 timeoutMs=30000</li><li>zoom ×1.3 .chat-s .msg &gt;&gt; nth=-1</li><li>highlight .chat-s .msg &gt;&gt; nth=-1</li><li>zoomOut</li></ul><div class='hold'>hold 3912ms</div></div></div>
+</div></section>
+<section class='scene'><h2>19-executions</h2><p class='url'>/?preview=demo#/executions · 전환 fade 400ms · 체류 6947ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/19-executions.png' alt=''><div class='safe'></div><div class='box' style='left:1.46%;top:22.58%;width:23.28%;height:2.78%'><span>highlight</span></div><div class='sub'>테스트 실행은 회차별 <b style='color:#7dd3fc'>케이스 판정</b>을 보여줍니다</div></div><div class='info'><div class='t'>1. 테스트 실행은 회차별 케이스 판정을 보여줍니다</div><ul><li>highlight role=heading[name=&quot;테스트 실행&quot;]</li></ul><div class='hold'>hold 3412ms</div></div></div>
+</div></section>
+<section class='scene'><h2>20-open-execution</h2><p class='url'>/?preview=demo#/executions · 전환 cut 400ms · 체류 6725ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/20-open-execution.png' alt=''><div class='safe'></div><div class='box zoom' style='left:1.51%;top:48.17%;width:96.98%;height:4.44%'><span>zoom</span></div><div class='box' style='left:1.51%;top:48.17%;width:96.98%;height:4.44%'><span>highlight</span></div><div class='box' style='left:92.96%;top:36.37%;width:4.49%;height:2.59%'><span>click</span></div><div class='sub'>실패한 케이스는 <b style='color:#7dd3fc'>같은 ID</b>로 수행 화면에서 이어집니다</div></div><div class='info'><div class='t'>1. 실패한 케이스는 같은 ID로 수행 화면에서 이어집니다</div><ul><li>zoom ×1.4 role=button[name=/SCN-LEDGER-001 규정명으로 개정 건 검색 실패/]</li><li>highlight role=button[name=/SCN-LEDGER-001 규정명으로 개정 건 검색 실패/]</li><li>zoomOut</li><li>click role=button[name=&quot;실행 열기&quot;] &gt;&gt; nth=0</li><li>waitFor role=heading[name=&quot;테스트 수행&quot;]</li></ul><div class='hold'>hold 3725ms</div></div></div>
+</div></section>
+<section class='scene'><h2>21-test-center</h2><p class='url'>/?preview=demo#/executions/EXE-20260908-0042 · 전환 cut 400ms · 체류 7240ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/21-test-center.png' alt=''><div class='safe'></div><div class='box' style='left:13.75%;top:31.43%;width:3.17%;height:1.81%'><span>highlight</span></div><div class='sub'>수행 화면에는 실행 이력과 <b style='color:#7dd3fc'>수행 대기열</b>이 나란히 있습니다</div></div><div class='info'><div class='t'>1. 수행 화면에는 실행 이력과 수행 대기열이 나란히 있습니다</div><ul><li>highlight role=heading[name=&quot;수행 대기열&quot;]</li></ul><div class='hold'>hold 4038ms</div></div></div>
+</div></section>
+<section class='scene'><h2>22-verdicts</h2><p class='url'>/?preview=demo#/executions/EXE-20260908-0042 · 전환 cut 400ms · 체류 5588ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/22-verdicts.png' alt=''><div class='safe'></div><div class='box zoom' style='left:12.92%;top:39.51%;width:71.35%;height:4.81%'><span>zoom</span></div><div class='box' style='left:19.84%;top:51.21%;width:2.22%;height:2.59%'><span>highlight</span></div><div class='sub'>단계마다 동의, 오탐, 미탐, 재실행 필요로 <b style='color:#7dd3fc'>검토</b>합니다</div></div><div class='info'><div class='t'>1. 단계마다 동의, 오탐, 미탐, 재실행 필요로 검토합니다</div><ul><li>zoom ×1.4 role=button[name=/02 SCN-LEDGER-001/]</li><li>highlight role=button[name=&quot;동의&quot;] &gt;&gt; nth=0</li><li>zoomOut</li></ul><div class='hold'>hold 3788ms</div></div></div>
+</div></section>
+<section class='scene'><h2>22b-how-execution</h2><p class='url'>/?preview=demo#/executions/EXE-20260908-0042 · 전환 cut 400ms · 체류 8688ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/22b-how-execution.png' alt=''><div class='safe'></div><div class='sub'>수행은 모델에 보낸 <b style='color:#7dd3fc'>화면 프레임</b>을 보고 단계를 실행합니다</div></div><div class='info'><div class='t'>1. 수행은 모델에 보낸 화면 프레임을 보고 단계를 실행합니다</div><ul></ul><div class='hold'>hold 4038ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/22b-how-execution.png' alt=''><div class='safe'></div><div class='sub'>단계마다 <b style='color:#7dd3fc'>사유 코드</b>, 실행 경로, 재시도와 관측 횟수를 남깁니다</div></div><div class='info'><div class='t'>2. 단계마다 사유 코드, 실행 경로, 재시도와 관측 횟수를 남깁니다</div><ul></ul><div class='hold'>hold 4350ms</div></div></div>
+</div></section>
+<section class='scene'><h2>23-open-evidence</h2><p class='url'>/?preview=demo#/executions/EXE-20260908-0042 · 전환 cut 400ms · 체류 4238ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/23-open-evidence.png' alt=''><div class='safe'></div><div class='box' style='left:81.98%;top:56.11%;width:1.46%;height:2.59%'><span>click</span></div><div class='sub'>단계 증적 열기로 <b style='color:#7dd3fc'>판정 근거</b>를 확인합니다</div></div><div class='info'><div class='t'>1. 단계 증적 열기로 판정 근거를 확인합니다</div><ul><li>click role=button[name=&quot;SCN-LEDGER-001 2단계 증적 열기&quot;]</li><li>waitFor role=heading[name=&quot;실패 증적 상세&quot;]</li></ul><div class='hold'>hold 3038ms</div></div></div>
+</div></section>
+<section class='scene'><h2>24-timeline</h2><p class='url'>/?preview=demo#/evidence/EXE-20260908-0042/EVD-0042-SCN-LEDGER-001-2 · 전환 cut 400ms · 체류 6558ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/24-timeline.png' alt=''><div class='safe'></div><div class='box zoom' style='left:1.93%;top:28.19%;width:3.77%;height:1.81%'><span>zoom</span></div><div class='box' style='left:1.93%;top:28.19%;width:3.77%;height:1.81%'><span>highlight</span></div><div class='box' style='left:21.98%;top:86.42%;width:6.67%;height:10.53%'><span>click</span></div><div class='box' style='left:14.90%;top:86.42%;width:6.67%;height:10.53%'><span>click</span></div><div class='sub'>타임라인에서 <b style='color:#7dd3fc'>실패 시점</b>과 직전 화면을 오갑니다</div></div><div class='info'><div class='t'>1. 타임라인에서 실패 시점과 직전 화면을 오갑니다</div><ul><li>zoom ×1.3 role=heading[name=&quot;단계 타임라인&quot;]</li><li>highlight role=heading[name=&quot;단계 타임라인&quot;]</li><li>click role=button[name=/실패 직전/]</li><li>click role=button[name=/실패 시점/]</li><li>zoomOut</li></ul><div class='hold'>hold 3412ms</div></div></div>
+</div></section>
+<section class='scene'><h2>25-verdict-basis</h2><p class='url'>/?preview=demo#/evidence/EXE-20260908-0042/EVD-0042-SCN-LEDGER-001-2 · 전환 cut 400ms · 체류 8538ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/25-verdict-basis.png' alt=''><div class='safe'></div><div class='box' style='left:85.57%;top:28.19%;width:2.57%;height:1.81%'><span>highlight</span></div><div class='sub'>판정 근거는 원본이 아니라 <b style='color:#7dd3fc'>모델에 전송된 프레임</b>입니다</div></div><div class='info'><div class='t'>1. 판정 근거는 원본이 아니라 모델에 전송된 프레임입니다</div><ul><li>highlight role=heading[name=&quot;판정 근거&quot;]</li></ul><div class='hold'>hold 3850ms</div></div></div>
+<div class='step'><div class='frame'><img src='shots/25-verdict-basis.png' alt=''><div class='safe'></div><div class='sub'>모델이 지목한 <b style='color:#7dd3fc'>좌표</b>를 그 프레임 위에 겹쳐 보여줍니다</div></div><div class='info'><div class='t'>2. 모델이 지목한 좌표를 그 프레임 위에 겹쳐 보여줍니다</div><ul></ul><div class='hold'>hold 3788ms</div></div></div>
+</div></section>
+<section class='scene'><h2>26-evidence-library</h2><p class='url'>/?preview=demo#/evidence · 전환 fade 400ms · 체류 8547ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/26-evidence-library.png' alt=''><div class='safe'></div><div class='box zoom' style='left:2.55%;top:49.39%;width:3.17%;height:1.81%'><span>zoom</span></div><div class='sub'>증적 탭은 <b style='color:#7dd3fc'>실행별로</b> 묶인 증적을 판정으로 거릅니다</div></div><div class='info'><div class='t'>1. 증적 탭은 실행별로 묶인 증적을 판정으로 거릅니다</div><ul><li>zoom ×1.3 role=heading[name=&quot;저장된 증적&quot;]</li><li>zoomOut</li></ul><div class='hold'>hold 3600ms</div></div></div>
+</div></section>
+<section class='scene'><h2>26b-filters</h2><p class='url'>/?preview=demo#/evidence · 전환 cut 400ms · 체류 7163ms</p>
+<div class='steps'>
+<div class='step'><div class='frame'><div class='noshot'>스크린샷 없음 - dv.py sheet --capture</div><div class='safe'></div><div class='sub'>판정, 검토 상태, <b style='color:#7dd3fc'>사유 코드</b>로 거르고</div></div><div class='info'><div class='t'>1. 판정, 검토 상태, 사유 코드로 거르고</div><ul><li>click role=radio[name=&quot;실패&quot;]</li></ul><div class='hold'>hold 2788ms</div></div></div>
+<div class='step'><div class='frame'><div class='noshot'>스크린샷 없음 - dv.py sheet --capture</div><div class='safe'></div><div class='sub'>원인 태그와 케이스 ID까지 <b style='color:#7dd3fc'>다섯 축</b>으로 좁힙니다</div></div><div class='info'><div class='t'>2. 원인 태그와 케이스 ID까지 다섯 축으로 좁힙니다</div><ul></ul><div class='hold'>hold 3475ms</div></div></div>
+</div></section>
+<section class='scene'><h2>27-evidence-filter</h2><p class='url'>/?preview=demo#/evidence · 전환 cut 400ms · 체류 4988ms</p>
+<div class='badges'><span class='badge show' title='실행별 묶음이 아래로 이어짐'>show · scroll window <small>실행별 묶음이 아래로 이어짐</small></span></div>
+<div class='steps'>
+<div class='step'><div class='frame'><img src='shots/27-evidence-filter.png' alt=''><div class='safe'></div><div class='box' style='left:66.15%;top:56.40%;width:31.30%;height:3.33%'><span>type</span></div><div class='sub'>케이스 ID로 좁히고 내려 보며 <b style='color:#7dd3fc'>검토 상태</b>를 확인합니다</div></div><div class='info'><div class='t'>1. 케이스 ID로 좁히고 내려 보며 검토 상태를 확인합니다</div><ul><li>type input[placeholder=&quot;SCN-&quot;] ← SCN-LEDGER</li><li>scroll window toRatio=1</li></ul><div class='hold'>hold 3788ms</div></div></div>
+</div></section>
+<div class='totals'>33장면 · 본문 220.9s · 예상 총 226.4s (전환 제외)</div>
+</body></html>

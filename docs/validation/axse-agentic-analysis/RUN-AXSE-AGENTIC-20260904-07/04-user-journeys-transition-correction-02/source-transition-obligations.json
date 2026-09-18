@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "artifact_type": "source-transition-obligations",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "branch_inventory_status": "lower-bound",
+  "obligations": [
+    {
+      "transition_ref": "T001",
+      "source_action_ref": "EL-component-loginformpage-input-root-2e21d8ec",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 78
+    },
+    {
+      "transition_ref": "T002",
+      "source_action_ref": "EL-component-loginformpage-input-root-cc350d8a",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 90
+    },
+    {
+      "transition_ref": "T003",
+      "source_action_ref": "EL-component-loginformpage-button-root-6da22694",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 104
+    },
+    {
+      "transition_ref": "T004",
+      "source_action_ref": "EL-component-loginformpage-button-root-6da22694",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 104
+    },
+    {
+      "transition_ref": "T005",
+      "source_action_ref": "EL-component-loginpage-button-root-b10e4291",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 70
+    },
+    {
+      "transition_ref": "T006",
+      "source_action_ref": "EL-component-loginpage-button-root-7fc3a516",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 71
+    },
+    {
+      "transition_ref": "T007",
+      "source_action_ref": "EL-component-loginpage-button-root-7fc3a516",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 71
+    },
+    {
+      "transition_ref": "T008",
+      "source_action_ref": "EL-component-loginpage-button-button-199ada70",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 103
+    },
+    {
+      "transition_ref": "T009",
+      "source_action_ref": "EL-component-mainpage-button-root-4870b226",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 98
+    },
+    {
+      "transition_ref": "T010",
+      "source_action_ref": "EL-component-mainpage-button-root-25ceb4be",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 100
+    },
+    {
+      "transition_ref": "T011",
+      "source_action_ref": "EL-component-mainpage-button-root-0bae6c59",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 104
+    },
+    {
+      "transition_ref": "T012",
+      "source_action_ref": "EL-component-mainpage-button-root-99d235ea",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 105
+    },
+    {
+      "transition_ref": "T013",
+      "source_action_ref": "EL-component-mainpage-button-ts-ts-7f059f08",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 111
+    },
+    {
+      "transition_ref": "T014",
+      "source_action_ref": "EL-component-mainpage-button-button-42861f4f",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 122
+    },
+    {
+      "transition_ref": "T015",
+      "source_action_ref": "EL-component-mainpage-button-button-42861f4f",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 122
+    },
+    {
+      "transition_ref": "T016",
+      "source_action_ref": "EL-component-mainpage-button-root-bcee2686",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 133
+    },
+    {
+      "transition_ref": "T017",
+      "source_action_ref": "EL-component-mainpage-button-root-bcee2686",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 133
+    },
+    {
+      "transition_ref": "T018",
+      "source_action_ref": "EL-component-mainpage-button-button-18fa77ae",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 139
+    },
+    {
+      "transition_ref": "T019",
+      "source_action_ref": "EL-component-mainpage-button-settings-6c53b1fc",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 151
+    },
+    {
+      "transition_ref": "T020",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 174
+    },
+    {
+      "transition_ref": "T021",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+      "branch_ref": "exception:1",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 174
+    },
+    {
+      "transition_ref": "T022",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 176
+    },
+    {
+      "transition_ref": "T023",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+      "branch_ref": "exception:1",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 176
+    },
+    {
+      "transition_ref": "T024",
+      "source_action_ref": "EL-component-businesspage-button-root-25ad2a2c",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 456
+    },
+    {
+      "transition_ref": "T025",
+      "source_action_ref": "EL-component-businesspage-button-root-456a2904",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 460
+    },
+    {
+      "transition_ref": "T026",
+      "source_action_ref": "EL-component-businesspage-button-root-7b5cc90c",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 461
+    },
+    {
+      "transition_ref": "T027",
+      "source_action_ref": "EL-component-businesspage-button-root-d2f35683",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 467
+    },
+    {
+      "transition_ref": "T028",
+      "source_action_ref": "EL-component-businesspage-checkbox-root-ba5e72bc",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 481
+    },
+    {
+      "transition_ref": "T029",
+      "source_action_ref": "EL-component-businesspage-button-root-36595b84",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 504
+    },
+    {
+      "transition_ref": "T030",
+      "source_action_ref": "EL-component-businesspage-button-root-1778051a",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 512
+    },
+    {
+      "transition_ref": "T031",
+      "source_action_ref": "EL-component-businesspage-button-root-1778051a",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 512
+    },
+    {
+      "transition_ref": "T032",
+      "source_action_ref": "EL-component-businesspage-button-root-8b53f325",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 530
+    },
+    {
+      "transition_ref": "T033",
+      "source_action_ref": "EL-component-businesspage-button-csv-csv-6c4c2394",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 567
+    },
+    {
+      "transition_ref": "T034",
+      "source_action_ref": "EL-component-businesspage-button-csv-csv-6c4c2394",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 567
+    },
+    {
+      "transition_ref": "T035",
+      "source_action_ref": "EL-component-businesspage-button-tc-57c3dae7",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 570
+    },
+    {
+      "transition_ref": "T036",
+      "source_action_ref": "EL-component-businesspage-button-tc-57c3dae7",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 570
+    },
+    {
+      "transition_ref": "T037",
+      "source_action_ref": "EL-component-businesspage-button-button-1b959aaf",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 582
+    },
+    {
+      "transition_ref": "T038",
+      "source_action_ref": "EL-component-businesspage-button-v-2f1469b8",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 638
+    },
+    {
+      "transition_ref": "T039",
+      "source_action_ref": "EL-component-businesspage-checkbox-root-2506f0f8",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 640
+    },
+    {
+      "transition_ref": "T040",
+      "source_action_ref": "EL-component-businesspage-checkbox-root-f484b897",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 661
+    },
+    {
+      "transition_ref": "T041",
+      "source_action_ref": "EL-component-businesspage-button-root-74a73f90",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 731
+    },
+    {
+      "transition_ref": "T042",
+      "source_action_ref": "EL-component-businesspage-button-root-ee5902ee",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 738
+    },
+    {
+      "transition_ref": "T043",
+      "source_action_ref": "EL-component-businesspage-button-root-36a555c2",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 867
+    },
+    {
+      "transition_ref": "T044",
+      "source_action_ref": "EL-component-businesspage-button-root-547f94d7",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 874
+    },
+    {
+      "transition_ref": "T045",
+      "source_action_ref": "EL-component-scenariopage-button-root-e8f38c3b",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1191
+    },
+    {
+      "transition_ref": "T046",
+      "source_action_ref": "EL-component-scenariopage-button-button-b6ade5a6",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1209
+    },
+    {
+      "transition_ref": "T047",
+      "source_action_ref": "EL-component-scenariopage-button-button-b6ade5a6",
+      "branch_ref": "exception:1",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1209
+    },
+    {
+      "transition_ref": "T048",
+      "source_action_ref": "EL-component-scenariopage-input-root-e0e2ecb2",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1212
+    },
+    {
+      "transition_ref": "T049",
+      "source_action_ref": "EL-component-scenariopage-input-root-e0e2ecb2",
+      "branch_ref": "exception:1",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1212
+    },
+    {
+      "transition_ref": "T050",
+      "source_action_ref": "EL-component-scenariopage-button-csv-csv-8dba6894",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1215
+    },
+    {
+      "transition_ref": "T051",
+      "source_action_ref": "EL-component-scenariopage-button-csv-csv-8dba6894",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1215
+    },
+    {
+      "transition_ref": "T052",
+      "source_action_ref": "EL-component-scenariopage-button-excel-excel-e83a36d0",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1218
+    },
+    {
+      "transition_ref": "T053",
+      "source_action_ref": "EL-component-scenariopage-button-excel-excel-e83a36d0",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1218
+    },
+    {
+      "transition_ref": "T054",
+      "source_action_ref": "EL-component-scenariopage-button-root-ff33f465",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1368
+    },
+    {
+      "transition_ref": "T055",
+      "source_action_ref": "EL-component-scenariopage-button-root-4e83beae",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1390
+    },
+    {
+      "transition_ref": "T056",
+      "source_action_ref": "EL-component-scenariopage-button-root-93f714c4",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1402
+    },
+    {
+      "transition_ref": "T057",
+      "source_action_ref": "EL-component-scenariopage-button-root-a53a01ca",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1420
+    },
+    {
+      "transition_ref": "T058",
+      "source_action_ref": "EL-component-parseddbpage-button-root-966c5272",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 30
+    },
+    {
+      "transition_ref": "T059",
+      "source_action_ref": "EL-component-parseddbpage-button-root-e88717bc",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 32
+    },
+    {
+      "transition_ref": "T060",
+      "source_action_ref": "EL-component-parseddbpage-button-root-beefb97f",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 304
+    },
+    {
+      "transition_ref": "T061",
+      "source_action_ref": "EL-component-parseddbpage-button-button-bec78487",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 318
+    },
+    {
+      "transition_ref": "T062",
+      "source_action_ref": "EL-component-parseddbpage-button-root-fee689e3",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 328
+    },
+    {
+      "transition_ref": "T063",
+      "source_action_ref": "EL-component-parseddbpage-input-input-c6b159ba",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 334
+    },
+    {
+      "transition_ref": "T064",
+      "source_action_ref": "EL-component-parseddbpage-button-root-cccee16a",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 340
+    },
+    {
+      "transition_ref": "T065",
+      "source_action_ref": "EL-component-settingspage-button-button-910f144d",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 18
+    },
+    {
+      "transition_ref": "T066",
+      "source_action_ref": "EL-component-uploadpage-button-root-5ee46c72",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 147
+    },
+    {
+      "transition_ref": "T067",
+      "source_action_ref": "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 179
+    },
+    {
+      "transition_ref": "T068",
+      "source_action_ref": "EL-component-uploadpage-button-root-07489263",
+      "branch_ref": "normal:1",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 246
+    },
+    {
+      "transition_ref": "T069",
+      "source_action_ref": "EL-component-uploadpage-button-root-07489263",
+      "branch_ref": "exception:1",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 246
+    }
+  ],
+  "unresolved_interactions": [
+    {
+      "source_action_ref": "EL-component-scenariopage-button-root-3825b39c",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1033,
+      "kind": "button"
+    },
+    {
+      "source_action_ref": "EL-component-settingspage-button-root-f8aa61af",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 12,
+      "kind": "button"
+    },
+    {
+      "source_action_ref": "EL-component-settingspage-button-root-5143850f",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 12,
+      "kind": "button"
+    },
+    {
+      "source_action_ref": "EL-component-settingspage-checkbox-checkbox-23b497b5",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 30,
+      "kind": "checkbox"
+    },
+    {
+      "source_action_ref": "EL-component-settingspage-select-select-7c9618e4",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 36,
+      "kind": "select"
+    },
+    {
+      "source_action_ref": "EL-component-uploadpage-button-root-5fcbb836",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 198,
+      "kind": "button"
+    },
+    {
+      "source_action_ref": "EL-component-uploadpage-button-root-e481383d",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 208,
+      "kind": "button"
+    },
+    {
+      "source_action_ref": "EL-component-uploadpage-button-root-98a1c09c",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 255,
+      "kind": "button"
+    }
+  ]
+}

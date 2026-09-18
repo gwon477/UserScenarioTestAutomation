@@ -1,0 +1,25 @@
+{
+  "pass": false,
+  "issues": [
+    {
+      "code": "EDGE_ELEMENT_SCREEN_MISMATCH",
+      "path": "edges.14.on",
+      "message": "Edge trigger element must belong to the edge source screen."
+    },
+    {
+      "code": "EDGE_ELEMENT_SCREEN_MISMATCH",
+      "path": "edges.15.on",
+      "message": "Edge trigger element must belong to the edge source screen."
+    },
+    {
+      "code": "EDGE_ELEMENT_SCREEN_MISMATCH",
+      "path": "edges.18.on",
+      "message": "Edge trigger element must belong to the edge source screen."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-parseddbpage-button-button-bec78487]",
+      "message": "EL-component-parseddbpage-button-button-bec78487 at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:318 changes journey-relevant source state without evidence-linked predicates; states=page."
+    }
+  ]
+}

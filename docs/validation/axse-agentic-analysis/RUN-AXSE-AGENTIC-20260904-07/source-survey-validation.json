@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "cited_evidence_count": 16,
+  "artifact_hash": "sha256:031ba1cc15cba34123526d23787fca6f5aecf6c26da6846b76a7097bde5a6984",
+  "source_tool_usage": {
+    "inventory_reads": 1,
+    "closure_calls": 10,
+    "cumulative_granted_bytes": 197166,
+    "artifact_write_attempts": 1,
+    "fatal_error": null,
+    "max_closure_calls": 12,
+    "max_granted_bytes": 600000
+  }
+}

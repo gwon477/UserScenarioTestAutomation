@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "status": "locally-validated",
+  "milestone": "complete-user-journey-generation",
+  "completed_assignment": "05-scenario-cases-graph",
+  "validated_stages": {
+    "01-source-survey": "01-source-survey.json",
+    "02-source-gap-review": "02-source-gap-review/02-source-gap-review.json",
+    "03-business-classification": "03-business-classification/03-business-classification.json",
+    "03a-fact-graph": "03a-fact-graph-corr-17/03a-fact-graph.json",
+    "03b-business-workflow-mapping": "03b-business-workflow-mapping/03b-business-workflow-mapping.json",
+    "04-user-journeys": "04-user-journeys/04-user-journeys.json",
+    "04a-user-journey-workflow-link": "04a-user-journey-workflow-link/04a-user-journey-workflow-link.json",
+    "05-scenario-cases-graph": "05-scenario-cases-graph/05-scenario-cases-graph.json"
+  },
+  "result": {
+    "screens": 9,
+    "elements": 63,
+    "edges": 56,
+    "shell_contained_screens": 5,
+    "scenarios": 58,
+    "edge_coverage_percent": 100,
+    "complete_journey_scenarios": 2,
+    "expected_journeys": 2
+  },
+  "product_stage_acceptance": "not-attempted",
+  "golden_evaluation": "not-run",
+  "model_id": "gpt-5.6-luna",
+  "report": "docs/reports/2026-09-18-complete-journey-milestone.md"
+}

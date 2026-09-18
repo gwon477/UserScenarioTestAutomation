@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-6f10e276",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/repositories/gen_progress_repository.py",
+      "start_line": 1,
+      "end_line": 122,
+      "content_hash": "sha256:2601d7c0c79f1f1846a5251b8f824a3944654696f5d4412e6c8f1cac822084a4",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-6f10e276"
+    },
+    {
+      "source_id": "SRC-backend-app-repositories-scenario-repository-c0346a9c",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/repositories/scenario_repository.py",
+      "start_line": 1,
+      "end_line": 336,
+      "content_hash": "sha256:5f109c02abec880493fe7d3e141830926be131dc786bea78f631db0868512b83",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-6f10e276"
+    }
+  ],
+  "created_at": "2026-09-07T00:05:22.982Z"
+}

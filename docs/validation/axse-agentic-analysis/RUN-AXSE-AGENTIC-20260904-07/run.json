@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "status": "locally-validated",
+  "completed_assignment": "05-scenario-cases-graph",
+  "validated_artifact": "05-scenario-cases-graph-view-extension-03/05-scenario-cases-graph.json",
+  "product_stage_acceptance": "not-attempted",
+  "model_id": "gpt-5.6-luna",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "previous_completed_assignment": "04a-user-journey-workflow-link"
+}

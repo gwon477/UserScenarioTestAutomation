@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "workflow_count": 69,
+  "primary_classification_count": 6,
+  "cross_cutting_classification_count": 27,
+  "unresolved_count": 0,
+  "extension_from": "03b-business-workflow-mapping",
+  "extension_fact_from": "03a-fact-graph-correction-02",
+  "preserved_workflow_count": 41,
+  "added_workflow_count": 28,
+  "out_of_scope_preservation": "verified",
+  "reuse_mapping_from": "03b-business-workflow-mapping-view-extension-01",
+  "model_call_count": 0,
+  "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+  "artifact_hash": "sha256:6eb8a9aea80ea81bea3cc0e497ea58722d6288fb67d55ceebff5437bcaa5c974"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "correction.resume",
+      "result": "ok",
+      "replayed_attempt_count": 1,
+      "retained_case_count": 2,
+      "remaining_target_count": 1
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys-validation"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-transition-obligations"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-next-stage-gaps"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "prior-scenario-cases"
+    },
+    {
+      "sequence": 9,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "scenario-case-correction-plan"
+    },
+    {
+      "sequence": 10,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 3,
+      "resolved_ref_count": 4,
+      "new_evidence_ref_count": 4,
+      "reused_evidence_ref_count": 0,
+      "requested_budget": 120000,
+      "effective_budget": 120000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 11,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "05-scenario-cases",
+      "submission_kind": "correction-patch"
+    }
+  ]
+}

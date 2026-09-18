@@ -1,217 +1,173 @@
 # ScenarioForge
 
-로컬 소스 디렉터리를 분석해 `SRC → FACT → WIKI → SCENARIO` 정보 셋을 만들고, 선택한 사용자 시나리오를 실제 테스트와 증적으로 연결하는 설치형 애플리케이션입니다.
+소스코드만 분석해 **로그인부터 업무 결과까지 이어지는 완결 사용자 여정 테스트 시나리오**를 도출하고, 그 시나리오를 실제 화면에서 수행해 판정과 증적까지 남기는 설치형 애플리케이션입니다.
 
-현재 `dev` 브랜치는 디자인 시스템을 적용한 전체 화면 목업과 Electron 실행 셸까지 포함합니다. `pi-coding-agent`, ScenarioForge 전용 하네스·스킬·서브에이전트, 실제 테스트 실행기는 다음 백엔드 작업에서 연결합니다.
+## 1. 목표
 
-## 현재 상태
+이 저장소는 다음 가설을 검증하는 PoC입니다.
 
-- Electron main / preload / renderer 프로세스 분리
-- 로컬 프로젝트 디렉터리 선택용 native dialog 연결
-- LLM 모델·엔드포인트·API 키 설정 화면
-- `SRC → FACT → WIKI → SCENARIO` 분석 진행 목업
-- 프로젝트별 생성 이력과 저장 결과 재접근 흐름
-- 업무 분류별 시나리오 시트, 세부 스텝, 전체·개별 선택
-- 시나리오 ID drag & drop 기반 질의
-- 테스트 URL·테스트용 JSON 입력과 순차 수행 화면
-- 실행 이력, 케이스·스텝 대기열, 단계별 성공·실패 상태
-- 단계 완료 화면 1장과 실패 직전·실패 시점·오류 정보 증적 UI
-- 시나리오 도출·테스트 수행·증적 화면 간 공통 내비게이션
-- 실제 macOS Electron 창 구동 확인
+> 소스코드로부터 사용자 여정의 시나리오 테스트 케이스를 도출할 수 있다.
 
-## 시스템 구성
+가설이 참이려면 세 가지가 성립해야 합니다.
 
-```text
-Electron Renderer (React)
-        ├── Project / Execution 화면 상태
-        ├── 순차 실행·증적 공유 계약
-        └── 현재 deterministic UI fixture
-        │
-        │ typed window.scenarioForge API
-        ▼
-Electron Preload (contextBridge)
-        │
-        │ allowlisted IPC channels
-        ▼
-Electron Main
-        ├── native directory dialog
-        ├── model setting session
-        ├── local result loader
-        └── Agent Runtime / TestVista Runner  ← 다음 작업
-                 │
-                 ▼
-       선택한 프로젝트/.scenarioforge/
-```
+1. 화면 소스에서 **사용자가 보는 정보**, **사용자가 누를 수 있는 액션 포인트**, **액션별 시스템 동작과 화면 전이**를 공통 규격으로 뽑아낼 수 있다.
+2. 그 정보를 이으면 **화면 노드 그래프**가 만들어진다.
+3. 그래프를 첫 화면부터 끝까지 따라가면 사용자가 실제로 밟을 수 있는 경로가 시나리오 케이스로 구성되고, 그것이 시스템의 대부분을 덮는다.
 
-Renderer에는 Node.js와 파일 시스템 권한을 노출하지 않습니다. 현재 API 키는 목업 단계에서 디스크에 기록하지 않고 Electron 세션 메모리에만 유지합니다.
+## 2. 접근 방식
 
-## 디렉터리 구성
+### 2-1. 생성 트랙 — 백엔드가 구조를 소유하고 모델은 의미만 채운다
+
+분석은 일회성 프롬프트가 아니라 **단계형 Pi 코딩 에이전트 워크플로**입니다. 각 단계는 산출물을 남기고 다음 단계가 그것을 입력으로 받습니다.
 
 ```text
-.
-├── artifacts/                         # README 및 검수용 화면 캡처
-├── docs/
-│   ├── architecture/
-│   │   └── ui-stack-research.md       # termcn/OpenGUI/OpenUI 및 UI 스택 조사
-│   └── screens/                       # 화면별 기획 의도와 상태 정의
-├── packages/
-│   └── agent-runtime/                 # pi-coding-agent 런타임 경계(구현 예정)
-├── src/
-│   ├── main/
-│   │   └── index.ts                   # BrowserWindow, native dialog, IPC handlers
-│   ├── preload/
-│   │   └── index.ts                   # 제한된 contextBridge API
-│   ├── renderer/
-│   │   ├── index.html
-│   │   └── src/                       # React 화면, 컴포넌트, 디자인 토큰
-│   └── shared/                        # main/preload/renderer 공용 IPC·시나리오 타입
-├── electron.vite.config.ts
-├── vite.config.ts                     # 브라우저 화면 검수용 보조 설정
-└── package.json
+01-source-survey → 02-source-gap-review → 03-business-classification
+  → 03a-fact-graph → 03b-business-workflow-mapping
+  → 04-user-journeys → 04a-user-journey-workflow-link → 05-scenario-cases
 ```
 
-설치형 UI 스택 비교와 적용 결정은 [설치형 UI 스택 조사](docs/architecture/ui-stack-research.md)를 참고하세요.
+| 백엔드가 소유 (모델이 만들지 못함) | 모델이 채움 |
+| --- | --- |
+| 소스 inventory, 스냅샷, 근거 grant, 정본 ID(화면·요소·API·edge), hash, revision | 동작·화면의 의미, 업무 분류, 여정 서술, 케이스의 사람이 읽는 step·기대 결과 |
 
-## 실행 방법 (업데이트 예정)
+이 경계가 이 프로젝트의 핵심 설계입니다. 모델이 긴 ID를 옮겨 적다 변형시키는 사고가 반복되자, 정본 식별자를 백엔드가 소유하고 모델에는 불투명 참조만 넘기도록 바꿨습니다.
 
-> 현재는 개발 실행과 production build까지만 제공됩니다. 운영체제별 installer, code signing, 자동 업데이트 명령은 추후 추가합니다.
+### 2-2. 수행 트랙 — 컴파일된 step 봉투 + 제안 게이트
 
-사전 요구 사항:
+순수 CUA(매 step 화면 판단과 행동을 모델에 위임) 대신, 결정론적 컴파일러가 시나리오를 고정된 step 봉투로 바꾸고 모델에는 "고정된 대상이 현재 화면 어디에 있는가"만 묻습니다. 계획과 판정은 코드가 가집니다. operator와 observer 세션을 분리해 모델이 자기 행동을 판정하지 못하게 합니다.
 
-- Node.js 22.12 이상
-- npm 10 이상
-- macOS, Windows 또는 Linux 데스크톱 환경
+## 3. 진행 상황
 
-```bash
-npm ci
-npm run dev
+기준 시점 2026-09-18, 기준 run `RUN-AXSE-AGENTIC-20260918-01` ([상세 보고서](docs/reports/2026-09-18-complete-journey-milestone.md)).
+
+### 생성 트랙
+
+AXSE 대상에서 01~05 전 단계가 통과했고 **완결 사용자 여정 2/2**가 생성됐습니다.
+
+| 지표 | 값 |
+| --- | --- |
+| FACT 그래프 | 화면 9, 요소 63, edge 56 |
+| 시나리오 | 58건 (정상 51, 예외 7) |
+| edge coverage | 56/56 (100%) |
+| 완결 여정 | 2/2, 미완결 0 |
+
+| 시나리오 | 종류 | step | 경로 |
+| --- | --- | --- | --- |
+| `SCN-JOURNEY-J001-001` | normal | 28 | loginform → login → main → upload → parsed-db → business → scenario |
+| `SCN-JOURNEY-J002-001` | exception | 22 | 동일 (업로드 실패·복구 포함) |
+
+J001은 step 25~27에서 CSV·Excel을 내려받고 step 28에서 로그아웃합니다. 로그인부터 산출물 확보까지 한 경로로 이어집니다.
+
+> 모든 산출물은 `validation_scope: local-probe-contract-only`, `product_stage_acceptance: not-attempted`인 로컬 probe입니다. 제품 backend 등록은 시도하지 않았습니다.
+
+### 수행 트랙
+
+AXSE·RA-DAR 두 대상에서 실제 모델 왕복으로 검증했습니다 ([측정 기록](docs/validation/vision-execution-round-trip)). G1 step 그라운딩은 AXSE 97.4%, RA-DAR 71.4%입니다. 아직 없는 것은 웹 외 대상(Windows·mobile) 어댑터입니다.
+
+## 4. 해결한 문제
+
+2026-09-17~18 세션에서 제품 결함 25건을 고쳤습니다. 전부 회귀 테스트를 동반합니다. 상세는 [보고서 3절](docs/reports/2026-09-18-complete-journey-milestone.md)에 있습니다.
+
+핵심은 **실패의 대부분이 모델 능력이 아니라 계약 쪽 문제였다**는 점입니다.
+
+### 4-1. 모델링 부재 (2건)
+
+`<Shell>`이 감싸는 단계 화면에서 지속 크롬(로그아웃·사이드바)에 도달할 수 없었습니다. 화면 포함관계가 모델에 없어 여정이 종료에 닿지 못했습니다. `FactScreen.shell_screen_id`를 추가하고 스캐너가 JSX 중첩에서 이를 도출하게 했습니다. 여정 단위 시나리오를 컴파일하는 `compileJourneyCompleteScenarios`도 새로 만들었습니다.
+
+### 4-2. 계약 모순 (4건) — 어떤 모델 출력으로도 통과 불가
+
+예를 들어 `FACT_SOURCE_ACTION_UNRESOLVED`는 이렇게 맞물려 있었습니다.
+
+```text
+feasibility가 unresolved면 edge 금지
+  → edge가 없으면 action_kind를 강제로 unresolved로 되돌림
+  → action_kind가 unresolved면 오류
 ```
 
-Electron production bundle 확인:
+edge를 만들어도 위반, 안 만들어도 위반입니다. 여정 링크 단계에도 같은 구조가 세 건 더 있었습니다.
 
-```bash
-npm run build
-npm run preview
-```
+### 4-3. 보정 권한 부재 (7건)
 
-타입과 로컬 결과 스키마 검증:
+`createFactCorrectionPlan`이 오류 코드를 처리하지 않아, 모델이 그 오류를 고칠 필드 권한을 받지 못했습니다. 모델은 매 라운드 성실히 값을 넣었지만 백엔드가 그것을 버렸습니다.
 
-```bash
+### 4-4. write 슬롯 소모 (6건)
+
+거부된 write가 전제조건 검사 **전에** 시도 횟수를 증가시켜, "아직 소스를 안 읽었다" 같은 재시도 가능한 거부가 유일한 write 한도를 영구히 소모했습니다. 러너 5곳 전부에 있었습니다.
+
+### 4-5. 모델에게 정보 미제공 (4건)
+
+오류가 "무엇이 틀렸는지"만 말하고 "무엇으로 고쳐야 하는지"는 알려주지 않았습니다. 정보를 채우자 즉시 해소됐습니다.
+
+| 대상 | 추가한 정보 | 효과 |
+| --- | --- | --- |
+| `FACT_CORRECTION_EDGE_IDENTITY_CHANGED` | 보존해야 할 `on_element_ref` | 8회 연속 실패 → 소멸 |
+| `USER_JOURNEY_THREAD_REF_INVALID` | 유효 스레드 목록 + 스키마 enum | 가짜 이름 6회 → 소멸 |
+| `USER_JOURNEY_RECOVERY_PAIR_MISMATCH` | 어긋난 필드명 | 진동 → 4회 만에 통과 |
+
+### 4-6. 스캐너 판정 오류 (2건)
+
+아이콘 전용 버튼의 라벨이 소실됐습니다(`title="홈으로"`, 본문 `=`인 버튼이 `=`로 기록). 또한 리터럴 화면 이동(`setPage("upload")`)이나 관측 결과(`stable_outcomes: ["downloaded"]`)가 증거로 있는 동작이, 같은 핸들러의 백엔드 호출 하나를 해석하지 못했다는 이유로 통째로 탈락했습니다. 불확실한 것은 백엔드 효과일 뿐 사용자가 보는 결과가 아니므로 `inferred`로 이월하게 고쳤습니다.
+
+### 4-7. 신규 검증 규칙 (2건)
+
+- `FACT_JOURNEY_ACTION_SELF_LOOP_ONLY` — 화면 이동을 자기 루프로 모델링하는 것을 거부합니다. CSV 다운로드처럼 제자리에서 결과를 남기는 정당한 종료는 통과합니다.
+- 05 검증 산출물에 `journey_completion` 기록 — 완결 불가 여정을 컴파일러가 조용히 버리던 것을 드러냅니다.
+
+## 5. 해결해야 하는 문제
+
+| 항목 | 내용 |
+| --- | --- |
+| **골든 평가 미실행** | PoC 가설의 측정치입니다. 06 골든 평가를 현재 후보로 돌리지 않았습니다. 직전 측정값은 성공 시나리오 recall 50%(16/32), 목표 80% |
+| **경로 품질** | J001 step 6~16에서 upload ↔ parsed-db 왕복 4회, step 20 설정 화면 이탈, step 25·27 CSV 중복. 사람이 따라갈 여정이 아닙니다. milestone의 중복·역행 edge가 경로에 그대로 반영됩니다 |
+| **제품 등록 미시도** | 전 산출물이 로컬 probe입니다. `.scenarioforge` 제품 state는 여전히 `fact: failed`, progress 20% |
+| **단일 대상** | AXSE만 검증했습니다. RA-DAR 일반화 미확인 |
+| **수행 어댑터** | 웹만 구현. Windows·Android·iOS 없음 |
+| **RA-DAR 그라운딩** | 71.4%로 목표 90% 미달. 실패 8건 전부 대상 서술 문제(글자 없는 아이콘 버튼, 잘린 셀, 접미사만 다른 반복 컨트롤) |
+
+### 다음 작업 순서
+
+1. 06 골든 평가를 `RUN-AXSE-AGENTIC-20260918-01`의 05 후보로 실행해 recall 측정
+2. 경로 품질 개선 — milestone edge 중복·역행 제거
+3. 제품 backend 등록 경로로 동일 결과 재현
+4. RA-DAR 일반화 확인
+
+## 6. 저장소 구조
+
+| 디렉터리 | 책임 |
+| --- | --- |
+| `apps/desktop` | Electron main 오케스트레이션, renderer 표현, 자격증명 |
+| `packages/contracts` | 생성·실행 공통 계약 |
+| `packages/pi-runtime` | Pi 도구 스키마, 서버 소유 값, provider 재시도 |
+| `packages/scenario-pipeline` | 스캐너, 정본 ID, 근거, 그래프 도구, reviewer 게이트 |
+| `packages/project-runtime` | 런타임 템플릿과 `.scenarioforge` 경로 정책 |
+| `packages/runtime-state` | reducer, 저널, 복구 |
+| `packages/test-runtime` | 비전 step 컴파일러, 좌표계, 제안 게이트 |
+| `scripts/run-staged-axse-*.mjs` | 단계별 생성 하네스 러너 |
+| `docs/architecture` | 설계 문서 |
+| `docs/reports` | 진행 보고서 |
+| `docs/solutions` | 검증된 수정 이력과 회귀 테스트 기록 |
+| `docs/validation` | 실측 run 증거 |
+| `test_project_source` | 분석 픽스처 (저장소에 포함하지 않음) |
+
+## 7. 개발
+
+Node는 `package.json`의 engine 요구(`>=22.19.0`)를 만족해야 합니다. `node:sqlite`를 사용하므로 Node 20에서는 테스트가 실행되지 않습니다.
+
+```sh
+npm test         # 197건
 npm run typecheck
-npm test
+npm run build
+npm run dev      # Electron 앱
 ```
 
-브라우저에서 화면 목업만 검수할 때:
+단계형 생성 하네스는 Electron 컨텍스트에서 실행합니다(자격증명이 `safeStorage`에 있습니다).
 
-```bash
-npm run dev:web
+```sh
+npx esbuild scripts/run-staged-axse-source-survey.mjs --bundle --platform=node --format=esm \
+  --target=node22 --external:electron '--external:@earendil-works/*' --external:typescript-compiler \
+  --outfile=apps/desktop/out/staged-probe/run-staged-axse-source-survey.mjs
+
+npx electron apps/desktop/out/staged-probe/run-staged-axse-source-survey.mjs --run-id RUN-AXSE-AGENTIC-YYYYMMDD-NN
 ```
 
-다음 preview query를 사용할 수 있습니다.
-
-```text
-?preview=modal
-?preview=workspace
-?preview=progress
-?preview=result
-?preview=result-selected
-?preview=test-running
-?preview=test-failed
-?preview=evidence-library
-?preview=evidence-failure
-```
-
-README 화면을 동일한 Electron 렌더러에서 다시 캡처할 때는 `npm run dev:web`을 실행한 상태에서 별도 터미널로 다음 명령을 사용합니다.
-
-```bash
-npm run capture:readme
-```
-
-## 화면별 시스템 설명
-
-### 1. 분석 프로젝트 선택
-
-사용자가 분석할 로컬 소스 디렉터리를 선택하는 도입 화면입니다. Electron에서는 native directory dialog가 열리고, 선택한 디렉터리만 분석 작업 범위로 전달합니다.
-
-![Electron 프로젝트 선택 화면](artifacts/electron-onboarding.png)
-
-### 2. LLM 연결 설정
-
-LLM provider, endpoint, model, API key를 설정합니다. 모달이 열리면 뒤 화면을 흐림 처리해 현재 설정 작업에 집중하도록 구성했습니다.
-
-![LLM 설정 모달](artifacts/screen-modal.png)
-
-### 3. 프로젝트 작업대와 생성 이력
-
-선택 프로젝트, 연결 모델, 생성 이력을 한 화면에서 확인합니다. 기존 완료 이력을 열면 분석 생성 단계를 다시 실행하지 않고 프로젝트의 `.scenarioforge/runs/{runId}/scenario-set.json`을 읽어 결과 화면으로 이동합니다.
-
-![프로젝트 작업대](artifacts/screen-workspace.png)
-
-### 4. 분석 파이프라인
-
-분석 중에는 `SRC → FACT → WIKI → SCENARIO` 단계와 전체 진행률을 함께 표시합니다. 현재 진행 데이터는 Renderer 목업이며, 후속 Agent Runtime이 동일 IPC 계약으로 실제 진행 이벤트를 발행합니다.
-
-![분석 진행 화면](artifacts/screen-progress.png)
-
-### 5. 시나리오 결과와 채팅
-
-왼쪽 채팅과 오른쪽 시나리오 시트의 높이를 맞췄습니다. 시나리오는 업무 분류와 `SCN-{업무코드}-{3자리 순번}` 규칙으로 구분되고, 각 케이스의 사전 조건·실행 스텝·기대 결과를 펼쳐 확인할 수 있습니다. 시나리오를 채팅으로 끌면 ID만 백틱 블록으로 입력됩니다.
-
-![시나리오 결과 화면](artifacts/screen-result-aligned.png)
-
-### 6. 테스트 실행 입력
-
-시나리오 전체 또는 개별 선택 시 우측 실행 패널이 열립니다. 테스트 대상 URL과 필요한 테스트용 개인정보를 JSON으로 입력하며, `확인하세요`를 통해 예시 구조를 볼 수 있습니다.
-
-![테스트 실행 입력 패널](artifacts/screen-result-selected.png)
-
-### 7. 순차 테스트 수행
-
-선택한 시나리오는 위에서 아래로, 각 스텝은 번호 순서대로 수행합니다. 왼쪽에서 실행 이력을 유지하고, 중앙 대기열에서 케이스·스텝 상태를 확인하며, 오른쪽에는 가장 최근 완료 스텝의 화면과 판정 요약을 표시합니다. 수행 중에도 상단 내비게이션으로 시나리오를 확인하거나 증적 화면을 열 수 있습니다.
-
-![순차 테스트 수행 화면](artifacts/screen-test-running.png)
-
-### 8. 실패 증적 상세
-
-각 스텝이 완료되면 대상 화면 1장을 저장합니다. 실패한 스텝은 실패 시점 화면을 우선 표시하고 실패 직전 화면, 이전 단계 완료 화면, 기대·실제 결과, 오류 분류·코드를 함께 관리합니다. 질의응답은 이 화면에 중복 배치하지 않고 `시나리오에서 보기`를 통해 시나리오 도출 화면으로 돌아가도록 구성했습니다.
-
-![실패 증적 상세 화면](artifacts/screen-test-failure-evidence.png)
-
-> 현재 수행·증적 데이터와 캡처 대상 화면은 프런트 화면 검증을 위한 고정 fixture입니다. 실제 대상 브라우저 제어, 화면 캡처, 오류 수집과 로컬 파일 저장은 후속 Test Runner 백엔드가 같은 공유 계약에 연결합니다.
-
-## 로컬 결과 저장 컨셉
-
-분석 결과는 대상 프로젝트 안에 함께 보관해 같은 프로젝트를 다시 열었을 때 바로 접근할 수 있도록 설계합니다.
-
-```text
-분석 대상 프로젝트/
-└── .scenarioforge/
-    ├── project.json
-    ├── runtime/                       # 하네스·스킬·서브에이전트 구성 예정
-    └── runs/
-        └── {runId}/
-            ├── facts/
-            ├── wiki/
-            ├── scenario-set.json
-            └── tests/
-                └── {executionId}/
-                    ├── manifest.json  # 실행·케이스·스텝 판정
-                    └── evidence/      # 단계 화면과 오류 증적
-```
-
-`.scenarioforge/`는 분석 대상 프로젝트가 소유하는 로컬 데이터이며, 이 애플리케이션 저장소의 `.gitignore`에도 제외되어 있습니다. 대상 프로젝트에서의 커밋 여부와 보존 정책은 후속 설정 화면에서 선택할 수 있도록 할 예정입니다.
-
-## 다음 작업: Pi 하네스와 실제 Test Runner 연결
-
-현재 화면은 테스트 수행·증적 상태 계약을 사용하는 프런트 fixture까지 구현했습니다. 다음 백엔드 범위는 이 화면을 실제 Pi 세션과 격리된 Test Runner에 연결하는 영역입니다.
-
-1. 선택 시나리오, 대상 URL, 테스트용 JSON을 typed IPC 요청으로 전달
-2. Electron main이 별도 Runner/Utility Process를 시작해 UI 프로세스와 격리
-3. 원시 이벤트를 `PiEventAdapter → 백엔드 도메인 상태 → 도메인 이벤트` 순서로 변환
-4. 시나리오 스텝별 실행 상태, 로그, 재시도·중단 이벤트 스트리밍
-5. 스텝 완료 화면과 실패 직전·실패 시점 화면, 오류 정보 저장
-6. 민감정보 원문이 로그와 증적에 남지 않도록 field masking 적용
-7. `.scenarioforge/runs/{runId}/tests/{executionId}/`에 manifest와 증적 기록
-8. 완료 이력에서 실행 결과와 증적을 재조회하고 실패 스텝만 다시 실행
-
-실제 테스트 실행은 ScenarioForge의 설계 영역과 구분해 TestVista 실행 영역으로 표시할 예정입니다.
+개발 규칙은 [`AGENTS.md`](AGENTS.md)에 있습니다.

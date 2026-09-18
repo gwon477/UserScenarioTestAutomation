@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "scenario_matches": [
+    {
+      "golden_ref": "AXSE-SCN-0044",
+      "candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "score": 0.58,
+      "success_candidate_refs": [
+        "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+        "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+        "SCN-COMPONENT-MAINPAGE-77035738-002",
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+        "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+        "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+        "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+        "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+        "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+        "SCN-COMPONENT-MAINPAGE-2B4DBE33-001"
+      ],
+      "success_score": 0.5,
+      "resilience_candidate_refs": [
+        "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001"
+      ],
+      "resilience_score": 0.78,
+      "rationale": "The upload failure and successful retry are directly represented, and separate candidates sketch the downstream route and Excel terminal, but no single continuous recovery handoff preserves the same task through generation, download, and logout."
+    }
+  ]
+}

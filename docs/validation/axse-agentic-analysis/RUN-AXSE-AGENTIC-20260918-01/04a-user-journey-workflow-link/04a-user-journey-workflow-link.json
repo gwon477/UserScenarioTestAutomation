@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-USER-JOURNEY-WORKFLOW-LINK",
+    "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+    "source_root_hash": "sha256:48c9939f0b87e06ef9132db9aba2c059c4c73d6d4168153a8b9cbf480509f838",
+    "journey_artifact_hash": "sha256:5a5f422fe3012a988b328f7462c5fa8b22447ae5c6595fe1b75b9bf9699b5590",
+    "fact_graph_artifact_hash": "sha256:f09dd36affbab9527601f5a58708a1f1ddd7a6fc13d7ce8746e4b3e2f0dbdd2e",
+    "business_workflow_mapping_artifact_hash": "sha256:7bba4d73aa20131dd19f12d74fbf25d5cdb5e872f0282a1ce910997941183040",
+    "generated_with": "pi-coding-agent"
+  },
+  "artifacts": {
+    "link_patch": {
+      "path": "user-journey-workflow-link-patch.json",
+      "content_hash": "sha256:9b27e1f2b162eb9a83179c61408c9741edb4925a7b1cc6643ffddc65dfa4dd04"
+    },
+    "compiled_links": {
+      "path": "user-journey-workflow-links.json",
+      "content_hash": "sha256:c7c14e3e55d469aec4e3012927212e8d03f0b43a50282dfe4b6375e98e4d43e9"
+    }
+  }
+}

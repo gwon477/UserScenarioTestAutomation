@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-BUSINESS-WORKFLOW-MAPPING",
+    "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+    "source_root_hash": "sha256:48c9939f0b87e06ef9132db9aba2c059c4c73d6d4168153a8b9cbf480509f838",
+    "classification_artifact_id": "03-business-classification",
+    "classification_artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+    "fact_graph_artifact_id": "03a-fact-graph",
+    "fact_graph_artifact_hash": "sha256:f09dd36affbab9527601f5a58708a1f1ddd7a6fc13d7ce8746e4b3e2f0dbdd2e",
+    "generated_with": "pi-coding-agent"
+  },
+  "artifacts": {
+    "workflow_classification_mapping": {
+      "path": "workflow-classification-mapping.json",
+      "content_hash": "sha256:d6f213033ee5afd7a9772d1ce026466fca5ab9cdd0452716fdc0c7cd5452b5fd"
+    },
+    "business_catalog": {
+      "path": "business-catalog.json",
+      "content_hash": "sha256:93c5dc77075e61b1e7c175a8690bc30a80a9b0b6e8d932c0e14e2b2baad95116"
+    }
+  }
+}

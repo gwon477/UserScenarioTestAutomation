@@ -1,0 +1,100 @@
+{
+  "pass": false,
+  "issues": [
+    {
+      "code": "EDGE_ELEMENT_SCREEN_MISMATCH",
+      "path": "edges.14.on",
+      "message": "Edge trigger element must belong to the edge source screen."
+    },
+    {
+      "code": "EDGE_ELEMENT_SCREEN_MISMATCH",
+      "path": "edges.15.on",
+      "message": "Edge trigger element must belong to the edge source screen."
+    },
+    {
+      "code": "EDGE_ELEMENT_SCREEN_MISMATCH",
+      "path": "edges.18.on",
+      "message": "Edge trigger element must belong to the edge source screen."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-loginformpage-button-root-6da22694]",
+      "message": "EL-component-loginformpage-button-root-6da22694 at frontend/src/features/login/login-form.page.jsx:104 changes journey-relevant source state without evidence-linked predicates; states=loading."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-loginpage-button-root-7fc3a516]",
+      "message": "EL-component-loginpage-button-root-7fc3a516 at frontend/src/features/login/login.page.jsx:71 changes journey-relevant source state without evidence-linked predicates; states=fetchError|loadingProjects."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-mainpage-button-button-42861f4f]",
+      "message": "EL-component-mainpage-button-button-42861f4f at frontend/src/features/main/pages/main.page.jsx:122 changes journey-relevant source state without evidence-linked predicates; states=taskMenuOpen."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-mainpage-button-root-bcee2686]",
+      "message": "EL-component-mainpage-button-root-bcee2686 at frontend/src/features/main/pages/main.page.jsx:133 changes journey-relevant source state without evidence-linked predicates; states=taskMenuOpen."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-mainpage-button-button-18fa77ae].interaction.action_kind",
+      "message": "EL-component-mainpage-button-button-18fa77ae at frontend/src/features/main/pages/main.page.jsx:139 is a backend-classified journey action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-36595b84]",
+      "message": "EL-component-businesspage-button-root-36595b84 at frontend/src/features/main/pages/main.page.jsx:504 changes journey-relevant source state without evidence-linked predicates; states=flowTextLoading."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-1778051a]",
+      "message": "EL-component-businesspage-button-root-1778051a at frontend/src/features/main/pages/main.page.jsx:512 changes journey-relevant source state without evidence-linked predicates; states=presetGeneration|presetMessage|presetOpen|presetProgress|presetRequestingId|presetRows|presetStatus|selectedFlow."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-csv-csv-6c4c2394]",
+      "message": "EL-component-businesspage-button-csv-csv-6c4c2394 at frontend/src/features/main/pages/main.page.jsx:567 changes journey-relevant source state without evidence-linked predicates; states=exportingCsv|generationMessage."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-tc-57c3dae7]",
+      "message": "EL-component-businesspage-button-tc-57c3dae7 at frontend/src/features/main/pages/main.page.jsx:570 changes journey-relevant source state without evidence-linked predicates; states=generationMessage|generationNotice|refreshKey."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-csv-csv-8dba6894]",
+      "message": "EL-component-scenariopage-button-csv-csv-8dba6894 at frontend/src/features/main/pages/main.page.jsx:1215 changes journey-relevant source state without evidence-linked predicates; states=downloadMessage|downloading."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-excel-excel-e83a36d0]",
+      "message": "EL-component-scenariopage-button-excel-excel-e83a36d0 at frontend/src/features/main/pages/main.page.jsx:1218 changes journey-relevant source state without evidence-linked predicates; states=downloadMessage|downloading."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-parseddbpage-button-button-bec78487].interaction.action_kind",
+      "message": "EL-component-parseddbpage-button-button-bec78487 at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:318 is a backend-classified journey action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-parseddbpage-button-button-bec78487]",
+      "message": "EL-component-parseddbpage-button-button-bec78487 at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:318 changes journey-relevant source state without evidence-linked predicates; states=draftQuery|page|query|tabId."
+    },
+    {
+      "code": "FACT_JOURNEY_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-mainpage-button-button-18fa77ae]",
+      "message": "EL-component-mainpage-button-button-18fa77ae at frontend/src/features/main/pages/main.page.jsx:139 is a backend-derived journey action but has no FACT edge; handlers=STAGE_ORDER.indexOf|dispatch|isStageAvailable|pageSelected|setPage|taskApi.updateStage|taskBootstrapped."
+    },
+    {
+      "code": "FACT_JOURNEY_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-parseddbpage-button-button-bec78487]",
+      "message": "EL-component-parseddbpage-button-button-bec78487 at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:318 is a backend-derived journey action but has no FACT edge; handlers=handleTabChange|setCurrentPage|setDbCache|setDraftQuery|setQuery|setTabId."
+    },
+    {
+      "code": "FACT_GRAPH_TRANSITION_COVERAGE_MISSING",
+      "path": "$.edges",
+      "message": "2 source-backed transition obligations are missing."
+    }
+  ]
+}

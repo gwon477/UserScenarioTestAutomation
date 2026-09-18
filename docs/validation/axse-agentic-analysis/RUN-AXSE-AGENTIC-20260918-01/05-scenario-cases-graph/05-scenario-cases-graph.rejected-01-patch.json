@@ -1,0 +1,1124 @@
+{
+  "schema_version": 1,
+  "scenario_updates": [
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D514A88-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page remains or advances as supplied; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Select the button filter.",
+          "expected": "The business-page filter operation is available; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-940A9FA5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request CSV generation or export.",
+          "expected": "The CSV operation is attempted on the business page; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-940A9FA5-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt CSV generation or export.",
+          "expected": "The CSV operation does not complete successfully on the business page; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Navigate back using 이전.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-0ADA3322-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the current modal.",
+          "expected": "The business page remains available; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-E76552A4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Switch to 컨텍스트 큐브.",
+          "expected": "The business page shows the requested view if supported; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-D378820A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the current modal.",
+          "expected": "The business page remains available; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EC9352E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the current modal.",
+          "expected": "The business page remains available; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Switch to 카테고리 트리.",
+          "expected": "The business page shows the requested view if supported; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle 전체 해제 / 전체 선택.",
+          "expected": "The selection changes according to the supplied prior state; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle 전체 해제 / 전체 선택.",
+          "expected": "The selection changes according to the supplied prior state; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the current modal.",
+          "expected": "The business page remains available; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Scenario generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request 시나리오 · TC 도출.",
+          "expected": "The scenario page is reached if generation succeeds; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6BF3BA20-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        },
+        {
+          "index": 6,
+          "text": "Flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Scenario generation is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt 시나리오 · TC 도출.",
+          "expected": "The first generation attempt does not complete successfully and remains on the business page; runtime outcome is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Retry 시나리오 · TC 도출.",
+          "expected": "The retry reaches the scenario page if recovery succeeds; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-5C765240-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle the supplied expand control.",
+          "expected": "The business page reflects the supplied expand toggle if supported; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle 선택.",
+          "expected": "The selection changes according to the supplied prior state; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle 선택.",
+          "expected": "The selection changes according to the supplied prior state; runtime outcome is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-547A1466-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The login user ID is present."
+        },
+        {
+          "index": 1,
+          "text": "The login password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login loading is false."
+        },
+        {
+          "index": 3,
+          "text": "Projects are available."
+        },
+        {
+          "index": 4,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 5,
+          "text": "Upload submission is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate to 테스트 시나리오.",
+          "expected": "The upload page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Navigate with 이동 중… / 다음 단계 →.",
+          "expected": "The parsed database page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to 업무 매핑.",
+          "expected": "The business page is reached; runtime outcome is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle 선택.",
+          "expected": "The selection changes according to the supplied prior state; runtime outcome is unverified."
+        }
+      ]
+    }
+  ]
+}

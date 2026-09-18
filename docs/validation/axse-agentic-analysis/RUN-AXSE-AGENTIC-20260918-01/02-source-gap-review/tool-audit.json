@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "01-source-survey"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-gaps"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 9,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 10,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "AGENTIC_SOURCE_TOOLS_NOT_USED",
+      "validation_issues": [],
+      "artifact_id": "02-source-gap-review"
+    },
+    {
+      "sequence": 11,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 1,
+      "requested_budget": 10000,
+      "effective_budget": 10000,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 12,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 12000,
+      "effective_budget": 12517,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 13,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 18000,
+      "effective_budget": 77898,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 14,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 10000,
+      "effective_budget": 10000,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 15,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review"
+    }
+  ]
+}

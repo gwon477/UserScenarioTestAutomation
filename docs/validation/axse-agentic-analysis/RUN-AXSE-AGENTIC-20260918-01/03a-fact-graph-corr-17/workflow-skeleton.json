@@ -1,0 +1,1522 @@
+{
+  "schema_version": 2,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "workflows": [
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-8d514a88",
+      "goal": "button (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-button-1b959aaf",
+        "PRED-issue-filter-changed",
+        "E-0001"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-940a9fa5",
+      "goal": "CSV 생성 중 / CSV 내보내기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [
+        "PRED-csv-download-failure=true"
+      ],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-csv-csv-6c4c2394",
+        "PRED-csv-download-failure",
+        "PRED-csv-download-output",
+        "E-0012",
+        "E-0013"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-86c2ff8c",
+      "goal": "이전 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "SCR-component-parseddbpage",
+        "EL-component-businesspage-button-root-25ad2a2c",
+        "PRED-modal-open",
+        "E-0014"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-0ada3322",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-36a555c2",
+        "PRED-preset-modal-open",
+        "PRED-preset-requesting-id",
+        "E-0015"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-e76552a4",
+      "goal": "컨텍스트 큐브 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-456a2904",
+        "PRED-cube-page-state",
+        "E-0016"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-d378820a",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-547f94d7",
+        "PRED-preset-modal-open",
+        "PRED-preset-requesting-id",
+        "E-0017"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-7ec9352e",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-74a73f90",
+        "PRED-flow-text-open",
+        "E-0018"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-86dffaba",
+      "goal": "카테고리 트리 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-7b5cc90c",
+        "PRED-category-page-changed",
+        "E-0002"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-6d777bfb",
+      "goal": "전체 해제 / 전체 선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-8b53f325",
+        "PRED-flows-checked-changed",
+        "E-0003"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-bd399e7b",
+      "goal": "전체 해제 / 전체 선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-d2f35683",
+        "PRED-flows-checked-changed",
+        "E-0004"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-8b2611d2",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-ee5902ee",
+        "PRED-flow-text-open",
+        "E-0005"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-6bf3ba20",
+      "goal": "요청 중 / 시나리오 · TC 도출 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-generation-failure=true"
+      ],
+      "variation_axes": [
+        "PRED-flows-selected",
+        "PRED-generation-requesting"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-flows-selected": "true",
+          "PRED-generation-requesting": "false"
+        }
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "SCR-component-scenariopage",
+        "EL-component-businesspage-button-tc-57c3dae7",
+        "PRED-flows-selected",
+        "PRED-generation-completed",
+        "PRED-generation-failure",
+        "PRED-generation-requesting",
+        "E-0006",
+        "E-0007"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-5c765240",
+      "goal": "v / > (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-v-2f1469b8",
+        "PRED-modal-open",
+        "E-0008"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-8d384820",
+      "goal": "선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-checkbox-root-2506f0f8",
+        "PRED-flows-checked-changed",
+        "E-0009"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-40d5175b",
+      "goal": "선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-checkbox-root-ba5e72bc",
+        "PRED-flows-checked-changed",
+        "E-0010"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-businesspage-547a1466",
+      "goal": "선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cites": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-checkbox-root-f484b897",
+        "PRED-flows-checked-changed",
+        "E-0011"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-loginformpage-104bdb2f",
+      "goal": "로그인 중… / 로그인 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [
+        "PRED-login-failure=true"
+      ],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [],
+      "cites": [
+        "SCR-component-loginformpage",
+        "EL-component-loginformpage-button-root-6da22694",
+        "PRED-login-failure",
+        "E-0019"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-loginformpage-3721e6a6",
+      "goal": "로그인 중… / 로그인 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-login-user-id-present",
+        "PRED-login-password-present",
+        "PRED-login-loading"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-login-user-id-present": "present",
+          "PRED-login-password-present": "present",
+          "PRED-login-loading": "false"
+        }
+      },
+      "depends_on": [],
+      "cites": [
+        "SCR-component-loginformpage",
+        "SCR-component-loginpage",
+        "EL-component-loginformpage-button-root-6da22694",
+        "PRED-login-completed",
+        "PRED-login-loading",
+        "PRED-login-password-present",
+        "PRED-login-user-id-present",
+        "E-0020"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-loginformpage-aef66388",
+      "goal": "아이디 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [],
+      "cites": [
+        "SCR-component-loginformpage",
+        "EL-component-loginformpage-input-root-2e21d8ec",
+        "PRED-login-user-id-present",
+        "E-0021"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-loginformpage-5199dbef",
+      "goal": "패스워드 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [],
+      "cites": [
+        "SCR-component-loginformpage",
+        "EL-component-loginformpage-input-root-cc350d8a",
+        "PRED-login-password-present",
+        "E-0022"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-loginpage-eec1c540",
+      "goal": "button (component:LoginPage)",
+      "entry_screens": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-projects-available"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-projects-available": "true"
+        }
+      },
+      "depends_on": [
+        "WF-component-loginformpage-3721e6a6"
+      ],
+      "cites": [
+        "SCR-component-loginpage",
+        "SCR-component-mainpage",
+        "EL-component-loginpage-button-button-199ada70",
+        "PRED-projects-available",
+        "E-0023"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-loginpage-f3dfe66b",
+      "goal": "조회 중… / ↺ 새로고침 (component:LoginPage)",
+      "entry_screens": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "failure_terminals": [
+        "PRED-projects-failure=true"
+      ],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-loginformpage-3721e6a6"
+      ],
+      "cites": [
+        "SCR-component-loginpage",
+        "EL-component-loginpage-button-root-7fc3a516",
+        "PRED-projects-failure",
+        "PRED-projects-loading",
+        "E-0024",
+        "E-0025"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-loginpage-24d62594",
+      "goal": "⏏ 로그아웃 (component:LoginPage)",
+      "entry_screens": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-loginformpage-3721e6a6"
+      ],
+      "cites": [
+        "SCR-component-loginpage",
+        "SCR-component-loginformpage",
+        "EL-component-loginpage-button-root-b10e4291",
+        "PRED-projects-available",
+        "E-0026"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-mainpage-2b4dbe33",
+      "goal": "⏏ 로그아웃 (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-loginpage-eec1c540"
+      ],
+      "cites": [
+        "SCR-component-mainpage",
+        "SCR-component-loginpage",
+        "EL-component-mainpage-button-root-0bae6c59",
+        "PRED-projects-available",
+        "E-0027"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-mainpage-4e38e24f",
+      "goal": "테스트 시나리오 (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-loginpage-eec1c540"
+      ],
+      "cites": [
+        "SCR-component-mainpage",
+        "SCR-component-uploadpage",
+        "EL-component-mainpage-button-root-25ceb4be",
+        "PRED-upload-file-present",
+        "E-0028"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-mainpage-275bc2d0",
+      "goal": "홈으로 (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-loginpage-eec1c540"
+      ],
+      "cites": [
+        "SCR-component-mainpage",
+        "SCR-component-uploadpage",
+        "EL-component-mainpage-button-root-4870b226",
+        "PRED-upload-file-present",
+        "E-0029"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-mainpage-0b02b6d1",
+      "goal": "설정 / settings (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-loginpage-eec1c540"
+      ],
+      "cites": [
+        "SCR-component-mainpage",
+        "SCR-component-settingspage",
+        "EL-component-mainpage-button-settings-6c53b1fc",
+        "PRED-modal-open",
+        "E-0030"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-mainpage-0f4d0fcd",
+      "goal": "TS / TS 작업 없음 / ⌄ (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-loginpage-eec1c540"
+      ],
+      "cites": [
+        "SCR-component-mainpage",
+        "EL-component-mainpage-button-ts-ts-7f059f08",
+        "PRED-task-menu-open",
+        "E-0031"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-parseddbpage-6771c0b3",
+      "goal": "button (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-uploadpage-5aba1e3a"
+      ],
+      "cites": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-button-bec78487",
+        "PRED-db-page-valid",
+        "E-0032"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-parseddbpage-9184ec77",
+      "goal": "이전 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-db-page-valid"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-db-page-valid": "true"
+        }
+      },
+      "depends_on": [
+        "WF-component-uploadpage-5aba1e3a"
+      ],
+      "cites": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-root-966c5272",
+        "PRED-db-cache-state",
+        "PRED-db-page-valid",
+        "PRED-db-page-view-changed",
+        "E-0033"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-parseddbpage-4a38f0de",
+      "goal": "이전 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-uploadpage-5aba1e3a"
+      ],
+      "cites": [
+        "SCR-component-parseddbpage",
+        "SCR-component-uploadpage",
+        "EL-component-parseddbpage-button-root-beefb97f",
+        "PRED-db-page-valid",
+        "E-0034"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-parseddbpage-26d6afdd",
+      "goal": "검색 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-uploadpage-5aba1e3a"
+      ],
+      "cites": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-root-cccee16a",
+        "PRED-db-page-state",
+        "PRED-db-query-applied",
+        "E-0035"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-parseddbpage-89f62e5f",
+      "goal": "다음 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-db-page-valid",
+        "PRED-db-total-pages-available"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-db-page-valid": "true",
+          "PRED-db-total-pages-available": "true"
+        }
+      },
+      "depends_on": [
+        "WF-component-uploadpage-5aba1e3a"
+      ],
+      "cites": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-root-e88717bc",
+        "PRED-db-cache-state",
+        "PRED-db-page-valid",
+        "PRED-db-page-view-changed",
+        "PRED-db-total-pages-available",
+        "E-0036"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-parseddbpage-083f5434",
+      "goal": "업무 매핑 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-uploadpage-5aba1e3a"
+      ],
+      "cites": [
+        "SCR-component-parseddbpage",
+        "SCR-component-businesspage",
+        "EL-component-parseddbpage-button-root-fee689e3",
+        "PRED-db-page-valid",
+        "E-0037"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-parseddbpage-fbf48ce7",
+      "goal": "input (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-uploadpage-5aba1e3a"
+      ],
+      "cites": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-input-input-c6b159ba",
+        "PRED-db-draft-query-state",
+        "E-0038"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-scenariopage-ea14afd0",
+      "goal": "CSV 생성 중 / CSV 받기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-scenario-csv-download-failure=true"
+      ],
+      "variation_axes": [
+        "PRED-scenario-downloading"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-scenario-downloading": "false"
+        }
+      },
+      "depends_on": [
+        "WF-component-businesspage-6bf3ba20"
+      ],
+      "cites": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-csv-csv-8dba6894",
+        "PRED-scenario-csv-download-failure",
+        "PRED-scenario-csv-download-output",
+        "PRED-scenario-downloading",
+        "E-0039",
+        "E-0040"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-scenariopage-13c02421",
+      "goal": "Excel 생성 중 / Excel 다운로드 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-scenario-excel-download-failure=true"
+      ],
+      "variation_axes": [
+        "PRED-scenario-downloading"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-scenario-downloading": "false"
+        }
+      },
+      "depends_on": [
+        "WF-component-businesspage-6bf3ba20"
+      ],
+      "cites": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-excel-excel-e83a36d0",
+        "PRED-scenario-downloading",
+        "PRED-scenario-excel-download-failure",
+        "PRED-scenario-excel-download-output",
+        "E-0041",
+        "E-0042"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-scenariopage-155f546e",
+      "goal": "화면 접기 / 화면 개 더보기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-businesspage-6bf3ba20"
+      ],
+      "cites": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-4e83beae",
+        "PRED-scenario-sections-expanded",
+        "E-0043"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-scenariopage-130159bc",
+      "goal": "액션 접기 / 액션 개 더보기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-businesspage-6bf3ba20"
+      ],
+      "cites": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-93f714c4",
+        "PRED-scenario-sections-expanded",
+        "E-0044"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-scenariopage-ed2efd9e",
+      "goal": "데이터 접기 / 데이터 개 더보기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-businesspage-6bf3ba20"
+      ],
+      "cites": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-a53a01ca",
+        "PRED-scenario-sections-expanded",
+        "E-0045"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-scenariopage-8d4b7217",
+      "goal": "이전 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-businesspage-6bf3ba20"
+      ],
+      "cites": [
+        "SCR-component-scenariopage",
+        "SCR-component-businesspage",
+        "EL-component-scenariopage-button-root-e8f38c3b",
+        "PRED-modal-open",
+        "E-0046"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-scenariopage-2c40057c",
+      "goal": "케이스 상세 접기 / 케이스 상세 펼치기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-businesspage-6bf3ba20"
+      ],
+      "cites": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-ff33f465",
+        "PRED-scenario-sections-expanded",
+        "E-0047"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-settingspage-695469fc",
+      "goal": "button (component:SettingsPage)",
+      "entry_screens": [
+        "SCR-component-settingspage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-0b02b6d1"
+      ],
+      "cites": [
+        "SCR-component-settingspage",
+        "EL-component-settingspage-button-button-910f144d",
+        "PRED-settings-strategy-changed",
+        "E-0048"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-settingspage-4f42f993",
+      "goal": "저장 (component:SettingsPage)",
+      "entry_screens": [
+        "SCR-component-settingspage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-0b02b6d1"
+      ],
+      "cites": [
+        "SCR-component-settingspage",
+        "EL-component-settingspage-button-root-5143850f",
+        "PRED-modal-open",
+        "E-0049"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-settingspage-bf70bec5",
+      "goal": "초기화 (component:SettingsPage)",
+      "entry_screens": [
+        "SCR-component-settingspage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-0b02b6d1"
+      ],
+      "cites": [
+        "SCR-component-settingspage",
+        "EL-component-settingspage-button-root-f8aa61af",
+        "PRED-modal-open",
+        "E-0050"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-settingspage-b08dcc4b",
+      "goal": "checkbox (component:SettingsPage)",
+      "entry_screens": [
+        "SCR-component-settingspage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-0b02b6d1"
+      ],
+      "cites": [
+        "SCR-component-settingspage",
+        "EL-component-settingspage-checkbox-checkbox-23b497b5",
+        "PRED-modal-open",
+        "E-0051"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-settingspage-5bf96fbd",
+      "goal": "select (component:SettingsPage)",
+      "entry_screens": [
+        "SCR-component-settingspage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-0b02b6d1"
+      ],
+      "cites": [
+        "SCR-component-settingspage",
+        "EL-component-settingspage-select-select-7c9618e4",
+        "PRED-modal-open",
+        "E-0052"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-uploadpage-5aba1e3a",
+      "goal": "이동 중… / 다음 단계 → (component:UploadPage)",
+      "entry_screens": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-upload-complete",
+        "PRED-upload-submitting"
+      ],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {
+          "PRED-upload-complete": "true",
+          "PRED-upload-submitting": "false"
+        }
+      },
+      "depends_on": [
+        "WF-component-mainpage-4e38e24f"
+      ],
+      "cites": [
+        "SCR-component-uploadpage",
+        "SCR-component-parseddbpage",
+        "EL-component-uploadpage-button-root-5ee46c72",
+        "PRED-upload-complete",
+        "PRED-upload-submitting",
+        "E-0053"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-uploadpage-f1072540",
+      "goal": "다시 업로드 (component:UploadPage)",
+      "entry_screens": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-4e38e24f"
+      ],
+      "cites": [
+        "SCR-component-uploadpage",
+        "EL-component-uploadpage-button-root-5fcbb836",
+        "PRED-upload-file-present",
+        "E-0054"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-uploadpage-d6e6a43f",
+      "goal": "취소 / 다시 선택 (component:UploadPage)",
+      "entry_screens": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-4e38e24f"
+      ],
+      "cites": [
+        "SCR-component-uploadpage",
+        "EL-component-uploadpage-button-root-e481383d",
+        "PRED-upload-file-present",
+        "E-0055"
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "workflow": "WF-component-uploadpage-06490a15",
+      "goal": "OK / MD / 파싱 완료된 문서 / KB · UTF-8 / 이미 파싱이 완료된 상태입니다. / 선택됨 / 대기 (component:UploadPage)",
+      "entry_screens": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "combination": {
+        "strategy": "base-choice",
+        "axis_defaults": {}
+      },
+      "depends_on": [
+        "WF-component-mainpage-4e38e24f"
+      ],
+      "cites": [
+        "SCR-component-uploadpage",
+        "SCR-component-parseddbpage",
+        "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8",
+        "PRED-upload-file-present",
+        "E-0056"
+      ],
+      "status": "draft"
+    }
+  ]
+}

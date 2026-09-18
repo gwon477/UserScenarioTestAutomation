@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-f7f082f6",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-SURVEY",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-api-v1-documents-52d5ce70",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/api/v1/documents.py",
+      "start_line": 1,
+      "end_line": 212,
+      "content_hash": "sha256:bb47432c3d83a6b6a9cadf25d102b8b9077b211eb242bc8c9ce9c4c35837ca4d",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-f7f082f6"
+    },
+    {
+      "source_id": "SRC-backend-app-api-v1-projects-af57f10c",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/api/v1/projects.py",
+      "start_line": 1,
+      "end_line": 46,
+      "content_hash": "sha256:0e9fe25d3731edad0a2e7899ed6f244e54a774e9e59b9375210bc4910d23bf33",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-f7f082f6"
+    }
+  ],
+  "created_at": "2026-09-03T23:50:42.933Z"
+}

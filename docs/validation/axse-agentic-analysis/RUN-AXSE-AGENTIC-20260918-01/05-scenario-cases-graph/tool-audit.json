@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.scenario.compile",
+      "result": "ok",
+      "scenario_count": 58
+    },
+    {
+      "sequence": 2,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_NARRATION_PATCH_INCOMPLETE",
+      "artifact_id": "05-scenario-cases-graph",
+      "attempt": 1
+    },
+    {
+      "sequence": 3,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "05-scenario-cases-graph"
+    }
+  ]
+}

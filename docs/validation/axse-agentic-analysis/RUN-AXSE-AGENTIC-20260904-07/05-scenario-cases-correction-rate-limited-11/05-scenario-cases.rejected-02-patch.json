@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "stage": "scenario-case-correction-patch",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "base_artifact_hash": "sha256:3abfda0d7ed8419fc3f663c20d6505cb3f233b5838a6c3b67dc4964e7f7cc0cd",
+  "changes": [
+    {
+      "target_ref": "CT001",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "카테고리 트리에서 업무흐름을 선택하여 추적성 매트릭스까지 완료",
+          "classification_refs": [
+            "C001",
+            "C002",
+            "C003",
+            "C004",
+            "C005",
+            "C006",
+            "C007",
+            "C008",
+            "C010",
+            "C011",
+            "C012",
+            "C013",
+            "C014",
+            "C016",
+            "C017",
+            "C018",
+            "C019",
+            "C020",
+            "C022",
+            "C023",
+            "C024",
+            "C025",
+            "C026",
+            "C027",
+            "C028",
+            "C029",
+            "C030"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "선택할 프로젝트와 처리할 MD 문서가 준비되어 있다.",
+            "파싱 완료된 TS 작업과 카테고리별 업무흐름 데이터가 준비되어 있다."
+          ],
+          "variation": {
+            "milestone_position": 3,
+            "condition": "업무 매핑 화면에서 카테고리 트리를 열고 하나의 업무흐름을 선택한다.",
+            "expected_outcome": "선택한 업무흐름과 매핑 검증 결과가 표시되고 시나리오·테스트 케이스 생성 요청이 접수된다.",
+            "recovery_action": null
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 기존 TS 작업을 선택한다.",
+              "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 2,
+              "action": "작업을 부트스트랩하고 준비된 MD 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+              "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다."
+            },
+            {
+              "position": 3,
+              "journey_milestone_position": 3,
+              "action": "Parsed DB에서 업무 매핑으로 이동하고 카테고리 트리를 열어 하나의 업무흐름을 선택한 뒤 매핑 검증을 확인하고 생성을 요청한다.",
+              "observable_outcome": "선택한 업무흐름, 매핑 검증 결과와 생성 요청 접수 상태가 표시된다."
+            },
+            {
+              "position": 4,
+              "journey_milestone_position": 4,
+              "action": "생성 진행률과 업무흐름별 실행 이력을 확인한다.",
+              "observable_outcome": "생성 진행과 업무흐름별 처리 상태가 표시된다."
+            },
+            {
+              "position": 5,
+              "journey_milestone_position": 5,
+              "action": "생성 완료 후 시나리오와 테스트 케이스를 조회하고 CSV와 Excel을 다운로드한다.",
+              "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다."
+            },
+            {
+              "position": 6,
+              "journey_milestone_position": 6,
+              "action": "메인 셸에서 로그아웃한다.",
+              "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다."
+            }
+          ],
+          "terminal": {
+            "kind": "business-result-and-exit",
+            "expected_result": "카테고리 트리에서 선택한 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물을 확보한 뒤 세션이 초기화되고 로그인 흐름으로 돌아간다.",
+            "final_step_position": 6
+          }
+        }
+      ]
+    },
+    {
+      "target_ref": "CT002",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "검색 조건에 해당하는 Parsed DB 데이터가 없음",
+          "classification_refs": [
+            "C001",
+            "C002",
+            "C003",
+            "C004",
+            "C005",
+            "C006",
+            "C007",
+            "C008",
+            "C010",
+            "C011",
+            "C012",
+            "C013",
+            "C014",
+            "C016",
+            "C017",
+            "C018",
+            "C019",
+            "C020",
+            "C022",
+            "C023",
+            "C024",
+            "C025",
+            "C026",
+            "C027",
+            "C028",
+            "C029",
+            "C030"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "선택할 프로젝트와 처리할 MD 문서가 준비되어 있다.",
+            "문서가 파싱 완료되어 Parsed DB 단계에 접근할 수 있다.",
+            "Parsed DB의 선택한 탭에 검색 결과가 없는 키워드가 준비되어 있다."
+          ],
+          "variation": {
+            "milestone_position": 3,
+            "condition": "Parsed DB에서 검색 결과가 없는 키워드로 검색한다.",
+            "expected_outcome": "선택한 조건에 해당하는 데이터가 없다는 빈 상태가 표시되고 해당 조회 결과가 표시되지 않는다.",
+            "recovery_action": null
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 기존 TS 작업을 선택한다.",
+              "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 2,
+              "action": "작업을 부트스트랩하고 MD 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+              "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터 조회 화면이 표시된다."
+            },
+            {
+              "position": 3,
+              "journey_milestone_position": 3,
+              "action": "Parsed DB의 선택한 탭에 검색 결과가 없는 키워드를 입력하고 검색한다.",
+              "observable_outcome": "선택한 조건에 해당하는 화면·업무 데이터가 없다는 빈 상태가 표시되고 결과 목록이 비어 있다."
+            }
+          ],
+          "terminal": {
+            "kind": "expected-failure",
+            "expected_result": "검색 조건에 해당하는 Parsed DB 데이터가 없어 빈 상태가 표시되고 정상적인 매핑 검증 및 생성 요청으로 진행하지 않는다.",
+            "final_step_position": 3
+          }
+        }
+      ]
+    }
+  ]
+}

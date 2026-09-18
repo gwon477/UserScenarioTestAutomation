@@ -1,0 +1,18 @@
+{
+  "sceneId": "03-llm-settings",
+  "cues": [
+    {
+      "text": "분석에 쓸 모델과 API 키를 한 번만 저장합니다",
+      "startMs": 0,
+      "endMs": 3355,
+      "box": {
+        "x0": 571,
+        "y0": 926,
+        "x1": 1350,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [],
+  "elapsedMs": 5153
+}

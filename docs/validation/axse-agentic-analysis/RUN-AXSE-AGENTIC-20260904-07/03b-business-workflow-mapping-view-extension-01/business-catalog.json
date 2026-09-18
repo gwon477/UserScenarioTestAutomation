@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "classifications": [
+    {
+      "classification_id": "BC-1C23FFAE5311",
+      "label": "인증하고 프로젝트 작업공간에 진입하기",
+      "workflow_refs": [
+        "WF-component-loginformpage-104bdb2f",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-d6fe005d",
+        "WF-component-loginpage-24d62594",
+        "WF-component-loginpage-41525b39",
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "edge_refs": [
+        "E-0019",
+        "E-0020",
+        "E-0021",
+        "E-0022",
+        "E-0023",
+        "E-0024",
+        "E-0025",
+        "E-0026",
+        "E-0027"
+      ]
+    },
+    {
+      "classification_id": "BC-7256B46B4441",
+      "label": "업무흐름과 연결 화면의 매핑을 검증하고 생성 요청하기",
+      "workflow_refs": [
+        "WF-component-businesspage-067a194d",
+        "WF-component-businesspage-090dc6f7",
+        "WF-component-businesspage-0ada3322",
+        "WF-component-businesspage-20f25040",
+        "WF-component-businesspage-2855894a",
+        "WF-component-businesspage-3d3d7a88",
+        "WF-component-businesspage-527a091f",
+        "WF-component-businesspage-6c5bb760",
+        "WF-component-businesspage-7bea4b09",
+        "WF-component-businesspage-7ec9352e",
+        "WF-component-businesspage-7eded949",
+        "WF-component-businesspage-8276e604",
+        "WF-component-businesspage-86dffaba",
+        "WF-component-businesspage-8b2611d2",
+        "WF-component-businesspage-c434992f",
+        "WF-component-businesspage-ce6f1e6c",
+        "WF-component-businesspage-d378820a",
+        "WF-component-businesspage-d5b999b1",
+        "WF-component-businesspage-ffb625fb",
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "edge_refs": [
+        "E-0001",
+        "E-0002",
+        "E-0003",
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007",
+        "E-0008",
+        "E-0009",
+        "E-0010",
+        "E-0011",
+        "E-0012",
+        "E-0015",
+        "E-0016",
+        "E-0042",
+        "E-0059",
+        "E-0061",
+        "E-0062",
+        "E-0063",
+        "E-0064",
+        "E-0065",
+        "E-0066"
+      ]
+    },
+    {
+      "classification_id": "BC-8BE340136771",
+      "label": "TS 작업 수명주기와 단계 접근을 관리하기",
+      "workflow_refs": [
+        "WF-component-businesspage-86c2ff8c",
+        "WF-component-mainpage-0a5a07c5",
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-mainpage-275bc2d0",
+        "WF-component-mainpage-2b4dbe33",
+        "WF-component-mainpage-2d79d452",
+        "WF-component-mainpage-3762e523",
+        "WF-component-mainpage-4e38e24f",
+        "WF-component-mainpage-5e43f314",
+        "WF-component-mainpage-77035738",
+        "WF-component-mainpage-93f2e255",
+        "WF-component-mainpage-da4ef2e0",
+        "WF-component-parseddbpage-4a38f0de",
+        "WF-component-scenariopage-8d4b7217"
+      ],
+      "edge_refs": [
+        "E-0017",
+        "E-0028",
+        "E-0029",
+        "E-0030",
+        "E-0031",
+        "E-0032",
+        "E-0033",
+        "E-0034",
+        "E-0035",
+        "E-0036",
+        "E-0037",
+        "E-0038",
+        "E-0039",
+        "E-0041",
+        "E-0047",
+        "E-0067",
+        "E-0068",
+        "E-0069"
+      ]
+    },
+    {
+      "classification_id": "BC-955108A426B3",
+      "label": "파싱된 업무 데이터를 조회하고 진단하기",
+      "workflow_refs": [
+        "WF-component-businesspage-5ee2ef2f",
+        "WF-component-businesspage-8d514a88",
+        "WF-component-businesspage-e76552a4",
+        "WF-component-parseddbpage-26d6afdd",
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-parseddbpage-69504b45",
+        "WF-component-parseddbpage-83b87ab7",
+        "WF-component-parseddbpage-fbf48ce7"
+      ],
+      "edge_refs": [
+        "E-0018",
+        "E-0040",
+        "E-0058",
+        "E-0060",
+        "E-0070",
+        "E-0071",
+        "E-0072",
+        "E-0073"
+      ]
+    },
+    {
+      "classification_id": "BC-A08E122E1FD4",
+      "label": "생성 결과를 확인하고 추적성 산출물을 내보내기",
+      "workflow_refs": [
+        "WF-component-businesspage-3b512bf9",
+        "WF-component-scenariopage-0279db25",
+        "WF-component-scenariopage-09e713d0",
+        "WF-component-scenariopage-273ff7d7",
+        "WF-component-scenariopage-5ba71d1e",
+        "WF-component-scenariopage-71c8f374",
+        "WF-component-scenariopage-77b62b1a",
+        "WF-component-scenariopage-8401214e",
+        "WF-component-scenariopage-ace8821a",
+        "WF-component-scenariopage-add57065",
+        "WF-component-scenariopage-bda46f65",
+        "WF-component-scenariopage-e630dcab",
+        "WF-component-scenariopage-f72174ff",
+        "WF-frontend-src-features-main-pages-main-page-5a796664",
+        "WF-frontend-src-features-main-pages-main-page-77f6565a"
+      ],
+      "edge_refs": [
+        "E-0013",
+        "E-0014",
+        "E-0043",
+        "E-0044",
+        "E-0045",
+        "E-0046",
+        "E-0054",
+        "E-0055",
+        "E-0056",
+        "E-0057",
+        "E-0074",
+        "E-0075",
+        "E-0076",
+        "E-0077",
+        "E-0078",
+        "E-0079",
+        "E-0080",
+        "E-0081",
+        "E-0082",
+        "E-0083",
+        "E-0084",
+        "E-0085"
+      ]
+    },
+    {
+      "classification_id": "BC-A8A94B12A366",
+      "label": "TS 작업에 문서를 업로드하고 구조화 데이터로 준비하기",
+      "workflow_refs": [
+        "WF-component-uploadpage-0b0e9837",
+        "WF-component-uploadpage-1f1eaeca",
+        "WF-component-uploadpage-6c730330",
+        "WF-component-uploadpage-833d06aa",
+        "WF-component-uploadpage-bc687d2a"
+      ],
+      "edge_refs": [
+        "E-0048",
+        "E-0049",
+        "E-0050",
+        "E-0051",
+        "E-0052",
+        "E-0053"
+      ]
+    }
+  ]
+}

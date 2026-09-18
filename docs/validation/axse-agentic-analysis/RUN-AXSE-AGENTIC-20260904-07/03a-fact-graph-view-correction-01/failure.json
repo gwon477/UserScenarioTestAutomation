@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "pi-fact-graph",
+  "error_code": "FACT_SOURCE_STATE_PREDICATE_MISSING"
+}

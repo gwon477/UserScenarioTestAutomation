@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>생성 단계 handoff</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --color-paper:#f5f5f5; --color-ink:#2d3142; --color-muted:#4f5d75; --color-accent:#eb6c36;
+      --font-sans:'Geist','Apple SD Gothic Neo',system-ui,sans-serif; --font-serif:'Instrument Serif','Apple SD Gothic Neo',serif; --font-mono:'Geist Mono',ui-monospace,monospace; }
+    body { font-family:var(--font-sans); background:var(--color-paper); color:var(--color-ink); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:3rem 2rem; }
+    .frame { max-width:1200px; width:100%; }
+    .eyebrow { font-family:var(--font-mono); font-size:0.66rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-muted); margin-bottom:0.5rem; }
+    h1 { font-family:var(--font-serif); font-size:clamp(1.5rem,2.4vw + 0.75rem,2rem); font-weight:400; letter-spacing:-0.02em; line-height:1.15; color:var(--color-ink); margin-bottom:1.5rem; }
+    svg { width:100%; min-width:900px; display:block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Flowchart · ScenarioForge</p>
+    <h1>생성 단계 handoff</h1>
+    <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stage-handoff-title stage-handoff-desc">
+      <title id="stage-handoff-title">생성 단계 handoff</title>
+      <desc id="stage-handoff-desc">각 생성 단계에서 Pi author가 허용된 소스를 다시 읽어 산출물을 쓰면 백엔드가 schema, ID, hash, evidence를 검증하고, 신뢰 경계 위반은 즉시 종료하며, 의미 누락은 gap 목록으로 다음 단계 입력이 되고, 골든 평가자는 05 단계 이후에만 분리되어 동작하는 흐름도.</desc>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+        <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#f5f5f5"/>
+      <path d="M 480,80 V 120" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <path d="M 480,176 V 216" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <path d="M 480,272 V 304" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <path d="M 580,340 H 680" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="622" y="320" width="15" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="630" y="329" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">예</text>
+      <path d="M 480,376 V 416" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="492" y="390" width="29" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="492" y="399" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="start" letter-spacing="0.06em">아니오</text>
+      <path d="M 360,444 H 208 Q 200,444 200,436 V 68 Q 200,60 208,60 H 360" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="128" y="246" width="64" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="192" y="255" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end" letter-spacing="0.06em">다음 단계 입력</text>
+      <path d="M 600,444 H 680" fill="none" stroke="#2e5aa8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-link)"/>
+      <rect x="618" y="424" width="43" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="640" y="433" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">05 이후</text>
+      <rect x="360" y="40" width="240" height="40" rx="20" fill="#f5f5f5"/>
+      <rect x="360" y="40" width="240" height="40" rx="20" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+      <text x="480" y="64" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">이전 단계 산출물 + gap 목록</text>
+      <rect x="360" y="120" width="240" height="56" rx="6" fill="#f5f5f5"/>
+      <rect x="360" y="120" width="240" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="480" y="146" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">Pi author 세션</text>
+      <text x="480" y="162" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">허용된 소스 재읽기 → 산출물 작성</text>
+      <rect x="360" y="216" width="240" height="56" rx="6" fill="#f5f5f5"/>
+      <rect x="360" y="216" width="240" height="56" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+      <text x="480" y="242" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">백엔드 검증</text>
+      <text x="480" y="258" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">schema · ID · hash · evidence</text>
+      <polygon points="480,304 580,340 480,376 380,340" fill="#f5f5f5"/>
+      <polygon points="480,304 580,340 480,376 380,340" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="480" y="344" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">신뢰 경계 위반?</text>
+      <rect x="680" y="320" width="200" height="40" rx="20" fill="#f5f5f5"/>
+      <rect x="680" y="320" width="200" height="40" rx="20" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="780" y="344" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">fail-closed 종료</text>
+      <rect x="360" y="416" width="240" height="56" rx="6" fill="#f5f5f5"/>
+      <rect x="360" y="416" width="240" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="480" y="442" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">의미 검토 → gap 목록</text>
+      <text x="480" y="458" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">누락·불확실 항목을 carry-forward</text>
+      <rect x="680" y="416" width="200" height="56" rx="6" fill="#f5f5f5"/>
+      <rect x="680" y="416" width="200" height="56" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+      <text x="780" y="442" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">골든 평가자</text>
+      <text x="780" y="458" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">읽기 전용 · 생성 agent와 분리</text>
+      <line x1="40" y1="544" x2="920" y2="544" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <text x="40" y="560" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.14em">LEGEND</text>
+      <rect x="120" y="552" width="10" height="10" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36"/><text x="136" y="561" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">백엔드 게이트 (fail-closed)</text>
+      <rect x="340" y="552" width="10" height="10" rx="2" fill="#ffffff" stroke="#2d3142"/><text x="356" y="561" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">단계 · 판단</text>
+      <rect x="500" y="552" width="10" height="10" rx="5" fill="rgba(79,93,117,0.10)" stroke="#7a8399"/><text x="516" y="561" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">입력 · 종료</text>
+      <line x1="660" y1="557" x2="676" y2="557" stroke="#2e5aa8" stroke-width="1" stroke-dasharray="4,3"/><text x="684" y="561" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">생성 이후에만 (골든 미노출)</text>
+    </svg>
+  </div>
+</body>
+</html>

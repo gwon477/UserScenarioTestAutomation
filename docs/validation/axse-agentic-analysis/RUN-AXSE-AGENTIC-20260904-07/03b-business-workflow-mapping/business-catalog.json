@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "classifications": [
+    {
+      "classification_id": "BC-1B1ACC734BB8",
+      "label": "TS 작업 수명주기와 단계 접근을 관리하기",
+      "workflow_refs": [
+        "WF-component-businesspage-86c2ff8c",
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-mainpage-275bc2d0",
+        "WF-component-mainpage-2b4dbe33",
+        "WF-component-mainpage-2d79d452",
+        "WF-component-mainpage-3762e523",
+        "WF-component-mainpage-4e38e24f",
+        "WF-component-mainpage-5e43f314",
+        "WF-component-mainpage-77035738",
+        "WF-component-parseddbpage-4a38f0de",
+        "WF-component-scenariopage-8d4b7217"
+      ],
+      "edge_refs": [
+        "E-0017",
+        "E-0028",
+        "E-0029",
+        "E-0030",
+        "E-0031",
+        "E-0032",
+        "E-0033",
+        "E-0034",
+        "E-0035",
+        "E-0036",
+        "E-0037",
+        "E-0038",
+        "E-0039",
+        "E-0041",
+        "E-0047"
+      ]
+    },
+    {
+      "classification_id": "BC-1C23FFAE5311",
+      "label": "인증하고 프로젝트 작업공간에 진입하기",
+      "workflow_refs": [
+        "WF-component-loginformpage-104bdb2f",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-d6fe005d",
+        "WF-component-loginpage-24d62594",
+        "WF-component-loginpage-41525b39",
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "edge_refs": [
+        "E-0019",
+        "E-0020",
+        "E-0021",
+        "E-0022",
+        "E-0023",
+        "E-0024",
+        "E-0025",
+        "E-0026",
+        "E-0027"
+      ]
+    },
+    {
+      "classification_id": "BC-991D814D33EA",
+      "label": "생성 결과를 확인하고 추적성 산출물을 내보내기",
+      "workflow_refs": [
+        "WF-component-businesspage-3b512bf9",
+        "WF-component-scenariopage-09e713d0",
+        "WF-component-scenariopage-f72174ff"
+      ],
+      "edge_refs": [
+        "E-0013",
+        "E-0014",
+        "E-0043",
+        "E-0044",
+        "E-0045",
+        "E-0046"
+      ]
+    },
+    {
+      "classification_id": "BC-A8A94B12A366",
+      "label": "TS 작업에 문서를 업로드하고 구조화 데이터로 준비하기",
+      "workflow_refs": [
+        "WF-component-uploadpage-0b0e9837",
+        "WF-component-uploadpage-1f1eaeca",
+        "WF-component-uploadpage-6c730330",
+        "WF-component-uploadpage-833d06aa",
+        "WF-component-uploadpage-bc687d2a"
+      ],
+      "edge_refs": [
+        "E-0048",
+        "E-0049",
+        "E-0050",
+        "E-0051",
+        "E-0052",
+        "E-0053"
+      ]
+    },
+    {
+      "classification_id": "BC-AF3315D349A0",
+      "label": "업무흐름과 연결 화면의 매핑을 검증하고 생성 요청하기",
+      "workflow_refs": [
+        "WF-component-businesspage-067a194d",
+        "WF-component-businesspage-20f25040",
+        "WF-component-businesspage-2855894a",
+        "WF-component-businesspage-3d3d7a88",
+        "WF-component-businesspage-527a091f",
+        "WF-component-businesspage-6c5bb760",
+        "WF-component-businesspage-7bea4b09",
+        "WF-component-businesspage-7eded949",
+        "WF-component-businesspage-c434992f",
+        "WF-component-businesspage-ce6f1e6c",
+        "WF-component-businesspage-d5b999b1",
+        "WF-component-businesspage-ffb625fb",
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "edge_refs": [
+        "E-0001",
+        "E-0002",
+        "E-0003",
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007",
+        "E-0008",
+        "E-0009",
+        "E-0010",
+        "E-0011",
+        "E-0012",
+        "E-0015",
+        "E-0016",
+        "E-0042"
+      ]
+    },
+    {
+      "classification_id": "BC-B46FEDEA6797",
+      "label": "파싱된 업무 데이터를 조회하고 진단하기",
+      "workflow_refs": [
+        "WF-component-businesspage-5ee2ef2f",
+        "WF-component-parseddbpage-6771c0b3"
+      ],
+      "edge_refs": [
+        "E-0018",
+        "E-0040"
+      ]
+    }
+  ]
+}

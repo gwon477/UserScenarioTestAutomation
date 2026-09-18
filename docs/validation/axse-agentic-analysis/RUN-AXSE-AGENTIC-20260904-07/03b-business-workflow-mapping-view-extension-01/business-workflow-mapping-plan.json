@@ -1,0 +1,1788 @@
+{
+  "schema_version": 1,
+  "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+  "primary_perspective": "business-capability",
+  "primary_classification_refs": [
+    "C001",
+    "C002",
+    "C003",
+    "C004",
+    "C005",
+    "C006"
+  ],
+  "cross_cutting_classification_refs": [
+    "C007",
+    "C008",
+    "C009",
+    "C010",
+    "C011",
+    "C012",
+    "C013",
+    "C014",
+    "C015",
+    "C016",
+    "C017",
+    "C018",
+    "C019",
+    "C020",
+    "C021",
+    "C022",
+    "C023",
+    "C024",
+    "C025",
+    "C026",
+    "C027",
+    "C028",
+    "C029",
+    "C030",
+    "C031",
+    "C032",
+    "C033"
+  ],
+  "classification_candidates": [
+    {
+      "classification_ref": "C001",
+      "perspective": "business-capability",
+      "perspective_label": "업무 역량",
+      "label": "인증하고 프로젝트 작업공간에 진입하기",
+      "description": "사용자가 로그인한 뒤 프로젝트를 선택해 인증된 테스트 작업 세션을 시작한다.",
+      "user_responsibilities": [
+        "아이디와 패스워드를 입력하고 로그인한다.",
+        "프로젝트 목록을 조회하고 프로젝트 카드를 선택한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "인증된 사용자 세션과 선택된 프로젝트 컨텍스트를 확보한다."
+      ]
+    },
+    {
+      "classification_ref": "C002",
+      "perspective": "business-capability",
+      "perspective_label": "업무 역량",
+      "label": "TS 작업에 문서를 업로드하고 구조화 데이터로 준비하기",
+      "description": "선택한 TS 작업에 MD/TXT 문서를 업로드하고 기계적 파싱을 완료한다.",
+      "user_responsibilities": [
+        "새 TS 작업을 만들거나 기존 작업을 선택한다.",
+        "MD/TXT 파일을 선택해 업로드 및 파싱을 시작하고 상태를 확인한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "문서가 TS 작업에 저장되고 화면·필드·이벤트·업무흐름 데이터가 준비된다."
+      ]
+    },
+    {
+      "classification_ref": "C003",
+      "perspective": "business-capability",
+      "perspective_label": "업무 역량",
+      "label": "파싱된 업무 데이터를 조회하고 진단하기",
+      "description": "사용자가 저장된 업무·화면·필드·이벤트·업무흐름을 검색과 페이지 조회로 검토하고 누락 화면 진단을 확인한다.",
+      "user_responsibilities": [
+        "업무·화면·필드·이벤트 탭을 전환하고 키워드로 검색한다.",
+        "페이지 단위 데이터를 확인하고 진단 결과를 검토한다."
+      ],
+      "source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "파싱 데이터 검토 결과와 업무 매핑 대상 범위를 확보한다."
+      ]
+    },
+    {
+      "classification_ref": "C004",
+      "perspective": "business-capability",
+      "perspective_label": "업무 역량",
+      "label": "업무흐름과 연결 화면의 매핑을 검증하고 생성 요청하기",
+      "description": "사용자가 업무흐름을 선택하고 업무·화면·이벤트 정합성을 확인한 뒤 시나리오·테스트 케이스 생성을 요청한다.",
+      "user_responsibilities": [
+        "업무흐름 또는 카테고리를 선택하고 전체·개별 선택을 조정한다.",
+        "매핑 검증 결과를 확인하고 선택 업무흐름의 생성을 요청한다."
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업무흐름 단위 프리셋 미리보기",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "선택 업무흐름 집합, 매핑 검증 결과와 시나리오·TC 생성 요청이 확보된다."
+      ]
+    },
+    {
+      "classification_ref": "C005",
+      "perspective": "business-capability",
+      "perspective_label": "업무 역량",
+      "label": "생성 결과를 확인하고 추적성 산출물을 내보내기",
+      "description": "사용자가 생성 진행과 업무흐름별 실행 이력을 확인한 뒤 시나리오·테스트 케이스 매트릭스를 조회하고 CSV·Excel로 받는다.",
+      "user_responsibilities": [
+        "생성 상태를 새로고침 또는 자동 폴링으로 확인한다.",
+        "결과를 검색·필터링하고 CSV 또는 Excel을 다운로드한다."
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업무흐름 단위 프리셋 미리보기",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "생성된 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물을 확보한다."
+      ]
+    },
+    {
+      "classification_ref": "C006",
+      "perspective": "business-capability",
+      "perspective_label": "업무 역량",
+      "label": "TS 작업 수명주기와 단계 접근을 관리하기",
+      "description": "사용자가 인증 프로젝트의 TS 작업을 생성·선택하고 bootstrap 결과에 따라 업로드부터 결과 단계까지 접근한다.",
+      "user_responsibilities": [
+        "TS 작업 목록을 조회하고 작업을 자동 또는 수동 선택한다.",
+        "단계 내비게이션을 사용하고 단계 guard에 따라 접근 가능한 화면으로 이동한다."
+      ],
+      "source_area_refs": [
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "선택된 TS 작업 컨텍스트와 단계 접근 가능한 메인 작업 셸을 유지한다."
+      ]
+    },
+    {
+      "classification_ref": "C007",
+      "perspective": "user-role",
+      "perspective_label": "사용자 역할",
+      "label": "테스트 시나리오 생성 작업 수행자",
+      "description": "로그인된 사용자가 문서와 업무흐름을 준비하고 생성 결과를 검토하는 단일 작업 수행 주체로 나타난다.",
+      "user_responsibilities": [
+        "문서 처리와 업무흐름 선택을 수행한다.",
+        "생성 진행과 결과 산출물을 확인한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "테스트 시나리오 생성 업무를 시작부터 결과 확보까지 수행한다."
+      ]
+    },
+    {
+      "classification_ref": "C008",
+      "perspective": "authorization-scope",
+      "perspective_label": "접근 및 권한 범위",
+      "label": "인증 세션과 선택 프로젝트 범위로 작업 접근하기",
+      "description": "인증 성공과 프로젝트 선택이 메인 셸 및 TS 작업 기능에 전달되는 접근 범위를 결정한다.",
+      "user_responsibilities": [
+        "인증을 완료하고 프로젝트를 선택한다.",
+        "현재 프로젝트와 작업 컨텍스트에서 단계 기능을 사용한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "선택 프로젝트의 작업 단계에 접근할 수 있는 세션을 구성한다."
+      ]
+    },
+    {
+      "classification_ref": "C009",
+      "perspective": "business-responsibility",
+      "perspective_label": "업무 책임",
+      "label": "입력 문서와 파싱 준비 상태를 책임지기",
+      "description": "사용자는 처리할 파일을 선택하고 업로드·파싱 진행 및 실패 상태를 확인한다.",
+      "user_responsibilities": [
+        "처리 대상 MD/TXT 파일을 선택한다.",
+        "파싱 완료 또는 실패를 확인하고 필요한 재업로드를 수행한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "다음 단계에서 사용할 파싱 데이터가 정상적으로 준비된다."
+      ]
+    },
+    {
+      "classification_ref": "C010",
+      "perspective": "business-responsibility",
+      "perspective_label": "업무 책임",
+      "label": "매핑 정합성과 생성 범위를 확인하기",
+      "description": "사용자는 업무흐름 선택 범위와 연결 화면의 정합성을 확인한 뒤 생성 요청을 실행한다.",
+      "user_responsibilities": [
+        "누락·미포함 화면 진단과 매핑 검증 결과를 확인한다.",
+        "생성할 업무흐름을 선택한다."
+      ],
+      "source_area_refs": [
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "검토된 업무 범위에 기반한 생성 요청이 제출된다."
+      ]
+    },
+    {
+      "classification_ref": "C011",
+      "perspective": "workflow-stage",
+      "perspective_label": "업무 흐름 단계",
+      "label": "인증 및 프로젝트 선택 단계",
+      "description": "로그인과 프로젝트 선택 후 메인 테스트 시나리오 화면으로 진입하는 선행 단계다.",
+      "user_responsibilities": [
+        "로그인하고 프로젝트를 선택한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "메인 작업 셸 진입이 가능해진다."
+      ]
+    },
+    {
+      "classification_ref": "C012",
+      "perspective": "workflow-stage",
+      "perspective_label": "업무 흐름 단계",
+      "label": "문서 업로드 및 파싱 단계",
+      "description": "파일 선택과 업로드 후 파싱 상태를 확인해 Parsed DB 단계로 이동하는 단계다.",
+      "user_responsibilities": [
+        "파일을 업로드하고 파싱 완료를 확인한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "Parsed DB 조회를 위한 구조화 데이터가 준비된다."
+      ]
+    },
+    {
+      "classification_ref": "C013",
+      "perspective": "workflow-stage",
+      "perspective_label": "업무 흐름 단계",
+      "label": "검토 및 매핑 검증 단계",
+      "description": "Parsed DB에서 데이터를 검토한 뒤 업무흐름과 연결 화면의 정합성을 검증하는 단계다.",
+      "user_responsibilities": [
+        "저장 데이터를 조회하고 매핑 검증을 확인한다."
+      ],
+      "source_area_refs": [
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "생성 대상 업무흐름과 화면 범위가 정해진다."
+      ]
+    },
+    {
+      "classification_ref": "C014",
+      "perspective": "workflow-stage",
+      "perspective_label": "업무 흐름 단계",
+      "label": "생성 진행 및 결과 확인 단계",
+      "description": "생성 요청 이후 진행 상태와 실행 이력을 확인하고 최종 매트릭스로 이동하는 단계다.",
+      "user_responsibilities": [
+        "생성 상태와 결과를 확인한다.",
+        "최종 산출물을 내려받는다."
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "최종 시나리오·테스트 케이스와 추적성 파일을 확보한다."
+      ]
+    },
+    {
+      "classification_ref": "C015",
+      "perspective": "lifecycle-state",
+      "perspective_label": "수명주기 상태",
+      "label": "문서 파싱 상태",
+      "description": "문서 처리 상태가 업로드 전 대기, 업로드 완료, 파싱 중, 파싱 완료 또는 실패로 표시된다.",
+      "user_responsibilities": [
+        "현재 파싱 상태를 확인하고 실패 시 재시작한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "문서가 파싱 완료 상태로 전환된다."
+      ]
+    },
+    {
+      "classification_ref": "C016",
+      "perspective": "lifecycle-state",
+      "perspective_label": "수명주기 상태",
+      "label": "시나리오 생성 상태",
+      "description": "생성 작업의 진행·완료·실패 및 부분 완료 수가 결과 화면과 실행 이력에 표시된다.",
+      "user_responsibilities": [
+        "생성 진행률과 실패 건수를 확인한다."
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "생성 작업의 현재 상태와 완료 결과를 파악한다."
+      ]
+    },
+    {
+      "classification_ref": "C017",
+      "perspective": "lifecycle-state",
+      "perspective_label": "수명주기 상태",
+      "label": "TS 작업 단계 상태",
+      "description": "TS 작업의 bootstrap 결과에 따라 업로드·Parsed DB·업무 매핑·시나리오 단계 접근 가능 여부가 반영된다.",
+      "user_responsibilities": [
+        "현재 단계와 접근 가능한 다음 단계를 확인한다."
+      ],
+      "source_area_refs": [
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "작업 셸이 현재 작업 단계와 일치한다."
+      ]
+    },
+    {
+      "classification_ref": "C018",
+      "perspective": "data-domain",
+      "perspective_label": "데이터 도메인",
+      "label": "파싱된 업무 구조 데이터",
+      "description": "업무흐름, 화면, 필드, 이벤트와 진단 정보를 조회·검색하는 데이터 영역이다.",
+      "user_responsibilities": [
+        "탭과 검색을 사용해 구조 데이터를 검토한다."
+      ],
+      "source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "업무 매핑에 필요한 구조 데이터 범위를 확인한다."
+      ]
+    },
+    {
+      "classification_ref": "C019",
+      "perspective": "data-domain",
+      "perspective_label": "데이터 도메인",
+      "label": "시나리오 추적성 데이터",
+      "description": "생성된 시나리오·테스트 케이스와 화면·액션·테스트 데이터·기대결과를 포함하는 결과 데이터다.",
+      "user_responsibilities": [
+        "결과 행과 케이스 상세를 조회한다."
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "테스트 결과와 추적성 관계를 검토한다."
+      ]
+    },
+    {
+      "classification_ref": "C020",
+      "perspective": "channel-surface",
+      "perspective_label": "채널 및 표면",
+      "label": "대화형 작업 화면",
+      "description": "폼, 선택 화면, 탭, 체크박스, 검색, 모달과 진행 패널을 통해 작업을 수행한다.",
+      "user_responsibilities": [
+        "화면 컨트롤을 사용해 작업을 진행한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "사용자가 단계별 업무 기능을 직접 조작한다."
+      ]
+    },
+    {
+      "classification_ref": "C021",
+      "perspective": "channel-surface",
+      "perspective_label": "채널 및 표면",
+      "label": "파일 업로드 표면",
+      "description": "MD/TXT 파일 선택 또는 드래그 앤 드롭으로 문서를 입력하는 표면이다.",
+      "user_responsibilities": [
+        "파일을 선택하거나 드롭한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "문서 처리가 시작된다."
+      ]
+    },
+    {
+      "classification_ref": "C022",
+      "perspective": "channel-surface",
+      "perspective_label": "채널 및 표면",
+      "label": "파일 다운로드 표면",
+      "description": "최종 추적성 매트릭스를 CSV 또는 Excel 파일로 받는 표면이다.",
+      "user_responsibilities": [
+        "CSV 받기 또는 Excel 다운로드를 실행한다."
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "외부 활용 가능한 추적성 파일을 확보한다."
+      ]
+    },
+    {
+      "classification_ref": "C023",
+      "perspective": "input-source",
+      "perspective_label": "입력 원천",
+      "label": "Markdown 또는 텍스트 문서",
+      "description": "TS 작업의 구조화 데이터 준비를 위한 MD/TXT 문서 입력이다.",
+      "user_responsibilities": [
+        "처리할 문서를 선택하고 업로드한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "업무 구조 데이터가 생성될 입력이 제공된다."
+      ]
+    },
+    {
+      "classification_ref": "C024",
+      "perspective": "input-source",
+      "perspective_label": "입력 원천",
+      "label": "업무흐름 선택과 검색 조건",
+      "description": "생성 범위를 정하는 업무흐름·카테고리 선택과 조회 범위를 정하는 키워드 입력이다.",
+      "user_responsibilities": [
+        "업무흐름을 선택하고 검색어를 입력한다."
+      ],
+      "source_area_refs": [
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업무흐름 단위 프리셋 미리보기"
+      ],
+      "business_outcomes": [
+        "검토·생성할 업무 범위가 지정된다."
+      ]
+    },
+    {
+      "classification_ref": "C025",
+      "perspective": "output-deliverable",
+      "perspective_label": "출력 산출물",
+      "label": "파싱 데이터 검토 결과",
+      "description": "저장된 업무·화면·필드·이벤트 목록과 진단 결과로 제공되는 검토 산출물이다.",
+      "user_responsibilities": [
+        "조회 결과와 진단 패널을 검토한다."
+      ],
+      "source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "업무 매핑을 위한 확인된 데이터 범위를 얻는다."
+      ]
+    },
+    {
+      "classification_ref": "C026",
+      "perspective": "output-deliverable",
+      "perspective_label": "출력 산출물",
+      "label": "매핑 검증 및 생성 진행 결과",
+      "description": "업무·화면 매핑 검증 리포트, 프리셋 미리보기, 생성 진행과 실행 이력으로 제공되는 결과다.",
+      "user_responsibilities": [
+        "검증 리포트와 생성 진행 결과를 확인한다."
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "업무흐름 단위 프리셋 미리보기",
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "생성 범위와 생성 상태를 판단할 수 있다."
+      ]
+    },
+    {
+      "classification_ref": "C027",
+      "perspective": "output-deliverable",
+      "perspective_label": "출력 산출물",
+      "label": "CSV 및 Excel 추적성 파일",
+      "description": "최종 시나리오 매트릭스를 CSV 또는 Excel 응답으로 내려받는 파일 산출물이다.",
+      "user_responsibilities": [
+        "완료 결과에서 CSV와 Excel을 다운로드한다."
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "추적성 매트릭스를 파일 형태로 보관하거나 공유할 수 있다."
+      ]
+    },
+    {
+      "classification_ref": "C028",
+      "perspective": "integration-boundary",
+      "perspective_label": "통합 경계",
+      "label": "인증 및 세션 연계",
+      "description": "로그인 응답과 선택 프로젝트가 전역 세션 상태 및 이후 요청에 연결된다.",
+      "user_responsibilities": [
+        "인증과 프로젝트 선택을 완료한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "후속 작업 요청이 선택 프로젝트 컨텍스트에서 수행된다."
+      ]
+    },
+    {
+      "classification_ref": "C029",
+      "perspective": "integration-boundary",
+      "perspective_label": "통합 경계",
+      "label": "TS 작업·문서 파싱·Parsed DB 연계",
+      "description": "작업 생성과 문서 파싱 상태가 저장 데이터 조회 단계로 이어진다.",
+      "user_responsibilities": [
+        "작업을 선택하고 파싱 완료 후 Parsed DB로 이동한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "문서 입력이 조회 가능한 업무 구조 데이터로 전달된다."
+      ]
+    },
+    {
+      "classification_ref": "C030",
+      "perspective": "integration-boundary",
+      "perspective_label": "통합 경계",
+      "label": "업무흐름 생성·추적성 exporter 연계",
+      "description": "매핑된 업무흐름이 생성 진행 추적과 시나리오 매트릭스 CSV·Excel 응답으로 이어진다.",
+      "user_responsibilities": [
+        "생성을 요청하고 진행 및 다운로드 결과를 확인한다."
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "선택 범위가 생성 결과와 파일 산출물로 전달된다."
+      ]
+    },
+    {
+      "classification_ref": "C031",
+      "perspective": "risk-recovery",
+      "perspective_label": "위험 및 복구",
+      "label": "로그인·조회 오류 복구",
+      "description": "입력 누락과 로그인·프로젝트·데이터 조회 오류를 메시지로 표시하고 재조회 또는 흐름 복귀를 제공한다.",
+      "user_responsibilities": [
+        "오류 메시지를 확인하고 누락 입력을 보완하거나 새로고침한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "parsed-data-inspection"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "초기 접근과 데이터 검토를 재개할 수 있다."
+      ]
+    },
+    {
+      "classification_ref": "C032",
+      "perspective": "risk-recovery",
+      "perspective_label": "위험 및 복구",
+      "label": "업로드·파싱 실패 복구",
+      "description": "업로드/API 오류나 파싱 실패 후 파일 제거·재선택·재업로드와 파싱 재시작을 수행한다.",
+      "user_responsibilities": [
+        "실패 상태를 확인하고 새 파일로 처리를 재시작한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "실패한 문서 처리를 정상 파싱으로 회복한다."
+      ]
+    },
+    {
+      "classification_ref": "C033",
+      "perspective": "risk-recovery",
+      "perspective_label": "위험 및 복구",
+      "label": "생성·다운로드 상태 복구",
+      "description": "생성 실패·부분 완료와 다운로드 오류를 상태 메시지로 확인하고 새로고침 또는 결과 재확인을 수행한다.",
+      "user_responsibilities": [
+        "진행 상태를 재조회하고 다운로드 오류를 확인한다."
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "가능한 생성 결과와 추적성 파일 확보를 재시도할 수 있다."
+      ]
+    }
+  ],
+  "workflow_candidates": [
+    {
+      "workflow_ref": "WF-component-businesspage-8d514a88",
+      "goal": "button (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0058"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0058",
+          "source_action_ref": "EL-component-businesspage-button-button-1b959aaf",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "effect": "PRED-business-issue-filter-changed=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-8d514a88",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0058"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-0ada3322",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0059"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0059",
+          "source_action_ref": "EL-component-businesspage-button-root-36a555c2",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "effect": "PRED-preset-open=false && PRED-preset-generation-reset=true && PRED-preset-message-cleared=true && PRED-preset-progress-reset=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-0ada3322",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0059"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-e76552a4",
+      "goal": "컨텍스트 큐브 (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0060"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0060",
+          "source_action_ref": "EL-component-businesspage-button-root-456a2904",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "effect": "PRED-business-panel=context && PRED-business-cube-page-reset=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-e76552a4",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0060"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-d378820a",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0061"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0061",
+          "source_action_ref": "EL-component-businesspage-button-root-547f94d7",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "effect": "PRED-preset-open=false && PRED-preset-generation-reset=true && PRED-preset-message-cleared=true && PRED-preset-progress-reset=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-d378820a",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0061"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7ec9352e",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0062"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0062",
+          "source_action_ref": "EL-component-businesspage-button-root-74a73f90",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "effect": "PRED-flow-text-open=false",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-7ec9352e",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0062"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-86dffaba",
+      "goal": "카테고리 트리 (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0063"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0063",
+          "source_action_ref": "EL-component-businesspage-button-root-7b5cc90c",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "effect": "PRED-business-panel=category && PRED-business-category-page-reset=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-86dffaba",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0063"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8b2611d2",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0064"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0064",
+          "source_action_ref": "EL-component-businesspage-button-root-ee5902ee",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "effect": "PRED-flow-text-open=false",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-8b2611d2",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0064"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-090dc6f7",
+      "goal": "v / > (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0065"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0065",
+          "source_action_ref": "EL-component-businesspage-button-v-2f1469b8",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "guard": "PRED-business-category-open=false",
+          "effect": "PRED-business-category-open=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-090dc6f7",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0065"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8276e604",
+      "goal": "v / > (component:BusinessPage)",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0066"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0066",
+          "source_action_ref": "EL-component-businesspage-button-v-2f1469b8",
+          "branch_ref": "normal:2",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-businesspage",
+          "to_screen_ref": "SCR-component-businesspage",
+          "guard": "PRED-business-category-open=true",
+          "effect": "PRED-business-category-open=false",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-businesspage-8276e604",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0066"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-0a5a07c5",
+      "goal": "새로고침 (component:MainPage)",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "edge_refs": [
+        "E-0067"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0067",
+          "source_action_ref": "EL-component-mainpage-button-root-99d235ea",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-mainpage",
+          "to_screen_ref": "SCR-component-mainpage",
+          "effect": "PRED-page-refreshed=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-mainpage-0a5a07c5",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0067"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-93f2e255",
+      "goal": "TS / TS 작업 없음 / ⌄ (component:MainPage)",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "edge_refs": [
+        "E-0068"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0068",
+          "source_action_ref": "EL-component-mainpage-button-ts-ts-7f059f08",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-mainpage",
+          "to_screen_ref": "SCR-component-mainpage",
+          "guard": "PRED-task-menu-open=false",
+          "effect": "PRED-task-menu-open=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-mainpage-93f2e255",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0068"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-da4ef2e0",
+      "goal": "TS / TS 작업 없음 / ⌄ (component:MainPage)",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "edge_refs": [
+        "E-0069"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0069",
+          "source_action_ref": "EL-component-mainpage-button-ts-ts-7f059f08",
+          "branch_ref": "normal:2",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-mainpage",
+          "to_screen_ref": "SCR-component-mainpage",
+          "guard": "PRED-task-menu-open=true",
+          "effect": "PRED-task-menu-open=false",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-mainpage-da4ef2e0",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0069"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-69504b45",
+      "goal": "이전 (component:ParsedDbPage)",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0070"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0070",
+          "source_action_ref": "EL-component-parseddbpage-button-root-966c5272",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-parseddbpage",
+          "to_screen_ref": "SCR-component-parseddbpage",
+          "effect": "PRED-parsed-db-page=previous",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-parseddbpage-69504b45",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0070"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-26d6afdd",
+      "goal": "검색 (component:ParsedDbPage)",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0071"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0071",
+          "source_action_ref": "EL-component-parseddbpage-button-root-cccee16a",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-parseddbpage",
+          "to_screen_ref": "SCR-component-parseddbpage",
+          "effect": "PRED-parsed-db-query-applied=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-parseddbpage-26d6afdd",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0071"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-83b87ab7",
+      "goal": "다음 (component:ParsedDbPage)",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0072"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0072",
+          "source_action_ref": "EL-component-parseddbpage-button-root-e88717bc",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-parseddbpage",
+          "to_screen_ref": "SCR-component-parseddbpage",
+          "effect": "PRED-parsed-db-page=next",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-parseddbpage-83b87ab7",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0072"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-fbf48ce7",
+      "goal": "input (component:ParsedDbPage)",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0073"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0073",
+          "source_action_ref": "EL-component-parseddbpage-input-input-c6b159ba",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-parseddbpage",
+          "to_screen_ref": "SCR-component-parseddbpage",
+          "effect": "PRED-parsed-db-query-draft-changed=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-parseddbpage-fbf48ce7",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0073"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-bda46f65",
+      "goal": "button (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0054",
+        "E-0074"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0054",
+          "source_action_ref": "EL-component-scenariopage-button-button-b6ade5a6",
+          "branch_ref": "exception:1",
+          "outcome": "exception",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-matrix-error-visible=true && PRED-scenario-matrix-download-message-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        },
+        {
+          "edge_ref": "E-0074",
+          "source_action_ref": "EL-component-scenariopage-button-button-b6ade5a6",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-matrix-filter-changed=true && PRED-scenario-matrix-loaded=true && PRED-scenario-matrix-loaded-page-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-bda46f65",
+          "kind": "exception",
+          "edge_refs": [
+            "E-0054"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "workflow_ref": "WF-component-scenariopage-bda46f65",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0074"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-add57065",
+      "goal": "화면 접기 / 화면 개 더보기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0075"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0075",
+          "source_action_ref": "EL-component-scenariopage-button-root-4e83beae",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-screen-details-expanded=false",
+          "effect": "PRED-scenario-screen-details-expanded=true && PRED-scenario-expanded-sections-changed=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-add57065",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0075"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-e630dcab",
+      "goal": "화면 접기 / 화면 개 더보기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0076"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0076",
+          "source_action_ref": "EL-component-scenariopage-button-root-4e83beae",
+          "branch_ref": "normal:2",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-screen-details-expanded=true",
+          "effect": "PRED-scenario-screen-details-expanded=false && PRED-scenario-expanded-sections-changed=true",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-e630dcab",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0076"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-77b62b1a",
+      "goal": "액션 접기 / 액션 개 더보기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0077"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0077",
+          "source_action_ref": "EL-component-scenariopage-button-root-93f714c4",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-action-details-expanded=false",
+          "effect": "PRED-scenario-action-details-expanded=true && PRED-scenario-expanded-sections-changed=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-77b62b1a",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0077"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-5ba71d1e",
+      "goal": "액션 접기 / 액션 개 더보기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0078"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0078",
+          "source_action_ref": "EL-component-scenariopage-button-root-93f714c4",
+          "branch_ref": "normal:2",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-action-details-expanded=true",
+          "effect": "PRED-scenario-action-details-expanded=false && PRED-scenario-expanded-sections-changed=true",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-5ba71d1e",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0078"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-ace8821a",
+      "goal": "데이터 접기 / 데이터 개 더보기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0079"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0079",
+          "source_action_ref": "EL-component-scenariopage-button-root-a53a01ca",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-test-data-details-expanded=false",
+          "effect": "PRED-scenario-test-data-details-expanded=true && PRED-scenario-expanded-sections-changed=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-ace8821a",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0079"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-0279db25",
+      "goal": "데이터 접기 / 데이터 개 더보기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0080"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0080",
+          "source_action_ref": "EL-component-scenariopage-button-root-a53a01ca",
+          "branch_ref": "normal:2",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-test-data-details-expanded=true",
+          "effect": "PRED-scenario-test-data-details-expanded=false && PRED-scenario-expanded-sections-changed=true",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-0279db25",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0080"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-273ff7d7",
+      "goal": "케이스 상세 접기 / 케이스 상세 펼치기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0081"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0081",
+          "source_action_ref": "EL-component-scenariopage-button-root-ff33f465",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-case-details-expanded=false",
+          "effect": "PRED-scenario-case-details-expanded=true && PRED-scenario-expanded-sections-changed=true",
+          "scope": "view",
+          "feasibility": "source-supported",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-273ff7d7",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0081"
+          ],
+          "feasibility": "source-supported"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-8401214e",
+      "goal": "케이스 상세 접기 / 케이스 상세 펼치기 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0082"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0082",
+          "source_action_ref": "EL-component-scenariopage-button-root-ff33f465",
+          "branch_ref": "normal:2",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-case-details-expanded=true",
+          "effect": "PRED-scenario-case-details-expanded=false && PRED-scenario-expanded-sections-changed=true",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-8401214e",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0082"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-71c8f374",
+      "goal": "시나리오명 / 케이스명 검색 (component:ScenarioPage)",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0055",
+        "E-0083"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0055",
+          "source_action_ref": "EL-component-scenariopage-input-root-e0e2ecb2",
+          "branch_ref": "exception:1",
+          "outcome": "exception",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-matrix-error-visible=true && PRED-scenario-matrix-download-message-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        },
+        {
+          "edge_ref": "E-0083",
+          "source_action_ref": "EL-component-scenariopage-input-root-e0e2ecb2",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-component-scenariopage",
+          "to_screen_ref": "SCR-component-scenariopage",
+          "guard": "PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-query-changed=true && PRED-scenario-matrix-loaded=true && PRED-scenario-matrix-loaded-page-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-component-scenariopage-71c8f374",
+          "kind": "exception",
+          "edge_refs": [
+            "E-0055"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "workflow_ref": "WF-component-scenariopage-71c8f374",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0083"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-77f6565a",
+      "goal": "다음 (main)",
+      "entry_screen_refs": [
+        "SCR-frontend-src-features-main-pages-main-page"
+      ],
+      "success_terminal": "at(SCR-frontend-src-features-main-pages-main-page)",
+      "edge_refs": [
+        "E-0056",
+        "E-0084"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0056",
+          "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+          "branch_ref": "exception:1",
+          "outcome": "exception",
+          "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "to_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "guard": "PRED-scenario-next-page-enabled=true && PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-matrix-error-visible=true && PRED-scenario-matrix-download-message-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        },
+        {
+          "edge_ref": "E-0084",
+          "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "to_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "guard": "PRED-scenario-next-page-enabled=true && PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-matrix-loaded=true && PRED-scenario-matrix-loaded-page-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-frontend-src-features-main-pages-main-page-77f6565a",
+          "kind": "exception",
+          "edge_refs": [
+            "E-0056"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "workflow_ref": "WF-frontend-src-features-main-pages-main-page-77f6565a",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0084"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-5a796664",
+      "goal": "이전 (main)",
+      "entry_screen_refs": [
+        "SCR-frontend-src-features-main-pages-main-page"
+      ],
+      "success_terminal": "at(SCR-frontend-src-features-main-pages-main-page)",
+      "edge_refs": [
+        "E-0057",
+        "E-0085"
+      ],
+      "edges": [
+        {
+          "edge_ref": "E-0057",
+          "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+          "branch_ref": "exception:1",
+          "outcome": "exception",
+          "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "to_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "guard": "PRED-scenario-previous-page-enabled=true && PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-matrix-error-visible=true && PRED-scenario-matrix-download-message-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        },
+        {
+          "edge_ref": "E-0085",
+          "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+          "branch_ref": "normal:1",
+          "outcome": "normal",
+          "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "to_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+          "guard": "PRED-scenario-previous-page-enabled=true && PRED-scenario-matrix-loading=false",
+          "effect": "PRED-scenario-matrix-loaded=true && PRED-scenario-matrix-loaded-page-updated=true",
+          "scope": "view",
+          "feasibility": "runtime-unverified",
+          "status": "draft"
+        }
+      ],
+      "paths": [
+        {
+          "workflow_ref": "WF-frontend-src-features-main-pages-main-page-5a796664",
+          "kind": "exception",
+          "edge_refs": [
+            "E-0057"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "workflow_ref": "WF-frontend-src-features-main-pages-main-page-5a796664",
+          "kind": "normal",
+          "edge_refs": [
+            "E-0085"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    }
+  ]
+}

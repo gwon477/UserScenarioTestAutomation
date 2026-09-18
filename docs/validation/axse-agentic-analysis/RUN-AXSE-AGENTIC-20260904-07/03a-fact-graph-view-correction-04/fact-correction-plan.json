@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:c22a782f80bc73713894ccc6ff84d2b6e841238c828dc9dc4cbf562ac4837cb2",
+  "element_update_fields": {},
+  "predicate_element_refs": [
+    "U50"
+  ],
+  "replace_edge_indexes": [
+    74
+  ],
+  "edge_update_fields": {
+    "74": [
+      "guard"
+    ]
+  },
+  "add_edge_element_refs": []
+}

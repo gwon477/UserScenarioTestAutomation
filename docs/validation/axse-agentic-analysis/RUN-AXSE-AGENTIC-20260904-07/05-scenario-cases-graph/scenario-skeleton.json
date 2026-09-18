@@ -1,0 +1,6047 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "scenarios": [
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-001",
+      "workflow": "WF-component-businesspage-3b512bf9",
+      "kind": "exception",
+      "variation": {
+        "PRED-generation-requesting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0013"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'CSV 생성 중 / CSV 내보내기' export mapping validation CSV",
+          "action_ref": {
+            "edge": "E-0013",
+            "element": "EL-component-businesspage-button-csv-csv-6c4c2394"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-002",
+      "workflow": "WF-component-businesspage-3b512bf9",
+      "kind": "normal",
+      "variation": {
+        "PRED-generation-requesting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0014"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'CSV 생성 중 / CSV 내보내기' export mapping validation CSV",
+          "action_ref": {
+            "edge": "E-0014",
+            "element": "EL-component-businesspage-button-csv-csv-6c4c2394"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+      "workflow": "WF-component-businesspage-7eded949",
+      "kind": "exception",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0015"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'프리셋' generate preset scenario and test-case output",
+          "action_ref": {
+            "edge": "E-0015",
+            "element": "EL-component-businesspage-button-root-1778051a"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+      "workflow": "WF-component-businesspage-7eded949",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0016"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'프리셋' generate preset scenario and test-case output",
+          "action_ref": {
+            "edge": "E-0016",
+            "element": "EL-component-businesspage-button-root-1778051a"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "workflow": "WF-component-businesspage-86c2ff8c",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0017"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'이전' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0017",
+            "element": "EL-component-businesspage-button-root-25ad2a2c"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-5EE2EF2F-001",
+      "workflow": "WF-component-businesspage-5ee2ef2f",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0018"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'흐름보기' open business-flow text output",
+          "action_ref": {
+            "edge": "E-0018",
+            "element": "EL-component-businesspage-button-root-36595b84"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+      "workflow": "WF-component-businesspage-2855894a",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "not_selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=not_selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0001"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'전체 해제 / 전체 선택' select or deselect all context flows",
+          "action_ref": {
+            "edge": "E-0001",
+            "element": "EL-component-businesspage-button-root-8b53f325"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+      "workflow": "WF-component-businesspage-20f25040",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0002"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'전체 해제 / 전체 선택' select or deselect all context flows",
+          "action_ref": {
+            "edge": "E-0002",
+            "element": "EL-component-businesspage-button-root-8b53f325"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-067A194D-001",
+      "workflow": "WF-component-businesspage-067a194d",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "not_selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=not_selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0003"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'전체 해제 / 전체 선택' select or deselect all category flows",
+          "action_ref": {
+            "edge": "E-0003",
+            "element": "EL-component-businesspage-button-root-d2f35683"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-6C5BB760-001",
+      "workflow": "WF-component-businesspage-6c5bb760",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0004"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'전체 해제 / 전체 선택' select or deselect all category flows",
+          "action_ref": {
+            "edge": "E-0004",
+            "element": "EL-component-businesspage-button-root-d2f35683"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-001",
+      "workflow": "WF-component-businesspage-ce6f1e6c",
+      "kind": "exception",
+      "variation": {
+        "PRED-checked-flows": "selected",
+        "PRED-generation-requesting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0005",
+        "E-0006"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0005",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 7,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0006",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+      "workflow": "WF-component-businesspage-ce6f1e6c",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "selected",
+        "PRED-generation-requesting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0006",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-D5B999B1-001",
+      "workflow": "WF-component-businesspage-d5b999b1",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "not_selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=not_selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0007"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'선택' select or deselect a context flow",
+          "action_ref": {
+            "edge": "E-0007",
+            "element": "EL-component-businesspage-checkbox-root-2506f0f8"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7BEA4B09-001",
+      "workflow": "WF-component-businesspage-7bea4b09",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0008"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'선택' select or deselect a context flow",
+          "action_ref": {
+            "edge": "E-0008",
+            "element": "EL-component-businesspage-checkbox-root-2506f0f8"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-FFB625FB-001",
+      "workflow": "WF-component-businesspage-ffb625fb",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "not_selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=not_selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0009"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'선택' select or deselect a context flow",
+          "action_ref": {
+            "edge": "E-0009",
+            "element": "EL-component-businesspage-checkbox-root-ba5e72bc"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-527A091F-001",
+      "workflow": "WF-component-businesspage-527a091f",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0010"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'선택' select or deselect a context flow",
+          "action_ref": {
+            "edge": "E-0010",
+            "element": "EL-component-businesspage-checkbox-root-ba5e72bc"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-C434992F-001",
+      "workflow": "WF-component-businesspage-c434992f",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "not_selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=not_selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0011"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'선택' select or deselect a category flow",
+          "action_ref": {
+            "edge": "E-0011",
+            "element": "EL-component-businesspage-checkbox-root-f484b897"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-3D3D7A88-001",
+      "workflow": "WF-component-businesspage-3d3d7a88",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "selected"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0012"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'선택' select or deselect a category flow",
+          "action_ref": {
+            "edge": "E-0012",
+            "element": "EL-component-businesspage-checkbox-root-f484b897"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "workflow": "WF-component-loginformpage-104bdb2f",
+      "kind": "exception",
+      "variation": {},
+      "preconditions": [],
+      "path": [
+        "E-0019"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0019",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginformpage",
+          "assertion_refs": [
+            "SCR-component-loginformpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-001",
+      "workflow": "WF-component-loginformpage-d6fe005d",
+      "kind": "exception",
+      "variation": {
+        "PRED-login-user-id-present": "true",
+        "PRED-login-password-present": "true",
+        "PRED-login-submitting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0020",
+        "E-0021"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0020",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginformpage",
+          "assertion_refs": [
+            "SCR-component-loginformpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+      "workflow": "WF-component-loginformpage-d6fe005d",
+      "kind": "normal",
+      "variation": {
+        "PRED-login-user-id-present": "true",
+        "PRED-login-password-present": "true",
+        "PRED-login-submitting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "workflow": "WF-component-loginformpage-aef66388",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [],
+      "path": [
+        "E-0022"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'아이디' enter user ID",
+          "action_ref": {
+            "edge": "E-0022",
+            "element": "EL-component-loginformpage-input-root-2e21d8ec"
+          },
+          "expected": "at SCR-component-loginformpage",
+          "assertion_refs": [
+            "SCR-component-loginformpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "workflow": "WF-component-loginformpage-5199dbef",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [],
+      "path": [
+        "E-0023"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'패스워드' enter password",
+          "action_ref": {
+            "edge": "E-0023",
+            "element": "EL-component-loginformpage-input-root-cc350d8a"
+          },
+          "expected": "at SCR-component-loginformpage",
+          "assertion_refs": [
+            "SCR-component-loginformpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+      "workflow": "WF-component-loginpage-e5ed79c1",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-41525B39-001",
+      "workflow": "WF-component-loginpage-41525b39",
+      "kind": "exception",
+      "variation": {
+        "PRED-projects-requesting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-projects-requesting=false",
+          "predicate_refs": [
+            "PRED-projects-requesting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0025"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'조회 중… / ↺ 새로고침' refresh project list",
+          "action_ref": {
+            "edge": "E-0025",
+            "element": "EL-component-loginpage-button-root-7fc3a516"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-41525B39-002",
+      "workflow": "WF-component-loginpage-41525b39",
+      "kind": "normal",
+      "variation": {
+        "PRED-projects-requesting": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-projects-requesting=false",
+          "predicate_refs": [
+            "PRED-projects-requesting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0026"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'조회 중… / ↺ 새로고침' refresh project list",
+          "action_ref": {
+            "edge": "E-0026",
+            "element": "EL-component-loginpage-button-root-7fc3a516"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "workflow": "WF-component-loginpage-24d62594",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0027"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'로그아웃' log out",
+          "action_ref": {
+            "edge": "E-0027",
+            "element": "EL-component-loginpage-button-root-b10e4291"
+          },
+          "expected": "at SCR-component-loginformpage",
+          "assertion_refs": [
+            "SCR-component-loginformpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-5E43F314-001",
+      "workflow": "WF-component-mainpage-5e43f314",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0028"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'button' navigate to selected workflow stage",
+          "action_ref": {
+            "edge": "E-0028",
+            "element": "EL-component-mainpage-button-button-18fa77ae"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-3762E523-001",
+      "workflow": "WF-component-mainpage-3762e523",
+      "kind": "exception",
+      "variation": {
+        "PRED-task-loading": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-task-loading=false",
+          "predicate_refs": [
+            "PRED-task-loading"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0029"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'button' select task",
+          "action_ref": {
+            "edge": "E-0029",
+            "element": "EL-component-mainpage-button-button-42861f4f"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-3762E523-002",
+      "workflow": "WF-component-mainpage-3762e523",
+      "kind": "normal",
+      "variation": {
+        "PRED-task-loading": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-task-loading=false",
+          "predicate_refs": [
+            "PRED-task-loading"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0030"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'button' select task",
+          "action_ref": {
+            "edge": "E-0030",
+            "element": "EL-component-mainpage-button-button-42861f4f"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "workflow": "WF-component-mainpage-2b4dbe33",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0031"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'로그아웃' log out",
+          "action_ref": {
+            "edge": "E-0031",
+            "element": "EL-component-mainpage-button-root-0bae6c59"
+          },
+          "expected": "at SCR-component-loginformpage",
+          "assertion_refs": [
+            "SCR-component-loginformpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "workflow": "WF-component-mainpage-4e38e24f",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-4E38E24F-002",
+      "workflow": "WF-component-mainpage-4e38e24f",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0033"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0033",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "workflow": "WF-component-mainpage-275bc2d0",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0034"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'홈으로' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0034",
+            "element": "EL-component-mainpage-button-root-4870b226"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-275BC2D0-002",
+      "workflow": "WF-component-mainpage-275bc2d0",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0035"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'홈으로' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0035",
+            "element": "EL-component-mainpage-button-root-4870b226"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-77035738-001",
+      "workflow": "WF-component-mainpage-77035738",
+      "kind": "exception",
+      "variation": {
+        "PRED-task-loading": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-task-loading=false",
+          "predicate_refs": [
+            "PRED-task-loading"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0036"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'새로 생성' create task",
+          "action_ref": {
+            "edge": "E-0036",
+            "element": "EL-component-mainpage-button-root-bcee2686"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-77035738-002",
+      "workflow": "WF-component-mainpage-77035738",
+      "kind": "normal",
+      "variation": {
+        "PRED-task-loading": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-task-loading=false",
+          "predicate_refs": [
+            "PRED-task-loading"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0037"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'새로 생성' create task",
+          "action_ref": {
+            "edge": "E-0037",
+            "element": "EL-component-mainpage-button-root-bcee2686"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "workflow": "WF-component-mainpage-0b02b6d1",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0038"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'설정 / settings' navigate to settings",
+          "action_ref": {
+            "edge": "E-0038",
+            "element": "EL-component-mainpage-button-settings-6c53b1fc"
+          },
+          "expected": "at SCR-component-settingspage",
+          "assertion_refs": [
+            "SCR-component-settingspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-2D79D452-001",
+      "workflow": "WF-component-mainpage-2d79d452",
+      "kind": "normal",
+      "variation": {
+        "PRED-task-selected": "true"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-task-selected=true",
+          "predicate_refs": [
+            "PRED-task-selected"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0039"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'설정 / settings' navigate to settings",
+          "action_ref": {
+            "edge": "E-0039",
+            "element": "EL-component-mainpage-button-settings-6c53b1fc"
+          },
+          "expected": "at SCR-component-settingspage",
+          "assertion_refs": [
+            "SCR-component-settingspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "workflow": "WF-component-parseddbpage-6771c0b3",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0040"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'button' change parsed database view or page",
+          "action_ref": {
+            "edge": "E-0040",
+            "element": "EL-component-parseddbpage-button-button-bec78487"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "workflow": "WF-component-parseddbpage-4a38f0de",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0041"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'이전' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0041",
+            "element": "EL-component-parseddbpage-button-root-beefb97f"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "workflow": "WF-component-parseddbpage-083f5434",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-F72174FF-001",
+      "workflow": "WF-component-scenariopage-f72174ff",
+      "kind": "exception",
+      "variation": {
+        "PRED-scenario-csv-downloaded": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-scenario-csv-downloaded=false",
+          "predicate_refs": [
+            "PRED-scenario-csv-downloaded"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0043"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0006",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        },
+        {
+          "n": 7,
+          "action": "'CSV 생성 중 / CSV 받기' download scenario matrix CSV",
+          "action_ref": {
+            "edge": "E-0043",
+            "element": "EL-component-scenariopage-button-csv-csv-8dba6894"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-F72174FF-002",
+      "workflow": "WF-component-scenariopage-f72174ff",
+      "kind": "normal",
+      "variation": {
+        "PRED-scenario-csv-downloaded": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-scenario-csv-downloaded=false",
+          "predicate_refs": [
+            "PRED-scenario-csv-downloaded"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0044"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0006",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        },
+        {
+          "n": 7,
+          "action": "'CSV 생성 중 / CSV 받기' download scenario matrix CSV",
+          "action_ref": {
+            "edge": "E-0044",
+            "element": "EL-component-scenariopage-button-csv-csv-8dba6894"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-09E713D0-001",
+      "workflow": "WF-component-scenariopage-09e713d0",
+      "kind": "exception",
+      "variation": {
+        "PRED-scenario-excel-downloaded": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-scenario-excel-downloaded=false",
+          "predicate_refs": [
+            "PRED-scenario-excel-downloaded"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0045"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0006",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        },
+        {
+          "n": 7,
+          "action": "'Excel 생성 중 / Excel 다운로드' download scenario matrix Excel",
+          "action_ref": {
+            "edge": "E-0045",
+            "element": "EL-component-scenariopage-button-excel-excel-e83a36d0"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+      "workflow": "WF-component-scenariopage-09e713d0",
+      "kind": "normal",
+      "variation": {
+        "PRED-scenario-excel-downloaded": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-scenario-excel-downloaded=false",
+          "predicate_refs": [
+            "PRED-scenario-excel-downloaded"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0046"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0006",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        },
+        {
+          "n": 7,
+          "action": "'Excel 생성 중 / Excel 다운로드' download scenario matrix Excel",
+          "action_ref": {
+            "edge": "E-0046",
+            "element": "EL-component-scenariopage-button-excel-excel-e83a36d0"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "workflow": "WF-component-scenariopage-8d4b7217",
+      "kind": "normal",
+      "variation": {},
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-checked-flows=selected",
+          "predicate_refs": [
+            "PRED-checked-flows"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-generation-requesting=false",
+          "predicate_refs": [
+            "PRED-generation-requesting"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050",
+        "E-0042",
+        "E-0006",
+        "E-0047"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        },
+        {
+          "n": 5,
+          "action": "'업무 매핑' navigate to business mapping stage",
+          "action_ref": {
+            "edge": "E-0042",
+            "element": "EL-component-parseddbpage-button-root-fee689e3"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        },
+        {
+          "n": 6,
+          "action": "'요청 중 / 시나리오 · TC 도출' request scenario and test-case generation",
+          "action_ref": {
+            "edge": "E-0006",
+            "element": "EL-component-businesspage-button-tc-57c3dae7"
+          },
+          "expected": "at SCR-component-scenariopage",
+          "assertion_refs": [
+            "SCR-component-scenariopage"
+          ]
+        },
+        {
+          "n": 7,
+          "action": "'이전' navigate to business stage",
+          "action_ref": {
+            "edge": "E-0047",
+            "element": "EL-component-scenariopage-button-root-e8f38c3b"
+          },
+          "expected": "at SCR-component-businesspage",
+          "assertion_refs": [
+            "SCR-component-businesspage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001",
+      "workflow": "WF-component-uploadpage-1f1eaeca",
+      "kind": "exception",
+      "variation": {
+        "PRED-upload-file-selected": "true",
+        "PRED-upload-submitting": "false",
+        "PRED-upload-complete": "false",
+        "PRED-upload-locked": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-file-selected=true",
+          "predicate_refs": [
+            "PRED-upload-file-selected"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=false",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0048"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'업로드 및 파싱 시작' upload and parse document",
+          "action_ref": {
+            "edge": "E-0048",
+            "element": "EL-component-uploadpage-button-root-07489263"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+      "workflow": "WF-component-uploadpage-1f1eaeca",
+      "kind": "normal",
+      "variation": {
+        "PRED-upload-file-selected": "true",
+        "PRED-upload-submitting": "false",
+        "PRED-upload-complete": "false",
+        "PRED-upload-locked": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-file-selected=true",
+          "predicate_refs": [
+            "PRED-upload-file-selected"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=false",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0049"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'업로드 및 파싱 시작' upload and parse document",
+          "action_ref": {
+            "edge": "E-0049",
+            "element": "EL-component-uploadpage-button-root-07489263"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-6C730330-001",
+      "workflow": "WF-component-uploadpage-6c730330",
+      "kind": "normal",
+      "variation": {
+        "PRED-upload-complete": "true",
+        "PRED-upload-submitting": "false",
+        "PRED-upload-locked": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-submitting=false",
+          "predicate_refs": [
+            "PRED-upload-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0050"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'이동 중… / 다음 단계 →' navigate to parsed database stage",
+          "action_ref": {
+            "edge": "E-0050",
+            "element": "EL-component-uploadpage-button-root-5ee46c72"
+          },
+          "expected": "at SCR-component-parseddbpage",
+          "assertion_refs": [
+            "SCR-component-parseddbpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-0B0E9837-001",
+      "workflow": "WF-component-uploadpage-0b0e9837",
+      "kind": "normal",
+      "variation": {
+        "PRED-upload-complete": "true",
+        "PRED-upload-locked": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=true",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0051"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'다시 업로드' reset completed upload for re-upload",
+          "action_ref": {
+            "edge": "E-0051",
+            "element": "EL-component-uploadpage-button-root-5fcbb836"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-BC687D2A-001",
+      "workflow": "WF-component-uploadpage-bc687d2a",
+      "kind": "normal",
+      "variation": {
+        "PRED-upload-locked": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0052"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'취소 / 다시 선택' cancel or clear selected upload",
+          "action_ref": {
+            "edge": "E-0052",
+            "element": "EL-component-uploadpage-button-root-e481383d"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260904-07",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+      "workflow": "WF-component-uploadpage-833d06aa",
+      "kind": "normal",
+      "variation": {
+        "PRED-upload-file-selected": "false",
+        "PRED-upload-complete": "false",
+        "PRED-upload-locked": "false"
+      },
+      "preconditions": [
+        {
+          "text": "PRED-login-user-id-present=true",
+          "predicate_refs": [
+            "PRED-login-user-id-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-password-present=true",
+          "predicate_refs": [
+            "PRED-login-password-present"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-login-submitting=false",
+          "predicate_refs": [
+            "PRED-login-submitting"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-file-selected=false",
+          "predicate_refs": [
+            "PRED-upload-file-selected"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-complete=false",
+          "predicate_refs": [
+            "PRED-upload-complete"
+          ],
+          "data_binding_keys": []
+        },
+        {
+          "text": "PRED-upload-locked=false",
+          "predicate_refs": [
+            "PRED-upload-locked"
+          ],
+          "data_binding_keys": []
+        }
+      ],
+      "path": [
+        "E-0021",
+        "E-0024",
+        "E-0032",
+        "E-0053"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "'로그인 중… / 로그인' submit login credentials",
+          "action_ref": {
+            "edge": "E-0021",
+            "element": "EL-component-loginformpage-button-root-6da22694"
+          },
+          "expected": "at SCR-component-loginpage",
+          "assertion_refs": [
+            "SCR-component-loginpage"
+          ]
+        },
+        {
+          "n": 2,
+          "action": "'button' select project",
+          "action_ref": {
+            "edge": "E-0024",
+            "element": "EL-component-loginpage-button-button-199ada70"
+          },
+          "expected": "at SCR-component-mainpage",
+          "assertion_refs": [
+            "SCR-component-mainpage"
+          ]
+        },
+        {
+          "n": 3,
+          "action": "'테스트 시나리오' navigate to upload stage",
+          "action_ref": {
+            "edge": "E-0032",
+            "element": "EL-component-mainpage-button-root-25ceb4be"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        },
+        {
+          "n": 4,
+          "action": "'OK / MD / 파싱 완료된 문서 / KB · UTF-8 / 이미 파싱이 완료된 상태입니다. / 선택됨 / 대기' select document file",
+          "action_ref": {
+            "edge": "E-0053",
+            "element": "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8"
+          },
+          "expected": "at SCR-component-uploadpage",
+          "assertion_refs": [
+            "SCR-component-uploadpage"
+          ]
+        }
+      ],
+      "status": "draft"
+    }
+  ],
+  "classification_by_scenario": {
+    "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-001": "BC-991D814D33EA",
+    "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-002": "BC-991D814D33EA",
+    "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-BUSINESSPAGE-5EE2EF2F-001": "BC-B46FEDEA6797",
+    "SCN-COMPONENT-BUSINESSPAGE-2855894A-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-20F25040-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-067A194D-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-6C5BB760-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-D5B999B1-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-7BEA4B09-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-FFB625FB-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-527A091F-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-C434992F-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-BUSINESSPAGE-3D3D7A88-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-001": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINPAGE-41525B39-001": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINPAGE-41525B39-002": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-LOGINPAGE-24D62594-001": "BC-1C23FFAE5311",
+    "SCN-COMPONENT-MAINPAGE-5E43F314-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-3762E523-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-3762E523-002": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-2B4DBE33-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-4E38E24F-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-4E38E24F-002": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-275BC2D0-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-275BC2D0-002": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-77035738-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-77035738-002": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-0B02B6D1-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-MAINPAGE-2D79D452-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001": "BC-B46FEDEA6797",
+    "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001": "BC-AF3315D349A0",
+    "SCN-COMPONENT-SCENARIOPAGE-F72174FF-001": "BC-991D814D33EA",
+    "SCN-COMPONENT-SCENARIOPAGE-F72174FF-002": "BC-991D814D33EA",
+    "SCN-COMPONENT-SCENARIOPAGE-09E713D0-001": "BC-991D814D33EA",
+    "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002": "BC-991D814D33EA",
+    "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001": "BC-1B1ACC734BB8",
+    "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001": "BC-A8A94B12A366",
+    "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002": "BC-A8A94B12A366",
+    "SCN-COMPONENT-UPLOADPAGE-6C730330-001": "BC-A8A94B12A366",
+    "SCN-COMPONENT-UPLOADPAGE-0B0E9837-001": "BC-A8A94B12A366",
+    "SCN-COMPONENT-UPLOADPAGE-BC687D2A-001": "BC-A8A94B12A366",
+    "SCN-COMPONENT-UPLOADPAGE-833D06AA-001": "BC-A8A94B12A366"
+  }
+}

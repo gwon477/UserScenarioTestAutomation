@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "classifications": [
+    {
+      "classification_id": "BC-227E60D90DEA",
+      "label": "파싱 데이터 검토",
+      "workflow_refs": [
+        "WF-component-parseddbpage-083f5434",
+        "WF-component-parseddbpage-26d6afdd",
+        "WF-component-parseddbpage-4a38f0de",
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-parseddbpage-89f62e5f",
+        "WF-component-parseddbpage-9184ec77",
+        "WF-component-parseddbpage-fbf48ce7"
+      ],
+      "edge_refs": [
+        "E-0032",
+        "E-0033",
+        "E-0034",
+        "E-0035",
+        "E-0036",
+        "E-0037",
+        "E-0038"
+      ]
+    },
+    {
+      "classification_id": "BC-3667F7119233",
+      "label": "TS 작업 문서 수집 및 파싱",
+      "workflow_refs": [
+        "WF-component-mainpage-0f4d0fcd",
+        "WF-component-mainpage-275bc2d0",
+        "WF-component-mainpage-4e38e24f",
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a",
+        "WF-component-uploadpage-d6e6a43f",
+        "WF-component-uploadpage-f1072540"
+      ],
+      "edge_refs": [
+        "E-0028",
+        "E-0029",
+        "E-0031",
+        "E-0053",
+        "E-0054",
+        "E-0055",
+        "E-0056"
+      ]
+    },
+    {
+      "classification_id": "BC-5AD62E2C8E05",
+      "label": "시나리오·테스트 케이스 생성 및 결과 활용",
+      "workflow_refs": [
+        "WF-component-scenariopage-130159bc",
+        "WF-component-scenariopage-13c02421",
+        "WF-component-scenariopage-155f546e",
+        "WF-component-scenariopage-2c40057c",
+        "WF-component-scenariopage-8d4b7217",
+        "WF-component-scenariopage-ea14afd0",
+        "WF-component-scenariopage-ed2efd9e"
+      ],
+      "edge_refs": [
+        "E-0039",
+        "E-0040",
+        "E-0041",
+        "E-0042",
+        "E-0043",
+        "E-0044",
+        "E-0045",
+        "E-0046",
+        "E-0047"
+      ]
+    },
+    {
+      "classification_id": "BC-644D2DDFDB66",
+      "label": "생성·출력 설정 검토",
+      "workflow_refs": [
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-settingspage-4f42f993",
+        "WF-component-settingspage-5bf96fbd",
+        "WF-component-settingspage-695469fc",
+        "WF-component-settingspage-b08dcc4b",
+        "WF-component-settingspage-bf70bec5"
+      ],
+      "edge_refs": [
+        "E-0030",
+        "E-0048",
+        "E-0049",
+        "E-0050",
+        "E-0051",
+        "E-0052"
+      ]
+    },
+    {
+      "classification_id": "BC-92ED9930BD56",
+      "label": "프로젝트 인증 및 작업 진입",
+      "workflow_refs": [
+        "WF-component-loginformpage-104bdb2f",
+        "WF-component-loginformpage-3721e6a6",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginpage-24d62594",
+        "WF-component-loginpage-eec1c540",
+        "WF-component-loginpage-f3dfe66b",
+        "WF-component-mainpage-2b4dbe33"
+      ],
+      "edge_refs": [
+        "E-0019",
+        "E-0020",
+        "E-0021",
+        "E-0022",
+        "E-0023",
+        "E-0024",
+        "E-0025",
+        "E-0026",
+        "E-0027"
+      ]
+    },
+    {
+      "classification_id": "BC-ADF6A3884FBE",
+      "label": "업무흐름 매핑 정합성 검증",
+      "workflow_refs": [
+        "WF-component-businesspage-0ada3322",
+        "WF-component-businesspage-40d5175b",
+        "WF-component-businesspage-547a1466",
+        "WF-component-businesspage-5c765240",
+        "WF-component-businesspage-6bf3ba20",
+        "WF-component-businesspage-6d777bfb",
+        "WF-component-businesspage-7ec9352e",
+        "WF-component-businesspage-86c2ff8c",
+        "WF-component-businesspage-86dffaba",
+        "WF-component-businesspage-8b2611d2",
+        "WF-component-businesspage-8d384820",
+        "WF-component-businesspage-8d514a88",
+        "WF-component-businesspage-940a9fa5",
+        "WF-component-businesspage-bd399e7b",
+        "WF-component-businesspage-d378820a",
+        "WF-component-businesspage-e76552a4"
+      ],
+      "edge_refs": [
+        "E-0001",
+        "E-0002",
+        "E-0003",
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007",
+        "E-0008",
+        "E-0009",
+        "E-0010",
+        "E-0011",
+        "E-0012",
+        "E-0013",
+        "E-0014",
+        "E-0015",
+        "E-0016",
+        "E-0017",
+        "E-0018"
+      ]
+    }
+  ]
+}

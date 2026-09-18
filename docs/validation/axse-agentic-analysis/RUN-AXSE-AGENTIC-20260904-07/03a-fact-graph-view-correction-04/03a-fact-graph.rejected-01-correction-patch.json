@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:c22a782f80bc73713894ccc6ff84d2b6e841238c828dc9dc4cbf562ac4837cb2",
+  "element_update_upserts": [],
+  "predicate_upserts": [],
+  "edge_changes": [
+    {
+      "operation": "replace",
+      "edge_index": 74,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U50",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix_loading",
+              "value": "false"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:9e84bf99d79bd0ef069a047466b5b283a0df478247be3c5e0ecd22ce55e51763",
+  "element_update_upserts": [],
+  "predicate_upserts": [],
+  "predicate_removals": [
+    "scenario.matrix.loaded"
+  ],
+  "edge_changes": [
+    {
+      "operation": "replace",
+      "edge_index": 74,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U50",
+        "to_screen_ref": "S6",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.query.changed",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix_loaded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded_page.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

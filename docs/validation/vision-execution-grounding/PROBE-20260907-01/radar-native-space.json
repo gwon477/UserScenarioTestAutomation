@@ -1,0 +1,981 @@
+{
+  "probe": "vision-grounding-accuracy",
+  "designRef": "docs/architecture/07-vision-first-execution-design.md#11",
+  "project": "ra-dar",
+  "modelId": "gpt-5.6-luna",
+  "provider": "azure-openai",
+  "api": "azure-openai-chat-completions",
+  "startedAt": "2026-09-07T00:26:45.362Z",
+  "finishedAt": "2026-09-07T00:27:42.695Z",
+  "imageInputAccepted": true,
+  "overall": {
+    "screens": 6,
+    "targets": 29,
+    "hits": 2,
+    "misses": 19,
+    "notFound": 8,
+    "hitRate": 0.069
+  },
+  "screens": [
+    {
+      "screenId": "01-landing-hero",
+      "description": "RA-DAR 랜딩 첫 장면",
+      "heading": "57행을 다 읽어야 1행을 찾습니다.",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 12,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 4819,
+        "usage": {
+          "completion_tokens": 134,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 46,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 7,
+            "engine_ttft_ms": 403,
+            "engine_ttlt_ms": 1363,
+            "pre_inference_ms": 1689,
+            "service_tbt_ms": 7,
+            "service_ttft_ms": 3117,
+            "service_ttlt_ms": 4072,
+            "user_visible_ttft_ms": 1428
+          },
+          "prompt_tokens": 1352,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1486
+        }
+      },
+      "summary": {
+        "targets": 2,
+        "hits": 0,
+        "misses": 2,
+        "notFound": 0,
+        "hitRate": 0,
+        "medianCenterDistancePx": 92,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "바로 시작하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 116,
+            "y": 540,
+            "width": 111,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 172,
+            "y": 560
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 146,
+            "y": 478
+          },
+          "centerDistancePx": 86,
+          "observedLabel": "바로 시작하기",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "미리 방문하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 237,
+            "y": 540,
+            "width": 111,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 292,
+            "y": 560
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 250,
+            "y": 478
+          },
+          "centerDistancePx": 92,
+          "observedLabel": "미리 방문하기",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "02-login",
+      "description": "담당자 계정 로그인 장면",
+      "heading": "57행을 다 읽어야 1행을 찾습니다.",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 14,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 3969,
+        "usage": {
+          "completion_tokens": 265,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 108,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 6,
+            "engine_ttft_ms": 453,
+            "engine_ttlt_ms": 2154,
+            "pre_inference_ms": 120,
+            "service_tbt_ms": 6,
+            "service_ttft_ms": 1623,
+            "service_ttlt_ms": 3319,
+            "user_visible_ttft_ms": 1503
+          },
+          "prompt_tokens": 1378,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1643
+        }
+      },
+      "summary": {
+        "targets": 4,
+        "hits": 0,
+        "misses": 4,
+        "notFound": 0,
+        "hitRate": 0,
+        "medianCenterDistancePx": 174,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "사번",
+          "controlKind": "password-textbox",
+          "truthRect": {
+            "x": 787,
+            "y": 390,
+            "width": 501,
+            "height": 44
+          },
+          "truthCenter": {
+            "x": 1037,
+            "y": 412
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 351
+          },
+          "centerDistancePx": 164,
+          "observedLabel": "사번",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "비밀번호",
+          "controlKind": "password-textbox",
+          "truthRect": {
+            "x": 787,
+            "y": 490,
+            "width": 501,
+            "height": 44
+          },
+          "truthCenter": {
+            "x": 1037,
+            "y": 512
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 437
+          },
+          "centerDistancePx": 169,
+          "observedLabel": "비밀번호",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "사번으로 인증하고 시작",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 787,
+            "y": 548,
+            "width": 501,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 1037,
+            "y": 568
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 484
+          },
+          "centerDistancePx": 174,
+          "observedLabel": "사번으로 인증하고 시작",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "사번 없이 확인하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 787,
+            "y": 622,
+            "width": 501,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 1037,
+            "y": 642
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 548
+          },
+          "centerDistancePx": 179,
+          "observedLabel": "사번 없이 확인하기",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "04-dashboard",
+      "description": "로그인 직후 야간 작업 대시보드",
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다.",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 6,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 13221,
+        "usage": {
+          "completion_tokens": 1210,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1024,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 8,
+            "engine_ttft_ms": 511,
+            "engine_ttlt_ms": 10339,
+            "pre_inference_ms": 1099,
+            "service_tbt_ms": 8,
+            "service_ttft_ms": 2651,
+            "service_ttlt_ms": 12474,
+            "user_visible_ttft_ms": 1553
+          },
+          "prompt_tokens": 1389,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2599
+        }
+      },
+      "summary": {
+        "targets": 5,
+        "hits": 1,
+        "misses": 3,
+        "notFound": 1,
+        "hitRate": 0.2,
+        "medianCenterDistancePx": 85,
+        "labelMatchRate": 0.8
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR 홈",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 69,
+            "y": 26
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 144,
+            "y": 22
+          },
+          "centerDistancePx": 75,
+          "observedLabel": "홈",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "누적 관리",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 199,
+            "y": 9,
+            "width": 94,
+            "height": 33
+          },
+          "truthCenter": {
+            "x": 246,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 216,
+            "y": 22
+          },
+          "centerDistancePx": 30,
+          "observedLabel": "누적 관리",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "SSK해커톤",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1326,
+            "y": 9,
+            "width": 94,
+            "height": 34
+          },
+          "truthCenter": {
+            "x": 1373,
+            "y": 26
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "누적 관리 열기",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 492,
+            "y": 264,
+            "width": 62,
+            "height": 20
+          },
+          "truthCenter": {
+            "x": 523,
+            "y": 274
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 448,
+            "y": 234
+          },
+          "centerDistancePx": 85,
+          "observedLabel": "누적 관리 열기",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "확인하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1271,
+            "y": 531,
+            "width": 120,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 1331,
+            "y": 551
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1136,
+            "y": 470
+          },
+          "centerDistancePx": 211,
+          "observedLabel": "확인하기",
+          "labelMatch": true,
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "screenId": "06-ledger",
+      "description": "누적관리 원장 목록",
+      "heading": "전체 규정 개정 이력",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 48,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 17647,
+        "usage": {
+          "completion_tokens": 1794,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1536,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 8,
+            "engine_ttft_ms": 525,
+            "engine_ttlt_ms": 15720,
+            "pre_inference_ms": 121,
+            "service_tbt_ms": 8,
+            "service_ttft_ms": 1716,
+            "service_ttlt_ms": 16906,
+            "user_visible_ttft_ms": 1595
+          },
+          "prompt_tokens": 1428,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 3222
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 0,
+        "misses": 6,
+        "notFound": 0,
+        "hitRate": 0,
+        "medianCenterDistancePx": 226,
+        "labelMatchRate": 0.5
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR 홈",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 69,
+            "y": 26
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 151,
+            "y": 22
+          },
+          "centerDistancePx": 82,
+          "observedLabel": "홈",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "RA-2026-002 변경사항 반영",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 59,
+            "y": 545,
+            "width": 163,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 141,
+            "y": 560
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 120,
+            "y": 478
+          },
+          "centerDistancePx": 85,
+          "observedLabel": "RA-2026-002 변경사항 반영",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "현재 필터로 내보내기 (XLSX)",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 1339,
+            "y": 181,
+            "width": 68,
+            "height": 38
+          },
+          "truthCenter": {
+            "x": 1373,
+            "y": 200
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1174,
+            "y": 171
+          },
+          "centerDistancePx": 201,
+          "observedLabel": "XLSX",
+          "labelMatch": true,
+          "confidence": 0.97
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "RA-2026-001 규정명 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 580,
+            "y": 268,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 872,
+            "y": 284
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 650,
+            "y": 243
+          },
+          "centerDistancePx": 226,
+          "observedLabel": "의약품 표시 기재 규정 일부개정",
+          "labelMatch": false,
+          "confidence": 0.76
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "RA-2026-002 등록일 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1356,
+            "y": 312,
+            "width": 101,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 1407,
+            "y": 328
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1180,
+            "y": 280
+          },
+          "centerDistancePx": 232,
+          "observedLabel": "2026-08",
+          "labelMatch": false,
+          "confidence": 0.72
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "RA-2026-004 규정명 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 580,
+            "y": 400,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 872,
+            "y": 416
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 580,
+            "y": 355
+          },
+          "centerDistancePx": 298,
+          "observedLabel": "첨가제 표준 명칭 정비 고시",
+          "labelMatch": false,
+          "confidence": 0.76
+        }
+      ]
+    },
+    {
+      "screenId": "07-ledger-status-filter",
+      "description": "원장 상태 필터가 열린 화면",
+      "heading": "전체 규정 개정 이력",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 48,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 8398,
+        "usage": {
+          "completion_tokens": 698,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 512,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 9,
+            "engine_ttft_ms": 557,
+            "engine_ttlt_ms": 6516,
+            "pre_inference_ms": 141,
+            "service_tbt_ms": 9,
+            "service_ttft_ms": 1771,
+            "service_ttlt_ms": 7725,
+            "user_visible_ttft_ms": 1630
+          },
+          "prompt_tokens": 1430,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2128
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 0,
+        "misses": 3,
+        "notFound": 3,
+        "hitRate": 0,
+        "medianCenterDistancePx": 85,
+        "labelMatchRate": 0.5
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR 홈",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 69,
+            "y": 26
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 151,
+            "y": 21
+          },
+          "centerDistancePx": 82,
+          "observedLabel": "홈",
+          "labelMatch": true,
+          "confidence": 0.96
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "RA-2026-002 변경사항 반영",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 59,
+            "y": 545,
+            "width": 163,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 141,
+            "y": 560
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 119,
+            "y": 478
+          },
+          "centerDistancePx": 85,
+          "observedLabel": "RA-2026-002 변경사항 반영",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "현재 필터로 내보내기 (XLSX)",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 1339,
+            "y": 181,
+            "width": 68,
+            "height": 38
+          },
+          "truthCenter": {
+            "x": 1373,
+            "y": 200
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1173,
+            "y": 171
+          },
+          "centerDistancePx": 202,
+          "observedLabel": "XLSX",
+          "labelMatch": true,
+          "confidence": 0.94
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "RA-2026-001 규정명 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 580,
+            "y": 268,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 872,
+            "y": 284
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "RA-2026-002 등록일 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1356,
+            "y": 312,
+            "width": 101,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 1407,
+            "y": 328
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "RA-2026-004 규정명 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 580,
+            "y": 400,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 872,
+            "y": 416
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "08-ledger-agent-prompt",
+      "description": "RA 에이전트 질문이 입력된 원장 화면",
+      "heading": "전체 규정 개정 이력",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 48,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 9247,
+        "usage": {
+          "completion_tokens": 679,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 512,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 9,
+            "engine_ttft_ms": 450,
+            "engine_ttlt_ms": 6548,
+            "pre_inference_ms": 871,
+            "service_tbt_ms": 9,
+            "service_ttft_ms": 2375,
+            "service_ttlt_ms": 8467,
+            "user_visible_ttft_ms": 1503
+          },
+          "prompt_tokens": 1436,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2115
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 1,
+        "misses": 1,
+        "notFound": 4,
+        "hitRate": 0.167,
+        "medianCenterDistancePx": 200,
+        "labelMatchRate": 0.167
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR 홈",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 69,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 69,
+            "y": 22
+          },
+          "centerDistancePx": 4,
+          "observedLabel": "RA · DAR",
+          "labelMatch": false,
+          "confidence": 0.88
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "현재 필터로 내보내기 (XLSX)",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 1339,
+            "y": 181,
+            "width": 68,
+            "height": 38
+          },
+          "truthCenter": {
+            "x": 1373,
+            "y": 200
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1175,
+            "y": 171
+          },
+          "centerDistancePx": 200,
+          "observedLabel": "XLSX",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "RA-2026-001 규정명 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 256,
+            "y": 268,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 548,
+            "y": 284
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "RA-2026-002 유형 변경",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 948,
+            "y": 313,
+            "width": 65,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 981,
+            "y": 328
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "RA-2026-003 등록일 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1032,
+            "y": 356,
+            "width": 101,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 1083,
+            "y": 372
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "RA-2026-004 개정의도/목적 수정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1152,
+            "y": 400,
+            "width": 337,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 1321,
+            "y": 416
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        }
+      ]
+    }
+  ]
+}

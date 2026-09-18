@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "normal_journey_count": 1,
+  "recovery_journey_count": 1,
+  "excluded_thread_count": 1,
+  "milestone_count": 20,
+  "handoff_count": 18,
+  "unresolved_count": 3,
+  "cited_evidence_count": 7,
+  "source_artifact_hash": "sha256:4625550d74d86a623ee99dc8b164407599819c3e2b56b9ef7d024492ce8c681c",
+  "classification_artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+  "agent_artifact_hash": "sha256:6c22d3388e3515a5604c55b28de29217d5084d800e1e121830608710f69d6689",
+  "artifact_hash": "sha256:5a5f422fe3012a988b328f7462c5fa8b22447ae5c6595fe1b75b9bf9699b5590",
+  "source_tool_usage": {
+    "artifact_reads": [
+      "02-source-gap-review",
+      "02-source-gap-review-validation",
+      "03-business-classification",
+      "03-business-classification-validation",
+      "source-inventory"
+    ],
+    "source_refs_read": [
+      "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "SRC-backend-app-api-v1-workflows-d9740180",
+      "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "SRC-frontend-src-features-login-login-page-24848ab2",
+      "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "SRC-frontend-src-store-feec9a9e"
+    ],
+    "correction_source_refs_read": [],
+    "closure_calls": 1,
+    "cumulative_granted_bytes": 101075,
+    "artifact_write_attempts": 2,
+    "artifact_writes": 1,
+    "fatal_error": null,
+    "max_closure_calls": 10,
+    "max_granted_bytes": 500000,
+    "max_artifact_write_attempts": 6
+  }
+}

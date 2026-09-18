@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-8234d5ea",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-SURVEY",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-features-main-main-api-f877ad86",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/main/main.api.js",
+      "start_line": 1,
+      "end_line": 248,
+      "content_hash": "sha256:e7ec2b21c381b1447f984a388fee8ba9f556e9455e2d285d3bf89aa2496b8ebf",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-8234d5ea"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-index-601768bd",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/parsed-db/index.js",
+      "start_line": 1,
+      "end_line": 3,
+      "content_hash": "sha256:20f97a595eb628b4f64ec3e715c8af1619c2dd198b4d8553927e4038a767385e",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-8234d5ea"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-tasks-index-7e34c61e",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/tasks/index.js",
+      "start_line": 1,
+      "end_line": 2,
+      "content_hash": "sha256:988ae76016f16256bb879e3e89ede291a58dc5185053a22c80758a866e576cc8",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-8234d5ea"
+    }
+  ],
+  "created_at": "2026-09-03T23:50:42.915Z"
+}

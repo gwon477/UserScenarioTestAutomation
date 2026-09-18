@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "correction_from": "03a-fact-graph-correction-02",
+  "failed_correction_chain": [
+    "03a-fact-graph-view-correction-01",
+    "03a-fact-graph-view-correction-02",
+    "03a-fact-graph-view-correction-03",
+    "03a-fact-graph-view-correction-05"
+  ],
+  "failed_patch_hash": "sha256:e07673cd958869ccbe625b39f48bbf6d1bdb81355301856af383a6324ae305eb",
+  "correction_scope": "failed-predicate-targets",
+  "transition_target_element_ids": [
+    "EL-component-businesspage-button-button-1b959aaf",
+    "EL-component-businesspage-button-root-36a555c2",
+    "EL-component-businesspage-button-root-456a2904",
+    "EL-component-businesspage-button-root-547f94d7",
+    "EL-component-businesspage-button-root-74a73f90",
+    "EL-component-businesspage-button-root-7b5cc90c",
+    "EL-component-businesspage-button-root-ee5902ee",
+    "EL-component-businesspage-button-v-2f1469b8",
+    "EL-component-mainpage-button-root-99d235ea",
+    "EL-component-mainpage-button-ts-ts-7f059f08",
+    "EL-component-parseddbpage-button-root-966c5272",
+    "EL-component-parseddbpage-button-root-cccee16a",
+    "EL-component-parseddbpage-button-root-e88717bc",
+    "EL-component-parseddbpage-input-input-c6b159ba",
+    "EL-component-scenariopage-button-button-b6ade5a6",
+    "EL-component-scenariopage-button-root-4e83beae",
+    "EL-component-scenariopage-button-root-93f714c4",
+    "EL-component-scenariopage-button-root-a53a01ca",
+    "EL-component-scenariopage-button-root-ff33f465",
+    "EL-component-scenariopage-input-root-e0e2ecb2",
+    "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+    "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562"
+  ],
+  "correction_target_element_ids": [
+    "EL-component-scenariopage-input-root-e0e2ecb2"
+  ],
+  "correction_method": "pi-coding-agent",
+  "reread_source_refs": [
+    "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+  ],
+  "preserved_edge_count": 53,
+  "appended_edge_count": 32,
+  "out_of_scope_preservation": "verified",
+  "remaining_unresolved_obligations": [
+    {
+      "source_action_ref": "EL-component-settingspage-button-button-910f144d",
+      "branch_ref": "normal:1",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported"
+    }
+  ]
+}

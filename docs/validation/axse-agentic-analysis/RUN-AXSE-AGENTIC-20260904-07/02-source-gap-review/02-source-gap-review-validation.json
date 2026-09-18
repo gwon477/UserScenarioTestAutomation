@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "resolved_gap_ids": [
+    "GAP-TASK-STAGE-AREA",
+    "GAP-NORMAL-JOURNEY-TERMINAL",
+    "GAP-RECOVERY-JOURNEY"
+  ],
+  "unresolved_gap_ids": [],
+  "cited_evidence_count": 6,
+  "correction_artifact_hash": "sha256:8f663922499606e13f82d0f87b868d3bca79f7d16f416d26f43b5c6c306cd99a",
+  "artifact_hash": "sha256:04217cf3497715c04b72a8283bae1aac2c382c24dedb61d405e5bd4cc90de187",
+  "source_tool_usage": {
+    "artifact_reads": [
+      "01-source-survey",
+      "orchestrator-gaps",
+      "source-inventory"
+    ],
+    "source_refs_read": [
+      "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "SRC-frontend-src-app-a0eba768",
+      "SRC-frontend-src-features-login-login-page-24848ab2",
+      "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20",
+      "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+    ],
+    "closure_calls": 3,
+    "cumulative_granted_bytes": 134273,
+    "artifact_write_attempts": 1,
+    "fatal_error": null,
+    "max_closure_calls": 8,
+    "max_granted_bytes": 400000
+  }
+}

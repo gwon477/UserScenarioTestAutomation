@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/api/v1/tasks.py",
+      "start_line": 1,
+      "end_line": 202,
+      "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    },
+    {
+      "source_id": "SRC-backend-app-api-v1-workflows-d9740180",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/api/v1/workflows.py",
+      "start_line": 1,
+      "end_line": 231,
+      "content_hash": "sha256:d0880b970a1596e7c6763a82d39116a5c27902c217ed7f57ab9dc2d7d622e329",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    },
+    {
+      "source_id": "SRC-frontend-src-app-a0eba768",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/App.jsx",
+      "start_line": 1,
+      "end_line": 23,
+      "content_hash": "sha256:cd16062b2a6d3f9701f6b770d77e94790a90402094d86a64abcf3a639ffc757a",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login-form.page.jsx",
+      "start_line": 1,
+      "end_line": 116,
+      "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "start_line": 1,
+      "end_line": 121,
+      "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/main/pages/main.page.jsx",
+      "start_line": 1,
+      "end_line": 1585,
+      "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-main-main-api-f877ad86",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/main/main.api.js",
+      "start_line": 1,
+      "end_line": 248,
+      "content_hash": "sha256:e7ec2b21c381b1447f984a388fee8ba9f556e9455e2d285d3bf89aa2496b8ebf",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+      "start_line": 1,
+      "end_line": 361,
+      "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-75400ad0"
+    }
+  ],
+  "created_at": "2026-09-07T01:57:03.812Z"
+}

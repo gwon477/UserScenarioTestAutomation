@@ -1,0 +1,77 @@
+{
+  "probe": "observer-anchor-reliability",
+  "modelId": "gpt-5.6-luna",
+  "screen": "RA-DAR 야간 작업 대시보드",
+  "frame": {
+    "width": 1229,
+    "height": 768
+  },
+  "rows": [
+    {
+      "anchor": "새로 생성된 대조 조항",
+      "domPresent": true,
+      "observer": [
+        true,
+        true,
+        true
+      ],
+      "hits": 3,
+      "agrees": true
+    },
+    {
+      "anchor": "RADAR 야간 작업 보고",
+      "domPresent": true,
+      "observer": [
+        true,
+        true,
+        true
+      ],
+      "hits": 3,
+      "agrees": true
+    },
+    {
+      "anchor": "규제 대응 자산",
+      "domPresent": true,
+      "observer": [
+        true,
+        true,
+        true
+      ],
+      "hits": 3,
+      "agrees": true
+    },
+    {
+      "anchor": "AI 작업 결과",
+      "domPresent": true,
+      "observer": [
+        true,
+        true,
+        true
+      ],
+      "hits": 3,
+      "agrees": true
+    },
+    {
+      "anchor": "직접 확인 필요",
+      "domPresent": true,
+      "observer": [
+        true,
+        true,
+        true
+      ],
+      "hits": 3,
+      "agrees": true
+    },
+    {
+      "anchor": "품목 허가 취소 완료",
+      "domPresent": false,
+      "observer": [
+        false,
+        false,
+        false
+      ],
+      "hits": 0,
+      "agrees": true
+    }
+  ]
+}

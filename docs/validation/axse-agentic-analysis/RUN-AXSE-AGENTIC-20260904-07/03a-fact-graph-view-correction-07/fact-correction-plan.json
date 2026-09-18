@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:9e84bf99d79bd0ef069a047466b5b283a0df478247be3c5e0ecd22ce55e51763",
+  "element_update_fields": {},
+  "predicate_element_refs": [
+    "U50"
+  ],
+  "remove_predicate_keys": [
+    "scenario.matrix.loaded"
+  ],
+  "replace_edge_indexes": [
+    74
+  ],
+  "edge_update_fields": {
+    "74": [
+      "effect"
+    ]
+  },
+  "add_edge_element_refs": []
+}

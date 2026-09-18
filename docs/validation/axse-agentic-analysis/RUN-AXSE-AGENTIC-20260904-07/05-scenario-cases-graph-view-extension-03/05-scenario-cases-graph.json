@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-GRAPH-SCENARIO-CASES",
+    "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+    "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+    "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+    "business_workflow_mapping_artifact_hash": "sha256:6eb8a9aea80ea81bea3cc0e497ea58722d6288fb67d55ceebff5437bcaa5c974",
+    "user_journey_workflow_link_artifact_hash": "sha256:dfa0cc931a75f7664c8d281a8590aee4137dbc7ecbe7285a288f86bb4062ea5c",
+    "extension_from": "05-scenario-cases-graph",
+    "extension_fact_from": "03a-fact-graph-correction-02",
+    "generated_with": "pi-coding-agent"
+  },
+  "artifacts": {
+    "scenario_skeleton": {
+      "path": "scenario-skeleton.json",
+      "content_hash": "sha256:de2c379a4103fee97b79dfd0dbcd4014db0c9a4eec6ff2b4f9069e80fd9bcd8b"
+    },
+    "journey_scenario_bindings": {
+      "path": "journey-scenario-bindings.json",
+      "content_hash": "sha256:82a222af1e5d0650784f472ec6497f0321b7adc468ecd2639f7f5643cae2d08c"
+    },
+    "narration_patch": {
+      "path": "scenario-narration-patch.json",
+      "content_hash": "sha256:3a46768b8a825385bf2eddc0a50964e068ab60df18dca1019ae7afe3e4d44e27"
+    },
+    "narration_delta": {
+      "path": "scenario-narration-delta.json",
+      "content_hash": "sha256:de5486a61a37ed8d569fc980771773d4aa0fe0ea72c307dc22a936c60a1f608c"
+    },
+    "scenario_cases": {
+      "path": "scenario-cases.json",
+      "content_hash": "sha256:3e5242972e4c65a914607c2d3ae655700e1248c18248f96d2ecdb29972eb394a"
+    }
+  }
+}

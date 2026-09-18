@@ -1,0 +1,30 @@
+{
+  "sceneId": "26-evidence-library",
+  "cues": [
+    {
+      "text": "증적 탭은 실행별로 묶인 증적을 판정으로 거릅니다",
+      "startMs": 2,
+      "endMs": 3611,
+      "box": {
+        "x0": 537,
+        "y0": 926,
+        "x1": 1383,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "zoomIn",
+      "atMs": 21,
+      "scale": 1.3,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 1877,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 8548
+}

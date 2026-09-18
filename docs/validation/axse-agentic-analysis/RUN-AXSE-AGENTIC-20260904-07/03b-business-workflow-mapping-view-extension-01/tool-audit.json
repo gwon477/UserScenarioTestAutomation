@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.input.validate",
+      "result": "ok",
+      "classification_artifact_id": "03-business-classification",
+      "fact_graph_artifact_id": "03a-fact-graph"
+    },
+    {
+      "sequence": 2,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "03b-business-workflow-mapping"
+    }
+  ]
+}

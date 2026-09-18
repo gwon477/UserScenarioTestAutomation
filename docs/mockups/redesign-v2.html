@@ -1,0 +1,2017 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ScenarioForge · 프로젝트 목록 홈 재설계 목업 v2</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2032%2032%22%20width=%2232%22%20height=%2232%22%20role=%22img%22%20aria-label=%22ScenarioForge%22%3E%20%20%3Ctitle%3EScenarioForge%3C/title%3E%20%20%3Crect%20width=%2232%22%20height=%2232%22%20rx=%227.2%22%20fill=%22%23E8542B%22/%3E%20%20%3Cg%20transform=%22translate(16%2016)%20scale(.96)%20translate(-12%20-11.55)%22%20fill=%22none%22%20stroke=%22%23FFFFFF%22%20stroke-width=%223%22%20stroke-linecap=%22round%22%3E%20%20%20%20%3Cpath%20d=%22M17%206H9a3%203%200%200%200%200%206h6a3%203%200%200%201%200%206H7%22/%3E%20%20%20%20%3Ccircle%20cx=%2217%22%20cy=%226%22%20r=%222.4%22%20fill=%22%23FFFFFF%22%20stroke=%22none%22/%3E%20%20%3C/g%3E%3C/svg%3E" />
+<style>
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+/* ─────────────────────────────────────────────────────────────
+   ScenarioForge Design System v3
+   Type   : Pretendard Variable 단일 서체 (숫자·ID는 tabular numerals)
+   Weight : 본문 400 / 라벨 450 / 제목 600. 버튼·태그는 450 이하로 얇게
+   Accent : coral #E8542B — 상호작용 전용. 상태색으로는 쓰지 않는다
+   Status : 성공 green / 실패 red / 진행 blue / 확인필요 amber / 대기 gray
+   Grid   : 4px 리듬. 목록은 고정 컬럼 그리드로 세로 정렬을 보장한다
+   Theme  : 라이트 전용 (의도적 단일 테마)
+   ───────────────────────────────────────────────────────────── */
+:root{
+  /* surface */
+  --paper:#F4F2F1;
+  --surface:#FFFFFF;
+  --surface-2:#FAF9F8;
+  --surface-3:#EFEDEB;
+  /* ink */
+  --ink:#191412;
+  --ink-2:#5E5653;
+  --ink-3:#736B68;
+  --ink-4:#958D89;
+  --line:#E5E1DF;
+  --line-2:#D5D0CD;
+  --line-ctl:#ADA5A1;       /* 입력·버튼 경계 (채움 대비와 함께 식별) */
+  /* accent — 상호작용 전용 */
+  --accent:#E8542B;         /* 3.66:1 — 헤어라인·밑줄·틱·포커스 전용 */
+  --accent-btn:#C43F16;     /* 흰 글자 5.16:1 — 채움 버튼 */
+  --accent-btn-h:#B93A12;
+  --accent-ink:#A93411;     /* 틴트 위 글자 5.79:1 */
+  --accent-press:#CC4319;
+  --accent-soft:#FDEDE7;
+  --accent-line:#F8CDBC;
+  /* status — 의미 전용 */
+  --ok:#1B7A50;      --ok-soft:#E6F2EC;   --ok-line:#C2E1D2;
+  --bad:#C02A20;     --bad-soft:#FBE9E7;  --bad-line:#F1CDC9;
+  --prog:#2160C4;    --prog-soft:#E9F0FB; --prog-line:#C7D9F4;
+  --warn:#8A6208;    --warn-soft:#FBF1DE; --warn-line:#EEDCB6;
+  --idle:#6A6360;    --idle-soft:#EDEBE9; --idle-line:#DCD7D4;
+  /* elevation — 얇은 단일 스케일 */
+  --sh-1:0 1px 1px rgba(25,20,18,.03);
+  --sh-2:0 1px 2px rgba(25,20,18,.04), 0 8px 20px -14px rgba(25,20,18,.14);
+  --sh-3:0 2px 4px rgba(25,20,18,.05), 0 28px 56px -24px rgba(25,20,18,.24);
+  /* geometry — 4px 리듬 */
+  --r-lg:16px; --r-md:12px; --r-sm:8px; --r-xs:6px;
+  --t:180ms cubic-bezier(.2,.6,.2,1);
+  --font:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font);font-size:13.5px;font-weight:400;line-height:1.5;letter-spacing:-.005em;
+}
+/* 모노를 쓰지 않고 tabular numerals + 미세 자간으로 식별자를 정렬한다 */
+code,.mono,.path,.metric,dd,.counts{font-feature-settings:"tnum" 1;font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:proportional-nums}
+code,.path{font-family:var(--font);letter-spacing:0;font-size:.92em;color:var(--ink-3)}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,h4,h5,p,dl,dd,dt,ol,ul,fieldset,legend{margin:0;padding:0}
+fieldset{border:0}
+ul,ol{list-style:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+svg.i{width:16px;height:16px;flex:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+svg.i.sm{width:14px;height:14px;stroke-width:1.6}
+svg.i.lg{width:20px;height:20px;stroke-width:1.4}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* ── 목업 크롬 (앱 UI 아님) ─────────────────────────────── */
+.mock{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:100vh}
+.mock-index{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:24px 20px;background:#1C1715;color:#EEE9E6}
+.mock-index h1{font-size:15px;font-weight:600;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.mock-index h1 svg{stroke:var(--accent)}
+.mock-index .ver{font-size:11px;color:#8A807B;margin:4px 0 20px;letter-spacing:.04em}
+.mock-index strong{display:block;font-size:10px;letter-spacing:.12em;color:#7E7470;margin:20px 0 8px;font-weight:500}
+.mock-index a{display:grid;grid-template-columns:32px minmax(0,1fr);gap:8px;align-items:baseline;padding:6px 8px;margin:0 -8px;border-radius:var(--r-xs);color:#CFC7C3;text-decoration:none;font-size:12.5px;font-weight:400;transition:background var(--t),color var(--t)}
+.mock-index a:hover{background:#2A2321;color:#fff}
+.mock-index a i{font-style:normal;font-size:10.5px;color:#6F6561;letter-spacing:0;font-variant-numeric:tabular-nums}
+.mock-stream{padding:32px clamp(20px,3vw,40px) 96px;min-width:0}
+.mock-cap{display:grid;gap:8px;margin:0 0 12px}
+.mock-cap .l{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.mock-cap b{font-size:11px;font-weight:500;color:var(--accent);letter-spacing:.04em}
+.mock-cap h2{font-size:16px;font-weight:600;letter-spacing:-.02em}
+.mock-cap code{color:var(--ink-3);background:var(--surface);border:1px solid var(--line);padding:2px 8px;border-radius:999px;font-size:11.5px}
+.mock-cap p{font-size:12.5px;font-weight:400;color:var(--ink-2);max-width:76ch}
+.frame{margin:0 0 52px;scroll-margin-top:24px}
+.mock-note{display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;align-items:start;margin:12px 0 0;padding:12px 14px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);font-size:12.5px;color:var(--ink-2);box-shadow:var(--sh-1)}
+.mock-note svg{stroke:var(--accent);margin-top:2px}
+.mock-note b{color:var(--ink);font-weight:600}
+
+/* 앱 뷰포트 */
+.app{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-lg);box-shadow:var(--sh-3);display:flex;flex-direction:column;min-height:600px}
+.app.tall{min-height:764px}
+.app.grid-bg::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:24px 24px;opacity:.4;mask-image:radial-gradient(120% 90% at 70% 0%,#000 20%,transparent 78%)}
+
+/* ── 앱 셸 ─────────────────────────────────────────────── */
+.titlebar{display:flex;align-items:center;gap:8px;height:36px;padding:0 16px;background:var(--surface-3);border-bottom:1px solid var(--line);flex:none;position:relative;z-index:2}
+.titlebar i{width:9px;height:9px;border-radius:50%;background:#D6D0CD;display:block}
+.titlebar span{margin-left:8px;font-size:11.5px;font-weight:450;color:var(--ink-3)}
+.topbar{display:flex;align-items:center;gap:16px;height:56px;padding:0 20px;background:var(--surface);border-bottom:1px solid var(--line);flex:none;position:relative;z-index:2}
+.brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px;letter-spacing:-.02em;text-decoration:none;color:var(--ink);flex:none}
+.brand svg{width:20px;height:20px;stroke:var(--accent);stroke-width:1.6;fill:none;stroke-linecap:round}
+.crumb{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-3);min-width:0}
+.crumb a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid transparent;white-space:nowrap}
+.crumb a:hover{color:var(--accent);border-bottom-color:var(--accent-line)}
+.crumb b{color:var(--ink);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb svg{stroke:var(--ink-4);flex:none}
+.topbar-end{margin-left:auto;display:flex;align-items:center;gap:8px;flex:none}
+.switcher{display:flex;align-items:center;gap:8px;height:32px;padding:0 12px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;font-size:12.5px;max-width:220px}
+.switcher svg:first-child{stroke:var(--accent)}
+.switcher b{font-weight:450;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tabs{display:flex;gap:0;padding:0 20px;background:var(--surface);border-bottom:1px solid var(--line);flex:none;position:relative;z-index:2}
+.tabs button{display:flex;align-items:center;gap:8px;height:44px;padding:0 14px;background:none;border:0;font-size:13px;font-weight:450;color:var(--ink-2);border-bottom:1.5px solid transparent;margin-bottom:-1px;transition:color var(--t),border-color var(--t)}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{color:var(--ink);font-weight:600;border-bottom-color:var(--accent)}
+.tabs button[aria-selected="true"] svg{stroke:var(--accent)}
+.tabs .n{font-size:11px;font-weight:450;color:var(--ink-3);background:var(--surface-3);padding:1px 7px;border-radius:999px;letter-spacing:0}
+.tabs .live{width:6px;height:6px;border-radius:50%;background:var(--prog);box-shadow:0 0 0 3px var(--prog-soft)}
+.body{flex:1;overflow:auto;padding:24px 20px;position:relative;z-index:1}
+.body.pad-lg{padding:32px 28px}
+
+/* ── 타이포 ─────────────────────────────────────────────── */
+.eyebrow{display:block;font-size:10px;font-weight:500;letter-spacing:.14em;color:var(--ink-3);margin-bottom:8px}
+.h1{font-size:24px;font-weight:600;letter-spacing:-.028em;line-height:1.25}
+.h2{font-size:16px;font-weight:600;letter-spacing:-.02em}
+.h3{font-size:13.5px;font-weight:500;letter-spacing:-.01em}
+.sub{font-size:12.5px;font-weight:400;color:var(--ink-2);max-width:72ch}
+.mut{color:var(--ink-3)}
+.num{font-size:48px;font-weight:200;letter-spacing:-.04em;line-height:1}
+.num.sm{font-size:24px;font-weight:250;letter-spacing:-.03em}
+.num u{text-decoration:none;font-size:.4em;font-weight:450;letter-spacing:0;color:var(--ink-3);margin-left:3px;vertical-align:baseline}
+.path{font-size:11.5px;color:var(--ink-3);letter-spacing:0}
+
+/* ── 버튼: 얇게 ─────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:32px;padding:0 12px;border-radius:var(--r-sm);border:1px solid var(--line-ctl);background:var(--surface);font-size:12.5px;font-weight:450;letter-spacing:-.005em;box-shadow:none;transition:background var(--t),border-color var(--t),color var(--t)}
+.btn:hover{background:var(--surface-2);border-color:var(--ink-4)}
+.btn:active{background:var(--surface-3)}
+.btn.pri{background:var(--accent-btn);border-color:var(--accent-btn);color:#fff;font-weight:500}
+.btn.pri:hover{background:var(--accent-btn-h);border-color:var(--accent-btn-h)}
+.btn.pri svg{stroke:#fff}
+.btn.dan{background:var(--surface);border-color:var(--bad-line);color:var(--bad)}
+.btn.dan:hover{background:var(--bad-soft);border-color:var(--bad)}
+.btn.dan svg{stroke:var(--bad)}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--ink-2)}
+.btn.ghost:hover{background:var(--surface-3);color:var(--ink);border-color:transparent}
+.btn.lg{height:40px;padding:0 16px;font-size:13px}
+.btn.sm{height:28px;padding:0 10px;font-size:12px;border-radius:var(--r-xs)}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.btn.pri[disabled]{opacity:1;background:var(--surface-3);border-color:var(--line-2);color:var(--ink-3)}
+.btn.pri[disabled] svg{stroke:var(--ink-3)}
+.btn.icon{padding:0;width:32px;flex:none}
+.btn.icon.q-dan:hover{color:var(--bad);border-color:var(--bad-line);background:var(--bad-soft)}
+.btn.icon.sm{width:28px}
+.btn.link{background:none;border:0;padding:0;height:auto;color:var(--ink-2);font-weight:400;text-decoration:none;gap:5px;justify-content:flex-start}
+.btn.link:hover{color:var(--accent);background:none}
+.cta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cta-why{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:400;color:var(--bad)}
+.cta-why svg{stroke:var(--bad)}
+
+/* ── 카드 / 패널 ────────────────────────────────────────── */
+.card{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-md);box-shadow:var(--sh-2)}
+.card.flat{box-shadow:none}
+.p-16{padding:16px}.p-20{padding:20px}.p-24{padding:24px}
+.card-h{display:flex;align-items:center;gap:12px;min-height:52px;padding:12px 20px;border-bottom:1px solid var(--line)}
+.card-h .end{margin-left:auto;display:flex;align-items:center;gap:8px}
+.card-b{padding:16px 20px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--sh-2);display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.panel-h{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 16px;border-bottom:1px solid var(--line);flex:none}
+.panel-h .end{margin-left:auto;display:flex;align-items:center;gap:8px;color:var(--ink-3);font-size:12px}
+.panel-f .end{margin-left:auto}
+.panel-f{display:flex;align-items:center;gap:8px;min-height:52px;padding:10px 16px;border-top:1px solid var(--line);flex:none}
+.panel-s{flex:1;overflow:auto;min-height:0}
+
+/* pill / chip / tag — 얇게 */
+.pill{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:var(--surface);border:1px solid var(--line);border-radius:999px;font-size:11.5px;font-weight:400;color:var(--ink-2);box-shadow:var(--sh-1)}
+.pill svg{stroke:var(--accent)}
+.pill code{color:inherit}
+.chip{display:inline-flex;align-items:center;gap:5px;height:20px;padding:0 8px;border-radius:999px;font-size:11px;font-weight:450;letter-spacing:0;border:1px solid transparent;white-space:nowrap}
+.chip svg{width:11px;height:11px;stroke-width:1.8}
+.chip.ok{background:var(--ok-soft);color:var(--ok);border-color:var(--ok-line)}
+.chip.bad{background:var(--bad-soft);color:var(--bad);border-color:var(--bad-line)}
+.chip.warn{background:var(--warn-soft);color:var(--warn);border-color:var(--warn-line)}
+.chip.idle{background:var(--idle-soft);color:var(--idle);border-color:var(--idle-line)}
+.chip.run{background:var(--prog-soft);color:var(--prog);border-color:var(--prog-line)}
+.chip.mono{background:var(--surface);color:var(--ink-2);border-color:var(--line);font-weight:400}
+.tag{display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;border-radius:var(--r-xs);background:var(--surface);border:1px solid var(--line);font-size:11px;font-weight:400;color:var(--ink-2);letter-spacing:0}
+
+/* 시그니처: 게이지 / 커넥터 / 오브 */
+.orb{position:absolute;border-radius:50%;filter:blur(48px);opacity:.4;pointer-events:none;background:radial-gradient(circle at 40% 40%,#FF6E45 0%,#E8542B 44%,rgba(232,84,43,0) 72%)}
+.gauge{position:relative;width:180px;height:104px;flex:none;margin-left:auto}
+.gauge svg{width:100%;height:100%;overflow:visible;display:block}
+.gauge .tick{stroke:var(--prog-line);stroke-width:2;stroke-linecap:round}
+.gauge .tick.on{stroke:var(--prog)}
+.gauge .val{position:absolute;left:0;right:0;bottom:0;text-align:center}
+/* 지표 + 커넥터: 숫자열 폭을 고정해 라벨 시작점을 맞춘다 */
+.stat-row{display:grid;grid-template-columns:72px 40px minmax(0,1fr);gap:12px;align-items:center;text-decoration:none;color:inherit}
+.stat-row .lb{font-size:12px;font-weight:400;color:var(--ink-2)}
+.connect{display:flex;align-items:center}
+.connect .ln{flex:1;height:1px;background:var(--accent-line)}
+.connect .dt{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+/* 헤더 우측 지표군: 우측 정렬 + 동일 컬럼 폭 */
+.stats{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(72px,auto);gap:28px;justify-items:end;align-items:start;margin-left:auto;flex:none}
+.stats .stat{text-align:right}
+.stats .stat .path{display:block;margin-top:6px}
+
+/* ── 폼 ─────────────────────────────────────────────────── */
+.field{display:block;margin-bottom:16px}
+.field > .lb{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:450;margin-bottom:6px}
+.field > .lb svg{stroke:var(--ink-3)}
+.field .hint{display:block;font-size:11.5px;font-weight:400;color:var(--ink-3);margin-top:6px}
+.field .err{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:400;color:var(--bad);margin-top:6px}
+.field .err svg{stroke:var(--bad);width:12px;height:12px}
+.inp{width:100%;height:36px;padding:0 12px;background:var(--surface-2);border:1px solid var(--line-ctl);border-radius:var(--r-sm);font:inherit;font-size:12.5px;font-weight:400;color:var(--ink);transition:border-color var(--t),background var(--t)}
+.inp::placeholder{color:var(--ink-4)}
+.inp:focus{outline:none;background:var(--surface);border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.inp[aria-invalid="true"]{border-color:var(--bad);background:#FFFCFB}
+.inp.mono{letter-spacing:0}
+.inp-wrap{position:relative;display:flex}
+.inp-wrap .btn.icon{position:absolute;right:3px;top:3px;height:30px;width:30px;border:0;background:none}
+.fs{border:1px solid var(--line);border-radius:var(--r-md);padding:16px;margin:0 0 16px;background:var(--surface-2)}
+.fs legend{padding:0 6px;margin-left:-6px;font-size:11.5px;font-weight:500;color:var(--ink-2);display:flex;align-items:center;gap:6px}
+.fs legend svg{stroke:var(--ink-3)}
+.fs .note{font-size:11.5px;font-weight:400;color:var(--ink-3);margin:8px 0 12px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;background:var(--surface);border:1px solid var(--line-ctl);border-radius:999px;font-size:12.5px;font-weight:400;cursor:pointer;transition:border-color var(--t),background var(--t)}
+.opt:hover{border-color:var(--ink-4)}
+.opt input{accent-color:var(--accent);width:14px;height:14px;margin:0}
+.opt.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-ink);font-weight:450}
+.opt.off{opacity:.5;cursor:not-allowed}
+.opt small{color:var(--ink-3);font-size:11px}
+.cbx{display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;align-items:start;padding:8px 0;font-size:12.5px;font-weight:400;cursor:pointer}
+.cbx input{accent-color:var(--accent);width:15px;height:15px;margin:1px 0 0}
+.cbx small{display:block;color:var(--ink-3);font-size:11.5px;margin-top:3px}
+.cbx.danger{border:1px solid var(--bad-line);background:#FFFCFB;border-radius:var(--r-sm);padding:12px}
+
+/* ── 목록: 고정 컬럼 그리드로 세로 정렬 보장 ─────────────── */
+.rows{display:flex;flex-direction:column}
+.row{display:flex;align-items:center;gap:16px;padding:0 20px;min-height:60px;border:0;border-bottom:1px solid var(--line);background:none;width:100%;text-align:left;transition:background var(--t)}
+.row:last-child{border-bottom:0}
+.row:hover{background:var(--surface-2)}
+.row.on{background:var(--surface-2);box-shadow:inset 2px 0 0 var(--accent)}
+.rows.tbl .row{display:grid;grid-template-columns:var(--cols);align-items:center}
+.row .end{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.row-main{min-width:0}
+.row-main strong{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:-.01em;min-width:0}
+.row-main strong .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row-main span{display:block;font-size:11.5px;font-weight:400;color:var(--ink-3);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.metric{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:400;color:var(--ink-2);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.metric svg{stroke:var(--ink-4);flex:none}
+.metric b{font-weight:500;color:var(--ink)}
+.metric.r{justify-content:flex-end}
+.cell-bar .path{display:block;margin-top:6px}
+.mark{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none}
+.mark.ok{background:var(--ok-soft);color:var(--ok)}
+.mark.bad{background:var(--bad-soft);color:var(--bad)}
+.mark.run{background:var(--prog-soft);color:var(--prog)}
+.mark.idle{background:var(--idle-soft);color:var(--idle)}
+.mark.warn{background:var(--warn-soft);color:var(--warn)}
+.mark.sm{width:24px;height:24px}
+
+/* 아이콘 시스템 프레임 */
+.icn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+.icn-cell{background:var(--surface);padding:14px 12px;display:grid;justify-items:center;gap:8px;text-align:center}
+.icn-cell svg{width:22px;height:22px;stroke:var(--ink);stroke-width:1.6;fill:none}
+.icn-cell b{font-size:11px;font-weight:500}
+.icn-cell small{font-size:10px;color:var(--ink-3)}
+.icn-sizes{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.icn-sizes figure{margin:0;display:grid;justify-items:center;gap:8px}
+.icn-sizes figcaption{font-size:10px;color:var(--ink-3)}
+.icn-chk{background:conic-gradient(#EFEDEB 0 25%,#fff 0 50%,#EFEDEB 0 75%,#fff 0);background-size:10px 10px;padding:8px;border-radius:6px;line-height:0}
+
+/* 데이터 원천 감사표 */
+.audit{width:100%;border-collapse:separate;border-spacing:0;font-size:12px}
+.audit th,.audit td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.audit th{font-size:10px;font-weight:500;letter-spacing:.1em;color:var(--ink-3);background:var(--surface-2);position:sticky;top:0}
+.audit td:first-child{font-weight:450;white-space:nowrap}
+.audit code{font-size:11px}
+.audit tr:last-child td{border-bottom:0}
+.audit .s{white-space:nowrap}
+.aud-wrap{max-height:none;overflow:auto;border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface)}
+
+/* 앱 내부 안내문 */
+.notice{display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;align-items:start;padding:12px 14px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--line);font-size:12px;font-weight:400;color:var(--ink-2)}
+.notice svg{stroke:var(--ink-3);margin-top:2px}
+.notice b{color:var(--ink);font-weight:500}
+.notice.warn{background:var(--warn-soft);border-color:var(--warn-line);color:#6E4E06}
+.notice.warn svg{stroke:var(--warn)}
+.notice .btn.link{display:inline-flex;color:var(--accent)}
+/* 헤더 진행 지표 묶음 */
+.prog-cell{display:grid;gap:8px;align-content:center;min-width:150px}
+.prog-cell .counts{display:flex;gap:12px;font-size:11.5px;font-weight:400}
+
+/* 프로젝트 카드 — 카드 간 푸터·구분선 정렬을 맞춘다 */
+.pcard{position:relative;display:flex;flex-direction:column;padding:20px}
+.pchd{display:grid;grid-template-columns:28px minmax(0,1fr) 28px;gap:12px;align-items:start}
+.pctitle{min-width:0}
+.pctitle .path{margin-top:4px}
+.pcst{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:16px 0 0;min-height:20px}
+.pcard hr{border:0;border-top:1px solid var(--line);margin:16px 0 0}
+.pcprog{height:4px;margin-top:12px}
+.pcprog .bar{height:4px}
+.pcmt{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px}
+.pcnote{font-size:12px;font-weight:400;color:var(--ink-3);margin-top:16px}
+.pcard .foot{margin-top:auto;padding-top:20px}
+
+/* 빈 상태 */
+.empty{display:grid;justify-items:center;gap:12px;text-align:center;padding:48px 20px}
+.empty .ic{width:48px;height:48px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center}
+.empty .ic svg{width:20px;height:20px;stroke:var(--accent)}
+.empty h3{font-size:14px;font-weight:600}
+.empty p{font-size:12.5px;color:var(--ink-3);max-width:44ch}
+
+/* 진행 바 */
+.bar{height:4px;border-radius:999px;background:var(--prog-soft);overflow:hidden}
+.bar > span{display:block;height:100%;border-radius:999px;background:var(--prog)}
+.bar.ok{background:var(--ok-soft)}
+.bar.ok > span{background:var(--ok)}
+.bar.bad{background:var(--bad-soft)}
+.bar.bad > span{background:var(--bad)}
+.bar.idle{background:var(--idle-soft)}
+.bar.idle > span{background:var(--idle)}
+
+/* 모달 */
+.scrim{position:absolute;inset:0;background:rgba(25,20,18,.32);backdrop-filter:blur(2px);display:grid;place-items:center;z-index:9;padding:24px}
+.dialog{width:min(464px,100%);background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--sh-3);padding:24px;border:1px solid var(--line)}
+.dialog .dic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;margin-bottom:16px}
+.dialog h2{font-size:16px;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+.dialog p{font-size:12.5px;font-weight:400;color:var(--ink-2);margin-bottom:16px}
+.dialog dl{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;margin-bottom:20px}
+.dialog dl > div{background:var(--surface-2);padding:12px}
+.dialog dt{font-size:11px;font-weight:400;color:var(--ink-3);margin-bottom:4px}
+.dialog dd{font-size:15px;font-weight:500}
+.dialog .acts{display:flex;justify-content:flex-end;gap:8px}
+.menu{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--sh-3);padding:6px;min-width:216px;z-index:8}
+.menu button{display:flex;align-items:center;gap:10px;width:100%;height:32px;padding:0 10px;border:0;background:none;border-radius:var(--r-xs);font-size:12.5px;font-weight:400;text-align:left;transition:background var(--t)}
+.menu button:hover{background:var(--surface-2)}
+.menu button svg{stroke:var(--ink-3)}
+.menu button .r{margin-left:auto;font-size:11px;color:var(--ink-3)}
+.menu button.dan{color:var(--bad)}
+.menu button.dan svg{stroke:var(--bad)}
+.menu hr{border:0;border-top:1px solid var(--line);margin:6px 2px}
+.toast{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);display:flex;align-items:center;gap:12px;height:40px;padding:0 16px;background:#1C1715;color:#F2EDEA;border-radius:999px;box-shadow:var(--sh-3);font-size:12.5px;font-weight:400;z-index:8;white-space:nowrap}
+.toast button{background:none;border:0;color:#FFB29A;font-weight:500;font-size:12.5px;padding:0}
+.toast svg{stroke:#79CFA6}
+
+/* 레이아웃 유틸 */
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.stack{display:flex;flex-direction:column;gap:16px}
+.between{display:flex;align-items:flex-start;gap:20px}
+.between .end{margin-left:auto;display:flex;align-items:center;gap:8px;flex:none}
+.hd{margin-bottom:20px}
+
+/* wizard 스텝 */
+.steps{display:flex;align-items:center;gap:0;margin:0 auto;flex:none}
+.steps li{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:400;color:var(--ink-3)}
+.steps li + li::before{content:"";width:24px;height:1px;background:var(--line-2);margin:0 12px}
+.steps li b{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:var(--surface-3);color:var(--ink-3);font-size:10.5px;font-weight:500;flex:none;letter-spacing:0}
+.steps li.on{color:var(--ink);font-weight:500}
+.steps li.on b{background:var(--accent-btn);color:#fff}
+.steps li.done b{background:var(--ok-soft);color:var(--ok)}
+.steps li.done{color:var(--ink-2)}
+
+/* 정의 목록 */
+.kv{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden}
+.kv > div{background:var(--surface);padding:0 14px;min-height:44px;display:grid;grid-template-columns:112px minmax(0,1fr) auto;gap:12px;align-items:center}
+.kv > div.col{display:block;padding:12px 14px}
+.kv > div.col dd{margin-top:4px;white-space:normal}
+.kv dt{font-size:11.5px;font-weight:400;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+.kv dd{font-size:12.5px;font-weight:450;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kv dd.wrap{white-space:normal}
+.kv .end{justify-self:end}
+.kv.plain{background:none;border:0;border-radius:0}
+.kv.plain > div{padding:0;min-height:32px;background:none}
+
+/* 파이프라인 */
+.pipe{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:stretch}
+.pipe li{display:grid;grid-template-columns:minmax(0,1fr) 20px;align-items:center}
+.pipe li:last-child .cn{visibility:hidden}
+.pipe .nd{display:grid;gap:4px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface);min-width:0}
+.pipe .nd b{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:500;letter-spacing:.1em;color:var(--ink-3)}
+.pipe .nd b svg{width:13px;height:13px}
+.pipe .nd span{font-size:12px;font-weight:450;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pipe li.done .nd{background:var(--ok-soft);border-color:var(--ok-line)}
+.pipe li.done .nd b{color:var(--ok)}
+.pipe li.on .nd{background:var(--prog-soft);border-color:var(--prog-line)}
+.pipe li.on .nd b{color:var(--prog)}
+.pipe li.next .nd{background:var(--accent-soft);border-color:var(--accent-line)}
+.pipe li.next .nd b{color:var(--accent-ink)}
+.pipe li.fail .nd{background:var(--bad-soft);border-color:var(--bad-line)}
+.pipe li.fail .nd b{color:var(--bad)}
+.pipe .cn{position:relative;height:1px;background:var(--line-2);justify-self:center;width:100%}
+.pipe .cn::after{content:"";position:absolute;right:0;top:-3px;border:3.5px solid transparent;border-left-color:var(--line-2);border-right-width:0}
+
+/* 시나리오 시트 — 헤더/행/세부가 같은 컬럼 축을 공유한다 */
+:root{--sc:20px 24px 240px minmax(0,1fr) 72px;--sp:20px;--sc-ind:96px}
+.sheet-hd,.sheet-rw{display:grid;grid-template-columns:var(--sc);gap:16px;align-items:center;padding:0 var(--sp)}
+.sheet-hd{min-height:36px;font-size:11px;font-weight:450;color:var(--ink-3);border-bottom:1px solid var(--line);background:var(--surface-2);position:sticky;top:0;z-index:2}
+.sheet-rw{min-height:56px;padding-top:10px;padding-bottom:10px;border-bottom:1px solid var(--line);transition:background var(--t)}
+.sheet-rw:hover{background:var(--surface-2)}
+.sheet-rw.on{background:var(--surface-2);box-shadow:inset 2px 0 0 var(--accent)}
+.sheet-rw input[type=checkbox]{accent-color:var(--accent);width:14px;height:14px;margin:0}
+.sheet-rw > code{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sheet-ti{min-width:0}
+.sheet-ti strong{display:block;font-size:12.5px;font-weight:500;letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sheet-ti .chip{display:inline-flex;margin-top:4px}
+.sheet-ti span:not(.chip){display:block;font-size:11.5px;font-weight:400;color:var(--ink-3);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sheet-gp{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;min-height:36px;padding:0 var(--sp) 0 var(--sc-ind);background:var(--surface-3);border-bottom:1px solid var(--line)}
+.sheet-gp b{font-size:10.5px;font-weight:500;color:var(--accent-ink);background:var(--accent-soft);border:1px solid var(--accent-line);height:18px;padding:0 8px;border-radius:999px;display:inline-grid;place-items:center;letter-spacing:.04em}
+.sheet-gp h3{font-size:12px;font-weight:500}
+.sheet-gp small{justify-self:end;font-size:11px;font-weight:400;color:var(--ink-3)}
+/* 세부는 ID 컬럼 시작선(=20+24+16=60px)에 맞춘다 */
+.sheet-dt{padding:12px 20px 16px var(--sc-ind);background:var(--surface-2);border-bottom:1px solid var(--line)}
+.sheet-dt .pre{font-size:11.5px;color:var(--ink-3)}
+.sheet-dt .pre b{color:var(--ink-2);font-weight:500}
+.sheet-dt ol{display:grid;gap:0;margin-top:12px;border-top:1px solid var(--line)}
+.sheet-dt li{display:grid;grid-template-columns:24px minmax(0,1fr) minmax(0,1fr);gap:16px;font-size:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.sheet-dt li > span:first-child{font-size:11px;color:var(--ink-3);letter-spacing:0}
+.sheet-dt li p:last-child{color:var(--ink-2)}
+
+/* 질의 패널 */
+.chat-s{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:14px;min-height:0}
+.msg{max-width:94%}
+.msg b{display:block;font-size:9.5px;font-weight:500;letter-spacing:.12em;color:var(--ink-3);margin-bottom:6px}
+.msg p{font-size:12.5px;font-weight:400;padding:10px 12px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--line);color:var(--ink-2)}
+.msg.me{align-self:flex-end}
+.msg.me b{text-align:right}
+.msg.me p{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent-ink)}
+.comp{border-top:1px solid var(--line);padding:12px;flex:none;background:var(--surface-2)}
+.comp .drop{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--ink-3);border:1px dashed var(--line-2);border-radius:var(--r-sm);min-height:32px;padding:0 12px;margin-bottom:10px}
+.comp .drop.over{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-ink);border-style:solid}
+.comp .refs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.comp .refs .tag{max-width:100%;overflow:hidden}
+.comp .refs .tag span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.comp textarea{width:100%;border:1px solid var(--line-ctl);border-radius:var(--r-sm);padding:10px 12px;font:inherit;font-size:12.5px;font-weight:400;resize:none;background:var(--surface)}
+.comp textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.comp .snd{display:flex;justify-content:flex-end;margin-top:10px}
+
+/* 실행 대기열 — 헤더와 단계가 같은 축을 공유한다 */
+.qcase{border-bottom:1px solid var(--line)}
+.qcase:last-child{border-bottom:0}
+.qhd{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:16px;align-items:center;width:100%;min-height:52px;padding:0 16px;background:none;border:0;text-align:left;transition:background var(--t)}
+.qhd:hover{background:var(--surface-2)}
+.qcase.on .qhd{background:var(--surface-2);box-shadow:inset 2px 0 0 var(--accent)}
+.qno{font-size:11px;color:var(--ink-3);letter-spacing:0}
+.qti{min-width:0}
+.qti code{display:block;font-size:10.5px;color:var(--ink-3)}
+.qti strong{display:block;font-size:12.5px;font-weight:500;letter-spacing:-.01em;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* 단계 목록은 케이스 제목 컬럼 시작선(=16+24+16=56px)에 맞춘다 */
+.qsteps{padding:0 16px 12px 56px;background:var(--surface-2)}
+.qsteps li{display:grid;grid-template-columns:20px minmax(0,1fr) 76px 28px;gap:12px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}
+.qsteps li:last-child{border-bottom:0}
+.qsteps .sic{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;margin-top:1px}
+.qsteps .sic svg{width:12px;height:12px}
+.qsteps small{display:block;font-size:10px;color:var(--ink-3);letter-spacing:0}
+.qsteps strong{display:block;font-size:12.5px;font-weight:450;margin:3px 0 2px}
+.qsteps .exp{display:block;font-size:11.5px;font-weight:400;color:var(--ink-3)}
+.qsteps .chip{margin-top:2px;justify-self:start}
+.diag{display:block;margin-top:10px;padding:10px 12px;border-radius:var(--r-sm);background:var(--bad-soft);border:1px solid var(--bad-line)}
+.diag > p{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:450;color:var(--bad)}
+.diag dl{display:grid;grid-auto-flow:column;grid-auto-columns:max-content;gap:20px;margin-top:10px}
+.diag dl > div{display:grid;gap:2px;font-size:11px;color:var(--ink-2)}
+.diag dt{color:var(--ink-3);font-weight:400}
+.diag .asrt{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:8px;align-items:center;font-size:11px;margin-top:8px;color:var(--ink-2)}
+
+/* 가짜 스크린샷 */
+.shot{border:1px solid var(--line-2);border-radius:var(--r-sm);overflow:hidden;background:#fff}
+.shot .bar2{display:flex;align-items:center;gap:5px;height:24px;padding:0 10px;background:var(--surface-3);border-bottom:1px solid var(--line)}
+.shot .bar2 i{width:6px;height:6px;border-radius:50%;background:#D6D0CD;flex:none}
+.shot .bar2 span{margin-left:6px;font-size:9.5px;color:var(--ink-3);display:flex;align-items:center;gap:4px;letter-spacing:0}
+.shot .pg{padding:16px}
+.shot .pg h5{font-size:12px;font-weight:600;margin-bottom:4px}
+.shot .pg > p{font-size:10.5px;color:var(--ink-3)}
+.shot .cardx{margin-top:12px;border:1px solid var(--line);border-radius:var(--r-sm);padding:12px;background:var(--surface-2)}
+.shot .cardx .rowx{display:flex;justify-content:space-between;font-size:11px;font-weight:500}
+.shot .cardx .msk{display:flex;align-items:center;gap:6px;margin-top:8px;padding:6px 8px;border-radius:4px;background:repeating-linear-gradient(45deg,#E9E5E3,#E9E5E3 4px,#DFDAD7 4px,#DFDAD7 8px);font-size:10px;color:var(--ink-3)}
+.shot .cardx .errx{display:flex;gap:6px;align-items:center;margin-top:8px;padding:7px 8px;border-radius:4px;background:var(--bad-soft);border:1px solid var(--bad-line);font-size:10.5px;color:var(--bad)}
+.shot .cardx .btnx{margin-top:10px;padding:8px;border-radius:4px;background:var(--ink);color:#fff;font-size:10.5px;font-weight:450;text-align:center}
+.shot.fail{border-color:var(--bad-line)}
+
+/* 필름스트립 */
+.film{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--line);overflow-x:auto;flex:none;background:var(--surface-2)}
+.film button{flex:none;width:128px;padding:8px;background:var(--surface);border:1px solid var(--line-ctl);border-radius:var(--r-sm);text-align:left;transition:border-color var(--t)}
+.film button.on{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.film button.fail{border-color:var(--bad-line)}
+.film .th{display:block;height:56px;border-radius:4px;overflow:hidden;margin-bottom:8px;position:relative;background:linear-gradient(160deg,#fff 0%,#F1EEEC 60%,#E7E2DF 100%)}
+.film button.fail .th{background:linear-gradient(160deg,#fff 0%,#FBE9E7 70%)}
+.film strong{display:block;font-size:11px;font-weight:450}
+.film small{display:block;font-size:9.5px;color:var(--ink-3);margin-top:2px;letter-spacing:0}
+
+/* 타임라인 */
+.tl{display:grid;padding:4px 16px 16px}
+.tl li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:12px 0;position:relative}
+.tl li:not(:last-child)::before{content:"";position:absolute;left:9.5px;top:32px;bottom:0;width:1px;background:var(--line-2)}
+.tl .dt2{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;z-index:1}
+.tl .dt2 svg{width:12px;height:12px}
+.tl small{display:block;font-size:10px;color:var(--ink-3);letter-spacing:0}
+.tl strong{display:block;font-size:12.5px;font-weight:500;margin:3px 0 3px}
+.tl p{font-size:11.5px;font-weight:400;color:var(--ink-2)}
+
+@media (max-width:1100px){.mock{grid-template-columns:1fr}.mock-index{position:static;height:auto}.g3{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.g2,.g3{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-forge" viewBox="0 0 24 24"><g stroke-width="3" stroke-linecap="round"><path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/><circle cx="17" cy="6" r="2.4" fill="currentColor" stroke="none"/></g></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+<symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></symbol>
+<symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5m7 7-7-7 7-7"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/><circle cx="5" cy="12" r="1.4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.7 18-8-14a2 2 0 0 0-3.4 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-loader" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-6.2-8.6"/></symbol>
+<symbol id="i-square" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"/><circle cx="12" cy="13" r="3"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.7 5.1A7 7 0 0 1 12 5c6.5 0 10 7 10 7a18 18 0 0 1-2.2 3.1"/><path d="M6.6 6.6A18 18 0 0 0 2 12s3.5 7 10 7a9.6 9.6 0 0 0 4.4-1"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><circle cx="16" cy="8" r="4"/><path d="m13.2 10.8-9 9V22h2.5v-2.5H9V17h2.4l1.8-1.8"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1.5 14h5M9.5 8h5M17.5 16h5"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M10 11v6M14 11v6"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5 20 12 6 20.5V3.5Z"/></symbol>
+<symbol id="i-retry" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/></symbol>
+<symbol id="i-route" viewBox="0 0 24 24"><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M6 15V3M18 9a9 9 0 0 1-9 9"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.5L4.2 18.6A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.3-2.4L14 9.5V2"/><path d="M8.5 2h7M6.7 15h10.6"/></symbol>
+<symbol id="i-images" viewBox="0 0 24 24"><rect x="7" y="3" width="14" height="13" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12"/><circle cx="11.5" cy="7.5" r="1.5"/><path d="m21 13-3.5-3.5L11 16"/></symbol>
+<symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+<symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></symbol>
+<symbol id="i-file-code" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m10 12-2 2 2 2M14 12l2 2-2 2"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.3-4.3"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 12c0 5-3.5 7.6-7.7 9a1 1 0 0 1-.6 0C7.5 19.6 4 17 4 12V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-grip" viewBox="0 0 24 24"><circle cx="9" cy="6" r="1.3"/><circle cx="9" cy="12" r="1.3"/><circle cx="9" cy="18" r="1.3"/><circle cx="15" cy="6" r="1.3"/><circle cx="15" cy="12" r="1.3"/><circle cx="15" cy="18" r="1.3"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol>
+<symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+<symbol id="i-unlink" viewBox="0 0 24 24"><path d="M15 7h2a5 5 0 0 1 1 9.9M9 17H7A5 5 0 0 1 6 7.1"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7.5h.01M7 17h.01"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></symbol>
+<symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 3 3 7Z"/><path d="m10 13.5 4.5-4.5"/></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4Z"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12A9 9 0 0 1 18.5 5.8L21 8"/><path d="M21 4v4h-4M3 20v-4h4"/></symbol>
+
+<symbol id="sf-src" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h6.7l2 2.2h4.3A1.5 1.5 0 0 1 20 7.7"/><path d="M3.6 10h16.8a1 1 0 0 1 1 1.1l-.9 7.4a1.5 1.5 0 0 1-1.5 1.3H5a1.5 1.5 0 0 1-1.5-1.3l-.9-7.4a1 1 0 0 1 1-1.1Z"/><path d="m10 13.5-1.6 1.6L10 16.7M14 13.5l1.6 1.6L14 16.7"/></g></symbol>
+<symbol id="sf-fact" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.6"/><path d="M6.5 7h.01M6.5 17h.01"/><path d="M10 7h7M10 17h4"/></g></symbol>
+<symbol id="sf-wiki" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/><path d="M6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5v-13A2.5 2.5 0 0 1 6.5 3Z"/><path d="M9 7.5h7M9 11h4.5"/></g></symbol>
+<symbol id="sf-scenario" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="12" r="2.2"/><circle cx="6" cy="18" r="2.2"/><path d="M8.2 6h4.3a3 3 0 0 1 3 3v.8M15.8 13.4v.6a3 3 0 0 1-3 3H8.2"/></g></symbol>
+<symbol id="sf-canonical" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21H12"/><path d="M14 3l5 5v3"/><path d="M14 3v5h5"/><circle cx="17.5" cy="17.5" r="3.5"/><path d="m16 17.5 1.1 1.1 2-2.2"/></g></symbol>
+<symbol id="sf-assert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5V6M12 18v2.5M3.5 12H6M18 12h2.5"/></g></symbol>
+<symbol id="sf-gate" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16M20 4v16"/><path d="M8 12h8"/><path d="m13 9 3 3-3 3"/><path d="M4 8h1.5M4 16h1.5M18.5 8H20M18.5 16H20"/></g></symbol>
+<symbol id="sf-queue" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="4.5" rx="1.4"/><rect x="3.5" y="10.5" width="17" height="4.5" rx="1.4"/><rect x="3.5" y="17" width="17" height="4.5" rx="1.4"/><path d="M7 6.2h.01M7 12.7h.01M7 19.2h.01"/></g></symbol>
+<symbol id="sf-evidence" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12.5" rx="1.8"/><path d="M8 21h8M12 17.5V21"/><path d="M7 13.5l3-3 2.2 2.2 2.3-2.6 2.5 3.4"/><circle cx="9" cy="8.8" r="1.1"/></g></symbol>
+<symbol id="sf-mask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.8"/><path d="M6.5 15.5 15.5 6.5M10 18.5 18.5 10M6.5 11 12.5 5M13.5 18.5 18.5 13.5"/></g></symbol>
+</defs></svg>
+
+<div class="mock">
+<nav class="mock-index" aria-label="목업 화면 색인">
+  <h1><svg class="i lg"><use href="#i-forge"/></svg>ScenarioForge</h1>
+  <p class="ver">REDESIGN MOCKUP v2 · 2026-09-07</p>
+  <strong>기준</strong>
+  <a href="#ds"><i>DS</i>디자인 시스템</a>
+  <a href="#ds2"><i>DS2</i>데이터 원천 감사</a>
+  <a href="#ds3"><i>DS3</i>아이콘 시스템</a>
+  <strong>진입 · 목록</strong>
+  <a href="#s0"><i>S0</i>빈 홈 (프로젝트 0건)</a>
+  <a href="#s1"><i>S1</i>프로젝트 목록 홈</a>
+  <a href="#s1d"><i>S1d</i>분석 결과 삭제 확인</a>
+  <strong>온보딩 wizard</strong>
+  <a href="#s2"><i>S2</i>1/3 디렉터리 선택</a>
+  <a href="#s3"><i>S3</i>2/3 LLM 연결</a>
+  <a href="#s4"><i>S4</i>3/3 확인 · 첫 분석</a>
+  <strong>프로젝트 상세</strong>
+  <a href="#s5"><i>S5</i>개요 · 분석 진행 중</a>
+  <a href="#s5e"><i>S5e</i>개요 · 실패</a>
+  <a href="#s6"><i>S6</i>생성 이력</a>
+  <a href="#s7"><i>S7</i>run 상세 시나리오</a>
+  <a href="#s8"><i>S8</i>테스트 수행 설정</a>
+  <a href="#s9"><i>S9</i>테스트 실행 목록</a>
+  <a href="#s10"><i>S10</i>실행 상세</a>
+  <a href="#s10c"><i>S10c</i>실행 중단 확인</a>
+  <a href="#s11"><i>S11</i>증적</a>
+  <a href="#s12"><i>S12</i>증적 상세</a>
+  <strong>전역</strong>
+  <a href="#s13"><i>S13</i>LLM 설정</a>
+</nav>
+<div class="mock-stream">
+<!-- ══ DS ══ -->
+<section class="frame" id="ds">
+  <div class="mock-cap"><div class="l"><b>DS</b><h2>디자인 시스템</h2></div>
+    <p>레퍼런스의 라이트 뉴트럴 지면 · 단일 코랄 강조색 · 소프트 라운드 카드 · 대형 경량 숫자를 개발자 도구 밀도에 맞춰 조정했습니다. 상태는 색만으로 구분하지 않고 항상 글리프와 텍스트를 함께 씁니다.</p>
+    <p><b>컨트롤 규칙</b> — 크기는 <b>40</b>(전체 화면 단계의 단일 CTA) / <b>32</b>(페이지·패널 동작) / <b>28</b>(목록 행·툴바) 세 단계만 씁니다. 역할은 채움(주 동작, <b>화면당 1개</b>) · 외곽선(보조) · ghost(제자리 동작) · 링크(이동 전용) · 아이콘(행 동작, 삭제는 hover 시 위험색)입니다. 비가역 동작은 확인 모달의 버튼에만 위험색을 쓰고, 라벨에 결과를 적습니다.</p>
+  </div>
+  <div class="card p-24">
+    <div class="g3" style="gap:22px">
+      <div>
+        <span class="eyebrow">SURFACE / INK</span>
+        <div style="display:flex;gap:7px;flex-wrap:wrap">
+          <span class="tag" style="background:#F4F2F1">paper F4F2F1</span>
+          <span class="tag" style="background:#fff">surface FFFFFF</span>
+          <span class="tag" style="background:#16110F;color:#fff;border-color:#16110F">ink 16110F</span>
+          <span class="tag">ink-2 5C5451</span>
+          <span class="tag">line E6E2E0</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">ACCENT · 단일</span>
+        <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
+          <span class="tag" style="background:#F4542C;color:#fff;border-color:#F4542C">accent F4542C</span>
+          <span class="tag" style="background:#FFEEE8;border-color:#FFD2C4">soft FFEEE8</span>
+          <span class="pill"><svg class="i sm"><use href="#i-spark"/></svg>CTA · 활성 탭 · 실행 중</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">STATUS · 4종</span>
+        <div style="display:flex;gap:7px;flex-wrap:wrap">
+          <span class="chip ok"><svg class="i"><use href="#i-check"/></svg>성공</span>
+          <span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>실패</span>
+          <span class="chip warn"><svg class="i"><use href="#i-help"/></svg>확인 필요</span>
+          <span class="chip idle"><svg class="i"><use href="#i-circle"/></svg>대기</span>
+        </div>
+      </div>
+    </div>
+    <hr style="border:0;border-top:1px solid var(--line);margin:22px 0" />
+    <div class="g3" style="gap:22px;align-items:end">
+      <div>
+        <span class="eyebrow">NUMERAL · PRETENDARD 200</span>
+        <div class="stat-row">
+          <p class="num">62<u>%</u></p>
+          <div class="connect"><span class="ln"></span><span class="dt"></span></div>
+          <span class="lb">커넥터 라인과 점으로 지표와 라벨을 연결합니다.</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">TYPE</span>
+        <p style="font-size:15px;font-weight:600">Pretendard · 본문과 제목</p>
+        <p class="path">Pretendard tabular numerals · SCN-CART-7A31F0C2-001 · 428 · .scenarioforge/runs</p>
+      </div>
+      <div>
+        <span class="eyebrow">CONTROL · 3 크기 × 5 역할</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <button class="btn pri lg"><svg class="i"><use href="#i-play"/></svg>40 · 단계 CTA</button>
+          <button class="btn pri">32 · 주 동작</button>
+          <button class="btn">32 · 보조</button>
+          <button class="btn sm">28 · 행·툴바</button>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px">
+          <button class="btn ghost sm">제자리 동작</button>
+          <button class="btn link">이동 링크<svg class="i sm"><use href="#i-right"/></svg></button>
+          <button class="btn dan sm"><svg class="i sm"><use href="#i-trash"/></svg>비가역 확인</button>
+          <button class="btn icon sm q-dan" aria-label="삭제"><svg class="i sm"><use href="#i-trash"/></svg></button>
+          <button class="btn pri sm" disabled>비활성</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DS2 ══ -->
+<section class="frame" id="ds2">
+  <div class="mock-cap"><div class="l"><b>DS2</b><h2>데이터 원천 감사</h2><code>표시 항목 → 실제 원천</code></div>
+    <p>목업이 표시하는 모든 값을 backend 계약과 대조했습니다. <b>불가</b>는 목업에서 제거·교체했고, <b>도출</b>은 기존 계약으로 계산할 수 있으나 조회 경로가 없어 신규 IPC가 필요한 항목입니다.</p>
+  </div>
+  <div class="aud-wrap">
+    <table class="audit">
+      <thead><tr><th>표시 항목</th><th>실제 원천</th><th class="s">상태</th><th>적용 방법</th></tr></thead>
+      <tbody>
+        <tr><td>프로젝트 이름·경로</td><td><code>ProjectDirectoryStore</code> + fs</td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td>레지스트리 v2로 확장해 다건 보관</td></tr>
+        <tr><td>마지막 열람 시각</td><td>없음</td><td><span class="chip warn"><svg class="i"><use href="#i-help"/></svg>신규 필드</span></td><td>레지스트리 v2에 <code>lastOpenedAt</code> 추가. 프로젝트를 열 때 main 이 기록</td></tr>
+        <tr><td>프로젝트 상태 배지</td><td><code>ProjectRuntimeState.generationSteps</code>, <code>activeStep</code>, <code>stages</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td>기존 <code>analysis:get-state</code> 를 프로젝트별로 호출</td></tr>
+        <tr><td>진행률</td><td><code>state.progress</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td><b>10단위만 존재</b>(GENERATION_STEPS 10개 × 10). 목업 43% → 30% 로 정정</td></tr>
+        <tr><td>현재 단계·활동</td><td><code>state.activeStep</code>, <code>state.currentActivity</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td>STEP n/10 + 활동 문구로 표시. 「검증 대기 3건」 같은 카운터는 없어서 삭제</td></tr>
+        <tr><td>work ID</td><td><code>state.works[*].workId</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td>활성 work 를 <code>activeStep</code> 으로 찾아 표시</td></tr>
+        <tr><td>오류 코드·분류·재시도 가능</td><td><code>WorkDescriptor.error: DomainError{code,category,retryable}</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td><code>state.lastError</code> 에는 code·retryable 이 없으므로 실패한 work 의 error 를 함께 반환하도록 <code>AnalysisStateSummary</code> 확장</td></tr>
+        <tr><td>이어서 실행 가능</td><td><code>state.recoverable</code> + <code>getNextGenerationStep</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td>이미 <code>summarizeGenerationCheckpoint</code> 가 계산</td></tr>
+        <tr><td>run 목록·생성 시각</td><td><code>runs/{runId}/manifest.json</code> (<code>analysis_run_id</code>, <code>created_at</code>)</td><td><span class="chip run"><svg class="i"><use href="#i-loader"/></svg>도출</span></td><td>신규 <code>project:list-runs</code>. 디렉터리 스캔 + manifest 파싱, journal revision 검증은 열 때만</td></tr>
+        <tr><td>run ID 표기</td><td><code>RUN-${randomUUID()}</code></td><td><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>형식 불일치</span></td><td>실제는 41자 UUID. 목록·경로는 <b>생성 시각을 1차 라벨</b>로, 짧은 ID+전체값 tooltip 으로 표시</td></tr>
+        <tr><td>run 소요 시간</td><td><code>works[*].createdAt / updatedAt</code></td><td><span class="chip run"><svg class="i"><use href="#i-loader"/></svg>도출</span></td><td>run 의 work 최소 createdAt ~ 최대 updatedAt 차이. run 인덱스에 캐시</td></tr>
+        <tr><td>fact / wiki / 시나리오 수</td><td><code>FactBundle.screens+edges+predicates</code>, <code>WikiBundle.workflows</code>, <code>ScenarioSet.scenarios</code></td><td><span class="chip run"><svg class="i"><use href="#i-loader"/></svg>도출</span></td><td>현재는 실행 시점에만 계산(<code>summarizeGenerationStageResult</code>). 과거 run 은 등록된 산출물을 읽어 재계산하고 run 인덱스에 캐시</td></tr>
+        <tr><td>시나리오 ID</td><td><code>scenarioId(workflow, ordinal)</code> = <code>SCN-{워크플로슬러그}-{3자리}</code></td><td><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>형식 불일치</span></td><td>실제 예 <code>SCN-CHECKOUT-3F2A91C4-001</code> (26자+). ID 컬럼 240px 로 확장하고 중복이던 「원천」 컬럼을 제거해 잘림 없이 표시. 기존 <code>ScenarioChat</code> 의 <code>/^SCN-[A-Z]{3}-\d{3}$/</code> 는 실제 ID를 거부하므로 수정 필요</td></tr>
+        <tr><td>시나리오 제목</td><td><code>`${workflow.goal} · ${kind}`</code> (scenario-view 조립)</td><td><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>형식 불일치</span></td><td>사람이 쓴 제목이 아님. kind 는 <code>normal|exception</code> 2종뿐 → 경계·회복 표기 삭제</td></tr>
+        <tr><td>「원천」 컬럼</td><td><code>ScenarioResult.source</code> = <code>scenario.path.join(", ")</code></td><td><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>의미 불일치</span></td><td>파일 경로가 아니라 <b>화면 ID 경로</b>. 컬럼명을 「화면 경로」로 바꾸고 <code>SCR-…</code> 를 표시. 소스 파일까지 보이려면 FACT screen → <code>SourceSnapshot.files[].path</code> 조인이 필요 → 계약 요청</td></tr>
+        <tr><td>업무 분류 그룹</td><td><code>BusinessCatalog.classifications[{classification_id,label,workflow_refs}]</code></td><td><span class="chip run"><svg class="i"><use href="#i-loader"/></svg>도출</span></td><td><code>loadScenarioView</code> 는 workflow 로만 그룹핑 중. business-catalog 산출물을 읽어 분류 단위로 재그룹핑</td></tr>
+        <tr><td>소스 파일 수·UI 스택</td><td><code>SourceSnapshot.files[]</code>, <code>ui_stacks</code>, <code>unsupported_ui_stacks</code>, <code>root_hash</code></td><td><span class="chip run"><svg class="i"><use href="#i-loader"/></svg>도출</span></td><td>SRC 실행 후에만 존재. 실행 전에는 빈 상태로 표시(목업 정정). 제외 파일 수·제외 사유는 산출물에 없어 표시 불가</td></tr>
+        <tr><td>실행 요구사항(데이터·마스킹·예산·차단 사유)</td><td><code>test-requirements-view.ts</code> → <code>TestExecutionRequirements</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td>이미 구현·연결됨</td></tr>
+        <tr><td>환경 확인 결과</td><td>없음 (프로브 미구현)</td><td><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>불가</span></td><td>현재 가능한 건 URL 형식 검증뿐. 문구를 「URL 형식 확인 완료 · 대상 접속은 실행 시 검증」으로 정정. 실제 도달성 점검은 실행기와 함께 도입</td></tr>
+        <tr><td>실행 ID·상태·단계 결과</td><td><code>shared/test-execution.ts</code> 타입만 존재. <code>test:start</code> 는 빈 핸들러</td><td><span class="chip warn"><svg class="i"><use href="#i-help"/></svg>계약만</span></td><td>S9~S12 는 계약 기반 목업임을 캡션에 명시. ID 는 TestCoordinator 가 발급(renderer 발급 금지)</td></tr>
+        <tr><td>판정 사유·게이트·assertion·관측 수</td><td><code>StepDiagnostics{reason,gateCode,assertions,path,attempts,observations}</code></td><td><span class="chip warn"><svg class="i"><use href="#i-help"/></svg>계약만</span></td><td>타입은 확정. 런너가 채움. assertion ref 는 <code>FactPredicate.pred_id</code> 계열로 표기</td></tr>
+        <tr><td>증적 장수·용량·캡처 해상도</td><td><code>TestExecution.evidenceBytes</code>, <code>EvidenceCapture{width,height,capturedAt}</code></td><td><span class="chip warn"><svg class="i"><use href="#i-help"/></svg>계약만</span></td><td>evidence-store 도입 시 실측. 그 전까지 프로젝트 카드·개요의 실행·증적 수치는 인덱스가 없으면 표시하지 않음</td></tr>
+        <tr><td>브라우저 이름(Chromium)</td><td>없음</td><td><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>불가</span></td><td>환경 필드가 없어 <code>diagnostics.path.adapter</code>(web-vision) + 해상도로 교체</td></tr>
+        <tr><td>실행 소요 시간</td><td><code>TestExecution.createdAt / completedAt</code></td><td><span class="chip run"><svg class="i"><use href="#i-loader"/></svg>도출</span></td><td>기존 <code>EvidenceLibrary</code> 는 <code>"01:11"</code> 하드코딩. 두 시각 차이로 계산하도록 교체</td></tr>
+        <tr><td>다른 프로젝트의 분석 진행 중 경고</td><td>프로젝트별 <code>ProjectRuntimeState</code></td><td><span class="chip run"><svg class="i"><use href="#i-loader"/></svg>도출</span></td><td>orchestrator 가 단일 프로젝트를 보유. 레지스트리 순회로 각 <code>.scenarioforge</code> state 를 읽는 조회를 추가</td></tr>
+        <tr><td>자격증명 저장 여부</td><td><code>settings:get-model-credential-status</code></td><td><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>가능</span></td><td>이미 구현. 값은 절대 되읽지 않고 상태만 표시</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="mock-note"><svg class="i sm"><use href="#i-alert"/></svg><span><b>목업에서 제거한 항목</b>: 제외 사유별 파일 수, 근거 참조 검증 대기 건수, 브라우저 이름, 환경 프로브 결과, 파일명 기반 「원천」 컬럼, 3글자 업무코드 ID. 모두 현재 계약으로 만들 수 없는 값이었습니다.</span></p>
+</section>
+
+<!-- ══ DS3 ══ -->
+<section class="frame" id="ds3">
+  <div class="mock-cap"><div class="l"><b>DS3</b><h2>아이콘 시스템</h2><code>brand · favicon · product glyph</code></div>
+    <p>상용 개발자 도구 마크의 공통 규칙을 적용했습니다 — <b>글자·장식 없는 단일 글리프</b>, 라운드 사각 배경 + 흰 글리프, 16px에서 두께 2px 이상, 그레이스케일에서도 형태 유지, 색 하나. 후보 4종(경로 S · 모루 · 계단 · 화살표)을 16/20/32/64/128px로 렌더해 <b>16px에서 형태가 남는 것</b>만 채택했습니다.</p>
+  </div>
+  <div class="card p-24">
+    <div class="between" style="margin-bottom:20px">
+      <div>
+        <span class="eyebrow">SOLUTION MARK</span>
+        <h2 class="h1" style="font-size:20px">경로형 S 모노그램</h2>
+        <p class="sub" style="margin-top:6px;font-size:12.5px">이름의 S를 <b>라우팅된 경로</b>로 그렸습니다. 시작 노드(원)는 소스 진입점, 두 번 꺾이는 획은 화면 전이, 열린 끝은 사용자 여정의 종료입니다. 획 3 / 노드 반지름 2.4 / 24 그리드.</p>
+      </div>
+      <div class="icn-sizes">
+        <figure><span class="icn-chk"><svg width="16" height="16" viewBox="0 0 32 32"><rect width="32" height="32" rx="7.2" fill="#E8542B"/><g transform="translate(16 16) scale(.96) translate(-12 -11.55)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/><circle cx="17" cy="6" r="2.4" fill="#fff" stroke="none"/></g></svg></span><figcaption>16</figcaption></figure>
+        <figure><span class="icn-chk"><svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="7.2" fill="#E8542B"/><g transform="translate(16 16) scale(.96) translate(-12 -11.55)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/><circle cx="17" cy="6" r="2.4" fill="#fff" stroke="none"/></g></svg></span><figcaption>32</figcaption></figure>
+        <figure><span class="icn-chk"><svg width="64" height="64" viewBox="0 0 32 32"><rect width="32" height="32" rx="7.2" fill="#E8542B"/><g transform="translate(16 16) scale(.96) translate(-12 -11.55)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/><circle cx="17" cy="6" r="2.4" fill="#fff" stroke="none"/></g></svg></span><figcaption>64</figcaption></figure>
+        <figure><span class="icn-chk"><svg width="64" height="64" viewBox="0 0 1024 1024"><rect x="100" y="100" width="824" height="824" rx="185.4" fill="#191412"/><g transform="translate(512 512) scale(34) translate(-12 -11.55)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/><circle cx="17" cy="6" r="2.4" fill="#fff" stroke="none"/></g></svg></span><figcaption>앱 아이콘 · 잉크</figcaption></figure>
+        <figure><span class="icn-chk" style="filter:grayscale(1)"><svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="7.2" fill="#E8542B"/><g transform="translate(16 16) scale(.96) translate(-12 -11.55)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/><circle cx="17" cy="6" r="2.4" fill="#fff" stroke="none"/></g></svg></span><figcaption>그레이스케일</figcaption></figure>
+      </div>
+    </div>
+    <dl class="kv" style="margin-bottom:20px">
+      <div><dt>앱 아이콘</dt><dd><code>resources/brand/icon.svg</code> · 1024 캔버스 · 824 스퀘어클(r185.4) · macOS Big Sur 그리드</dd></div>
+      <div><dt>파비콘</dt><dd><code>renderer/public/favicon.svg</code> 풀블리드 + <code>favicon-32.png</code> 폴백 + <code>apple-touch-icon.png</code> 180</dd></div>
+      <div><dt>단색</dt><dd><code>icon-mono.svg</code> — 트레이·마스커블·1색 인쇄. <code>currentColor</code> 상속</dd></div>
+      <div><dt>패키징</dt><dd><code>icon.icns</code>(10 슬롯) + PNG 16~1024. electron-builder <code>mac.icon</code> 에 연결</dd></div>
+    </dl>
+    <span class="eyebrow">PRODUCT GLYPH · lucide 에 없는 개념만 추가</span>
+    <div class="icn-grid">
+      <div class="icn-cell"><svg><use href="#sf-src"/></svg><b>SRC</b><small>소스 스냅샷</small></div>
+      <div class="icn-cell"><svg><use href="#sf-fact"/></svg><b>FACT</b><small>화면·전이 사실</small></div>
+      <div class="icn-cell"><svg><use href="#sf-wiki"/></svg><b>WIKI</b><small>업무·여정</small></div>
+      <div class="icn-cell"><svg><use href="#sf-scenario"/></svg><b>SCENARIO</b><small>케이스 경로</small></div>
+      <div class="icn-cell"><svg><use href="#sf-canonical"/></svg><b>정본 산출물</b><small>해시 검증됨</small></div>
+      <div class="icn-cell"><svg><use href="#sf-assert"/></svg><b>판정</b><small>assertion</small></div>
+      <div class="icn-cell"><svg><use href="#sf-gate"/></svg><b>제안 게이트</b><small>proposal gate</small></div>
+      <div class="icn-cell"><svg><use href="#sf-queue"/></svg><b>순차 대기열</b><small>실행 큐</small></div>
+      <div class="icn-cell"><svg><use href="#sf-evidence"/></svg><b>증적</b><small>단계 화면</small></div>
+      <div class="icn-cell"><svg><use href="#sf-mask"/></svg><b>마스킹</b><small>전송 전 가림</small></div>
+    </div>
+    <p class="notice" style="margin-top:16px"><svg class="i sm"><use href="#i-alert"/></svg><span>제품 글리프는 <b>lucide 와 같은 24 그리드 · 1.6 스트로크 · 라운드 캡</b>으로 그려 기존 아이콘과 섞여도 두께가 튀지 않습니다. 폴더·카메라·시계·자물쇠처럼 lucide 에 대응이 있는 개념은 새로 만들지 않고 lucide 를 그대로 씁니다.</span></p>
+  </div>
+</section>
+
+<!-- ══ S0 ══ -->
+<section class="frame" id="s0">
+  <div class="mock-cap"><div class="l"><b>S0</b><h2>빈 홈 · 프로젝트 0건</h2><code>#/projects</code></div>
+    <p>기존 온보딩 히어로는 "프로젝트가 0건일 때의 빈 상태"로 격하됩니다. 주 동작은 하나뿐입니다.</p>
+  </div>
+  <div class="app grid-bg">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s0"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <div class="topbar-end"><button class="btn sm"><svg class="i sm"><use href="#i-sliders"/></svg>LLM 설정</button></div>
+    </div>
+    <div class="body pad-lg" style="display:grid;place-items:center">
+      <div style="position:relative;max-width:560px;text-align:center;padding:20px 0">
+        <span class="orb" style="width:280px;height:280px;left:50%;top:-40px;transform:translateX(-50%);opacity:.28"></span>
+        <div style="position:relative">
+          <span class="eyebrow" style="text-align:center">TEST DESIGN · SI 통합 테스트 설계</span>
+          <h1 class="h1" style="font-size:32px;margin-bottom:12px">소스코드에서<br />사용자가 걷는 길을 단조합니다.</h1>
+          <p class="sub" style="margin:0 auto 22px">분석할 로컬 소스 디렉터리를 등록하면 프로젝트가 만들어집니다. 생성 이력과 증적은 프로젝트별로 따로 보관됩니다.</p>
+          <button class="btn pri lg"><svg class="i lg"><use href="#i-folder"/></svg>소스 디렉터리 선택<svg class="i"><use href="#i-arrow-r"/></svg></button>
+          <p class="pill" style="margin:20px auto 0"><svg class="i sm"><use href="#i-shield"/></svg>선택한 디렉터리만 분석 작업 범위로 사용합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S1 ══ -->
+<section class="frame" id="s1">
+  <div class="mock-cap"><div class="l"><b>S1</b><h2>프로젝트 목록 홈</h2><code>#/projects</code></div>
+    <p>홈이 프로젝트 목록입니다. 카드마다 디스크에서 읽은 상태·생성 이력 수·최근 실행·증적 용량이 보이고, <b>⋯ 메뉴</b>에 경로 열기 / 연결 해제 / 분석 결과 삭제가 모입니다. 첫 카드의 메뉴를 열어둔 상태입니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <div class="topbar-end">
+        <div class="inp-wrap" style="width:210px"><input class="inp" style="padding-left:32px" placeholder="프로젝트 검색" /><svg class="i" style="position:absolute;left:10px;top:11px;stroke:var(--ink-4)"><use href="#i-search"/></svg></div>
+        <button class="btn sm"><svg class="i sm"><use href="#i-sliders"/></svg>LLM 설정</button>
+        <button class="btn pri sm"><svg class="i sm"><use href="#i-plus"/></svg>프로젝트 추가</button>
+      </div>
+    </div>
+    <div class="body pad-lg" style="padding-bottom:72px">
+      <div class="between hd">
+        <div>
+          <span class="eyebrow">PROJECTS</span>
+          <h1 class="h1">프로젝트</h1>
+          <p class="sub" style="margin-top:6px">연결된 소스 디렉터리별로 생성 이력과 증적을 따로 보관합니다.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><p class="num sm">4</p><span class="path">연결</span></div>
+          <div class="stat"><p class="num sm">11</p><span class="path">생성 이력</span></div>
+          <div class="stat"><p class="num sm">1.2<u>GB</u></p><span class="path">증적</span></div>
+        </div>
+      </div>
+
+      <div class="g2">
+        <article class="card pcard">
+          <div class="pchd">
+            <span class="mark ok"><svg class="i sm"><use href="#i-check"/></svg></span>
+            <div class="pctitle">
+              <h2 class="h3">commerce-platform</h2>
+              <p class="path">/workspace/commerce-platform</p>
+            </div>
+            <button class="btn icon sm" aria-label="commerce-platform 관리" aria-expanded="true"><svg class="i sm"><use href="#i-more"/></svg></button>
+          </div>
+          <div class="pcst">
+            <span class="chip ok"><svg class="i"><use href="#i-check"/></svg>분석 완료</span>
+            <span class="chip mono" title="RUN-9f1c2e4a-5b8d-4c31-9e7a-2f6b0d4a8c31">RUN-9f1c2e4a…</span>
+          </div>
+          <div class="pcprog" aria-hidden="true"></div>
+          <hr />
+          <div class="pcmt">
+            <span class="metric"><svg class="i sm"><use href="#i-route"/></svg><b>3</b> run</span>
+            <span class="metric"><svg class="i sm"><use href="#i-flask"/></svg><b>5</b> 실행</span>
+            <span class="metric"><svg class="i sm"><use href="#i-images"/></svg><b>41</b>장 · 128 MB</span>
+          </div>
+          <div class="cta-row foot">
+            <button class="btn sm">열기<svg class="i sm"><use href="#i-right"/></svg></button>
+            <span class="path">2시간 전 열람</span>
+          </div>
+          <div class="menu" style="right:20px;top:56px">
+            <button type="button"><svg class="i sm"><use href="#i-ext"/></svg>경로 열기</button>
+            <button type="button"><svg class="i sm"><use href="#i-unlink"/></svg>연결 해제<span class="r">디스크 유지</span></button>
+            <hr />
+            <button type="button" class="dan"><svg class="i sm"><use href="#i-trash"/></svg>분석 결과 전체 삭제</button>
+          </div>
+        </article>
+
+        <article class="card pcard">
+          <div class="pchd">
+            <span class="mark run"><svg class="i sm"><use href="#i-loader"/></svg></span>
+            <div class="pctitle">
+              <h2 class="h3">axse-portal</h2>
+              <p class="path">/workspace/axse-portal</p>
+            </div>
+            <button class="btn icon sm" aria-label="axse-portal 관리"><svg class="i sm"><use href="#i-more"/></svg></button>
+          </div>
+          <div class="pcst">
+            <span class="chip run"><svg class="i"><use href="#i-loader"/></svg>진행 중 · WIKI 단계 대기</span>
+          </div>
+          <div class="pcprog"><div class="bar"><span style="width:50%"></span></div></div>
+          <hr />
+          <div class="pcmt">
+            <span class="metric"><svg class="i sm"><use href="#i-route"/></svg><b>1</b> run</span>
+            <span class="metric"><svg class="i sm"><use href="#i-flask"/></svg><b>0</b> 실행</span>
+            <span class="metric mut"><svg class="i sm" style="opacity:.4"><use href="#sf-evidence"/></svg>증적 없음</span>
+          </div>
+          <div class="cta-row foot">
+            <button class="btn sm">열기<svg class="i sm"><use href="#i-right"/></svg></button>
+            <button class="btn sm"><svg class="i sm"><use href="#i-play"/></svg>이어서 실행</button>
+          </div>
+        </article>
+
+        <article class="card pcard">
+          <div class="pchd">
+            <span class="mark idle"><svg class="i sm"><use href="#i-folder"/></svg></span>
+            <div class="pctitle">
+              <h2 class="h3">ra-dar</h2>
+              <p class="path">/workspace/ra-dar</p>
+            </div>
+            <button class="btn icon sm" aria-label="ra-dar 관리"><svg class="i sm"><use href="#i-more"/></svg></button>
+          </div>
+          <div class="pcst">
+            <span class="chip idle"><svg class="i"><use href="#i-circle"/></svg>분석 없음</span>
+          </div>
+          <div class="pcprog" aria-hidden="true"></div>
+          <hr />
+          <p class="pcnote">아직 분석을 실행하지 않았습니다. 열어서 SRC 단계부터 시작할 수 있습니다.</p>
+          <div class="cta-row foot">
+            <button class="btn sm">열기<svg class="i sm"><use href="#i-right"/></svg></button>
+          </div>
+        </article>
+
+        <article class="card pcard" style="border-color:var(--bad-line)">
+          <div class="pchd">
+            <span class="mark bad"><svg class="i sm"><use href="#i-alert"/></svg></span>
+            <div class="pctitle">
+              <h2 class="h3">legacy-erp</h2>
+              <p class="path" style="text-decoration:line-through">/Volumes/ext/legacy-erp</p>
+            </div>
+            <button class="btn icon sm" aria-label="legacy-erp 관리"><svg class="i sm"><use href="#i-more"/></svg></button>
+          </div>
+          <div class="pcst">
+            <span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>경로 없음</span>
+          </div>
+          <div class="pcprog" aria-hidden="true"></div>
+          <hr />
+          <p class="pcnote">디렉터리를 찾을 수 없습니다. 이동했거나 외부 볼륨이 연결되지 않았습니다.</p>
+          <div class="cta-row foot">
+            <button class="btn sm"><svg class="i sm"><use href="#i-folder"/></svg>경로 다시 지정</button>
+            <button class="btn ghost sm">목록에서 제거</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="toast" role="status">
+        <svg class="i sm"><use href="#i-check"/></svg>legacy-erp 연결을 해제했습니다. 디스크의 분석 결과는 그대로 있습니다.
+        <button type="button">실행 취소</button>
+      </div>
+    </div>
+  </div>
+  <p class="mock-note"><svg class="i sm"><use href="#i-alert"/></svg><span><b>연결 해제와 삭제를 분리했습니다.</b> 연결 해제는 되돌리기 토스트가 붙는 가역 동작이고, 분석 결과 삭제는 확인 모달이 붙는 비가역 동작입니다.</span></p>
+</section>
+
+<!-- ══ S1d ══ -->
+<section class="frame" id="s1d">
+  <div class="mock-cap"><div class="l"><b>S1d</b><h2>분석 결과 전체 삭제 확인</h2><code>modal</code></div>
+    <p>비가역 동작이라 모달을 씁니다. 삭제량을 수치로 먼저 보여주고, 확인 버튼 라벨에 결과를 씁니다. 진행 중 run이 있으면 버튼이 비활성입니다.</p>
+  </div>
+  <div class="app" style="min-height:430px">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="body pad-lg" style="filter:blur(1.5px);opacity:.5">
+      <div class="between"><div><span class="eyebrow">PROJECTS</span><h1 class="h1">프로젝트</h1></div></div>
+      <div class="g2" style="margin-top:20px"><div class="card" style="height:132px"></div><div class="card" style="height:132px"></div></div>
+    </div>
+    <div class="scrim">
+      <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="d1">
+        <span class="dic" style="background:var(--bad-soft)"><svg class="i lg" style="stroke:var(--bad)"><use href="#i-trash"/></svg></span>
+        <span class="eyebrow">DELETE ANALYSIS DATA</span>
+        <h2 id="d1">commerce-platform의 분석 결과를 삭제할까요?</h2>
+        <p><code>.scenarioforge</code> 아래의 생성 이력과 증적을 디스크에서 지웁니다. 되돌릴 수 없습니다. 원본 소스코드는 건드리지 않습니다.</p>
+        <dl>
+          <div><dt>생성 이력</dt><dd>3 run</dd></div>
+          <div><dt>테스트 실행</dt><dd>5건</dd></div>
+          <div><dt>증적</dt><dd>41장</dd></div>
+          <div><dt>회수 용량</dt><dd>128 MB</dd></div>
+        </dl>
+        <div class="acts">
+          <button class="btn">그대로 두기</button>
+          <button class="btn dan"><svg class="i"><use href="#i-trash"/></svg>run 3건과 증적 41장 삭제</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<!-- ══ S2 ══ -->
+<section class="frame" id="s2">
+  <div class="mock-cap"><div class="l"><b>S2</b><h2>온보딩 1/3 · 디렉터리 선택</h2><code>#/onboarding/project</code></div>
+    <p>스텝 인디케이터가 실제 진행 단계를 따라갑니다. 기존 화면은 3단계를 표시하면서 1단계에 고정돼 있었습니다.</p>
+  </div>
+  <div class="app">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s2"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <ol class="steps"><li class="on"><b>1</b>디렉터리</li><li><b>2</b>모델 연결</li><li><b>3</b>확인</li></ol>
+      <div class="topbar-end"><button class="btn ghost sm">나중에</button></div>
+    </div>
+    <div class="body pad-lg">
+      <div class="g2" style="gap:26px;align-items:start">
+        <div>
+          <span class="eyebrow">STEP 1 · SOURCE SCOPE</span>
+          <h1 class="h1">분석할 소스 디렉터리</h1>
+          <p class="sub" style="margin:8px 0 20px">선택한 디렉터리 내부만 작업 범위로 사용합니다. 하위 경로를 벗어난 파일은 읽지 않습니다.</p>
+          <div class="card flat" style="padding:16px;margin-bottom:16px">
+            <div style="display:flex;align-items:center;gap:12px">
+              <span class="mark ok"><svg class="i sm"><use href="#i-check"/></svg></span>
+              <div style="min-width:0">
+                <strong style="font-size:13.5px">commerce-platform</strong>
+                <p class="path">/workspace/commerce-platform</p>
+              </div>
+              <button class="btn sm" style="margin-left:auto">변경</button>
+            </div>
+          </div>
+          <div class="cta-row">
+            <button class="btn pri lg">다음 · 모델 연결<svg class="i"><use href="#i-arrow-r"/></svg></button>
+            <button class="btn">다른 디렉터리 선택</button>
+          </div>
+          <p class="pill" style="margin-top:18px"><svg class="i sm"><use href="#i-shield"/></svg>테스트·픽스처·생성물은 서버 allowlist로 자동 제외됩니다.</p>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div class="card-h"><div><span class="eyebrow" style="margin:0">SOURCE SNAPSHOT</span><h2 class="h3" style="margin-top:4px">소스 스냅샷</h2></div></div>
+          <div class="card-b" style="background:var(--surface-2)">
+            <p class="notice" style="margin-bottom:12px"><svg class="i sm"><use href="#i-alert"/></svg><span>아래 값은 <b>SRC 단계를 실행한 뒤</b> 소스 스냅샷에서 채워집니다. 실행 전에는 비어 있습니다.</span></p>
+            <dl class="kv">
+              <div><dt>수집 파일</dt><dd class="mut">SRC 실행 후</dd></div>
+              <div><dt>UI 스택</dt><dd class="mut">SRC 실행 후</dd></div>
+              <div><dt>미지원 스택</dt><dd class="mut">SRC 실행 후</dd></div>
+              <div><dt>소스 루트 해시</dt><dd class="mut">SRC 실행 후</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S3 ══ -->
+<section class="frame" id="s3">
+  <div class="mock-cap"><div class="l"><b>S3</b><h2>온보딩 2/3 · LLM 연결</h2><code>#/onboarding/model</code></div>
+    <p>6블록짜리 긴 폼이라 모달에서 wizard 페이지로 옮겼습니다. 저장된 키는 되읽지 않고 유지 상태만 표시합니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s3"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <ol class="steps"><li class="done"><b><svg class="i sm"><use href="#i-check"/></svg></b>디렉터리</li><li class="on"><b>2</b>모델 연결</li><li><b>3</b>확인</li></ol>
+      <div class="topbar-end"><button class="btn ghost sm">나중에</button></div>
+    </div>
+    <div class="body pad-lg">
+      <div class="g2" style="gap:26px;align-items:start">
+        <div>
+          <span class="eyebrow">STEP 2 · MODEL CONNECTION</span>
+          <h1 class="h1">분석에 사용할 모델</h1>
+          <p class="sub" style="margin:8px 0 20px">소스 분석과 시나리오 도출에 쓰는 author 모델입니다. 의미 판정을 분리하려면 독립 reviewer를 함께 연결합니다.</p>
+
+          <fieldset class="fs">
+            <legend>모델 공급자</legend>
+            <div class="opts">
+              <label class="opt on"><input type="radio" name="pv" checked /><span>OpenAI 호환</span></label>
+              <label class="opt"><input type="radio" name="pv" /><span>Azure OpenAI</span></label>
+              <label class="opt"><input type="radio" name="pv" /><span>Anthropic</span></label>
+              <label class="opt"><input type="radio" name="pv" /><span>사용자 지정</span></label>
+            </div>
+          </fieldset>
+
+          <label class="field">
+            <span class="lb"><svg class="i sm"><use href="#i-server"/></svg>엔드포인트</span>
+            <input class="inp mono" value="https://api.openai.com/v1" />
+          </label>
+          <label class="field">
+            <span class="lb">모델 ID</span>
+            <input class="inp mono" value="gpt-5" />
+            <span class="hint">Azure를 선택하면 이 항목이 Deployment 이름과 API Version으로 바뀝니다.</span>
+          </label>
+          <label class="field">
+            <span class="lb"><svg class="i sm"><use href="#i-key"/></svg>API 키</span>
+            <span class="inp-wrap">
+              <input class="inp" type="password" placeholder="저장된 API 키 유지" style="padding-right:38px" />
+              <button class="btn icon" type="button" aria-label="API 키 표시"><svg class="i"><use href="#i-eye"/></svg></button>
+            </span>
+          </label>
+          <div class="mock-note" style="margin:0 0 14px">
+            <svg class="i sm"><use href="#i-lock"/></svg>
+            <span>API 키는 운영체제 보호 저장소에 암호화합니다. 프로젝트 파일과 브라우저 저장소에는 기록하지 않습니다. <button class="btn ghost sm">저장된 키 삭제</button></span>
+          </div>
+          <label class="cbx"><input type="checkbox" checked /><span>선택한 원격 엔드포인트로 작업에 필요한 소스 근거 슬라이스가 전송될 수 있음을 확인했습니다.</span></label>
+          <label class="cbx" style="border-top:1px solid var(--line);margin-top:6px;padding-top:14px"><input type="checkbox" /><span>독립 reviewer 사용<small>별도 모델이 FACT·WIKI·SCENARIO의 의미 판정만 수행합니다. 켜면 reviewer 전용 엔드포인트·키·동의 항목이 추가됩니다.</small></span></label>
+
+          <div class="cta-row" style="margin-top:18px">
+            <button class="btn pri lg">다음 · 확인<svg class="i"><use href="#i-arrow-r"/></svg></button>
+            <button class="btn ghost"><svg class="i"><use href="#i-arrow-l"/></svg>이전</button>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card p-20">
+            <span class="eyebrow">WHAT IT DOES</span>
+            <h2 class="h3" style="margin-bottom:12px">모델이 하는 일과 하지 않는 일</h2>
+            <div class="stat-row" style="margin-bottom:14px">
+              <p class="num sm">4</p>
+              <div class="connect"><span class="ln"></span><span class="dt"></span></div>
+              <span class="lb">단계(SRC·FACT·WIKI·SCENARIO)의 의미 작업만 담당</span>
+            </div>
+            <div class="stat-row">
+              <p class="num sm">0</p>
+              <div class="connect"><span class="ln"></span><span class="dt"></span></div>
+              <span class="lb">정본 ID·해시·증거·실행 대상은 모델이 만들지 않습니다</span>
+            </div>
+          </div>
+          <div class="card flat p-16">
+            <span class="eyebrow">SENT TO ENDPOINT</span>
+            <ul style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+              <li class="metric"><svg class="i sm"><use href="#i-check"/></svg>작업에 필요한 소스 근거 슬라이스</li>
+              <li class="metric"><svg class="i sm"><use href="#i-check"/></svg>이전 단계 산출물과 gap 목록</li>
+              <li class="metric" style="color:var(--bad)"><svg class="i sm"><use href="#i-x"/></svg>API 키·자격증명·원문 프롬프트는 로그와 화면에 남기지 않음</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S4 ══ -->
+<section class="frame" id="s4">
+  <div class="mock-cap"><div class="l"><b>S4</b><h2>온보딩 3/3 · 확인과 첫 분석</h2><code>#/onboarding/first-run</code></div>
+    <p>항목별 「수정」으로 해당 단계로 되돌아갑니다. 여기서 첫 단계를 실행하면 개요 탭으로 이동합니다.</p>
+  </div>
+  <div class="app">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s4"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <ol class="steps"><li class="done"><b><svg class="i sm"><use href="#i-check"/></svg></b>디렉터리</li><li class="done"><b><svg class="i sm"><use href="#i-check"/></svg></b>모델 연결</li><li class="on"><b>3</b>확인</li></ol>
+      <div class="topbar-end"></div>
+    </div>
+    <div class="body pad-lg">
+      <div style="max-width:660px;margin:0 auto">
+        <span class="eyebrow">STEP 3 · READY TO FORGE</span>
+        <h1 class="h1" style="margin-bottom:8px">이 설정으로 첫 단계를 실행합니다</h1>
+        <p class="sub" style="margin-bottom:20px">SRC 단계가 소스 인벤토리와 근거 스냅샷을 만듭니다. 단계마다 검증·저장한 뒤 멈추므로 중간에 확인할 수 있습니다.</p>
+        <dl class="kv" style="margin-bottom:18px">
+          <div><dt>프로젝트</dt><dd>commerce-platform</dd><span class="end"><button class="btn ghost sm">수정</button></span></div>
+          <div><dt>작업 범위</dt><dd class="path">/workspace/commerce-platform</dd><span class="end"><button class="btn ghost sm">수정</button></span></div>
+          <div><dt>author 모델</dt><dd>gpt-5 · OpenAI 호환</dd><span class="end"><button class="btn ghost sm">수정</button></span></div>
+          <div><dt>reviewer</dt><dd class="mut">사용하지 않음</dd><span class="end"><button class="btn ghost sm">수정</button></span></div>
+          <div><dt>자격증명</dt><dd><span class="chip ok"><svg class="i"><use href="#i-lock"/></svg>보호 저장소에 저장됨</span></dd></div>
+        </dl>
+        <ol class="pipe" style="margin-bottom:20px">
+          <li class="next"><div class="nd"><b><svg class="i sm"><use href="#sf-src"/></svg>SRC</b><span>소스 구조 수집</span></div><span class="cn"></span></li>
+          <li><div class="nd"><b><svg class="i sm"><use href="#sf-fact"/></svg>FACT</b><span>코드 사실 추출</span></div><span class="cn"></span></li>
+          <li><div class="nd"><b><svg class="i sm"><use href="#sf-wiki"/></svg>WIKI</b><span>업무 분류·여정</span></div><span class="cn"></span></li>
+          <li><div class="nd"><b><svg class="i sm"><use href="#sf-scenario"/></svg>SCENARIO</b><span>시나리오 케이스</span></div></li>
+        </ol>
+        <div class="cta-row">
+          <button class="btn pri lg"><svg class="i lg"><use href="#i-spark"/></svg>SRC 단계 실행<svg class="i"><use href="#i-arrow-r"/></svg></button>
+          <button class="btn ghost">나중에 실행</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══ S5 ══ -->
+<section class="frame" id="s5">
+  <div class="mock-cap"><div class="l"><b>S5</b><h2>프로젝트 상세 · 개요 (분석 진행 중)</h2><code>#/p/commerce-platform/overview</code></div>
+    <p>탭 4개는 각각 자체 URL을 가집니다. 반원 tick 게이지는 backend 진행 이벤트만 반영하고 renderer가 진행률을 추정하지 않습니다. 오른쪽 요약 숫자는 각 탭으로 가는 링크입니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><b>commerce-platform</b></nav>
+      <div class="topbar-end">
+        <span class="switcher"><svg class="i sm"><use href="#i-folder"/></svg><b>commerce-platform</b><svg class="i sm"><use href="#i-down"/></svg></span>
+        <button class="btn sm"><svg class="i sm"><use href="#i-sliders"/></svg>LLM 설정</button>
+      </div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true"><svg class="i sm"><use href="#i-board"/></svg>개요</button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-scenario"/></svg>생성 이력<span class="n">3</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-queue"/></svg>테스트 실행<span class="n">5</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-evidence"/></svg>증적<span class="n">41</span></button>
+    </div>
+    <div class="body pad-lg">
+      <div style="display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:18px;align-items:start">
+        <div class="card p-24">
+          <div class="between">
+            <div>
+              <span class="eyebrow">FORGING PIPELINE</span>
+              <h2 class="h1" style="font-size:22px">FACT 단계 수행 중</h2>
+              <p class="sub" style="margin-top:6px;font-size:12.5px">코드 사실과 의미 주석을 기록하고 있습니다. 단계가 끝나면 검증·저장 후 멈춥니다.</p>
+              <span class="chip mono" style="margin-top:10px">RUN-2b7d5c19</span>
+            </div>
+            <div class="gauge" data-value="30">
+              <svg viewBox="0 0 200 116" aria-hidden="true"></svg>
+              <div class="val"><p class="num">30<u>%</u></p></div>
+            </div>
+          </div>
+          <ol class="pipe" style="margin:20px 0 18px">
+            <li class="done"><div class="nd"><b><svg class="i sm"><use href="#sf-src"/></svg>SRC</b><span>소스 구조 수집</span></div><span class="cn"></span></li>
+            <li class="on"><div class="nd"><b><svg class="i sm"><use href="#sf-fact"/></svg>FACT</b><span>코드 사실 추출</span></div><span class="cn"></span></li>
+            <li><div class="nd"><b><svg class="i sm"><use href="#sf-wiki"/></svg>WIKI</b><span>업무 분류·여정</span></div><span class="cn"></span></li>
+            <li><div class="nd"><b><svg class="i sm"><use href="#sf-scenario"/></svg>SCENARIO</b><span>시나리오 케이스</span></div></li>
+          </ol>
+          <div class="card flat" style="padding:12px 16px;background:var(--surface-2);display:flex;gap:11px;align-items:center" role="status" aria-live="polite">
+            <span class="mark run"><svg class="i sm"><use href="#i-loader"/></svg></span>
+            <div style="min-width:0">
+              <strong style="font-size:12.5px">STEP 3 / 10 · fact-catalog</strong>
+              <p class="path" title="state.currentActivity">화면·서술 카탈로그 작성 중 · work W-2b7d5c19-03</p>
+            </div>
+            <span class="chip run" style="margin-left:auto"><svg class="i"><use href="#i-loader"/></svg>진행 중</span>
+          </div>
+          <div class="cta-row" style="margin-top:18px">
+            <button class="btn pri" disabled><svg class="i"><use href="#i-play"/></svg>다음 단계 실행</button>
+            <span class="cta-why mut" style="color:var(--ink-3)"><svg class="i sm" style="stroke:var(--ink-3)"><use href="#i-clock"/></svg>현재 단계가 끝나면 활성화됩니다.</span>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card p-20">
+            <span class="eyebrow">PROJECT</span>
+            <dl class="kv plain">
+              <div><dt>작업 범위</dt><dd class="path" style="font-size:11.5px">/workspace/commerce-platform</dd></div>
+              <div><dt>연결 모델</dt><dd>gpt-5</dd></div>
+              <div><dt>reviewer</dt><dd class="mut">사용하지 않음</dd></div>
+            </dl>
+            <div class="cta-row" style="margin-top:6px"><button class="btn sm"><svg class="i sm"><use href="#i-ext"/></svg>경로 열기</button></div>
+          </div>
+          <div class="card p-20">
+            <span class="eyebrow">SUMMARY</span>
+            <div class="stack" style="gap:14px;margin-top:4px">
+              <a href="#s6" class="stat-row">
+                <p class="num sm">3</p><div class="connect"><span class="ln"></span><span class="dt"></span></div>
+                <span class="lb">생성 이력 · 최근 <span class="path">09-07 15:42</span></span>
+              </a>
+              <a href="#s9" class="stat-row">
+                <p class="num sm">5</p><div class="connect"><span class="ln"></span><span class="dt"></span></div>
+                <span class="lb">테스트 실행 · 실패 1건</span>
+              </a>
+              <a href="#s11" class="stat-row">
+                <p class="num sm">41</p><div class="connect"><span class="ln"></span><span class="dt"></span></div>
+                <span class="lb">증적 화면 · 128 MB</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S5e ══ -->
+<section class="frame" id="s5e">
+  <div class="mock-cap"><div class="l"><b>S5e</b><h2>개요 · 분석 실패</h2><code>#/p/commerce-platform/overview</code></div>
+    <p>stage · work ID · 분류된 오류 코드까지만 노출합니다. provider 오류와 artifact/schema 오류를 구분해 재시도 가능 여부를 알려줍니다. 불완전한 결과를 예시 데이터로 대체하지 않습니다.</p>
+  </div>
+  <div class="app" style="min-height:520px">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><b>commerce-platform</b></nav>
+      <div class="topbar-end"><span class="switcher"><svg class="i sm"><use href="#i-folder"/></svg><b>commerce-platform</b><svg class="i sm"><use href="#i-down"/></svg></span></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true"><svg class="i sm"><use href="#i-board"/></svg>개요</button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-scenario"/></svg>생성 이력<span class="n">2</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-queue"/></svg>테스트 실행<span class="n">5</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-evidence"/></svg>증적<span class="n">41</span></button>
+    </div>
+    <div class="body pad-lg">
+      <div class="card p-24" style="border-color:var(--bad-line)">
+        <div class="between">
+          <div style="display:flex;gap:14px">
+            <span class="mark bad" style="width:38px;height:38px"><svg class="i lg"><use href="#i-alert"/></svg></span>
+            <div>
+              <span class="eyebrow" style="color:var(--bad)">ANALYSIS FAILED · WIKI</span>
+              <h2 class="h1" style="font-size:21px">WIKI 단계를 완료하지 못했습니다</h2>
+              <p class="sub" style="margin-top:6px;font-size:12.5px">직전까지 검증·저장한 SRC·FACT 산출물은 그대로 있습니다. 이 단계만 다시 실행할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+        <dl class="kv" style="margin:18px 0">
+          <div><dt>단계</dt><dd>WIKI · 업무 분류</dd></div>
+          <div><dt>work ID</dt><dd class="path">WIKI-20260907-0004</dd></div>
+          <div><dt>오류 분류</dt><dd><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>산출물 검증 실패</span> <span class="mut" style="font-size:12px">재시도로 해결되지 않을 수 있습니다</span></dd></div>
+          <div><dt>오류 코드</dt><dd class="path">STAGE_ARTIFACT_REJECTED</dd></div>
+        </dl>
+        <ol class="pipe" style="margin-bottom:18px">
+          <li class="done"><div class="nd"><b><svg class="i sm"><use href="#sf-src"/></svg>SRC</b><span>완료</span></div><span class="cn"></span></li>
+          <li class="done"><div class="nd"><b><svg class="i sm"><use href="#sf-fact"/></svg>FACT</b><span>완료</span></div><span class="cn"></span></li>
+          <li class="fail"><div class="nd"><b><svg class="i sm"><use href="#sf-wiki"/></svg>WIKI</b><span>실패</span></div><span class="cn"></span></li>
+          <li><div class="nd"><b><svg class="i sm"><use href="#sf-scenario"/></svg>SCENARIO</b><span>대기</span></div></li>
+        </ol>
+        <div class="cta-row">
+          <button class="btn pri"><svg class="i"><use href="#i-retry"/></svg>WIKI 단계 다시 실행</button>
+          <button class="btn">처음부터 새 분석</button>
+          <button class="btn ghost"><svg class="i"><use href="#i-ext"/></svg>산출물 경로 열기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S6 ══ -->
+<section class="frame" id="s6">
+  <div class="mock-cap"><div class="l"><b>S6</b><h2>생성 이력 탭</h2><code>#/p/commerce-platform/runs</code></div>
+    <p>목록의 원천은 <code>.scenarioforge/runs</code>입니다. 미완 run도 어디까지 진행됐는지 표시하고 「이어서 실행」을 줍니다. run별로 열기·다시 생성·삭제가 같은 행에 있습니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><b>commerce-platform</b></nav>
+      <div class="topbar-end"><span class="switcher"><svg class="i sm"><use href="#i-folder"/></svg><b>commerce-platform</b><svg class="i sm"><use href="#i-down"/></svg></span><button class="btn sm"><svg class="i sm"><use href="#i-sliders"/></svg>LLM 설정</button></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#i-board"/></svg>개요</button>
+      <button role="tab" aria-selected="true"><svg class="i sm"><use href="#sf-scenario"/></svg>생성 이력<span class="n">3</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-queue"/></svg>테스트 실행<span class="n">5</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-evidence"/></svg>증적<span class="n">41</span></button>
+    </div>
+    <div class="body pad-lg">
+      <div class="between" style="margin-bottom:18px">
+        <div><span class="eyebrow">GENERATION HISTORY</span><h1 class="h1">생성 이력</h1><p class="sub" style="margin-top:6px">분석 실행마다 하나의 run이 만들어집니다. 이전 run은 삭제할 때까지 보존됩니다.</p></div>
+        <div class="end">
+          <span class="pill"><svg class="i sm"><use href="#i-db"/></svg><code>.scenarioforge/runs</code></span>
+          <button class="btn"><svg class="i sm"><use href="#i-filter"/></svg>상태</button>
+          <button class="btn pri"><svg class="i sm"><use href="#i-spark"/></svg>새 분석</button>
+        </div>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <div class="rows tbl" style="--cols:28px minmax(0,1fr) 96px 88px 108px 232px">
+          <div class="row on">
+            <span class="mark ok"><svg class="i sm"><use href="#i-check"/></svg></span>
+            <div class="row-main">
+              <strong><span class="t">2026. 9. 7. 15:42</span> <span class="chip ok"><svg class="i"><use href="#i-check"/></svg>완료</span></strong>
+              <span><code title="RUN-9f1c2e4a-5b8d-4c31-9e7a-2f6b0d4a8c31">RUN-9f1c2e4a…</code> · 03:18 소요</span>
+            </div>
+            <span class="metric"><svg class="i sm"><use href="#i-db"/></svg><b>428</b> fact</span>
+            <span class="metric"><svg class="i sm"><use href="#i-book"/></svg><b>36</b> wiki</span>
+            <span class="metric"><svg class="i sm"><use href="#i-route"/></svg><b>24</b> 시나리오</span>
+            <span class="end">
+              <button class="btn sm">열기<svg class="i sm"><use href="#i-right"/></svg></button>
+              <button class="btn sm"><svg class="i sm"><use href="#i-refresh"/></svg>다시 생성</button>
+              <button class="btn icon sm q-dan" aria-label="RUN-9f1c2e4a 삭제"><svg class="i sm"><use href="#i-trash"/></svg></button>
+            </span>
+          </div>
+          <div class="row">
+            <span class="mark run"><svg class="i sm"><use href="#i-loader"/></svg></span>
+            <div class="row-main">
+              <strong><span class="t">2026. 9. 7. 16:20</span> <span class="chip run"><svg class="i"><use href="#i-loader"/></svg>FACT 단계 진행 중</span></strong>
+              <span><code title="RUN-2b7d5c19-77af-4a02-8c65-1de9f3b0a774">RUN-2b7d5c19…</code> · 진행률 30%</span>
+            </div>
+            <span class="metric"><svg class="i sm"><use href="#i-db"/></svg><b>210</b> fact</span>
+            <span class="metric mut"><svg class="i sm" style="opacity:.4"><use href="#i-book"/></svg>대기</span>
+            <span class="metric mut"><svg class="i sm" style="opacity:.4"><use href="#i-route"/></svg>대기</span>
+            <span class="end">
+              <button class="btn sm">진행 상태</button>
+              <button class="btn icon sm" disabled aria-label="진행 중인 run은 삭제할 수 없습니다"><svg class="i sm"><use href="#i-trash"/></svg></button>
+            </span>
+          </div>
+          <div class="row">
+            <span class="mark warn"><svg class="i sm"><use href="#i-help"/></svg></span>
+            <div class="row-main">
+              <strong><span class="t">2026. 8. 22. 10:16</span> <span class="chip warn"><svg class="i"><use href="#i-help"/></svg>WIKI 단계까지 완료</span></strong>
+              <span><code title="RUN-c48a0f73-3e11-49d8-b6aa-58c2079e4f10">RUN-c48a0f73…</code> · 02:51 소요 · 이어서 실행 가능</span>
+            </div>
+            <span class="metric"><svg class="i sm"><use href="#i-db"/></svg><b>391</b> fact</span>
+            <span class="metric"><svg class="i sm"><use href="#i-book"/></svg><b>31</b> wiki</span>
+            <span class="metric mut"><svg class="i sm" style="opacity:.4"><use href="#i-route"/></svg>없음</span>
+            <span class="end">
+              <button class="btn sm"><svg class="i sm"><use href="#i-play"/></svg>이어서 실행</button>
+              <button class="btn icon sm q-dan" aria-label="RUN-c48a0f73 삭제"><svg class="i sm"><use href="#i-trash"/></svg></button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <p class="mock-note" style="margin-top:14px"><svg class="i sm"><use href="#i-alert"/></svg><span><b>「다시 생성」은 기존 run을 덮지 않습니다.</b> 같은 프로젝트에 새 run을 만들어 두 결과를 나란히 비교할 수 있게 합니다.</span></p>
+    </div>
+  </div>
+</section>
+<!-- ══ S7 ══ -->
+<section class="frame" id="s7">
+  <div class="mock-cap"><div class="l"><b>S7</b><h2>run 상세 · 시나리오 정보 셋</h2><code>#/p/{projectId}/runs/{runId}</code></div>
+    <p>기존 3분할을 유지하되 상단 컨텍스트를 프로젝트 / run 계층으로 바꿨습니다. 케이스를 질의 패널로 끌어다 놓으면 ID 기준으로 답변합니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><a href="#s5">commerce-platform</a><svg class="i sm"><use href="#i-right"/></svg><b title="RUN-9f1c2e4a-5b8d-4c31-9e7a-2f6b0d4a8c31">RUN-9f1c2e4a…</b></nav>
+      <div class="topbar-end">
+        <span class="pill"><svg class="i sm"><use href="#i-db"/></svg><code title="/workspace/commerce-platform/.scenarioforge/runs/RUN-9f1c2e4a-5b8d-4c31-9e7a-2f6b0d4a8c31/scenario-set.json">runs/RUN-9f1c2e4a…/scenario-set.json</code></span>
+        <button class="btn sm"><svg class="i sm"><use href="#i-refresh"/></svg>이 run 다시 생성</button>
+      </div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#i-board"/></svg>개요</button>
+      <button role="tab" aria-selected="true"><svg class="i sm"><use href="#sf-scenario"/></svg>생성 이력<span class="n">3</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-queue"/></svg>테스트 실행<span class="n">5</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-evidence"/></svg>증적<span class="n">41</span></button>
+    </div>
+    <div class="body" style="padding:20px 22px;display:flex;flex-direction:column;gap:14px;min-height:0">
+      <div class="between">
+        <div>
+          <button class="btn link"><svg class="i sm"><use href="#i-arrow-l"/></svg>생성 이력</button>
+          <h1 class="h1" style="font-size:20px;margin-top:4px">사용자 시나리오 24건</h1>
+        </div>
+        <div class="stats">
+          <div class="stat"><p class="num sm">4</p><span class="path">업무 분류</span></div>
+          <div class="stat"><p class="num sm">24</p><span class="path">시나리오</span></div>
+          <div class="stat"><p class="num sm">2</p><span class="path">선택</span></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:290px minmax(0,1fr);gap:14px;flex:1;min-height:0">
+        <aside class="panel">
+          <div class="panel-h"><svg class="i sm"><use href="#i-msg"/></svg><h2 class="h3">시나리오 질의</h2></div>
+          <div class="chat-s">
+            <div class="msg"><b>FORGE</b><p>시나리오 결과에 대해 질문하세요. 오른쪽 케이스를 입력 영역으로 끌어오면 해당 ID를 기준으로 답변합니다.</p></div>
+            <div class="msg me"><b>YOU</b><p><code>`SCN-CHECKOUT-3F2A91C4-001`</code> 실패할 수 있는 분기는 무엇인가요?</p></div>
+            <div class="msg"><b>FORGE</b><p>결제 요청 단계에서 카드 승인 응답과 재고 확정이 갈립니다. 승인 실패는 회복 시나리오 <code>SCN-CHECKOUT-3F2A91C4-004</code>로 이어집니다.</p></div>
+          </div>
+          <div class="comp">
+            <p class="drop over"><svg class="i sm"><use href="#i-grip"/></svg>여기에 놓아 시나리오를 참조합니다.</p>
+            <div class="refs"><span class="tag">`SCN-CHECKOUT-3F2A91C4-001`<button class="btn link" aria-label="참조 제거" style="margin-left:2px"><svg class="i sm"><use href="#i-x"/></svg></button></span></div>
+            <textarea rows="2" placeholder="예: 실패할 수 있는 분기는 무엇인가요?"></textarea>
+            <div class="snd"><button class="btn sm"><svg class="i sm"><use href="#i-send"/></svg>보내기</button></div>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div class="panel-h">
+            <h2 class="h3">시나리오 시트</h2>
+            <span class="tag" title="scenarioId(workflow, ordinal)">SCN-{워크플로}-{3자리}</span>
+            <span class="end"><span class="chip mono">2건 선택</span><button class="btn sm">선택 해제</button></span>
+          </div>
+          <div class="panel-s">
+            <div class="sheet-hd">
+              <span><input type="checkbox" aria-label="전체 선택" /></span>
+              <span>시나리오 ID</span><span>사용자 시나리오 · 화면 경로</span><span>세부</span><span></span>
+            </div>
+            <div class="sheet-gp"><b>BC-ORDER</b><h3>주문·결제</h3><small>7 cases</small></div>
+            <div class="sheet-rw on">
+              <input type="checkbox" checked aria-label="SCN-CART-7A31F0C2-001 선택" />
+              <code>SCN-CART-7A31F0C2-001</code>
+              <div class="sheet-ti"><strong>장바구니에서 주문서 생성까지 · normal</strong><span title="SCR-cart → SCR-cart-review → SCR-checkout">SCR-cart → SCR-cart-review → SCR-checkout</span></div>
+              <button class="btn link" aria-expanded="false">6 steps<svg class="i sm"><use href="#i-down"/></svg></button>
+              <svg class="i sm" style="stroke:var(--ink-4)"><use href="#i-grip"/></svg>
+            </div>
+            <div class="sheet-rw on">
+              <input type="checkbox" checked aria-label="SCN-CHECKOUT-3F2A91C4-001 선택" />
+              <code>SCN-CHECKOUT-3F2A91C4-001</code>
+              <div class="sheet-ti"><strong>신용카드로 결제 완료까지 · normal</strong><span title="SCR-checkout → SCR-order-complete">SCR-checkout → SCR-order-complete</span></div>
+              <button class="btn link" aria-expanded="true">5 steps<svg class="i sm"><use href="#i-up"/></svg></button>
+              <svg class="i sm" style="stroke:var(--ink-4)"><use href="#i-grip"/></svg>
+            </div>
+            <div class="sheet-dt">
+              <p class="pre"><b>사전 조건</b> · 테스트 계정으로 로그인되어 있고 장바구니에 상품 1건이 담겨 있다.</p>
+              <ol>
+                <li><span>01</span><p>주문서에서 결제 수단으로 신용카드를 선택한다.</p><p>카드 입력 영역이 나타난다.</p></li>
+                <li><span>02</span><p>테스트 카드 번호를 입력한다.</p><p>카드 형식 검증을 통과한다.</p></li>
+                <li><span>03</span><p>결제하기를 누른다.</p><p>결제 완료 화면으로 이동한다.</p></li>
+              </ol>
+            </div>
+            <div class="sheet-rw">
+              <input type="checkbox" aria-label="SCN-CHECKOUT-3F2A91C4-004 선택" />
+              <code>SCN-CHECKOUT-3F2A91C4-004</code>
+              <div class="sheet-ti"><strong>신용카드로 결제 완료까지 · exception</strong><span>SCR-checkout → SCR-checkout → SCR-order-complete</span></div>
+              <button class="btn link" aria-expanded="false">7 steps<svg class="i sm"><use href="#i-down"/></svg></button>
+              <svg class="i sm" style="stroke:var(--ink-4)"><use href="#i-grip"/></svg>
+            </div>
+            <div class="sheet-gp"><b>BC-RETURN</b><h3>반품·환불</h3><small>5 cases</small></div>
+            <div class="sheet-rw">
+              <input type="checkbox" aria-label="SCN-ORDERS-ID-9B4E2D18-001 선택" />
+              <code>SCN-ORDERS-ID-9B4E2D18-001</code>
+              <div class="sheet-ti"><strong>배송 완료 주문 반품 접수까지 · normal</strong><span>SCR-orders-id → SCR-return-request</span></div>
+              <button class="btn link" aria-expanded="false">6 steps<svg class="i sm"><use href="#i-down"/></svg></button>
+              <svg class="i sm" style="stroke:var(--ink-4)"><use href="#i-grip"/></svg>
+            </div>
+          </div>
+          <div class="panel-f">
+            <span class="chip mono">SCN-CART-7A31F0C2-001</span><span class="chip mono">SCN-CHECKOUT-3F2A91C4-001</span>
+            <span class="end"><button class="btn pri sm"><svg class="i sm"><use href="#i-play"/></svg>선택한 2건 테스트 설정</button></span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S8 ══ -->
+<section class="frame" id="s8">
+  <div class="mock-cap"><div class="l"><b>S8</b><h2>테스트 수행 설정</h2><code>run 상세 우측 드로어</code></div>
+    <p>필드 목록은 정본 산출물이 결정합니다. 자동화 불가 케이스는 사유와 stepId를 밝히고 대상에서 제외합니다. 실행 버튼은 막힌 이유를 버튼 옆에 문장으로 답니다. <b>하단 패널을 우측 드로어로 옮겼습니다</b> - 1024px 높이에서 하단 패널이 시트를 가렸습니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><a href="#s5">commerce-platform</a><svg class="i sm"><use href="#i-right"/></svg><b title="RUN-9f1c2e4a-5b8d-4c31-9e7a-2f6b0d4a8c31">RUN-9f1c2e4a…</b></nav>
+    </div>
+    <div class="body" style="padding:0;display:grid;grid-template-columns:minmax(0,1fr) 400px;min-height:0">
+      <div style="padding:20px 20px;overflow:auto;background:var(--paper)">
+        <div class="panel" style="min-height:100%">
+          <div class="panel-h"><h2 class="h3">시나리오 시트</h2><span class="end"><span class="chip mono">3건 선택</span></span></div>
+          <div class="panel-s">
+            <div class="sheet-hd">
+              <span><input type="checkbox" checked aria-label="전체 선택" /></span>
+              <span>시나리오 ID</span><span>사용자 시나리오 · 화면 경로</span><span>세부</span><span></span>
+            </div>
+            <div class="sheet-gp"><b>BC-ORDER</b><h3>주문·결제</h3><small>7 cases</small></div>
+            <div class="sheet-rw on"><input type="checkbox" checked aria-label="선택" /><code>SCN-CART-7A31F0C2-001</code><div class="sheet-ti"><strong>장바구니에서 주문서 생성까지 · normal</strong><span>SCR-cart → SCR-checkout</span></div><span class="path">6 steps</span><span></span></div>
+            <div class="sheet-rw on"><input type="checkbox" checked aria-label="선택" /><code>SCN-CHECKOUT-3F2A91C4-001</code><div class="sheet-ti"><strong>신용카드로 결제 완료까지 · normal</strong><span>SCR-checkout → SCR-order-complete</span></div><span class="path">5 steps</span><span></span></div>
+            <div class="sheet-rw on"><input type="checkbox" checked aria-label="선택" /><code>SCN-REFUND-1C8A55E7-003</code><div class="sheet-ti"><strong>환불 승인 후 정산 확인까지 · exception</strong><span>SCR-refund → SCR-settlement</span><span class="chip bad" style="margin-top:3px"><svg class="i"><use href="#i-alert"/></svg>자동화 불가</span></div><span class="path">8 steps</span><span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel" style="border-radius:0;border-top:0;border-right:0;border-bottom:0;box-shadow:none">
+        <div class="panel-h">
+          <div><span class="eyebrow" style="margin:0">TEST EXECUTION</span><h2 class="h3" style="margin-top:3px">테스트 수행 설정</h2></div>
+          <span class="end"><button class="btn icon sm" aria-label="설정 닫기"><svg class="i sm"><use href="#i-x"/></svg></button></span>
+        </div>
+        <div class="panel-s" style="padding:16px">
+          <p class="sub" style="font-size:12px;margin-bottom:10px">3건 선택 · <b>실행 가능 2건</b></p>
+          <div class="diag" style="margin-bottom:16px">
+            <p><svg class="i sm"><use href="#i-alert"/></svg>자동화할 수 없는 케이스 1개</p>
+            <div class="asrt"><code>SCN-REFUND-1C8A55E7-003</code><span class="chip bad">화면 대상 근거 없음</span><span class="path">step-04</span></div>
+          </div>
+
+          <fieldset class="fs">
+            <legend>대상 유형</legend>
+            <div class="opts">
+              <label class="opt on"><input type="radio" name="tk" checked /><span>웹</span></label>
+              <label class="opt off"><input type="radio" name="tk" disabled /><span>Windows 앱</span><small>어댑터 미구현</small></label>
+              <label class="opt off"><input type="radio" name="tk" disabled /><span>Android</span><small>어댑터 미구현</small></label>
+            </div>
+          </fieldset>
+
+          <label class="field">
+            <span class="lb">대상 진입 URL</span>
+            <input class="inp mono" value="https://staging.commerce.example/checkout" />
+          </label>
+          <div class="card flat" style="padding:11px 13px;display:flex;align-items:center;gap:10px;margin-bottom:14px;background:var(--ok-soft);border-color:#C7E4D6">
+            <svg class="i sm" style="stroke:var(--ok)"><use href="#i-check"/></svg>
+            <span style="font-size:12px;color:var(--ok)">URL 형식 확인 완료 · 대상 접속은 실행 시 검증</span>
+            <button class="btn sm" style="margin-left:auto">다시 확인</button>
+          </div>
+
+          <fieldset class="fs">
+            <legend>테스트 데이터</legend>
+            <p class="note">정본 FACT 근거에서 도출한 항목입니다. 실제 개인정보가 아닌 테스트 전용 값만 입력하세요.</p>
+            <label class="field" style="margin-bottom:10px"><span class="lb">로그인 계정</span><input class="inp" value="qa-tester-01" /><span class="hint">step-01</span></label>
+            <label class="field" style="margin-bottom:10px"><span class="lb">계정 비밀번호</span><input class="inp" type="password" placeholder="테스트 값 입력" /><span class="hint">step-01 · 참조만 저장됩니다</span></label>
+            <label class="field" style="margin-bottom:0"><span class="lb">테스트 카드 번호</span><input class="inp" aria-invalid="true" /><span class="err"><svg class="i"><use href="#i-alert"/></svg>이 값이 없으면 SCN-CHECKOUT-3F2A91C4-001을 실행할 수 없습니다.</span></label>
+          </fieldset>
+
+          <fieldset class="fs">
+            <legend><svg class="i sm"><use href="#sf-mask"/></svg>마스킹 대상 · 필수</legend>
+            <p class="note">아래 항목은 화면 캡처에서 가려진 뒤 전송됩니다. 가리지 못하면 실행이 중단됩니다.</p>
+            <label class="cbx" style="min-height:32px"><input type="checkbox" checked /><span>카드 번호 입력란 <code>SCR-checkout</code></span></label>
+            <label class="cbx" style="min-height:32px"><input type="checkbox" checked /><span>계정 이메일 표시 영역 <code>SCR-account</code></span></label>
+          </fieldset>
+
+          <label class="cbx danger" style="margin-bottom:14px"><input type="checkbox" /><span>되돌릴 수 없는 동작을 허용합니다<small>환불 승인 단계가 포함되어 있습니다.</small></span></label>
+
+          <button class="btn ghost sm" aria-expanded="false" style="margin-bottom:8px">실행 예산 보기<svg class="i sm"><use href="#i-down"/></svg></button>
+          <dl class="kv">
+            <div><dt>모델 호출 상한</dt><dd>40회</dd></div>
+            <div><dt>관측 상한</dt><dd>60회</dd></div>
+            <div><dt>단계 제한 시간</dt><dd>45초</dd></div>
+          </dl>
+        </div>
+        <div class="panel-f" style="flex-direction:column;align-items:stretch;gap:8px;padding:12px 16px">
+          <button class="btn pri" disabled><svg class="i"><use href="#i-play"/></svg>2개 테스트 수행</button>
+          <span class="cta-why"><svg class="i sm"><use href="#i-alert"/></svg>테스트 데이터 1개가 비어 있습니다.</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+<!-- ══ S9 ══ -->
+<section class="frame" id="s9">
+  <div class="mock-cap"><div class="l"><b>S9</b><span class="chip warn"><svg class="i"><use href="#i-alert"/></svg>실행기 미구현 · 계약 기반</span><h2>테스트 실행 목록 탭</h2><code>#/p/commerce-platform/executions</code></div>
+    <p>새로 추가되는 계층입니다. 지금은 실행이 메모리에만 있어 재시작하면 사라집니다. 재시도는 「동일 조건」과 「실패 케이스만」으로 나눕니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><b>commerce-platform</b></nav>
+      <div class="topbar-end"><span class="switcher"><svg class="i sm"><use href="#i-folder"/></svg><b>commerce-platform</b><svg class="i sm"><use href="#i-down"/></svg></span></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#i-board"/></svg>개요</button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-scenario"/></svg>생성 이력<span class="n">3</span></button>
+      <button role="tab" aria-selected="true"><svg class="i sm"><use href="#sf-queue"/></svg>테스트 실행<span class="n">5</span><i class="live" aria-label="실행 중"></i></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-evidence"/></svg>증적<span class="n">41</span></button>
+    </div>
+    <div class="body pad-lg">
+      <div class="between" style="margin-bottom:18px">
+        <div><span class="eyebrow">TEST EXECUTIONS</span><h1 class="h1">테스트 실행</h1><p class="sub" style="margin-top:6px">케이스와 단계는 위에서 아래로 순차 수행됩니다.</p></div>
+        <div class="stats">
+          <div class="stat"><p class="num sm">5</p><span class="path">실행</span></div>
+          <div><p class="num sm" style="color:var(--ok)">3</p><span class="path">성공</span></div>
+          <div><p class="num sm" style="color:var(--bad)">1</p><span class="path">실패</span></div>
+        </div>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <div class="rows tbl" style="--cols:28px minmax(0,1fr) 136px 84px 248px">
+          <div class="row on">
+            <span class="mark run"><svg class="i sm"><use href="#i-loader"/></svg></span>
+            <div class="row-main">
+              <strong><span class="t">EXE-20260907-0007</span> <span class="chip run"><svg class="i"><use href="#i-loader"/></svg>순차 실행 중</span></strong>
+              <span>RUN-9f1c2e4a… · staging.commerce.example/checkout</span>
+            </div>
+            <div class="cell-bar"><div class="bar"><span style="width:38%"></span></div><span class="path">7/18 steps</span></div>
+            <span class="metric"><svg class="i sm"><use href="#i-camera"/></svg><b>7</b>장</span>
+            <span class="end">
+              <button class="btn pri sm">실행 상세<svg class="i sm"><use href="#i-right"/></svg></button>
+              <button class="btn sm"><svg class="i sm"><use href="#i-square"/></svg>중단</button>
+            </span>
+          </div>
+          <div class="row">
+            <span class="mark bad"><svg class="i sm"><use href="#i-alert"/></svg></span>
+            <div class="row-main">
+              <strong><span class="t">EXE-20260907-0006</span> <span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>실패로 종료</span></strong>
+              <span>RUN-9f1c2e4a… · 성공 12 · 실패 1 · 미수행 5</span>
+            </div>
+            <div class="cell-bar"><div class="bar bad"><span style="width:100%"></span></div><span class="path">01:11 소요</span></div>
+            <span class="metric"><svg class="i sm"><use href="#i-camera"/></svg><b>18</b>장</span>
+            <span class="end">
+              <button class="btn sm">실행 상세<svg class="i sm"><use href="#i-right"/></svg></button>
+              <button class="btn sm"><svg class="i sm"><use href="#i-retry"/></svg>실패 케이스만</button>
+              <button class="btn icon sm" aria-label="EXE-20260907-0006 관리"><svg class="i sm"><use href="#i-more"/></svg></button>
+            </span>
+          </div>
+          <div class="row">
+            <span class="mark ok"><svg class="i sm"><use href="#i-check"/></svg></span>
+            <div class="row-main">
+              <strong><span class="t">EXE-20260906-0005</span> <span class="chip ok"><svg class="i"><use href="#i-check"/></svg>실행 완료</span></strong>
+              <span>RUN-c48a0f73… · 성공 11 · 실패 0</span>
+            </div>
+            <div class="cell-bar"><div class="bar ok"><span style="width:100%"></span></div><span class="path">00:58 소요</span></div>
+            <span class="metric"><svg class="i sm"><use href="#i-camera"/></svg><b>11</b>장</span>
+            <span class="end">
+              <button class="btn sm">실행 상세<svg class="i sm"><use href="#i-right"/></svg></button>
+              <button class="btn sm"><svg class="i sm"><use href="#i-retry"/></svg>동일 조건</button>
+              <button class="btn icon sm" aria-label="EXE-20260906-0005 관리"><svg class="i sm"><use href="#i-more"/></svg></button>
+            </span>
+          </div>
+          <div class="row">
+            <span class="mark idle"><svg class="i sm"><use href="#i-square"/></svg></span>
+            <div class="row-main">
+              <strong><span class="t">EXE-20260906-0004</span> <span class="chip idle"><svg class="i"><use href="#i-square"/></svg>사용자 중단</span></strong>
+              <span>RUN-c48a0f73… · 성공 4 · 건너뜀 9</span>
+            </div>
+            <div class="cell-bar"><div class="bar"><span style="width:31%;background:var(--idle)"></span></div><span class="path">00:22 소요</span></div>
+            <span class="metric"><svg class="i sm"><use href="#i-camera"/></svg><b>4</b>장</span>
+            <span class="end">
+              <button class="btn sm">실행 상세<svg class="i sm"><use href="#i-right"/></svg></button>
+              <button class="btn sm"><svg class="i sm"><use href="#i-retry"/></svg>동일 조건</button>
+              <button class="btn icon sm" aria-label="EXE-20260906-0004 관리"><svg class="i sm"><use href="#i-more"/></svg></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S10 ══ -->
+<section class="frame" id="s10">
+  <div class="mock-cap"><div class="l"><b>S10</b><span class="chip warn"><svg class="i"><use href="#i-alert"/></svg>실행기 미구현 · 계약 기반</span><h2>실행 상세</h2><code>#/p/commerce-platform/executions/EXE-20260907-0006</code></div>
+    <p>왼쪽 실행 이력은 프로젝트 범위로 확장됩니다. 단계마다 판정 사유·assertion·실행 경로·관측 횟수를 드러내고, 「확인 필요」를 사유 없이 표시하지 않습니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><a href="#s5">commerce-platform</a><svg class="i sm"><use href="#i-right"/></svg><a href="#s9">테스트 실행</a><svg class="i sm"><use href="#i-right"/></svg><b>EXE-20260907-0006</b></nav>
+    </div>
+    <div class="body" style="padding:0 20px;min-height:52px;display:flex;flex-direction:column;gap:13px;min-height:0">
+      <div class="card" style="padding:16px 20px">
+        <div class="between">
+          <div>
+            <div style="display:flex;align-items:center;gap:9px">
+              <h1 class="h1" style="font-size:19px">테스트 수행</h1>
+              <span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>실패로 종료</span>
+            </div>
+            <p class="path" style="margin-top:5px">EXE-20260907-0006 · https://staging.commerce.example/checkout</p>
+          </div>
+          <div class="end" style="gap:20px">
+            <div class="stat">
+              <p class="num sm">100<u>%</u></p>
+              <span class="path">18/18 steps</span>
+            </div>
+            <div class="prog-cell">
+              <p class="counts">
+                <span style="color:var(--ok)">성공 12</span><span style="color:var(--bad)">실패 1</span><span class="mut">미수행 5</span>
+              </p>
+              <div class="bar bad"><span style="width:100%"></span></div>
+            </div>
+            <button class="btn"><svg class="i"><use href="#i-retry"/></svg>동일 조건 재시도</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:214px minmax(0,1fr) 268px;gap:13px;flex:1;min-height:0">
+        <aside class="panel">
+          <div class="panel-h"><h2 class="h3">실행 이력</h2><span class="end">5</span></div>
+          <div class="panel-s">
+            <button class="row" style="min-height:52px;padding:0 12px"><span class="mark run" style="width:24px;height:24px"><svg class="i sm"><use href="#i-loader"/></svg></span><span class="row-main"><strong style="font-size:11.5px">EXE-…0007</strong><span>현재 실행</span></span></button>
+            <button class="row on" style="min-height:52px;padding:0 12px"><span class="mark bad" style="width:24px;height:24px"><svg class="i sm"><use href="#i-alert"/></svg></span><span class="row-main"><strong style="font-size:11.5px">EXE-…0006</strong><span>실패로 종료</span></span></button>
+            <button class="row" style="min-height:52px;padding:0 12px"><span class="mark ok" style="width:24px;height:24px"><svg class="i sm"><use href="#i-check"/></svg></span><span class="row-main"><strong style="font-size:11.5px">EXE-…0005</strong><span>실행 완료</span></span></button>
+            <button class="row" style="min-height:52px;padding:0 12px"><span class="mark idle" style="width:24px;height:24px"><svg class="i sm"><use href="#i-square"/></svg></span><span class="row-main"><strong style="font-size:11.5px">EXE-…0004</strong><span>사용자 중단</span></span></button>
+          </div>
+          <div class="panel-f"><svg class="i sm"><use href="#i-clock"/></svg><span style="font-size:11.5px;color:var(--ink-2)">위에서 아래로 순차 수행</span></div>
+        </aside>
+
+        <section class="panel">
+          <div class="panel-h"><h2 class="h3">수행 대기열</h2><span class="end">3 cases</span></div>
+          <div class="panel-s">
+            <article class="qcase">
+              <button class="qhd"><span class="qno">01</span><span class="qti"><code>SCN-CART-7A31F0C2-001</code><strong>장바구니에서 주문서 생성까지 · normal</strong></span><span class="chip ok"><svg class="i"><use href="#i-check"/></svg>성공</span></button>
+            </article>
+            <article class="qcase on">
+              <button class="qhd" aria-expanded="true"><span class="qno">02</span><span class="qti"><code>SCN-CHECKOUT-3F2A91C4-001</code><strong>신용카드로 결제 완료까지 · normal</strong></span><span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>실패</span></button>
+              <ol class="qsteps">
+                <li>
+                  <span class="sic mark ok"><svg class="i sm"><use href="#i-check"/></svg></span>
+                  <div><small>STEP 01</small><strong>결제 수단으로 신용카드를 선택한다</strong><span class="exp">카드 입력 영역이 나타난다.</span></div>
+                  <span class="chip ok"><svg class="i"><use href="#i-check"/></svg>성공</span>
+                  <button class="btn icon sm" aria-label="1단계 증적 열기"><svg class="i sm"><use href="#i-camera"/></svg></button>
+                </li>
+                <li>
+                  <span class="sic mark bad"><svg class="i sm"><use href="#i-alert"/></svg></span>
+                  <div>
+                    <small>STEP 03</small><strong>결제하기를 누른다</strong><span class="exp">결제 완료 화면으로 이동한다.</span>
+                    <div class="diag">
+                      <p><svg class="i sm"><use href="#i-alert"/></svg>조작 결과 확인 불가 · 기대 결과가 관찰되지 않음</p>
+                      <div class="asrt"><code>PRED-payment-result</code><span class="chip bad">실패</span><span>완료 화면 제목을 찾지 못했습니다.</span></div>
+                      <dl>
+                        <div><dt>실행 경로</dt><dd>web-vision · 비전</dd></div>
+                        <div><dt>제안 재시도</dt><dd>2회</dd></div>
+                        <div><dt>관측</dt><dd>5회</dd></div>
+                      </dl>
+                    </div>
+                  </div>
+                  <span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>실패</span>
+                  <button class="btn icon sm" aria-label="3단계 증적 열기"><svg class="i sm"><use href="#i-camera"/></svg></button>
+                </li>
+                <li>
+                  <span class="sic mark idle"><svg class="i sm"><use href="#i-minus"/></svg></span>
+                  <div><small>STEP 04</small><strong>주문 번호를 확인한다</strong><span class="exp">주문 번호가 표시된다.</span></div>
+                  <span class="chip idle"><svg class="i"><use href="#i-square"/></svg>건너뜀</span>
+                  <span></span>
+                </li>
+              </ol>
+            </article>
+            <article class="qcase">
+              <button class="qhd"><span class="qno">03</span><span class="qti"><code>SCN-ORDERS-ID-9B4E2D18-001</code><strong>배송 완료 주문 반품 접수까지 · normal</strong></span><span class="chip warn"><svg class="i"><use href="#i-help"/></svg>확인 필요</span></button>
+            </article>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <div class="panel-h"><h2 class="h3">최근 화면</h2><span class="end"><svg class="i sm"><use href="#i-camera"/></svg></span></div>
+          <div class="panel-s" style="padding:16px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+              <code class="path">EVD-3F2A91C4-003</code><span class="chip bad" style="margin-left:auto"><svg class="i"><use href="#i-alert"/></svg>실패</span>
+            </div>
+            <div class="shot fail">
+              <div class="bar2"><i></i><i></i><i></i><span><svg class="i sm" style="width:9px;height:9px"><use href="#i-lock"/></svg>staging.commerce.example/checkout</span></div>
+              <div class="pg">
+                <h5>주문 결제</h5><p>테스트 주문의 결제 수단을 확인해 주세요.</p>
+                <div class="cardx">
+                  <div class="rowx"><span>신용카드</span><span>42,000원</span></div>
+                  <div class="msk"><svg class="i sm" style="width:10px;height:10px"><use href="#i-eye-off"/></svg>카드 번호 마스킹됨</div>
+                  <div class="errx"><svg class="i sm" style="width:11px;height:11px"><use href="#i-alert"/></svg>결제를 완료하지 못했습니다.</div>
+                  <div class="btnx">42,000원 결제하기</div>
+                </div>
+              </div>
+            </div>
+            <dl class="kv" style="margin:12px 0">
+              <div class="col"><dt>단계</dt><dd class="wrap">03. 결제하기를 누른다</dd></div>
+              <div class="col"><dt>실제 결과</dt><dd class="wrap">동일 화면에 머물렀고 결제 API가 503을 반환했습니다.</dd></div>
+            </dl>
+            <div class="stack" style="gap:8px">
+              <button class="btn pri sm"><svg class="i sm"><use href="#i-eye"/></svg>증적 상세 보기</button>
+              <button class="btn link" style="justify-content:center">시나리오에서 보기<svg class="i sm"><use href="#i-right"/></svg></button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S10c ══ -->
+<section class="frame" id="s10c">
+  <div class="mock-cap"><div class="l"><b>S10c</b><h2>실행 중단 확인</h2><code>modal</code></div>
+    <p>중단은 진행 중이고 현재 실행일 때만 노출됩니다. 저장된 화면 수와 남은 케이스 수를 먼저 보여줍니다.</p>
+  </div>
+  <div class="app" style="min-height:420px">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="body pad-lg" style="filter:blur(1.5px);opacity:.5">
+      <div class="card" style="height:74px;margin-bottom:13px"></div>
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr) 250px;gap:13px"><div class="card" style="height:180px"></div><div class="card" style="height:180px"></div><div class="card" style="height:180px"></div></div>
+    </div>
+    <div class="scrim">
+      <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="d2">
+        <span class="dic" style="background:var(--accent-soft)"><svg class="i lg" style="stroke:var(--accent)"><use href="#i-square"/></svg></span>
+        <span class="eyebrow">CANCEL EXECUTION</span>
+        <h2 id="d2">현재 실행을 중단할까요?</h2>
+        <p>지금까지 저장한 증적은 유지되고, 수행하지 않은 케이스는 건너뜀으로 기록됩니다.</p>
+        <dl>
+          <div><dt>저장된 화면</dt><dd>7장</dd></div>
+          <div><dt>남은 케이스</dt><dd>2개</dd></div>
+        </dl>
+        <div class="acts">
+          <button class="btn">계속 수행</button>
+          <button class="btn pri"><svg class="i"><use href="#i-square"/></svg>실행 중단</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<!-- ══ S11 ══ -->
+<section class="frame" id="s11">
+  <div class="mock-cap"><div class="l"><b>S11</b><span class="chip warn"><svg class="i"><use href="#i-alert"/></svg>실행기 미구현 · 계약 기반</span><h2>증적 탭</h2><code>#/p/commerce-platform/evidence</code></div>
+    <p>디스크 목록을 원천으로 하므로 재시작 후에도 탭이 살아 있습니다. 「오래된 증적 정리」는 삭제 예정 목록과 회수 용량을 먼저 보여줍니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><b>commerce-platform</b></nav>
+      <div class="topbar-end"><span class="switcher"><svg class="i sm"><use href="#i-folder"/></svg><b>commerce-platform</b><svg class="i sm"><use href="#i-down"/></svg></span></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#i-board"/></svg>개요</button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-scenario"/></svg>생성 이력<span class="n">3</span></button>
+      <button role="tab" aria-selected="false"><svg class="i sm"><use href="#sf-queue"/></svg>테스트 실행<span class="n">5</span></button>
+      <button role="tab" aria-selected="true"><svg class="i sm"><use href="#sf-evidence"/></svg>증적<span class="n">41</span></button>
+    </div>
+    <div class="body pad-lg">
+      <div class="between" style="margin-bottom:16px">
+        <div><span class="eyebrow">LOCAL EVIDENCE</span><h1 class="h1">테스트 증적</h1><p class="sub" style="margin-top:6px">단계별 화면과 판정 근거를 실행 ID 기준으로 보관합니다.</p></div>
+        <div class="stats">
+          <div class="stat"><p class="num sm">5</p><span class="path">실행</span></div>
+          <div class="stat"><p class="num sm">41</p><span class="path">화면</span></div>
+          <div class="stat"><p class="num sm">128<u>MB</u></p><span class="path">용량</span></div>
+        </div>
+      </div>
+      <div class="card flat" style="min-height:44px;padding:0 16px;display:flex;align-items:center;gap:11px;margin-bottom:14px;background:var(--surface-2)">
+        <svg class="i sm" style="stroke:var(--accent)"><use href="#i-db"/></svg>
+        <code class="path">/workspace/commerce-platform/.scenarioforge/runs/{runId}/tests/{executionId}/evidence/</code>
+        <span class="end" style="margin-left:auto;display:flex;gap:8px">
+          <button class="btn sm"><svg class="i sm"><use href="#i-copy"/></svg>경로 복사</button>
+          <button class="btn sm"><svg class="i sm"><use href="#i-ext"/></svg>경로 열기</button>
+          <button class="btn sm"><svg class="i sm"><use href="#i-trash"/></svg>오래된 증적 정리</button>
+        </span>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <div class="rows tbl" style="--cols:28px minmax(0,1fr) 96px 96px 216px">
+          <div class="row">
+            <span class="mark bad"><svg class="i sm"><use href="#i-alert"/></svg></span>
+            <div class="row-main"><strong><span class="t">EXE-20260907-0006</span></strong><span>실패로 종료 · staging.commerce.example/checkout · 01:11</span></div>
+            <span class="metric"><svg class="i sm"><use href="#i-images"/></svg><b>18</b>장</span>
+            <span class="metric"><svg class="i sm"><use href="#i-camera"/></svg>52.4 MB</span>
+            <span class="end">
+              <button class="btn pri sm">실패 증적<svg class="i sm"><use href="#i-right"/></svg></button>
+              <button class="btn icon sm q-dan" aria-label="이 실행 증적 삭제"><svg class="i sm"><use href="#i-trash"/></svg></button>
+            </span>
+          </div>
+          <div class="row">
+            <span class="mark ok"><svg class="i sm"><use href="#i-check"/></svg></span>
+            <div class="row-main"><strong><span class="t">EXE-20260906-0005</span></strong><span>실행 완료 · 성공 11 · 00:58</span></div>
+            <span class="metric"><svg class="i sm"><use href="#i-images"/></svg><b>11</b>장</span>
+            <span class="metric"><svg class="i sm"><use href="#i-camera"/></svg>31.8 MB</span>
+            <span class="end">
+              <button class="btn sm">증적 보기<svg class="i sm"><use href="#i-right"/></svg></button>
+              <button class="btn icon sm q-dan" aria-label="이 실행 증적 삭제"><svg class="i sm"><use href="#i-trash"/></svg></button>
+            </span>
+          </div>
+          <div class="row">
+            <span class="mark run"><svg class="i sm"><use href="#i-loader"/></svg></span>
+            <div class="row-main"><strong><span class="t">EXE-20260907-0007</span></strong><span>순차 실행 중 · 증적이 계속 추가됩니다</span></div>
+            <span class="metric"><svg class="i sm"><use href="#i-images"/></svg><b>7</b>장</span>
+            <span class="metric"><svg class="i sm"><use href="#i-camera"/></svg>19.1 MB</span>
+            <span class="end"><button class="btn sm">증적 보기<svg class="i sm"><use href="#i-right"/></svg></button><button class="btn icon sm" disabled aria-label="진행 중에는 삭제할 수 없습니다"><svg class="i sm"><use href="#i-trash"/></svg></button></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S12 ══ -->
+<section class="frame" id="s12">
+  <div class="mock-cap"><div class="l"><b>S12</b><span class="chip warn"><svg class="i"><use href="#i-alert"/></svg>실행기 미구현 · 계약 기반</span><h2>증적 상세</h2><code>#/p/commerce-platform/evidence/EXE-20260907-0006/EVD-3F2A91C4-003</code></div>
+    <p>필름스트립으로 실패 직전·실패 시점을 오가고, 오른쪽에 기대 결과와 실제 결과, 오류 코드를 나란히 둡니다.</p>
+  </div>
+  <div class="app tall">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><a href="#s5">commerce-platform</a><svg class="i sm"><use href="#i-right"/></svg><a href="#s11">증적</a><svg class="i sm"><use href="#i-right"/></svg><b>EVD-3F2A91C4-003</b></nav>
+    </div>
+    <div class="body" style="padding:0 20px;min-height:52px;display:flex;flex-direction:column;gap:13px;min-height:0">
+      <div class="between">
+        <div>
+          <button class="btn link"><svg class="i sm"><use href="#i-arrow-l"/></svg>실행 상세로 돌아가기</button>
+          <div style="display:flex;align-items:center;gap:9px;margin-top:5px">
+            <h1 class="h1" style="font-size:19px">실패 증적 상세</h1>
+            <span class="chip bad"><svg class="i"><use href="#i-alert"/></svg>실패</span>
+          </div>
+          <p class="path" style="margin-top:4px">EVD-3F2A91C4-003 · EXE-20260907-0006</p>
+        </div>
+        <div class="end">
+          <button class="btn pri"><svg class="i"><use href="#i-retry"/></svg>동일 케이스 재시도</button>
+          <button class="btn link">시나리오에서 보기<svg class="i"><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:236px minmax(0,1fr) 274px;gap:13px;flex:1;min-height:0">
+        <aside class="panel">
+          <div class="panel-h"><h2 class="h3">단계 타임라인</h2></div>
+          <div class="panel-s">
+            <div style="display:flex;gap:8px;padding:13px 16px 4px"><code class="path">SCN-CHECKOUT-3F2A91C4-001</code><strong style="font-size:11.5px;margin-left:auto">STEP 03</strong></div>
+            <ol class="tl">
+              <li><span class="dt2 mark ok"><svg class="i sm"><use href="#i-check"/></svg></span><div><small>15:41:15</small><strong>이전 단계 완료</strong><p>카드 형식 검증과 결제 수단 선택을 확인했습니다.</p></div></li>
+              <li><span class="dt2 mark idle"><svg class="i sm"><use href="#i-camera"/></svg></span><div><small>15:41:18</small><strong>실패 직전 화면 저장</strong><p>결제 요청 동작 직전의 대상 화면입니다.</p></div></li>
+              <li><span class="dt2 mark bad"><svg class="i sm"><use href="#i-alert"/></svg></span><div><small>15:41:18</small><strong>판정: 실패</strong><p>기대 결과가 관찰되지 않아 오류 정보와 함께 저장했습니다.</p></div></li>
+            </ol>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div class="panel-h"><h2 class="h3">대상 화면 캡처</h2><span class="end path">1440 × 900</span></div>
+          <div class="panel-s" style="padding:16px;display:grid;place-items:center;background:var(--surface-3)">
+            <div class="shot fail" style="width:100%;max-width:440px">
+              <div class="bar2"><i></i><i></i><i></i><span><svg class="i sm" style="width:9px;height:9px"><use href="#i-lock"/></svg>staging.commerce.example/checkout</span></div>
+              <div class="pg" style="padding:20px">
+                <h5 style="font-size:13px">주문 결제</h5><p style="font-size:11px">테스트 주문의 결제 수단을 확인해 주세요.</p>
+                <div class="cardx" style="padding:14px">
+                  <div class="rowx" style="font-size:12px"><span>신용카드</span><span>42,000원</span></div>
+                  <div class="msk"><svg class="i sm" style="width:10px;height:10px"><use href="#i-eye-off"/></svg>카드 번호 마스킹됨 · SCR-checkout</div>
+                  <div class="errx"><svg class="i sm" style="width:11px;height:11px"><use href="#i-alert"/></svg><span><b>결제를 완료하지 못했습니다.</b> 잠시 후 다시 시도해 주세요.</span></div>
+                  <div class="btnx">42,000원 결제하기</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="film">
+            <button><span class="th"></span><strong>이전 단계 완료</strong><small>15:41:15</small></button>
+            <button><span class="th"></span><strong>실패 직전</strong><small>15:41:18</small></button>
+            <button class="on fail"><span class="th"></span><strong>실패 시점</strong><small>15:41:18</small></button>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <div class="panel-h"><h2 class="h3">판정 근거</h2></div>
+          <div class="panel-s" style="padding:16px">
+            <dl class="kv" style="margin-bottom:12px">
+              <div class="col"><dt>수행 동작</dt><dd class="wrap">결제하기를 누른다</dd></div>
+              <div class="col"><dt>기대 결과</dt><dd class="wrap">결제 완료 화면으로 이동한다</dd></div>
+              <div class="col" style="background:var(--bad-soft)"><dt style="color:var(--bad)">실제 결과</dt><dd class="wrap">동일 화면에 머물렀고 결제 API가 503을 반환했습니다.</dd></div>
+            </dl>
+            <div class="diag" style="margin-bottom:12px">
+              <p><svg class="i sm"><use href="#i-alert"/></svg>오류 정보</p>
+              <div style="margin-top:7px;display:flex;flex-direction:column;gap:4px">
+                <code class="path">PAYMENT_GATEWAY_UNAVAILABLE</code>
+                <strong style="font-size:11.5px">환경 오류 · 대상 시스템</strong>
+                <p style="color:var(--ink-2);font-weight:400">결제 게이트웨이가 503을 반환했습니다. 테스트 대상 환경 문제입니다.</p>
+              </div>
+            </div>
+            <dl class="kv">
+              <div class="col"><dt><svg class="i sm" style="width:12px;height:12px"><use href="#i-monitor"/></svg> 실행 경로·해상도</dt><dd>web-vision · 1440 × 900</dd></div>
+              <div class="col"><dt><svg class="i sm" style="width:12px;height:12px"><use href="#i-clock"/></svg> 캡처</dt><dd>15:41:18</dd></div>
+              <div class="col"><dt><svg class="i sm" style="width:12px;height:12px"><use href="#i-route"/></svg> 연결 ID</dt><dd class="path">SCN-CHECKOUT-3F2A91C4-001</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S13 ══ -->
+<section class="frame" id="s13">
+  <div class="mock-cap"><div class="l"><b>S13</b><h2>전역 LLM 설정</h2><code>#/settings/model</code></div>
+    <p>wizard 2단계와 같은 폼을 재편집 화면으로 재사용합니다. 진행 중 분석이 있으면 적용 범위를 알려줍니다.</p>
+  </div>
+  <div class="app" style="min-height:560px">
+    <div class="titlebar"><i></i><i></i><i></i><span>ScenarioForge</span></div>
+    <div class="topbar">
+      <a class="brand" href="#s1"><svg><use href="#i-forge"/></svg>ScenarioForge</a>
+      <nav class="crumb"><a href="#s1">프로젝트</a><svg class="i sm"><use href="#i-right"/></svg><b>LLM 설정</b></nav>
+      <div class="topbar-end"><button class="btn ghost sm"><svg class="i sm"><use href="#i-x"/></svg>닫기</button></div>
+    </div>
+    <div class="body pad-lg">
+      <div style="max-width:620px">
+        <span class="eyebrow">MODEL CONNECTION</span>
+        <h1 class="h1">LLM 연결 설정</h1>
+        <p class="sub" style="margin:6px 0 18px">모든 프로젝트가 이 연결을 공유합니다.</p>
+        <div class="notice warn" style="margin:0 0 20px">
+          <svg class="i sm"><use href="#i-alert"/></svg>
+          <span><b>axse-portal에서 분석이 진행 중입니다.</b> 지금 저장한 설정은 진행 중인 분석에 적용되지 않고 다음 실행부터 반영됩니다.</span>
+        </div>
+        <dl class="kv" style="margin-bottom:18px">
+          <div><dt>author 모델</dt><dd>gpt-5 · OpenAI 호환</dd><span class="end"><span class="chip ok"><svg class="i"><use href="#i-lock"/></svg>키 저장됨</span></span></div>
+          <div><dt>엔드포인트</dt><dd class="path">https://api.openai.com/v1</dd></div>
+          <div><dt>reviewer</dt><dd class="mut">사용하지 않음</dd></div>
+          <div><dt>저장소</dt><dd>운영체제 보호 저장소</dd><span class="end"><button class="btn ghost sm">저장된 키 삭제</button></span></div>
+        </dl>
+        <div class="cta-row">
+          <button class="btn pri">설정 저장</button>
+          <button class="btn"><svg class="i"><use href="#i-sliders"/></svg>연결 정보 편집</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="mock-note"><svg class="i sm"><use href="#i-check"/></svg><span>확인 후 승인해 주시면 이 목업을 renderer 구현으로 옮기고, 필요한 IPC·저장소 변경(레지스트리 v2, run/실행/증적 목록·삭제 채널)을 함께 진행합니다.</span></p>
+</section>
+</div>
+</div>
+<script>
+/* 반원 tick 게이지: data-value(0-100)만큼 눈금을 강조한다. */
+for (const gauge of document.querySelectorAll(".gauge")) {
+  const svg = gauge.querySelector("svg");
+  const value = Number(gauge.dataset.value ?? 0);
+  const total = 40, cx = 100, cy = 104, r1 = 62, r2 = 86;
+  const active = Math.round((value / 100) * total);
+  for (let i = 0; i < total; i += 1) {
+    const angle = Math.PI - (i + 0.5) * (Math.PI / total);
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", (cx + Math.cos(angle) * r1).toFixed(1));
+    line.setAttribute("y1", (cy - Math.sin(angle) * r1).toFixed(1));
+    line.setAttribute("x2", (cx + Math.cos(angle) * r2).toFixed(1));
+    line.setAttribute("y2", (cy - Math.sin(angle) * r2).toFixed(1));
+    line.setAttribute("class", i < active ? "tick on" : "tick");
+    svg.appendChild(line);
+  }
+}
+</script>
+</body>
+</html>

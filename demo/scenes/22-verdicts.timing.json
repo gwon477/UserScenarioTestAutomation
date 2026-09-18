@@ -1,0 +1,30 @@
+{
+  "sceneId": "22-verdicts",
+  "cues": [
+    {
+      "text": "단계마다 동의, 오탐, 미탐, 재실행 필요로 검토합니다",
+      "startMs": 1,
+      "endMs": 3795,
+      "box": {
+        "x0": 522,
+        "y0": 926,
+        "x1": 1398,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "zoomIn",
+      "atMs": 22,
+      "scale": 1.4,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 1877,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 5589
+}

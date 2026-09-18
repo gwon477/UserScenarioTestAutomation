@@ -1,0 +1,191 @@
+{
+  "probe": "vision-step-round-trip",
+  "designRef": "docs/architecture/07-vision-first-execution-design.md#11",
+  "project": "ra-dar",
+  "mode": "negative-assertion",
+  "modelId": "gpt-5.6-luna",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "scenarioId": "SCN-RADAR-0001",
+  "compiled": {
+    "envelopes": 2,
+    "nonAutomatable": []
+  },
+  "caseVerdict": "FAILED",
+  "steps": [
+    {
+      "envelope": {
+        "stepId": "SCN-RADAR-0001#1",
+        "intent": {
+          "kind": "press"
+        },
+        "target": {
+          "descriptorId": "VTD-SCN-RADAR-0001-1",
+          "elementRef": "EL-SUBMIT",
+          "visibleLabel": "사번으로 인증하고 시작",
+          "controlKind": "button",
+          "surfaceHint": "/login",
+          "verificationCandidates": [
+            {
+              "by": "css",
+              "value": "button[type=\"submit\"].btn.pri"
+            }
+          ],
+          "labelUniqueOnSurface": true,
+          "ambiguityRisk": "low"
+        },
+        "riskClass": "reversible-write",
+        "assertionRefs": [
+          "SCR-DASHBOARD"
+        ]
+      },
+      "outcome": {
+        "status": "completed",
+        "verdict": "PASSED",
+        "attempts": [
+          {
+            "attempt": 1,
+            "decision": {
+              "outcome": "accepted",
+              "capturePoint": {
+                "x": 1037,
+                "y": 573
+              },
+              "modelPoint": {
+                "x": 885,
+                "y": 489
+              }
+            }
+          }
+        ],
+        "capturePoint": {
+          "x": 1037,
+          "y": 573
+        },
+        "assertions": [
+          {
+            "ref": "SCR-DASHBOARD",
+            "verdict": "PASSED",
+            "detail": "새로 생성된 대조 조항"
+          }
+        ]
+      }
+    },
+    {
+      "envelope": {
+        "stepId": "SCN-RADAR-0001#2",
+        "intent": {
+          "kind": "navigate",
+          "destinationRef": "SCR-NEVER"
+        },
+        "target": {
+          "descriptorId": "VTD-SCN-RADAR-0001-2",
+          "elementRef": "EL-NAV-LEDGER",
+          "visibleLabel": "누적 관리",
+          "controlKind": "link",
+          "surfaceHint": "/dashboard",
+          "verificationCandidates": [
+            {
+              "by": "css",
+              "value": "a.app-nav-item[href^=\"/ledger\"]"
+            }
+          ],
+          "labelUniqueOnSurface": true,
+          "ambiguityRisk": "low"
+        },
+        "riskClass": "read",
+        "assertionRefs": [
+          "SCR-NEVER"
+        ]
+      },
+      "outcome": {
+        "status": "completed",
+        "verdict": "FAILED",
+        "attempts": [
+          {
+            "attempt": 1,
+            "decision": {
+              "outcome": "accepted",
+              "capturePoint": {
+                "x": 255,
+                "y": 26
+              },
+              "modelPoint": {
+                "x": 218,
+                "y": 22
+              }
+            }
+          }
+        ],
+        "capturePoint": {
+          "x": 255,
+          "y": 26
+        },
+        "assertions": [
+          {
+            "ref": "SCR-NEVER",
+            "verdict": "FAILED",
+            "detail": "screen anchor not observed: 품목 허가 취소 완료"
+          }
+        ]
+      }
+    }
+  ],
+  "modelLog": [
+    {
+      "role": "operator",
+      "stepId": "SCN-RADAR-0001#1",
+      "found": true,
+      "observedLabel": "사번으로 인증하고 시작",
+      "confidence": 0.99
+    },
+    {
+      "role": "observer",
+      "questions": [
+        "새로 생성된 대조 조항"
+      ],
+      "visibleTexts": []
+    },
+    {
+      "role": "observer",
+      "questions": [
+        "새로 생성된 대조 조항"
+      ],
+      "visibleTexts": [
+        "새로 생성된 대조 조항"
+      ]
+    },
+    {
+      "role": "observer",
+      "questions": [
+        "새로 생성된 대조 조항"
+      ],
+      "visibleTexts": [
+        "새로 생성된 대조 조항"
+      ]
+    },
+    {
+      "role": "operator",
+      "stepId": "SCN-RADAR-0001#2",
+      "found": true,
+      "observedLabel": "누적 관리",
+      "confidence": 0.99
+    },
+    {
+      "role": "observer",
+      "questions": [
+        "품목 허가 취소 완료"
+      ],
+      "visibleTexts": []
+    },
+    {
+      "role": "observer",
+      "questions": [
+        "품목 허가 취소 완료"
+      ],
+      "visibleTexts": []
+    }
+  ]
+}

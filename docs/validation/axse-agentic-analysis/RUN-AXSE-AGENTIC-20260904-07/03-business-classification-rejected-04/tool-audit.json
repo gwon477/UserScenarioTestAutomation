@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review-validation"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 3,
+      "resolved_ref_count": 1,
+      "requested_budget": 16000,
+      "effective_budget": 70328,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 10000,
+      "effective_budget": 10000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 1,
+      "requested_budget": 10000,
+      "effective_budget": 10105,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 1,
+      "requested_budget": 10000,
+      "effective_budget": 12940,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 3,
+      "resolved_ref_count": 1,
+      "requested_budget": 12000,
+      "effective_budget": 12000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 9,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    }
+  ]
+}

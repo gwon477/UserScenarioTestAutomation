@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:a41ea53a428a5e0d2f1d711fc76b88a01cab8431180308e533d44c6ea3131578",
+  "element_update_upserts": [],
+  "predicate_upserts": [
+    {
+      "key": "scenario.matrix.loaded",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U50"
+      ]
+    }
+  ],
+  "edge_changes": [
+    {
+      "operation": "replace",
+      "edge_index": 74,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S6",
+        "on_element_ref": "U50",
+        "to_screen_ref": "S6",
+        "guard": {
+          "all": [
+            {
+              "predicate_key": "scenario.matrix.loading",
+              "value": "false"
+            }
+          ]
+        },
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "scenario.query.changed",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded",
+              "value": "true"
+            },
+            {
+              "predicate_key": "scenario.matrix.loaded_page.updated",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

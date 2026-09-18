@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-17T18:06:05+09:00",
+  "skillVersion": "0.1.0",
+  "name": "scenarioforge-demo",
+  "app": {
+    "url": "http://127.0.0.1:5173",
+    "resetCommand": ""
+  },
+  "video": {
+    "size": [
+      1920,
+      1080
+    ],
+    "fps": 25,
+    "targetSec": 240
+  },
+  "narration": {
+    "provider": "none",
+    "voice": null
+  },
+  "bgm": {
+    "source": "none",
+    "path": null
+  },
+  "intro": {
+    "source": "html",
+    "template": "default"
+  },
+  "outro": {
+    "source": "html",
+    "template": "default"
+  },
+  "audience": "실무자(분석 담당자)",
+  "purpose": "실제 사용자가 쓸 수 있는 모든 기능 시연"
+}

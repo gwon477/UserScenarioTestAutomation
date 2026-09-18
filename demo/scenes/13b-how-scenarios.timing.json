@@ -1,0 +1,41 @@
+{
+  "sceneId": "13b-how-scenarios",
+  "cues": [
+    {
+      "text": "이 시트는 네 단계 모델 작업의 결과입니다",
+      "startMs": 0,
+      "endMs": 3105,
+      "box": {
+        "x0": 607,
+        "y0": 926,
+        "x1": 1314,
+        "y1": 1004
+      }
+    },
+    {
+      "text": "SRC와 FACT가 소스 사실을 모으고 WIKI와 SCENARIO가 씁니다",
+      "startMs": 3408,
+      "endMs": 7513,
+      "box": {
+        "x0": 420,
+        "y0": 926,
+        "x1": 1500,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "zoomIn",
+      "atMs": 14,
+      "scale": 1.3,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 3412,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 8701
+}

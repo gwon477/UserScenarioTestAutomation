@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-f5f3bf83",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-parsers-axse-markdown-parser-2f78b7e0",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/parsers/axse_markdown_parser.py",
+      "start_line": 1,
+      "end_line": 1272,
+      "content_hash": "sha256:887f54c399d5c4ab4e15195a2fae5b4da9dd668a755ff22bcd45e9b230b4110e",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-f5f3bf83"
+    },
+    {
+      "source_id": "SRC-backend-app-services-task-service-1d73591d",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/task_service.py",
+      "start_line": 1,
+      "end_line": 259,
+      "content_hash": "sha256:b07294748dcf4eb8490d7fa2a20f31253ca26554eb68c3476101134852bbedaf",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-f5f3bf83"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-main-main-api-f877ad86",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/main/main.api.js",
+      "start_line": 1,
+      "end_line": 248,
+      "content_hash": "sha256:e7ec2b21c381b1447f984a388fee8ba9f556e9455e2d285d3bf89aa2496b8ebf",
+      "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-f5f3bf83"
+    }
+  ],
+  "created_at": "2026-09-07T00:24:55.401Z"
+}

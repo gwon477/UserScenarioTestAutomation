@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "fact_screen_count": 9,
+  "fact_element_count": 58,
+  "fact_edge_count": 85,
+  "fact_predicate_count": 69,
+  "workflow_count": 69,
+  "path_count": 85,
+  "transition_linkage": {
+    "total_obligations": 69,
+    "linked_obligations": 68,
+    "by_scope": {
+      "journey": {
+        "total": 42,
+        "linked": 42,
+        "unresolved": 0
+      },
+      "view": {
+        "total": 27,
+        "linked": 26,
+        "unresolved": 1
+      }
+    },
+    "source_supported": {
+      "total": 34,
+      "linked": 33
+    },
+    "runtime_unverified": {
+      "total": 35,
+      "linked": 35
+    }
+  },
+  "unresolved_transition_count": 1,
+  "correction_target_element_count": 1,
+  "transition_target_element_count": 22,
+  "correction_method": "pi-coding-agent",
+  "preserved_edge_count": 53,
+  "appended_edge_count": 32,
+  "out_of_scope_preservation": "verified",
+  "run_manifest_updated": false,
+  "prior_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb"
+}

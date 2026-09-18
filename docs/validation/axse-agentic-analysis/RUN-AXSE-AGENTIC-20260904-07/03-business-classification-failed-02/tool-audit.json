@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review-validation"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 4,
+      "resolved_ref_count": 5,
+      "requested_budget": 20000,
+      "effective_budget": 70328,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 9,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 1,
+      "requested_budget": 12000,
+      "effective_budget": 70328,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 10,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 8000,
+      "effective_budget": 8000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 11,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 1,
+      "requested_budget": 10000,
+      "effective_budget": 10000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 12,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "BUSINESS_CLASSIFICATION_AREA_EVIDENCE_MISSING",
+      "validation_issues": [
+        "BUSINESS_CLASSIFICATION_AREA_EVIDENCE_MISSING:task-lifecycle-and-stage-navigation",
+        "BUSINESS_CLASSIFICATION_AREA_EVIDENCE_MISSING:authentication-and-project-selection"
+      ],
+      "artifact_id": "03-business-classification"
+    }
+  ]
+}

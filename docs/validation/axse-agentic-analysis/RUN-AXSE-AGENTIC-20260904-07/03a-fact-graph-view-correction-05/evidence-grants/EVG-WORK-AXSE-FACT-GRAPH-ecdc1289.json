@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-ecdc1289",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-FACT-GRAPH",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/main/pages/main.page.jsx",
+      "start_line": 1,
+      "end_line": 1585,
+      "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+      "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-ecdc1289"
+    }
+  ],
+  "created_at": "2026-09-08T04:26:17.082Z"
+}

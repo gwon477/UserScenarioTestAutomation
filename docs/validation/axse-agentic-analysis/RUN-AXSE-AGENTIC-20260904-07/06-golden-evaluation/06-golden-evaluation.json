@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "external-evaluation-unregistered-probe",
+  "provenance": {
+    "golden_hash": "sha256:09cac5ddc58c812eea8bddef6f9154db137bd51a3e37ceb871fdae1c1351f253",
+    "candidate_hash": "sha256:31399cbb5ca8d1093a74acd93ca8d3719e2517d0cf4b69c0d36d5d1f190b25e0",
+    "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+    "fact_graph_artifact_hash": "sha256:9b40c2f9aa825e1774db0fca4ffbe2de60da8ce1e5e423ec17737651a6178bb5",
+    "business_workflow_mapping_artifact_hash": "sha256:45ac9fd84d3532f223663de2065e68b74907d3a4334a33f96dd32879b8ec0cfc",
+    "journey_artifact_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+    "user_journey_workflow_link_artifact_hash": "sha256:93a41655032ae5ddec2360c993769ef77a1c7713e19a9a24eb75f82a2a5c37ca",
+    "scenario_artifact_hash": "sha256:380fa07b3872263c3e9be51886fb8b84c0baa29da696f834b186b0c0df567dcd"
+  },
+  "artifacts": {
+    "evaluation_candidate": {
+      "path": "evaluation-candidate.json",
+      "content_hash": "sha256:31399cbb5ca8d1093a74acd93ca8d3719e2517d0cf4b69c0d36d5d1f190b25e0"
+    },
+    "taxonomy_journey_assessment": {
+      "path": "06-golden-taxonomy-journey-assessment.json",
+      "content_hash": "sha256:bedb5e5f6074f47b77945abaf31f46f65badaa5ff4164b8086a48d5ade0e440c"
+    },
+    "scenario_assessment": {
+      "path": "06-golden-scenario-assessment.json",
+      "content_hash": "sha256:a1fdf3adcf7c43125640170cb0ab3cf1e2d705a8056d6e4cc1f71d71108fe2f9"
+    },
+    "result": {
+      "path": "golden-evaluation-result.json",
+      "content_hash": "sha256:532600a0dbe7e987a737f96dcc7009dd8f8417c7a0d2733b206d31ae49c73b27"
+    }
+  }
+}

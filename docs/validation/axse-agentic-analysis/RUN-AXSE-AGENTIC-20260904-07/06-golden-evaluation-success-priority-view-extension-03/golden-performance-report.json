@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "report_type": "golden-evaluation-performance",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "evaluation_policy": "success-first-v1",
+  "product_stage_acceptance": "not-attempted",
+  "evaluated_generation": {
+    "immutable": true,
+    "candidate_hash": "sha256:454899fcd17e460049ad3837ba41a61808b770474db6a5b33c9776e7bfe1aceb",
+    "scenario_artifact_hash": "sha256:0acf53a2bd7ced069b547cca9402f9c104583e82524d1d57dacc1b741e82f076",
+    "candidate_counts": {
+      "classifications": 6,
+      "workflows": 69,
+      "journeys": 2,
+      "scenarios": 85
+    }
+  },
+  "metrics": {
+    "classification_recall": 1,
+    "workflow_recall": 0.9,
+    "required_journey_recall": 1,
+    "success_scenario_recall": 0.5,
+    "matched_success_scenarios": 16,
+    "total_success_scenarios": 32,
+    "resilience_scenario_recall_advisory": 0.3181818181818182,
+    "matched_resilience_scenarios": 7,
+    "total_resilience_scenarios": 22,
+    "unweighted_scenario_recall_reference": 0.4090909090909091
+  },
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "success_scenario_recall": 0.8,
+    "resilience_scenario_recall": "advisory",
+    "required_journey_recall": 1
+  },
+  "passed": false,
+  "remaining_success_golden_refs": [
+    "AXSE-SCN-0002",
+    "AXSE-SCN-0004",
+    "AXSE-SCN-0008",
+    "AXSE-SCN-0009",
+    "AXSE-SCN-0011",
+    "AXSE-SCN-0013",
+    "AXSE-SCN-0014",
+    "AXSE-SCN-0019",
+    "AXSE-SCN-0023",
+    "AXSE-SCN-0026",
+    "AXSE-SCN-0027",
+    "AXSE-SCN-0030",
+    "AXSE-SCN-0033",
+    "AXSE-SCN-0041",
+    "AXSE-SCN-0043",
+    "AXSE-SCN-0044"
+  ],
+  "work_performed": [
+    {
+      "sequence": 1,
+      "operation": "backend.input.validate",
+      "result": "ok"
+    },
+    {
+      "sequence": 2,
+      "operation": "backend.assessment.partial-reuse",
+      "result": "ok",
+      "artifact_id": "06-golden-taxonomy-journey-assessment",
+      "source_stage": "06-golden-evaluation-success-priority-view-extension-02"
+    },
+    {
+      "sequence": 3,
+      "operation": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-scenario-assessment-correction"
+    },
+    {
+      "sequence": 4,
+      "operation": "backend.assessment.correction-merge",
+      "result": "ok",
+      "artifact_id": "06-golden-scenario-assessment",
+      "source_stage": "06-golden-evaluation-success-priority-view-extension-02",
+      "corrected_row_count": 1,
+      "preserved_row_count": 43,
+      "out_of_scope_preservation": "verified"
+    }
+  ]
+}

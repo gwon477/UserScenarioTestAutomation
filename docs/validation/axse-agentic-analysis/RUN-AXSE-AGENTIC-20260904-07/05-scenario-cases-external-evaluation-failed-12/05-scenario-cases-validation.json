@@ -1,0 +1,88 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "artifact_revision": 2,
+  "issues": [],
+  "case_count": 8,
+  "case_kind_counts": {
+    "boundary": 2,
+    "exception": 2,
+    "normal": 2,
+    "recovery": 2
+  },
+  "step_count": 37,
+  "successful_terminal_count": 4,
+  "expected_failure_terminal_count": 4,
+  "covered_classification_perspectives": [
+    "authorization-scope",
+    "business-capability",
+    "business-responsibility",
+    "channel-surface",
+    "data-domain",
+    "input-source",
+    "integration-boundary",
+    "lifecycle-state",
+    "output-deliverable",
+    "risk-recovery",
+    "user-role",
+    "workflow-stage"
+  ],
+  "unresolved_count": 3,
+  "cited_evidence_count": 25,
+  "journey_artifact_hash": "sha256:44d01f41d836d66fd583df39e3e441f0c2f161620014f470a913533794ed62f5",
+  "agent_artifact_hash": "sha256:9503bf7948a6857fbd0076441fedad935540cdb92d30527a715e6bbca673fc75",
+  "artifact_hash": "sha256:ee73a80e90ae86a7235a1717716545d4af1d0c09dec640f4460c5583dbdeadcb",
+  "source_tool_usage": {
+    "artifact_reads": [
+      "03-business-classification",
+      "04-user-journeys",
+      "04-user-journeys-validation",
+      "orchestrator-next-stage-gaps",
+      "source-inventory",
+      "prior-scenario-cases",
+      "scenario-case-correction-plan"
+    ],
+    "source_refs_read": [
+      "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "SRC-backend-app-api-v1-workflows-d9740180",
+      "SRC-frontend-src-app-a0eba768",
+      "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "SRC-frontend-src-features-login-login-page-24848ab2",
+      "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+    ],
+    "gap_source_refs_read": [
+      "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "SRC-backend-app-api-v1-workflows-d9740180",
+      "SRC-frontend-src-app-a0eba768",
+      "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "SRC-frontend-src-features-login-login-page-24848ab2",
+      "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+    ],
+    "closure_calls": 1,
+    "closure_completions": 1,
+    "cumulative_granted_bytes": 119297,
+    "artifact_write_attempts": 2,
+    "artifact_writes": 1,
+    "fatal_error": null,
+    "max_closure_calls": 10,
+    "max_granted_bytes": 500000,
+    "max_artifact_write_attempts": 3
+  },
+  "correction_input": {
+    "prior_agent_artifact_hash": "sha256:3abfda0d7ed8419fc3f663c20d6505cb3f233b5838a6c3b67dc4964e7f7cc0cd",
+    "prior_artifact_hash": "sha256:950b2b2e0d274ebe7c2fe6477ec657ccb2c30dfccd33083f3e10b29847512693",
+    "gap_file": "orchestrator-scenario-breadth-gaps.json",
+    "target_count": 4,
+    "corrected_case_indexes": [
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+}

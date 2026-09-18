@@ -1,0 +1,23 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "cited_evidence_count": 17,
+  "inventory_coverage": {
+    "total_records": 73,
+    "covered_records": 73,
+    "missing_records": [],
+    "coverage_percent": 100
+  },
+  "artifact_hash": "sha256:cfe1ead5e3ac981ca34b79202531b5aec15f36fb156a9610771c65821499ff9d",
+  "source_tool_usage": {
+    "inventory_reads": 1,
+    "closure_calls": 4,
+    "cumulative_granted_bytes": 191753,
+    "artifact_write_attempts": 1,
+    "fatal_error": null,
+    "max_closure_calls": 12,
+    "max_granted_bytes": 600000
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-c87dc829",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-SURVEY",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-services-flow-scenario-service-1a04f66c",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/flow_scenario_service.py",
+      "start_line": 1,
+      "end_line": 157,
+      "content_hash": "sha256:e98363687711d05dea456c3d5cbbe5a8e37ee9b1d32a09fb5753da25e76bec56",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-c87dc829"
+    },
+    {
+      "source_id": "SRC-backend-app-services-flow-test-case-service-a5c45458",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/flow_test_case_service.py",
+      "start_line": 1,
+      "end_line": 162,
+      "content_hash": "sha256:97ab98d3de1a32b8907c83efb477ba93189d4998402c62d698ca0ddc4ce4f36e",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-SURVEY-c87dc829"
+    }
+  ],
+  "created_at": "2026-09-03T23:50:42.941Z"
+}

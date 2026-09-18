@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "FACT_CORRECTION_EDGE_FIELD_OUT_OF_SCOPE",
+      "artifact_id": "03a-fact-graph"
+    }
+  ]
+}

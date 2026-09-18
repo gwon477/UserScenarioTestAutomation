@@ -1,0 +1,305 @@
+{
+  "pass": false,
+  "issues": [
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-mainpage-button-root-99d235ea].interaction.action_kind",
+      "message": "EL-component-mainpage-button-root-99d235ea at frontend/src/features/main/pages/main.page.jsx:105 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-mainpage-button-ts-ts-7f059f08].interaction.action_kind",
+      "message": "EL-component-mainpage-button-ts-ts-7f059f08 at frontend/src/features/main/pages/main.page.jsx:111 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562].interaction.action_kind",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562 at frontend/src/features/main/pages/main.page.jsx:174 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562]",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562 at frontend/src/features/main/pages/main.page.jsx:174 changes source-backed view state without evidence-linked predicates; states=downloadMessage|loadedMatrixPage|matrixLoading."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c].interaction.action_kind",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c at frontend/src/features/main/pages/main.page.jsx:176 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c]",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c at frontend/src/features/main/pages/main.page.jsx:176 changes source-backed view state without evidence-linked predicates; states=downloadMessage|loadedMatrixPage|matrixLoading."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-root-456a2904].interaction.action_kind",
+      "message": "EL-component-businesspage-button-root-456a2904 at frontend/src/features/main/pages/main.page.jsx:460 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-456a2904]",
+      "message": "EL-component-businesspage-button-root-456a2904 at frontend/src/features/main/pages/main.page.jsx:460 changes source-backed view state without evidence-linked predicates; states=cubePage|panel."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-root-7b5cc90c].interaction.action_kind",
+      "message": "EL-component-businesspage-button-root-7b5cc90c at frontend/src/features/main/pages/main.page.jsx:461 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-7b5cc90c]",
+      "message": "EL-component-businesspage-button-root-7b5cc90c at frontend/src/features/main/pages/main.page.jsx:461 changes source-backed view state without evidence-linked predicates; states=categoryPage|panel."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-button-1b959aaf].interaction.action_kind",
+      "message": "EL-component-businesspage-button-button-1b959aaf at frontend/src/features/main/pages/main.page.jsx:582 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-button-1b959aaf]",
+      "message": "EL-component-businesspage-button-button-1b959aaf at frontend/src/features/main/pages/main.page.jsx:582 changes source-backed view state without evidence-linked predicates; states=issueFilter."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-v-2f1469b8].interaction.action_kind",
+      "message": "EL-component-businesspage-button-v-2f1469b8 at frontend/src/features/main/pages/main.page.jsx:638 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-root-74a73f90].interaction.action_kind",
+      "message": "EL-component-businesspage-button-root-74a73f90 at frontend/src/features/main/pages/main.page.jsx:731 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-root-ee5902ee].interaction.action_kind",
+      "message": "EL-component-businesspage-button-root-ee5902ee at frontend/src/features/main/pages/main.page.jsx:738 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-root-36a555c2].interaction.action_kind",
+      "message": "EL-component-businesspage-button-root-36a555c2 at frontend/src/features/main/pages/main.page.jsx:867 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-36a555c2]",
+      "message": "EL-component-businesspage-button-root-36a555c2 at frontend/src/features/main/pages/main.page.jsx:867 changes source-backed view state without evidence-linked predicates; states=presetGeneration|presetMessage|presetProgress."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-businesspage-button-root-547f94d7].interaction.action_kind",
+      "message": "EL-component-businesspage-button-root-547f94d7 at frontend/src/features/main/pages/main.page.jsx:874 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-547f94d7]",
+      "message": "EL-component-businesspage-button-root-547f94d7 at frontend/src/features/main/pages/main.page.jsx:874 changes source-backed view state without evidence-linked predicates; states=presetGeneration|presetMessage|presetProgress."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-scenariopage-button-button-b6ade5a6].interaction.action_kind",
+      "message": "EL-component-scenariopage-button-button-b6ade5a6 at frontend/src/features/main/pages/main.page.jsx:1209 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-button-b6ade5a6]",
+      "message": "EL-component-scenariopage-button-button-b6ade5a6 at frontend/src/features/main/pages/main.page.jsx:1209 changes source-backed view state without evidence-linked predicates; states=downloadMessage|filter|loadedMatrixPage|matrixLoading."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-scenariopage-input-root-e0e2ecb2].interaction.action_kind",
+      "message": "EL-component-scenariopage-input-root-e0e2ecb2 at frontend/src/features/main/pages/main.page.jsx:1212 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-input-root-e0e2ecb2]",
+      "message": "EL-component-scenariopage-input-root-e0e2ecb2 at frontend/src/features/main/pages/main.page.jsx:1212 changes source-backed view state without evidence-linked predicates; states=downloadMessage|loadedMatrixPage|matrixLoading|query."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-scenariopage-button-root-ff33f465].interaction.action_kind",
+      "message": "EL-component-scenariopage-button-root-ff33f465 at frontend/src/features/main/pages/main.page.jsx:1368 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-ff33f465]",
+      "message": "EL-component-scenariopage-button-root-ff33f465 at frontend/src/features/main/pages/main.page.jsx:1368 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-scenariopage-button-root-4e83beae].interaction.action_kind",
+      "message": "EL-component-scenariopage-button-root-4e83beae at frontend/src/features/main/pages/main.page.jsx:1390 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-4e83beae]",
+      "message": "EL-component-scenariopage-button-root-4e83beae at frontend/src/features/main/pages/main.page.jsx:1390 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-scenariopage-button-root-93f714c4].interaction.action_kind",
+      "message": "EL-component-scenariopage-button-root-93f714c4 at frontend/src/features/main/pages/main.page.jsx:1402 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-93f714c4]",
+      "message": "EL-component-scenariopage-button-root-93f714c4 at frontend/src/features/main/pages/main.page.jsx:1402 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-scenariopage-button-root-a53a01ca].interaction.action_kind",
+      "message": "EL-component-scenariopage-button-root-a53a01ca at frontend/src/features/main/pages/main.page.jsx:1420 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-a53a01ca]",
+      "message": "EL-component-scenariopage-button-root-a53a01ca at frontend/src/features/main/pages/main.page.jsx:1420 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-parseddbpage-button-root-966c5272].interaction.action_kind",
+      "message": "EL-component-parseddbpage-button-root-966c5272 at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:30 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-parseddbpage-button-root-e88717bc].interaction.action_kind",
+      "message": "EL-component-parseddbpage-button-root-e88717bc at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:32 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-parseddbpage-input-input-c6b159ba].interaction.action_kind",
+      "message": "EL-component-parseddbpage-input-input-c6b159ba at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:334 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-parseddbpage-input-input-c6b159ba]",
+      "message": "EL-component-parseddbpage-input-input-c6b159ba at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:334 changes source-backed view state without evidence-linked predicates; states=draftQuery."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_UNRESOLVED",
+      "path": "$.screens.elements[id=EL-component-parseddbpage-button-root-cccee16a].interaction.action_kind",
+      "message": "EL-component-parseddbpage-button-root-cccee16a at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:340 is a backend-classified view action but its semantic action_kind remains unresolved."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-parseddbpage-button-root-cccee16a]",
+      "message": "EL-component-parseddbpage-button-root-cccee16a at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:340 changes source-backed view state without evidence-linked predicates; states=query."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-mainpage-button-root-99d235ea]",
+      "message": "EL-component-mainpage-button-root-99d235ea at frontend/src/features/main/pages/main.page.jsx:105 is a backend-derived view action but has no FACT edge; handlers=window.location.reload."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-mainpage-button-ts-ts-7f059f08]",
+      "message": "EL-component-mainpage-button-ts-ts-7f059f08 at frontend/src/features/main/pages/main.page.jsx:111 is a backend-derived view action but has no FACT edge; handlers=setTaskMenuOpen."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562]",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562 at frontend/src/features/main/pages/main.page.jsx:174 is a backend-derived view action but has no FACT edge; handlers=mockApi.getScenarioMatrixPage|onPage|setDownloadMessage|setLoadedMatrixPage|setMatrixLoading."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c]",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c at frontend/src/features/main/pages/main.page.jsx:176 is a backend-derived view action but has no FACT edge; handlers=mockApi.getScenarioMatrixPage|onPage|setDownloadMessage|setLoadedMatrixPage|setMatrixLoading."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-root-456a2904]",
+      "message": "EL-component-businesspage-button-root-456a2904 at frontend/src/features/main/pages/main.page.jsx:460 is a backend-derived view action but has no FACT edge; handlers=setCubePage|setPanel."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-root-7b5cc90c]",
+      "message": "EL-component-businesspage-button-root-7b5cc90c at frontend/src/features/main/pages/main.page.jsx:461 is a backend-derived view action but has no FACT edge; handlers=setCategoryPage|setPanel."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-button-1b959aaf]",
+      "message": "EL-component-businesspage-button-button-1b959aaf at frontend/src/features/main/pages/main.page.jsx:582 is a backend-derived view action but has no FACT edge; handlers=setIssueFilter."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-v-2f1469b8]",
+      "message": "EL-component-businesspage-button-v-2f1469b8 at frontend/src/features/main/pages/main.page.jsx:638 is a backend-derived view action but has no FACT edge; handlers=setOpen."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-root-74a73f90]",
+      "message": "EL-component-businesspage-button-root-74a73f90 at frontend/src/features/main/pages/main.page.jsx:731 is a backend-derived view action but has no FACT edge; handlers=setFlowTextOpen."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-root-ee5902ee]",
+      "message": "EL-component-businesspage-button-root-ee5902ee at frontend/src/features/main/pages/main.page.jsx:738 is a backend-derived view action but has no FACT edge; handlers=setFlowTextOpen."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-root-36a555c2]",
+      "message": "EL-component-businesspage-button-root-36a555c2 at frontend/src/features/main/pages/main.page.jsx:867 is a backend-derived view action but has no FACT edge; handlers=setPresetGeneration|setPresetMessage|setPresetOpen|setPresetProgress|setPresetRequestingId|setPresetStatus."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-businesspage-button-root-547f94d7]",
+      "message": "EL-component-businesspage-button-root-547f94d7 at frontend/src/features/main/pages/main.page.jsx:874 is a backend-derived view action but has no FACT edge; handlers=setPresetGeneration|setPresetMessage|setPresetOpen|setPresetProgress|setPresetRequestingId|setPresetStatus."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-scenariopage-button-button-b6ade5a6]",
+      "message": "EL-component-scenariopage-button-button-b6ade5a6 at frontend/src/features/main/pages/main.page.jsx:1209 is a backend-derived view action but has no FACT edge; handlers=handleFilter|loadMatrixPage|mockApi.getScenarioMatrixPage|resetToFirstPage|setDownloadMessage|setFilter|setLoadedMatrixPage|setMatrixLoading."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-scenariopage-input-root-e0e2ecb2]",
+      "message": "EL-component-scenariopage-input-root-e0e2ecb2 at frontend/src/features/main/pages/main.page.jsx:1212 is a backend-derived view action but has no FACT edge; handlers=loadMatrixPage|mockApi.getScenarioMatrixPage|resetToFirstPage|setDownloadMessage|setLoadedMatrixPage|setMatrixLoading|setQuery."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-scenariopage-button-root-ff33f465]",
+      "message": "EL-component-scenariopage-button-root-ff33f465 at frontend/src/features/main/pages/main.page.jsx:1368 is a backend-derived view action but has no FACT edge; handlers=next.add|next.delete|sectionKeys.forEach|setExpandedSections|toggleAllExpanded."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-scenariopage-button-root-4e83beae]",
+      "message": "EL-component-scenariopage-button-root-4e83beae at frontend/src/features/main/pages/main.page.jsx:1390 is a backend-derived view action but has no FACT edge; handlers=next.add|next.delete|next.has|setExpandedSections|toggleExpanded."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-scenariopage-button-root-93f714c4]",
+      "message": "EL-component-scenariopage-button-root-93f714c4 at frontend/src/features/main/pages/main.page.jsx:1402 is a backend-derived view action but has no FACT edge; handlers=next.add|next.delete|next.has|setExpandedSections|toggleExpanded."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-scenariopage-button-root-a53a01ca]",
+      "message": "EL-component-scenariopage-button-root-a53a01ca at frontend/src/features/main/pages/main.page.jsx:1420 is a backend-derived view action but has no FACT edge; handlers=next.add|next.delete|next.has|setExpandedSections|toggleExpanded."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-parseddbpage-button-root-966c5272]",
+      "message": "EL-component-parseddbpage-button-root-966c5272 at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:30 is a backend-derived view action but has no FACT edge; handlers=onPage|setCurrentPage|setDbCache."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-parseddbpage-button-root-e88717bc]",
+      "message": "EL-component-parseddbpage-button-root-e88717bc at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:32 is a backend-derived view action but has no FACT edge; handlers=onPage|setCurrentPage|setDbCache."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-parseddbpage-input-input-c6b159ba]",
+      "message": "EL-component-parseddbpage-input-input-c6b159ba at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:334 is a backend-derived view action but has no FACT edge; handlers=setDraftQuery."
+    },
+    {
+      "code": "FACT_SOURCE_ACTION_MISSING",
+      "path": "$.edges[on=EL-component-parseddbpage-button-root-cccee16a]",
+      "message": "EL-component-parseddbpage-button-root-cccee16a at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:340 is a backend-derived view action but has no FACT edge; handlers=setCurrentPage|setDbCache|setQuery."
+    },
+    {
+      "code": "FACT_GRAPH_TRANSITION_COVERAGE_MISSING",
+      "path": "$.edges",
+      "message": "26 source-backed transition obligations are missing."
+    }
+  ]
+}

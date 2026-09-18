@@ -1,0 +1,26 @@
+{
+  "sceneId": "15-sheet-scroll",
+  "cues": [
+    {
+      "text": "시트를 내려도 질의 패널과 자막은 그 자리에 있습니다",
+      "startMs": 0,
+      "endMs": 3796,
+      "box": {
+        "x0": 515,
+        "y0": 926,
+        "x1": 1406,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "scroll",
+      "atMs": 1438,
+      "axis": "y",
+      "from": 0,
+      "to": 187
+    }
+  ],
+  "elapsedMs": 4389
+}

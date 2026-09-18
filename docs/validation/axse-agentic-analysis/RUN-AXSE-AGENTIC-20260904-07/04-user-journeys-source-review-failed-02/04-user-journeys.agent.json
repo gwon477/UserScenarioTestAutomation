@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "stage": "user-journeys",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-USER-JOURNEYS",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "extends_artifact_id": "03-business-classification",
+  "extends_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "source_basis_artifact_id": "02-source-gap-review",
+  "source_basis_artifact_hash": "sha256:04217cf3497715c04b72a8283bae1aac2c382c24dedb61d405e5bd4cc90de187",
+  "journeys": [
+    {
+      "kind": "normal",
+      "title": "문서에서 추적성 매트릭스까지의 주 경로",
+      "persona": "로그인하여 프로젝트와 TS 작업을 선택하고 문서 처리, 파싱 데이터 검토, 업무흐름 매핑·생성 요청 및 결과 산출물 확인을 수행하는 테스트 시나리오 생성 작업 수행자",
+      "source_thread_ref": "문서에서 추적성 매트릭스까지의 주 경로",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C010",
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020",
+        "C022",
+        "C023",
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C028",
+        "C029",
+        "C030"
+      ],
+      "prerequisites": [
+        "앱에 진입해 로그인 폼을 볼 수 있다.",
+        "처리할 MD/TXT 문서가 준비되어 있다."
+      ],
+      "milestones": [
+        {
+          "position": 1,
+          "phase": "entry",
+          "action": "아이디와 패스워드를 입력하고 로그인한다.",
+          "observable_outcome": "인증 성공 후 프로젝트 선택 화면이 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ]
+        },
+        {
+          "position": 2,
+          "phase": "work",
+          "action": "프로젝트 목록을 조회하고 프로젝트 카드를 선택한다.",
+          "observable_outcome": "선택된 프로젝트 컨텍스트가 설정되고 메인 테스트 시나리오 화면으로 이동한다.",
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ]
+        },
+        {
+          "position": 3,
+          "phase": "work",
+          "action": "TS 작업 목록을 조회한 뒤 첫 작업을 자동 선택하거나 새 TS 작업을 생성하고 작업을 선택한다.",
+          "observable_outcome": "선택된 TS 작업과 작업 ID가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 4,
+          "phase": "work",
+          "action": "선택한 TS 작업을 bootstrap하고 단계 내비게이션의 접근 guard 상태를 확인한다.",
+          "observable_outcome": "업로드, Parsed DB, 업무 매핑, 시나리오 단계의 접근 가능 상태가 메인 셸에 반영된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 5,
+          "phase": "work",
+          "action": "MD/TXT 파일을 선택하거나 드래그 앤 드롭한다.",
+          "observable_outcome": "선택된 파일명과 파일 크기가 업로드 화면에 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 6,
+          "phase": "work",
+          "action": "업로드 및 파싱 시작을 누르고 표시되는 파싱 상태를 확인한다.",
+          "observable_outcome": "업로드 완료 및 파싱 진행 상태가 표시되고 상태 조회가 진행된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 7,
+          "phase": "work",
+          "action": "파싱 완료 상태를 확인하고 다음 단계로 이동한다.",
+          "observable_outcome": "Parsed DB 조회 화면이 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 8,
+          "phase": "work",
+          "action": "Parsed DB에서 업무·화면·필드·이벤트·업무흐름 탭을 전환하고 검색과 페이지 이동으로 저장 데이터를 조회한다.",
+          "observable_outcome": "요약 지표, 표 데이터와 조회 범위가 표시된다.",
+          "source_area_refs": [
+            "parsed-data-inspection"
+          ]
+        },
+        {
+          "position": 9,
+          "phase": "work",
+          "action": "이슈 화면 진단 패널에서 업무플로우 누락 또는 미사용 화면 여부를 확인한다.",
+          "observable_outcome": "진단 이슈 또는 이슈 없음 상태가 표시되고 업무 매핑 대상 범위를 확인할 수 있다.",
+          "source_area_refs": [
+            "parsed-data-inspection"
+          ]
+        },
+        {
+          "position": 10,
+          "phase": "work",
+          "action": "업무 매핑으로 이동해 업무흐름·카테고리를 선택하고 전체 또는 개별 흐름 선택을 조정한다.",
+          "observable_outcome": "선택 업무흐름과 연결 화면·전이가 표시된다.",
+          "source_area_refs": [
+            "business-flow-mapping-and-generation-request"
+          ]
+        },
+        {
+          "position": 11,
+          "phase": "work",
+          "action": "매핑 검증 결과를 확인하고 선택 업무흐름에 대한 시나리오·TC 도출을 요청한다.",
+          "observable_outcome": "생성 요청 접수 메시지가 표시되고 시나리오 진행 화면으로 이동한다.",
+          "source_area_refs": [
+            "business-flow-mapping-and-generation-request"
+          ]
+        },
+        {
+          "position": 12,
+          "phase": "work",
+          "action": "생성 진행률을 새로고침 또는 자동 폴링으로 확인하고 업무흐름별 실행 이력을 조회한다.",
+          "observable_outcome": "진행률, 완료·진행·실패 건수와 업무흐름별 실행 상태가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 13,
+          "phase": "business-result",
+          "action": "생성 완료 후 결과 확인으로 이동한다.",
+          "observable_outcome": "최종 시나리오·테스트 케이스와 추적성 행이 조회된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 14,
+          "phase": "business-result",
+          "action": "시나리오 유형을 필터링하고 시나리오명·케이스명으로 검색하며 필요한 페이지를 조회한다.",
+          "observable_outcome": "조건에 맞는 시나리오와 케이스 상세 범위가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 15,
+          "phase": "business-result",
+          "action": "CSV 받기와 Excel 다운로드를 실행한다.",
+          "observable_outcome": "CSV 및 Excel 추적성 산출물 다운로드가 시작된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 16,
+          "phase": "exit",
+          "action": "메인 셸에서 로그아웃한다.",
+          "observable_outcome": "세션이 초기화되고 로그인 흐름으로 복귀한다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        }
+      ],
+      "handoffs": [
+        {
+          "from_position": 1,
+          "to_position": 2,
+          "state": [
+            "인증된 사용자 세션"
+          ]
+        },
+        {
+          "from_position": 2,
+          "to_position": 3,
+          "state": [
+            "인증된 사용자 세션",
+            "선택된 프로젝트 컨텍스트"
+          ]
+        },
+        {
+          "from_position": 3,
+          "to_position": 4,
+          "state": [
+            "선택된 TS 작업 컨텍스트"
+          ]
+        },
+        {
+          "from_position": 4,
+          "to_position": 5,
+          "state": [
+            "bootstrap된 작업 단계 상태",
+            "업로드 단계 접근 상태"
+          ]
+        },
+        {
+          "from_position": 5,
+          "to_position": 6,
+          "state": [
+            "선택된 MD/TXT 파일"
+          ]
+        },
+        {
+          "from_position": 6,
+          "to_position": 7,
+          "state": [
+            "업로드 완료 및 파싱 진행 상태"
+          ]
+        },
+        {
+          "from_position": 7,
+          "to_position": 8,
+          "state": [
+            "파싱 완료 문서",
+            "구조화 데이터 조회 단계 접근 상태"
+          ]
+        },
+        {
+          "from_position": 8,
+          "to_position": 9,
+          "state": [
+            "조회 중인 업무·화면·필드·이벤트·업무흐름 범위"
+          ]
+        },
+        {
+          "from_position": 9,
+          "to_position": 10,
+          "state": [
+            "파싱 데이터 검토 결과",
+            "업무 매핑 대상 범위"
+          ]
+        },
+        {
+          "from_position": 10,
+          "to_position": 11,
+          "state": [
+            "선택 업무흐름 집합",
+            "매핑 검증 범위"
+          ]
+        },
+        {
+          "from_position": 11,
+          "to_position": 12,
+          "state": [
+            "접수된 시나리오·TC 생성 요청"
+          ]
+        },
+        {
+          "from_position": 12,
+          "to_position": 13,
+          "state": [
+            "생성 완료 상태",
+            "업무흐름별 실행 이력"
+          ]
+        },
+        {
+          "from_position": 13,
+          "to_position": 14,
+          "state": [
+            "생성된 시나리오·테스트 케이스와 추적성 행"
+          ]
+        },
+        {
+          "from_position": 14,
+          "to_position": 15,
+          "state": [
+            "조회·필터링된 최종 결과 범위"
+          ]
+        },
+        {
+          "from_position": 15,
+          "to_position": 16,
+          "state": [
+            "CSV 및 Excel 다운로드 결과"
+          ]
+        }
+      ],
+      "business_result": {
+        "description": "선택 업무흐름의 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물을 확보한다.",
+        "milestone_position": 15,
+        "source_area_refs": [
+          "scenario-generation-and-traceability-results"
+        ]
+      },
+      "exit": {
+        "kind": "logout",
+        "action": "메인 셸에서 로그아웃한다.",
+        "observable_outcome": "세션이 초기화되고 로그인 흐름으로 복귀한다.",
+        "milestone_position": 16
+      },
+      "recovery": null
+    },
+    {
+      "kind": "recovery",
+      "title": "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로",
+      "persona": "로그인하여 프로젝트와 TS 작업을 선택하고 문서 처리, 파싱 데이터 검토, 업무흐름 매핑·생성 요청 및 결과 산출물 확인을 수행하는 테스트 시나리오 생성 작업 수행자",
+      "source_thread_ref": "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C009",
+        "C015",
+        "C021",
+        "C027",
+        "C031",
+        "C032",
+        "C033"
+      ],
+      "prerequisites": [
+        "앱에 진입해 로그인 폼을 볼 수 있다.",
+        "처리할 MD/TXT 문서와 실패 후 대체하거나 다시 선택할 파일이 준비되어 있다."
+      ],
+      "milestones": [
+        {
+          "position": 1,
+          "phase": "entry",
+          "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택한다.",
+          "observable_outcome": "선택된 프로젝트의 메인 셸과 TS 작업 선택 화면이 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ]
+        },
+        {
+          "position": 2,
+          "phase": "work",
+          "action": "TS 작업을 선택하고 작업을 bootstrap한 뒤 업로드 단계로 이동한다.",
+          "observable_outcome": "선택 작업과 업로드 단계 접근 상태가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 3,
+          "phase": "work",
+          "action": "MD/TXT 파일을 선택하거나 드래그 앤 드롭하고 업로드 및 파싱을 시작한다.",
+          "observable_outcome": "파일 선택 상태와 업로드·파싱 진행 상태가 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 4,
+          "phase": "failure",
+          "action": "업로드/API 오류 또는 파싱 실패 상태를 확인한다.",
+          "observable_outcome": "오류 메시지와 파싱 실패 상태가 업로드 화면에 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 5,
+          "phase": "recovery",
+          "action": "실패 상태에서 파일을 제거하고 다시 선택하거나 다시 업로드할 파일을 선택한다.",
+          "observable_outcome": "새 파일 선택을 위한 업로드 상태로 돌아간다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 6,
+          "phase": "recovery",
+          "action": "새 파일로 업로드 및 파싱을 다시 시작하고 파싱 상태를 폴링한다.",
+          "observable_outcome": "새 파일의 업로드 및 파싱 진행 상태가 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 7,
+          "phase": "work",
+          "action": "파싱 완료를 확인하고 Parsed DB로 이동한다.",
+          "observable_outcome": "저장된 업무·화면·필드·이벤트·업무흐름 조회 화면이 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ]
+        },
+        {
+          "position": 8,
+          "phase": "work",
+          "action": "Parsed DB의 탭·검색·페이지 이동과 진단 패널로 데이터를 검토한 뒤 업무 매핑으로 이동한다.",
+          "observable_outcome": "파싱 데이터 검토 결과와 업무 매핑 대상 범위가 표시된다.",
+          "source_area_refs": [
+            "parsed-data-inspection"
+          ]
+        },
+        {
+          "position": 9,
+          "phase": "work",
+          "action": "업무흐름을 선택하고 매핑 검증 결과를 확인한 뒤 시나리오·TC 생성을 요청한다.",
+          "observable_outcome": "생성 요청 접수와 시나리오 진행 화면이 표시된다.",
+          "source_area_refs": [
+            "business-flow-mapping-and-generation-request"
+          ]
+        },
+        {
+          "position": 10,
+          "phase": "work",
+          "action": "생성 진행 상태를 새로고침 또는 폴링으로 확인하고 결과 확인으로 이동한다.",
+          "observable_outcome": "완료·진행·실패 건수와 최종 시나리오·테스트 케이스 결과가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 11,
+          "phase": "business-result",
+          "action": "최종 결과에서 Excel 다운로드를 실행한다.",
+          "observable_outcome": "Excel 추적성 산출물 다운로드가 시작된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 12,
+          "phase": "exit",
+          "action": "메인 셸에서 로그아웃한다.",
+          "observable_outcome": "세션이 초기화되고 로그인 흐름으로 복귀한다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        }
+      ],
+      "handoffs": [
+        {
+          "from_position": 1,
+          "to_position": 2,
+          "state": [
+            "인증된 사용자 세션",
+            "선택된 프로젝트 컨텍스트"
+          ]
+        },
+        {
+          "from_position": 2,
+          "to_position": 3,
+          "state": [
+            "bootstrap된 TS 작업 컨텍스트",
+            "업로드 단계 접근 상태"
+          ]
+        },
+        {
+          "from_position": 3,
+          "to_position": 4,
+          "state": [
+            "업로드及 파싱 요청 상태"
+          ]
+        },
+        {
+          "from_position": 4,
+          "to_position": 5,
+          "state": [
+            "오류 메시지",
+            "파싱 실패 상태"
+          ]
+        },
+        {
+          "from_position": 5,
+          "to_position": 6,
+          "state": [
+            "새로 선택한 파일"
+          ]
+        },
+        {
+          "from_position": 6,
+          "to_position": 7,
+          "state": [
+            "재시작된 파싱 처리",
+            "파싱 완료 상태"
+          ]
+        },
+        {
+          "from_position": 7,
+          "to_position": 8,
+          "state": [
+            "파싱된 구조 데이터"
+          ]
+        },
+        {
+          "from_position": 8,
+          "to_position": 9,
+          "state": [
+            "파싱 데이터 검토 결과",
+            "업무 매핑 대상 범위"
+          ]
+        },
+        {
+          "from_position": 9,
+          "to_position": 10,
+          "state": [
+            "접수된 시나리오·TC 생성 요청"
+          ]
+        },
+        {
+          "from_position": 10,
+          "to_position": 11,
+          "state": [
+            "생성 결과와 실행 상태"
+          ]
+        },
+        {
+          "from_position": 11,
+          "to_position": 12,
+          "state": [
+            "Excel 추적성 산출물 다운로드 결과"
+          ]
+        }
+      ],
+      "business_result": {
+        "description": "업로드 또는 파싱 실패를 확인하고 파일을 재선택·재업로드하여 정상 처리한 뒤 생성 결과의 Excel 추적성 산출물을 확보한다.",
+        "milestone_position": 11,
+        "source_area_refs": [
+          "scenario-generation-and-traceability-results"
+        ]
+      },
+      "exit": {
+        "kind": "logout",
+        "action": "메인 셸에서 로그아웃한다.",
+        "observable_outcome": "세션이 초기화되고 로그인 흐름으로 복귀한다.",
+        "milestone_position": 12
+      },
+      "recovery": {
+        "failure_milestone_position": 4,
+        "recovery_action_position": 5,
+        "rejoin_milestone_position": 7
+      }
+    }
+  ],
+  "excluded_threads": [
+    {
+      "source_thread_ref": "업무흐름 단위 프리셋 미리보기",
+      "reason": "특정 업무흐름의 프리셋 행을 확인하고 모달을 닫는 국소 미리보기 흐름으로, 인증·문서 준비·Parsed DB 검토·최종 산출물 확보를 포함한 완전한 솔루션 수준 여정이 아니다."
+    }
+  ],
+  "unresolved": [
+    {
+      "description": "인증 성공 이후 실제 권한 규칙과 프로젝트별 접근 경계가 여정의 사용자 역할을 넘어 어떻게 적용되는지는 확인되지 않았다.",
+      "reason": "인증 백엔드와 보안 소스가 현재 closure에서 제외되어 프런트엔드의 세션 전이와 프로젝트 선택만 확인되었다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e",
+        "SRC-backend-app-core-auth-7c627b43",
+        "SRC-backend-app-core-security-3b18f773"
+      ]
+    },
+    {
+      "description": "생성 실패 또는 부분 완료 후 사용자가 재요청할 수 있는 정확한 조작과 기존 결과 보존 규칙은 확정되지 않았다.",
+      "reason": "현재 소스는 실패·부분 완료 상태 표시와 새로고침·결과 확인을 보여주지만 재요청 및 기존 레코드 처리 규칙은 충분히 드러내지 않는다.",
+      "source_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+        "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+        "SRC-backend-app-repositories-scenario-repository-c0346a9c"
+      ]
+    }
+  ]
+}

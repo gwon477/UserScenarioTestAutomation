@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-USER-JOURNEYS",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/api/v1/tasks.py",
+      "start_line": 1,
+      "end_line": 202,
+      "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-backend-app-api-v1-workflows-d9740180",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/api/v1/workflows.py",
+      "start_line": 1,
+      "end_line": 231,
+      "content_hash": "sha256:d0880b970a1596e7c6763a82d39116a5c27902c217ed7f57ab9dc2d7d622e329",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-backend-app-exporters-scenario-matrix-csv-c0846f48",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/exporters/scenario_matrix_csv.py",
+      "start_line": 1,
+      "end_line": 13,
+      "content_hash": "sha256:e123a5358ea31258990854d70b09cd019fa6957abf475ef868c281925e287e1b",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-backend-app-exporters-scenario-matrix-xlsx-b8aa5849",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/exporters/scenario_matrix_xlsx.py",
+      "start_line": 1,
+      "end_line": 40,
+      "content_hash": "sha256:229a0cf2737c324b054621b01eb28b139b4ef0758384aa6f3a6f68f6bdf76f91",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/scenario_generation_service.py",
+      "start_line": 1,
+      "end_line": 211,
+      "content_hash": "sha256:6555d8589fe83f39af19c9a9e195957e007c5dc0a05bf65c6092f28fa7e8bd13",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-backend-app-services-workflow-service-3f39109c",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/workflow_service.py",
+      "start_line": 1,
+      "end_line": 143,
+      "content_hash": "sha256:864aba1ad0d9e62d38fcf8fd8167ed92d54cf3db8d950e5b0a2f1570d474af34",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-frontend-src-app-a0eba768",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/App.jsx",
+      "start_line": 1,
+      "end_line": 23,
+      "content_hash": "sha256:cd16062b2a6d3f9701f6b770d77e94790a90402094d86a64abcf3a639ffc757a",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login-form.page.jsx",
+      "start_line": 1,
+      "end_line": 116,
+      "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "start_line": 1,
+      "end_line": 121,
+      "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+      "start_line": 1,
+      "end_line": 361,
+      "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/tasks/tasks.api.js",
+      "start_line": 1,
+      "end_line": 96,
+      "content_hash": "sha256:6c2972cce43b46f0c4f18f249be612d028476b0e0b0833bdbeb22bfe86c0a56d",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/upload/pages/upload.page.jsx",
+      "start_line": 1,
+      "end_line": 272,
+      "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-upload-upload-api-f7939e13",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/upload/upload.api.js",
+      "start_line": 1,
+      "end_line": 37,
+      "content_hash": "sha256:21f0825c024eec6bdf3364e0918e6d309017d36f861a2da9c17123052ff79163",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-1f6f20fc"
+    }
+  ],
+  "created_at": "2026-09-04T08:11:29.457Z"
+}

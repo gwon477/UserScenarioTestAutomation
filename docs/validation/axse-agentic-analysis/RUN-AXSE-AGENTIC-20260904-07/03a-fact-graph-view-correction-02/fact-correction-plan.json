@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:60f7662faffe814f1085e90183c8204a38f5d1a416bb5fab4dece47ee7ea0b95",
+  "element_update_fields": {},
+  "predicate_element_refs": [
+    "U10",
+    "U41",
+    "U45",
+    "U46",
+    "U47",
+    "U49",
+    "U50",
+    "U57",
+    "U58",
+    "U6",
+    "U7",
+    "U8"
+  ],
+  "replace_edge_indexes": [
+    1,
+    23,
+    24,
+    25,
+    58,
+    59,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    71,
+    72,
+    73,
+    74,
+    81,
+    82,
+    83,
+    84
+  ],
+  "add_edge_element_refs": []
+}

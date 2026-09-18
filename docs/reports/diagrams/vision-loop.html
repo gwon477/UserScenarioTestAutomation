@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비전 수행 루프, 한 step</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --color-paper:#f5f5f5; --color-ink:#2d3142; --color-muted:#4f5d75; --color-accent:#eb6c36;
+      --font-sans:'Geist','Apple SD Gothic Neo',system-ui,sans-serif; --font-serif:'Instrument Serif','Apple SD Gothic Neo',serif; --font-mono:'Geist Mono',ui-monospace,monospace; }
+    body { font-family:var(--font-sans); background:var(--color-paper); color:var(--color-ink); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:3rem 2rem; }
+    .frame { max-width:1200px; width:100%; }
+    .eyebrow { font-family:var(--font-mono); font-size:0.66rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-muted); margin-bottom:0.5rem; }
+    h1 { font-family:var(--font-serif); font-size:clamp(1.5rem,2.4vw + 0.75rem,2rem); font-weight:400; letter-spacing:-0.02em; line-height:1.15; color:var(--color-ink); margin-bottom:1.5rem; }
+    svg { width:100%; min-width:900px; display:block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Sequence · ScenarioForge</p>
+    <h1>비전 수행 루프, 한 step</h1>
+    <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="vision-loop-title vision-loop-desc">
+      <title id="vision-loop-title">비전 수행 루프, 한 step</title>
+      <desc id="vision-loop-desc">한 step에서 커널이 화면을 캡처해 마스킹과 리사이즈를 거친 프레임을 operator 모델에 보내 제안을 받고, 코드로 된 제안 게이트가 검증한 뒤 입력을 합성하며, 조작 후 프레임을 observer 모델에 보내 관측을 받아 결정론적 판정 엔진이 PASSED, FAILED, INCONCLUSIVE를 정하는 시퀀스 다이어그램.</desc>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+        <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#f5f5f5"/>
+      <line x1="140" y1="72" x2="140" y2="548" stroke="rgba(45,49,66,0.20)" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="380" y1="72" x2="380" y2="548" stroke="rgba(45,49,66,0.20)" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="620" y1="72" x2="620" y2="548" stroke="rgba(45,49,66,0.20)" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="860" y1="72" x2="860" y2="548" stroke="rgba(45,49,66,0.20)" stroke-width="1" stroke-dasharray="3,3"/>
+      <rect x="128" y="192" width="472" height="128" rx="4" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.22)" stroke-width="1"/>
+      <rect x="128" y="192" width="40" height="16" rx="2" fill="#f5f5f5" stroke="rgba(45,49,66,0.22)" stroke-width="1"/>
+      <text x="148" y="204" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.12em">LOOP</text>
+      <text x="140" y="222" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.04em">[게이트 거절 시 예산 안에서 재시도, 소진 시 INCONCLUSIVE]</text>
+      <rect x="368" y="364" width="504" height="152" rx="4" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.22)" stroke-width="1"/>
+      <rect x="368" y="364" width="40" height="16" rx="2" fill="#f5f5f5" stroke="rgba(45,49,66,0.22)" stroke-width="1"/>
+      <text x="388" y="376" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.12em">LOOP</text>
+      <text x="380" y="394" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.04em">[판정이 확정될 때까지 재관측, maxScreenshots 이내]</text>
+      <rect x="376" y="96" width="8" height="448" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+      <rect x="616" y="104" width="8" height="32" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+      <rect x="136" y="248" width="8" height="32" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+      <rect x="616" y="336" width="8" height="12" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+      <rect x="616" y="420" width="8" height="32" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+      <rect x="856" y="468" width="8" height="32" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+      <line x1="384" y1="108" x2="616" y2="108" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="478" y="88" width="43" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="500" y="97" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">화면 캡처</text>
+      <line x1="616" y1="132" x2="384" y2="132" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+      <rect x="486" y="112" width="29" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="500" y="121" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">프레임</text>
+      <path d="M 384,156 H 412 V 172 H 388" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="420" y="158" width="211" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="424" y="167" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.06em">마스킹 · 768 리사이즈 (실패 시 ABORTED)</text>
+      <line x1="376" y1="252" x2="144" y2="252" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="204" y="232" width="113" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="260" y="241" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">마스킹 프레임 + 대상 서술</text>
+      <line x1="144" y1="276" x2="376" y2="276" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+      <rect x="148" y="256" width="225" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="260" y="265" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">제안 (locus · label · confidence)</text>
+      <path d="M 384,292 H 412 V 308 H 388" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="420" y="294" width="106" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="424" y="303" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.06em">제안 게이트 · 좌표 환산</text>
+      <line x1="384" y1="340" x2="616" y2="340" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="405" y="320" width="190" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="500" y="329" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">입력 합성 (click · insertText)</text>
+      <line x1="384" y1="424" x2="616" y2="424" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="472" y="404" width="57" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="500" y="413" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">조작 후 캡처</text>
+      <line x1="616" y1="448" x2="384" y2="448" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+      <rect x="486" y="428" width="29" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="500" y="437" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">프레임</text>
+      <line x1="384" y1="472" x2="856" y2="472" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="684" y="452" width="113" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="740" y="461" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">마스킹 프레임 + 앵커 질문</text>
+      <line x1="856" y1="496" x2="384" y2="496" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+      <rect x="704" y="476" width="71" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="740" y="485" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">보이는 앵커 목록</text>
+      <path d="M 384,524 H 412 V 540 H 388" fill="none" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+      <rect x="420" y="526" width="274" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="424" y="535" fill="#eb6c36" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.06em">판정 엔진 → PASSED / FAILED / INCONCLUSIVE</text>
+      <rect x="60" y="32" width="160" height="40" rx="6" fill="#f5f5f5"/>
+      <rect x="60" y="32" width="160" height="40" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="140" y="50" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">operator 모델</text>
+      <text x="140" y="66" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">제안만, 판정 없음</text>
+      <rect x="300" y="32" width="160" height="40" rx="6" fill="#f5f5f5"/>
+      <rect x="300" y="32" width="160" height="40" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+      <text x="380" y="50" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">수행 커널</text>
+      <text x="380" y="66" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">runStep · 게이트 · 판정 엔진</text>
+      <rect x="540" y="32" width="160" height="40" rx="6" fill="#f5f5f5"/>
+      <rect x="540" y="32" width="160" height="40" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="620" y="50" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">대상 화면</text>
+      <text x="620" y="66" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">격리 BrowserWindow</text>
+      <rect x="780" y="32" width="160" height="40" rx="6" fill="#f5f5f5"/>
+      <rect x="780" y="32" width="160" height="40" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="860" y="50" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">observer 모델</text>
+      <text x="860" y="66" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">operator와 분리된 세션</text>
+      <line x1="40" y1="556" x2="920" y2="556" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <text x="40" y="572" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.14em">LEGEND</text>
+      <line x1="120" y1="582" x2="140" y2="582" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/><text x="148" y="585" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">호출</text>
+      <line x1="260" y1="582" x2="280" y2="582" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/><text x="288" y="585" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">응답</text>
+      <line x1="400" y1="582" x2="420" y2="582" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#arrow-accent)"/><text x="428" y="585" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">최종 verdict (모델 서술은 verdict가 아님)</text>
+    </svg>
+  </div>
+</body>
+</html>

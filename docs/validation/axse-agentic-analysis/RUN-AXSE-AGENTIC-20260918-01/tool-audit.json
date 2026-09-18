@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 6,
+      "known_ref_count": 6,
+      "resolved_ref_count": 6,
+      "requested_budget": 30000,
+      "effective_budget": 103907,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 6,
+      "known_ref_count": 6,
+      "resolved_ref_count": 6,
+      "requested_budget": 16000,
+      "effective_budget": 20576,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 6,
+      "known_ref_count": 6,
+      "resolved_ref_count": 6,
+      "requested_budget": 26000,
+      "effective_budget": 29413,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 6,
+      "known_ref_count": 6,
+      "resolved_ref_count": 6,
+      "requested_budget": 26000,
+      "effective_budget": 37857,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 6,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "01-source-survey"
+    }
+  ]
+}

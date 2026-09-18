@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-FACT-GRAPH",
+    "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+    "source_root_hash": "sha256:48c9939f0b87e06ef9132db9aba2c059c4c73d6d4168153a8b9cbf480509f838",
+    "extends_artifact_id": "03-business-classification",
+    "extends_artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+    "correction_from": "03a-fact-graph-corr-16",
+    "generated_with": "pi-coding-agent",
+    "evidence_grant_ids": [
+      "EVG-WORK-AXSE-FACT-GRAPH-c3ff1cdc"
+    ]
+  },
+  "artifacts": {
+    "fact_bundle": {
+      "path": "fact-bundle.json",
+      "content_hash": "sha256:bdf07aa8005d1f0405ae5effa28957e1e4158db6c33e5a1886d09295f4ff15c9"
+    },
+    "workflow_skeleton": {
+      "path": "workflow-skeleton.json",
+      "content_hash": "sha256:04b837db90978b209d8748dba64246d308fe2aa753f77c3f7c0469b12225ab18"
+    },
+    "guarded_path_inventory": {
+      "path": "guarded-path-inventory.json",
+      "content_hash": "sha256:2daa1485658eacb9fff0e9ef228960417ecb02753a5be5db10378f0c54aa20d1"
+    }
+  }
+}

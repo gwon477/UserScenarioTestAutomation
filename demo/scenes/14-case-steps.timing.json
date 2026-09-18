@@ -1,0 +1,30 @@
+{
+  "sceneId": "14-case-steps",
+  "cues": [
+    {
+      "text": "케이스를 펼치면 단계와 기대 결과가 함께 보입니다",
+      "startMs": 0,
+      "endMs": 3604,
+      "box": {
+        "x0": 537,
+        "y0": 926,
+        "x1": 1383,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "zoomIn",
+      "atMs": 20,
+      "scale": 1.3,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 1819,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 5403
+}

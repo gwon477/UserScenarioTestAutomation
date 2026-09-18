@@ -1,0 +1,20 @@
+{
+  "pass": false,
+  "issues": [
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-36a555c2]",
+      "message": "EL-component-businesspage-button-root-36a555c2 at frontend/src/features/main/pages/main.page.jsx:867 changes source-backed view state without evidence-linked predicates; states=presetOpen|presetRequestingId."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-547f94d7]",
+      "message": "EL-component-businesspage-button-root-547f94d7 at frontend/src/features/main/pages/main.page.jsx:874 changes source-backed view state without evidence-linked predicates; states=presetOpen|presetRequestingId."
+    },
+    {
+      "code": "FACT_LOCAL_VIEW_EFFECT_UNSUPPORTED",
+      "path": "$.edges[on=EL-component-parseddbpage-button-root-cccee16a].effect",
+      "message": "EL-component-parseddbpage-button-root-cccee16a at frontend/src/features/parsed-db/pages/parsed-db.page.jsx:340 only changes dbCache|page|query, but FACT claims PRED-db-search-results-refreshed=true && PRED-db-cache-state=updated."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "03a-fact-graph"
+    }
+  ]
+}

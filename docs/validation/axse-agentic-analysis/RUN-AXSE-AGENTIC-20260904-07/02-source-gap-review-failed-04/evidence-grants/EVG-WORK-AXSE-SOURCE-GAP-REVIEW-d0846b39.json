@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-d0846b39",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-GAP-REVIEW",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-app-a0eba768",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/App.jsx",
+      "start_line": 1,
+      "end_line": 23,
+      "content_hash": "sha256:cd16062b2a6d3f9701f6b770d77e94790a90402094d86a64abcf3a639ffc757a",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-d0846b39"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "start_line": 1,
+      "end_line": 121,
+      "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-d0846b39"
+    }
+  ],
+  "created_at": "2026-09-04T04:58:07.610Z"
+}

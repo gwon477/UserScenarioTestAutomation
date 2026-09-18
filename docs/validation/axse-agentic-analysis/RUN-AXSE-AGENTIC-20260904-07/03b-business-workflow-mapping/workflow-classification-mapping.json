@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "fact_graph_artifact_hash": "sha256:9b40c2f9aa825e1774db0fca4ffbe2de60da8ce1e5e423ec17737651a6178bb5",
+  "assignments": [
+    {
+      "workflow_ref": "WF-component-businesspage-3b512bf9",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C016",
+        "C019",
+        "C022",
+        "C027",
+        "C030",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C013",
+        "C016",
+        "C024",
+        "C026",
+        "C030",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-86c2ff8c",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-5ee2ef2f",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C018",
+        "C020",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-2855894a",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-20f25040",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-067a194d",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-6c5bb760",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-ce6f1e6c",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C013",
+        "C016",
+        "C019",
+        "C024",
+        "C026",
+        "C030",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-d5b999b1",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7bea4b09",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-ffb625fb",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-527a091f",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-c434992f",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-3d3d7a88",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-104bdb2f",
+      "primary_classification_ref": "C001",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C011",
+        "C020",
+        "C031"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-d6fe005d",
+      "primary_classification_ref": "C001",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C011",
+        "C020",
+        "C028",
+        "C031"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-aef66388",
+      "primary_classification_ref": "C001",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C011",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-5199dbef",
+      "primary_classification_ref": "C001",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C011",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-e5ed79c1",
+      "primary_classification_ref": "C001",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C011",
+        "C020",
+        "C028"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-41525b39",
+      "primary_classification_ref": "C001",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C011",
+        "C020",
+        "C028",
+        "C031"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-24d62594",
+      "primary_classification_ref": "C001",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C011",
+        "C020",
+        "C028"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-5e43f314",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-3762e523",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C008",
+        "C017",
+        "C020",
+        "C031"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-2b4dbe33",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C008",
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-4e38e24f",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-275bc2d0",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-77035738",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C017",
+        "C020",
+        "C031"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-0b02b6d1",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-2d79d452",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C008",
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-6771c0b3",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C018",
+        "C020",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-4a38f0de",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-083f5434",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C013",
+        "C017",
+        "C018",
+        "C020",
+        "C024",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-f72174ff",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C016",
+        "C019",
+        "C022",
+        "C027",
+        "C030",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-09e713d0",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C016",
+        "C019",
+        "C022",
+        "C027",
+        "C030",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-8d4b7217",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C014",
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-1f1eaeca",
+      "primary_classification_ref": "C002",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C009",
+        "C012",
+        "C015",
+        "C020",
+        "C021",
+        "C023",
+        "C029",
+        "C032"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-6c730330",
+      "primary_classification_ref": "C002",
+      "cross_cutting_classification_refs": [
+        "C012",
+        "C015",
+        "C017",
+        "C020",
+        "C029"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-0b0e9837",
+      "primary_classification_ref": "C002",
+      "cross_cutting_classification_refs": [
+        "C009",
+        "C015",
+        "C020",
+        "C021",
+        "C023",
+        "C032"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-bc687d2a",
+      "primary_classification_ref": "C002",
+      "cross_cutting_classification_refs": [
+        "C009",
+        "C015",
+        "C020",
+        "C021",
+        "C023",
+        "C032"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-833d06aa",
+      "primary_classification_ref": "C002",
+      "cross_cutting_classification_refs": [
+        "C009",
+        "C012",
+        "C015",
+        "C020",
+        "C021",
+        "C023",
+        "C029"
+      ]
+    }
+  ],
+  "unresolved": []
+}

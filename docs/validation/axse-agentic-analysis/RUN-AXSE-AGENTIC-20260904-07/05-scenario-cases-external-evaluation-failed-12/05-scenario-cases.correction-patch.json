@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "stage": "scenario-case-correction-patch",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "base_artifact_hash": "sha256:81b2c991e1bc5612fa08a7e45ddf125a9a40bbf58fbbd159b6b046cd04721836",
+  "changes": [
+    {
+      "target_ref": "CT002",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "프로젝트 목록이 비어 초기 작업공간에 진입하지 못함",
+          "classification_refs": [
+            "C001",
+            "C006",
+            "C008",
+            "C011",
+            "C017",
+            "C023",
+            "C028"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "로그인이 성공하고 프로젝트 목록 조회 응답이 빈 목록이다."
+          ],
+          "variation": {
+            "milestone_position": 1,
+            "condition": "로그인 성공 후 프로젝트 목록의 항목 수가 0이다.",
+            "expected_outcome": "프로젝트 선택 화면에 조회된 프로젝트가 없다는 메시지가 표시되고 메인 셸과 TS 작업 컨텍스트로 이동하지 않는다.",
+            "recovery_action": null
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한다.",
+              "observable_outcome": "프로젝트 선택 화면이 표시되고 프로젝트 목록 조회가 완료된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 1,
+              "action": "표시된 프로젝트 목록을 확인한다.",
+              "observable_outcome": "프로젝트 카드가 표시되지 않고 조회된 프로젝트가 없다는 오류 메시지가 표시된다."
+            }
+          ],
+          "terminal": {
+            "kind": "expected-failure",
+            "expected_result": "프로젝트 목록이 비어 조회된 프로젝트가 없다는 메시지가 표시되며 TS 작업 메인 셸에 진입하지 못한다.",
+            "final_step_position": 2
+          }
+        }
+      ]
+    },
+    {
+      "target_ref": "CT003",
+      "operation": "add-cases",
+      "cases": [
+        {
+          "title": "업무흐름 화면 정합성 조회의 네트워크 오류가 표시됨",
+          "classification_refs": [
+            "C003",
+            "C004",
+            "C006",
+            "C010",
+            "C013",
+            "C017",
+            "C018",
+            "C020",
+            "C024",
+            "C025",
+            "C026",
+            "C028",
+            "C029"
+          ],
+          "preconditions": [
+            "아이디와 패스워드를 입력할 수 있다.",
+            "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+            "파싱 완료 상태와 검토 가능한 구조 데이터가 준비되어 있다.",
+            "선택한 업무흐름의 화면 정합성 조회에서 네트워크 오류가 발생한다."
+          ],
+          "variation": {
+            "milestone_position": 3,
+            "condition": "선택한 업무흐름의 화면 정합성 조회 요청이 네트워크 오류로 실패한다.",
+            "expected_outcome": "매핑 검증 화면에 네트워크 오류 메시지가 표시되고 정합성 진단 결과가 표시되지 않는다.",
+            "recovery_action": null
+          },
+          "steps": [
+            {
+              "position": 1,
+              "journey_milestone_position": 1,
+              "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트 카드를 선택하고 TS 작업을 선택한다.",
+              "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다."
+            },
+            {
+              "position": 2,
+              "journey_milestone_position": 2,
+              "action": "작업의 파싱 완료 상태를 확인하고 Parsed DB로 이동한다.",
+              "observable_outcome": "파싱된 업무, 화면, 필드, 이벤트와 업무흐름 데이터가 표시된다."
+            },
+            {
+              "position": 3,
+              "journey_milestone_position": 3,
+              "action": "업무 매핑 화면에서 업무흐름을 선택하고 화면 정합성 진단을 조회한다.",
+              "observable_outcome": "화면 정합성 조회가 실패하고 매핑 검증 화면에 네트워크 오류 메시지가 표시된다."
+            }
+          ],
+          "terminal": {
+            "kind": "expected-failure",
+            "expected_result": "선택한 업무흐름의 화면 정합성 조회 네트워크 오류 메시지가 표시되고 정합성 진단 결과가 표시되지 않는다.",
+            "final_step_position": 3
+          }
+        }
+      ]
+    }
+  ]
+}

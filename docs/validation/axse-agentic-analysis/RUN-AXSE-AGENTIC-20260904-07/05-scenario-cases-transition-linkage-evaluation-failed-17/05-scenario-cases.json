@@ -1,0 +1,2283 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "artifact_revision": 3,
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-SCENARIO-CASES",
+    "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+    "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+    "extends_artifact_id": "04-user-journeys",
+    "extends_artifact_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+    "transition_inventory_hash": "sha256:50014473f651a06ca304812a3e826b8fb1b500975d6e8c731cc7c81d20e5f660",
+    "generated_with": "pi-coding-agent",
+    "granted_evidence_refs": [
+      "EV-C-0001",
+      "EV-C-0002",
+      "EV-C-0003",
+      "EV-C-0004",
+      "EV-C-0005",
+      "EV-C-0006",
+      "EV-C-0007",
+      "EV-C-0008",
+      "EV-C-0009",
+      "EV-C-0010",
+      "EV-C-0011",
+      "EV-C-0012",
+      "EV-C-0013",
+      "EV-C-0014",
+      "EV-C-0015",
+      "EV-C-0016",
+      "EV-C-0017",
+      "EV-C-0018",
+      "EV-C-0019",
+      "EV-C-0020",
+      "EV-C-0021",
+      "EV-C-0022",
+      "EV-C-0023",
+      "EV-C-0024",
+      "EV-C-0025",
+      "EV-C-0026",
+      "EV-C-0027",
+      "EV-C-0028",
+      "EV-C-0029"
+    ],
+    "inherited_evidence_refs": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003",
+      "EV-0016",
+      "EV-0017",
+      "EV-0019",
+      "EV-0021",
+      "EV-0009",
+      "EV-0022",
+      "EV-0024",
+      "EV-0023",
+      "EV-0014",
+      "EV-0015",
+      "EV-0012",
+      "EV-0013",
+      "EV-0020",
+      "EV-GAP-0001",
+      "EV-GAP-0002",
+      "EV-GAP-0003",
+      "EV-GAP-0004",
+      "EV-GAP-0005",
+      "EV-GAP-0006",
+      "EV-BC-0001",
+      "EV-BC-0002",
+      "EV-BC-0003",
+      "EV-BC-0004",
+      "EV-BC-0005",
+      "EV-BC-0006",
+      "EV-J-0001",
+      "EV-J-0002",
+      "EV-J-0003",
+      "EV-J-0004",
+      "EV-J-0005",
+      "EV-J-0006",
+      "EV-J-0007",
+      "EV-J-0008",
+      "EV-J-0009",
+      "EV-J-0010",
+      "EV-J-0011",
+      "EV-J-0012",
+      "EV-J-0013",
+      "EV-J-0014",
+      "EV-J-0015",
+      "EV-J-0016",
+      "EV-J-0017",
+      "EV-J-0018",
+      "EV-J-0019",
+      "EV-J-0020",
+      "EV-J-0021",
+      "EV-J-0022"
+    ],
+    "supersedes_artifact_hash": "sha256:ee73a80e90ae86a7235a1717716545d4af1d0c09dec640f4460c5583dbdeadcb",
+    "supersedes_agent_artifact_hash": "sha256:9503bf7948a6857fbd0076441fedad935540cdb92d30527a715e6bbca673fc75",
+    "correction_gap_file": "orchestrator-next-stage-gaps.json",
+    "correction_target_count": 35
+  },
+  "scenario_cases": {
+    "schema_version": 1,
+    "stage": "scenario-cases",
+    "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+    "work_id": "WORK-AXSE-SCENARIO-CASES",
+    "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+    "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+    "extends_artifact_id": "04-user-journeys",
+    "extends_artifact_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+    "cases": [
+      {
+        "kind": "normal",
+        "title": "정상적인 문서 파싱부터 추적성 매트릭스 다운로드까지 수행",
+        "journey_ref": "J001",
+        "classification_refs": [
+          "C001",
+          "C002",
+          "C003",
+          "C004",
+          "C005",
+          "C006",
+          "C007",
+          "C008",
+          "C010",
+          "C011",
+          "C012",
+          "C013",
+          "C014",
+          "C016",
+          "C017",
+          "C018",
+          "C019",
+          "C020",
+          "C022",
+          "C023",
+          "C024",
+          "C025",
+          "C026",
+          "C027",
+          "C028",
+          "C029",
+          "C030"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다."
+        ],
+        "variation": null,
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+            "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ],
+            "transition_refs": [
+              "T001",
+              "T002",
+              "T005",
+              "T011",
+              "T012",
+              "T013"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 2,
+            "action": "작업을 부트스트랩하고 MD 또는 TXT 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+            "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다.",
+            "source_area_refs": [
+              "task-lifecycle-and-stage-navigation",
+              "document-upload-and-parsing",
+              "parsed-data-inspection"
+            ],
+            "transition_refs": [
+              "T066",
+              "T067"
+            ]
+          },
+          {
+            "position": 3,
+            "journey_milestone_position": 3,
+            "action": "Parsed DB에서 검색과 진단을 수행하고 업무흐름을 선택하여 매핑 검증을 확인한 뒤 시나리오·테스트 케이스 생성을 요청한다.",
+            "observable_outcome": "선택 범위와 매핑 검증 결과가 표시되고 생성 요청이 접수된다.",
+            "source_area_refs": [
+              "parsed-data-inspection",
+              "business-flow-mapping-and-generation-request"
+            ],
+            "transition_refs": [
+              "T025",
+              "T026",
+              "T027",
+              "T028",
+              "T058",
+              "T059",
+              "T060",
+              "T061",
+              "T062",
+              "T063",
+              "T064"
+            ]
+          },
+          {
+            "position": 4,
+            "journey_milestone_position": 4,
+            "action": "생성 진행률과 업무흐름별 실행 이력을 확인한다.",
+            "observable_outcome": "생성 진행, 완료 또는 실패 건수가 표시된다.",
+            "source_area_refs": [
+              "scenario-generation-and-traceability-results"
+            ],
+            "transition_refs": [
+              "T032"
+            ]
+          },
+          {
+            "position": 5,
+            "journey_milestone_position": 5,
+            "action": "생성 완료 후 시나리오와 테스트 케이스를 조회하고 CSV와 Excel을 다운로드한다.",
+            "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+            "source_area_refs": [
+              "scenario-generation-and-traceability-results"
+            ],
+            "transition_refs": [
+              "T037",
+              "T038",
+              "T039",
+              "T040",
+              "T041",
+              "T042",
+              "T043",
+              "T044",
+              "T054",
+              "T055",
+              "T056",
+              "T057"
+            ]
+          },
+          {
+            "position": 6,
+            "journey_milestone_position": 6,
+            "action": "메인 셸에서 로그아웃한다.",
+            "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+            "source_area_refs": [
+              "authentication-and-project-selection"
+            ],
+            "transition_refs": [
+              "T008"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "business-result-and-exit",
+          "expected_result": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물을 확보한 뒤 세션이 초기화되고 로그인 흐름으로 돌아간다.",
+          "final_step_position": 6
+        }
+      },
+      {
+        "kind": "boundary",
+        "title": "UTF-8이 아닌 문서 입력이 디코딩 단계에서 거부됨",
+        "journey_ref": "J001",
+        "classification_refs": [
+          "C002",
+          "C006",
+          "C012",
+          "C017",
+          "C023",
+          "C029"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 TS 작업이 준비되어 있다.",
+          "UTF-8로 디코딩되지 않는 문서 입력이 준비되어 있다."
+        ],
+        "variation": {
+          "milestone_position": 2,
+          "condition": "선택한 문서가 UTF-8로 디코딩되지 않는 입력이다.",
+          "expected_outcome": "문서 업로드 요청이 거부되고 UTF-8 인코딩이 필요하다는 오류가 표시되며 파싱 완료 상태로 이동하지 않는다.",
+          "recovery_action": null
+        },
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+            "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 2,
+            "action": "작업을 부트스트랩하고 UTF-8로 디코딩되지 않는 문서를 업로드 및 파싱한다.",
+            "observable_outcome": "문서 업로드 요청이 거부되고 UTF-8 인코딩이 필요하다는 오류가 표시된다.",
+            "source_area_refs": [
+              "task-lifecycle-and-stage-navigation",
+              "document-upload-and-parsing"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "expected-failure",
+          "expected_result": "UTF-8로 디코딩되지 않는 문서가 거부되고 UTF-8 인코딩이 필요하다는 오류가 사용자에게 표시된다.",
+          "final_step_position": 2
+        }
+      },
+      {
+        "kind": "exception",
+        "title": "시나리오 생성 중 실패 상태가 표시됨",
+        "journey_ref": "J001",
+        "classification_refs": [
+          "C004",
+          "C005",
+          "C013",
+          "C014",
+          "C016",
+          "C026",
+          "C030"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "파싱 완료 상태와 검토 가능한 구조 데이터가 준비되어 있다."
+        ],
+        "variation": {
+          "milestone_position": 4,
+          "condition": "생성 요청이 접수된 뒤 생성 작업에서 실패 상태가 표시된다.",
+          "expected_outcome": "생성 진행 화면과 업무흐름별 실행 이력에 실패 건수가 표시되고 정상적인 생성 완료 결과로 이동하지 않는다.",
+          "recovery_action": null
+        },
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+            "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 2,
+            "action": "작업을 부트스트랩하고 MD 또는 TXT 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+            "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다.",
+            "source_area_refs": [
+              "task-lifecycle-and-stage-navigation",
+              "document-upload-and-parsing",
+              "parsed-data-inspection"
+            ]
+          },
+          {
+            "position": 3,
+            "journey_milestone_position": 3,
+            "action": "Parsed DB를 검토하고 업무흐름을 선택하여 매핑 검증을 확인한 뒤 시나리오·테스트 케이스 생성을 요청한다.",
+            "observable_outcome": "선택 범위와 매핑 검증 결과가 표시되고 생성 요청이 접수된다.",
+            "source_area_refs": [
+              "parsed-data-inspection",
+              "business-flow-mapping-and-generation-request"
+            ]
+          },
+          {
+            "position": 4,
+            "journey_milestone_position": 4,
+            "action": "생성 진행률과 업무흐름별 실행 이력을 조회한다.",
+            "observable_outcome": "생성 실패 상태와 실패 건수가 표시된다.",
+            "source_area_refs": [
+              "scenario-generation-and-traceability-results"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "expected-failure",
+          "expected_result": "생성 작업의 실패 상태와 실패 건수가 진행 화면 및 업무흐름별 실행 이력에 표시된다.",
+          "final_step_position": 4
+        }
+      },
+      {
+        "kind": "recovery",
+        "title": "디코딩 실패 입력을 UTF-8 MD/TXT로 교체하여 결과까지 복구",
+        "journey_ref": "J002",
+        "classification_refs": [
+          "C001",
+          "C002",
+          "C003",
+          "C004",
+          "C005",
+          "C006",
+          "C009",
+          "C015",
+          "C021",
+          "C027",
+          "C031",
+          "C032",
+          "C033"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "처음 선택한 입력은 UTF-8로 디코딩되지 않아 업로드 요청이 거부된다.",
+          "다시 선택할 유효한 UTF-8 MD 또는 TXT 문서가 준비되어 있다."
+        ],
+        "variation": {
+          "milestone_position": 3,
+          "condition": "처음 선택한 문서의 업로드 또는 파싱 요청이 UTF-8 디코딩 실패로 거부되어 실패 상태와 오류 메시지가 표시된다.",
+          "expected_outcome": "실패 상태와 오류 메시지가 표시된 뒤 새 파일을 선택할 수 있는 업로드 화면이 유지된다.",
+          "recovery_action": "실패한 파일을 제거하거나 다시 선택하고 유효한 UTF-8 MD 또는 TXT 파일을 업로드하여 파싱을 다시 시작한다."
+        },
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트를 선택하여 TS 작업을 선택하거나 새로 생성한다.",
+            "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 2,
+            "action": "작업을 부트스트랩하고 처음 선택한 문서를 업로드 및 파싱한다.",
+            "observable_outcome": "업로드와 파싱 진행 상태가 표시된다.",
+            "source_area_refs": [
+              "task-lifecycle-and-stage-navigation",
+              "document-upload-and-parsing"
+            ]
+          },
+          {
+            "position": 3,
+            "journey_milestone_position": 3,
+            "action": "UTF-8로 디코딩되지 않는 입력으로 인한 업로드 또는 파싱 실패 메시지를 확인한다.",
+            "observable_outcome": "실패 상태와 UTF-8 인코딩이 필요하다는 오류 메시지가 표시된다.",
+            "source_area_refs": [
+              "document-upload-and-parsing"
+            ]
+          },
+          {
+            "position": 4,
+            "journey_milestone_position": 4,
+            "action": "실패한 파일을 제거하거나 다시 선택하고 유효한 UTF-8 MD 또는 TXT 파일을 선택하여 업로드 및 파싱을 다시 시작한다.",
+            "observable_outcome": "새 파일의 파싱이 다시 시작된다.",
+            "source_area_refs": [
+              "document-upload-and-parsing"
+            ]
+          },
+          {
+            "position": 5,
+            "journey_milestone_position": 5,
+            "action": "파싱 완료를 확인하고 Parsed DB에서 데이터를 검색 및 진단한 뒤 업무흐름을 선택하여 매핑 검증과 생성 요청을 수행하고 진행 상태를 확인한다.",
+            "observable_outcome": "파싱 데이터, 매핑 검증 결과, 생성 요청과 진행 상태가 표시된다.",
+            "source_area_refs": [
+              "document-upload-and-parsing",
+              "parsed-data-inspection",
+              "business-flow-mapping-and-generation-request",
+              "scenario-generation-and-traceability-results"
+            ]
+          },
+          {
+            "position": 6,
+            "journey_milestone_position": 6,
+            "action": "생성 결과에서 시나리오와 테스트 케이스를 확인하고 Excel을 다운로드한다.",
+            "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+            "source_area_refs": [
+              "scenario-generation-and-traceability-results"
+            ]
+          },
+          {
+            "position": 7,
+            "journey_milestone_position": 7,
+            "action": "메인 셸에서 로그아웃한다.",
+            "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+            "source_area_refs": [
+              "authentication-and-project-selection"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "business-result-and-exit",
+          "expected_result": "유효한 UTF-8 MD 또는 TXT 문서의 파싱 이후 선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보하고 세션이 초기화된다.",
+          "final_step_position": 7
+        }
+      },
+      {
+        "kind": "normal",
+        "title": "기존 TS 작업을 선택하여 문서부터 추적성 매트릭스까지 완료",
+        "journey_ref": "J001",
+        "classification_refs": [
+          "C001",
+          "C002",
+          "C003",
+          "C004",
+          "C005",
+          "C006",
+          "C007",
+          "C008",
+          "C010",
+          "C011",
+          "C012",
+          "C013",
+          "C014",
+          "C016",
+          "C017",
+          "C018",
+          "C019",
+          "C020",
+          "C022",
+          "C023",
+          "C024",
+          "C025",
+          "C026",
+          "C027",
+          "C028",
+          "C029",
+          "C030"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "선택할 기존 TS 작업이 준비되어 있다."
+        ],
+        "variation": null,
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트 카드를 선택하고 TS 작업 메뉴에서 기존 TS 작업을 선택한다.",
+            "observable_outcome": "인증 세션, 선택 프로젝트와 기존 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 2,
+            "action": "선택한 작업을 부트스트랩하고 MD 또는 TXT 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+            "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다.",
+            "source_area_refs": [
+              "task-lifecycle-and-stage-navigation",
+              "document-upload-and-parsing",
+              "parsed-data-inspection"
+            ]
+          },
+          {
+            "position": 3,
+            "journey_milestone_position": 3,
+            "action": "Parsed DB에서 업무 탭의 페이지를 조회하고 검색어로 업무흐름을 찾은 뒤 업무흐름을 선택하여 매핑 검증을 확인하고 생성을 요청한다.",
+            "observable_outcome": "검색된 업무흐름의 선택 범위와 매핑 검증 결과가 표시되고 생성 요청이 접수된다.",
+            "source_area_refs": [
+              "parsed-data-inspection",
+              "business-flow-mapping-and-generation-request"
+            ]
+          },
+          {
+            "position": 4,
+            "journey_milestone_position": 4,
+            "action": "생성 진행 화면에서 진행률과 업무흐름별 실행 이력을 확인한다.",
+            "observable_outcome": "생성 진행률과 업무흐름별 완료 상태가 표시된다.",
+            "source_area_refs": [
+              "scenario-generation-and-traceability-results"
+            ]
+          },
+          {
+            "position": 5,
+            "journey_milestone_position": 5,
+            "action": "생성 완료 후 시나리오와 테스트 케이스를 조회하고 CSV와 Excel을 다운로드한다.",
+            "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물이 제공된다.",
+            "source_area_refs": [
+              "scenario-generation-and-traceability-results"
+            ]
+          },
+          {
+            "position": 6,
+            "journey_milestone_position": 6,
+            "action": "메인 셸에서 로그아웃한다.",
+            "observable_outcome": "세션이 초기화되고 로그인 폼으로 돌아간다.",
+            "source_area_refs": [
+              "authentication-and-project-selection"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "business-result-and-exit",
+          "expected_result": "기존 TS 작업에서 선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 CSV·Excel 추적성 산출물을 확보한 뒤 세션이 초기화되고 로그인 폼으로 돌아간다.",
+          "final_step_position": 6
+        }
+      },
+      {
+        "kind": "recovery",
+        "title": "업로드 API 오류 후 유효한 UTF-8 문서로 결과까지 복구",
+        "journey_ref": "J002",
+        "classification_refs": [
+          "C001",
+          "C002",
+          "C003",
+          "C004",
+          "C005",
+          "C006",
+          "C009",
+          "C015",
+          "C021",
+          "C027",
+          "C031",
+          "C032",
+          "C033"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "처음 선택한 입력은 UTF-8로 디코딩되지 않는 파일이며 업로드 요청이 400 오류로 거부된다.",
+          "재선택할 유효한 UTF-8 MD 또는 TXT 파일이 준비되어 있다.",
+          "비동기 파싱 실패의 정확한 입력 원인은 이 사례의 전제에서 확정하지 않는다."
+        ],
+        "variation": {
+          "milestone_position": 3,
+          "condition": "처음 선택한 파일의 업로드 요청이 오류 응답으로 실패 상태가 된다.",
+          "expected_outcome": "업로드 화면에 오류 메시지가 표시되고 실패한 파일을 다시 선택할 수 있는 상태가 된다.",
+          "recovery_action": "실패한 파일을 제거하고 유효한 UTF-8 MD 또는 TXT 파일을 다시 선택하여 업로드 및 파싱을 시작한다."
+        },
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트 카드를 선택하고 TS 작업을 선택한다.",
+            "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 2,
+            "action": "처음 선택한 MD 또는 TXT 파일을 업로드 및 파싱한다.",
+            "observable_outcome": "업로드 요청이 전송되고 파싱 준비 상태가 표시된다.",
+            "source_area_refs": [
+              "task-lifecycle-and-stage-navigation",
+              "document-upload-and-parsing"
+            ]
+          },
+          {
+            "position": 3,
+            "journey_milestone_position": 3,
+            "action": "업로드 API 오류로 표시된 실패 메시지를 확인한다.",
+            "observable_outcome": "업로드 화면에 오류 메시지가 표시되고 정상 파싱 완료 상태로 이동하지 않는다.",
+            "source_area_refs": [
+              "document-upload-and-parsing"
+            ]
+          },
+          {
+            "position": 4,
+            "journey_milestone_position": 4,
+            "action": "실패한 파일을 제거하고 유효한 UTF-8 MD 또는 TXT 파일을 다시 선택하여 업로드 및 파싱을 시작한다.",
+            "observable_outcome": "새 파일의 업로드가 수락되고 파싱 진행 상태가 다시 표시된다.",
+            "source_area_refs": [
+              "document-upload-and-parsing"
+            ]
+          },
+          {
+            "position": 5,
+            "journey_milestone_position": 5,
+            "action": "파싱 완료를 확인하고 Parsed DB에서 데이터를 검색 및 진단한 뒤 업무흐름을 선택하여 매핑 검증과 생성 요청을 수행하고 진행 상태를 확인한다.",
+            "observable_outcome": "파싱 데이터, 매핑 검증 결과, 생성 요청과 생성 진행 상태가 표시된다.",
+            "source_area_refs": [
+              "document-upload-and-parsing",
+              "parsed-data-inspection",
+              "business-flow-mapping-and-generation-request",
+              "scenario-generation-and-traceability-results"
+            ]
+          },
+          {
+            "position": 6,
+            "journey_milestone_position": 6,
+            "action": "생성 결과에서 시나리오와 테스트 케이스를 확인하고 Excel을 다운로드한다.",
+            "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 Excel 추적성 산출물이 제공된다.",
+            "source_area_refs": [
+              "scenario-generation-and-traceability-results"
+            ]
+          },
+          {
+            "position": 7,
+            "journey_milestone_position": 7,
+            "action": "메인 셸에서 로그아웃한다.",
+            "observable_outcome": "세션이 초기화되고 로그인 폼으로 돌아간다.",
+            "source_area_refs": [
+              "authentication-and-project-selection"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "business-result-and-exit",
+          "expected_result": "업로드 API 오류 뒤 유효한 UTF-8 MD 또는 TXT 문서를 파싱하여 선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 Excel 추적성 산출물을 확보하고 세션이 초기화된다.",
+          "final_step_position": 7
+        }
+      },
+      {
+        "kind": "boundary",
+        "title": "프로젝트 목록이 비어 초기 작업공간에 진입하지 못함",
+        "journey_ref": "J001",
+        "classification_refs": [
+          "C001",
+          "C006",
+          "C008",
+          "C011",
+          "C017",
+          "C023",
+          "C028"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "로그인이 성공하고 프로젝트 목록 조회 응답이 빈 목록이다."
+        ],
+        "variation": {
+          "milestone_position": 1,
+          "condition": "로그인 성공 후 프로젝트 목록의 항목 수가 0이다.",
+          "expected_outcome": "프로젝트 선택 화면에 조회된 프로젝트가 없다는 메시지가 표시되고 메인 셸과 TS 작업 컨텍스트로 이동하지 않는다.",
+          "recovery_action": null
+        },
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한다.",
+            "observable_outcome": "프로젝트 선택 화면이 표시되고 프로젝트 목록 조회가 완료된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 1,
+            "action": "표시된 프로젝트 목록을 확인한다.",
+            "observable_outcome": "프로젝트 카드가 표시되지 않고 조회된 프로젝트가 없다는 오류 메시지가 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "expected-failure",
+          "expected_result": "프로젝트 목록이 비어 조회된 프로젝트가 없다는 메시지가 표시되며 TS 작업 메인 셸에 진입하지 못한다.",
+          "final_step_position": 2
+        }
+      },
+      {
+        "kind": "exception",
+        "title": "업무흐름 화면 정합성 조회의 네트워크 오류가 표시됨",
+        "journey_ref": "J001",
+        "classification_refs": [
+          "C003",
+          "C004",
+          "C006",
+          "C010",
+          "C013",
+          "C017",
+          "C018",
+          "C020",
+          "C024",
+          "C025",
+          "C026",
+          "C028",
+          "C029"
+        ],
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "파싱 완료 상태와 검토 가능한 구조 데이터가 준비되어 있다.",
+          "선택한 업무흐름의 화면 정합성 조회에서 네트워크 오류가 발생한다."
+        ],
+        "variation": {
+          "milestone_position": 3,
+          "condition": "선택한 업무흐름의 화면 정합성 조회 요청이 네트워크 오류로 실패한다.",
+          "expected_outcome": "매핑 검증 화면에 네트워크 오류 메시지가 표시되고 정합성 진단 결과가 표시되지 않는다.",
+          "recovery_action": null
+        },
+        "steps": [
+          {
+            "position": 1,
+            "journey_milestone_position": 1,
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트 카드를 선택하고 TS 작업을 선택한다.",
+            "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+            "source_area_refs": [
+              "authentication-and-project-selection",
+              "task-lifecycle-and-stage-navigation"
+            ]
+          },
+          {
+            "position": 2,
+            "journey_milestone_position": 2,
+            "action": "작업의 파싱 완료 상태를 확인하고 Parsed DB로 이동한다.",
+            "observable_outcome": "파싱된 업무, 화면, 필드, 이벤트와 업무흐름 데이터가 표시된다.",
+            "source_area_refs": [
+              "task-lifecycle-and-stage-navigation",
+              "document-upload-and-parsing",
+              "parsed-data-inspection"
+            ]
+          },
+          {
+            "position": 3,
+            "journey_milestone_position": 3,
+            "action": "업무 매핑 화면에서 업무흐름을 선택하고 화면 정합성 진단을 조회한다.",
+            "observable_outcome": "화면 정합성 조회가 실패하고 매핑 검증 화면에 네트워크 오류 메시지가 표시된다.",
+            "source_area_refs": [
+              "parsed-data-inspection",
+              "business-flow-mapping-and-generation-request"
+            ]
+          }
+        ],
+        "terminal": {
+          "kind": "expected-failure",
+          "expected_result": "선택한 업무흐름의 화면 정합성 조회 네트워크 오류 메시지가 표시되고 정합성 진단 결과가 표시되지 않는다.",
+          "final_step_position": 3
+        }
+      }
+    ],
+    "unresolved": [
+      {
+        "description": "비동기 파싱 실패를 일으키는 정확한 입력 원인은 확정되지 않았다.",
+        "reason": "소스는 UTF-8 디코딩 실패 입력의 즉시 거부와 유효한 UTF-8 대체 입력의 재시작 경로를 입증하지만, 비동기 파싱 실패의 구체적 트리거는 입증하지 않는다.",
+        "journey_refs": [
+          "J002"
+        ],
+        "classification_refs": [
+          "C015",
+          "C032"
+        ],
+        "source_area_refs": [
+          "document-upload-and-parsing"
+        ],
+        "source_refs_to_revisit": [
+          "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "SRC-frontend-src-features-upload-upload-api-f7939e13",
+          "SRC-backend-app-api-v1-tasks-d0e77ec2"
+        ]
+      },
+      {
+        "description": "생성 실패 또는 부분 완료 뒤 재요청 조작과 기존 결과 보존 규칙은 확정되지 않았다.",
+        "reason": "소스는 실패 건수와 진행 상태 조회를 입증하지만 재요청 방식과 기존 결과 처리 규칙은 충분히 입증하지 않는다.",
+        "journey_refs": [
+          "J001"
+        ],
+        "classification_refs": [
+          "C016",
+          "C026"
+        ],
+        "source_area_refs": [
+          "scenario-generation-and-traceability-results",
+          "business-flow-mapping-and-generation-request"
+        ],
+        "source_refs_to_revisit": [
+          "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+          "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+          "SRC-backend-app-repositories-scenario-repository-c0346a9c"
+        ]
+      },
+      {
+        "description": "인증 이후 실제 권한 규칙과 프로젝트별 접근 경계는 확정되지 않았다.",
+        "reason": "인증 세션과 프로젝트 컨텍스트 전이는 확인되지만 프로젝트별 권한 차이나 조직 경계는 입증되지 않았다.",
+        "journey_refs": [
+          "J001"
+        ],
+        "classification_refs": [
+          "C008"
+        ],
+        "source_area_refs": [
+          "authentication-and-project-selection",
+          "task-lifecycle-and-stage-navigation"
+        ],
+        "source_refs_to_revisit": [
+          "SRC-backend-app-api-v1-auth-9d56dc7e",
+          "SRC-backend-app-core-auth-7c627b43",
+          "SRC-backend-app-core-security-3b18f773"
+        ]
+      }
+    ]
+  },
+  "scenario_case_evidence_bindings": [
+    {
+      "case_position": 0,
+      "journey_ref": "J001",
+      "kind": "normal",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C010",
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020",
+        "C022",
+        "C023",
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C028",
+        "C029",
+        "C030"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023",
+        "EV-C-0001",
+        "EV-C-0015",
+        "EV-C-0017",
+        "EV-C-0018",
+        "EV-C-0024",
+        "EV-C-0025",
+        "EV-C-0026",
+        "EV-C-0027",
+        "EV-C-0028",
+        "EV-C-0002",
+        "EV-C-0010",
+        "EV-C-0019",
+        "EV-C-0005",
+        "EV-C-0006",
+        "EV-C-0009"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 2,
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0014",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 3,
+          "journey_milestone_position": 3,
+          "source_area_refs": [
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0002",
+            "EV-C-0010",
+            "EV-C-0018",
+            "EV-C-0019",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0026"
+          ]
+        },
+        {
+          "step_position": 4,
+          "journey_milestone_position": 4,
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0019",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 5,
+          "journey_milestone_position": 5,
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0019",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 6,
+          "journey_milestone_position": 6,
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022"
+          ]
+        }
+      ]
+    },
+    {
+      "case_position": 1,
+      "journey_ref": "J001",
+      "kind": "boundary",
+      "classification_refs": [
+        "C002",
+        "C006",
+        "C012",
+        "C017",
+        "C023",
+        "C029"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023",
+        "EV-C-0001",
+        "EV-C-0015",
+        "EV-C-0017",
+        "EV-C-0018",
+        "EV-C-0025",
+        "EV-C-0026",
+        "EV-C-0027",
+        "EV-C-0028"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 2,
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0014",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        }
+      ]
+    },
+    {
+      "case_position": 2,
+      "journey_ref": "J001",
+      "kind": "exception",
+      "classification_refs": [
+        "C004",
+        "C005",
+        "C013",
+        "C014",
+        "C016",
+        "C026",
+        "C030"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023",
+        "EV-C-0001",
+        "EV-C-0015",
+        "EV-C-0017",
+        "EV-C-0018",
+        "EV-C-0024",
+        "EV-C-0025",
+        "EV-C-0026",
+        "EV-C-0027",
+        "EV-C-0028",
+        "EV-C-0002",
+        "EV-C-0010",
+        "EV-C-0019",
+        "EV-C-0005",
+        "EV-C-0006",
+        "EV-C-0009"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 2,
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0014",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 3,
+          "journey_milestone_position": 3,
+          "source_area_refs": [
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0002",
+            "EV-C-0010",
+            "EV-C-0018",
+            "EV-C-0019",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0026"
+          ]
+        },
+        {
+          "step_position": 4,
+          "journey_milestone_position": 4,
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0019",
+            "EV-C-0023"
+          ]
+        }
+      ]
+    },
+    {
+      "case_position": 3,
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C009",
+        "C015",
+        "C021",
+        "C027",
+        "C031",
+        "C032",
+        "C033"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023",
+        "EV-C-0001",
+        "EV-C-0015",
+        "EV-C-0017",
+        "EV-C-0018",
+        "EV-C-0025",
+        "EV-C-0026",
+        "EV-C-0027",
+        "EV-C-0028",
+        "EV-C-0002",
+        "EV-C-0005",
+        "EV-C-0006",
+        "EV-C-0009",
+        "EV-C-0010",
+        "EV-C-0019",
+        "EV-C-0024"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 2,
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0014",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 3,
+          "journey_milestone_position": 3,
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 4,
+          "journey_milestone_position": 4,
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 5,
+          "journey_milestone_position": 5,
+          "source_area_refs": [
+            "document-upload-and-parsing",
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request",
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0019",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 6,
+          "journey_milestone_position": 6,
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0019",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 7,
+          "journey_milestone_position": 7,
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022"
+          ]
+        }
+      ]
+    },
+    {
+      "case_position": 4,
+      "journey_ref": "J001",
+      "kind": "normal",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C010",
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020",
+        "C022",
+        "C023",
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C028",
+        "C029",
+        "C030"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023",
+        "EV-C-0001",
+        "EV-C-0015",
+        "EV-C-0017",
+        "EV-C-0018",
+        "EV-C-0024",
+        "EV-C-0025",
+        "EV-C-0026",
+        "EV-C-0027",
+        "EV-C-0028",
+        "EV-C-0002",
+        "EV-C-0010",
+        "EV-C-0019",
+        "EV-C-0005",
+        "EV-C-0006",
+        "EV-C-0009"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 2,
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0014",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 3,
+          "journey_milestone_position": 3,
+          "source_area_refs": [
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0002",
+            "EV-C-0010",
+            "EV-C-0018",
+            "EV-C-0019",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0026"
+          ]
+        },
+        {
+          "step_position": 4,
+          "journey_milestone_position": 4,
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0019",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 5,
+          "journey_milestone_position": 5,
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0019",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 6,
+          "journey_milestone_position": 6,
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022"
+          ]
+        }
+      ]
+    },
+    {
+      "case_position": 5,
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C009",
+        "C015",
+        "C021",
+        "C027",
+        "C031",
+        "C032",
+        "C033"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023",
+        "EV-C-0001",
+        "EV-C-0015",
+        "EV-C-0017",
+        "EV-C-0018",
+        "EV-C-0025",
+        "EV-C-0026",
+        "EV-C-0027",
+        "EV-C-0028",
+        "EV-C-0002",
+        "EV-C-0005",
+        "EV-C-0006",
+        "EV-C-0009",
+        "EV-C-0010",
+        "EV-C-0019",
+        "EV-C-0024"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 2,
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0014",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 3,
+          "journey_milestone_position": 3,
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 4,
+          "journey_milestone_position": 4,
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 5,
+          "journey_milestone_position": 5,
+          "source_area_refs": [
+            "document-upload-and-parsing",
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request",
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0019",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 6,
+          "journey_milestone_position": 6,
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "evidence_refs": [
+            "EV-C-0002",
+            "EV-C-0005",
+            "EV-C-0006",
+            "EV-C-0009",
+            "EV-C-0010",
+            "EV-C-0019",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 7,
+          "journey_milestone_position": 7,
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022"
+          ]
+        }
+      ]
+    },
+    {
+      "case_position": 6,
+      "journey_ref": "J001",
+      "kind": "boundary",
+      "classification_refs": [
+        "C001",
+        "C006",
+        "C008",
+        "C011",
+        "C017",
+        "C023",
+        "C028"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        }
+      ]
+    },
+    {
+      "case_position": 7,
+      "journey_ref": "J001",
+      "kind": "exception",
+      "classification_refs": [
+        "C003",
+        "C004",
+        "C006",
+        "C010",
+        "C013",
+        "C017",
+        "C018",
+        "C020",
+        "C024",
+        "C025",
+        "C026",
+        "C028",
+        "C029"
+      ],
+      "evidence_refs": [
+        "EV-C-0011",
+        "EV-C-0012",
+        "EV-C-0013",
+        "EV-C-0014",
+        "EV-C-0020",
+        "EV-C-0021",
+        "EV-C-0022",
+        "EV-C-0023",
+        "EV-C-0001",
+        "EV-C-0015",
+        "EV-C-0017",
+        "EV-C-0018",
+        "EV-C-0024",
+        "EV-C-0025",
+        "EV-C-0026",
+        "EV-C-0027",
+        "EV-C-0028",
+        "EV-C-0002",
+        "EV-C-0010",
+        "EV-C-0019"
+      ],
+      "steps": [
+        {
+          "step_position": 1,
+          "journey_milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "evidence_refs": [
+            "EV-C-0011",
+            "EV-C-0012",
+            "EV-C-0013",
+            "EV-C-0014",
+            "EV-C-0020",
+            "EV-C-0021",
+            "EV-C-0022",
+            "EV-C-0023"
+          ]
+        },
+        {
+          "step_position": 2,
+          "journey_milestone_position": 2,
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0014",
+            "EV-C-0015",
+            "EV-C-0017",
+            "EV-C-0018",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0025",
+            "EV-C-0026",
+            "EV-C-0027",
+            "EV-C-0028"
+          ]
+        },
+        {
+          "step_position": 3,
+          "journey_milestone_position": 3,
+          "source_area_refs": [
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request"
+          ],
+          "evidence_refs": [
+            "EV-C-0001",
+            "EV-C-0002",
+            "EV-C-0010",
+            "EV-C-0018",
+            "EV-C-0019",
+            "EV-C-0023",
+            "EV-C-0024",
+            "EV-C-0026"
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence_catalog": [
+    {
+      "evidence_ref": "EV-C-0001",
+      "evidence": {
+        "source_id": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/api/v1/tasks.py",
+        "start_line": 1,
+        "end_line": 202,
+        "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0002",
+      "evidence": {
+        "source_id": "SRC-backend-app-api-v1-workflows-d9740180",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/api/v1/workflows.py",
+        "start_line": 1,
+        "end_line": 231,
+        "content_hash": "sha256:d0880b970a1596e7c6763a82d39116a5c27902c217ed7f57ab9dc2d7d622e329",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0003",
+      "evidence": {
+        "source_id": "SRC-backend-app-core-auth-7c627b43",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/core/auth.py",
+        "start_line": 1,
+        "end_line": 39,
+        "content_hash": "sha256:1676f4883a06062f1ca60f9d5aefc2f4b7044e84dcc05cf23db5c1b087439fe8",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0004",
+      "evidence": {
+        "source_id": "SRC-backend-app-core-security-3b18f773",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/core/security.py",
+        "start_line": 1,
+        "end_line": 99,
+        "content_hash": "sha256:2d555128e4cc73ed83c6361f39cf64349878a781e0c2a73c876ae8cbe6c7e654",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0005",
+      "evidence": {
+        "source_id": "SRC-backend-app-exporters-scenario-matrix-csv-c0846f48",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/exporters/scenario_matrix_csv.py",
+        "start_line": 1,
+        "end_line": 13,
+        "content_hash": "sha256:e123a5358ea31258990854d70b09cd019fa6957abf475ef868c281925e287e1b",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0006",
+      "evidence": {
+        "source_id": "SRC-backend-app-exporters-scenario-matrix-xlsx-b8aa5849",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/exporters/scenario_matrix_xlsx.py",
+        "start_line": 1,
+        "end_line": 40,
+        "content_hash": "sha256:229a0cf2737c324b054621b01eb28b139b4ef0758384aa6f3a6f68f6bdf76f91",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0007",
+      "evidence": {
+        "source_id": "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/repositories/gen_progress_repository.py",
+        "start_line": 1,
+        "end_line": 122,
+        "content_hash": "sha256:2601d7c0c79f1f1846a5251b8f824a3944654696f5d4412e6c8f1cac822084a4",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0008",
+      "evidence": {
+        "source_id": "SRC-backend-app-repositories-scenario-repository-c0346a9c",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/repositories/scenario_repository.py",
+        "start_line": 1,
+        "end_line": 336,
+        "content_hash": "sha256:5f109c02abec880493fe7d3e141830926be131dc786bea78f631db0868512b83",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0009",
+      "evidence": {
+        "source_id": "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/services/scenario_generation_service.py",
+        "start_line": 1,
+        "end_line": 211,
+        "content_hash": "sha256:6555d8589fe83f39af19c9a9e195957e007c5dc0a05bf65c6092f28fa7e8bd13",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0010",
+      "evidence": {
+        "source_id": "SRC-backend-app-services-workflow-service-3f39109c",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/services/workflow_service.py",
+        "start_line": 1,
+        "end_line": 143,
+        "content_hash": "sha256:864aba1ad0d9e62d38fcf8fd8167ed92d54cf3db8d950e5b0a2f1570d474af34",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0011",
+      "evidence": {
+        "source_id": "SRC-frontend-src-app-a0eba768",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/App.jsx",
+        "start_line": 1,
+        "end_line": 23,
+        "content_hash": "sha256:cd16062b2a6d3f9701f6b770d77e94790a90402094d86a64abcf3a639ffc757a",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0012",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/login/login-form.page.jsx",
+        "start_line": 1,
+        "end_line": 116,
+        "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0013",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/login/login.page.jsx",
+        "start_line": 1,
+        "end_line": 121,
+        "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0014",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/tasks/tasks.api.js",
+        "start_line": 1,
+        "end_line": 96,
+        "content_hash": "sha256:6c2972cce43b46f0c4f18f249be612d028476b0e0b0833bdbeb22bfe86c0a56d",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0015",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-upload-upload-api-f7939e13",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/upload/upload.api.js",
+        "start_line": 1,
+        "end_line": 37,
+        "content_hash": "sha256:21f0825c024eec6bdf3364e0918e6d309017d36f861a2da9c17123052ff79163",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0016",
+      "evidence": {
+        "source_id": "SRC-frontend-src-services-auth-client-ca68acc1",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/services/auth-client.js",
+        "start_line": 1,
+        "end_line": 24,
+        "content_hash": "sha256:8b05b019a1372686a75be185cfc4c8e5a7b58bb0cf6b5529d9eef9f48ca607f3",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-e85e626c"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0017",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/upload/pages/upload.page.jsx",
+        "start_line": 1,
+        "end_line": 272,
+        "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-082b089d"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0018",
+      "evidence": {
+        "source_id": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/api/v1/tasks.py",
+        "start_line": 1,
+        "end_line": 202,
+        "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0019",
+      "evidence": {
+        "source_id": "SRC-backend-app-api-v1-workflows-d9740180",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/api/v1/workflows.py",
+        "start_line": 1,
+        "end_line": 231,
+        "content_hash": "sha256:d0880b970a1596e7c6763a82d39116a5c27902c217ed7f57ab9dc2d7d622e329",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0020",
+      "evidence": {
+        "source_id": "SRC-frontend-src-app-a0eba768",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/App.jsx",
+        "start_line": 1,
+        "end_line": 23,
+        "content_hash": "sha256:cd16062b2a6d3f9701f6b770d77e94790a90402094d86a64abcf3a639ffc757a",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0021",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/login/login-form.page.jsx",
+        "start_line": 1,
+        "end_line": 116,
+        "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0022",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/login/login.page.jsx",
+        "start_line": 1,
+        "end_line": 121,
+        "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0023",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/main/pages/main.page.jsx",
+        "start_line": 1,
+        "end_line": 1585,
+        "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0024",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+        "start_line": 1,
+        "end_line": 361,
+        "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0025",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/upload/pages/upload.page.jsx",
+        "start_line": 1,
+        "end_line": 272,
+        "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-c3d11b73"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0026",
+      "evidence": {
+        "source_id": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "backend/app/api/v1/tasks.py",
+        "start_line": 1,
+        "end_line": 202,
+        "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-9fffc7af"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0027",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/upload/pages/upload.page.jsx",
+        "start_line": 1,
+        "end_line": 272,
+        "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-9fffc7af"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0028",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-upload-upload-api-f7939e13",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/features/upload/upload.api.js",
+        "start_line": 1,
+        "end_line": 37,
+        "content_hash": "sha256:21f0825c024eec6bdf3364e0918e6d309017d36f861a2da9c17123052ff79163",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-9fffc7af"
+      }
+    },
+    {
+      "evidence_ref": "EV-C-0029",
+      "evidence": {
+        "source_id": "SRC-frontend-src-services-auth-client-ca68acc1",
+        "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+        "path": "frontend/src/services/auth-client.js",
+        "start_line": 1,
+        "end_line": 24,
+        "content_hash": "sha256:8b05b019a1372686a75be185cfc4c8e5a7b58bb0cf6b5529d9eef9f48ca607f3",
+        "evidence_grant_id": "EVG-WORK-AXSE-SCENARIO-CASES-9fffc7af"
+      }
+    }
+  ]
+}

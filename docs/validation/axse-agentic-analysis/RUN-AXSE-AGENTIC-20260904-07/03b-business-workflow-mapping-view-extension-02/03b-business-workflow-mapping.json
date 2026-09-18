@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-BUSINESS-WORKFLOW-MAPPING",
+    "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+    "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+    "classification_artifact_id": "03-business-classification",
+    "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+    "fact_graph_artifact_id": "03a-fact-graph",
+    "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+    "extension_from": "03b-business-workflow-mapping",
+    "extension_fact_from": "03a-fact-graph-correction-02",
+    "reused_mapping_from": "03b-business-workflow-mapping-view-extension-01",
+    "generated_with": "backend-deterministic-recompile"
+  },
+  "artifacts": {
+    "workflow_classification_mapping": {
+      "path": "workflow-classification-mapping.json",
+      "content_hash": "sha256:d03011a453b430de03ce5609fb22e0d35971e86a59c6a046dd81e11be45e058f"
+    },
+    "workflow_classification_mapping_delta": {
+      "path": "workflow-classification-mapping-delta.json",
+      "content_hash": "sha256:f665884729277cf7a83b20798c0b3a3a1d54ecba6b369144b3486aa3b317a951"
+    },
+    "business_catalog": {
+      "path": "business-catalog.json",
+      "content_hash": "sha256:5d43c5c9500ae8de4aa2b7f1ceafc6402c5f3b9e486c418720d2f5ded1471eb5"
+    }
+  }
+}

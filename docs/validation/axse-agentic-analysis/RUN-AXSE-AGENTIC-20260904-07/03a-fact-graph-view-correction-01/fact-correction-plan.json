@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:2d8c3c6d14785c431e9d9e1d1f9023e895b9daf0bbe83ede927ea8bc818273c0",
+  "element_update_fields": {
+    "U1": [
+      "action_kind"
+    ],
+    "U10": [
+      "action_kind"
+    ],
+    "U13": [
+      "action_kind"
+    ],
+    "U15": [
+      "action_kind"
+    ],
+    "U30": [
+      "action_kind"
+    ],
+    "U33": [
+      "action_kind"
+    ],
+    "U35": [
+      "action_kind"
+    ],
+    "U37": [
+      "action_kind"
+    ],
+    "U38": [
+      "action_kind"
+    ],
+    "U40": [
+      "action_kind"
+    ],
+    "U41": [
+      "action_kind"
+    ],
+    "U45": [
+      "action_kind"
+    ],
+    "U46": [
+      "action_kind"
+    ],
+    "U47": [
+      "action_kind"
+    ],
+    "U49": [
+      "action_kind"
+    ],
+    "U50": [
+      "action_kind"
+    ],
+    "U57": [
+      "action_kind"
+    ],
+    "U58": [
+      "action_kind"
+    ],
+    "U6": [
+      "action_kind"
+    ],
+    "U7": [
+      "action_kind"
+    ],
+    "U8": [
+      "action_kind"
+    ],
+    "U9": [
+      "action_kind"
+    ]
+  },
+  "predicate_element_refs": [
+    "U1",
+    "U10",
+    "U13",
+    "U15",
+    "U30",
+    "U33",
+    "U35",
+    "U37",
+    "U38",
+    "U40",
+    "U41",
+    "U45",
+    "U46",
+    "U47",
+    "U49",
+    "U50",
+    "U57",
+    "U58",
+    "U6",
+    "U7",
+    "U8",
+    "U9"
+  ],
+  "replace_edge_indexes": [],
+  "add_edge_element_refs": [
+    "U1",
+    "U10",
+    "U13",
+    "U15",
+    "U30",
+    "U33",
+    "U35",
+    "U37",
+    "U38",
+    "U40",
+    "U41",
+    "U45",
+    "U46",
+    "U47",
+    "U49",
+    "U50",
+    "U57",
+    "U58",
+    "U6",
+    "U7",
+    "U8",
+    "U9"
+  ]
+}

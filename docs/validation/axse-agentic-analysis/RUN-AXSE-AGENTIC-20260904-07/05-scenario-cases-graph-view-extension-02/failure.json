@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "graph-scenario-input-validation",
+  "error_code": "GRAPH_SCENARIO_EXTENSION_BASE_DRIFT"
+}

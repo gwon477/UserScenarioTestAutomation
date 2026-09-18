@@ -1,0 +1,17 @@
+{
+  "name": "@scenarioforge/scenario-pipeline",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./source-interaction-behavior": "./src/scanning/source-interaction-behavior.ts"
+  },
+  "scripts": { "test": "vitest run", "typecheck": "tsc --noEmit -p tsconfig.json" },
+  "dependencies": {
+    "@scenarioforge/contracts": "*",
+    "@scenarioforge/project-runtime": "*",
+    "@scenarioforge/runtime-state": "*",
+    "typescript-compiler": "npm:typescript@5.9.3"
+  }
+}

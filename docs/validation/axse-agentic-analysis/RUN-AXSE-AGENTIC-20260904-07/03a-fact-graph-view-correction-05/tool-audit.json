@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "FACT_PATCH_SCHEMA_INVALID",
+      "artifact_id": "03a-fact-graph"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-3969bc49",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-GAP-REVIEW",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-app-a0eba768",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/App.jsx",
+      "start_line": 1,
+      "end_line": 23,
+      "content_hash": "sha256:cd16062b2a6d3f9701f6b770d77e94790a90402094d86a64abcf3a639ffc757a",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-3969bc49"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "start_line": 1,
+      "end_line": 121,
+      "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-3969bc49"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+      "start_line": 1,
+      "end_line": 361,
+      "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-3969bc49"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/tasks/tasks.api.js",
+      "start_line": 1,
+      "end_line": 96,
+      "content_hash": "sha256:6c2972cce43b46f0c4f18f249be612d028476b0e0b0833bdbeb22bfe86c0a56d",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-3969bc49"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/upload/pages/upload.page.jsx",
+      "start_line": 1,
+      "end_line": 272,
+      "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-3969bc49"
+    }
+  ],
+  "created_at": "2026-09-04T05:16:19.256Z"
+}

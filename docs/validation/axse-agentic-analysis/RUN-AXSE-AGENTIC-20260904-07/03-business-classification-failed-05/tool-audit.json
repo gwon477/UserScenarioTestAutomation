@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review-validation"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 5,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "AGENTIC_SOURCE_TOOLS_NOT_USED",
+      "validation_issues": [],
+      "artifact_id": "03-business-classification"
+    }
+  ]
+}

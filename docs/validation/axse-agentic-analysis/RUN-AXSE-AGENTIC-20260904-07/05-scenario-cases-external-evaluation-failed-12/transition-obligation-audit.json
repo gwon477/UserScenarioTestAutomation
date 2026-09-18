@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "artifact_type": "post-generation-transition-obligation-audit",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "golden_derived": false,
+  "branch_inventory_status": "lower-bound",
+  "source_analysis": {
+    "scanner_interactions": 63,
+    "resolved_handler_interactions": 58,
+    "unresolved_interactions": 5,
+    "total_transition_obligations": 69,
+    "journey_obligations": 42,
+    "view_obligations": 27,
+    "source_supported_obligations": 34,
+    "runtime_unverified_obligations": 35
+  },
+  "source_survey_inventory_audit": {
+    "total_route_api_interaction_records": 73,
+    "records_cited_by_survey_evidence": 67,
+    "records_not_cited_by_survey_evidence": 6,
+    "affected_source_refs": [
+      "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1"
+    ]
+  },
+  "candidate_assessment": {
+    "case_count": 8,
+    "transition_ref_count": 0,
+    "coverage_status": "not-measurable",
+    "reason": "The staged scenario-case contract does not yet carry backend-owned transition references, so case-to-obligation coverage cannot be proven."
+  },
+  "decision": "correction-blocked-pending-transition-ledger",
+  "limitations": [
+    "The source-derived obligation count is a conservative lower bound; distinct guards and each-choice branches are not yet fully enumerated.",
+    "Runtime-unverified obligations are reported separately and are not proof of dynamic reachability.",
+    "The source-survey inventory audit measures cited evidence line coverage; it cannot prove that every record inside a broad cited slice was semantically incorporated.",
+    "The golden dataset was not used to create this audit or any generator input."
+  ]
+}

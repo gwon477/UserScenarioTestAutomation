@@ -1,0 +1,2666 @@
+{
+  "schema_version": 1,
+  "scenario_updates": [
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "CSV generation is not already requesting."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request the mapping-validation CSV export.",
+          "expected": "The CSV export is an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-3B512BF9-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "CSV generation is not already requesting."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request the mapping-validation CSV export.",
+          "expected": "The mapping-validation CSV export remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request preset scenario and test-case output.",
+          "expected": "Preset generation is an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request preset scenario and test-case output.",
+          "expected": "Preset output remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Choose the previous-stage navigation.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-5EE2EF2F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Open the business-flow text output.",
+          "expected": "Business-page result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-2855894A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are not selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Select all context flows.",
+          "expected": "Context flows are selected; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-20F25040-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Deselect all context flows.",
+          "expected": "Context flows are cleared; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-067A194D-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are not selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Select all category flows.",
+          "expected": "Category flows are selected; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6C5BB760-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Category flows are selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Deselect all category flows.",
+          "expected": "Category flows are cleared; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not already requesting."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "The generation request is an evidenced exception outcome and remains runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Retry the scenario and test-case generation request as recovery.",
+          "expected": "Scenario-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not already requesting."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-D5B999B1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are not selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Select a context flow.",
+          "expected": "The flow selection result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7BEA4B09-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Deselect a context flow.",
+          "expected": "The flow selection is reversed; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-FFB625FB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are not selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Select a context flow.",
+          "expected": "The flow selection result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-527A091F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Deselect a context flow.",
+          "expected": "The flow selection is reversed; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-C434992F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Category flows are not selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Select a category flow as recovery.",
+          "expected": "The category-flow selection result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-3D3D7A88-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Category flows are selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Deselect a category flow.",
+          "expected": "The category-flow selection is reversed; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "The login attempt has an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "The first login result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Retry submitting the available login credentials as recovery.",
+          "expected": "The login-page result is an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-D6FE005D-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login succeeds to the login page result; runtime remains unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the user ID.",
+          "expected": "The user-ID entry is source-supported; runtime execution is not verified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the password.",
+          "expected": "The password entry is source-supported; runtime execution is not verified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-41525B39-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Project-list retrieval is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Refresh the project list.",
+          "expected": "Project-list refresh has an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-41525B39-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Project-list retrieval is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Refresh the project list.",
+          "expected": "Project-list refresh remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Log out.",
+          "expected": "Login-form-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-5E43F314-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Select a workflow stage.",
+          "expected": "Main-page result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-3762E523-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Task loading is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Select a task as recovery.",
+          "expected": "Task selection has an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-3762E523-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Task loading is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Select a task.",
+          "expected": "Task selection remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Log out as recovery.",
+          "expected": "Login-form-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate home.",
+          "expected": "Upload-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate home.",
+          "expected": "Upload-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-77035738-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Task loading is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Create a new task as recovery.",
+          "expected": "Task creation has an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-77035738-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Task loading is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Create a new task.",
+          "expected": "Task creation remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2D79D452-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "A task is selected."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Change the parsed-database view or page.",
+          "expected": "Parsed-database-page result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate back to the upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-F72174FF-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not already requesting."
+        },
+        {
+          "index": 8,
+          "text": "Scenario CSV is not downloaded."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario-page result is runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Request the scenario-matrix CSV download.",
+          "expected": "The CSV download has an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-F72174FF-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not already requesting."
+        },
+        {
+          "index": 8,
+          "text": "Scenario CSV is not downloaded."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario-page result is runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Request the scenario-matrix CSV download.",
+          "expected": "Scenario-page result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-09E713D0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not already requesting."
+        },
+        {
+          "index": 8,
+          "text": "Scenario Excel is not downloaded."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario-page result is runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Request the scenario-matrix Excel download as recovery.",
+          "expected": "The Excel download has an evidenced exception outcome and remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-09E713D0-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not already requesting."
+        },
+        {
+          "index": 8,
+          "text": "Scenario Excel is not downloaded."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario-page result is runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Request the scenario-matrix Excel download as recovery.",
+          "expected": "Scenario-page result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        },
+        {
+          "index": 6,
+          "text": "Context flows are selected."
+        },
+        {
+          "index": 7,
+          "text": "Generation is not already requesting."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open the business-mapping stage.",
+          "expected": "Business-page result is runtime-unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario-page result is runtime-unverified."
+        },
+        {
+          "n": 7,
+          "action": "Navigate back to the business stage.",
+          "expected": "Business-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "An upload file is selected."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is incomplete."
+        },
+        {
+          "index": 6,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start document upload and parsing.",
+          "expected": "Upload and parsing has an evidenced failure outcome; recovery behavior remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-1F1EAECA-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "An upload file is selected."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is incomplete."
+        },
+        {
+          "index": 6,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start document upload and parsing.",
+          "expected": "Upload and parsing remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-6C730330-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload submission is idle."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed-database stage.",
+          "expected": "Parsed-database-page result is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-0B0E9837-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is complete."
+        },
+        {
+          "index": 4,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Reset the completed upload for re-upload.",
+          "expected": "Upload-page result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-BC687D2A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Cancel or clear the selected upload.",
+          "expected": "The upload selection is cleared; the result remains runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-833D06AA-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "User ID is present."
+        },
+        {
+          "index": 1,
+          "text": "Password is present."
+        },
+        {
+          "index": 2,
+          "text": "Login submission is idle."
+        },
+        {
+          "index": 3,
+          "text": "No upload file is selected."
+        },
+        {
+          "index": 4,
+          "text": "Upload is incomplete."
+        },
+        {
+          "index": 5,
+          "text": "Upload is not locked."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the available login credentials.",
+          "expected": "Login-page result is runtime-unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select a project.",
+          "expected": "Main-page result is runtime-unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload stage.",
+          "expected": "Upload-page result is runtime-unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the document file.",
+          "expected": "The document becomes selected; the result remains runtime-unverified."
+        }
+      ]
+    }
+  ]
+}

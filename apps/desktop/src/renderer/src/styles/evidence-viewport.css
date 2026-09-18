@@ -1,0 +1,87 @@
+/* fixture 대상 화면 목업.
+ *
+ * `EvidenceViewport` 전용이다. 실제 실행이 남긴 프레임은 `CapturedFrame` 이
+ * 정본 PNG 로 보여준다. 이 파일은 정본 기록이 없는 preview 경로에서만 쓰인다.
+ */
+
+@keyframes execution-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Captured target screen */
+
+.evidence-viewport {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #eef1f5;
+}
+
+.captured-browser-bar {
+  display: flex;
+  min-height: 27px;
+  gap: 4px;
+  align-items: center;
+  padding: 0 8px;
+  background: #1d2d40;
+}
+
+.captured-browser-bar > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8fa0b4;
+}
+
+.captured-browser-bar > div {
+  display: flex;
+  min-width: 0;
+  min-height: 16px;
+  gap: 4px;
+  align-items: center;
+  margin-left: 5px;
+  padding: 0 7px;
+  color: #cbd4de;
+  background: #2d4057;
+  font-size: 6px;
+}
+
+.captured-page { min-height: 300px; color: #28384b; background: #f6f7f9; font-family: Arial, sans-serif; }
+.captured-page > header { display: flex; align-items: center; justify-content: space-between; min-height: 38px; padding: 0 18px; border-bottom: 1px solid #dfe4e9; background: white; }
+.captured-page > header strong { font-size: 8px; letter-spacing: 0.14em; }
+.captured-page > header span { color: #7a8795; font-size: 6px; }
+.captured-page > main { display: grid; grid-template-columns: 1fr 1.15fr; gap: 16px; padding: 28px 20px; }
+.captured-checkout-copy small { color: #6183a8; font-size: 6px; font-weight: 700; letter-spacing: 0.1em; }
+.captured-checkout-copy h3 { margin: 5px 0 0; font-size: 17px; }
+.captured-checkout-copy p { margin: 6px 0 0; color: #758293; font-size: 7px; line-height: 1.5; }
+.captured-payment-card { padding: 13px; border: 1px solid #dce2e8; background: white; box-shadow: 0 3px 10px rgb(40 56 75 / 0.08); }
+.captured-card-title { display: flex; align-items: center; justify-content: space-between; font-size: 7px; }
+.captured-card-title strong { font-size: 9px; }
+.captured-payment-card label { display: grid; gap: 4px; margin-top: 10px; color: #66788d; font-size: 6px; }
+.captured-payment-card label span { min-height: 25px; padding: 7px; color: #293a4d; border: 1px solid #ccd4dd; font-size: 7px; }
+.captured-error,
+.captured-valid { display: flex; gap: 5px; align-items: flex-start; margin-top: 8px; padding: 7px; font-size: 6px; }
+.captured-error { color: #b12323; border: 1px solid #efb8b8; background: #fff2f2; }
+.captured-error span,
+.captured-error strong { display: block; }
+.captured-error strong { margin-bottom: 2px; }
+.captured-valid { color: #287a56; background: #eef8f3; }
+.captured-pay-action { display: grid; width: 100%; min-height: 27px; margin-top: 9px; place-items: center; color: white; background: #253c56; font-size: 7px; font-weight: 700; }
+
+.evidence-viewport.is-compact .captured-browser-bar { min-height: 17px; padding: 0 5px; }
+.evidence-viewport.is-compact .captured-browser-bar > div { min-height: 10px; font-size: 4px; }
+.evidence-viewport.is-compact .captured-page { min-height: 142px; }
+.evidence-viewport.is-compact .captured-page > header { min-height: 22px; padding-inline: 8px; }
+.evidence-viewport.is-compact .captured-page > header span { display: none; }
+.evidence-viewport.is-compact .captured-page > main { grid-template-columns: 1fr; padding: 8px; }
+.evidence-viewport.is-compact .captured-checkout-copy { display: none; }
+.evidence-viewport.is-compact .captured-payment-card { padding: 7px; }
+.evidence-viewport.is-compact .captured-payment-card label { margin-top: 5px; }
+.evidence-viewport.is-compact .captured-payment-card label span { min-height: 17px; padding: 4px; }
+.evidence-viewport.is-compact .captured-error,
+.evidence-viewport.is-compact .captured-valid { margin-top: 4px; padding: 4px; }
+.evidence-viewport.is-compact .captured-pay-action { min-height: 18px; margin-top: 5px; font-size: 5px; }
+
+
+/* fixture 화면 안의 아이콘은 목업 축소 비율을 따른다. 스프라이트 기본 크기는
+ * 이 안에서 너무 크다. */
+.evidence-viewport svg.i { width: 11px; height: 11px; }

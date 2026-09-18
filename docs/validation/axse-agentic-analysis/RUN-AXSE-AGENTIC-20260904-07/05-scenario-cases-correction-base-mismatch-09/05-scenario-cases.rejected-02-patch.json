@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "stage": "scenario-case-correction-patch",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "base_artifact_hash": "sha256:3abfda0d7ed8419fc3f663c20d6505cb3f233b5838a6c3b67dc4964e7f7cc0cd",
+  "changes": [
+    {
+      "target_ref": "CT004",
+      "operation": "defer",
+      "unresolved": {
+        "description": "J002에 추가할 기존 사례와 구별되는 복구 분기를 확정하지 못했다.",
+        "reason": "현재 닫힌 소스는 UTF-8 디코딩 실패 입력과 유효한 UTF-8 대체 입력의 복구를 입증하지만, 비동기 파싱 실패의 정확한 트리거와 재시도·결과 보존 규칙은 입증하지 않는다. 추가하면 기존 복구 사례의 반복 또는 미지원 의미를 추측하게 된다.",
+        "journey_refs": [
+          "J002"
+        ],
+        "classification_refs": [
+          "C015",
+          "C032"
+        ],
+        "source_area_refs": [
+          "document-upload-and-parsing"
+        ],
+        "source_refs_to_revisit": [
+          "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "SRC-frontend-src-features-upload-upload-api-f7939e13",
+          "SRC-backend-app-api-v1-tasks-d0e77ec2"
+        ]
+      }
+    }
+  ]
+}

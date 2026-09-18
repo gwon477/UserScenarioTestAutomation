@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "classification_count": 13,
+  "perspective_assessment_count": 14,
+  "perspective_decisions": {
+    "classified": 13,
+    "not-evidenced": 1,
+    "not-applicable": 0
+  },
+  "unresolved_count": 2,
+  "cited_evidence_count": 6,
+  "prior_artifact_hash": "sha256:04217cf3497715c04b72a8283bae1aac2c382c24dedb61d405e5bd4cc90de187",
+  "agent_artifact_hash": "sha256:da3dcee03061f6596c264e0ad85fd019d5ad85aef1a6875c9037a766d391d47b",
+  "artifact_hash": "sha256:a037f2cdb173d96d9a7fa24e448bd7d3276b82b3d633af9c509f90839c22b56f",
+  "source_tool_usage": {
+    "artifact_reads": [
+      "02-source-gap-review",
+      "02-source-gap-review-validation",
+      "source-inventory"
+    ],
+    "source_refs_read": [
+      "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "SRC-frontend-src-features-login-login-page-24848ab2",
+      "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "SRC-backend-app-api-v1-tasks-d0e77ec2"
+    ],
+    "closure_calls": 5,
+    "cumulative_granted_bytes": 108795,
+    "artifact_write_attempts": 1,
+    "fatal_error": null,
+    "max_closure_calls": 10,
+    "max_granted_bytes": 500000
+  }
+}

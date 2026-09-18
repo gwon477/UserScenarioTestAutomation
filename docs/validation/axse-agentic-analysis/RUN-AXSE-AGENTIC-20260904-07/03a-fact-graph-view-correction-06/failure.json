@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "fact-graph-evidence-grant",
+  "error_code": "FACT_REPAIR_CONTEXT_SCOPE_UNMAPPABLE"
+}

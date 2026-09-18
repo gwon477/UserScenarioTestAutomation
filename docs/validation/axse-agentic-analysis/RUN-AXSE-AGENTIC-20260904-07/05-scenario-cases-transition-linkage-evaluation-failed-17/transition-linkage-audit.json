@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "reviewed_artifact_hash": "sha256:fadfd4f9f412beb86b10ef0e71f12704d730104212064ec35a413673729f4d8d",
+  "golden_derived": false,
+  "assessment_kind": "lower-bound-transition-linkage",
+  "executable_coverage_status": "not-measurable",
+  "total_obligations": 69,
+  "linked_obligations": 33,
+  "unresolved_obligations": 36,
+  "missing_obligations": 0,
+  "source_supported": {
+    "total": 34,
+    "linked": 33,
+    "linkage_percent": 97.06
+  },
+  "non_atomic_step_mappings": [
+    { "case_index": 0, "step_position": 1, "transition_ref_count": 6 },
+    { "case_index": 0, "step_position": 2, "transition_ref_count": 2 },
+    { "case_index": 0, "step_position": 3, "transition_ref_count": 11 },
+    { "case_index": 0, "step_position": 5, "transition_ref_count": 12 }
+  ],
+  "limitations": [
+    "The source obligation inventory is a lower bound and has no canonical from/to view-state topology.",
+    "The linkage does not prove guard, choice, path reachability, or one-action-per-step coverage.",
+    "Golden data was not used to generate the candidate or this source-linkage audit."
+  ]
+}

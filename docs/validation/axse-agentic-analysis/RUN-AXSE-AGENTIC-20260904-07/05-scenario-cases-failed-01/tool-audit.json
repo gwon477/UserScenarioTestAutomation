@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys-validation"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-next-stage-gaps"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 19,
+      "resolved_ref_count": 17,
+      "requested_budget": 50000,
+      "effective_budget": 70328,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 7,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_GAP_SOURCE_NOT_READ",
+      "validation_issues": [],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 2,
+      "requested_budget": 12000,
+      "effective_budget": 12000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 9,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 10,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 11,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 12,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 13,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 14,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 15,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 16,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 17,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 18,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 19,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 20,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 21,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 22,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 23,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 24,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 25,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 26,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 27,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 28,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 29,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 30,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 31,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 32,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 33,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 34,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 35,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 36,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:1:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:input-source",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:1:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:lifecycle-state"
+      ],
+      "artifact_id": "05-scenario-cases"
+    }
+  ]
+}

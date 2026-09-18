@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPI 목표 대비 실제</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --color-paper:#f5f5f5; --color-ink:#2d3142; --color-muted:#4f5d75; --color-accent:#eb6c36;
+      --font-sans:'Geist','Apple SD Gothic Neo',system-ui,sans-serif; --font-serif:'Instrument Serif','Apple SD Gothic Neo',serif; --font-mono:'Geist Mono',ui-monospace,monospace; }
+    body { font-family:var(--font-sans); background:var(--color-paper); color:var(--color-ink); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:3rem 2rem; }
+    .frame { max-width:1200px; width:100%; }
+    .eyebrow { font-family:var(--font-mono); font-size:0.66rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-muted); margin-bottom:0.5rem; }
+    h1 { font-family:var(--font-serif); font-size:clamp(1.5rem,2.4vw + 0.75rem,2rem); font-weight:400; letter-spacing:-0.02em; line-height:1.15; color:var(--color-ink); margin-bottom:1.5rem; }
+    svg { width:100%; min-width:900px; display:block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Dumbbell chart · ScenarioForge</p>
+    <h1>KPI 목표 대비 실제</h1>
+    <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="kpi-plan-vs-actual-title kpi-plan-vs-actual-desc">
+      <title id="kpi-plan-vs-actual-title">KPI 목표 대비 실제</title>
+      <desc id="kpi-plan-vs-actual-desc">다섯 개 KPI의 목표 수치와 실제 달성 수치를 한 눈금 위에 짝지어 보여주는 덤벨 차트. 업무 분류, 업무흐름, 그라운딩 AXSE는 목표를 넘겼고 시나리오 성공 recall과 그라운딩 RA-DAR는 목표에 못 미친다.</desc>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+        <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#f5f5f5"/>
+      <line x1="200" y1="40" x2="200" y2="420" stroke="rgba(45,49,66,0.25)" stroke-width="1"/>
+      <text x="200" y="440" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">0</text>
+      <line x1="352" y1="56" x2="352" y2="408" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="352" y="440" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">20</text>
+      <line x1="504" y1="56" x2="504" y2="408" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="504" y="440" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">40</text>
+      <line x1="656" y1="56" x2="656" y2="408" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="656" y="440" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">60</text>
+      <line x1="808" y1="56" x2="808" y2="408" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="808" y="440" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">80</text>
+      <line x1="960" y1="56" x2="960" y2="408" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="960" y="440" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">100</text>
+      <text x="580" y="456" fill="#4f5d75" font-size="7" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.14em" text-anchor="middle">PERCENT</text>
+      <line x1="808" y1="96" x2="960" y2="96" stroke="rgba(45,49,66,0.55)" stroke-width="1"/>
+      <circle cx="808" cy="96" r="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+      <circle cx="960" cy="96" r="6" fill="#eb6c36" stroke="#2d3142" stroke-width="1"/>
+      <text x="796" y="100" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">80</text>
+      <text x="972" y="100" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">100</text>
+      <text x="188" y="100" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="end">업무 분류 recall</text>
+      <line x1="808" y1="160" x2="960" y2="160" stroke="rgba(45,49,66,0.55)" stroke-width="1"/>
+      <circle cx="808" cy="160" r="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+      <circle cx="960" cy="160" r="6" fill="#eb6c36" stroke="#2d3142" stroke-width="1"/>
+      <text x="796" y="164" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">80</text>
+      <text x="972" y="164" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">100</text>
+      <text x="188" y="164" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="end">업무흐름 recall</text>
+      <line x1="485" y1="224" x2="808" y2="224" stroke="rgba(45,49,66,0.55)" stroke-width="1"/>
+      <circle cx="808" cy="224" r="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+      <circle cx="485" cy="224" r="6" fill="#eb6c36" stroke="#2d3142" stroke-width="1"/>
+      <text x="473" y="228" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">37.5</text>
+      <text x="820" y="228" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">80</text>
+      <text x="188" y="228" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="end">시나리오 성공 recall</text>
+      <line x1="884" y1="288" x2="940" y2="288" stroke="rgba(45,49,66,0.55)" stroke-width="1"/>
+      <circle cx="884" cy="288" r="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+      <circle cx="940" cy="288" r="6" fill="#eb6c36" stroke="#2d3142" stroke-width="1"/>
+      <text x="872" y="292" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">90</text>
+      <text x="952" y="292" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">97.4</text>
+      <text x="188" y="292" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="end">그라운딩 AXSE</text>
+      <line x1="743" y1="352" x2="884" y2="352" stroke="rgba(45,49,66,0.55)" stroke-width="1"/>
+      <circle cx="884" cy="352" r="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+      <circle cx="743" cy="352" r="6" fill="#eb6c36" stroke="#2d3142" stroke-width="1"/>
+      <text x="731" y="356" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">71.4</text>
+      <text x="896" y="356" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">90</text>
+      <text x="188" y="356" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="end">그라운딩 RA-DAR</text>
+      <line x1="40" y1="462" x2="960" y2="462" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <text x="40" y="478" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.18em">LEGEND</text>
+      <circle cx="126" cy="493" r="6" fill="#f5f5f5" stroke="#4f5d75" stroke-width="1.5"/>
+      <text x="144" y="497" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">목표 수치</text>
+      <circle cx="286" cy="493" r="6" fill="#eb6c36" stroke="#2d3142" stroke-width="1"/>
+      <text x="304" y="497" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">실제 달성 수치</text>
+      <text x="960" y="497" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">행 순서: KPI 표 순서</text>
+    </svg>
+  </div>
+</body>
+</html>

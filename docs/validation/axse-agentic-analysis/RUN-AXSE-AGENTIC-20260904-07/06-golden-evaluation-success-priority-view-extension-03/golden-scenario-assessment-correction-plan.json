@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "target_golden_refs": [
+    "AXSE-SCN-0044"
+  ],
+  "targets": [
+    {
+      "golden_ref": "AXSE-SCN-0044",
+      "fields": [
+        "success_candidate_refs"
+      ],
+      "unknown_candidate_refs": [
+        "SCN-COMPONENT-CE6F1E6C-002"
+      ],
+      "suggested_candidate_refs": [
+        "SCN-COMPONENT-BUSINESSPAGE-CE6F1E6C-002"
+      ]
+    }
+  ]
+}

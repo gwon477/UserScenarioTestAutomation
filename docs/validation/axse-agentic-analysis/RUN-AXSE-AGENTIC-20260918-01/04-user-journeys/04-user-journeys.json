@@ -1,0 +1,880 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-USER-JOURNEYS",
+    "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+    "source_root_hash": "sha256:48c9939f0b87e06ef9132db9aba2c059c4c73d6d4168153a8b9cbf480509f838",
+    "extends_artifact_id": "03-business-classification",
+    "extends_artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+    "source_basis_artifact_id": "02-source-gap-review",
+    "source_basis_artifact_hash": "sha256:4625550d74d86a623ee99dc8b164407599819c3e2b56b9ef7d024492ce8c681c",
+    "generated_with": "pi-coding-agent",
+    "granted_evidence_refs": [
+      "EV-J-0001",
+      "EV-J-0002",
+      "EV-J-0003",
+      "EV-J-0004",
+      "EV-J-0005",
+      "EV-J-0006",
+      "EV-J-0007"
+    ],
+    "inherited_evidence_refs": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0012",
+      "EV-0003",
+      "EV-0006",
+      "EV-0010",
+      "EV-0016",
+      "EV-0022",
+      "EV-0004",
+      "EV-0008",
+      "EV-0007",
+      "EV-0009",
+      "EV-0017",
+      "EV-0023",
+      "EV-0021",
+      "EV-0005",
+      "EV-0011",
+      "EV-GAP-0001",
+      "EV-GAP-0002",
+      "EV-GAP-0003",
+      "EV-GAP-0004",
+      "EV-BC-0001",
+      "EV-BC-0002",
+      "EV-BC-0003",
+      "EV-BC-0004",
+      "EV-BC-0005",
+      "EV-BC-0006"
+    ]
+  },
+  "journey": {
+    "schema_version": 1,
+    "stage": "user-journeys",
+    "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+    "work_id": "WORK-AXSE-USER-JOURNEYS",
+    "source_snapshot_ref": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+    "source_root_hash": "sha256:48c9939f0b87e06ef9132db9aba2c059c4c73d6d4168153a8b9cbf480509f838",
+    "extends_artifact_id": "03-business-classification",
+    "extends_artifact_hash": "sha256:61c1114ef687a057248591bb811f07a3e663b32d1ab7f5502cfb66e3c90e439b",
+    "source_basis_artifact_id": "02-source-gap-review",
+    "source_basis_artifact_hash": "sha256:4625550d74d86a623ee99dc8b164407599819c3e2b56b9ef7d024492ce8c681c",
+    "journeys": [
+      {
+        "kind": "normal",
+        "title": "문서 업로드부터 최종 테스트 결과 활용까지의 정상 여정",
+        "persona": "인증을 완료하고 프로젝트와 TS 작업을 선택하여 문서, 파싱 결과, 업무 매핑, 테스트 결과를 검토하는 테스트 시나리오 작성 사용자",
+        "source_thread_ref": "문서에서 최종 테스트 결과까지의 주 사용자 흐름",
+        "classification_refs": [
+          "C001",
+          "C002",
+          "C003",
+          "C004",
+          "C007",
+          "C008",
+          "C010",
+          "C011",
+          "C012",
+          "C013",
+          "C014",
+          "C015",
+          "C016",
+          "C017"
+        ],
+        "prerequisites": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "프로젝트 목록에서 작업할 프로젝트를 선택할 수 있다.",
+          "업로드할 UTF-8 MD 또는 TXT 문서를 준비했다."
+        ],
+        "milestones": [
+          {
+            "position": 1,
+            "phase": "entry",
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트 목록에서 프로젝트 카드를 선택한다.",
+            "observable_outcome": "인증된 사용자 정보와 선택한 프로젝트 컨텍스트가 세션에 반영되고 작업 화면으로 진입한다.",
+            "source_area_refs": [
+              "authentication-and-project-entry"
+            ]
+          },
+          {
+            "position": 2,
+            "phase": "work",
+            "action": "TS 작업 메뉴에서 기존 작업을 선택하거나 새 작업을 생성한다.",
+            "observable_outcome": "선택된 프로젝트에 귀속된 TS 작업이 상단 메뉴와 작업 화면에 표시된다.",
+            "source_area_refs": [
+              "task-and-document-ingestion"
+            ]
+          },
+          {
+            "position": 3,
+            "phase": "work",
+            "action": "MD 또는 TXT 문서를 선택하고 업로드 및 파싱을 시작한다.",
+            "observable_outcome": "파일명과 크기가 표시되고 업로드가 수락되면 백그라운드 파싱이 시작된다.",
+            "source_area_refs": [
+              "task-and-document-ingestion"
+            ]
+          },
+          {
+            "position": 4,
+            "phase": "work",
+            "action": "파싱 진행 상태를 조회하고 완료된 뒤 다음 단계로 이동하여 별도 업무흐름 생성을 요청한다.",
+            "observable_outcome": "문서와 파싱 결과가 저장되고 업무·화면·필드·이벤트를 조회할 수 있는 상태가 된다.",
+            "source_area_refs": [
+              "task-and-document-ingestion",
+              "parsed-data-review"
+            ]
+          },
+          {
+            "position": 5,
+            "phase": "work",
+            "action": "파싱 데이터의 요약과 업무·화면·필드·이벤트 탭을 검색 및 페이지 이동으로 검토하고 화면 매핑 진단을 확인한다.",
+            "observable_outcome": "파싱 데이터와 업무흐름·화면 범위 및 매핑 이슈가 화면에 표시된다.",
+            "source_area_refs": [
+              "parsed-data-review"
+            ]
+          },
+          {
+            "position": 6,
+            "phase": "work",
+            "action": "업무 매핑 워크스페이스에서 업무흐름과 카테고리를 탐색하고 생성할 흐름을 선택한 뒤 정합성 리포트를 확인한다.",
+            "observable_outcome": "선택된 업무흐름 집합과 정상·누락·미포함 화면 상태가 표시된다.",
+            "source_area_refs": [
+              "business-flow-mapping-validation"
+            ]
+          },
+          {
+            "position": 7,
+            "phase": "work",
+            "action": "설정 화면에서 생성 전략과 매트릭스·검증 표시값을 검토한 뒤 선택한 업무흐름의 시나리오·TC 도출을 요청한다.",
+            "observable_outcome": "설정 선택 상태가 화면에 표시되고 생성 요청이 접수되어 시나리오 생성 진행 화면으로 이동한다.",
+            "source_area_refs": [
+              "generation-settings",
+              "business-flow-mapping-validation",
+              "scenario-generation-and-results"
+            ]
+          },
+          {
+            "position": 8,
+            "phase": "business-result",
+            "action": "생성 진행률과 처리 수, 실패 수, 현재 흐름 및 업무흐름별 실행 이력을 조회한다.",
+            "observable_outcome": "비동기 생성의 진행·평가·누락·재생성 또는 통과 상태가 표시된다.",
+            "source_area_refs": [
+              "scenario-generation-and-results"
+            ]
+          },
+          {
+            "position": 9,
+            "phase": "business-result",
+            "action": "생성 완료 후 추적성 매트릭스를 조회하고 시나리오·케이스를 검색하거나 CSV 또는 Excel을 다운로드한다.",
+            "observable_outcome": "선택된 업무흐름에서 생성된 시나리오와 테스트 케이스가 추적성 매트릭스와 다운로드 산출물로 제공된다.",
+            "source_area_refs": [
+              "scenario-generation-and-results"
+            ]
+          },
+          {
+            "position": 10,
+            "phase": "exit",
+            "action": "최종 매트릭스 또는 다운로드 파일을 업무에 활용한 뒤 로그아웃한다.",
+            "observable_outcome": "결과 활용이 끝나고 로그인 상태로 돌아간다.",
+            "source_area_refs": [
+              "scenario-generation-and-results",
+              "authentication-and-project-entry"
+            ]
+          }
+        ],
+        "handoffs": [
+          {
+            "from_position": 1,
+            "to_position": 2,
+            "state": [
+              "선택된 프로젝트 컨텍스트",
+              "인증된 사용자 세션"
+            ]
+          },
+          {
+            "from_position": 2,
+            "to_position": 3,
+            "state": [
+              "선택된 TS 작업"
+            ]
+          },
+          {
+            "from_position": 3,
+            "to_position": 4,
+            "state": [
+              "업로드된 문서",
+              "파싱 진행 상태"
+            ]
+          },
+          {
+            "from_position": 4,
+            "to_position": 5,
+            "state": [
+              "저장된 파싱 결과",
+              "생성된 업무흐름"
+            ]
+          },
+          {
+            "from_position": 5,
+            "to_position": 6,
+            "state": [
+              "검토된 파싱 데이터",
+              "화면 매핑 진단 상태"
+            ]
+          },
+          {
+            "from_position": 6,
+            "to_position": 7,
+            "state": [
+              "선택된 업무흐름 집합",
+              "매핑 검증 상태"
+            ]
+          },
+          {
+            "from_position": 7,
+            "to_position": 8,
+            "state": [
+              "접수된 시나리오·TC 생성 요청",
+              "선택된 업무흐름"
+            ]
+          },
+          {
+            "from_position": 8,
+            "to_position": 9,
+            "state": [
+              "생성 진행 및 실행 이력 상태",
+              "완료 또는 실패 수치"
+            ]
+          },
+          {
+            "from_position": 9,
+            "to_position": 10,
+            "state": [
+              "조회된 추적성 매트릭스",
+              "다운로드 가능한 결과 파일"
+            ]
+          }
+        ],
+        "business_result": {
+          "description": "선택된 업무흐름에서 시나리오와 테스트 케이스가 생성되고 추적성 매트릭스와 다운로드 산출물로 제공된다.",
+          "milestone_position": 9,
+          "source_area_refs": [
+            "scenario-generation-and-results"
+          ]
+        },
+        "exit": {
+          "kind": "logout",
+          "action": "최종 매트릭스 또는 다운로드 파일을 업무에 활용한 뒤 로그아웃한다.",
+          "observable_outcome": "결과 활용이 끝나고 로그인 상태로 돌아간다.",
+          "milestone_position": 10
+        },
+        "recovery": null
+      },
+      {
+        "kind": "recovery",
+        "title": "파싱 결과 조회 오류에서 최종 테스트 결과 활용으로 복구하는 여정",
+        "persona": "인증을 완료하고 프로젝트와 TS 작업을 선택하여 문서, 파싱 결과, 업무 매핑, 테스트 결과를 검토하는 테스트 시나리오 작성 사용자",
+        "source_thread_ref": "파싱 결과 검토에서 업무 매핑으로의 검토 흐름",
+        "classification_refs": [
+          "C001",
+          "C005",
+          "C006",
+          "C009",
+          "C012",
+          "C015"
+        ],
+        "prerequisites": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "프로젝트 목록에서 작업할 프로젝트를 선택할 수 있다.",
+          "업로드할 UTF-8 MD 또는 TXT 문서를 준비했다."
+        ],
+        "milestones": [
+          {
+            "position": 1,
+            "phase": "entry",
+            "action": "아이디와 패스워드를 입력하고 로그인한 뒤 프로젝트 목록에서 프로젝트 카드를 선택한다.",
+            "observable_outcome": "인증된 사용자 정보와 선택한 프로젝트 컨텍스트가 세션에 반영되고 작업 화면으로 진입한다.",
+            "source_area_refs": [
+              "authentication-and-project-entry"
+            ]
+          },
+          {
+            "position": 2,
+            "phase": "work",
+            "action": "TS 작업 메뉴에서 기존 작업을 선택하거나 새 작업을 생성하고 MD 또는 TXT 문서를 업로드하여 파싱을 시작한다.",
+            "observable_outcome": "선택된 TS 작업에 문서가 연결되고 백그라운드 파싱이 시작된다.",
+            "source_area_refs": [
+              "task-and-document-ingestion"
+            ]
+          },
+          {
+            "position": 3,
+            "phase": "work",
+            "action": "파싱 완료 후 업무·화면·필드·이벤트 탭을 열고 요약 지표를 확인한다.",
+            "observable_outcome": "파싱 데이터 조회 화면과 데이터 탭의 표 또는 빈 상태가 표시된다.",
+            "source_area_refs": [
+              "parsed-data-review"
+            ]
+          },
+          {
+            "position": 4,
+            "phase": "failure",
+            "action": "검색어를 입력하거나 페이지를 이동하는 중 파싱 데이터 조회 오류 또는 원하는 결과가 없는 상태를 확인한다.",
+            "observable_outcome": "조회 오류가 화면에 표시되거나 검색 결과가 비어 있는 상태가 나타난다.",
+            "source_area_refs": [
+              "parsed-data-review"
+            ]
+          },
+          {
+            "position": 5,
+            "phase": "recovery",
+            "action": "검색어를 수정하거나 초기 탭과 페이지로 돌아가 다른 탭 조회를 다시 수행한다.",
+            "observable_outcome": "수정된 조건으로 데이터 조회가 다시 수행되고 업무·화면·필드·이벤트 결과를 확인할 수 있다.",
+            "source_area_refs": [
+              "parsed-data-review"
+            ]
+          },
+          {
+            "position": 6,
+            "phase": "work",
+            "action": "화면 매핑 진단을 확인하고 업무 매핑 버튼으로 업무 매핑 워크스페이스에 진입한다.",
+            "observable_outcome": "업무흐름과 연결 화면을 검토할 수 있는 매핑 화면으로 전환된다.",
+            "source_area_refs": [
+              "parsed-data-review",
+              "business-flow-mapping-validation"
+            ]
+          },
+          {
+            "position": 7,
+            "phase": "work",
+            "action": "업무흐름 또는 카테고리를 선택하고 연결 화면의 정상·누락·미포함 상태와 검증 리포트를 확인한다.",
+            "observable_outcome": "생성 대상 업무흐름과 연결 화면의 검증 상태가 확인된다.",
+            "source_area_refs": [
+              "business-flow-mapping-validation"
+            ]
+          },
+          {
+            "position": 8,
+            "phase": "work",
+            "action": "생성 설정 화면의 전략과 매트릭스·검증 표시값을 검토한 뒤 검증된 흐름을 대상으로 시나리오·TC 생성 요청을 수행한다.",
+            "observable_outcome": "설정 선택 상태와 생성 요청 접수 상태가 표시된다.",
+            "source_area_refs": [
+              "generation-settings",
+              "scenario-generation-and-results"
+            ]
+          },
+          {
+            "position": 9,
+            "phase": "business-result",
+            "action": "생성 진행률과 처리 결과를 확인하고 완료된 추적성 매트릭스를 조회하거나 CSV 또는 Excel을 다운로드한다.",
+            "observable_outcome": "선택된 업무흐름에서 생성된 시나리오와 테스트 케이스가 추적성 매트릭스와 다운로드 산출물로 제공된다.",
+            "source_area_refs": [
+              "scenario-generation-and-results"
+            ]
+          },
+          {
+            "position": 10,
+            "phase": "exit",
+            "action": "최종 매트릭스 또는 다운로드 파일을 업무에 활용한 뒤 로그아웃한다.",
+            "observable_outcome": "결과 활용이 끝나고 로그인 상태로 돌아간다.",
+            "source_area_refs": [
+              "scenario-generation-and-results",
+              "authentication-and-project-entry"
+            ]
+          }
+        ],
+        "handoffs": [
+          {
+            "from_position": 1,
+            "to_position": 2,
+            "state": [
+              "선택된 프로젝트 컨텍스트",
+              "인증된 사용자 세션"
+            ]
+          },
+          {
+            "from_position": 2,
+            "to_position": 3,
+            "state": [
+              "선택된 TS 작업",
+              "업로드된 문서",
+              "파싱 완료 상태"
+            ]
+          },
+          {
+            "from_position": 3,
+            "to_position": 4,
+            "state": [
+              "선택된 데이터 탭",
+              "요약 지표",
+              "현재 조회 조건"
+            ]
+          },
+          {
+            "from_position": 4,
+            "to_position": 5,
+            "state": [
+              "표시된 조회 오류 또는 빈 결과 상태"
+            ]
+          },
+          {
+            "from_position": 5,
+            "to_position": 6,
+            "state": [
+              "복구된 파싱 데이터 조회 상태",
+              "화면 매핑 진단 접근 상태"
+            ]
+          },
+          {
+            "from_position": 6,
+            "to_position": 7,
+            "state": [
+              "업무 매핑 워크스페이스",
+              "선택 가능한 업무흐름과 카테고리"
+            ]
+          },
+          {
+            "from_position": 7,
+            "to_position": 8,
+            "state": [
+              "검증된 업무흐름 집합",
+              "연결 화면 검증 상태"
+            ]
+          },
+          {
+            "from_position": 8,
+            "to_position": 9,
+            "state": [
+              "접수된 시나리오·TC 생성 요청",
+              "생성 설정 화면 상태"
+            ]
+          },
+          {
+            "from_position": 9,
+            "to_position": 10,
+            "state": [
+              "조회된 추적성 매트릭스",
+              "다운로드 가능한 결과 파일"
+            ]
+          }
+        ],
+        "business_result": {
+          "description": "선택된 업무흐름에서 시나리오와 테스트 케이스가 생성되고 추적성 매트릭스와 다운로드 산출물로 제공된다.",
+          "milestone_position": 9,
+          "source_area_refs": [
+            "scenario-generation-and-results"
+          ]
+        },
+        "exit": {
+          "kind": "logout",
+          "action": "최종 매트릭스 또는 다운로드 파일을 업무에 활용한 뒤 로그아웃한다.",
+          "observable_outcome": "결과 활용이 끝나고 로그인 상태로 돌아간다.",
+          "milestone_position": 10
+        },
+        "recovery": {
+          "failure_milestone_position": 4,
+          "recovery_action_position": 5,
+          "rejoin_milestone_position": 6
+        }
+      }
+    ],
+    "excluded_threads": [
+      {
+        "source_thread_ref": "선택 흐름의 프리셋 미리보기 흐름",
+        "reason": "선택 흐름의 프리셋 조회와 생성 상태를 보여 주는 업무 매핑 화면 내 국소 조각이며 독립적인 최상위 진입과 전체 업무 결과 및 종료를 갖춘 여정으로는 근거가 부족하다."
+      }
+    ],
+    "unresolved": [
+      {
+        "description": "로그인과 로그아웃이 서버 측 인증 세션의 생성과 폐기까지 포함하는지는 확정할 수 없다.",
+        "reason": "클라이언트의 로그인 요청과 로컬 세션 초기화는 확인되지만 인증 서버 구현과 서버 토큰 폐기 의미는 확인되지 않는다.",
+        "source_thread_refs": [
+          "문서에서 최종 테스트 결과까지의 주 사용자 흐름",
+          "파싱 결과 검토에서 업무 매핑으로의 검토 흐름"
+        ],
+        "source_area_refs": [
+          "authentication-and-project-entry"
+        ],
+        "source_refs_to_revisit": [
+          "SRC-backend-app-api-v1-auth-9d56dc7e"
+        ]
+      },
+      {
+        "description": "설정 화면의 전략·출력·검증 선택값이 생성 요청에 적용되거나 영속 저장되는지는 확정할 수 없다.",
+        "reason": "설정 화면의 선택 상태는 확인되지만 초기화와 저장 이벤트 및 생성 요청 payload의 연결은 확인되지 않는다.",
+        "source_thread_refs": [
+          "문서에서 최종 테스트 결과까지의 주 사용자 흐름",
+          "파싱 결과 검토에서 업무 매핑으로의 검토 흐름"
+        ],
+        "source_area_refs": [
+          "generation-settings",
+          "scenario-generation-and-results"
+        ],
+        "source_refs_to_revisit": [
+          "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1"
+        ]
+      },
+      {
+        "description": "파싱 조회 오류 복구 후 동일한 검색 조건과 페이지 상태가 항상 보존되는지는 확정할 수 없다.",
+        "reason": "수정된 검색과 초기 탭·페이지 복귀 경로는 확인되지만 오류 후 조건 보존 규칙은 확인되지 않는다.",
+        "source_thread_refs": [
+          "파싱 결과 검토에서 업무 매핑으로의 검토 흐름"
+        ],
+        "source_area_refs": [
+          "parsed-data-review"
+        ],
+        "source_refs_to_revisit": [
+          "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+        ]
+      }
+    ]
+  },
+  "journey_evidence_bindings": [
+    {
+      "journey_position": 0,
+      "source_thread_ref": "문서에서 최종 테스트 결과까지의 주 사용자 흐름",
+      "evidence_refs": [
+        "EV-J-0003",
+        "EV-J-0004",
+        "EV-J-0007",
+        "EV-J-0001",
+        "EV-J-0005",
+        "EV-J-0002",
+        "EV-J-0006"
+      ],
+      "milestones": [
+        {
+          "milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-entry"
+          ],
+          "evidence_refs": [
+            "EV-J-0003",
+            "EV-J-0004",
+            "EV-J-0007"
+          ]
+        },
+        {
+          "milestone_position": 2,
+          "source_area_refs": [
+            "task-and-document-ingestion"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 3,
+          "source_area_refs": [
+            "task-and-document-ingestion"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 4,
+          "source_area_refs": [
+            "task-and-document-ingestion",
+            "parsed-data-review"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 5,
+          "source_area_refs": [
+            "parsed-data-review"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 6,
+          "source_area_refs": [
+            "business-flow-mapping-validation"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0002",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 7,
+          "source_area_refs": [
+            "generation-settings",
+            "business-flow-mapping-validation",
+            "scenario-generation-and-results"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0002",
+            "EV-J-0005",
+            "EV-J-0006"
+          ]
+        },
+        {
+          "milestone_position": 8,
+          "source_area_refs": [
+            "scenario-generation-and-results"
+          ],
+          "evidence_refs": [
+            "EV-J-0002",
+            "EV-J-0005",
+            "EV-J-0006"
+          ]
+        },
+        {
+          "milestone_position": 9,
+          "source_area_refs": [
+            "scenario-generation-and-results"
+          ],
+          "evidence_refs": [
+            "EV-J-0002",
+            "EV-J-0005",
+            "EV-J-0006"
+          ]
+        },
+        {
+          "milestone_position": 10,
+          "source_area_refs": [
+            "scenario-generation-and-results",
+            "authentication-and-project-entry"
+          ],
+          "evidence_refs": [
+            "EV-J-0002",
+            "EV-J-0003",
+            "EV-J-0004",
+            "EV-J-0005",
+            "EV-J-0006",
+            "EV-J-0007"
+          ]
+        }
+      ]
+    },
+    {
+      "journey_position": 1,
+      "source_thread_ref": "파싱 결과 검토에서 업무 매핑으로의 검토 흐름",
+      "evidence_refs": [
+        "EV-J-0003",
+        "EV-J-0004",
+        "EV-J-0007",
+        "EV-J-0001",
+        "EV-J-0005",
+        "EV-J-0002",
+        "EV-J-0006"
+      ],
+      "milestones": [
+        {
+          "milestone_position": 1,
+          "source_area_refs": [
+            "authentication-and-project-entry"
+          ],
+          "evidence_refs": [
+            "EV-J-0003",
+            "EV-J-0004",
+            "EV-J-0007"
+          ]
+        },
+        {
+          "milestone_position": 2,
+          "source_area_refs": [
+            "task-and-document-ingestion"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 3,
+          "source_area_refs": [
+            "parsed-data-review"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 4,
+          "source_area_refs": [
+            "parsed-data-review"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 5,
+          "source_area_refs": [
+            "parsed-data-review"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 6,
+          "source_area_refs": [
+            "parsed-data-review",
+            "business-flow-mapping-validation"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0002",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 7,
+          "source_area_refs": [
+            "business-flow-mapping-validation"
+          ],
+          "evidence_refs": [
+            "EV-J-0001",
+            "EV-J-0002",
+            "EV-J-0005"
+          ]
+        },
+        {
+          "milestone_position": 8,
+          "source_area_refs": [
+            "generation-settings",
+            "scenario-generation-and-results"
+          ],
+          "evidence_refs": [
+            "EV-J-0002",
+            "EV-J-0005",
+            "EV-J-0006"
+          ]
+        },
+        {
+          "milestone_position": 9,
+          "source_area_refs": [
+            "scenario-generation-and-results"
+          ],
+          "evidence_refs": [
+            "EV-J-0002",
+            "EV-J-0005",
+            "EV-J-0006"
+          ]
+        },
+        {
+          "milestone_position": 10,
+          "source_area_refs": [
+            "scenario-generation-and-results",
+            "authentication-and-project-entry"
+          ],
+          "evidence_refs": [
+            "EV-J-0002",
+            "EV-J-0003",
+            "EV-J-0004",
+            "EV-J-0005",
+            "EV-J-0006",
+            "EV-J-0007"
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence_catalog": [
+    {
+      "evidence_ref": "EV-J-0001",
+      "evidence": {
+        "source_id": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+        "path": "backend/app/api/v1/tasks.py",
+        "start_line": 1,
+        "end_line": 202,
+        "content_hash": "sha256:a3416aea952db053fd426876e2e09c97341a3f7d5aedfd07327b828bef36fb8e",
+        "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-410ffdc0"
+      }
+    },
+    {
+      "evidence_ref": "EV-J-0002",
+      "evidence": {
+        "source_id": "SRC-backend-app-api-v1-workflows-d9740180",
+        "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+        "path": "backend/app/api/v1/workflows.py",
+        "start_line": 1,
+        "end_line": 231,
+        "content_hash": "sha256:d0880b970a1596e7c6763a82d39116a5c27902c217ed7f57ab9dc2d7d622e329",
+        "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-410ffdc0"
+      }
+    },
+    {
+      "evidence_ref": "EV-J-0003",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+        "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+        "path": "frontend/src/features/login/login-form.page.jsx",
+        "start_line": 1,
+        "end_line": 116,
+        "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+        "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-410ffdc0"
+      }
+    },
+    {
+      "evidence_ref": "EV-J-0004",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+        "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+        "path": "frontend/src/features/login/login.page.jsx",
+        "start_line": 1,
+        "end_line": 121,
+        "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+        "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-410ffdc0"
+      }
+    },
+    {
+      "evidence_ref": "EV-J-0005",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+        "path": "frontend/src/features/main/pages/main.page.jsx",
+        "start_line": 1,
+        "end_line": 1585,
+        "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+        "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-410ffdc0"
+      }
+    },
+    {
+      "evidence_ref": "EV-J-0006",
+      "evidence": {
+        "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+        "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+        "path": "frontend/src/features/settings/pages/settings.page.jsx",
+        "start_line": 1,
+        "end_line": 44,
+        "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+        "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-410ffdc0"
+      }
+    },
+    {
+      "evidence_ref": "EV-J-0007",
+      "evidence": {
+        "source_id": "SRC-frontend-src-store-feec9a9e",
+        "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+        "path": "frontend/src/store.js",
+        "start_line": 1,
+        "end_line": 123,
+        "content_hash": "sha256:7d77adad48cb2ae4073fc988af0fb50c8ca8083345bcf7c756d2b98ae8140303",
+        "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-410ffdc0"
+      }
+    }
+  ]
+}

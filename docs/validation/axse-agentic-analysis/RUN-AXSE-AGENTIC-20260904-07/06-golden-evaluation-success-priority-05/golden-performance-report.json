@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "report_type": "golden-evaluation-performance",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "evaluation_policy": "success-first-v1",
+  "product_stage_acceptance": "not-attempted",
+  "evaluated_generation": {
+    "immutable": true,
+    "candidate_hash": "sha256:31399cbb5ca8d1093a74acd93ca8d3719e2517d0cf4b69c0d36d5d1f190b25e0",
+    "scenario_artifact_hash": "sha256:380fa07b3872263c3e9be51886fb8b84c0baa29da696f834b186b0c0df567dcd",
+    "candidate_counts": {
+      "classifications": 6,
+      "workflows": 41,
+      "journeys": 2,
+      "scenarios": 53
+    }
+  },
+  "metrics": {
+    "classification_recall": 1,
+    "workflow_recall": 1,
+    "required_journey_recall": 1,
+    "success_scenario_recall": 0.375,
+    "matched_success_scenarios": 12,
+    "total_success_scenarios": 32,
+    "resilience_scenario_recall_advisory": 0.2727272727272727,
+    "matched_resilience_scenarios": 6,
+    "total_resilience_scenarios": 22,
+    "unweighted_scenario_recall_reference": 0.3181818181818182
+  },
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "success_scenario_recall": 0.8,
+    "resilience_scenario_recall": "advisory",
+    "required_journey_recall": 1
+  },
+  "passed": false,
+  "remaining_success_golden_refs": [
+    "AXSE-SCN-0002",
+    "AXSE-SCN-0004",
+    "AXSE-SCN-0008",
+    "AXSE-SCN-0009",
+    "AXSE-SCN-0011",
+    "AXSE-SCN-0013",
+    "AXSE-SCN-0014",
+    "AXSE-SCN-0018",
+    "AXSE-SCN-0019",
+    "AXSE-SCN-0023",
+    "AXSE-SCN-0026",
+    "AXSE-SCN-0027",
+    "AXSE-SCN-0029",
+    "AXSE-SCN-0030",
+    "AXSE-SCN-0033",
+    "AXSE-SCN-0035",
+    "AXSE-SCN-0036",
+    "AXSE-SCN-0041",
+    "AXSE-SCN-0043",
+    "AXSE-SCN-0044"
+  ],
+  "work_performed": [
+    {
+      "sequence": 1,
+      "operation": "backend.input.validate",
+      "result": "ok"
+    },
+    {
+      "sequence": 2,
+      "operation": "backend.assessment.reuse",
+      "result": "ok",
+      "artifact_id": "06-golden-taxonomy-journey-assessment",
+      "source_stage": "06-golden-evaluation-success-priority-04"
+    },
+    {
+      "sequence": 3,
+      "operation": "backend.assessment.reuse",
+      "result": "ok",
+      "artifact_id": "06-golden-scenario-assessment",
+      "source_stage": "06-golden-evaluation-success-priority-04"
+    }
+  ]
+}

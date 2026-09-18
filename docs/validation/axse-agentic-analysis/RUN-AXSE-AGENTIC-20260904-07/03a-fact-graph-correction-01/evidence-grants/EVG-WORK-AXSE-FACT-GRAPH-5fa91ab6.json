@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-5fa91ab6",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-FACT-GRAPH",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login-form.page.jsx",
+      "start_line": 1,
+      "end_line": 116,
+      "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+      "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-5fa91ab6"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "start_line": 1,
+      "end_line": 121,
+      "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+      "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-5fa91ab6"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/main/pages/main.page.jsx",
+      "start_line": 1,
+      "end_line": 1585,
+      "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+      "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-5fa91ab6"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+      "start_line": 1,
+      "end_line": 361,
+      "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+      "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-5fa91ab6"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "frontend/src/features/upload/pages/upload.page.jsx",
+      "start_line": 1,
+      "end_line": 272,
+      "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+      "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-5fa91ab6"
+    }
+  ],
+  "created_at": "2026-09-07T07:39:32.082Z"
+}

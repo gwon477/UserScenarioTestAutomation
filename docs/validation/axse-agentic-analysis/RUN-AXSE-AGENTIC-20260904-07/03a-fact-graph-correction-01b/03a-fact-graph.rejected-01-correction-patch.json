@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:7b819dfc7e612785b00510b2992dfcf53c58f4b96dc1ab5e942a8b12a87ce4d1",
+  "element_update_upserts": [
+    {
+      "element_ref": "U25",
+      "action_kind": "navigate to selected workflow stage"
+    },
+    {
+      "element_ref": "U34",
+      "action_kind": "change parsed database view or page"
+    }
+  ],
+  "predicate_upserts": [
+    {
+      "key": "login.submitting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "projects.requesting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U23"
+      ]
+    },
+    {
+      "key": "task.menu_open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U26",
+        "U31"
+      ]
+    },
+    {
+      "key": "flow_text.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U5"
+      ]
+    },
+    {
+      "key": "flow_text.loading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U5"
+      ]
+    },
+    {
+      "key": "preset.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U3"
+      ]
+    },
+    {
+      "key": "preset.requesting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U3"
+      ]
+    },
+    {
+      "key": "preset.completed",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U3"
+      ]
+    },
+    {
+      "key": "preset.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U3"
+      ]
+    },
+    {
+      "key": "mapping_csv.downloaded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "mapping_csv.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "generation.requesting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "generation.completed",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "generation.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "stage.upload",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U28",
+        "U29"
+      ]
+    },
+    {
+      "key": "stage.settings",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U32"
+      ]
+    },
+    {
+      "key": "stage.selected",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U25"
+      ]
+    },
+    {
+      "key": "parsed_db.view_changed",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U34"
+      ]
+    },
+    {
+      "key": "scenario_csv.downloaded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario_csv.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario_excel.downloaded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario_excel.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    }
+  ],
+  "edge_changes": [
+    {
+      "operation": "replace",
+      "edge_index": 14,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S1",
+        "on_element_ref": "U28",
+        "to_screen_ref": "S8"
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 15,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S1",
+        "on_element_ref": "U29",
+        "to_screen_ref": "S8"
+      }
+    },
+    {
+      "operation": "replace",
+      "edge_index": 18,
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S1",
+        "on_element_ref": "U32",
+        "to_screen_ref": "S7"
+      }
+    },
+    {
+      "operation": "add",
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S4",
+        "on_element_ref": "U25",
+        "to_screen_ref": "S4",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "stage.selected",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "operation": "add",
+      "edge": {
+        "kind": "normal",
+        "from_screen_ref": "S5",
+        "on_element_ref": "U34",
+        "to_screen_ref": "S5",
+        "effect": {
+          "all": [
+            {
+              "predicate_key": "parsed_db.view_changed",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

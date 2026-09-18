@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-GRAPH-SCENARIO-CASES",
+    "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+    "source_root_hash": "sha256:48c9939f0b87e06ef9132db9aba2c059c4c73d6d4168153a8b9cbf480509f838",
+    "fact_graph_artifact_hash": "sha256:f09dd36affbab9527601f5a58708a1f1ddd7a6fc13d7ce8746e4b3e2f0dbdd2e",
+    "business_workflow_mapping_artifact_hash": "sha256:7bba4d73aa20131dd19f12d74fbf25d5cdb5e872f0282a1ce910997941183040",
+    "user_journey_workflow_link_artifact_hash": "sha256:3aa2a4863e4673630f6c9e53cf0d3d7c5e3696fd5bd094d94b3ef31ef6726a12",
+    "generated_with": "pi-coding-agent"
+  },
+  "artifacts": {
+    "scenario_skeleton": {
+      "path": "scenario-skeleton.json",
+      "content_hash": "sha256:89664363e6df89985dfeadfee94bd58776260377170fa82d38f23a09e375304d"
+    },
+    "journey_scenario_bindings": {
+      "path": "journey-scenario-bindings.json",
+      "content_hash": "sha256:f75bdd00f14e7283cac96354e4f11ecc84c2d56135f0c572b3f6728923f80208"
+    },
+    "narration_patch": {
+      "path": "scenario-narration-patch.json",
+      "content_hash": "sha256:565c44bb3db1cbc49221fcd9fa20560ff3623eefdb53ced5648c1d11d7f0c8c4"
+    },
+    "scenario_cases": {
+      "path": "scenario-cases.json",
+      "content_hash": "sha256:c1ac677779664a3cff949d7ab45ab6a26d4a4b74894c1aaad5aad7c2dc2d464e"
+    }
+  }
+}

@@ -1,0 +1,1130 @@
+{
+  "schema_version": 1,
+  "stage": "user-journeys",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-USER-JOURNEYS",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "extends_artifact_id": "03-business-classification",
+  "extends_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "source_basis_artifact_id": "02-source-gap-review",
+  "source_basis_artifact_hash": "sha256:04217cf3497715c04b72a8283bae1aac2c382c24dedb61d405e5bd4cc90de187",
+  "journeys": [
+    {
+      "kind": "normal",
+      "title": "문서에서 추적성 매트릭스까지의 주 경로",
+      "persona": "로그인한 사용자가 문서와 업무흐름을 준비하고 생성 결과를 확인하는 작업 수행자",
+      "source_thread_ref": "문서에서 추적성 매트릭스까지의 주 경로",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C010",
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020",
+        "C022",
+        "C023",
+        "C024",
+        "C025",
+        "C026",
+        "C027",
+        "C028",
+        "C029",
+        "C030"
+      ],
+      "prerequisites": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다."
+      ],
+      "milestones": [
+        {
+          "position": 1,
+          "phase": "entry",
+          "action": "로그인하고 프로젝트를 선택한 뒤 TS 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ],
+          "transition_refs": [
+            "T001",
+            "T002",
+            "T005",
+            "T011",
+            "T012",
+            "T013"
+          ]
+        },
+        {
+          "position": 2,
+          "phase": "work",
+          "action": "작업을 부트스트랩하고 MD 또는 TXT 파일을 업로드 및 파싱한 뒤 Parsed DB로 이동한다.",
+          "observable_outcome": "파싱 완료 상태와 업무, 화면, 필드, 이벤트, 업무흐름 데이터가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing",
+            "parsed-data-inspection"
+          ],
+          "transition_refs": [
+            "T066",
+            "T067"
+          ]
+        },
+        {
+          "position": 3,
+          "phase": "work",
+          "action": "Parsed DB를 검색하고 진단을 확인한 뒤 업무흐름을 선택하여 매핑 검증과 시나리오·테스트 케이스 생성을 요청한다.",
+          "observable_outcome": "선택 범위와 매핑 검증 결과가 표시되고 생성 요청이 접수된다.",
+          "source_area_refs": [
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request"
+          ],
+          "transition_refs": [
+            "T025",
+            "T026",
+            "T027",
+            "T028",
+            "T058",
+            "T059",
+            "T060",
+            "T061",
+            "T062",
+            "T063",
+            "T064"
+          ]
+        },
+        {
+          "position": 4,
+          "phase": "work",
+          "action": "생성 진행률과 업무흐름별 실행 이력을 확인한다.",
+          "observable_outcome": "생성 진행, 완료 또는 실패 건수가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "transition_refs": [
+            "T032"
+          ]
+        },
+        {
+          "position": 5,
+          "phase": "business-result",
+          "action": "생성 완료 후 시나리오와 테스트 케이스를 조회하고 CSV와 Excel을 다운로드한다.",
+          "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "transition_refs": [
+            "T037",
+            "T038",
+            "T039",
+            "T040",
+            "T041",
+            "T042",
+            "T043",
+            "T044",
+            "T054",
+            "T055",
+            "T056",
+            "T057"
+          ]
+        },
+        {
+          "position": 6,
+          "phase": "exit",
+          "action": "메인 셸에서 로그아웃한다.",
+          "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ],
+          "transition_refs": [
+            "T008"
+          ]
+        }
+      ],
+      "handoffs": [
+        {
+          "from_position": 1,
+          "to_position": 2,
+          "state": [
+            "선택된 TS 작업 컨텍스트"
+          ]
+        },
+        {
+          "from_position": 2,
+          "to_position": 3,
+          "state": [
+            "파싱된 구조 데이터"
+          ]
+        },
+        {
+          "from_position": 3,
+          "to_position": 4,
+          "state": [
+            "접수된 생성 요청"
+          ]
+        },
+        {
+          "from_position": 4,
+          "to_position": 5,
+          "state": [
+            "생성 진행 및 실행 이력"
+          ]
+        },
+        {
+          "from_position": 5,
+          "to_position": 6,
+          "state": [
+            "다운로드가 시작된 추적성 산출물"
+          ]
+        }
+      ],
+      "business_result": {
+        "description": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+        "milestone_position": 5,
+        "source_area_refs": [
+          "scenario-generation-and-traceability-results"
+        ]
+      },
+      "exit": {
+        "kind": "logout",
+        "action": "메인 셸에서 로그아웃한다.",
+        "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+        "milestone_position": 6
+      },
+      "recovery": null
+    },
+    {
+      "kind": "recovery",
+      "title": "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로",
+      "persona": "로그인한 사용자가 문서와 업무흐름을 준비하고 생성 결과를 확인하는 작업 수행자",
+      "source_thread_ref": "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로",
+      "classification_refs": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C009",
+        "C015",
+        "C021",
+        "C027",
+        "C031",
+        "C032",
+        "C033"
+      ],
+      "prerequisites": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다."
+      ],
+      "milestones": [
+        {
+          "position": 1,
+          "phase": "entry",
+          "action": "로그인하고 프로젝트를 선택한 뒤 TS 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "인증 세션, 선택 프로젝트와 TS 작업 컨텍스트가 메인 셸에 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-selection",
+            "task-lifecycle-and-stage-navigation"
+          ]
+        },
+        {
+          "position": 2,
+          "phase": "work",
+          "action": "작업을 부트스트랩하고 MD 또는 TXT 파일을 업로드 및 파싱한다.",
+          "observable_outcome": "업로드와 파싱 진행 상태가 표시된다.",
+          "source_area_refs": [
+            "task-lifecycle-and-stage-navigation",
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 3,
+          "phase": "failure",
+          "action": "업로드 또는 API 오류나 파싱 실패 메시지를 확인한다.",
+          "observable_outcome": "실패 상태와 오류 메시지가 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 4,
+          "phase": "recovery",
+          "action": "파일을 제거하거나 다시 선택하고 새 파일로 업로드 및 파싱을 다시 시작한다.",
+          "observable_outcome": "새 파일의 파싱이 다시 시작된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing"
+          ]
+        },
+        {
+          "position": 5,
+          "phase": "work",
+          "action": "파싱 완료를 확인하고 Parsed DB에서 데이터를 검색 및 진단한 뒤 업무흐름을 선택하여 매핑 검증과 생성 요청을 수행하고 진행 상태를 확인한다.",
+          "observable_outcome": "파싱 데이터, 매핑 검증 결과, 생성 요청과 진행 상태가 표시된다.",
+          "source_area_refs": [
+            "document-upload-and-parsing",
+            "parsed-data-inspection",
+            "business-flow-mapping-and-generation-request",
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 6,
+          "phase": "business-result",
+          "action": "생성 결과에서 시나리오와 테스트 케이스를 확인하고 Excel을 다운로드한다.",
+          "observable_outcome": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ]
+        },
+        {
+          "position": 7,
+          "phase": "exit",
+          "action": "메인 셸에서 로그아웃한다.",
+          "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+          "source_area_refs": [
+            "authentication-and-project-selection"
+          ]
+        }
+      ],
+      "handoffs": [
+        {
+          "from_position": 1,
+          "to_position": 2,
+          "state": [
+            "선택된 TS 작업과 업로드 단계"
+          ]
+        },
+        {
+          "from_position": 2,
+          "to_position": 3,
+          "state": [
+            "업로드 요청과 파싱 상태"
+          ]
+        },
+        {
+          "from_position": 3,
+          "to_position": 4,
+          "state": [
+            "표시된 실패 상태"
+          ]
+        },
+        {
+          "from_position": 4,
+          "to_position": 5,
+          "state": [
+            "재시작된 파싱 상태"
+          ]
+        },
+        {
+          "from_position": 5,
+          "to_position": 6,
+          "state": [
+            "생성 결과와 추적성 매트릭스"
+          ]
+        },
+        {
+          "from_position": 6,
+          "to_position": 7,
+          "state": [
+            "다운로드가 시작된 추적성 산출물"
+          ]
+        }
+      ],
+      "business_result": {
+        "description": "선택 업무흐름의 생성된 테스트 시나리오·테스트 케이스와 추적성 산출물을 확보한다.",
+        "milestone_position": 6,
+        "source_area_refs": [
+          "scenario-generation-and-traceability-results"
+        ]
+      },
+      "exit": {
+        "kind": "logout",
+        "action": "메인 셸에서 로그아웃한다.",
+        "observable_outcome": "세션이 초기화되고 로그인 흐름으로 돌아간다.",
+        "milestone_position": 7
+      },
+      "recovery": {
+        "failure_milestone_position": 3,
+        "recovery_action_position": 4,
+        "rejoin_milestone_position": 5
+      }
+    }
+  ],
+  "excluded_threads": [
+    {
+      "source_thread_ref": "업무흐름 단위 프리셋 미리보기",
+      "reason": "프리셋 모달 확인과 닫기에 한정된 국소 전이이므로 로그인부터 결과 산출물 확보까지의 완전한 상위 여정이 아니다."
+    }
+  ],
+  "unresolved": [
+    {
+      "description": "인증 이후 실제 권한 규칙과 프로젝트별 접근 경계는 확정되지 않았다.",
+      "reason": "인증 및 보안 백엔드 근거가 충분히 노출되지 않아 세션 전이만 확인된다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e",
+        "SRC-backend-app-core-auth-7c627b43",
+        "SRC-backend-app-core-security-3b18f773"
+      ]
+    },
+    {
+      "description": "생성 실패 또는 부분 완료 뒤 재요청 조작과 기존 결과 보존 규칙은 확정되지 않았다.",
+      "reason": "실패 상태와 새로고침은 확인되지만 재요청 및 기존 레코드 처리 규칙은 충분하지 않다.",
+      "source_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+        "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+        "SRC-backend-app-repositories-scenario-repository-c0346a9c"
+      ]
+    },
+    {
+      "description": "로그인 전이의 실행 결과 매핑을 보류한다.",
+      "reason": "로그인 폼 소스에는 입력 검증과 요청 처리는 있으나 런타임 전이 결과가 확인되지 않는다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ],
+      "transition_refs": [
+        "T003"
+      ]
+    },
+    {
+      "description": "로그인 예외 전이의 여정 매핑을 보류한다.",
+      "reason": "오류 표시 처리는 있으나 해당 예외 전이가 실제 여정에서 발생하는지는 런타임 검증이 없다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ],
+      "transition_refs": [
+        "T004"
+      ]
+    },
+    {
+      "description": "프로젝트 조회 결과 전이의 매핑을 보류한다.",
+      "reason": "프로젝트 조회 화면은 확인되지만 런타임 결과와 여정 연결은 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ],
+      "transition_refs": [
+        "T006"
+      ]
+    },
+    {
+      "description": "프로젝트 조회 예외 전이의 매핑을 보류한다.",
+      "reason": "조회 오류 표시 코드는 있으나 실제 예외 전이는 런타임 검증이 없다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ],
+      "transition_refs": [
+        "T007"
+      ]
+    },
+    {
+      "description": "메인 셸 전이의 여정 위치를 보류한다.",
+      "reason": "메인 페이지 소스는 여러 스테이지를 포함하지만 해당 전이의 구체적 런타임 순서는 확인되지 않는다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T009"
+      ]
+    },
+    {
+      "description": "메인 스테이지 전이의 여정 위치를 보류한다.",
+      "reason": "소스에 스테이지 내비게이션은 있으나 대상 전이와 특정 여정 마일스톤의 관계가 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T010"
+      ]
+    },
+    {
+      "description": "메인 여정 전이의 매핑을 보류한다.",
+      "reason": "메인 페이지 기능은 확인되지만 대상 전이의 실행 순서가 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T014"
+      ]
+    },
+    {
+      "description": "메인 예외 전이의 매핑을 보류한다.",
+      "reason": "메인 페이지에 오류 처리는 있으나 대상 예외 전이의 여정 위치는 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T015"
+      ]
+    },
+    {
+      "description": "메인 업무 전이의 매핑을 보류한다.",
+      "reason": "업무 관련 UI는 있으나 대상 전이와 마일스톤의 관계가 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T016"
+      ]
+    },
+    {
+      "description": "메인 업무 예외 전이의 매핑을 보류한다.",
+      "reason": "업무 영역의 예외 상태는 보이지만 대상 전이의 실제 여정 위치는 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T017"
+      ]
+    },
+    {
+      "description": "메인 작업 전이의 매핑을 보류한다.",
+      "reason": "작업 기능은 소스에 있으나 대상 전이의 실행 순서가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T018"
+      ]
+    },
+    {
+      "description": "메인 결과 전이의 매핑을 보류한다.",
+      "reason": "결과 기능은 확인되지만 대상 전이와 특정 마일스톤의 관계가 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T019"
+      ]
+    },
+    {
+      "description": "메인 화면 전이의 매핑을 보류한다.",
+      "reason": "화면 전환 기능은 있으나 대상 전이의 구체적 위치가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T020"
+      ]
+    },
+    {
+      "description": "메인 화면 예외 전이의 매핑을 보류한다.",
+      "reason": "예외 화면 상태는 소스에 있으나 대상 전이의 실제 위치가 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T021"
+      ]
+    },
+    {
+      "description": "메인 조회 전이의 매핑을 보류한다.",
+      "reason": "조회 및 새로고침 UI는 있으나 대상 전이의 여정 연결이 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T022"
+      ]
+    },
+    {
+      "description": "메인 조회 예외 전이의 매핑을 보류한다.",
+      "reason": "조회 오류 표시 코드는 있으나 대상 전이의 여정 위치가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T023"
+      ]
+    },
+    {
+      "description": "메인 작업 흐름 전이의 매핑을 보류한다.",
+      "reason": "작업 흐름 기능은 존재하지만 대상 전이의 런타임 순서가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T024"
+      ]
+    },
+    {
+      "description": "업무흐름 전이의 매핑을 보류한다.",
+      "reason": "업무흐름 선택 UI는 확인되지만 대상 전이의 정확한 여정 위치가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T029"
+      ]
+    },
+    {
+      "description": "업무흐름 결과 전이의 매핑을 보류한다.",
+      "reason": "업무흐름 결과 처리는 있으나 대상 전이의 실행 순서가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T030"
+      ]
+    },
+    {
+      "description": "업무흐름 예외 전이의 매핑을 보류한다.",
+      "reason": "업무흐름 오류 처리는 보이지만 대상 예외 전이의 여정 위치가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T031"
+      ]
+    },
+    {
+      "description": "생성 진행 전이의 매핑을 보류한다.",
+      "reason": "생성 진행 UI는 있으나 대상 전이의 런타임 실행 순서가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T033"
+      ]
+    },
+    {
+      "description": "생성 예외 전이의 매핑을 보류한다.",
+      "reason": "생성 실패 표시와 처리는 있으나 대상 예외 전이의 여정 위치가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T034"
+      ]
+    },
+    {
+      "description": "생성 완료 전이의 매핑을 보류한다.",
+      "reason": "완료 상태 표시는 있으나 대상 전이와 특정 마일스톤의 관계가 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T035"
+      ]
+    },
+    {
+      "description": "생성 실패 전이의 매핑을 보류한다.",
+      "reason": "실패 상태 처리는 확인되지만 대상 전이의 여정 위치는 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T036"
+      ]
+    },
+    {
+      "description": "결과 전이의 매핑을 보류한다.",
+      "reason": "결과 화면 기능은 있으나 대상 전이의 정확한 런타임 위치가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T045"
+      ]
+    },
+    {
+      "description": "결과 조회 전이의 매핑을 보류한다.",
+      "reason": "결과 조회 UI는 있으나 대상 전이의 여정 연결이 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T046"
+      ]
+    },
+    {
+      "description": "결과 조회 예외 전이의 매핑을 보류한다.",
+      "reason": "예외 상태 표시 코드는 있으나 대상 전이의 실제 위치가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T047"
+      ]
+    },
+    {
+      "description": "결과 상세 전이의 매핑을 보류한다.",
+      "reason": "상세 펼침 기능은 있으나 대상 전이의 여정 위치가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T048"
+      ]
+    },
+    {
+      "description": "결과 상세 예외 전이의 매핑을 보류한다.",
+      "reason": "상세 영역의 예외 관계가 런타임에서 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T049"
+      ]
+    },
+    {
+      "description": "추적성 결과 전이의 매핑을 보류한다.",
+      "reason": "추적성 매트릭스는 소스에 있으나 대상 전이의 실행 순서가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T050"
+      ]
+    },
+    {
+      "description": "추적성 결과 예외 전이의 매핑을 보류한다.",
+      "reason": "결과 오류 처리는 있으나 대상 예외 전이의 여정 위치가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T051"
+      ]
+    },
+    {
+      "description": "다운로드 전이의 매핑을 보류한다.",
+      "reason": "다운로드 UI는 있으나 대상 전이의 구체적 여정 위치가 런타임 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T052"
+      ]
+    },
+    {
+      "description": "다운로드 예외 전이의 매핑을 보류한다.",
+      "reason": "다운로드 오류 가능성은 있으나 대상 예외 전이의 실제 위치가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ],
+      "transition_refs": [
+        "T053"
+      ]
+    },
+    {
+      "description": "설정 화면 전이의 매핑을 보류한다.",
+      "reason": "설정 소스에는 독립 화면 기능만 있고 허용된 여정 마일스톤이 없다.",
+      "source_thread_refs": [],
+      "source_area_refs": [],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1"
+      ],
+      "transition_refs": [
+        "T065"
+      ]
+    },
+    {
+      "description": "업로드 진행 전이의 매핑을 보류한다.",
+      "reason": "업로드 및 파싱 진행 UI는 있으나 대상 전이의 런타임 결과가 검증되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ],
+      "transition_refs": [
+        "T068"
+      ]
+    },
+    {
+      "description": "업로드 예외 전이의 매핑을 보류한다.",
+      "reason": "업로드 실패 처리 코드는 있으나 대상 예외 전이의 실제 여정 위치가 확인되지 않았다.",
+      "source_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ],
+      "transition_refs": [
+        "T069"
+      ]
+    }
+  ]
+}

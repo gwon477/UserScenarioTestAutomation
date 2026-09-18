@@ -1,0 +1,42 @@
+{
+  "sceneId": "18-answer",
+  "cues": [
+    {
+      "text": "답변은 케이스의 전제, 단계, 원천 코드를 근거로 합니다",
+      "startMs": 0,
+      "endMs": 8754,
+      "box": {
+        "x0": 505,
+        "y0": 926,
+        "x1": 1416,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "drag",
+      "atMs": 2166,
+      "mode": "html5"
+    },
+    {
+      "type": "stream",
+      "atMs": 6344,
+      "startMs": 4953,
+      "endMs": 6344,
+      "speedup": false
+    },
+    {
+      "type": "zoomIn",
+      "atMs": 6347,
+      "scale": 1.3,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 8202,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 9056
+}

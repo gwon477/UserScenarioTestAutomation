@@ -1,0 +1,12 @@
+{
+  "pass": false,
+  "issues": [
+    "SCENARIO_CASE_CORRECTION_TARGET_MISSING"
+  ],
+  "failed_target_refs": [
+    "CT001",
+    "CT002",
+    "CT003"
+  ],
+  "failed_case_indexes": []
+}

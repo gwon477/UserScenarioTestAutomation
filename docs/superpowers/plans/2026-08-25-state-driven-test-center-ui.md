@@ -1,5 +1,7 @@
 # State-driven Test Center UI Implementation Plan
 
+> **다중 대상 적용 메모(2026-08-26):** 이 계획의 `targetUrl`, `selector`, URL 입력은 현재 web preview fixture의 projection이다. backend 연결 시 canonical 계약으로 재사용하지 않고 `ExecutionTargetProfile`, adapter-neutral target reference, target별 preflight UI로 교체한다. 적용 기준은 `docs/architecture/05-multi-target-execution-adapter-design.md`다.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Pi/LLM 하네스 없이도 영속 도메인 상태 계약을 사용해 프로젝트 준비, 분석, 복구, 시나리오, 순차 테스트 수행, 증적 보관함과 상세 화면을 모두 재현하고 검증한다.
@@ -930,13 +932,13 @@ Save screenshot: `artifacts/screen-runtime-recovery.png`.
 
 실행 이력, 현재 순차 대기열, 선택 케이스 증적을 한 화면에서 확인합니다.
 
-![순차 테스트 수행 화면](artifacts/screen-test-running.png)
+![순차 테스트 수행 화면](../../../artifacts/screen-test-running.png)
 
 ### 8. 실패 증적 상세
 
 실패 시점·실패 직전·동작 완료 화면과 구조화 오류 정보를 함께 확인합니다.
 
-![실패 증적 상세](artifacts/screen-test-failure-evidence.png)
+![실패 증적 상세](../../../artifacts/screen-test-failure-evidence.png)
 ```
 
 - [ ] **Step 7: 문서 링크와 이미지 존재 검증**

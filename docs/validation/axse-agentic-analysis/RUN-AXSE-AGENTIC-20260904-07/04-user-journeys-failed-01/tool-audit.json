@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review-validation"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification-validation"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 14,
+      "resolved_ref_count": 13,
+      "requested_budget": 30000,
+      "effective_budget": 70328,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 7,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "USER_JOURNEY_CLASSIFICATION_THREAD_MISMATCH",
+      "validation_issues": [
+        "USER_JOURNEY_CLASSIFICATION_THREAD_MISMATCH:0:C015",
+        "USER_JOURNEY_CLASSIFICATION_THREAD_MISMATCH:1:C024"
+      ],
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 8,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_WRITE_DUPLICATE",
+      "validation_issues": [
+        "USER_JOURNEY_CLASSIFICATION_THREAD_MISMATCH:0:C015",
+        "USER_JOURNEY_CLASSIFICATION_THREAD_MISMATCH:1:C024"
+      ],
+      "artifact_id": "04-user-journeys"
+    }
+  ]
+}

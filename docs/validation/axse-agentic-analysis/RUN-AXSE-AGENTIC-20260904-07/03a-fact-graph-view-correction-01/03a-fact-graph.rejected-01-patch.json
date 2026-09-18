@@ -1,0 +1,2685 @@
+{
+  "schema_version": 2,
+  "screen_updates": [],
+  "element_updates": [
+    {
+      "element_ref": "U1",
+      "action_kind": "filter business mapping issues"
+    },
+    {
+      "element_ref": "U10",
+      "action_kind": "switch to category-tree view"
+    },
+    {
+      "element_ref": "U11",
+      "action_kind": "select or deselect all context flows"
+    },
+    {
+      "element_ref": "U12",
+      "action_kind": "select or deselect all category flows"
+    },
+    {
+      "element_ref": "U13",
+      "action_kind": "close flow-text view"
+    },
+    {
+      "element_ref": "U14",
+      "action_kind": "request scenario and test-case generation"
+    },
+    {
+      "element_ref": "U15",
+      "action_kind": "expand or collapse category"
+    },
+    {
+      "element_ref": "U16",
+      "action_kind": "select or deselect a context flow"
+    },
+    {
+      "element_ref": "U17",
+      "action_kind": "select or deselect a context flow"
+    },
+    {
+      "element_ref": "U18",
+      "action_kind": "select or deselect a category flow"
+    },
+    {
+      "element_ref": "U19",
+      "action_kind": "submit login credentials"
+    },
+    {
+      "element_ref": "U2",
+      "action_kind": "export mapping validation CSV"
+    },
+    {
+      "element_ref": "U20",
+      "action_kind": "enter user ID"
+    },
+    {
+      "element_ref": "U21",
+      "action_kind": "enter password"
+    },
+    {
+      "element_ref": "U22",
+      "action_kind": "select project"
+    },
+    {
+      "element_ref": "U23",
+      "action_kind": "refresh project list"
+    },
+    {
+      "element_ref": "U24",
+      "action_kind": "log out"
+    },
+    {
+      "element_ref": "U25",
+      "action_kind": "navigate to selected workflow stage"
+    },
+    {
+      "element_ref": "U26",
+      "action_kind": "select task"
+    },
+    {
+      "element_ref": "U27",
+      "action_kind": "log out"
+    },
+    {
+      "element_ref": "U28",
+      "action_kind": "navigate to upload stage"
+    },
+    {
+      "element_ref": "U29",
+      "action_kind": "navigate to upload stage"
+    },
+    {
+      "element_ref": "U3",
+      "action_kind": "generate preset scenario and test-case output"
+    },
+    {
+      "element_ref": "U30",
+      "action_kind": "refresh current page"
+    },
+    {
+      "element_ref": "U31",
+      "action_kind": "create task"
+    },
+    {
+      "element_ref": "U32",
+      "action_kind": "navigate to settings"
+    },
+    {
+      "element_ref": "U33",
+      "action_kind": "open or close task menu"
+    },
+    {
+      "element_ref": "U34",
+      "action_kind": "change parsed database view or page"
+    },
+    {
+      "element_ref": "U35",
+      "action_kind": "go to previous parsed-database page"
+    },
+    {
+      "element_ref": "U36",
+      "action_kind": "navigate to upload stage"
+    },
+    {
+      "element_ref": "U37",
+      "action_kind": "apply parsed-database search"
+    },
+    {
+      "element_ref": "U38",
+      "action_kind": "go to next parsed-database page"
+    },
+    {
+      "element_ref": "U39",
+      "action_kind": "navigate to business mapping stage"
+    },
+    {
+      "element_ref": "U4",
+      "action_kind": "navigate to parsed database stage"
+    },
+    {
+      "element_ref": "U40",
+      "action_kind": "enter parsed-database search text"
+    },
+    {
+      "element_ref": "U41",
+      "action_kind": "filter scenario matrix"
+    },
+    {
+      "element_ref": "U42",
+      "action_kind": "download scenario matrix CSV"
+    },
+    {
+      "element_ref": "U43",
+      "action_kind": "download scenario matrix Excel"
+    },
+    {
+      "element_ref": "U45",
+      "action_kind": "expand or collapse screen details"
+    },
+    {
+      "element_ref": "U46",
+      "action_kind": "expand or collapse action details"
+    },
+    {
+      "element_ref": "U47",
+      "action_kind": "expand or collapse test-data details"
+    },
+    {
+      "element_ref": "U48",
+      "action_kind": "navigate to business stage"
+    },
+    {
+      "element_ref": "U49",
+      "action_kind": "expand or collapse all case details"
+    },
+    {
+      "element_ref": "U5",
+      "action_kind": "open business-flow text output"
+    },
+    {
+      "element_ref": "U50",
+      "action_kind": "search scenario or test case"
+    },
+    {
+      "element_ref": "U51",
+      "action_kind": "upload and parse document"
+    },
+    {
+      "element_ref": "U52",
+      "action_kind": "navigate to parsed database stage"
+    },
+    {
+      "element_ref": "U53",
+      "action_kind": "reset completed upload for re-upload"
+    },
+    {
+      "element_ref": "U55",
+      "action_kind": "cancel or clear selected upload"
+    },
+    {
+      "element_ref": "U56",
+      "action_kind": "select document file"
+    },
+    {
+      "element_ref": "U57",
+      "action_kind": "go to next scenario page"
+    },
+    {
+      "element_ref": "U58",
+      "action_kind": "go to previous scenario page"
+    },
+    {
+      "element_ref": "U6",
+      "action_kind": "close preset or flow-text view"
+    },
+    {
+      "element_ref": "U7",
+      "action_kind": "switch to context-cube view"
+    },
+    {
+      "element_ref": "U8",
+      "action_kind": "close preset or flow-text view"
+    },
+    {
+      "element_ref": "U9",
+      "action_kind": "close flow-text view"
+    }
+  ],
+  "api_updates": [
+    {
+      "api_ref": "A1",
+      "reads": [],
+      "writes": [
+        "authenticate user and establish session"
+      ]
+    },
+    {
+      "api_ref": "A2",
+      "reads": [
+        "load available projects for authenticated user"
+      ],
+      "writes": []
+    }
+  ],
+  "predicates": [
+    {
+      "key": "business.category.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U15"
+      ]
+    },
+    {
+      "key": "business.issue_filter.changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U1"
+      ]
+    },
+    {
+      "key": "business.panel",
+      "values": [
+        "context",
+        "category"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U7",
+        "U10"
+      ]
+    },
+    {
+      "key": "checked_flows",
+      "values": [
+        "selected",
+        "not_selected"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U11",
+        "U12",
+        "U16",
+        "U17",
+        "U18",
+        "U14"
+      ]
+    },
+    {
+      "key": "flow_text.loading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U5"
+      ]
+    },
+    {
+      "key": "flow_text.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U9",
+        "U13"
+      ]
+    },
+    {
+      "key": "generation.completed",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "generation.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "generation.requesting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U14"
+      ]
+    },
+    {
+      "key": "login.authenticated",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "login.password_present",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U21",
+        "U19"
+      ]
+    },
+    {
+      "key": "login.request_error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "login.submitting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "login.user_id_present",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U20",
+        "U19"
+      ]
+    },
+    {
+      "key": "login.validation_error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19"
+      ]
+    },
+    {
+      "key": "mapping_csv.downloaded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "mapping_csv.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U2"
+      ]
+    },
+    {
+      "key": "page.refreshed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U30"
+      ]
+    },
+    {
+      "key": "parsed_db.page",
+      "values": [
+        "previous",
+        "next"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U35",
+        "U38"
+      ]
+    },
+    {
+      "key": "parsed_db.query_draft.changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U40"
+      ]
+    },
+    {
+      "key": "parsed_db.query.applied",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U37"
+      ]
+    },
+    {
+      "key": "parsed_db.view_changed",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U34"
+      ]
+    },
+    {
+      "key": "preset.completed",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U3"
+      ]
+    },
+    {
+      "key": "preset.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U3"
+      ]
+    },
+    {
+      "key": "preset.open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U6",
+        "U8"
+      ]
+    },
+    {
+      "key": "preset.requesting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U3"
+      ]
+    },
+    {
+      "key": "project.selected",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U22"
+      ]
+    },
+    {
+      "key": "projects.loaded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U23",
+        "U22"
+      ]
+    },
+    {
+      "key": "projects.request_error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U23"
+      ]
+    },
+    {
+      "key": "projects.requesting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U23"
+      ]
+    },
+    {
+      "key": "scenario_csv.downloaded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario_csv.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U42"
+      ]
+    },
+    {
+      "key": "scenario_excel.downloaded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario_excel.error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U43"
+      ]
+    },
+    {
+      "key": "scenario.action_details.expanded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U46"
+      ]
+    },
+    {
+      "key": "scenario.case_details.expanded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U49"
+      ]
+    },
+    {
+      "key": "scenario.matrix_error_visible",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U41",
+        "U50",
+        "U57",
+        "U58"
+      ]
+    },
+    {
+      "key": "scenario.matrix_filter.changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U41"
+      ]
+    },
+    {
+      "key": "scenario.matrix_loaded",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U41",
+        "U50",
+        "U57",
+        "U58"
+      ]
+    },
+    {
+      "key": "scenario.matrix_loading",
+      "values": [
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U41",
+        "U50",
+        "U57",
+        "U58"
+      ]
+    },
+    {
+      "key": "scenario.next_page.enabled",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U57"
+      ]
+    },
+    {
+      "key": "scenario.previous_page.enabled",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U58"
+      ]
+    },
+    {
+      "key": "scenario.query.changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U50"
+      ]
+    },
+    {
+      "key": "scenario.screen_details.expanded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U45"
+      ]
+    },
+    {
+      "key": "scenario.test_data_details.expanded",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U47"
+      ]
+    },
+    {
+      "key": "session.active",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U19",
+        "U24",
+        "U27"
+      ]
+    },
+    {
+      "key": "stage.business",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U39",
+        "U48"
+      ]
+    },
+    {
+      "key": "stage.parsed_db",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U4",
+        "U36",
+        "U52"
+      ]
+    },
+    {
+      "key": "stage.selected",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U25"
+      ]
+    },
+    {
+      "key": "stage.settings",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U32"
+      ]
+    },
+    {
+      "key": "stage.upload",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U28",
+        "U29"
+      ]
+    },
+    {
+      "key": "task.create_completed",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U31"
+      ]
+    },
+    {
+      "key": "task.create_error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U31"
+      ]
+    },
+    {
+      "key": "task.loading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U26",
+        "U31"
+      ]
+    },
+    {
+      "key": "task.menu_open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U33"
+      ]
+    },
+    {
+      "key": "task.selected",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U26"
+      ]
+    },
+    {
+      "key": "upload.complete",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U51",
+        "U52",
+        "U53"
+      ]
+    },
+    {
+      "key": "upload.file_selected",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U56",
+        "U51",
+        "U53",
+        "U55"
+      ]
+    },
+    {
+      "key": "upload.locked",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U51",
+        "U52",
+        "U56"
+      ]
+    },
+    {
+      "key": "upload.parse_error_visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U51"
+      ]
+    },
+    {
+      "key": "upload.submitting",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence_element_refs": [
+        "U51",
+        "U52"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U1",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "business.issue_filter.changed",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U10",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "business.panel",
+            "value": "category"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U11",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U11",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U12",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U12",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U13",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "flow_text.open",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U14",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          },
+          {
+            "predicate_key": "generation.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "generation.error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U14",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          },
+          {
+            "predicate_key": "generation.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "generation.requesting",
+            "value": "true"
+          },
+          {
+            "predicate_key": "generation.completed",
+            "value": "true"
+          },
+          {
+            "predicate_key": "generation.error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "add",
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U15",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "business.category.open",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "business.category.open",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U15",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "business.category.open",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "business.category.open",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U16",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U16",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U17",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U17",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U18",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U18",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "selected"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "checked_flows",
+            "value": "not_selected"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U2",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "generation.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "mapping_csv.error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U2",
+      "to_screen_ref": "S1",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "generation.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "mapping_csv.downloaded",
+            "value": "true"
+          },
+          {
+            "predicate_key": "mapping_csv.error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U3",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "generation.error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U3",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "generation.completed",
+            "value": "true"
+          },
+          {
+            "predicate_key": "generation.error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U4",
+      "to_screen_ref": "S5",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.parsed_db",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U5",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "flow_text.open",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U6",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "preset.open",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U7",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "business.panel",
+            "value": "context"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U8",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "preset.open",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S1",
+      "on_element_ref": "U9",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "flow_text.open",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U19",
+      "to_screen_ref": "S2",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "login.validation_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U19",
+      "to_screen_ref": "S2",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "login.user_id_present",
+            "value": "true"
+          },
+          {
+            "predicate_key": "login.password_present",
+            "value": "true"
+          },
+          {
+            "predicate_key": "login.submitting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "login.request_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U19",
+      "to_screen_ref": "S3",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "login.user_id_present",
+            "value": "true"
+          },
+          {
+            "predicate_key": "login.password_present",
+            "value": "true"
+          },
+          {
+            "predicate_key": "login.submitting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "login.authenticated",
+            "value": "true"
+          },
+          {
+            "predicate_key": "session.active",
+            "value": "true"
+          },
+          {
+            "predicate_key": "login.validation_error_visible",
+            "value": "false"
+          },
+          {
+            "predicate_key": "login.request_error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U20",
+      "to_screen_ref": "S2",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "login.user_id_present",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S2",
+      "on_element_ref": "U21",
+      "to_screen_ref": "S2",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "login.password_present",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U22",
+      "to_screen_ref": "S4",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "project.selected",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U23",
+      "to_screen_ref": "S3",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "projects.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "projects.request_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U23",
+      "to_screen_ref": "S3",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "projects.requesting",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "projects.loaded",
+            "value": "true"
+          },
+          {
+            "predicate_key": "projects.request_error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S3",
+      "on_element_ref": "U24",
+      "to_screen_ref": "S2",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "session.active",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U25",
+      "to_screen_ref": "S4",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.selected",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U26",
+      "to_screen_ref": "S4",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "task.loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "task.loading",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U26",
+      "to_screen_ref": "S4",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "task.loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "task.selected",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U27",
+      "to_screen_ref": "S2",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "session.active",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U28",
+      "to_screen_ref": "S8"
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U28",
+      "to_screen_ref": "S8",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.upload",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U29",
+      "to_screen_ref": "S8"
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U29",
+      "to_screen_ref": "S8",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.upload",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U30",
+      "to_screen_ref": "S4",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "page.refreshed",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U31",
+      "to_screen_ref": "S4",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "task.loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "task.create_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U31",
+      "to_screen_ref": "S4",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "task.loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "task.create_completed",
+            "value": "true"
+          },
+          {
+            "predicate_key": "task.selected",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U32",
+      "to_screen_ref": "S7"
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U32",
+      "to_screen_ref": "S7",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "task.selected",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.settings",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U33",
+      "to_screen_ref": "S4",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "task.menu_open",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "task.menu_open",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S4",
+      "on_element_ref": "U33",
+      "to_screen_ref": "S4",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "task.menu_open",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "task.menu_open",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U34",
+      "to_screen_ref": "S5",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "parsed_db.view_changed",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U35",
+      "to_screen_ref": "S5",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "parsed_db.page",
+            "value": "previous"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U36",
+      "to_screen_ref": "S8",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.upload",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U37",
+      "to_screen_ref": "S5",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "parsed_db.query.applied",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U38",
+      "to_screen_ref": "S5",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "parsed_db.page",
+            "value": "next"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U39",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.business",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S5",
+      "on_element_ref": "U40",
+      "to_screen_ref": "S5",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "parsed_db.query_draft.changed",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U41",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U41",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_filter.changed",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario.matrix_loaded",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U42",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario_csv.downloaded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario_csv.error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U42",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario_csv.downloaded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario_csv.downloaded",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario_csv.error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U43",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario_excel.downloaded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario_excel.error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U43",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario_excel.downloaded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario_excel.downloaded",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario_excel.error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U45",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.screen_details.expanded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.screen_details.expanded",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U45",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.screen_details.expanded",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.screen_details.expanded",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U46",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.action_details.expanded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.action_details.expanded",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U46",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.action_details.expanded",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.action_details.expanded",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U47",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.test_data_details.expanded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.test_data_details.expanded",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U47",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.test_data_details.expanded",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.test_data_details.expanded",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U48",
+      "to_screen_ref": "S1",
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.business",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U49",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.case_details.expanded",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.case_details.expanded",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U49",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.case_details.expanded",
+            "value": "true"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.case_details.expanded",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U50",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S6",
+      "on_element_ref": "U50",
+      "to_screen_ref": "S6",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.query.changed",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario.matrix_loaded",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U51",
+      "to_screen_ref": "S8",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "upload.file_selected",
+            "value": "true"
+          },
+          {
+            "predicate_key": "upload.submitting",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.complete",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.locked",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "upload.parse_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U51",
+      "to_screen_ref": "S8",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "upload.file_selected",
+            "value": "true"
+          },
+          {
+            "predicate_key": "upload.submitting",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.complete",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.locked",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "upload.complete",
+            "value": "true"
+          },
+          {
+            "predicate_key": "upload.parse_error_visible",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U52",
+      "to_screen_ref": "S5",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "upload.complete",
+            "value": "true"
+          },
+          {
+            "predicate_key": "upload.submitting",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.locked",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "stage.parsed_db",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U53",
+      "to_screen_ref": "S8",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "upload.complete",
+            "value": "true"
+          },
+          {
+            "predicate_key": "upload.locked",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "upload.complete",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.file_selected",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U55",
+      "to_screen_ref": "S8",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "upload.locked",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "upload.file_selected",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.complete",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S8",
+      "on_element_ref": "U56",
+      "to_screen_ref": "S8",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "upload.file_selected",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.complete",
+            "value": "false"
+          },
+          {
+            "predicate_key": "upload.locked",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "upload.file_selected",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S9",
+      "on_element_ref": "U57",
+      "to_screen_ref": "S9",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.next_page.enabled",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S9",
+      "on_element_ref": "U57",
+      "to_screen_ref": "S9",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.next_page.enabled",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_loaded",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exception",
+      "from_screen_ref": "S9",
+      "on_element_ref": "U58",
+      "to_screen_ref": "S9",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.previous_page.enabled",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_error_visible",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "normal",
+      "from_screen_ref": "S9",
+      "on_element_ref": "U58",
+      "to_screen_ref": "S9",
+      "guard": {
+        "all": [
+          {
+            "predicate_key": "scenario.previous_page.enabled",
+            "value": "true"
+          },
+          {
+            "predicate_key": "scenario.matrix_loading",
+            "value": "false"
+          }
+        ]
+      },
+      "effect": {
+        "all": [
+          {
+            "predicate_key": "scenario.matrix_loaded",
+            "value": "true"
+          }
+        ]
+      }
+    }
+  ]
+}

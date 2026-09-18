@@ -1,0 +1,10 @@
+{
+  "pass": false,
+  "issues": [
+    {
+      "code": "FACT_PATCH_REFERENCE_INVALID",
+      "path": "$",
+      "message": "The FACT graph patch failed backend contract validation."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "anchor": "새로 생성된 대조 조항",
+  "rounds": [
+    {
+      "round": 1,
+      "inText": true,
+      "rect": {
+        "x": 28,
+        "y": 195,
+        "w": 1004,
+        "h": 21
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다."
+    },
+    {
+      "round": 2,
+      "inText": true,
+      "rect": {
+        "x": 28,
+        "y": 195,
+        "w": 1004,
+        "h": 21
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다."
+    },
+    {
+      "round": 3,
+      "inText": true,
+      "rect": {
+        "x": 28,
+        "y": 195,
+        "w": 1004,
+        "h": 21
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다."
+    },
+    {
+      "round": 4,
+      "inText": true,
+      "rect": {
+        "x": 28,
+        "y": 195,
+        "w": 1004,
+        "h": 21
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다."
+    },
+    {
+      "round": 5,
+      "inText": true,
+      "rect": {
+        "x": 28,
+        "y": 195,
+        "w": 1004,
+        "h": 21
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다."
+    },
+    {
+      "round": 6,
+      "inText": true,
+      "rect": {
+        "x": 28,
+        "y": 195,
+        "w": 1004,
+        "h": 21
+      },
+      "inViewport": true,
+      "scrollY": 0,
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다."
+    }
+  ]
+}

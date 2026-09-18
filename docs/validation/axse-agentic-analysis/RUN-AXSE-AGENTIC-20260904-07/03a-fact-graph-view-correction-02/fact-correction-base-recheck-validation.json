@@ -1,0 +1,65 @@
+{
+  "pass": false,
+  "issues": [
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562]",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562 at frontend/src/features/main/pages/main.page.jsx:174 changes source-backed view state without evidence-linked predicates; states=downloadMessage|loadedMatrixPage."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c]",
+      "message": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c at frontend/src/features/main/pages/main.page.jsx:176 changes source-backed view state without evidence-linked predicates; states=downloadMessage|loadedMatrixPage."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-456a2904]",
+      "message": "EL-component-businesspage-button-root-456a2904 at frontend/src/features/main/pages/main.page.jsx:460 changes source-backed view state without evidence-linked predicates; states=cubePage."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-7b5cc90c]",
+      "message": "EL-component-businesspage-button-root-7b5cc90c at frontend/src/features/main/pages/main.page.jsx:461 changes source-backed view state without evidence-linked predicates; states=categoryPage."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-36a555c2]",
+      "message": "EL-component-businesspage-button-root-36a555c2 at frontend/src/features/main/pages/main.page.jsx:867 changes source-backed view state without evidence-linked predicates; states=presetGeneration|presetMessage|presetProgress."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-businesspage-button-root-547f94d7]",
+      "message": "EL-component-businesspage-button-root-547f94d7 at frontend/src/features/main/pages/main.page.jsx:874 changes source-backed view state without evidence-linked predicates; states=presetGeneration|presetMessage|presetProgress."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-button-b6ade5a6]",
+      "message": "EL-component-scenariopage-button-button-b6ade5a6 at frontend/src/features/main/pages/main.page.jsx:1209 changes source-backed view state without evidence-linked predicates; states=downloadMessage|loadedMatrixPage."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-input-root-e0e2ecb2]",
+      "message": "EL-component-scenariopage-input-root-e0e2ecb2 at frontend/src/features/main/pages/main.page.jsx:1212 changes source-backed view state without evidence-linked predicates; states=downloadMessage|loadedMatrixPage."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-ff33f465]",
+      "message": "EL-component-scenariopage-button-root-ff33f465 at frontend/src/features/main/pages/main.page.jsx:1368 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-4e83beae]",
+      "message": "EL-component-scenariopage-button-root-4e83beae at frontend/src/features/main/pages/main.page.jsx:1390 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-93f714c4]",
+      "message": "EL-component-scenariopage-button-root-93f714c4 at frontend/src/features/main/pages/main.page.jsx:1402 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    },
+    {
+      "code": "FACT_SOURCE_STATE_PREDICATE_MISSING",
+      "path": "$.predicates[element=EL-component-scenariopage-button-root-a53a01ca]",
+      "message": "EL-component-scenariopage-button-root-a53a01ca at frontend/src/features/main/pages/main.page.jsx:1420 changes source-backed view state without evidence-linked predicates; states=expandedSections."
+    }
+  ]
+}

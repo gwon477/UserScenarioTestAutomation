@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "stage": "user-journey-transition-mapping-patch",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-USER-JOURNEYS",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "base_artifact_hash": "sha256:fa443a101555217aee2eb651742c3aae3e49ea5f9d1b1aa472e015effaa22603",
+  "changes": [
+    {
+      "target_ref": "JT001",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 1
+    },
+    {
+      "target_ref": "JT002",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 1
+    },
+    {
+      "target_ref": "JT003",
+      "operation": "defer",
+      "description": "로그인 전이의 실행 결과 매핑을 보류한다.",
+      "reason": "로그인 폼 소스에는 입력 검증과 요청 처리는 있으나 런타임 전이 결과가 확인되지 않는다."
+    },
+    {
+      "target_ref": "JT004",
+      "operation": "defer",
+      "description": "로그인 예외 전이의 여정 매핑을 보류한다.",
+      "reason": "오류 표시 처리는 있으나 해당 예외 전이가 실제 여정에서 발생하는지는 런타임 검증이 없다."
+    },
+    {
+      "target_ref": "JT005",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 1
+    },
+    {
+      "target_ref": "JT006",
+      "operation": "defer",
+      "description": "프로젝트 조회 결과 전이의 매핑을 보류한다.",
+      "reason": "프로젝트 조회 화면은 확인되지만 런타임 결과와 여정 연결은 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT007",
+      "operation": "defer",
+      "description": "프로젝트 조회 예외 전이의 매핑을 보류한다.",
+      "reason": "조회 오류 표시 코드는 있으나 실제 예외 전이는 런타임 검증이 없다."
+    },
+    {
+      "target_ref": "JT008",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 6
+    },
+    {
+      "target_ref": "JT009",
+      "operation": "defer",
+      "description": "메인 셸 전이의 여정 위치를 보류한다.",
+      "reason": "메인 페이지 소스는 여러 스테이지를 포함하지만 해당 전이의 구체적 런타임 순서는 확인되지 않는다."
+    },
+    {
+      "target_ref": "JT010",
+      "operation": "defer",
+      "description": "메인 스테이지 전이의 여정 위치를 보류한다.",
+      "reason": "소스에 스테이지 내비게이션은 있으나 대상 전이와 특정 여정 마일스톤의 관계가 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT011",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 1
+    },
+    {
+      "target_ref": "JT012",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 1
+    },
+    {
+      "target_ref": "JT013",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 1
+    },
+    {
+      "target_ref": "JT014",
+      "operation": "defer",
+      "description": "메인 여정 전이의 매핑을 보류한다.",
+      "reason": "메인 페이지 기능은 확인되지만 대상 전이의 실행 순서가 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT015",
+      "operation": "defer",
+      "description": "메인 예외 전이의 매핑을 보류한다.",
+      "reason": "메인 페이지에 오류 처리는 있으나 대상 예외 전이의 여정 위치는 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT016",
+      "operation": "defer",
+      "description": "메인 업무 전이의 매핑을 보류한다.",
+      "reason": "업무 관련 UI는 있으나 대상 전이와 마일스톤의 관계가 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT017",
+      "operation": "defer",
+      "description": "메인 업무 예외 전이의 매핑을 보류한다.",
+      "reason": "업무 영역의 예외 상태는 보이지만 대상 전이의 실제 여정 위치는 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT018",
+      "operation": "defer",
+      "description": "메인 작업 전이의 매핑을 보류한다.",
+      "reason": "작업 기능은 소스에 있으나 대상 전이의 실행 순서가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT019",
+      "operation": "defer",
+      "description": "메인 결과 전이의 매핑을 보류한다.",
+      "reason": "결과 기능은 확인되지만 대상 전이와 특정 마일스톤의 관계가 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT020",
+      "operation": "defer",
+      "description": "메인 화면 전이의 매핑을 보류한다.",
+      "reason": "화면 전환 기능은 있으나 대상 전이의 구체적 위치가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT021",
+      "operation": "defer",
+      "description": "메인 화면 예외 전이의 매핑을 보류한다.",
+      "reason": "예외 화면 상태는 소스에 있으나 대상 전이의 실제 위치가 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT022",
+      "operation": "defer",
+      "description": "메인 조회 전이의 매핑을 보류한다.",
+      "reason": "조회 및 새로고침 UI는 있으나 대상 전이의 여정 연결이 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT023",
+      "operation": "defer",
+      "description": "메인 조회 예외 전이의 매핑을 보류한다.",
+      "reason": "조회 오류 표시 코드는 있으나 대상 전이의 여정 위치가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT024",
+      "operation": "defer",
+      "description": "메인 작업 흐름 전이의 매핑을 보류한다.",
+      "reason": "작업 흐름 기능은 존재하지만 대상 전이의 런타임 순서가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT025",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT026",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT027",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT028",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT029",
+      "operation": "defer",
+      "description": "업무흐름 전이의 매핑을 보류한다.",
+      "reason": "업무흐름 선택 UI는 확인되지만 대상 전이의 정확한 여정 위치가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT030",
+      "operation": "defer",
+      "description": "업무흐름 결과 전이의 매핑을 보류한다.",
+      "reason": "업무흐름 결과 처리는 있으나 대상 전이의 실행 순서가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT031",
+      "operation": "defer",
+      "description": "업무흐름 예외 전이의 매핑을 보류한다.",
+      "reason": "업무흐름 오류 처리는 보이지만 대상 예외 전이의 여정 위치가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT032",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 4
+    },
+    {
+      "target_ref": "JT033",
+      "operation": "defer",
+      "description": "생성 진행 전이의 매핑을 보류한다.",
+      "reason": "생성 진행 UI는 있으나 대상 전이의 런타임 실행 순서가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT034",
+      "operation": "defer",
+      "description": "생성 예외 전이의 매핑을 보류한다.",
+      "reason": "생성 실패 표시와 처리는 있으나 대상 예외 전이의 여정 위치가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT035",
+      "operation": "defer",
+      "description": "생성 완료 전이의 매핑을 보류한다.",
+      "reason": "완료 상태 표시는 있으나 대상 전이와 특정 마일스톤의 관계가 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT036",
+      "operation": "defer",
+      "description": "생성 실패 전이의 매핑을 보류한다.",
+      "reason": "실패 상태 처리는 확인되지만 대상 전이의 여정 위치는 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT037",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT038",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT039",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT040",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT041",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT042",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT043",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT044",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT045",
+      "operation": "defer",
+      "description": "결과 전이의 매핑을 보류한다.",
+      "reason": "결과 화면 기능은 있으나 대상 전이의 정확한 런타임 위치가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT046",
+      "operation": "defer",
+      "description": "결과 조회 전이의 매핑을 보류한다.",
+      "reason": "결과 조회 UI는 있으나 대상 전이의 여정 연결이 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT047",
+      "operation": "defer",
+      "description": "결과 조회 예외 전이의 매핑을 보류한다.",
+      "reason": "예외 상태 표시 코드는 있으나 대상 전이의 실제 위치가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT048",
+      "operation": "defer",
+      "description": "결과 상세 전이의 매핑을 보류한다.",
+      "reason": "상세 펼침 기능은 있으나 대상 전이의 여정 위치가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT049",
+      "operation": "defer",
+      "description": "결과 상세 예외 전이의 매핑을 보류한다.",
+      "reason": "상세 영역의 예외 관계가 런타임에서 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT050",
+      "operation": "defer",
+      "description": "추적성 결과 전이의 매핑을 보류한다.",
+      "reason": "추적성 매트릭스는 소스에 있으나 대상 전이의 실행 순서가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT051",
+      "operation": "defer",
+      "description": "추적성 결과 예외 전이의 매핑을 보류한다.",
+      "reason": "결과 오류 처리는 있으나 대상 예외 전이의 여정 위치가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT052",
+      "operation": "defer",
+      "description": "다운로드 전이의 매핑을 보류한다.",
+      "reason": "다운로드 UI는 있으나 대상 전이의 구체적 여정 위치가 런타임 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT053",
+      "operation": "defer",
+      "description": "다운로드 예외 전이의 매핑을 보류한다.",
+      "reason": "다운로드 오류 가능성은 있으나 대상 예외 전이의 실제 위치가 확인되지 않았다."
+    },
+    {
+      "target_ref": "JT054",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT055",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT056",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT057",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 5
+    },
+    {
+      "target_ref": "JT058",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT059",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT060",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT061",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT062",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT063",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT064",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 3
+    },
+    {
+      "target_ref": "JT065",
+      "operation": "defer",
+      "description": "설정 화면 전이의 매핑을 보류한다.",
+      "reason": "설정 소스에는 독립 화면 기능만 있고 허용된 여정 마일스톤이 없다."
+    },
+    {
+      "target_ref": "JT066",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 2
+    },
+    {
+      "target_ref": "JT067",
+      "operation": "map",
+      "journey_ref": "J001",
+      "milestone_position": 2
+    },
+    {
+      "target_ref": "JT068",
+      "operation": "defer",
+      "description": "업로드 진행 전이의 매핑을 보류한다.",
+      "reason": "업로드 및 파싱 진행 UI는 있으나 대상 전이의 런타임 결과가 검증되지 않았다."
+    },
+    {
+      "target_ref": "JT069",
+      "operation": "defer",
+      "description": "업로드 예외 전이의 매핑을 보류한다.",
+      "reason": "업로드 실패 처리 코드는 있으나 대상 예외 전이의 실제 여정 위치가 확인되지 않았다."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "external-evaluation-unregistered-probe",
+  "provenance": {
+    "golden_hash": "sha256:09cac5ddc58c812eea8bddef6f9154db137bd51a3e37ceb871fdae1c1351f253",
+    "candidate_hash": "sha256:454899fcd17e460049ad3837ba41a61808b770474db6a5b33c9776e7bfe1aceb",
+    "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+    "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+    "business_workflow_mapping_artifact_hash": "sha256:6eb8a9aea80ea81bea3cc0e497ea58722d6288fb67d55ceebff5437bcaa5c974",
+    "journey_artifact_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+    "user_journey_workflow_link_artifact_hash": "sha256:dfa0cc931a75f7664c8d281a8590aee4137dbc7ecbe7285a288f86bb4062ea5c",
+    "scenario_artifact_hash": "sha256:0acf53a2bd7ced069b547cca9402f9c104583e82524d1d57dacc1b741e82f076"
+  },
+  "artifacts": {
+    "evaluation_candidate": {
+      "path": "evaluation-candidate.json",
+      "content_hash": "sha256:454899fcd17e460049ad3837ba41a61808b770474db6a5b33c9776e7bfe1aceb"
+    },
+    "taxonomy_journey_assessment": {
+      "path": "06-golden-taxonomy-journey-assessment.json",
+      "content_hash": "sha256:a44399e8307085e571a49c0bf67896569af2984a201f53238aafea6d46ec20cd"
+    },
+    "scenario_assessment": {
+      "path": "06-golden-scenario-assessment.json",
+      "content_hash": "sha256:0680f3a5728ac0e5d0b79253aee265be0851b198136f36bed121e7f6116cc9a1"
+    },
+    "scenario_correction_plan": {
+      "path": "golden-scenario-assessment-correction-plan.json",
+      "content_hash": "sha256:fe05fc3298f73859c79c77410d9681f1c06d00b61f0b696fa44986dfd9ccb45e"
+    },
+    "scenario_correction_patch": {
+      "path": "06-golden-scenario-assessment-correction.json",
+      "content_hash": "sha256:97b57051ed01a8646a87c31fd44991e9728b7fd286087c672f42a17d6612ca93"
+    },
+    "result": {
+      "path": "golden-evaluation-result.json",
+      "content_hash": "sha256:62500e5790c7b1cf07caa8f340358a4590ee6f811a20cf25897f04d69a904afd"
+    },
+    "performance_report": {
+      "path": "golden-performance-report.json",
+      "content_hash": "sha256:ee2b09154d682327330fff264626fa2de3a56cd7b13df3c25b7435798671c17c"
+    }
+  }
+}

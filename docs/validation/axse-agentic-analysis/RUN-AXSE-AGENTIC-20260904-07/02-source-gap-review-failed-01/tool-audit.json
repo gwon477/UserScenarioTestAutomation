@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND"
+    },
+    {
+      "sequence": 5,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "AGENTIC_ARTIFACT_NOT_FOUND",
+      "artifact_id": "02-source-gap-review"
+    }
+  ]
+}

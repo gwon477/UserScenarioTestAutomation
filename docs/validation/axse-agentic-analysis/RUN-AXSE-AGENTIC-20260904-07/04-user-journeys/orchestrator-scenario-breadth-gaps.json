@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "artifact_type": "orchestrator-source-gaps",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "reviewed_artifact": {
+    "artifact_id": "04-user-journeys",
+    "content_hash": "sha256:44d01f41d836d66fd583df39e3e441f0c2f161620014f470a913533794ed62f5",
+    "status": "locally-validated-unregistered-probe"
+  },
+  "golden_derived": false,
+  "decision": "carry-forward-semantic-question",
+  "gaps": [
+    {
+      "gap_id": "GAP-SOURCE-DISTINCT-CASE-BREADTH",
+      "kind": "incomplete-source-distinct-case-breadth",
+      "affected_sections": [
+        "normal-cases",
+        "boundary-cases",
+        "exception-cases",
+        "recovery-cases"
+      ],
+      "required_change": "이전 후보의 검증된 정상·복구 E2E 경로는 보존한다. 원본 소스를 다시 읽고 인증/프로젝트 선택, TS 작업 수명주기, 문서 업로드·파싱, Parsed DB 조회, 업무흐름 매핑·생성 요청, 생성 진행·결과의 각 영역에서 서로 다른 사용자 action, guard, 입력 경계, 빈 상태, 진행/완료/실패 상태, API·네트워크 오류, 잠금, 재조회·재선택·모달 닫기, 단계 이동, CSV/Excel 출력 동작을 찾는다. guard·action·관찰 결과가 다른 분기는 각각 하나의 구체적인 case로 작성하고, 기존 작업 선택과 새 작업 생성처럼 상호 배타적인 선택을 한 case의 '또는' 표현으로 합치지 않는다. 소스가 정확한 실패 트리거나 재시도·결과 보존 규칙을 입증하지 않는 경우에는 발명하지 말고 unresolved로 유지한다.",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-app-a0eba768",
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+        "SRC-frontend-src-features-login-login-page-24848ab2",
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-backend-app-api-v1-workflows-d9740180"
+      ]
+    }
+  ],
+  "generator_exclusions": [
+    "orchestrator-external-evaluation.md",
+    "evaluator identifiers, wording, expected case counts, and transition counts"
+  ]
+}

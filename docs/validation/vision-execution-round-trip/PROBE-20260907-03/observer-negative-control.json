@@ -1,0 +1,57 @@
+{
+  "probe": "observer-negative-control",
+  "modelId": "gpt-5.6-luna",
+  "frame": {
+    "width": 1229,
+    "height": 768
+  },
+  "screen": "AXSE 로그인",
+  "results": [
+    {
+      "name": "present-anchor",
+      "questions": [
+        "로그인"
+      ],
+      "expect": [
+        "로그인"
+      ],
+      "got": [
+        "로그인"
+      ],
+      "pass": true
+    },
+    {
+      "name": "absent-anchor (다음 화면 앵커)",
+      "questions": [
+        "프로젝트 선택"
+      ],
+      "expect": [],
+      "got": [],
+      "pass": true
+    },
+    {
+      "name": "absent-invented",
+      "questions": [
+        "결제 승인 완료"
+      ],
+      "expect": [],
+      "got": [],
+      "pass": true
+    },
+    {
+      "name": "mixed",
+      "questions": [
+        "로그인",
+        "프로젝트 선택",
+        "결제 승인 완료"
+      ],
+      "expect": [
+        "로그인"
+      ],
+      "got": [
+        "로그인"
+      ],
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "evaluation_scope": "external-golden-read-only",
+  "product_stage_acceptance": "not-attempted",
+  "generation_artifact_immutable": true,
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "scenario_recall": 0.8,
+    "required_journey_recall": 1
+  },
+  "counts": {
+    "golden": {
+      "classifications": 6,
+      "workflows": 10,
+      "transitions": 90,
+      "scenarios": 44,
+      "journeys": 2
+    },
+    "candidate": {
+      "classifications": 6,
+      "workflows": 41,
+      "journeys": 2,
+      "scenarios": 53
+    }
+  },
+  "taxonomy_journey": {
+    "passed": true,
+    "classificationRecall": 1,
+    "workflowRecall": 1,
+    "requiredJourneyRecall": 1,
+    "criticalGaps": []
+  },
+  "scenario": {
+    "passed": false,
+    "scenarioRecall": 0.5227272727272727,
+    "matchedScenarioCount": 23,
+    "totalGoldenScenarios": 44,
+    "unmatchedGoldenScenarioIds": [
+      "AXSE-SCN-0001",
+      "AXSE-SCN-0002",
+      "AXSE-SCN-0003",
+      "AXSE-SCN-0005",
+      "AXSE-SCN-0008",
+      "AXSE-SCN-0014",
+      "AXSE-SCN-0017",
+      "AXSE-SCN-0018",
+      "AXSE-SCN-0019",
+      "AXSE-SCN-0020",
+      "AXSE-SCN-0023",
+      "AXSE-SCN-0025",
+      "AXSE-SCN-0027",
+      "AXSE-SCN-0028",
+      "AXSE-SCN-0030",
+      "AXSE-SCN-0033",
+      "AXSE-SCN-0034",
+      "AXSE-SCN-0035",
+      "AXSE-SCN-0036",
+      "AXSE-SCN-0041",
+      "AXSE-SCN-0042"
+    ],
+    "criticalGaps": [
+      "Required login validation, empty-data, locked-upload, parsed-data error, flow-text error, generation-progress/error, and result pagination/detail cases are missing.",
+      "Neither assembled E2E fully proves the required state handoffs, deterministic progress completion, matrix content, or session continuity; runtime-unverified feasibility remains a limitation.",
+      "The recovery E2E does not explicitly prove replacement of the invalid document in the same task after clearing the upload error."
+    ]
+  },
+  "feasibility": {
+    "source_supported_scenarios": 2,
+    "runtime_unverified_scenarios": 51,
+    "boundary_generation": "not-implemented-no-deterministic-boundary-obligation"
+  },
+  "passed": false,
+  "provenance": {
+    "golden_hash": "sha256:09cac5ddc58c812eea8bddef6f9154db137bd51a3e37ceb871fdae1c1351f253",
+    "candidate_hash": "sha256:31399cbb5ca8d1093a74acd93ca8d3719e2517d0cf4b69c0d36d5d1f190b25e0",
+    "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+    "fact_graph_artifact_hash": "sha256:9b40c2f9aa825e1774db0fca4ffbe2de60da8ce1e5e423ec17737651a6178bb5",
+    "business_workflow_mapping_artifact_hash": "sha256:45ac9fd84d3532f223663de2065e68b74907d3a4334a33f96dd32879b8ec0cfc",
+    "journey_artifact_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+    "user_journey_workflow_link_artifact_hash": "sha256:93a41655032ae5ddec2360c993769ef77a1c7713e19a9a24eb75f82a2a5c37ca",
+    "scenario_artifact_hash": "sha256:380fa07b3872263c3e9be51886fb8b84c0baa29da696f834b186b0c0df567dcd"
+  }
+}

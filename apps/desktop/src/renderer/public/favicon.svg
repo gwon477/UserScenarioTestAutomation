@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="ScenarioForge">
+  <title>ScenarioForge</title>
+  <rect width="32" height="32" rx="7.2" fill="#E8542B"/>
+  <g transform="translate(16 16) scale(.96) translate(-12 -11.55)" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round">
+    <path d="M17 6H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7"/>
+    <circle cx="17" cy="6" r="2.4" fill="#FFFFFF" stroke="none"/>
+  </g>
+</svg>

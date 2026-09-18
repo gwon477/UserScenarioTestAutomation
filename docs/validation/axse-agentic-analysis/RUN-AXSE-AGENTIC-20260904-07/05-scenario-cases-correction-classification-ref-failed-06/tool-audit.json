@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys-validation"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-next-stage-gaps"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "prior-scenario-cases"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 8,
+      "resolved_ref_count": 8,
+      "new_evidence_ref_count": 8,
+      "reused_evidence_ref_count": 0,
+      "requested_budget": 120000,
+      "effective_budget": 120000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 8,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_GAP_SOURCE_NOT_READ",
+      "validation_issues": [],
+      "artifact_id": "05-scenario-cases"
+    },
+    {
+      "sequence": 9,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 8,
+      "resolved_ref_count": 9,
+      "new_evidence_ref_count": 8,
+      "reused_evidence_ref_count": 0,
+      "requested_budget": 120000,
+      "effective_budget": 120000,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 10,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "SCENARIO_CASE_CLASSIFICATION_REF_INVALID",
+      "validation_issues": [
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:2:C015",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:2:input-source",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:3:C031",
+        "SCENARIO_CASE_PERSPECTIVE_MISSING:3:lifecycle-state",
+        "SCENARIO_CASE_CLASSIFICATION_REF_INVALID:4:C033"
+      ],
+      "artifact_id": "05-scenario-cases"
+    }
+  ]
+}

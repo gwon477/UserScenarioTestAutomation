@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비전 그라운딩 적중률, 좌표계 계약 전후</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --color-paper:#f5f5f5; --color-ink:#2d3142; --color-muted:#4f5d75; --color-accent:#eb6c36;
+      --font-sans:'Geist','Apple SD Gothic Neo',system-ui,sans-serif; --font-serif:'Instrument Serif','Apple SD Gothic Neo',serif; --font-mono:'Geist Mono',ui-monospace,monospace; }
+    body { font-family:var(--font-sans); background:var(--color-paper); color:var(--color-ink); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:3rem 2rem; }
+    .frame { max-width:1200px; width:100%; }
+    .eyebrow { font-family:var(--font-mono); font-size:0.66rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-muted); margin-bottom:0.5rem; }
+    h1 { font-family:var(--font-serif); font-size:clamp(1.5rem,2.4vw + 0.75rem,2rem); font-weight:400; letter-spacing:-0.02em; line-height:1.15; color:var(--color-ink); margin-bottom:1.5rem; }
+    svg { width:100%; min-width:900px; display:block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Bar chart · ScenarioForge</p>
+    <h1>비전 그라운딩 적중률, 좌표계 계약 전후</h1>
+    <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="grounding-hit-rate-title grounding-hit-rate-desc">
+      <title id="grounding-hit-rate-title">비전 그라운딩 적중률, 좌표계 계약 전후</title>
+      <desc id="grounding-hit-rate-desc">원본 1440x900 좌표계에서 AXSE 20.5%, RA-DAR 6.9%였던 그라운딩 적중률이 짧은 변 768 좌표계 계약 후 97.4%와 71.4%로 오른 것을 보여주는 막대그래프.</desc>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+        <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#f5f5f5"/>
+      <text transform="rotate(-90 24 230)" x="24" y="230" fill="#4f5d75" font-size="7" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.14em" text-anchor="middle">HIT RATE (%)</text>
+      <line x1="80" y1="344" x2="960" y2="344" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="72" y="348" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">20</text>
+      <line x1="80" y1="268" x2="960" y2="268" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="72" y="272" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">40</text>
+      <line x1="80" y1="192" x2="960" y2="192" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="72" y="196" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">60</text>
+      <line x1="80" y1="116" x2="960" y2="116" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="72" y="120" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">80</text>
+      <line x1="80" y1="40" x2="960" y2="40" stroke="rgba(45,49,66,0.08)" stroke-width="0.8"/>
+      <text x="72" y="44" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="end">100</text>
+      <line x1="80" y1="40" x2="80" y2="420" stroke="rgba(45,49,66,0.25)" stroke-width="1"/>
+      <line x1="80" y1="420" x2="960" y2="420" stroke="rgba(45,49,66,0.25)" stroke-width="1"/>
+      <rect x="130" y="342.1" width="120" height="77.9" fill="#f5f5f5"/>
+      <rect x="130" y="342.1" width="120" height="77.9" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+      <text x="190" y="334.1" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">20.5%</text>
+      <text x="190" y="440" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">AXSE 원본</text>
+      <rect x="350" y="49.9" width="120" height="370.1" fill="#f5f5f5"/>
+      <rect x="350" y="49.9" width="120" height="370.1" fill="rgba(235,108,54,0.12)" stroke="#eb6c36" stroke-width="1"/>
+      <text x="410" y="41.9" fill="#eb6c36" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" font-weight="600">97.4%</text>
+      <text x="410" y="440" fill="#eb6c36" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">AXSE 768</text>
+      <rect x="570" y="393.8" width="120" height="26.2" fill="#f5f5f5"/>
+      <rect x="570" y="393.8" width="120" height="26.2" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+      <text x="630" y="385.8" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">6.9%</text>
+      <text x="630" y="440" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">RA-DAR 원본</text>
+      <rect x="790" y="148.7" width="120" height="271.3" fill="#f5f5f5"/>
+      <rect x="790" y="148.7" width="120" height="271.3" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+      <text x="850" y="140.7" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle">71.4%</text>
+      <text x="850" y="440" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Apple SD Gothic Neo', system-ui, sans-serif" text-anchor="middle">RA-DAR 768</text>
+      <line x1="80" y1="78" x2="960" y2="78" stroke="#4f5d75" stroke-width="1" stroke-dasharray="5,4"/>
+      <rect x="880" y="58" width="80" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="920" y="67" fill="#7a8399" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">G1 목표 90%</text>
+      <line x1="40" y1="462" x2="960" y2="462" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <text x="40" y="478" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace" letter-spacing="0.18em">LEGEND</text>
+      <rect x="120" y="488" width="10" height="10" fill="rgba(235,108,54,0.12)" stroke="#eb6c36" stroke-width="1"/>
+      <text x="144" y="497" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">목표 달성</text>
+      <rect x="320" y="488" width="10" height="10" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+      <text x="344" y="497" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">기타</text>
+      <line x1="520" y1="493" x2="536" y2="493" stroke="#4f5d75" stroke-width="1" stroke-dasharray="5,4"/>
+      <text x="544" y="497" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'Apple SD Gothic Neo', ui-monospace, monospace">G1 목표 90%</text>
+    </svg>
+  </div>
+</body>
+</html>

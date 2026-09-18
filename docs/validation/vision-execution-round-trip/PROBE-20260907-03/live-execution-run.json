@@ -1,0 +1,53 @@
+{
+  "probe": "product-path-execution",
+  "project": "axse-agents",
+  "modelId": "gpt-5.6-luna",
+  "executionId": "EXEC-97aa0456-ee7e-437b-9463-6471c271f277",
+  "batchId": "batch-001",
+  "projectRoot": "/var/folders/pt/lrkxpw6105g172ycwp5xgd7w0000gn/T/sf-live-exec-77562103-8991-4853-9582-d31a800c3bb3",
+  "result": {
+    "schemaVersion": 1,
+    "executionId": "EXEC-97aa0456-ee7e-437b-9463-6471c271f277",
+    "batchId": "batch-001",
+    "runtimeStatus": "COMPLETED",
+    "verdictCounts": {
+      "PASSED": 3,
+      "FAILED": 0,
+      "INCONCLUSIVE": 0,
+      "SKIPPED": 0,
+      "CANCELLED": 0
+    },
+    "cases": [
+      {
+        "schemaVersion": 1,
+        "scenarioId": "SCN-AXSE-0001",
+        "title": "WF-axse-login",
+        "verdict": "PASSED",
+        "steps": [
+          {
+            "stepId": "SCN-AXSE-0001#1",
+            "order": 1,
+            "verdict": "PASSED",
+            "evidencePath": "cases/SCN-AXSE-0001/SCN-AXSE-0001-step-1/evidence.json"
+          },
+          {
+            "stepId": "SCN-AXSE-0001#2",
+            "order": 2,
+            "verdict": "PASSED",
+            "evidencePath": "cases/SCN-AXSE-0001/SCN-AXSE-0001-step-2/evidence.json"
+          },
+          {
+            "stepId": "SCN-AXSE-0001#3",
+            "order": 3,
+            "verdict": "PASSED",
+            "evidencePath": "cases/SCN-AXSE-0001/SCN-AXSE-0001-step-3/evidence.json"
+          }
+        ],
+        "startedAt": "2026-09-07T06:18:19.106Z",
+        "completedAt": "2026-09-07T06:18:45.435Z"
+      }
+    ],
+    "startedAt": "2026-09-07T06:18:19.106Z",
+    "completedAt": "2026-09-07T06:18:45.441Z"
+  }
+}

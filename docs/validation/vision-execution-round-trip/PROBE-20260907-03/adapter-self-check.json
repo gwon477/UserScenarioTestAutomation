@@ -1,0 +1,254 @@
+{
+  "probe": "vision-step-round-trip",
+  "designRef": "docs/architecture/07-vision-first-execution-design.md#11",
+  "project": "axse-agents",
+  "mode": "adapter-self-check",
+  "modelId": null,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "scenarioId": "SCN-AXSE-0001",
+  "compiled": {
+    "envelopes": 3,
+    "nonAutomatable": []
+  },
+  "caseVerdict": "PASSED",
+  "steps": [
+    {
+      "envelope": {
+        "stepId": "SCN-AXSE-0001#1",
+        "intent": {
+          "kind": "fill",
+          "valueRef": "EL-USERID"
+        },
+        "target": {
+          "descriptorId": "VTD-SCN-AXSE-0001-1",
+          "elementRef": "EL-USERID",
+          "visibleLabel": "아이디",
+          "controlKind": "textbox",
+          "surfaceHint": "/",
+          "verificationCandidates": [
+            {
+              "by": "css",
+              "value": "#lf-userId"
+            }
+          ],
+          "labelUniqueOnSurface": true,
+          "ambiguityRisk": "low"
+        },
+        "riskClass": "reversible-write",
+        "assertionRefs": [
+          "SCR-LOGIN"
+        ]
+      },
+      "outcome": {
+        "status": "completed",
+        "verdict": "PASSED",
+        "attempts": [
+          {
+            "attempt": 1,
+            "decision": {
+              "outcome": "accepted",
+              "capturePoint": {
+                "x": 721,
+                "y": 441
+              },
+              "modelPoint": {
+                "x": 615,
+                "y": 376
+              }
+            }
+          }
+        ],
+        "capturePoint": {
+          "x": 721,
+          "y": 441
+        },
+        "assertions": [
+          {
+            "ref": "SCR-LOGIN",
+            "verdict": "PASSED",
+            "detail": "로그인"
+          }
+        ]
+      }
+    },
+    {
+      "envelope": {
+        "stepId": "SCN-AXSE-0001#2",
+        "intent": {
+          "kind": "fill",
+          "valueRef": "EL-PASSWORD"
+        },
+        "target": {
+          "descriptorId": "VTD-SCN-AXSE-0001-2",
+          "elementRef": "EL-PASSWORD",
+          "visibleLabel": "패스워드",
+          "controlKind": "password-textbox",
+          "surfaceHint": "/",
+          "verificationCandidates": [
+            {
+              "by": "css",
+              "value": "#lf-password"
+            }
+          ],
+          "labelUniqueOnSurface": true,
+          "ambiguityRisk": "low"
+        },
+        "riskClass": "reversible-write",
+        "assertionRefs": [
+          "SCR-LOGIN"
+        ]
+      },
+      "outcome": {
+        "status": "completed",
+        "verdict": "PASSED",
+        "attempts": [
+          {
+            "attempt": 1,
+            "decision": {
+              "outcome": "accepted",
+              "capturePoint": {
+                "x": 721,
+                "y": 504
+              },
+              "modelPoint": {
+                "x": 615,
+                "y": 430
+              }
+            }
+          }
+        ],
+        "capturePoint": {
+          "x": 721,
+          "y": 504
+        },
+        "assertions": [
+          {
+            "ref": "SCR-LOGIN",
+            "verdict": "PASSED",
+            "detail": "로그인"
+          }
+        ]
+      }
+    },
+    {
+      "envelope": {
+        "stepId": "SCN-AXSE-0001#3",
+        "intent": {
+          "kind": "press"
+        },
+        "target": {
+          "descriptorId": "VTD-SCN-AXSE-0001-3",
+          "elementRef": "EL-SUBMIT",
+          "visibleLabel": "로그인",
+          "controlKind": "button",
+          "surfaceHint": "/",
+          "verificationCandidates": [
+            {
+              "by": "css",
+              "value": ".login-form-submit"
+            }
+          ],
+          "labelUniqueOnSurface": true,
+          "ambiguityRisk": "low"
+        },
+        "riskClass": "reversible-write",
+        "assertionRefs": [
+          "SCR-PROJECT"
+        ]
+      },
+      "outcome": {
+        "status": "completed",
+        "verdict": "PASSED",
+        "attempts": [
+          {
+            "attempt": 1,
+            "decision": {
+              "outcome": "accepted",
+              "capturePoint": {
+                "x": 721,
+                "y": 565
+              },
+              "modelPoint": {
+                "x": 615,
+                "y": 482
+              }
+            }
+          }
+        ],
+        "capturePoint": {
+          "x": 721,
+          "y": 565
+        },
+        "assertions": [
+          {
+            "ref": "SCR-PROJECT",
+            "verdict": "PASSED",
+            "detail": "프로젝트 선택"
+          }
+        ]
+      }
+    }
+  ],
+  "modelLog": [
+    {
+      "role": "operator-dom",
+      "stepId": "SCN-AXSE-0001#1",
+      "found": true
+    },
+    {
+      "role": "observer-dom",
+      "questions": [
+        "로그인"
+      ],
+      "visibleTexts": 6
+    },
+    {
+      "role": "observer-dom",
+      "questions": [
+        "로그인"
+      ],
+      "visibleTexts": 6
+    },
+    {
+      "role": "operator-dom",
+      "stepId": "SCN-AXSE-0001#2",
+      "found": true
+    },
+    {
+      "role": "observer-dom",
+      "questions": [
+        "로그인"
+      ],
+      "visibleTexts": 6
+    },
+    {
+      "role": "observer-dom",
+      "questions": [
+        "로그인"
+      ],
+      "visibleTexts": 6
+    },
+    {
+      "role": "operator-dom",
+      "stepId": "SCN-AXSE-0001#3",
+      "found": true
+    },
+    {
+      "role": "observer-dom",
+      "questions": [
+        "프로젝트 선택"
+      ],
+      "visibleTexts": 9
+    },
+    {
+      "role": "observer-dom",
+      "questions": [
+        "프로젝트 선택"
+      ],
+      "visibleTexts": 9
+    }
+  ]
+}

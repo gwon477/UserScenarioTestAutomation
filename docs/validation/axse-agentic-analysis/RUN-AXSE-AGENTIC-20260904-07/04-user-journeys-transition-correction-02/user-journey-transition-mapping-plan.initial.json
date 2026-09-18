@@ -1,0 +1,3685 @@
+{
+  "schema_version": 1,
+  "artifact_type": "user-journey-transition-mapping-plan",
+  "base_artifact_hash": "sha256:fa443a101555217aee2eb651742c3aae3e49ea5f9d1b1aa472e015effaa22603",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "branch_inventory_status": "lower-bound",
+  "targets": [
+    {
+      "target_ref": "JT001",
+      "transition_ref": "T001",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ]
+    },
+    {
+      "target_ref": "JT002",
+      "transition_ref": "T002",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ]
+    },
+    {
+      "target_ref": "JT003",
+      "transition_ref": "T003",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ]
+    },
+    {
+      "target_ref": "JT004",
+      "transition_ref": "T004",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd"
+      ]
+    },
+    {
+      "target_ref": "JT005",
+      "transition_ref": "T005",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ]
+    },
+    {
+      "target_ref": "JT006",
+      "transition_ref": "T006",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ]
+    },
+    {
+      "target_ref": "JT007",
+      "transition_ref": "T007",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ]
+    },
+    {
+      "target_ref": "JT008",
+      "transition_ref": "T008",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 7
+        }
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-login-login-page-24848ab2"
+      ]
+    },
+    {
+      "target_ref": "JT009",
+      "transition_ref": "T009",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT010",
+      "transition_ref": "T010",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT011",
+      "transition_ref": "T011",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT012",
+      "transition_ref": "T012",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT013",
+      "transition_ref": "T013",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT014",
+      "transition_ref": "T014",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT015",
+      "transition_ref": "T015",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT016",
+      "transition_ref": "T016",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT017",
+      "transition_ref": "T017",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT018",
+      "transition_ref": "T018",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT019",
+      "transition_ref": "T019",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT020",
+      "transition_ref": "T020",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT021",
+      "transition_ref": "T021",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT022",
+      "transition_ref": "T022",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT023",
+      "transition_ref": "T023",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT024",
+      "transition_ref": "T024",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT025",
+      "transition_ref": "T025",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT026",
+      "transition_ref": "T026",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT027",
+      "transition_ref": "T027",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT028",
+      "transition_ref": "T028",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT029",
+      "transition_ref": "T029",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT030",
+      "transition_ref": "T030",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT031",
+      "transition_ref": "T031",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT032",
+      "transition_ref": "T032",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT033",
+      "transition_ref": "T033",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT034",
+      "transition_ref": "T034",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT035",
+      "transition_ref": "T035",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT036",
+      "transition_ref": "T036",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT037",
+      "transition_ref": "T037",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT038",
+      "transition_ref": "T038",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT039",
+      "transition_ref": "T039",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT040",
+      "transition_ref": "T040",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT041",
+      "transition_ref": "T041",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT042",
+      "transition_ref": "T042",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT043",
+      "transition_ref": "T043",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT044",
+      "transition_ref": "T044",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT045",
+      "transition_ref": "T045",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT046",
+      "transition_ref": "T046",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT047",
+      "transition_ref": "T047",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT048",
+      "transition_ref": "T048",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT049",
+      "transition_ref": "T049",
+      "scope": "view",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT050",
+      "transition_ref": "T050",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT051",
+      "transition_ref": "T051",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT052",
+      "transition_ref": "T052",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT053",
+      "transition_ref": "T053",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT054",
+      "transition_ref": "T054",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT055",
+      "transition_ref": "T055",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT056",
+      "transition_ref": "T056",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT057",
+      "transition_ref": "T057",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6
+        }
+      ],
+      "required_source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "target_ref": "JT058",
+      "transition_ref": "T058",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "JT059",
+      "transition_ref": "T059",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "JT060",
+      "transition_ref": "T060",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "JT061",
+      "transition_ref": "T061",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "JT062",
+      "transition_ref": "T062",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "JT063",
+      "transition_ref": "T063",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "JT064",
+      "transition_ref": "T064",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "target_ref": "JT065",
+      "transition_ref": "T065",
+      "scope": "view",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [],
+      "required_source_area_refs": [],
+      "required_source_refs": [
+        "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1"
+      ]
+    },
+    {
+      "target_ref": "JT066",
+      "transition_ref": "T066",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ]
+    },
+    {
+      "target_ref": "JT067",
+      "transition_ref": "T067",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "source-supported",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ]
+    },
+    {
+      "target_ref": "JT068",
+      "transition_ref": "T068",
+      "scope": "journey",
+      "outcome": "normal",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ]
+    },
+    {
+      "target_ref": "JT069",
+      "transition_ref": "T069",
+      "scope": "journey",
+      "outcome": "exception",
+      "feasibility": "runtime-unverified",
+      "allowed_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5
+        }
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing"
+      ],
+      "required_source_refs": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "pi-source-gap-review",
+  "error_code": "AGENTIC_ARTIFACT_NOT_FOUND"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dd2a30ed",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-USER-JOURNEYS",
+  "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-api-v1-workflows-d9740180",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/api/v1/workflows.py",
+      "start_line": 1,
+      "end_line": 231,
+      "content_hash": "sha256:d0880b970a1596e7c6763a82d39116a5c27902c217ed7f57ab9dc2d7d622e329",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dd2a30ed"
+    },
+    {
+      "source_id": "SRC-backend-app-exporters-scenario-matrix-csv-c0846f48",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/exporters/scenario_matrix_csv.py",
+      "start_line": 1,
+      "end_line": 13,
+      "content_hash": "sha256:e123a5358ea31258990854d70b09cd019fa6957abf475ef868c281925e287e1b",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dd2a30ed"
+    },
+    {
+      "source_id": "SRC-backend-app-exporters-scenario-matrix-xlsx-b8aa5849",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/exporters/scenario_matrix_xlsx.py",
+      "start_line": 1,
+      "end_line": 40,
+      "content_hash": "sha256:229a0cf2737c324b054621b01eb28b139b4ef0758384aa6f3a6f68f6bdf76f91",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dd2a30ed"
+    },
+    {
+      "source_id": "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/scenario_generation_service.py",
+      "start_line": 1,
+      "end_line": 211,
+      "content_hash": "sha256:6555d8589fe83f39af19c9a9e195957e007c5dc0a05bf65c6092f28fa7e8bd13",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dd2a30ed"
+    },
+    {
+      "source_id": "SRC-backend-app-services-workflow-service-3f39109c",
+      "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+      "path": "backend/app/services/workflow_service.py",
+      "start_line": 1,
+      "end_line": 143,
+      "content_hash": "sha256:864aba1ad0d9e62d38fcf8fd8167ed92d54cf3db8d950e5b0a2f1570d474af34",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dd2a30ed"
+    }
+  ],
+  "created_at": "2026-09-04T08:00:35.795Z"
+}

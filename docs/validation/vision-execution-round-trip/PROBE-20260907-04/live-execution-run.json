@@ -1,0 +1,53 @@
+{
+  "probe": "product-path-execution",
+  "project": "ra-dar",
+  "modelId": "gpt-5.6-luna",
+  "executionId": "EXEC-646883df-139e-4589-8b4f-0fe0f737f9b5",
+  "batchId": "batch-001",
+  "projectRoot": "/var/folders/pt/lrkxpw6105g172ycwp5xgd7w0000gn/T/sf-live-exec-3f01ebdb-655c-4dc1-b04a-f13eb22d9b2e",
+  "result": {
+    "schemaVersion": 1,
+    "executionId": "EXEC-646883df-139e-4589-8b4f-0fe0f737f9b5",
+    "batchId": "batch-001",
+    "runtimeStatus": "COMPLETED",
+    "verdictCounts": {
+      "PASSED": 3,
+      "FAILED": 0,
+      "INCONCLUSIVE": 0,
+      "SKIPPED": 0,
+      "CANCELLED": 0
+    },
+    "cases": [
+      {
+        "schemaVersion": 1,
+        "scenarioId": "SCN-RADAR-0001",
+        "title": "WF-radar-entry",
+        "verdict": "PASSED",
+        "steps": [
+          {
+            "stepId": "SCN-RADAR-0001#1",
+            "order": 1,
+            "verdict": "PASSED",
+            "evidencePath": "cases/SCN-RADAR-0001/SCN-RADAR-0001-step-1/evidence.json"
+          },
+          {
+            "stepId": "SCN-RADAR-0001#2",
+            "order": 2,
+            "verdict": "PASSED",
+            "evidencePath": "cases/SCN-RADAR-0001/SCN-RADAR-0001-step-2/evidence.json"
+          },
+          {
+            "stepId": "SCN-RADAR-0001#3",
+            "order": 3,
+            "verdict": "PASSED",
+            "evidencePath": "cases/SCN-RADAR-0001/SCN-RADAR-0001-step-3/evidence.json"
+          }
+        ],
+        "startedAt": "2026-09-07T06:17:07.371Z",
+        "completedAt": "2026-09-07T06:17:44.301Z"
+      }
+    ],
+    "startedAt": "2026-09-07T06:17:07.371Z",
+    "completedAt": "2026-09-07T06:17:44.308Z"
+  }
+}

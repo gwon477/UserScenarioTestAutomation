@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "stage": "business-classification",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-BUSINESS-CLASSIFICATION",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "extends_artifact_id": "02-source-gap-review",
+  "extends_artifact_hash": "sha256:04217cf3497715c04b72a8283bae1aac2c382c24dedb61d405e5bd4cc90de187",
+  "perspective_assessments": [
+    {
+      "perspective": "user-role",
+      "perspective_label": "사용자 역할",
+      "decision": "classified",
+      "rationale": "인증 사용자와 프로젝트·TS 작업을 선택하고 문서 파싱부터 추적성 산출물 확보까지 수행하는 작업 주체가 확인된다."
+    },
+    {
+      "perspective": "authorization-scope",
+      "perspective_label": "권한 범위",
+      "decision": "classified",
+      "rationale": "인증 세션과 선택 프로젝트 컨텍스트가 프로젝트 목록 및 작업 단계 접근을 제한하는 범위로 확인된다."
+    },
+    {
+      "perspective": "organization-scope",
+      "perspective_label": "조직 범위",
+      "decision": "classified",
+      "rationale": "프로젝트 컨텍스트와 그 안의 TS 작업·도메인·업무흐름 범위가 분리되어 관리된다."
+    },
+    {
+      "perspective": "business-capability",
+      "perspective_label": "업무 기능",
+      "decision": "classified",
+      "rationale": "문서 업로드·파싱, 데이터 검토, 업무흐름 매핑, 시나리오·테스트 케이스 생성 및 추적성 내보내기가 사용자 기능으로 확인된다."
+    },
+    {
+      "perspective": "business-responsibility",
+      "perspective_label": "업무 책임",
+      "decision": "classified",
+      "rationale": "사용자는 프로젝트와 작업을 선택하고 업무흐름을 검증·선정하며 생성 요청과 결과 확인을 책임진다."
+    },
+    {
+      "perspective": "workflow-stage",
+      "perspective_label": "업무 단계",
+      "decision": "classified",
+      "rationale": "업로드, Parsed DB, 업무 매핑, 시나리오 결과의 순서와 단계 guard가 명시되어 있다."
+    },
+    {
+      "perspective": "lifecycle-state",
+      "perspective_label": "수명주기 상태",
+      "decision": "classified",
+      "rationale": "작업과 문서가 생성·업로드·파싱 중·파싱 완료·생성 중·완료·실패 상태로 표시된다."
+    },
+    {
+      "perspective": "data-domain",
+      "perspective_label": "데이터 도메인",
+      "decision": "classified",
+      "rationale": "프로젝트, TS 작업, 문서, 업무·화면·필드·이벤트·업무흐름, 시나리오와 테스트 케이스가 관리 대상이다."
+    },
+    {
+      "perspective": "channel-surface",
+      "perspective_label": "채널 표면",
+      "decision": "classified",
+      "rationale": "로그인·선택·탭·검색·파일 드롭·CSV/Excel 다운로드 UI와 supporting API가 확인된다."
+    },
+    {
+      "perspective": "input-source",
+      "perspective_label": "입력 원천",
+      "decision": "classified",
+      "rationale": "아이디·패스워드, 프로젝트 선택, MD/TXT 파일, 업무흐름 선택과 검색 조건이 입력으로 확인된다."
+    },
+    {
+      "perspective": "output-deliverable",
+      "perspective_label": "출력 산출물",
+      "decision": "classified",
+      "rationale": "파싱 데이터 검토 결과, 매핑 검증 CSV, 생성 시나리오·테스트 케이스, CSV/Excel 추적성 매트릭스가 산출된다."
+    },
+    {
+      "perspective": "integration-boundary",
+      "perspective_label": "통합 경계",
+      "decision": "classified",
+      "rationale": "인증·세션, 작업·문서 파싱, 파싱 데이터 조회, 업무흐름, 생성 진행 추적 및 exporter 서비스와 handoff가 확인된다."
+    },
+    {
+      "perspective": "risk-recovery",
+      "perspective_label": "위험 및 복구",
+      "decision": "classified",
+      "rationale": "인증·조회·업로드·파싱·생성·다운로드 실패 메시지와 새로고침, 재선택·재업로드, 상태 재조회가 제공된다."
+    },
+    {
+      "perspective": "compliance-policy",
+      "perspective_label": "컴플라이언스 및 정책",
+      "decision": "not-evidenced",
+      "rationale": "감사·보존·개인정보·규제 정책의 사용자 업무 규칙은 검증된 source area에서 확인되지 않는다."
+    }
+  ],
+  "classifications": [
+    {
+      "perspective": "user-role",
+      "perspective_label": "사용자 역할",
+      "label": "테스트 시나리오 분석 담당자",
+      "description": "인증된 사용자가 프로젝트와 TS 작업을 선택하고 문서에서 추적성 결과까지 처리한다.",
+      "user_responsibilities": [
+        "프로젝트와 TS 작업을 선택한다.",
+        "문서를 업로드하고 파싱 결과와 생성 결과를 확인한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation",
+        "document-upload-and-parsing",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "선택 프로젝트의 TS 작업에서 추적성 산출물을 확보한다."
+      ]
+    },
+    {
+      "perspective": "authorization-scope",
+      "perspective_label": "권한 범위",
+      "label": "인증 프로젝트 작업 범위",
+      "description": "인증 세션이 선택된 프로젝트와 TS 작업에 대한 화면 접근 및 작업 범위를 결정한다.",
+      "user_responsibilities": [
+        "인증을 완료하고 프로젝트를 선택한다.",
+        "현재 작업의 단계 접근 가능 여부를 따른다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "인증된 프로젝트 컨텍스트에서 허용된 TS 단계에 접근한다."
+      ]
+    },
+    {
+      "perspective": "organization-scope",
+      "perspective_label": "조직 범위",
+      "label": "프로젝트별 TS 작업 소유 범위",
+      "description": "선택 프로젝트 안에서 TS 작업과 그 업무·화면·도메인 범위를 관리한다.",
+      "user_responsibilities": [
+        "프로젝트 카드를 선택한다.",
+        "TS 작업을 자동 선택하거나 생성하고 작업 컨텍스트를 유지한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation",
+        "parsed-data-inspection"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "프로젝트별로 분리된 TS 작업 범위에서 업무 데이터를 검토한다."
+      ]
+    },
+    {
+      "perspective": "business-capability",
+      "perspective_label": "업무 기능",
+      "label": "문서 기반 테스트 추적성 생성",
+      "description": "문서를 구조화하고 업무흐름을 매핑해 테스트 시나리오·케이스와 추적성 파일을 만든다.",
+      "user_responsibilities": [
+        "MD/TXT 문서를 업로드·파싱한다.",
+        "업무흐름을 선택하고 시나리오·TC 생성을 요청한다.",
+        "최종 매트릭스를 조회·다운로드한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "선택 업무흐름의 테스트 시나리오·테스트 케이스와 CSV·Excel 산출물을 확보한다."
+      ]
+    },
+    {
+      "perspective": "business-responsibility",
+      "perspective_label": "업무 책임",
+      "label": "업무흐름 범위 검증과 생성 승인",
+      "description": "사용자가 데이터 정합성을 확인하고 생성 대상 업무흐름을 결정해 결과 활용을 책임진다.",
+      "user_responsibilities": [
+        "업무·화면·필드·이벤트·업무흐름을 검토한다.",
+        "매핑 이슈를 확인하고 생성할 업무흐름을 선택한다."
+      ],
+      "source_area_refs": [
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업무흐름 단위 프리셋 미리보기"
+      ],
+      "business_outcomes": [
+        "정합성을 확인한 업무흐름만 시나리오·TC 도출 대상으로 전달한다."
+      ]
+    },
+    {
+      "perspective": "workflow-stage",
+      "perspective_label": "업무 단계",
+      "label": "순차 TS 처리 단계",
+      "description": "업로드에서 Parsed DB, 업무 매핑, 시나리오 결과로 진행하는 ordered stage다.",
+      "user_responsibilities": [
+        "현재 단계에서 완료 조건을 충족한다.",
+        "단계 guard에 따라 다음 단계로 이동한다."
+      ],
+      "source_area_refs": [
+        "task-lifecycle-and-stage-navigation",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "필수 선행 처리를 거쳐 결과 단계에 도달한다."
+      ]
+    },
+    {
+      "perspective": "lifecycle-state",
+      "perspective_label": "수명주기 상태",
+      "label": "문서 및 생성 작업 상태",
+      "description": "문서와 생성 작업의 진행·성공·실패 상태를 사용자에게 노출한다.",
+      "user_responsibilities": [
+        "파싱 상태를 폴링하고 완료 또는 실패를 확인한다.",
+        "생성 진행·부분 완료·실패 상태를 확인한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "업무흐름 단위 프리셋 미리보기",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "처리 상태를 확인해 완료된 결과만 다음 활용 단계로 넘긴다."
+      ]
+    },
+    {
+      "perspective": "data-domain",
+      "perspective_label": "데이터 도메인",
+      "label": "TS 테스트 추적성 데이터",
+      "description": "TS 작업에 귀속된 문서 파싱 구조와 업무흐름·화면·테스트 결과의 데이터 집합이다.",
+      "user_responsibilities": [
+        "업무·화면·필드·이벤트·업무흐름을 검색·페이지 단위로 검토한다.",
+        "시나리오와 테스트 케이스 상세를 확인한다."
+      ],
+      "source_area_refs": [
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "파싱 원천과 생성 결과 사이의 업무 추적성을 확인한다."
+      ]
+    },
+    {
+      "perspective": "channel-surface",
+      "perspective_label": "채널 표면",
+      "label": "웹 작업 셸과 파일/API 入口",
+      "description": "웹 UI가 인증·탐색·파일 업로드·검색·선택·다운로드를 제공하고 API가 처리를 지원한다.",
+      "user_responsibilities": [
+        "UI에서 폼, 카드, 탭, 버튼, 드롭존을 사용한다.",
+        "파일과 다운로드 형식을 선택한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "웹 작업 셸에서 전체 테스트 생성 업무를 수행한다."
+      ]
+    },
+    {
+      "perspective": "input-source",
+      "perspective_label": "입력 원천",
+      "label": "Markdown 문서와 사용자 선택",
+      "description": "Markdown/TXT 문서와 인증·프로젝트·업무흐름 선택이 구조화와 생성의 입력이다.",
+      "user_responsibilities": [
+        "UTF-8 MD/TXT 파일을 선택하거나 드래그 앤 드롭한다.",
+        "생성 대상 업무흐름을 선택한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "document-upload-and-parsing",
+        "business-flow-mapping-and-generation-request"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업무흐름 단위 프리셋 미리보기"
+      ],
+      "business_outcomes": [
+        "업무 원천 문서와 선택 범위를 생성 입력으로 제공한다."
+      ]
+    },
+    {
+      "perspective": "output-deliverable",
+      "perspective_label": "출력 산출물",
+      "label": "추적성 검토 및 배포 파일",
+      "description": "매핑 검증 결과와 시나리오·TC 매트릭스를 화면 및 CSV/Excel 파일로 제공한다.",
+      "user_responsibilities": [
+        "매핑 검증 CSV를 내보낸다.",
+        "최종 시나리오·TC를 조회하고 CSV 또는 Excel로 다운로드한다."
+      ],
+      "source_area_refs": [
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로",
+        "업무흐름 단위 프리셋 미리보기",
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "검토·공유 가능한 추적성 산출물을 확보한다."
+      ]
+    },
+    {
+      "perspective": "integration-boundary",
+      "perspective_label": "통합 경계",
+      "label": "처리 서비스 간 업무 핸드오프",
+      "description": "인증·세션, 작업/파싱, 조회, 매핑, 생성 추적, exporter가 단계별 결과를 전달한다.",
+      "user_responsibilities": [
+        "각 서비스가 제공한 상태와 결과를 다음 단계 입력으로 사용한다.",
+        "생성 요청 후 진행 추적과 결과 확인으로 핸드오프한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "business_outcomes": [
+        "단계별 처리 결과가 끊김 없이 다음 업무 단계로 전달된다."
+      ]
+    },
+    {
+      "perspective": "risk-recovery",
+      "perspective_label": "위험 및 복구",
+      "label": "처리 실패 복구",
+      "description": "오류 상태를 확인하고 재조회·재선택·재업로드로 정상 경로에 복귀한다.",
+      "user_responsibilities": [
+        "업로드·파싱 실패에서 파일을 제거하거나 다시 선택한다.",
+        "생성 중 상태를 새로고침하고 완료 후 결과를 확인한다."
+      ],
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "business-flow-mapping-and-generation-request",
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로"
+      ],
+      "business_outcomes": [
+        "실패를 확인하고 정상 파싱·생성·다운로드까지 회복한다."
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "description": "인증된 사용자의 실제 권한 차이와 프로젝트별 허용 작업 범위를 분류할 수 없다.",
+      "reason": "화면은 인증·프로젝트 컨텍스트와 접근 전이를 보여주지만 백엔드 권한 규칙의 세부가 노출되지 않았다.",
+      "source_area_refs": [
+        "authentication-and-project-selection",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "journey_thread_refs": [
+        "문서에서 추적성 매트릭스까지의 주 경로"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e",
+        "SRC-backend-app-core-auth-7c627b43",
+        "SRC-backend-app-core-security-3b18f773"
+      ]
+    },
+    {
+      "description": "생성 실패 또는 부분 완료 후 재요청과 기존 결과 보존을 어떤 분류로 볼지 불확실하다.",
+      "reason": "실패 상태·새로고침·결과 확인은 확인되지만 재요청 및 기존 레코드 처리 규칙은 확인되지 않았다.",
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "업로드·파싱 실패에서 결과 다운로드까지의 복구 경로",
+        "업무흐름 단위 프리셋 미리보기"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+        "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+        "SRC-backend-app-repositories-scenario-repository-c0346a9c"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "sceneId": "23-open-evidence",
+  "cues": [
+    {
+      "text": "단계 증적 열기로 판정 근거를 확인합니다",
+      "startMs": 0,
+      "endMs": 3043,
+      "box": {
+        "x0": 612,
+        "y0": 926,
+        "x1": 1309,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [],
+  "elapsedMs": 4240
+}

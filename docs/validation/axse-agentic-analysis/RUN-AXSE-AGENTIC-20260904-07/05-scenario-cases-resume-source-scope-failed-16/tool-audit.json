@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "correction.resume",
+      "result": "ok",
+      "replayed_attempt_count": 1,
+      "retained_case_count": 2,
+      "remaining_target_count": 1
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "04-user-journeys-validation"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-transition-obligations"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-next-stage-gaps"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "prior-scenario-cases"
+    },
+    {
+      "sequence": 9,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "scenario-case-correction-plan"
+    },
+    {
+      "sequence": 10,
+      "tool": "artifact.closure",
+      "result": "rejected",
+      "code": "AGENTIC_SOURCE_SCOPE_VIOLATION",
+      "requested_ref_count": 3
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "classification_count": 33,
+  "perspective_assessment_count": 14,
+  "perspective_decisions": {
+    "classified": 12,
+    "not-evidenced": 2,
+    "not-applicable": 0
+  },
+  "unresolved_count": 2,
+  "cited_evidence_count": 6,
+  "prior_artifact_hash": "sha256:04217cf3497715c04b72a8283bae1aac2c382c24dedb61d405e5bd4cc90de187",
+  "agent_artifact_hash": "sha256:02d66f6b530e6a52f19f7aa6e964da5b84309389d22d0406849b0063e3e4e266",
+  "artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "source_tool_usage": {
+    "artifact_reads": [
+      "02-source-gap-review",
+      "02-source-gap-review-validation",
+      "source-inventory"
+    ],
+    "source_refs_read": [
+      "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "SRC-backend-app-api-v1-workflows-d9740180",
+      "SRC-backend-app-exporters-scenario-matrix-csv-c0846f48",
+      "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20"
+    ],
+    "closure_calls": 6,
+    "cumulative_granted_bytes": 41465,
+    "artifact_write_attempts": 1,
+    "fatal_error": null,
+    "max_closure_calls": 10,
+    "max_granted_bytes": 500000
+  }
+}

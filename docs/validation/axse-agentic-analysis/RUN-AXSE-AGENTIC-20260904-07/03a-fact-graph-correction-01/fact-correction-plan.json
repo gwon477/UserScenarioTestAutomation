@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:7b819dfc7e612785b00510b2992dfcf53c58f4b96dc1ab5e942a8b12a87ce4d1",
+  "element_update_fields": {
+    "U25": [
+      "action_kind"
+    ],
+    "U34": [
+      "action_kind"
+    ]
+  },
+  "predicate_element_refs": [
+    "U14",
+    "U19",
+    "U2",
+    "U23",
+    "U25",
+    "U26",
+    "U28",
+    "U29",
+    "U3",
+    "U31",
+    "U32",
+    "U34",
+    "U42",
+    "U43",
+    "U5"
+  ],
+  "replace_edge_indexes": [
+    14,
+    15,
+    18
+  ],
+  "add_edge_element_refs": [
+    "U25",
+    "U34"
+  ]
+}

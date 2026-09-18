@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "artifact_type": "scenario-case-correction-plan",
+  "base_artifact_hash": "sha256:c5888cadf44d4f945000acb7d841daf170f6a947a9215c3a2c13b7c868535bd0",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "targets": [
+    {
+      "target_ref": "CT001",
+      "operation": "add-cases",
+      "case_index": null,
+      "journey_ref": "J001",
+      "kind": "normal",
+      "allowed_fields": [
+        "title",
+        "classification_refs",
+        "preconditions",
+        "variation",
+        "steps",
+        "terminal"
+      ],
+      "reason_codes": [
+        "GAP-SOURCE-DISTINCT-CASE-BREADTH",
+        "SCENARIO_CASE_CORRECTION_TARGET_MISSING"
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection",
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-backend-app-api-v1-workflows-d9740180",
+        "SRC-frontend-src-app-a0eba768",
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+        "SRC-frontend-src-features-login-login-page-24848ab2",
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ],
+      "case_limit": 1
+    },
+    {
+      "target_ref": "CT002",
+      "operation": "add-cases",
+      "case_index": null,
+      "journey_ref": "J001",
+      "kind": "boundary",
+      "allowed_fields": [
+        "title",
+        "classification_refs",
+        "preconditions",
+        "variation",
+        "steps",
+        "terminal"
+      ],
+      "reason_codes": [
+        "GAP-SOURCE-DISTINCT-CASE-BREADTH",
+        "SCENARIO_CASE_CORRECTION_TARGET_MISSING"
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection",
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-backend-app-api-v1-workflows-d9740180",
+        "SRC-frontend-src-app-a0eba768",
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+        "SRC-frontend-src-features-login-login-page-24848ab2",
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ],
+      "case_limit": 1
+    },
+    {
+      "target_ref": "CT003",
+      "operation": "add-cases",
+      "case_index": null,
+      "journey_ref": "J001",
+      "kind": "exception",
+      "allowed_fields": [
+        "title",
+        "classification_refs",
+        "preconditions",
+        "variation",
+        "steps",
+        "terminal"
+      ],
+      "reason_codes": [
+        "GAP-SOURCE-DISTINCT-CASE-BREADTH",
+        "SCENARIO_CASE_CORRECTION_TARGET_MISSING"
+      ],
+      "required_source_area_refs": [
+        "authentication-and-project-selection",
+        "business-flow-mapping-and-generation-request",
+        "document-upload-and-parsing",
+        "parsed-data-inspection",
+        "scenario-generation-and-traceability-results",
+        "task-lifecycle-and-stage-navigation"
+      ],
+      "required_source_refs": [
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-backend-app-api-v1-workflows-d9740180",
+        "SRC-frontend-src-app-a0eba768",
+        "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+        "SRC-frontend-src-features-login-login-page-24848ab2",
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f"
+      ],
+      "case_limit": 1
+    }
+  ]
+}

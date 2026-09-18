@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "pi-scenario-cases",
+  "error_code": "SCENARIO_CASE_CORRECTION_BASE_MISMATCH"
+}

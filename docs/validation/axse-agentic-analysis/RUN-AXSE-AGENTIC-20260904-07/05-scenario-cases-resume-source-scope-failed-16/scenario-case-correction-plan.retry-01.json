@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "scenario-case-correction-plan",
+  "base_artifact_hash": "sha256:e0a1c5a1b5bf9bbac80bd5f744c4af46a772a0406f12b388280231f2ef286033",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "targets": [
+    {
+      "target_ref": "CT035",
+      "operation": "update-case",
+      "case_index": 5,
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "allowed_fields": [
+        "preconditions"
+      ],
+      "reason_codes": [
+        "GAP-RECOVERY-INPUT-PRECONDITION",
+        "SCENARIO_CASE_CORRECTION_UNCHANGED:CT035"
+      ],
+      "required_source_area_refs": [
+        "document-upload-and-parsing",
+        "parsed-data-inspection"
+      ],
+      "required_source_refs": [
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-frontend-src-features-upload-upload-api-f7939e13"
+      ]
+    }
+  ]
+}

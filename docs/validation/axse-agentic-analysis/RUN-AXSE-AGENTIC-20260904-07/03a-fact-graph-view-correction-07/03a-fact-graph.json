@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "artifact_status": "locally-validated-unregistered-probe",
+  "provenance": {
+    "project_id": "P-AXSE-AGENTIC",
+    "work_id": "WORK-AXSE-FACT-GRAPH",
+    "source_snapshot_id": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+    "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+    "extends_artifact_id": "03-business-classification",
+    "extends_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+    "correction_from": "03a-fact-graph-correction-02",
+    "failed_correction_chain": [
+      "03a-fact-graph-view-correction-01",
+      "03a-fact-graph-view-correction-02",
+      "03a-fact-graph-view-correction-03",
+      "03a-fact-graph-view-correction-05"
+    ],
+    "failed_patch_hash": "sha256:e07673cd958869ccbe625b39f48bbf6d1bdb81355301856af383a6324ae305eb",
+    "generated_with": "pi-coding-agent",
+    "evidence_grant_ids": [
+      "EVG-WORK-AXSE-FACT-GRAPH-357ab367",
+      "EVG-WORK-AXSE-FACT-GRAPH-3192c65f"
+    ]
+  },
+  "artifacts": {
+    "fact_bundle": {
+      "path": "fact-bundle.json",
+      "content_hash": "sha256:887f92838f7fc6d14254c9be77628e3ea37000a0e64b9982247be37e93a02136"
+    },
+    "workflow_skeleton": {
+      "path": "workflow-skeleton.json",
+      "content_hash": "sha256:b48132921c43ee7d4de9a0e6364aded7d7d2dd6833274a7e67c8008265ebbfde"
+    },
+    "guarded_path_inventory": {
+      "path": "guarded-path-inventory.json",
+      "content_hash": "sha256:3da88f0e18328e2ef3bf72777dcdbc14f9cb7fe89444e1d5692b883bf90595ab"
+    },
+    "correction_report": {
+      "path": "fact-transition-correction-report.json",
+      "content_hash": "sha256:ac27e531be7844769b4090b8f18d4db9d7ec9ed84f360b85c53cedcdbab91c85"
+    }
+  }
+}

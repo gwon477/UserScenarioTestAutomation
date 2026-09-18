@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "stage": "scenario-case-correction-patch",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "base_artifact_hash": "sha256:e0a1c5a1b5bf9bbac80bd5f744c4af46a772a0406f12b388280231f2ef286033",
+  "changes": [
+    {
+      "target_ref": "CT035",
+      "operation": "update-case",
+      "fields": {
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "처음 선택한 입력은 UTF-8로 디코딩되지 않는 파일이며 업로드 요청이 400 오류로 거부된다.",
+          "재선택할 유효한 UTF-8 MD 또는 TXT 파일이 준비되어 있다.",
+          "비동기 파싱 실패의 정확한 입력 원인은 이 사례의 전제에서 확정하지 않는다."
+        ]
+      }
+    }
+  ]
+}

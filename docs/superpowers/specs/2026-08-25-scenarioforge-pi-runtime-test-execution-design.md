@@ -1,7 +1,7 @@
 # ScenarioForge Pi Runtime 및 테스트 수행 통합 설계
 
 - 작성일: 2026-08-25
-- 상태: 설계 승인, 구현 계획 작성 완료
+- 상태: 설계 승인, 생성·수행 통합 하네스 상세 설계 반영
 - 대상 브랜치: `dev`
 - 대상 제품: ScenarioForge 설치형 데스크톱 솔루션
 
@@ -14,7 +14,9 @@ ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 
 1. ScenarioForge 애플리케이션 소스의 목표 디렉터리와 패키지 경계
 2. 사용자가 선택한 프로젝트에 생성되는 `.scenarioforge/` 런타임·세션·산출물 구조
 
-실제 역할별 하네스 문구, 스킬의 세부 지침, 서브에이전트 프롬프트와 참조 규칙은 기반 구조가 완성된 뒤 마지막 구현 단계에서 별도로 설계한다.
+역할별 하네스 계약과 참조 규칙은 상세 설계 문서로 확정하되, 실제 Resource Bundle 파일과 모델별 few-shot은 기반 구조가 완성된 뒤 마지막 구현 단계에서 작성한다.
+
+생성 하네스의 상세 레코드·도구·분기 정책은 `docs/pi-coding-agent 하네스 설계.md`, 생성과 수행 사이의 snapshot/plan handoff 및 논리적 서버 경계는 `docs/architecture/03-integrated-harness-server-design.md`, 사용자 수행 트리거·immutable batch·수행 전용 skill/agent·Runner 경계는 `docs/architecture/04-test-execution-harness-design.md`, 대상별 기술 선택·adapter routing·CUA 안전 경계는 `docs/architecture/05-multi-target-execution-adapter-design.md`를 따른다. 이 문서와 상세 문서가 충돌하면 상태·권한·저장 원본은 본 문서, 생성 레코드와 분기 정책은 생성 하네스 문서, 생성→수행 handoff는 통합 하네스 문서, 수행 lifecycle은 04 문서, 수행 대상·adapter 계약은 05 문서가 각각 우선한다.
 
 ## 2. 제품 목표
 
@@ -42,7 +44,7 @@ ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 
 - 모든 LLM 작업이 공통으로 읽는 작업 규격과 상태 문서
 - 고정된 분석 단계와 동적인 Pi 작업의 결합
 - ID 기반 산출물 인덱스
-- 순차 테스트 대기열과 결정론적 TestVista Runner 경계
+- 순차 테스트 대기열과 플랫폼 중립 TestVista Execution Kernel 경계
 - 스텝별 화면 캡처와 실패 추가 증적
 - 테스트 센터, 증적 상세, 자유로운 화면 전환
 - 선택 프로젝트 내부의 로컬 저장 구조
@@ -55,7 +57,7 @@ ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 
 - 클라우드 동기화
 - 다중 사용자의 동시 프로젝트 편집
 - 운영체제별 installer, code signing, 자동 업데이트의 상세 구현
-- 실제 하네스 문구, 스킬 콘텐츠, 역할별 서브에이전트 프롬프트
+- 실제 Resource Bundle 파일과 모델별 few-shot 콘텐츠 구현
 
 ## 4. 확정된 제품 결정
 
@@ -72,7 +74,10 @@ ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 
 | 이벤트 발행 | 상태·checkpoint·revision 저장이 끝난 뒤 도메인 이벤트 발행 |
 | 세션 | 사용자에게는 하나의 프로젝트, 내부적으로 분석·질의·테스트 계획 세션 분리 |
 | 질의응답 위치 | 시나리오 도출 페이지에서만 제공 |
+| 수행 시작 | 생성 완료와 분리하고 create/enqueue/retry 사용자 명령에서만 시작 |
+| 수행 계획 | deterministic compiler 우선, 미해결 binding만 수행 전용 Pi planner/reviewer 사용 |
 | 테스트 실행 | 프로젝트별 하나의 Runner가 시나리오를 순차 실행 |
+| 실행 중 추가 | 기존 plan을 수정하지 않고 같은 target hash의 immutable batch를 queue 뒤에 append |
 | 실패 처리 | 실패 케이스의 후속 스텝은 건너뛰고 다음 대기 케이스를 계속 실행 |
 | 성공 증적 | 각 스텝의 동작 완료 시 화면 1장 저장 |
 | 실패 증적 | 동작 완료 화면, 실패 직전 화면, 실패 시점 화면, 오류 컨텍스트 저장 |
@@ -80,6 +85,10 @@ ScenarioForge가 프로젝트 소스와 사용자가 설정한 LLM을 연결한 
 | 중단 | 수집된 증적을 보존하고 현재·잔여 케이스를 중단 처리 |
 | 보존 | 자동 삭제하지 않으며 실행 회차 단위의 명시적 삭제만 허용 |
 | 결과 상태 | 성공, 실패, 판정 불가, 중단됨을 구분 |
+| 모델 역할 | 저작 `author`와 독립 검토 `reviewer`를 별도 binding; reviewer 미설정 시 assurance 강등 |
+| 데이터 원본 | 진행=journal/state, 산출물=run별 immutable artifact, 관계 조회=재구축 가능한 SQLite projection |
+| 생성→수행 | immutable `ScenarioSnapshot` + 검증된 `RunnerPlan` 없이는 Runner 시작 금지 |
+| 통합 하네스 서버 | Electron Main Application Orchestrator의 논리적 façade; 별도 상태 원본·세 번째 엔진 금지 |
 
 ## 5. 최상위 아키텍처
 
@@ -88,7 +97,7 @@ Electron Renderer
         │
         │ typed IPC commands / domain events
         ▼
-Electron Main — Application Orchestrator
+Electron Main — Application Orchestrator / Logical Harness Server
         ├── ProjectBootstrapper
         ├── CredentialStore
         ├── PiProcessManager
@@ -100,11 +109,11 @@ Electron Main — Application Orchestrator
                 ├──────────────┐
                 ▼              ▼
        Pi UtilityProcess    TestVista UtilityProcess
-       PiRuntimeHost        Deterministic Runner
-        ├── sessions         ├── browser control
-        ├── resources        ├── step verdict
-        ├── tools            ├── screenshots
-        └── events           └── trace/log
+       PiRuntimeHost        Execution Kernel
+        ├── sessions         ├── adapter registry
+        ├── resources        ├── web/UIA/mobile/CUA
+        ├── tools            ├── assertion/evidence
+        └── events           └── resource leases
                 │              │
                 └──────┬───────┘
                        ▼
@@ -117,8 +126,8 @@ Electron Main — Application Orchestrator
 - Renderer에는 Node.js, 파일 시스템, 프로세스 실행 권한을 노출하지 않는다.
 - Electron Main은 요청 검증, 프로세스 수명, 경로 정책, credential 전달을 담당한다.
 - Pi와 TestVista는 서로 다른 UtilityProcess에서 실행한다.
-- Pi는 프로젝트 분석과 질의를 담당하며 실제 테스트 실행 상태의 원본이 아니다.
-- TestVista는 고정된 테스트 계획을 실행하며 LLM의 자유 응답으로 판정을 확정하지 않는다.
+- Pi는 프로젝트 분석·질의와 제한된 수행 계획을 담당하며 실제 테스트 실행 상태의 원본이 아니다.
+- TestVista는 고정된 테스트 계획의 대상별 adapter action을 실행한다. GUI grounder를 쓰더라도 LLM의 자유 응답으로 판정을 확정하지 않는다.
 - 모든 파일 접근은 선택 프로젝트와 `.scenarioforge/`의 허용 경로로 제한한다.
 
 ### 5.2 상태 처리 경계
@@ -157,6 +166,9 @@ Pi raw event
 | 분석 파이프라인 | `src`, `fact`, `wiki`, `scenario`와 단계별 lifecycle | 주 분석 화면과 검증된 진행률 |
 | 작업 활동 | tool, skill, subagent, validator 활동 | 활동 패널만 갱신 |
 | 산출물 | `absent`, `generating`, `validating`, `verified`, `persisted`, `invalid` | 다음 단계와 시나리오 화면 활성화 |
+| 테스트 계획 batch | `requested`, `validating`, `snapshotted`, `compiling`, `planning`, `reviewing`, `plan-validating`, `queued`, `rejected` | 요청 검증·계획 준비·거절 표시 |
+| 테스트 execution lifecycle | `queued`, `preparing`, `running`, `completed`, `cancelled`, `aborted` | 테스트 센터 진행과 복구 |
+| 테스트 case/step result | `passed`, `failed`, `inconclusive`, `skipped`, `cancelled` | 결과 요약과 증적 표시 |
 
 최소 상태 계약은 다음과 같다.
 
@@ -632,7 +644,7 @@ Store는 시작 시 `project.getState` snapshot을 받고 이후 domain event만
 
 ### 7.1 모델 구성
 
-사용자가 설정한 다음 값으로 Pi의 모델 런타임을 구성한다.
+사용자가 설정한 다음 값으로 Pi의 모델 런타임을 구성한다. 화면의 단일 "연결 모델" 개념은 backend에서 역할별 `ModelBinding`으로 확장한다.
 
 - provider
 - endpoint
@@ -640,7 +652,27 @@ Store는 시작 시 `project.getState` snapshot을 받고 이후 domain event만
 - API credential reference
 - thinking level 또는 제품이 허용하는 추론 설정
 
+```ts
+type ModelRole = "author" | "reviewer";
+
+type ModelBinding = {
+  role: ModelRole;
+  provider: "openai-compatible" | "anthropic" | "custom";
+  endpoint: string;
+  modelId: string;
+  credentialRef?: string;
+};
+```
+
+- `author`는 FACT 의미 추출, 모호 link 판정, WIKI·SCENARIO 저작에 사용한다.
+- `reviewer`는 snapshot/hash로 고정된 evidence가 주장을 지지하는지 독립 verdict를 제출한다.
+- 기본 검증 구성은 author=Qwen3.6-35B-A3B, reviewer=GLM-5.2지만 제품 계약은 모델명이 아니라 역할을 참조한다.
+- reviewer가 없으면 author 자체 검토로 계속할 수 있으나 run manifest에 `assurance: single-model`을 기록하고 독립 검증으로 표시하지 않는다.
+- reviewer verdict도 stage completion이 아니다. backend completion gate만 최종 status를 commit한다.
+
 provider, endpoint, model ID는 애플리케이션 설정에 보존할 수 있다. API key 원문은 프로젝트에 저장하지 않는다. 운영체제 보안 저장소를 사용할 수 있으면 credential reference만 저장하고, 사용할 수 없으면 현재 앱 세션 메모리에만 유지하며 재시작 후 재입력을 요구한다.
+
+원격 endpoint를 사용하면 closure의 source slice가 장치 밖으로 전송될 수 있다. bootstrap과 모델 설정은 역할별 endpoint, 전송 범위, source secret 차단 정책을 명시해야 한다. "산출물이 로컬에 저장됨"을 "소스가 외부로 전송되지 않음"으로 표현하지 않는다.
 
 ### 7.2 PiRuntimeHost
 
@@ -685,7 +717,7 @@ Pi가 이미 agent loop, session, resource loading, tool execution, compaction, 
 projectSessionId
 ├── analysisSession
 ├── chatSession/{conversationId}
-└── testPlanningSession/{executionId}
+└── testPlanningSession/{executionId}/{batchId}
 ```
 
 ### 8.2 Analysis Session
@@ -708,39 +740,48 @@ projectSessionId
 - LLM의 해석이 필요한 테스트 계획 생성 또는 보완에만 사용한다.
 - TestVista가 실행할 계획은 반드시 구조화 스키마로 검증하고 immutable snapshot으로 저장한다.
 - 테스트 실행 중 LLM의 자유로운 계획 변경을 허용하지 않는다.
-- 재계획은 새 execution 또는 명시적 retry에서만 수행한다.
+- 최초 실행, 명시적 enqueue, retry가 만드는 새 batch에서만 계획하며 기존 batch plan을 수정하지 않는다.
+- deterministic compiler가 모든 binding을 해결하면 session을 생성하지 않는다.
+- session에는 execution planning resource만 로드하며 생성 skill·agent와 Runner 제어 tool을 노출하지 않는다.
 
-### 8.5 LLM 기능 목록과 고정 외부 워크플로우
+### 8.5 Harness work 목록과 고정 외부 워크플로우
 
-LLM의 내부 탐색과 tool 선택은 동적이지만 각 기능의 입력, 쓰기 범위, 출력, 완료 gate는 고정한다.
+내부 탐색과 tool 선택은 동적이지만 각 work의 입력, executor, 쓰기 범위, 출력, 완료 gate는 고정한다. source map은 가능한 범위를 결정론적 scanner가 수행하므로 모든 work를 LLM 기능으로 부르지 않는다.
 
 ```ts
-type LlmFunctionId =
+type GenerationHarnessWorkKind =
   | "analysis.source-map"
   | "analysis.fact-extract"
   | "analysis.wiki-compose"
-  | "analysis.scenario-compose"
-  | "scenario.answer"
-  | "test.plan";
+  | "analysis.scenario-compose";
+
+type ScenarioQueryWorkKind = "scenario.answer";
+type ExecutionPlanningWorkKind = "test.plan";
+type HarnessWorkKind =
+  | GenerationHarnessWorkKind
+  | ScenarioQueryWorkKind
+  | ExecutionPlanningWorkKind;
+
+type LlmFunctionId = Exclude<HarnessWorkKind, "analysis.source-map">;
 ```
 
-| 기능 | 입력 | 허용 출력 | 완료 gate |
-| --- | --- | --- | --- |
-| `analysis.source-map` | project snapshot, include/exclude policy | source/module/dependency ID와 위치 | source schema, 경로 존재, 프로젝트 범위 확인 |
-| `analysis.fact-extract` | persisted source ID, 해당 source 내용 | fact ID, source relation, 근거 위치 | fact schema, 모든 source relation과 근거 범위 확인 |
-| `analysis.wiki-compose` | persisted fact/source ID | wiki ID와 fact relation | wiki schema, fact coverage, 금지된 무근거 문장 검사 |
-| `analysis.scenario-compose` | persisted wiki/fact/source ID | scenario ID, precondition, steps, expected result, 관계 | scenario schema, ID graph, 중복·순서 검사 |
-| `scenario.answer` | 선택 scenario ID와 질문 | ID별 근거가 있는 chat response record | 모든 인용 ID가 query 결과에 존재, 분석 artifact 변경 없음 |
-| `test.plan` | immutable scenario snapshot, target contract | 구조화 test plan draft | plan schema, scenario hash, 허용 action 검사 |
+| 기능 | executor | 입력 | 허용 출력 | 완료 gate |
+| --- | --- | --- | --- | --- |
+| `analysis.source-map` | backend scan, 동적 등록만 제한된 보조 work | project snapshot, include/exclude policy | source snapshot, source/module/dependency ID와 위치 | source schema, hash, 경로 존재, 프로젝트 범위 확인 |
+| `analysis.fact-extract` | author + reviewer | persisted source ID, evidence grant slice | fact graph draft + semantic verdict | fact schema, snapshot/hash evidence, first-class edge, relation 확인 |
+| `analysis.wiki-compose` | author + reviewer | persisted fact/source ID의 bounded view | workflow와 fact relation + semantic verdict | wiki schema, fact coverage, terminal·variation·cites 검사 |
+| `analysis.scenario-compose` | deterministic walk + author + reviewer | persisted workflow/fact/source ID | `SCN-*`, structured precondition, action/assertion refs | scenario schema, ID graph, 중복·순서·coverage 검사 |
+| `scenario.answer` | author | 선택 scenario ID와 질문 | ID별 근거가 있는 chat response record | 모든 인용 ID가 query 결과에 존재, 분석 artifact 변경 없음 |
+| `test.plan` | 필요한 경우 author + reviewer; compiler는 work 밖 backend | immutable batch snapshot, target contract, redacted probe slice | 구조화 RunnerPlan patch + review verdict | plan schema, snapshot hash, action/assertion 보존, 후보 provenance, 허용 action 검사 |
 
 각 root 기능은 다음 순서를 공통으로 따른다.
 
 ```text
-AnalysisCoordinator creates immutable WorkDescriptor
+AnalysisCoordinator or TestCoordinator creates immutable WorkDescriptor
   → function-specific read/write policy 적용
   → getContext + contextToken
   → begin
-  → Pi turn 실행
+  → executor 실행 (deterministic tool 또는 Pi turn)
   → 필요 시 requestChildWork
   → child 결과를 각각 검증
   → root가 결과를 staging에 통합
@@ -752,18 +793,18 @@ AnalysisCoordinator creates immutable WorkDescriptor
   → domain event publish
 ```
 
-`scenario.answer`와 `test.plan`도 같은 시작·settle 계약을 사용하지만 analysis stage를 변경하지 않는다. `scenario.answer`는 conversation record만 append하고, `test.plan`은 execution 생성 전 plan snapshot만 생성한다.
+`scenario.answer`와 `test.plan`도 같은 시작·settle 계약을 사용하지만 analysis stage를 변경하지 않는다. `scenario.answer`는 conversation record만 append한다. `test.plan`은 TestCoordinator의 deterministic compiler가 unresolved binding을 반환한 경우에만 batch별 planning staging artifact를 만들며 execution state나 Runner queue를 변경하지 않는다.
 
-### 8.6 기능별 격리와 안정성
+### 8.6 Work별 격리와 안정성
 
 | 경계 | analysis 4단계 | scenario Q&A | test planning |
 | --- | --- | --- | --- |
-| Pi session | 하나의 analysis session에서 stage별 root work 분리 | conversation별 chat session | execution별 planning session |
-| 읽기 | 현재 stage가 허용한 project source와 persisted input ID | ArtifactQueryService가 반환한 선택 ID 관계 | immutable scenario snapshot과 target contract |
-| 쓰기 | `.scenarioforge/staging/{workId}/`와 상태 요청 | conversation log만 append | `.scenarioforge/staging/{workId}/plan.json` |
-| 금지 | 다른 stage final artifact와 canonical state 직접 수정 | source·fact·wiki·scenario·execution 수정 | analysis artifact, Runner queue, evidence 수정 |
+| Pi session | 하나의 analysis session에서 stage별 root work 분리 | conversation별 chat session | execution/batch별 planning session, 필요할 때만 생성 |
+| 읽기 | 현재 stage가 허용한 project source와 persisted input ID | ArtifactQueryService가 반환한 선택 ID 관계 | immutable scenario snapshot, target contract, 배정된 redacted probe slice |
+| 쓰기 | `.scenarioforge/staging/{workId}/`와 상태 요청 | conversation log만 append | `.scenarioforge/staging/{workId}/runner-plan-patch.json` 또는 review verdict |
+| 금지 | 다른 stage final artifact와 canonical state 직접 수정 | source·fact·wiki·scenario·execution 수정 | project source, analysis artifact, 기존 plan, Runner queue/control, evidence 수정 |
 | child work | module 또는 ID batch 단위 허용 | 기본 금지 | 계획이 큰 경우 scenario 단위 허용 |
-| 완료 | stage completion gate | response schema와 cited ID gate | plan validator와 snapshot hash gate |
+| 완료 | stage completion gate | response schema와 cited ID gate | TestCoordinator plan validator와 batch durable commit gate |
 
 안정성 규칙은 다음과 같다.
 
@@ -811,7 +852,7 @@ type StateTombstone = {
 
 ### 8.8 역할별 상세 하네스와의 연결 시점
 
-위 기능 ID, workflow, isolation, CRUD 계약은 하네스보다 먼저 구현하고 fake Pi fixture로 검증한다. Phase 8에서 각 기능의 system instruction, skill trigger, tool schema, child 위임 문구를 이 계약에 연결한다. 하네스는 상태 전이나 완료 조건을 새로 정의할 수 없고 backend 계약을 설명하고 호출하는 역할만 가진다.
+위 기능 ID, workflow, isolation, CRUD 계약은 하네스보다 먼저 구현하고 fake Pi fixture로 검증한다. Phase 8에서 생성 resource는 `docs/pi-coding-agent 하네스 설계.md`, 수행 resource는 `docs/architecture/04-test-execution-harness-design.md`에 따라 별도 subtree와 policy로 연결한다. 최상위 Pi harness는 공통 lifecycle과 domain routing만 정의한다. 하네스는 상태 전이나 완료 조건을 새로 정의할 수 없고 backend 계약을 설명하고 호출하는 역할만 가진다.
 
 ## 9. 분석 파이프라인
 
@@ -822,6 +863,17 @@ BOOTSTRAP → SRC → FACT → WIKI → SCENARIO → READY
 ```
 
 각 단계 내부에서는 Pi가 프로젝트 특성에 따라 도구·스킬·서브에이전트를 선택한다. 단계의 시작·완료·실패·복구는 AnalysisCoordinator가 통제한다.
+
+상세 생성 하네스의 내부 순서는 다음으로 고정한다.
+
+```text
+SRC:      source snapshot + scan + closure inventory
+FACT:     stack별 추출 → auto link → ambiguous link 판정 → independent semantic review
+WIKI:     workflow 저작 → cites/terminal/variation 검증 → independent semantic review
+SCENARIO: bounded walk/combination → UX 서술 → independent semantic review → coverage
+```
+
+scan, auto link, walk, coverage는 backend executor이며 모델 선택에 맡기지 않는다. 각 stage의 author/reviewer work는 동적일 수 있지만 stage 순서와 completion gate는 고정한다.
 
 ### 9.2 완료 조건
 
@@ -842,10 +894,10 @@ Pi의 텍스트 응답은 완료 조건으로 사용하지 않는다. 각 단계
 
 | 단계 | 최소 산출물 |
 | --- | --- |
-| SRC | 파일·언어·모듈·의존 경계 목록과 source ID |
-| FACT | 코드에서 확인한 사실, 원천 위치, 관련 source ID |
-| WIKI | 업무·기술 설명, 관련 fact ID |
-| SCENARIO | 시나리오 ID, 사전 조건, 스텝, 기대 결과, 관련 fact/wiki/source ID |
+| SRC | source snapshot ID, 파일 hash·언어·모듈·의존 경계 목록과 source ID, evidence grant ledger |
+| FACT | 화면·상태·요소·API·술어·first-class 전이, snapshot/hash evidence, 플랫폼별 interaction target 후보와 observable assertion |
+| WIKI | workflow goal, entry/terminal, variation/combination, cites한 fact ID |
+| SCENARIO | `SCN-{업무코드}-{3자리}`, 구조화 사전 조건, path, action/actionRef, expected/assertionRefs, coverage |
 
 ## 10. ID와 인덱스
 
@@ -857,6 +909,8 @@ Pi의 텍스트 응답은 완료 조건으로 사용하지 않는다. 각 단계
 - 동일 분석 run 안에서 ID는 변경되지 않는다.
 - 재분석 시 의미가 같은 엔터티의 ID 유지 여부는 인덱스의 identity mapping으로 결정한다.
 - 생성 충돌은 애플리케이션 validator가 거부한다.
+- 화면 ID의 semantic key는 router namespace + canonical route pattern이며 충돌 suffix는 backend가 결정한다.
+- 사용자에게 표시되는 시나리오 ID는 기존 UI 계약과 동일한 `SCN-{업무코드}-{3자리 순번}`을 사용한다. `TS-*` 별도 체계를 만들지 않는다.
 
 ### 10.2 주요 관계
 
@@ -884,43 +938,76 @@ Pi 도구와 Renderer 읽기 API는 동일 query service를 사용해 관계 해
 
 ## 11. 테스트 수행
 
-### 11.1 실행 생성
+수행 lifecycle은 `docs/architecture/04-test-execution-harness-design.md`, 다중 대상 adapter 계약은 `docs/architecture/05-multi-target-execution-adapter-design.md`를 따른다. 생성 완료는 수행 트리거가 아니며 사용자의 명시적 test command가 있어야 수행 준비를 시작한다.
 
-시나리오 도출 페이지에서 선택한 케이스, 대상 URL, 테스트 전용 개인정보 JSON을 제출하면 다음 순서로 처리한다.
+### 11.1 사용자 트리거와 실행 생성
 
-1. 요청 스키마와 URL 검증
-2. 개인정보 필드 정책 검사
-3. 선택 시나리오의 immutable snapshot과 hash 생성
-4. 필요 시 Pi test planning session에서 구조화 테스트 계획 생성
-5. 계획 validator 통과
-6. `executionId`와 순차 대기열 생성
-7. TestVista UtilityProcess 시작
-8. 진행 이벤트와 증적 저장
+시나리오 도출 페이지에서 선택한 케이스, 대상 유형별 설정, 테스트 전용 data binding을 제출하면 다음 순서로 처리한다.
+
+1. `test.createExecution` command의 schema, 관계, `operationId`, `expectedRevision` 검증
+2. target 종류별 origin·process·window·device policy와 테스트 데이터 민감 필드 정책 검사
+3. 새 `executionId`와 최초 `batchId` 할당
+4. 선택 시나리오, FACT action/assertion reference, upstream artifact hash를 묶은 batch별 immutable `ScenarioSnapshot` 생성
+5. `ExecutionTargetProfile`과 `DataBindingSet`을 검증하고 environment preflight와 capability registry를 구성
+6. deterministic compiler가 action/assertion을 adapter-neutral IR과 `ExecutionSegment`로 binding하고, 미해결 target reference가 있을 때에만 허용된 Discovery Probe와 Pi test planning session에서 구조화 plan patch 생성·검토
+7. 계획이 scenario hash와 action/assertion 의미를 보존하는지 backend validator 통과
+8. immutable `ExecutionBatch` artifact와 순차 queue를 하나의 durable revision으로 commit
+9. TestVista UtilityProcess 시작
+10. 진행 이벤트와 증적 저장
+
+`ScenarioSnapshot`과 검증된 `RunnerPlan` 없이는 Runner를 시작하지 않는다. `action`·`expected` 자연어만 Runner에 넘기지 않는다.
+
+#### 11.1.1 생성→수행 handoff
+
+`ScenarioSnapshot`은 선택 시나리오의 표시 문장뿐 아니라 다음 관계를 고정한다.
+
+- `analysisRunId`, `sourceSnapshotId`, scenario artifact hash
+- step별 `actionRef { edgeId, elementId }`
+- step별 `assertionRefs[]`
+- 구조화 precondition의 `predicateRefs[]`와 `dataBindingKeys[]`
+- FACT의 semantic·visual target 후보와 observable assertion shape
+
+`RunnerPlan`은 이를 플랫폼 중립 `ActionIntent`, `TargetRef`, `AdapterBinding`, matcher로 컴파일한다. 기존 `click/fill/select/upload/navigate`는 이 IR의 부분집합이다. `test.plan`은 시나리오의 path, 기대 결과, assertion ID를 변경할 수 없고 실행 중에는 계획을 수정하지 않는다. 자동화할 target reference 또는 matcher를 확정할 수 없으면 임의 selector·automation ID·좌표를 만들지 않고 계획 단계에서 batch를 거절한다. 계획이 통과했지만 실행 환경 문제로 assertion을 관찰할 수 없는 경우에만 case를 `INCONCLUSIVE`로 판정한다. visual/CUA 모델은 observation과 confidence만 반환하며 최종 verdict는 AssertionEngine이 확정한다.
+
+#### 11.1.2 실행 중 대기열 추가
+
+활성 execution이 있는 상태에서 사용자가 같은 target에 시나리오를 추가하면 `test.enqueueScenarios`가 새 batch를 만든다.
+
+- enqueue는 기존 `ScenarioSnapshot`이나 `RunnerPlan`을 수정하지 않는다.
+- 새 batch는 자체 snapshot, optional probe, plan, manifest를 가진다.
+- 새 batch의 target hash는 active execution과 같아야 한다.
+- planning에 실패한 batch는 `REJECTED`로 남고 기존 queue에 영향을 주지 않는다.
+- 검증 완료된 batch만 현재 queue의 뒤에 원자적으로 append한다.
+- 같은 scenario의 의도적 재수행은 enqueue가 아니라 `test.retryCases`로 새 execution을 만든다.
 
 ### 11.2 순차 실행 상태
 
+계획 batch와 Runner execution 상태를 분리한다.
+
 ```text
-QUEUED
-  → PREPARING
-  → RUNNING
-      ├── PASSED
-      ├── FAILED
-      ├── INCONCLUSIVE
-      └── CANCELLED
+REQUESTED → VALIDATING → SNAPSHOTTED → COMPILING
+  ├── PLAN_VALIDATING → QUEUED
+  └── PLANNING → REVIEWING? → PLAN_VALIDATING → QUEUED | REJECTED
+
+QUEUED → PREPARING → RUNNING → COMPLETED
+   ├── CANCELLED
+   └── ABORTED
 ```
 
 - 프로젝트별 Runner는 한 번에 하나의 시나리오만 실행한다.
-- 실행 중 사용자가 다른 시나리오를 추가하면 대기열 뒤에 추가한다.
+- 실행 중 사용자가 다른 시나리오를 추가하면 검증된 새 batch를 대기열 뒤에 추가한다.
 - 테스트 실패 시 현재 케이스의 후속 스텝은 `SKIPPED`로 기록한다.
 - 실패 증적을 확정한 후 다음 대기 케이스를 계속 실행한다.
 - 케이스 단위 환경 오류는 `INCONCLUSIVE`로 기록하고 Runner 재준비 후 다음 케이스를 시도한다.
-- Runner 사망, 증적 저장소 접근 실패, 개인정보 마스킹 실패는 전체 실행을 중단한다.
+- Runner 사망, 증적 저장소 접근 실패, 개인정보 마스킹 실패는 전체 실행을 `ABORTED`로 중단한다.
+- `PASSED`, `FAILED`, `INCONCLUSIVE`, `SKIPPED`, `CANCELLED`는 case/step verdict이며 execution terminal state와 혼용하지 않는다.
 
 ### 11.3 중단과 재실행
 
 - 중단 요청은 현재 도구 동작을 안전하게 종료한 후 적용한다.
 - 이미 수집된 증적은 삭제하지 않는다.
 - 현재 케이스와 남은 대기 케이스를 `CANCELLED`로 기록한다.
+- planning 중인 미commit batch도 abort하고 queue에 붙이지 않는다.
 - `미실행 케이스 다시 수행`은 새 `executionId`를 생성한다.
 - 실패 케이스 재실행도 새 `executionId`를 생성한다.
 - 새 실행 manifest의 `retryOfExecutionId`로 이전 실행을 연결한다.
@@ -932,7 +1019,7 @@ QUEUED
 
 - 성공한 각 스텝의 사용자 동작이 끝나면 `action-complete.png` 1장을 저장한다.
 - 실패한 스텝은 동작 완료 화면 외에 `before-failure.png`, `failure.png`를 추가한다.
-- 실패 시 `failure-context.json`에 오류 종류, selector 또는 assertion, timeout, URL, 환경 메타데이터를 저장한다.
+- 실패 시 `failure-context.json`에 오류 종류, redacted target reference 또는 assertion, timeout, target·adapter·환경 메타데이터를 저장한다.
 - 전체 실행에 trace와 마스킹된 execution log를 저장한다.
 
 ### 12.2 판정
@@ -941,7 +1028,7 @@ QUEUED
 | --- | --- |
 | PASSED | 기대 결과를 검증함 |
 | FAILED | 실제 결과가 기대 결과와 다름 |
-| INCONCLUSIVE | 브라우저·네트워크·캡처 등 환경 문제로 판정할 수 없음 |
+| INCONCLUSIVE | 브라우저·device·desktop session·네트워크·캡처 등 환경 문제로 판정할 수 없음 |
 | CANCELLED | 사용자 또는 치명적 시스템 오류로 실행이 중단됨 |
 
 ### 12.3 불변성과 무결성
@@ -1073,6 +1160,8 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 
 `scenario.ask`는 시나리오 도출 route에서만 호출한다. Main process는 route를 신뢰하지 않고 프로젝트·run·scenario ID의 관계를 재검증한다.
 
+`test.createExecution`은 활성 execution이 없을 때 새 execution과 최초 batch를 만든다. `test.enqueueScenarios`는 같은 target hash의 새 immutable batch만 active execution 뒤에 추가한다. `test.retryCases`는 기존 execution을 수정하지 않고 `retryOfExecutionId`를 가진 새 execution을 만든다.
+
 ### 14.2 주요 이벤트
 
 - `project.bootstrap.started`
@@ -1097,14 +1186,26 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 - `analysis.stage.completed`
 - `analysis.stage.failed`
 - `analysis.completed`
+- `test.execution.requested`
+- `test.batch.requested`
+- `test.batch.snapshot.created`
+- `test.plan.started`
+- `test.plan.completed`
+- `test.plan.rejected`
+- `test.batch.queued`
 - `test.execution.created`
+- `test.execution.preparing`
+- `test.execution.started`
 - `test.case.started`
 - `test.step.started`
 - `test.step.completed`
 - `test.step.failed`
 - `test.evidence.saved`
 - `test.case.completed`
+- `test.batch.completed`
 - `test.execution.completed`
+- `test.execution.cancelled`
+- `test.execution.aborted`
 
 모든 이벤트는 5.6의 envelope와 project revision을 포함한다. 이벤트에는 credential, 개인정보 원문, 모델의 숨은 사고 과정, 전체 도구 출력 원문을 포함하지 않는다.
 
@@ -1145,8 +1246,13 @@ Electron 정적 파일 환경에서 복구 가능한 hash route를 사용한다.
 - masking이 실패하면 증적 저장과 전체 실행을 중단한다.
 - 외부 URL 접근과 다운로드는 별도의 network policy 대상으로 취급한다.
 - runtime resource는 앱 번들의 hash와 manifest로 무결성을 검사한다.
+- source code, 주석, README, 화면 문자열은 untrusted data로 취급한다. 그 안의 명령문은 system instruction, tool allowlist, read/write scope, completion gate를 변경할 수 없다.
+- closure가 원격 author/reviewer endpoint로 전송되기 전에 source secret pattern을 검사하고, 차단 시 해당 work를 실패 처리한다.
+- 역할별 endpoint와 source 전송 범위를 사용자에게 표시한다. 서로 다른 author/reviewer endpoint를 쓰면 evidence slice가 두 trust boundary를 통과함을 명시한다.
 
 ## 17. ScenarioForge 소스 디렉터리
+
+아래는 목표 workspace 구조다. 현재 저장소의 `src/{main,preload,renderer,shared}` 평면 구조는 UI PoC 상태이며 Phase 1에서 `apps/desktop`으로 이동한다. 마이그레이션 전에는 얇은 IPC adapter 외의 신규 backend를 `src/main` 아래에 누적하지 않고 목표 `packages/*`에 구현한다. 기존 `packages/agent-runtime`은 안내용 placeholder이며 실제 runtime 구현은 `packages/pi-runtime`과 `packages/scenario-pipeline`이 소유한다. 별도 `harness-server` 패키지는 만들지 않고 `apps/desktop/src/main/app`을 composition root로 사용한다.
 
 ```text
 ScenarioForge/
@@ -1178,13 +1284,13 @@ ScenarioForge/
 │   │   └── src/{model,reducer,coordinator,journal,projection,recovery}/
 │   ├── project-runtime/
 │   │   ├── src/{bootstrap,migrations,manifest,path-policy}/
-│   │   └── runtime-template/
+│   │   └── runtime-template/{harnesses,skills/{generation,execution},agents/{generation,execution}}/
 │   ├── pi-runtime/
 │   │   └── src/{host,models,sessions,resources,tools,event-adapter,security}/
 │   ├── scenario-pipeline/
 │   │   └── src/{stages,validators,artifacts,indexing}/
 │   ├── test-runtime/
-│   │   └── src/{coordinator,runner,browser,verdict,events}/
+│   │   └── src/{coordinator,planning,targets,routing,adapters,queue,runner,assertions,verdict,events,recovery}/
 │   └── evidence-store/
 │       └── src/{writer,reader,masking,integrity,retention}/
 ├── docs/
@@ -1211,9 +1317,10 @@ selected-project/
     │   ├── AGENTS.md
     │   ├── SYSTEM.md
     │   ├── WORK_PROTOCOL.md
-    │   ├── skills/
+    │   ├── harnesses/
+    │   ├── skills/{generation,execution}/
     │   ├── extensions/
-    │   └── agents/
+    │   └── agents/{generation,execution}/
     ├── sessions/
     │   ├── analysis/
     │   ├── chat/
@@ -1228,16 +1335,27 @@ selected-project/
     │   ├── checkpoints/
     │   ├── work-items/
     │   ├── orphans/
+    │   ├── evidence-grants/
     │   └── locks/
     ├── runs/
     │   └── {scenarioRunId}/
     │       ├── manifest.json
+    │       ├── source/
     │       ├── facts/
     │       ├── wiki/
     │       ├── scenario-set.json
+    │       ├── coverage.json
     │       └── tests/
     │           └── {executionId}/
     │               ├── manifest.json
+    │               ├── batches/
+    │               │   └── {batchId}/
+    │               │       ├── scenario-snapshot.json
+    │               │       ├── execution-target-profile.json
+    │               │       ├── data-binding-manifest.json
+    │               │       ├── target-probe.json
+    │               │       ├── runner-plan.json
+    │               │       └── batch-manifest.json
     │               ├── execution-result.json
     │               ├── cases/
     │               │   └── {scenarioId}/
@@ -1296,9 +1414,9 @@ selected-project/
 - 원시 Pi 이벤트가 Renderer 또는 stage completion으로 직접 전달되지 않는지 검증
 - 실제 역할별 resource 대신 schema-valid test fixture 사용
 
-### Phase 5. Analysis Domain
+### Phase 5. Analysis, Query, Planning Domains
 
-- 6개 `LlmFunctionId`의 immutable WorkDescriptor와 기능별 policy
+- generation 4종, scenario query 1종, execution planning 1종의 immutable `WorkDescriptor`와 domain별 policy
 - 단계 상태 머신
 - session `settled`와 stage `completed`를 분리한 completion gate
 - stage manifest와 artifact schema·ID 관계 validator
@@ -1320,22 +1438,25 @@ selected-project/
 
 ### Phase 7. 테스트 및 증적
 
+- create/enqueue/cancel/retry command handler와 immutable `ExecutionBatch`
+- ScenarioSnapshot, ExecutionTargetProfile, DataBindingSet, Preflight/Probe, capability registry, deterministic segment compiler와 validator
 - TestCoordinator와 순차 queue
-- TestVista process contract
+- TestVista execution kernel과 web/UIA/mobile/CUA adapter contract
 - verdict와 error taxonomy
 - screenshot, trace, log, masking, hash
 - 테스트 센터와 증적 상세 화면
 
-### Phase 8. 하네스·스킬·에이전트 상세 설계
+### Phase 8. 하네스·스킬·에이전트 구현
 
-- `WORK_PROTOCOL.md` 실제 내용과 역할별 시작·갱신·완료 규칙
-- 각 분석 단계가 참조할 정보와 금지 범위
-- ID 조회 도구와 산출물 작성 도구
-- `WorkStateService`를 Pi tool로 노출하는 이름과 입력·출력 schema
-- 하네스의 완료 요청과 backend completion gate 연결
-- 스킬 목록, trigger, 입력·출력 계약
-- 서브에이전트 역할, 위임 조건, 결과 통합 방식
-- 실제 Resource Bundle 작성과 버전 manifest 생성
+- 상세 계약은 `docs/pi-coding-agent 하네스 설계.md`, `docs/architecture/03-integrated-harness-server-design.md`, `docs/architecture/04-test-execution-harness-design.md`로 확정
+- `WORK_PROTOCOL.md` 실제 파일과 역할별 시작·갱신·완료 규칙 구현
+- 최상위 router와 generation/execution-planning resource subtree 분리
+- author/reviewer model binding과 assurance 기록 구현
+- scan/closure/evidence grant, bounded artifact query, staging 제출 도구 구현
+- 스킬, 역할 resource, 모델별 few-shot 작성
+- FACT/WIKI/SCENARIO independent semantic verdict와 backend completion gate 연결
+- `test-plan-binding`, `test-plan-review` skill과 `test-planner`, `test-plan-reviewer` resource 작성
+- Resource Bundle version manifest와 hash 생성
 
 ### Phase 9. 실제 Pi 통합 E2E
 
@@ -1362,7 +1483,9 @@ selected-project/
 - Pi raw event adapter 정규화
 - analysis stage completion gates
 - scenario ID 관계 조회
-- queue와 retry 정책
+- create/enqueue/retry의 immutable batch와 target hash 일치 검증
+- planning state와 execution state의 금지 전이
+- queue와 cancel/retry 정책
 - verdict 분류
 - masking과 evidence hash
 
@@ -1373,6 +1496,8 @@ selected-project/
 - UtilityProcess session lifecycle
 - Pi 이벤트가 session/activity 후보로만 변환되고 UI로 직접 전달되지 않음
 - analysis/Q&A/test-planning session의 읽기·쓰기 범위 격리
+- generation resource와 execution planning resource의 동시 노출 금지
+- deterministic-only plan에서 Pi planning session 미생성
 - child 결과가 parent integration 전 stage 상태를 변경하지 않음
 - 동일 operation 재전송 시 idempotency 보장
 - 상태·checkpoint·revision 저장 전에 event가 발행되지 않음
@@ -1382,6 +1507,8 @@ selected-project/
 - `WORK_STATE.md` 손상·누락 시 canonical state에서 재생성
 - 앱 재시작 후 analysis session 복구
 - 테스트 실패 후 다음 케이스 계속
+- 실행 중 enqueue가 기존 batch hash를 변경하지 않음
+- planning 거절이 기존 queue와 Runner에 영향을 주지 않음
 - Runner crash 후 `INCONCLUSIVE` 또는 전체 중단 분류
 - 증적 저장 실패 시 fail-closed
 
@@ -1395,6 +1522,8 @@ selected-project/
 - 준비 전 상위 탭 비활성화
 - 분석 진행 중 자유로운 화면 전환
 - Q&A가 시나리오 화면에만 존재
+- 활성 execution 유무에 따른 create/enqueue CTA 전환
+- planning 거절 시 입력과 선택 유지
 - 실행 중 테스트 탭 상태 유지
 - 성공·실패 증적 전환
 - 재실행 이력 비교
@@ -1416,6 +1545,8 @@ selected-project/
 12. 실패, 판정 불가, 중단됨이 구분된다.
 13. 재실행이 기존 증적을 덮어쓰지 않는다.
 14. credential과 개인정보 원문이 프로젝트 파일, 공통 상태 문서, 이벤트, 증적에 남지 않는다.
+15. 생성 완료만으로 test planning session이나 Runner가 시작되지 않는다.
+16. 실행 중 추가는 기존 snapshot/plan hash를 바꾸지 않고 새 immutable batch를 append한다.
 
 ## 21. 공식 기술 참고
 

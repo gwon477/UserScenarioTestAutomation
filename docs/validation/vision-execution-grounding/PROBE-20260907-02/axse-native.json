@@ -1,0 +1,1373 @@
+{
+  "probe": "vision-grounding-accuracy",
+  "designRef": "docs/architecture/07-vision-first-execution-design.md#11",
+  "project": "axse",
+  "modelId": "gpt-5.6-luna",
+  "provider": "azure-openai",
+  "api": "azure-openai-chat-completions",
+  "startedAt": "2026-09-07T00:48:53.716Z",
+  "finishedAt": "2026-09-07T00:49:42.735Z",
+  "imageInputAccepted": true,
+  "overall": {
+    "screens": 8,
+    "targets": 39,
+    "hits": 8,
+    "misses": 31,
+    "notFound": 0,
+    "hitRate": 0.205
+  },
+  "screens": [
+    {
+      "screenId": "01-login-form",
+      "description": "AXSE 로그인 입력 화면",
+      "heading": "로그인",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 3,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 3069,
+        "usage": {
+          "completion_tokens": 189,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 65,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 6,
+            "engine_ttft_ms": 279,
+            "engine_ttlt_ms": 1423,
+            "pre_inference_ms": 116,
+            "service_tbt_ms": 6,
+            "service_ttft_ms": 1430,
+            "service_ttlt_ms": 2570,
+            "user_visible_ttft_ms": 1314
+          },
+          "prompt_tokens": 1364,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1553
+        }
+      },
+      "summary": {
+        "targets": 3,
+        "hits": 0,
+        "misses": 3,
+        "notFound": 0,
+        "hitRate": 0,
+        "medianCenterDistancePx": 128,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "아이디를 입력하세요",
+          "controlKind": "textbox",
+          "truthRect": {
+            "x": 557,
+            "y": 424,
+            "width": 326,
+            "height": 33
+          },
+          "truthCenter": {
+            "x": 720,
+            "y": 441
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 615,
+            "y": 376
+          },
+          "centerDistancePx": 123,
+          "observedLabel": "아이디를 입력하세요",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "패스워드를 입력하세요",
+          "controlKind": "password-textbox",
+          "truthRect": {
+            "x": 557,
+            "y": 487,
+            "width": 326,
+            "height": 33
+          },
+          "truthCenter": {
+            "x": 720,
+            "y": 504
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 615,
+            "y": 430
+          },
+          "centerDistancePx": 128,
+          "observedLabel": "패스워드를 입력하세요",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "로그인",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 557,
+            "y": 544,
+            "width": 326,
+            "height": 41
+          },
+          "truthCenter": {
+            "x": 720,
+            "y": 565
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 615,
+            "y": 482
+          },
+          "centerDistancePx": 134,
+          "observedLabel": "로그인",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "02-login-form-filled",
+      "description": "아이디와 패스워드가 입력된 로그인 화면",
+      "heading": "로그인",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 3,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 4461,
+        "usage": {
+          "completion_tokens": 307,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 188,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 8,
+            "engine_ttft_ms": 313,
+            "engine_ttlt_ms": 2656,
+            "pre_inference_ms": 106,
+            "service_tbt_ms": 8,
+            "service_ttft_ms": 1479,
+            "service_ttlt_ms": 3817,
+            "user_visible_ttft_ms": 1373
+          },
+          "prompt_tokens": 1371,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1678
+        }
+      },
+      "summary": {
+        "targets": 3,
+        "hits": 0,
+        "misses": 3,
+        "notFound": 0,
+        "hitRate": 0,
+        "medianCenterDistancePx": 128,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "아이디를 입력하세요",
+          "controlKind": "textbox",
+          "truthRect": {
+            "x": 557,
+            "y": 424,
+            "width": 326,
+            "height": 33
+          },
+          "truthCenter": {
+            "x": 720,
+            "y": 441
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 615,
+            "y": 376
+          },
+          "centerDistancePx": 123,
+          "observedLabel": "아이디",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "패스워드를 입력하세요",
+          "controlKind": "password-textbox",
+          "truthRect": {
+            "x": 557,
+            "y": 487,
+            "width": 326,
+            "height": 33
+          },
+          "truthCenter": {
+            "x": 720,
+            "y": 504
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 615,
+            "y": 430
+          },
+          "centerDistancePx": 128,
+          "observedLabel": "패스워드",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "로그인",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 557,
+            "y": 544,
+            "width": 326,
+            "height": 41
+          },
+          "truthCenter": {
+            "x": 720,
+            "y": 565
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 615,
+            "y": 482
+          },
+          "centerDistancePx": 134,
+          "observedLabel": "로그인",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "03-project-select",
+      "description": "프로젝트 선택 화면",
+      "heading": "프로젝트 선택",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 3,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 4933,
+        "usage": {
+          "completion_tokens": 370,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 234,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 8,
+            "engine_ttft_ms": 270,
+            "engine_ttlt_ms": 3171,
+            "pre_inference_ms": 124,
+            "service_tbt_ms": 8,
+            "service_ttft_ms": 1432,
+            "service_ttlt_ms": 4328,
+            "user_visible_ttft_ms": 1308
+          },
+          "prompt_tokens": 1370,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1740
+        }
+      },
+      "summary": {
+        "targets": 3,
+        "hits": 1,
+        "misses": 2,
+        "notFound": 0,
+        "hitRate": 0.333,
+        "medianCenterDistancePx": 187,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "⏏ 로그아웃",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1235,
+            "y": 14,
+            "width": 82,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1276,
+            "y": 29
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1089,
+            "y": 25
+          },
+          "centerDistancePx": 187,
+          "observedLabel": "⏏ 로그아웃",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "↺ 새로고침",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1327,
+            "y": 14,
+            "width": 85,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1370,
+            "y": 29
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1168,
+            "y": 25
+          },
+          "centerDistancePx": 202,
+          "observedLabel": "↺ 새로고침",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "PRJ-0007차세대 보험 코어",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 28,
+            "y": 170,
+            "width": 336,
+            "height": 120
+          },
+          "truthCenter": {
+            "x": 196,
+            "y": 230
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 166,
+            "y": 197
+          },
+          "centerDistancePx": 45,
+          "observedLabel": "PRJ-0007 차세대 보험 코어",
+          "labelMatch": true,
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "screenId": "04-main-upload",
+      "description": "메인 셸 문서 업로드 화면",
+      "heading": "시나리오 · TC 완성본",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 17,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 7247,
+        "usage": {
+          "completion_tokens": 575,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 340,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 7,
+            "engine_ttft_ms": 492,
+            "engine_ttlt_ms": 4348,
+            "pre_inference_ms": 1097,
+            "service_tbt_ms": 7,
+            "service_ttft_ms": 2623,
+            "service_ttlt_ms": 6474,
+            "user_visible_ttft_ms": 1526
+          },
+          "prompt_tokens": 1415,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1990
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 1,
+        "misses": 5,
+        "notFound": 0,
+        "hitRate": 0.167,
+        "medianCenterDistancePx": 88,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "테스트 시나리오",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 141,
+            "y": 17,
+            "width": 125,
+            "height": 27
+          },
+          "truthCenter": {
+            "x": 204,
+            "y": 31
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 172,
+            "y": 27
+          },
+          "centerDistancePx": 32,
+          "observedLabel": "테스트 시나리오",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "↺ 새로고침",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1322,
+            "y": 16,
+            "width": 81,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1363,
+            "y": 31
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1162,
+            "y": 27
+          },
+          "centerDistancePx": 201,
+          "observedLabel": "새로고침",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "1. MD 업로드/기계적 파싱parse",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 143,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 162
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 86,
+            "y": 138
+          },
+          "centerDistancePx": 47,
+          "observedLabel": "1. MD 업로드/기계적 파싱",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "3. 업무 도출business",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 226,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 245
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 61,
+            "y": 207
+          },
+          "centerDistancePx": 75,
+          "observedLabel": "3. 업무 도출",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "설정settings",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 844,
+            "width": 219,
+            "height": 39
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 864
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 108,
+            "y": 736
+          },
+          "centerDistancePx": 129,
+          "observedLabel": "설정",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "정상",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 458,
+            "y": 316,
+            "width": 43,
+            "height": 27
+          },
+          "truthCenter": {
+            "x": 480,
+            "y": 330
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 408,
+            "y": 280
+          },
+          "centerDistancePx": 88,
+          "observedLabel": "정상",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "05-main-upload",
+      "description": "MD 업로드 및 파싱 화면",
+      "heading": "MD 업로드/기계적 파싱",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 10,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 8549,
+        "usage": {
+          "completion_tokens": 756,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 502,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 7,
+            "engine_ttft_ms": 388,
+            "engine_ttlt_ms": 5899,
+            "pre_inference_ms": 994,
+            "service_tbt_ms": 7,
+            "service_ttft_ms": 2430,
+            "service_ttlt_ms": 7937,
+            "user_visible_ttft_ms": 1436
+          },
+          "prompt_tokens": 1426,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2182
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 2,
+        "misses": 4,
+        "notFound": 0,
+        "hitRate": 0.333,
+        "medianCenterDistancePx": 47,
+        "labelMatchRate": 0.833
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "테스트 시나리오",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 141,
+            "y": 17,
+            "width": 125,
+            "height": 27
+          },
+          "truthCenter": {
+            "x": 204,
+            "y": 31
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 174,
+            "y": 27
+          },
+          "centerDistancePx": 30,
+          "observedLabel": "테스트 시나리오",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "⏏ 로그아웃",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1247,
+            "y": 16,
+            "width": 82,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1288,
+            "y": 31
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1100,
+            "y": 26
+          },
+          "centerDistancePx": 188,
+          "observedLabel": "⏏ 로그아웃",
+          "labelMatch": true,
+          "confidence": 0.97
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "↺ 새로고침",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1337,
+            "y": 16,
+            "width": 81,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1378,
+            "y": 31
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1175,
+            "y": 26
+          },
+          "centerDistancePx": 203,
+          "observedLabel": "↻ 새로고침",
+          "labelMatch": false,
+          "confidence": 0.96
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "TSTS-2026-0142⌄",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 17,
+            "y": 81,
+            "width": 217,
+            "height": 47
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 105
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 107,
+            "y": 89
+          },
+          "centerDistancePx": 25,
+          "observedLabel": "TS-2026-0142⌄",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "1. MD 업로드/기계적 파싱parse",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 143,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 162
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 91,
+            "y": 138
+          },
+          "centerDistancePx": 42,
+          "observedLabel": "1. MD 업로드/기계적 파싱 parse",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "2. 파싱 데이터 저장/조회db",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 185,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 204
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 91,
+            "y": 173
+          },
+          "centerDistancePx": 47,
+          "observedLabel": "2. 파싱 데이터 저장/조회 db",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "06-main-parsed-db",
+      "description": "파싱 데이터 저장·조회 화면",
+      "heading": "파싱 데이터 저장/조회",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 18,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 7122,
+        "usage": {
+          "completion_tokens": 713,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 473,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 7,
+            "engine_ttft_ms": 387,
+            "engine_ttlt_ms": 5373,
+            "pre_inference_ms": 107,
+            "service_tbt_ms": 7,
+            "service_ttft_ms": 1543,
+            "service_ttlt_ms": 6525,
+            "user_visible_ttft_ms": 1436
+          },
+          "prompt_tokens": 1413,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2126
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 1,
+        "misses": 5,
+        "notFound": 0,
+        "hitRate": 0.167,
+        "medianCenterDistancePx": 129,
+        "labelMatchRate": 0.833
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "테스트 시나리오",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 141,
+            "y": 17,
+            "width": 125,
+            "height": 27
+          },
+          "truthCenter": {
+            "x": 204,
+            "y": 31
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 170,
+            "y": 26
+          },
+          "centerDistancePx": 34,
+          "observedLabel": "테스트 시나리오",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "↺ 새로고침",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1337,
+            "y": 16,
+            "width": 81,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1378,
+            "y": 31
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1175,
+            "y": 26
+          },
+          "centerDistancePx": 203,
+          "observedLabel": "↻ 새로고침",
+          "labelMatch": false,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "1. MD 업로드/기계적 파싱parse",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 143,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 162
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 95,
+            "y": 138
+          },
+          "centerDistancePx": 39,
+          "observedLabel": "1. MD 업로드/기계적 파싱 parse",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "3. 업무 도출business",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 226,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 245
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 91,
+            "y": 208
+          },
+          "centerDistancePx": 51,
+          "observedLabel": "3. 업무 도출 business",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "설정settings",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 844,
+            "width": 219,
+            "height": 39
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 864
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 104,
+            "y": 737
+          },
+          "centerDistancePx": 129,
+          "observedLabel": "설정 settings",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "업무",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1136,
+            "y": 355,
+            "width": 41,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1157,
+            "y": 370
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 986,
+            "y": 315
+          },
+          "centerDistancePx": 180,
+          "observedLabel": "업무",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "07-main-business",
+      "description": "업무 도출 화면",
+      "heading": "업무 도출",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 24,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 6963,
+        "usage": {
+          "completion_tokens": 659,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 423,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 7,
+            "engine_ttft_ms": 428,
+            "engine_ttlt_ms": 5204,
+            "pre_inference_ms": 121,
+            "service_tbt_ms": 7,
+            "service_ttft_ms": 1601,
+            "service_ttlt_ms": 6373,
+            "user_visible_ttft_ms": 1481
+          },
+          "prompt_tokens": 1404,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2063
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 2,
+        "misses": 4,
+        "notFound": 0,
+        "hitRate": 0.333,
+        "medianCenterDistancePx": 105,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "테스트 시나리오",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 141,
+            "y": 17,
+            "width": 125,
+            "height": 27
+          },
+          "truthCenter": {
+            "x": 204,
+            "y": 31
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 174,
+            "y": 27
+          },
+          "centerDistancePx": 30,
+          "observedLabel": "테스트 시나리오",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "TSTS-2026-0142⌄",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 17,
+            "y": 81,
+            "width": 217,
+            "height": 47
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 105
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 107,
+            "y": 89
+          },
+          "centerDistancePx": 25,
+          "observedLabel": "TS-2026-0142⌄",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "3. 업무 도출business",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 226,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 245
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 99,
+            "y": 208
+          },
+          "centerDistancePx": 46,
+          "observedLabel": "3. 업무 도출 business",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "이전",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1351,
+            "y": 101,
+            "width": 48,
+            "height": 35
+          },
+          "truthCenter": {
+            "x": 1375,
+            "y": 119
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1173,
+            "y": 101
+          },
+          "centerDistancePx": 203,
+          "observedLabel": "이전",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "전체 선택",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 618,
+            "y": 281,
+            "width": 61,
+            "height": 26
+          },
+          "truthCenter": {
+            "x": 649,
+            "y": 294
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 553,
+            "y": 251
+          },
+          "centerDistancePx": 105,
+          "observedLabel": "전체 선택",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "CSV 내보내기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1173,
+            "y": 221,
+            "width": 102,
+            "height": 35
+          },
+          "truthCenter": {
+            "x": 1224,
+            "y": 239
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1045,
+            "y": 203
+          },
+          "centerDistancePx": 183,
+          "observedLabel": "CSV 내보내기",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "08-main-scenario",
+      "description": "시나리오·TC 완성본 화면",
+      "heading": "시나리오 · TC 완성본",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 17,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 6646,
+        "usage": {
+          "completion_tokens": 572,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 332,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 7,
+            "engine_ttft_ms": 412,
+            "engine_ttlt_ms": 4575,
+            "pre_inference_ms": 110,
+            "service_tbt_ms": 7,
+            "service_ttft_ms": 1601,
+            "service_ttlt_ms": 5760,
+            "user_visible_ttft_ms": 1492
+          },
+          "prompt_tokens": 1416,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1988
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 1,
+        "misses": 5,
+        "notFound": 0,
+        "hitRate": 0.167,
+        "medianCenterDistancePx": 87,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "테스트 시나리오",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 141,
+            "y": 17,
+            "width": 125,
+            "height": 27
+          },
+          "truthCenter": {
+            "x": 204,
+            "y": 31
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 174,
+            "y": 27
+          },
+          "centerDistancePx": 30,
+          "observedLabel": "테스트 시나리오",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "↺ 새로고침",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1322,
+            "y": 16,
+            "width": 81,
+            "height": 29
+          },
+          "truthCenter": {
+            "x": 1363,
+            "y": 31
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1162,
+            "y": 26
+          },
+          "centerDistancePx": 201,
+          "observedLabel": "↺ 새로고침",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "1. MD 업로드/기계적 파싱parse",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 143,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 162
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 91,
+            "y": 138
+          },
+          "centerDistancePx": 42,
+          "observedLabel": "1. MD 업로드/기계적 파싱 parse",
+          "labelMatch": true,
+          "confidence": 0.97
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "3. 업무 도출business",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 226,
+            "width": 219,
+            "height": 37
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 245
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 77,
+            "y": 207
+          },
+          "centerDistancePx": 62,
+          "observedLabel": "3. 업무 도출 business",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "설정settings",
+          "controlKind": "nav-item",
+          "truthRect": {
+            "x": 16,
+            "y": 844,
+            "width": 219,
+            "height": 39
+          },
+          "truthCenter": {
+            "x": 126,
+            "y": 864
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 106,
+            "y": 736
+          },
+          "centerDistancePx": 130,
+          "observedLabel": "설정 settings",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "정상",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 458,
+            "y": 316,
+            "width": 43,
+            "height": 27
+          },
+          "truthCenter": {
+            "x": 480,
+            "y": 330
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 409,
+            "y": 280
+          },
+          "centerDistancePx": 87,
+          "observedLabel": "정상",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    }
+  ]
+}

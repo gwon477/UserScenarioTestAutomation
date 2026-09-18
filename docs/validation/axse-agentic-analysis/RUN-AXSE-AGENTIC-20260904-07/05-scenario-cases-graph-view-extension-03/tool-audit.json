@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.extension.validate",
+      "result": "ok",
+      "preserved_scenario_count": 53,
+      "added_scenario_count": 32
+    },
+    {
+      "sequence": 2,
+      "tool": "backend.scenario.compile",
+      "result": "ok",
+      "scenario_count": 85
+    },
+    {
+      "sequence": 3,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "05-scenario-cases-graph"
+    }
+  ]
+}

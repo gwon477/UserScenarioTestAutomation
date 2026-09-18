@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.input.validate",
+      "result": "ok",
+      "golden_hash": "sha256:09cac5ddc58c812eea8bddef6f9154db137bd51a3e37ceb871fdae1c1351f253",
+      "candidate_hash": "sha256:31399cbb5ca8d1093a74acd93ca8d3719e2517d0cf4b69c0d36d5d1f190b25e0"
+    },
+    {
+      "sequence": 2,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-taxonomy-journey-assessment"
+    },
+    {
+      "sequence": 3,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-scenario-assessment"
+    }
+  ]
+}

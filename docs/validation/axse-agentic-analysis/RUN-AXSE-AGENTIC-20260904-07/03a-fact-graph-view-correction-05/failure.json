@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "fact-correction-patch-reuse",
+  "error_code": "FACT_PATCH_SCHEMA_INVALID"
+}

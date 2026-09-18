@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "product": "ScenarioForge",
+  "surveyedAt": "2026-09-17",
+  "target": "web preview (Electron renderer, vite dev:web, ?preview=demo fixtures)",
+  "vocabulary": [
+    "프로젝트",
+    "소스 디렉터리",
+    "LLM 연결 설정",
+    "SRC/FACT/WIKI/SCENARIO 단계",
+    "생성 이력",
+    "사용자 시나리오",
+    "업무 분류",
+    "케이스",
+    "시나리오 질의",
+    "테스트 실행",
+    "수행 대기열",
+    "판정",
+    "증적",
+    "단계 타임라인",
+    "판정 근거"
+  ],
+  "roles": [
+    "분석 담당자"
+  ],
+  "coreFeatures": [
+    "1. 프로젝트 등록 → LLM 연결 설정 → 분석(SRC 단계) 실행",
+    "2. 분석 진행 상황 확인(4단계 파이프라인, 장시간 작업)",
+    "3. 생성 이력에서 업무 분류별 사용자 시나리오 케이스 확인(단계·기대 결과 펼치기)",
+    "4. 케이스를 질의 패널로 드래그해 질문하고 답변 받기",
+    "5. 테스트 실행 → 케이스별 판정 → 단계 증적(타임라인·캡처·판정 근거) 확인, 증적 라이브러리 필터"
+  ],
+  "obstacles": [
+    "Electron 앱이라 브라우저 preview(표본 데이터) 모드로 시연한다. 화면 상단에 '표본 데이터 (preview)' 배너가 항상 보인다.",
+    "브라우저에서 '프로젝트 추가'는 네이티브 디렉터리 선택기를 연다. 녹화 전에 window.showDirectoryPicker 를 스텁하면 'scenarioforge-sample' 로 등록된다(해당 장면은 수기 body).",
+    "브라우저 preview 는 '분석 실행'을 즉시 완료 처리한다. 진행 중 화면은 ?preview=progress 픽스처(WIKI 단계 62%)로 따로 보여준다.",
+    "API 키는 demo/.accounts.json 의 ACCOUNTS.llm.apiKey 로 채운다(화면 비노출)."
+  ],
+  "pages": [
+    {
+      "id": "projects",
+      "route": "/?preview=demo#/projects",
+      "title": "프로젝트",
+      "canDo": "연결된 소스 디렉터리(프로젝트)를 보고 새 프로젝트를 추가한다",
+      "features": [
+        "프로젝트 목록",
+        "프로젝트 추가",
+        "LLM 설정"
+      ],
+      "locators": {
+        "addProject": "role=button[name=\"프로젝트 추가\"]",
+        "openProject": "role=button[name=\"열기\"]",
+        "projectCard": "role=heading[name=\"RA-DAR\"]",
+        "searchProject": "role=textbox[name=\"프로젝트 검색\"]",
+        "llmSettings": "role=button[name=\"LLM 설정\"]",
+        "settingsDialog": "role=dialog",
+        "apiKeyInput": "role=dialog >> input[type=password]",
+        "saveSettings": "role=button[name=\"설정 저장\"]",
+        "modelInput": "role=dialog >> input[placeholder=\"예: gpt-5\"]"
+      },
+      "density": {
+        "textChars": 299,
+        "interactive": 6
+      },
+      "needs": "브라우저에서는 네이티브 디렉터리 선택기를 스텁해야 등록이 진행됨(scenarioforge-sample 로 등록)",
+      "interactionsSeen": [
+        "click"
+      ]
+    },
+    {
+      "id": "workspace",
+      "route": "/?preview=demo#/workspace",
+      "title": "개요(작업대)",
+      "canDo": "모델 연결을 저장하고 첫 단계(SRC)를 실행한다",
+      "locators": {
+        "readyHeading": "role=heading[name=\"이 설정으로 첫 단계를 실행합니다\"]",
+        "startSrc": "role=button[name=\"SRC 단계 실행\"]",
+        "tabOverview": "role=tab[name=\"개요\"]",
+        "tabRuns": "role=tab[name=/생성 이력/]",
+        "tabExecutions": "role=tab[name=/테스트 실행/]",
+        "tabEvidence": "role=tab[name=/^증적/]",
+        "otherProject": "role=button[name=\"다른 프로젝트 선택\"]",
+        "settingsDialog": "role=dialog",
+        "apiKeyInput": "role=dialog >> input[type=password]",
+        "saveSettings": "role=button[name=\"설정 저장\"]",
+        "pipelineRow": "ol.pipe"
+      },
+      "density": {
+        "textChars": 476,
+        "interactive": 13
+      },
+      "notes": "브라우저 preview 는 분석을 즉시 완료 처리한다. 진행 중 화면은 preview=progress 픽스처로 보여준다"
+    },
+    {
+      "id": "progress",
+      "route": "/?preview=progress#/workspace",
+      "title": "분석 진행 중(픽스처)",
+      "canDo": "4단계 파이프라인(SRC→FACT→WIKI→SCENARIO) 진행률과 세부 단계를 본다",
+      "locators": {
+        "progressHeading": "role=heading[name=\"WIKI 단계 수행 중\"]",
+        "tabRuns": "role=tab[name=/생성 이력/]",
+        "substeps": "role=list[name=\"세부 생성 단계\"]",
+        "gauge": "role=progressbar"
+      },
+      "density": {
+        "textChars": 584,
+        "interactive": 12
+      }
+    },
+    {
+      "id": "runs",
+      "route": "/?preview=demo#/runs",
+      "title": "생성 이력",
+      "canDo": "분석 회차(run)별 결과를 열어 시나리오를 본다",
+      "locators": {
+        "runsHeading": "role=heading[name=\"생성 이력\"]",
+        "latestRun": "role=button[name=/RUN-preview-02/]",
+        "tabRuns": "role=tab[name=/생성 이력/]"
+      },
+      "density": {
+        "textChars": 378,
+        "interactive": 10
+      }
+    },
+    {
+      "id": "scenarios",
+      "route": "/?preview=demo#/scenarios",
+      "title": "사용자 시나리오",
+      "canDo": "업무 분류별 시나리오 케이스를 읽고, 케이스를 질의 패널로 끌어 놓아 질문한다",
+      "locators": {
+        "scenariosHeading": "role=heading[name=\"사용자 시나리오 9건\"]",
+        "sheetPanel": ".panel-s",
+        "firstCase": ".sheet-rw >> nth=0",
+        "firstCaseSteps": "role=button[name=\"3 steps\"] >> nth=0",
+        "chatDrop": ".comp .drop",
+        "chatRefs": "[aria-label=\"참조할 시나리오\"]",
+        "chatInput": "role=textbox[name=\"시나리오 질문\"]",
+        "chatSend": "role=button[name=\"보내기\"]",
+        "chatLog": ".chat-s",
+        "chatLastMsg": ".chat-s .msg >> nth=-1",
+        "caseLedger": ".sheet-rw >> nth=2",
+        "ledgerSteps": "role=button[name=\"3 steps\"] >> nth=1",
+        "sheetGroup": ".sheet-gp >> nth=0"
+      },
+      "density": {
+        "textChars": 1508,
+        "interactive": 29
+      },
+      "interactionsSeen": [
+        "drag(html5)",
+        "scroll(.panel-s 907/720)",
+        "waitStream(chat)"
+      ]
+    },
+    {
+      "id": "executions",
+      "route": "/?preview=demo#/executions",
+      "title": "테스트 실행",
+      "canDo": "실행(run)별 케이스 결과를 보고 실행을 연다",
+      "locators": {
+        "executionsHeading": "role=heading[name=\"테스트 실행\"]",
+        "openExecution": "role=button[name=\"실행 열기\"] >> nth=0",
+        "failedCaseRow": "role=button[name=/SCN-LEDGER-001 규정명으로 개정 건 검색 실패/]",
+        "tabExecutions": "role=tab[name=/테스트 실행/]"
+      },
+      "density": {
+        "textChars": 876,
+        "interactive": 16
+      }
+    },
+    {
+      "id": "execution-detail",
+      "route": "/?preview=demo#/executions/EXE-20260908-0042",
+      "title": "테스트 수행",
+      "canDo": "수행 대기열에서 케이스와 단계별 판정을 보고 단계 증적을 연다",
+      "locators": {
+        "testHeading": "role=heading[name=\"테스트 수행\"]",
+        "queueHeading": "role=heading[name=\"수행 대기열\"]",
+        "ledgerQueueItem": "role=button[name=/02 SCN-LEDGER-001/]",
+        "openStep2Evidence": "role=button[name=\"SCN-LEDGER-001 2단계 증적 열기\"]",
+        "verdictAgree": "role=button[name=\"동의\"] >> nth=0",
+        "retryFailed": "role=button[name=\"실패·미판정 2개 재시도\"]",
+        "queueSteps": "ol.qsteps >> nth=0"
+      },
+      "density": {
+        "textChars": 1008,
+        "interactive": 36
+      }
+    },
+    {
+      "id": "evidence-detail",
+      "route": "/?preview=demo#/evidence/EXE-20260908-0042/EVD-0042-SCN-LEDGER-001-2",
+      "title": "실패 증적 상세",
+      "canDo": "단계 타임라인, 캡처 프레임, 판정 근거를 확인한다",
+      "locators": {
+        "evidenceDetailHeading": "role=heading[name=\"실패 증적 상세\"]",
+        "timelineHeading": "role=heading[name=\"단계 타임라인\"]",
+        "captureHeading": "role=heading[name=\"대상 화면 캡처\"]",
+        "verdictHeading": "role=heading[name=\"판정 근거\"]",
+        "frameFail": "role=button[name=/실패 시점/]",
+        "frameBefore": "role=button[name=/실패 직전/]"
+      },
+      "density": {
+        "textChars": 881,
+        "interactive": 13
+      }
+    },
+    {
+      "id": "evidence",
+      "route": "/?preview=demo#/evidence",
+      "title": "테스트 증적",
+      "canDo": "실행별로 묶인 증적을 판정·검토 상태·케이스 ID로 거른다",
+      "locators": {
+        "evidenceHeading": "role=heading[name=\"테스트 증적\"]",
+        "savedHeading": "role=heading[name=\"저장된 증적\"]",
+        "verdictFilterFail": "role=radio[name=\"실패\"]",
+        "caseIdFilter": "input[placeholder=\"SCN-\"]",
+        "libraryBody": ".body.pad-lg",
+        "tabEvidence": "role=tab[name=/^증적/]"
+      },
+      "density": {
+        "textChars": 1596,
+        "interactive": 38
+      },
+      "interactionsSeen": [
+        "scroll(window)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:16878d5da0850ff5efd1c393db9715e1e0c028d82caca12822e6c22f328251ec",
+  "screen_update_fields": {},
+  "element_update_fields": {},
+  "api_update_fields": {},
+  "predicate_element_refs": [
+    "U37",
+    "U6",
+    "U8"
+  ],
+  "remove_predicate_keys": [],
+  "replace_edge_indexes": [
+    14,
+    16,
+    34
+  ],
+  "remove_edge_indexes": [],
+  "replace_edge_identities": [
+    {
+      "edge_index": 14,
+      "on_element_ref": "U6"
+    },
+    {
+      "edge_index": 16,
+      "on_element_ref": "U8"
+    },
+    {
+      "edge_index": 34,
+      "on_element_ref": "U37"
+    }
+  ],
+  "edge_update_fields": {
+    "14": [
+      "effect"
+    ],
+    "16": [
+      "effect"
+    ],
+    "34": [
+      "effect"
+    ]
+  },
+  "add_edge_element_refs": []
+}

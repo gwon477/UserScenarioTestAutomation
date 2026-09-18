@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "model_id": "gpt-5.6-luna",
+  "evaluation_scope": "external-golden-read-only",
+  "product_stage_acceptance": "not-attempted",
+  "generation_artifact_immutable": true,
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "success_scenario_recall": 0.8,
+    "resilience_scenario_recall": "advisory",
+    "required_journey_recall": 1
+  },
+  "counts": {
+    "golden": {
+      "classifications": 6,
+      "workflows": 10,
+      "transitions": 90,
+      "scenarios": 44,
+      "journeys": 2
+    },
+    "candidate": {
+      "classifications": 6,
+      "workflows": 69,
+      "journeys": 2,
+      "scenarios": 85
+    }
+  },
+  "taxonomy_journey": {
+    "passed": false,
+    "classificationRecall": 1,
+    "workflowRecall": 0.9,
+    "requiredJourneyRecall": 1,
+    "criticalGaps": [
+      "AXSE-WF-009에 해당하는 생성 진행 추적과 업무흐름별 실행 이력, 평가/재생성 이력이 독립적인 후보 workflow로 충분히 표현되지 않았다.",
+      "AXSE-WF-005에서 골든이 요구하는 파싱 개요·진단, 모든 데이터 탭의 빈 결과 및 보조 API 오류 처리에 대한 후보 근거가 제한적이다."
+    ]
+  },
+  "scenario": {
+    "passed": false,
+    "successScenarioRecall": 0.5,
+    "matchedSuccessScenarioCount": 16,
+    "totalSuccessScenarios": 32,
+    "unmatchedSuccessScenarioIds": [
+      "AXSE-SCN-0002",
+      "AXSE-SCN-0004",
+      "AXSE-SCN-0008",
+      "AXSE-SCN-0009",
+      "AXSE-SCN-0011",
+      "AXSE-SCN-0013",
+      "AXSE-SCN-0014",
+      "AXSE-SCN-0019",
+      "AXSE-SCN-0023",
+      "AXSE-SCN-0026",
+      "AXSE-SCN-0027",
+      "AXSE-SCN-0030",
+      "AXSE-SCN-0033",
+      "AXSE-SCN-0041",
+      "AXSE-SCN-0043",
+      "AXSE-SCN-0044"
+    ],
+    "resilienceScenarioRecall": 0.3181818181818182,
+    "matchedResilienceScenarioCount": 7,
+    "totalResilienceScenarios": 22,
+    "unmatchedResilienceScenarioIds": [
+      "AXSE-SCN-0001",
+      "AXSE-SCN-0003",
+      "AXSE-SCN-0005",
+      "AXSE-SCN-0010",
+      "AXSE-SCN-0011",
+      "AXSE-SCN-0017",
+      "AXSE-SCN-0019",
+      "AXSE-SCN-0020",
+      "AXSE-SCN-0023",
+      "AXSE-SCN-0025",
+      "AXSE-SCN-0028",
+      "AXSE-SCN-0029",
+      "AXSE-SCN-0034",
+      "AXSE-SCN-0042",
+      "AXSE-SCN-0044"
+    ],
+    "assessmentIssues": []
+  },
+  "unweighted_scenario_reference": {
+    "passed": false,
+    "scenarioRecall": 0.4090909090909091,
+    "matchedScenarioCount": 18,
+    "totalGoldenScenarios": 44,
+    "unmatchedGoldenScenarioIds": [
+      "AXSE-SCN-0001",
+      "AXSE-SCN-0002",
+      "AXSE-SCN-0003",
+      "AXSE-SCN-0004",
+      "AXSE-SCN-0005",
+      "AXSE-SCN-0008",
+      "AXSE-SCN-0009",
+      "AXSE-SCN-0010",
+      "AXSE-SCN-0011",
+      "AXSE-SCN-0013",
+      "AXSE-SCN-0014",
+      "AXSE-SCN-0017",
+      "AXSE-SCN-0019",
+      "AXSE-SCN-0020",
+      "AXSE-SCN-0023",
+      "AXSE-SCN-0025",
+      "AXSE-SCN-0026",
+      "AXSE-SCN-0027",
+      "AXSE-SCN-0028",
+      "AXSE-SCN-0030",
+      "AXSE-SCN-0033",
+      "AXSE-SCN-0034",
+      "AXSE-SCN-0041",
+      "AXSE-SCN-0042",
+      "AXSE-SCN-0043",
+      "AXSE-SCN-0044"
+    ],
+    "criticalGaps": []
+  },
+  "feasibility": {
+    "source_supported_scenarios": 2,
+    "runtime_unverified_scenarios": 83,
+    "boundary_generation": "not-implemented-no-deterministic-boundary-obligation"
+  },
+  "passed": false,
+  "provenance": {
+    "golden_hash": "sha256:09cac5ddc58c812eea8bddef6f9154db137bd51a3e37ceb871fdae1c1351f253",
+    "candidate_hash": "sha256:454899fcd17e460049ad3837ba41a61808b770474db6a5b33c9776e7bfe1aceb",
+    "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+    "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+    "business_workflow_mapping_artifact_hash": "sha256:6eb8a9aea80ea81bea3cc0e497ea58722d6288fb67d55ceebff5437bcaa5c974",
+    "journey_artifact_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+    "user_journey_workflow_link_artifact_hash": "sha256:dfa0cc931a75f7664c8d281a8590aee4137dbc7ecbe7285a288f86bb4062ea5c",
+    "scenario_artifact_hash": "sha256:0acf53a2bd7ced069b547cca9402f9c104583e82524d1d57dacc1b741e82f076"
+  }
+}

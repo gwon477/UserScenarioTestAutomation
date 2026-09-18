@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.input.validate",
+      "result": "ok",
+      "golden_hash": "sha256:09cac5ddc58c812eea8bddef6f9154db137bd51a3e37ceb871fdae1c1351f253",
+      "candidate_hash": "sha256:454899fcd17e460049ad3837ba41a61808b770474db6a5b33c9776e7bfe1aceb"
+    }
+  ]
+}

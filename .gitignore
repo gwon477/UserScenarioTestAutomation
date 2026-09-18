@@ -16,3 +16,27 @@ vite.config.d.ts
 # Local ScenarioForge analysis output and credentials
 .scenarioforge/
 **/.scenarioforge/
+.gstack/
+
+# Claude Code local overrides
+.claude/settings.local.json
+CLAUDE.local.md
+
+# demo-video
+demo/scenes/*.webm
+demo/scenes/.build/
+demo/output/
+demo/audio/
+demo/.auth/
+demo/.auth.json
+demo/.accounts.json
+demo/shots/
+.playwright-cli/
+
+# Analysis fixture inputs (large third-party sources, never product code)
+test_project_source/
+
+# Demo media and superseded demo build
+demo/*.png
+demo/styles*.html
+demo-v1/

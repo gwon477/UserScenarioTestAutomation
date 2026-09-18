@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-c0e17e1f",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-SOURCE-GAP-REVIEW",
+  "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-store-feec9a9e",
+      "source_snapshot_id": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+      "path": "frontend/src/store.js",
+      "start_line": 1,
+      "end_line": 123,
+      "content_hash": "sha256:7d77adad48cb2ae4073fc988af0fb50c8ca8083345bcf7c756d2b98ae8140303",
+      "evidence_grant_id": "EVG-WORK-AXSE-SOURCE-GAP-REVIEW-c0e17e1f"
+    }
+  ],
+  "created_at": "2026-09-17T23:51:36.747Z"
+}

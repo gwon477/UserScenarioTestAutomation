@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Pi 원시 이벤트와 UI를 분리한 복구 가능한 도메인 상태 기반 위에 6개 LLM 기능을 격리하고, 공통 Markdown 계약의 안전한 추가·수정·삭제와 단계별 완료 gate를 구현한다.
+**Goal:** Pi 원시 이벤트와 UI를 분리한 복구 가능한 도메인 상태 기반 위에 1개 deterministic source work와 5개 LLM 기능을 격리하고, 공통 Markdown 계약의 안전한 추가·수정·삭제와 단계별 완료 gate를 구현한다.
 
-**Architecture:** Electron Main의 Application Orchestrator가 project별 single-writer `RuntimeStateCoordinator`를 소유하고 Pi UtilityProcess는 원시 event와 구조화 command candidate만 전달한다. 각 LLM 기능은 immutable `WorkDescriptor`, 독립 `workId`, 제한된 read/write scope, staging artifact를 사용하며 backend validator가 journal·checkpoint·revision을 commit한 뒤 domain event를 발행한다.
+**Architecture:** Electron Main의 Application Orchestrator가 project별 single-writer `RuntimeStateCoordinator`를 소유하고 Pi UtilityProcess는 원시 event와 구조화 command candidate만 전달한다. 각 harness work는 immutable `WorkDescriptor`, 독립 `workId`, 제한된 read/write scope, staging artifact를 사용하며 backend validator가 journal·checkpoint·revision을 commit한 뒤 domain event를 발행한다. `analysis.source-map`은 Pi가 아니라 deterministic scanner가 실행한다.
 
 **Tech Stack:** Node.js 22.12+, npm workspaces, TypeScript, Electron UtilityProcess, `@earendil-works/pi-coding-agent@0.84.3`, Vitest, JSON/Markdown journal projection, `node:sqlite` artifact relation index
 
@@ -21,27 +21,28 @@
 - `WORK_PROTOCOL.md`와 `WORK_STATE.md`는 Pi 일반 파일 도구에 read-only다.
 - credential, 개인정보 원문, chain-of-thought, raw tool output을 state, event, log, artifact에 저장하지 않는다.
 - 분석 stage는 `src → fact → wiki → scenario` 순서로 실행한다.
-- analysis, scenario Q&A, test planning session을 분리한다.
+- analysis, scenario Q&A, test planning session과 resource subtree를 분리한다.
+- 생성 완료는 test planning이나 Runner를 자동 시작하지 않으며 수행 준비는 명시적 test command에서만 시작한다.
 - child work는 부모 state를 직접 변경하지 않고 parent integration gate를 통과한다.
 
-## LLM Function Workflow Contract
+## Harness Work Contract
 
-| Function ID | Session | Required input | Write scope | Validated output |
-| --- | --- | --- | --- | --- |
-| `analysis.source-map` | analysis | project snapshot, path policy | `staging/{workId}/source-map.json` | source/module/dependency IDs |
-| `analysis.fact-extract` | analysis | persisted source IDs and source content | `staging/{workId}/facts/*.json` | FACT IDs with source evidence |
-| `analysis.wiki-compose` | analysis | persisted fact/source IDs | `staging/{workId}/wiki/*.md` and relation JSON | WIKI IDs with FACT coverage |
-| `analysis.scenario-compose` | analysis | persisted wiki/fact/source IDs | `staging/{workId}/scenario-set.json` | scenario IDs, preconditions, steps, expected results |
-| `scenario.answer` | chat conversation | selected scenario IDs and question | append-only conversation record | answer with resolvable cited IDs |
-| `test.plan` | execution planning | immutable scenario snapshot and target contract | `staging/{workId}/plan.json` | immutable runner plan with scenario hash |
+| Work kind | Executor | Session | Required input | Write scope | Validated output |
+| --- | --- | --- | --- | --- | --- |
+| `analysis.source-map` | deterministic scanner | analysis | project snapshot, path policy | `staging/{workId}/source/` | SourceSnapshot + source/module/dependency IDs |
+| `analysis.fact-extract` | author + reviewer | analysis | persisted source IDs and evidence grants | `staging/{workId}/facts/*.json` | FACT graph with snapshot/hash evidence |
+| `analysis.wiki-compose` | author + reviewer | analysis | persisted fact/source IDs | `staging/{workId}/wiki/*.md` and relation JSON | Workflow IDs with FACT coverage |
+| `analysis.scenario-compose` | walk + author + reviewer | analysis | persisted wiki/fact/source IDs | `staging/{workId}/scenario-set.json` | `SCN-*`, structured preconditions, action/assertion refs |
+| `scenario.answer` | author | chat conversation | selected scenario IDs and question | append-only conversation record | answer with resolvable cited IDs |
+| `test.plan` | author + reviewer only when compiler leaves unresolved bindings | execution planning | immutable batch ScenarioSnapshot, target contract, optional redacted probe | `staging/{workId}/runner-plan-patch.json` and review verdict | validated patch preserving scenario/action/assertion IDs |
 
-All six functions execute this outer sequence:
+All six work kinds execute this outer sequence:
 
 ```text
 create WorkDescriptor
 → getContext(protocolHash, stateHash, revision, contextToken)
 → begin(contextToken, expectedRevision)
-→ run Pi turn under FunctionPolicy
+→ run deterministic executor or Pi turn under WorkPolicy
 → request and validate child work when allowed
 → integrate output in staging
 → submitArtifacts(contentHash, relatedIds)
@@ -203,13 +204,20 @@ Expected: FAIL because validator exports are absent.
 - [ ] **Step 3: Work descriptor와 mutation union 구현**
 
 ```ts
-export type LlmFunctionId =
+export type GenerationHarnessWorkKind =
   | "analysis.source-map"
   | "analysis.fact-extract"
   | "analysis.wiki-compose"
-  | "analysis.scenario-compose"
-  | "scenario.answer"
-  | "test.plan";
+  | "analysis.scenario-compose";
+
+export type ScenarioQueryWorkKind = "scenario.answer";
+export type ExecutionPlanningWorkKind = "test.plan";
+export type HarnessWorkKind =
+  | GenerationHarnessWorkKind
+  | ScenarioQueryWorkKind
+  | ExecutionPlanningWorkKind;
+
+export type LlmFunctionId = Exclude<HarnessWorkKind, "analysis.source-map">;
 
 export type WorkStateMutation =
   | { op: "add-child"; descriptor: ChildWorkDescriptor }
@@ -559,30 +567,33 @@ git add packages/pi-runtime apps/desktop/src/main/processes/pi-utility-entry.ts
 git commit -m "feat: isolate Pi runtime events"
 ```
 
-### Task 6: 6개 LLM 기능 policy와 child work 격리
+### Task 6: domain별 harness work policy와 child work 격리
 
 **Files:**
-- Create: `packages/scenario-pipeline/src/workflows/function-policies.ts`
-- Create: `packages/scenario-pipeline/src/workflows/function-policies.test.ts`
+- Create: `packages/scenario-pipeline/src/workflows/generation-work-policies.ts`
+- Create: `packages/scenario-pipeline/src/workflows/work-policies.test.ts`
 - Create: `packages/scenario-pipeline/src/workflows/work-descriptor.ts`
 - Create: `packages/scenario-pipeline/src/workflows/work-scope-guard.ts`
 - Create: `packages/scenario-pipeline/src/workflows/work-scope-guard.test.ts`
 - Create: `packages/scenario-pipeline/src/workflows/retry-policy.ts`
+- Create: `packages/test-runtime/src/planning/test-plan-work-policy.ts`
+- Create: `packages/test-runtime/src/planning/test-plan-work-policy.test.ts`
+- Create: `packages/pi-runtime/src/policies/harness-policy-registry.ts`
 - Create: `packages/scenario-pipeline/src/index.ts`
 
 **Interfaces:**
-- Consumes: `LlmFunctionId`, project snapshot, persisted input IDs
-- Produces: immutable `WorkDescriptor`, `FunctionPolicy`, child ownership checks, exact retry decisions
+- Consumes: `HarnessWorkKind`, project snapshot, persisted input IDs
+- Produces: immutable `WorkDescriptor`, `WorkPolicy`, child ownership checks, exact retry decisions
 
 - [ ] **Step 1: 기능 policy snapshot test 작성**
 
 ```ts
-expect(functionPolicies["scenario.answer"]).toMatchObject({
+expect(workPolicies["scenario.answer"]).toMatchObject({
   sessionKind: "chat",
   childWork: "forbidden",
   writableEntities: ["conversation-record"],
 });
-expect(functionPolicies["test.plan"].writableEntities).not.toContain("test-execution");
+expect(workPolicies["test.plan"].writableEntities).not.toContain("test-execution");
 ```
 
 - [ ] **Step 2: 기능 policy test 실패 확인**
@@ -591,11 +602,12 @@ Run: `npm test --workspace @scenarioforge/scenario-pipeline`
 
 Expected: FAIL because policies are absent.
 
-- [ ] **Step 3: 6개 exact policy 구현**
+- [ ] **Step 3: 6개 exact work policy 구현**
 
 ```ts
-export type FunctionPolicy = {
-  functionId: LlmFunctionId;
+export type WorkPolicy = {
+  workKind: HarnessWorkKind;
+  executors: Array<"deterministic" | "author" | "reviewer" | "compiler">;
   sessionKind: "analysis" | "chat" | "test-planning";
   readableEntities: string[];
   writableEntities: string[];
@@ -604,7 +616,7 @@ export type FunctionPolicy = {
 };
 ```
 
-Encode the table in the plan header exactly. No policy may include canonical state, another session's conversation, Runner queue, or evidence as a writable entity.
+Encode the table in the plan header exactly. Generation policies are owned by `scenario-pipeline`; execution planning policy is owned by `test-runtime`; `pi-runtime` only registers the combined read-only registry. No policy may include canonical state, another session's conversation, Runner queue/control, or evidence as a writable entity. Generation sessions must not load execution resources and test planning sessions must not load generation resources.
 
 - [ ] **Step 4: Immutable WorkDescriptor와 staging scope 구현**
 
@@ -614,7 +626,7 @@ export type WorkDescriptor = Readonly<{
   sessionId: string;
   workId: string;
   parentWorkId?: string;
-  functionId: LlmFunctionId;
+  workKind: HarnessWorkKind;
   attemptId: string;
   inputIds: readonly string[];
   readScopes: readonly string[];
@@ -758,19 +770,19 @@ git add packages/scenario-pipeline
 git commit -m "feat: gate analysis stage completion"
 ```
 
-### Task 8: Q&A와 test planning session 격리
+### Task 8: Q&A와 수행 전용 test planning session 격리
 
 **Files:**
 - Create: `packages/scenario-pipeline/src/query/artifact-query-service.ts`
 - Create: `packages/scenario-pipeline/src/query/artifact-query-service.test.ts`
 - Create: `packages/scenario-pipeline/src/workflows/scenario-answer-workflow.ts`
 - Create: `packages/scenario-pipeline/src/workflows/scenario-answer-workflow.test.ts`
-- Create: `packages/scenario-pipeline/src/workflows/test-plan-workflow.ts`
-- Create: `packages/scenario-pipeline/src/workflows/test-plan-workflow.test.ts`
+- Create: `packages/test-runtime/src/planning/test-plan-workflow.ts`
+- Create: `packages/test-runtime/src/planning/test-plan-workflow.test.ts`
 
 **Interfaces:**
-- Consumes: selected scenario IDs, canonical revision, immutable scenario snapshot
-- Produces: cited chat record or validated immutable test plan; never analysis or execution mutation
+- Consumes: selected scenario IDs, canonical revision, immutable batch scenario snapshot, target contract, optional redacted probe slice
+- Produces: cited chat record or validated batch-scoped plan patch; never analysis or execution mutation
 
 - [ ] **Step 1: ID graph 전체 조회 test 작성**
 
@@ -821,13 +833,14 @@ export type ScenarioAnswerRecord = {
 };
 ```
 
-- [ ] **Step 5: Test plan snapshot validator 구현**
+- [ ] **Step 5: Batch-scoped test plan patch validator 구현**
 
-The plan contains `executionId`, `scenarioSnapshotHash`, ordered cases, ordered steps, allowed actions, selectors/assertions, and redacted data references. Reject plan requests that mutate Runner queue or evidence.
+The plan patch contains `executionId`, `batchId`, `scenarioSnapshotHash`, assigned unresolved binding IDs, allowed actions, candidate-backed target references/assertions, and redacted data references. Reject requests that mutate scenario meaning, an existing plan, Runner queue/control, or evidence. Deterministic base plan compilation, capability routing, segment validation, and final queue commit belong to `test-runtime`, not this Pi work.
 
 ```ts
 export type ImmutableTestPlan = Readonly<{
   executionId: string;
+  batchId: string;
   scenarioSnapshotHash: string;
   cases: readonly TestPlanCase[];
   createdByWorkId: string;
@@ -836,23 +849,42 @@ export type ImmutableTestPlan = Readonly<{
 
 - [ ] **Step 6: Session isolation tests 실행**
 
-Run: `npm test --workspace @scenarioforge/scenario-pipeline`
+Run: `npm test --workspace @scenarioforge/scenario-pipeline && npm test --workspace @scenarioforge/test-runtime -- test-plan-workflow`
 
 Expected: chat cannot write analysis artifacts; test planning cannot write execution state; all cited IDs resolve at the captured revision.
 
 - [ ] **Step 7: Query/planning 커밋**
 
 ```bash
-git add packages/scenario-pipeline/src/query packages/scenario-pipeline/src/workflows
+git add packages/scenario-pipeline/src/query packages/scenario-pipeline/src/workflows packages/test-runtime/src/planning
 git commit -m "feat: isolate query and test planning sessions"
 ```
 
 ### Task 9: 결정론적 Test Runtime과 evidence store
 
 **Files:**
+- Create: `packages/test-runtime/src/coordinator/test-command-handler.ts`
+- Create: `packages/test-runtime/src/coordinator/test-command-handler.test.ts`
+- Create: `packages/test-runtime/src/coordinator/execution-batch-service.ts`
+- Create: `packages/test-runtime/src/coordinator/execution-batch-service.test.ts`
+- Create: `packages/test-runtime/src/planning/scenario-snapshot.ts`
+- Create: `packages/test-runtime/src/targets/normalize/execution-target-profile.ts`
+- Create: `packages/test-runtime/src/planning/data-binding-set.ts`
+- Create: `packages/test-runtime/src/targets/preflight/environment-preflight.ts`
+- Create: `packages/test-runtime/src/targets/probe/discovery-probe.ts`
+- Create: `packages/test-runtime/src/planning/compile-runner-plan.ts`
+- Create: `packages/test-runtime/src/routing/capability-registry.ts`
+- Create: `packages/test-runtime/src/routing/adapter-router.ts`
+- Create: `packages/test-runtime/src/routing/segment-compiler.ts`
+- Create: `packages/test-runtime/src/planning/runner-plan-validator.test.ts`
 - Create: `packages/test-runtime/src/coordinator/test-coordinator.ts`
 - Create: `packages/test-runtime/src/coordinator/test-coordinator.test.ts`
-- Create: `packages/test-runtime/src/runner/testvista-driver.ts`
+- Create: `packages/test-runtime/src/runner/testvista-kernel.ts`
+- Create: `packages/test-runtime/src/runner/adapter-registry.ts`
+- Create: `packages/test-runtime/src/adapters/fake/fake-adapter.ts`
+- Create: `packages/test-runtime/src/adapters/web/playwright-adapter.ts`
+- Create: `packages/test-runtime/src/adapters/windows/uia-client.ts`
+- Create: `packages/test-runtime/src/assertions/assertion-engine.ts`
 - Create: `packages/test-runtime/src/verdict/classify-verdict.ts`
 - Create: `packages/evidence-store/src/writer/evidence-writer.ts`
 - Create: `packages/evidence-store/src/writer/evidence-writer.test.ts`
@@ -860,10 +892,16 @@ git commit -m "feat: isolate query and test planning sessions"
 - Create: `packages/evidence-store/src/integrity/evidence-hash.ts`
 
 **Interfaces:**
-- Consumes: immutable validated test plan
-- Produces: sequential case/step events and immutable screenshot/error evidence
+- Consumes: revisioned create/enqueue/cancel/retry command, immutable ScenarioSnapshot, ExecutionTargetProfile, DataBindingSet, validated RunnerPlan
+- Produces: immutable ExecutionBatch, sequential case/step events, and immutable screenshot/error evidence
 
-- [ ] **Step 1: 실패 후 다음 case 계속 test 작성**
+- [ ] **Step 1: 명시적 trigger와 ExecutionBatch 불변성 test 작성**
+
+생성 완료만으로 execution이 생기지 않음을 검증한다. create/retry는 새 execution, enqueue는 같은 target hash의 새 batch를 만든다. enqueue 전후 기존 batch의 ScenarioSnapshot과 RunnerPlan hash가 같아야 하며 planning이 거절된 batch는 queue에 나타나지 않아야 한다.
+
+Snapshot은 scenario artifact hash, source snapshot ID, step별 `actionRef`·`assertionRefs`를 고정한다. Plan compiler는 이를 플랫폼 중립 action, target reference, adapter binding, matcher로 변환하고 semantic adapter를 우선한다. scenario hash나 assertion ID를 바꾸거나 계획에 없는 CUA fallback을 넣는 plan은 거절한다. 자연어 `action`·`expected`만 있는 fixture는 실행 입력으로 거절한다.
+
+- [ ] **Step 2: 실패 후 다음 case 계속 test 작성**
 
 ```ts
 const execution = {
@@ -878,26 +916,28 @@ expect(await coordinator.run(execution)).toMatchObject({
 });
 ```
 
-- [ ] **Step 2: Sequential coordinator test 실패 확인**
+- [ ] **Step 3: Sequential coordinator test 실패 확인**
 
 Run: `npm test --workspace @scenarioforge/test-runtime`
 
 Expected: FAIL because coordinator is absent.
 
-- [ ] **Step 3: Project별 단일 queue와 cancel/retry 구현**
+- [ ] **Step 4: Project별 단일 queue와 create/enqueue/cancel/retry 구현**
 
 One case runs at a time. Cancel preserves written evidence and marks current/remaining cases cancelled. Retry creates a new execution ID and `retryOfExecutionId`.
 
 ```ts
 export interface TestCoordinator {
-  createExecution(plan: ImmutableTestPlan): Promise<TestExecution>;
-  enqueueScenarios(executionId: string, scenarioIds: string[]): Promise<TestExecution>;
-  cancelExecution(executionId: string): Promise<TestExecution>;
-  retryCases(executionId: string, scenarioIds: string[]): Promise<TestExecution>;
+  createExecution(command: CreateExecution): Promise<ExecutionAccepted>;
+  enqueueScenarios(command: EnqueueScenarios): Promise<BatchAccepted>;
+  cancelExecution(command: CancelExecution): Promise<TestExecution>;
+  retryCases(command: RetryCases): Promise<ExecutionAccepted>;
 }
 ```
 
-- [ ] **Step 4: Capture policy와 fail-closed masking 구현**
+Create one immutable batch for the initial request. Enqueue compiles a separate batch and atomically appends it only after validation. Cancel aborts planning work first, then safely stops the current Runner action. Retry always creates a new execution with `retryOfExecutionId`.
+
+- [ ] **Step 5: Capture policy와 fail-closed masking 구현**
 
 Passed step writes one `action-complete.png`. Failed step writes `action-complete.png`, `before-failure.png`, `failure.png`, and `failure-context.json`. If masking or storage fails, stop the whole execution.
 
@@ -908,7 +948,7 @@ const requiredCaptureKinds = {
 } as const;
 ```
 
-- [ ] **Step 5: Evidence hash와 immutable manifest test 구현**
+- [ ] **Step 6: Evidence hash와 immutable manifest test 구현**
 
 Write SHA-256 hashes for every capture/context file. Reject overwrite when execution manifest is final; user retry creates a new directory.
 
@@ -921,13 +961,13 @@ export type EvidenceFileRecord = {
 };
 ```
 
-- [ ] **Step 6: Test/evidence package 검증**
+- [ ] **Step 7: Test/evidence package 검증**
 
 Run: `npm test --workspace @scenarioforge/test-runtime && npm test --workspace @scenarioforge/evidence-store`
 
 Expected: PASS.
 
-- [ ] **Step 7: Test runtime 커밋**
+- [ ] **Step 8: Test runtime 커밋**
 
 ```bash
 git add packages/test-runtime packages/evidence-store
@@ -940,35 +980,44 @@ git commit -m "feat: persist sequential test evidence"
 - Create: `packages/project-runtime/runtime-template/AGENTS.md`
 - Create: `packages/project-runtime/runtime-template/SYSTEM.md`
 - Modify: `packages/project-runtime/runtime-template/WORK_PROTOCOL.md`
-- Create: `packages/project-runtime/runtime-template/skills/source-map/SKILL.md`
-- Create: `packages/project-runtime/runtime-template/skills/fact-extract/SKILL.md`
-- Create: `packages/project-runtime/runtime-template/skills/wiki-compose/SKILL.md`
-- Create: `packages/project-runtime/runtime-template/skills/scenario-compose/SKILL.md`
-- Create: `packages/project-runtime/runtime-template/agents/fact-analyst.md`
-- Create: `packages/project-runtime/runtime-template/agents/source-mapper.md`
-- Create: `packages/project-runtime/runtime-template/agents/wiki-writer.md`
-- Create: `packages/project-runtime/runtime-template/agents/scenario-designer.md`
+- Create: `packages/project-runtime/runtime-template/harnesses/scenario-generation.md`
+- Create: `packages/project-runtime/runtime-template/harnesses/test-execution-planning.md`
+- Create: `packages/project-runtime/runtime-template/skills/generation/fact-extraction-react/SKILL.md`
+- Create: `packages/project-runtime/runtime-template/skills/generation/edge-linking/SKILL.md`
+- Create: `packages/project-runtime/runtime-template/skills/generation/wiki-compose/SKILL.md`
+- Create: `packages/project-runtime/runtime-template/skills/generation/scenario-compose/SKILL.md`
+- Create: `packages/project-runtime/runtime-template/skills/generation/gate-review/SKILL.md`
+- Create: `packages/project-runtime/runtime-template/skills/execution/test-plan-binding/SKILL.md`
+- Create: `packages/project-runtime/runtime-template/skills/execution/test-plan-review/SKILL.md`
+- Create: `packages/project-runtime/runtime-template/agents/generation/fact-analyst.md`
+- Create: `packages/project-runtime/runtime-template/agents/generation/edge-linker.md`
+- Create: `packages/project-runtime/runtime-template/agents/generation/wiki-writer.md`
+- Create: `packages/project-runtime/runtime-template/agents/generation/scenario-designer.md`
+- Create: `packages/project-runtime/runtime-template/agents/generation/stage-reviewer.md`
+- Create: `packages/project-runtime/runtime-template/agents/execution/test-planner.md`
+- Create: `packages/project-runtime/runtime-template/agents/execution/test-plan-reviewer.md`
 - Create: `packages/pi-runtime/src/tools/work-state-tools.ts`
 - Create: `packages/pi-runtime/src/tools/artifact-query-tools.ts`
+- Create: `packages/pi-runtime/src/models/model-role-bindings.ts`
 - Create: `packages/pi-runtime/src/resources/resource-loader.ts`
 - Create: `packages/pi-runtime/src/resources/resource-loader.test.ts`
 
 **Interfaces:**
-- Consumes: all function policies, WorkStateService, query service, validators
-- Produces: versioned Resource Bundle whose instructions can only invoke existing backend contracts
+- Consumes: 상세 생성 하네스, 통합 handoff 설계, all work policies, WorkStateService, query service, validators
+- Produces: author/reviewer role binding과 generation/execution-planning이 분리된 versioned Resource Bundle whose instructions can only invoke existing backend contracts
 
 - [ ] **Step 1: Resource manifest coverage test 작성**
 
 ```ts
-for (const functionId of Object.keys(functionPolicies)) {
-  expect(resourceManifest.functions[functionId]).toMatchObject({
+for (const workKind of Object.keys(workPolicies)) {
+  expect(resourceManifest.workKinds[workKind]).toMatchObject({
     protocolVersion: resourceManifest.protocolVersion,
-    policyHash: hashFunctionPolicy(functionPolicies[functionId]),
+    policyHash: hashWorkPolicy(workPolicies[workKind]),
   });
 }
 ```
 
-Implement `hashFunctionPolicy()` in `packages/pi-runtime/src/resources/resource-manifest.ts` using stable key ordering and SHA-256 before this assertion.
+Implement `hashWorkPolicy()` in `packages/pi-runtime/src/resources/resource-manifest.ts` using stable key ordering and SHA-256 before this assertion.
 
 - [ ] **Step 2: Tool schema parity test 작성**
 
@@ -990,7 +1039,7 @@ expect(workStateToolNames).toEqual([
 
 - [ ] **Step 3: 공통 harness 작성**
 
-The harness requires `getContext → begin`, ID query before claims, staging-only writes, structured failure reporting, and `requestCompletion`. It explicitly states that a natural-language completion response does not complete a stage.
+The top-level harness requires `getContext → begin`, ID query before claims, staging-only writes, structured failure reporting, `requestCompletion`, and domain routing. It explicitly states that a natural-language completion response does not complete a stage or batch. It loads either generation or execution-planning resources for a session, never both.
 
 ```md
 ## Required work lifecycle
@@ -1005,7 +1054,9 @@ The harness requires `getContext → begin`, ID query before claims, staging-onl
 
 - [ ] **Step 4: 기능별 skill과 agent instruction 작성**
 
-Each resource names its exact `LlmFunctionId`, required input IDs, allowed tools, child delegation rule, output schema, and prohibited writes from Task 6. `scenario.answer` remains in the scenario route and `test.plan` cannot control Runner execution.
+Each resource names its exact `HarnessWorkKind`, `HarnessDomain`, required input IDs, allowed tools, child delegation rule, output schema, and prohibited writes from Task 6. `scenario.answer` remains in the scenario route and `test.plan` cannot read project source or control Runner execution.
+
+`analysis.source-map`은 기본적으로 deterministic scanner가 실행하므로 `source-mapper` LLM agent를 만들지 않는다. dynamic route 등록처럼 scanner가 확정하지 못한 항목만 별도 bounded work로 남긴다. FACT/WIKI/SCENARIO에는 author 결과와 reviewer semantic verdict를 분리하고 reviewer에게 canonical status 쓰기 권한을 주지 않는다.
 
 ```yaml
 function_id: analysis.fact-extract
@@ -1013,8 +1064,10 @@ required_inputs: [source_ids]
 allowed_tools: [work.getContext, work.begin, artifact.source.read, work.recordActivity, work.submitArtifacts, work.requestCompletion]
 child_delegation: module-batch
 output_schema: fact-artifact-v1
-prohibited_writes: [canonical-state, wiki, scenario, test-execution, evidence]
+prohibited_writes: [canonical-state, index, wiki, scenario, test-execution, evidence]
 ```
+
+`test-plan-binding`은 immutable batch ScenarioSnapshot의 unresolved `actionRef`·`assertionRefs`만 candidate-backed RunnerPlan patch로 binding한다. `test-plan-review`는 patch를 수정하지 않고 독립 verdict만 제출한다. 실제 target action은 agent가 아니라 TestVista adapter가 실행하며 reviewer pass만으로 queue를 commit하지 않는다.
 
 - [ ] **Step 5: Resource loader hash/version 검증 구현**
 
@@ -1025,7 +1078,8 @@ export type RuntimeResourceManifest = {
   runtimeVersion: string;
   protocolVersion: string;
   protocolHash: string;
-  functions: Record<LlmFunctionId, { policyHash: string; skillPaths: string[]; agentPaths: string[] }>;
+  modelRoles: Array<"author" | "reviewer">;
+  workKinds: Record<HarnessWorkKind, { harnessDomain: "generation" | "scenario-query" | "execution-planning"; protocolVersion: string; executors: Array<"deterministic" | "author" | "reviewer" | "compiler">; policyHash: string; harnessPath: string; skillPaths: string[]; agentPaths: string[] }>;
 };
 ```
 

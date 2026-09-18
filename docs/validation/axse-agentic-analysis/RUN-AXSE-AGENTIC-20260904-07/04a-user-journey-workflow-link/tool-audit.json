@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.input.validate",
+      "result": "ok",
+      "journey_artifact_id": "04-user-journeys",
+      "fact_graph_artifact_id": "03a-fact-graph",
+      "business_mapping_artifact_id": "03b-business-workflow-mapping"
+    },
+    {
+      "sequence": 2,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "USER_JOURNEY_WORKFLOW_LINK_UNRESOLVED",
+      "artifact_id": "04a-user-journey-workflow-link"
+    }
+  ]
+}

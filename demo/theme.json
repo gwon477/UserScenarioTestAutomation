@@ -1,0 +1,26 @@
+{
+  "subtitle": {
+    "background": "rgba(255,255,255,.94)",
+    "color": "#0f172a",
+    "emphasisColor": "#2563eb",
+    "radius": 10,
+    "fontWeight": 700,
+    "border": "1px solid rgba(15,23,42,.12)",
+    "shadow": "0 6px 24px rgba(0,0,0,.18)",
+    "textShadow": "none",
+    "letterSpacing": "-.2px"
+  },
+  "presets": {
+    "subtitle": "light",
+    "highlight": "spotlight"
+  },
+  "highlight": {
+    "color": "#ffffff",
+    "borderPx": 2,
+    "dim": "rgba(2,6,23,.55)",
+    "radius": 10,
+    "glow": "0 0 24px rgba(255,255,255,.35)",
+    "corners": false,
+    "style": "solid"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "stage": "user-journey-transition-correction-input-validation",
+  "error_code": "SOURCE_TRANSITION_OBLIGATION_INTERACTION_MISSING"
+}

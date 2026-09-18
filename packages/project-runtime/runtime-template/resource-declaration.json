@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "protocolVersion": "1",
+  "workKinds": {
+    "analysis.generation-plan": {
+      "harnessDomain": "generation",
+      "executors": ["author"],
+      "harnessPath": "harnesses/generation/generation-plan.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/generation-plan-author/SKILL.md"],
+          "agentPaths": ["agents/generation/generation-plan-author.md"]
+        }
+      }
+    },
+    "analysis.source-map": {
+      "harnessDomain": "generation",
+      "executors": ["deterministic"],
+      "harnessPath": "harnesses/scenario-generation.md",
+      "roleResources": {}
+    },
+    "analysis.fact-extract": {
+      "harnessDomain": "generation",
+      "executors": ["author", "reviewer"],
+      "harnessPath": "harnesses/scenario-generation.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/fact-extraction-react/SKILL.md", "skills/generation/edge-linking/SKILL.md"],
+          "agentPaths": ["agents/generation/fact-analyst.md", "agents/generation/edge-linker.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/gate-review/SKILL.md"],
+          "agentPaths": ["agents/generation/stage-reviewer.md"]
+        }
+      }
+    },
+    "analysis.wiki-compose": {
+      "harnessDomain": "generation",
+      "executors": ["author", "reviewer"],
+      "harnessPath": "harnesses/scenario-generation.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/wiki-compose/SKILL.md"],
+          "agentPaths": ["agents/generation/wiki-writer.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/gate-review/SKILL.md"],
+          "agentPaths": ["agents/generation/stage-reviewer.md"]
+        }
+      }
+    },
+    "analysis.scenario-compose": {
+      "harnessDomain": "generation",
+      "executors": ["deterministic", "author", "reviewer"],
+      "harnessPath": "harnesses/scenario-generation.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/scenario-compose/SKILL.md"],
+          "agentPaths": ["agents/generation/scenario-designer.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/gate-review/SKILL.md"],
+          "agentPaths": ["agents/generation/stage-reviewer.md"]
+        }
+      }
+    },
+    "analysis.source-scan": {
+      "harnessDomain": "generation",
+      "executors": ["deterministic"],
+      "harnessPath": "harnesses/generation/deterministic.md",
+      "roleResources": {}
+    },
+    "analysis.fact-catalog": {
+      "harnessDomain": "generation",
+      "executors": ["author", "reviewer"],
+      "harnessPath": "harnesses/generation/fact-catalog.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/fact-catalog-author/SKILL.md"],
+          "agentPaths": ["agents/generation/fact-catalog-author.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/fact-catalog-review/SKILL.md"],
+          "agentPaths": ["agents/generation/fact-catalog-reviewer.md"]
+        }
+      }
+    },
+    "analysis.edge-ledger": {
+      "harnessDomain": "generation",
+      "executors": ["author", "reviewer"],
+      "harnessPath": "harnesses/generation/edge-ledger.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/edge-ledger-author/SKILL.md"],
+          "agentPaths": ["agents/generation/edge-ledger-author.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/edge-ledger-review/SKILL.md"],
+          "agentPaths": ["agents/generation/edge-ledger-reviewer.md"]
+        }
+      }
+    },
+    "analysis.fact-assemble": {
+      "harnessDomain": "generation",
+      "executors": ["deterministic"],
+      "harnessPath": "harnesses/generation/deterministic.md",
+      "roleResources": {}
+    },
+    "analysis.workflow-skeleton": {
+      "harnessDomain": "generation",
+      "executors": ["deterministic"],
+      "harnessPath": "harnesses/generation/deterministic.md",
+      "roleResources": {}
+    },
+    "analysis.common-wiki": {
+      "harnessDomain": "generation",
+      "executors": ["author", "reviewer"],
+      "harnessPath": "harnesses/generation/common-wiki.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/common-wiki-author/SKILL.md"],
+          "agentPaths": ["agents/generation/common-wiki-author.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/common-wiki-review/SKILL.md"],
+          "agentPaths": ["agents/generation/common-wiki-reviewer.md"]
+        }
+      }
+    },
+    "analysis.business-catalog": {
+      "harnessDomain": "generation",
+      "executors": ["author", "reviewer"],
+      "harnessPath": "harnesses/generation/business-catalog.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/business-catalog-author/SKILL.md"],
+          "agentPaths": ["agents/generation/business-catalog-author.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/business-catalog-review/SKILL.md"],
+          "agentPaths": ["agents/generation/business-catalog-reviewer.md"]
+        }
+      }
+    },
+    "analysis.scenario-skeleton": {
+      "harnessDomain": "generation",
+      "executors": ["deterministic"],
+      "harnessPath": "harnesses/generation/deterministic.md",
+      "roleResources": {}
+    },
+    "analysis.scenario-narration": {
+      "harnessDomain": "generation",
+      "executors": ["author", "reviewer"],
+      "harnessPath": "harnesses/generation/scenario-narration.md",
+      "roleResources": {
+        "author": {
+          "skillPaths": ["skills/generation/scenario-narration-author/SKILL.md"],
+          "agentPaths": ["agents/generation/scenario-narration-author.md"]
+        },
+        "reviewer": {
+          "skillPaths": ["skills/generation/scenario-narration-review/SKILL.md"],
+          "agentPaths": ["agents/generation/scenario-narration-reviewer.md"]
+        }
+      }
+    },
+    "analysis.coverage-manifest": {
+      "harnessDomain": "generation",
+      "executors": ["deterministic"],
+      "harnessPath": "harnesses/generation/deterministic.md",
+      "roleResources": {}
+    }
+  }
+}

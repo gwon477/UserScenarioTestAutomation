@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-01",
+  "artifact_type": "orchestrator-source-gaps",
+  "source_snapshot_ref": "SS-f0f92121-e2b1-414e-afbd-e212b86e7c47",
+  "reviewed_artifact": {
+    "artifact_id": "01-source-survey",
+    "content_hash": "sha256:cfe1ead5e3ac981ca34b79202531b5aec15f36fb156a9610771c65821499ff9d",
+    "status": "locally-validated-unregistered-probe"
+  },
+  "decision": "semantic-correction-required",
+  "golden_derived": false,
+  "preserve": [
+    "Preserve every source area and journey thread outside the approved affected_sections."
+  ],
+  "gaps": [
+    {
+      "gap_id": "GAP-SOURCE-0001",
+      "kind": "source-survey-unresolved",
+      "affected_sections": [
+        "source_areas:authentication-and-project-entry",
+        "journey_threads:문서에서 최종 테스트 결과까지의 주 사용자 흐름"
+      ],
+      "required_change": "로그인 API가 어떤 인증 서버/자격 증명 검증 규칙을 사용하며 성공·실패 응답의 정확한 의미는 무엇인가?",
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e"
+      ]
+    },
+    {
+      "gap_id": "GAP-SOURCE-0002",
+      "kind": "source-survey-unresolved",
+      "affected_sections": [
+        "source_areas:generation-settings",
+        "source_areas:scenario-generation-and-results"
+      ],
+      "required_change": "설정의 저장/초기화 버튼이 실제로 어떤 상태를 저장하거나 생성 요청에 적용하는가?",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+        "SRC-backend-app-api-v1-workflows-d9740180"
+      ]
+    },
+    {
+      "gap_id": "GAP-SOURCE-0003",
+      "kind": "source-survey-unresolved",
+      "affected_sections": [
+        "source_areas:task-and-document-ingestion",
+        "source_areas:parsed-data-review",
+        "source_areas:business-flow-mapping-validation"
+      ],
+      "required_change": "파싱 완료 후 업무흐름 생성/승격이 사용자 행동으로 언제 수행되는가?",
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-tasks-d0e77ec2",
+        "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0"
+      ]
+    },
+    {
+      "gap_id": "GAP-SOURCE-0004",
+      "kind": "source-survey-unresolved",
+      "affected_sections": [
+        "source_areas:authentication-and-project-entry"
+      ],
+      "required_change": "로그아웃 이후 서버 측 토큰 폐기 또는 refresh token 처리 여부는 무엇인가?",
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e",
+        "SRC-frontend-src-store-feec9a9e"
+      ]
+    }
+  ]
+}

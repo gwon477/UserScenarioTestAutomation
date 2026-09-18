@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "classification_artifact_hash": "sha256:c63a24f0e06f5fa9543a2a46519eab18acafcd969afecd77559bb6130f95a5b1",
+  "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+  "assignments": [
+    {
+      "workflow_ref": "WF-component-businesspage-8d514a88",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C018",
+        "C020",
+        "C024",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-0ada3322",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024",
+        "C026"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-e76552a4",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C018",
+        "C020",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-d378820a",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024",
+        "C026"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7ec9352e",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C026"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-86dffaba",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024",
+        "C026"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8b2611d2",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024",
+        "C026"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-090dc6f7",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8276e604",
+      "primary_classification_ref": "C004",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C020",
+        "C024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-0a5a07c5",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C017",
+        "C020",
+        "C031"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-93f2e255",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-da4ef2e0",
+      "primary_classification_ref": "C006",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C008",
+        "C017",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-69504b45",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C018",
+        "C020",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-26d6afdd",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C010",
+        "C018",
+        "C020",
+        "C024",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-83b87ab7",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C018",
+        "C020",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-fbf48ce7",
+      "primary_classification_ref": "C003",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C018",
+        "C020",
+        "C024",
+        "C025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-bda46f65",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C016",
+        "C019",
+        "C020",
+        "C026",
+        "C030",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-add57065",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-e630dcab",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-77b62b1a",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-5ba71d1e",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-ace8821a",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-0279db25",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-273ff7d7",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-8401214e",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-71c8f374",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C019",
+        "C020",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-77f6565a",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C016",
+        "C019",
+        "C020",
+        "C030",
+        "C033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-5a796664",
+      "primary_classification_ref": "C005",
+      "cross_cutting_classification_refs": [
+        "C007",
+        "C014",
+        "C016",
+        "C019",
+        "C020",
+        "C030",
+        "C033"
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,1023 @@
+{
+  "probe": "vision-grounding-accuracy",
+  "designRef": "docs/architecture/07-vision-first-execution-design.md#11",
+  "project": "ra-dar",
+  "modelId": "gpt-5.6-luna",
+  "provider": "azure-openai",
+  "api": "azure-openai-chat-completions",
+  "startedAt": "2026-09-07T00:50:31.088Z",
+  "finishedAt": "2026-09-07T00:51:31.650Z",
+  "imageInputAccepted": true,
+  "overall": {
+    "screens": 6,
+    "targets": 29,
+    "hits": 8,
+    "misses": 20,
+    "notFound": 1,
+    "hitRate": 0.276
+  },
+  "screens": [
+    {
+      "screenId": "01-landing-hero",
+      "description": "RA-DAR 랜딩 첫 장면",
+      "heading": "57행을 다 읽어야 1행을 찾습니다.",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 12,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 3006,
+        "usage": {
+          "completion_tokens": 132,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 44,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 6,
+            "engine_ttft_ms": 417,
+            "engine_ttlt_ms": 1203,
+            "pre_inference_ms": 116,
+            "service_tbt_ms": 6,
+            "service_ttft_ms": 1586,
+            "service_ttlt_ms": 2367,
+            "user_visible_ttft_ms": 1470
+          },
+          "prompt_tokens": 1352,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1484
+        }
+      },
+      "summary": {
+        "targets": 2,
+        "hits": 0,
+        "misses": 2,
+        "notFound": 0,
+        "hitRate": 0,
+        "medianCenterDistancePx": 93,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "바로 시작하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 116,
+            "y": 540,
+            "width": 111,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 172,
+            "y": 560
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 146,
+            "y": 478
+          },
+          "centerDistancePx": 86,
+          "observedLabel": "바로 시작하기",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "미리 방문하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 237,
+            "y": 540,
+            "width": 111,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 293,
+            "y": 560
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 250,
+            "y": 478
+          },
+          "centerDistancePx": 93,
+          "observedLabel": "미리 방문하기",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "02-login",
+      "description": "담당자 계정 로그인 장면",
+      "heading": "57행을 다 읽어야 1행을 찾습니다.",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 14,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 5063,
+        "usage": {
+          "completion_tokens": 305,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 148,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 7,
+            "engine_ttft_ms": 425,
+            "engine_ttlt_ms": 2413,
+            "pre_inference_ms": 897,
+            "service_tbt_ms": 7,
+            "service_ttft_ms": 2369,
+            "service_ttlt_ms": 4354,
+            "user_visible_ttft_ms": 1472
+          },
+          "prompt_tokens": 1378,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 1683
+        }
+      },
+      "summary": {
+        "targets": 4,
+        "hits": 0,
+        "misses": 4,
+        "notFound": 0,
+        "hitRate": 0,
+        "medianCenterDistancePx": 174,
+        "labelMatchRate": 1
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "사번",
+          "controlKind": "password-textbox",
+          "truthRect": {
+            "x": 787,
+            "y": 390,
+            "width": 501,
+            "height": 44
+          },
+          "truthCenter": {
+            "x": 1038,
+            "y": 412
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 351
+          },
+          "centerDistancePx": 165,
+          "observedLabel": "사번",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "비밀번호",
+          "controlKind": "password-textbox",
+          "truthRect": {
+            "x": 787,
+            "y": 490,
+            "width": 501,
+            "height": 44
+          },
+          "truthCenter": {
+            "x": 1038,
+            "y": 512
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 437
+          },
+          "centerDistancePx": 170,
+          "observedLabel": "비밀번호",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "사번으로 인증하고 시작",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 787,
+            "y": 548,
+            "width": 501,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 1038,
+            "y": 568
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 485
+          },
+          "centerDistancePx": 174,
+          "observedLabel": "사번으로 인증하고 시작",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "사번 없이 확인하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 787,
+            "y": 622,
+            "width": 501,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 1038,
+            "y": 642
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 885,
+            "y": 548
+          },
+          "centerDistancePx": 180,
+          "observedLabel": "사번 없이 확인하기",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "04-dashboard",
+      "description": "로그인 직후 야간 작업 대시보드",
+      "heading": "안녕하세요, SK해커톤님. 4건이 작성되었습니다.",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 6,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 19547,
+        "usage": {
+          "completion_tokens": 1741,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1536,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 10,
+            "engine_ttft_ms": 527,
+            "engine_ttlt_ms": 17798,
+            "pre_inference_ms": 119,
+            "service_tbt_ms": 10,
+            "service_ttft_ms": 1692,
+            "service_ttlt_ms": 18958,
+            "user_visible_ttft_ms": 1573
+          },
+          "prompt_tokens": 1388,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 3129
+        }
+      },
+      "summary": {
+        "targets": 5,
+        "hits": 5,
+        "misses": 0,
+        "notFound": 0,
+        "hitRate": 1,
+        "medianCenterDistancePx": 1,
+        "labelMatchRate": 0.8
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 70,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 81,
+            "y": 25
+          },
+          "centerDistancePx": 11,
+          "observedLabel": "RA · DAR",
+          "labelMatch": false,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "누적 관리",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 199,
+            "y": 9,
+            "width": 94,
+            "height": 33
+          },
+          "truthCenter": {
+            "x": 246,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 246,
+            "y": 26
+          },
+          "centerDistancePx": 0,
+          "observedLabel": "누적 관리",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "SSK해커톤",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1326,
+            "y": 9,
+            "width": 94,
+            "height": 34
+          },
+          "truthCenter": {
+            "x": 1373,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 1390,
+            "y": 26
+          },
+          "centerDistancePx": 17,
+          "observedLabel": "SK해커톤",
+          "labelMatch": true,
+          "confidence": 0.9
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "누적 관리 열기",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 492,
+            "y": 264,
+            "width": 62,
+            "height": 20
+          },
+          "truthCenter": {
+            "x": 523,
+            "y": 274
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 522,
+            "y": 274
+          },
+          "centerDistancePx": 1,
+          "observedLabel": "누적 관리 열기",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "확인하기",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1271,
+            "y": 531,
+            "width": 120,
+            "height": 40
+          },
+          "truthCenter": {
+            "x": 1331,
+            "y": 551
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 1331,
+            "y": 551
+          },
+          "centerDistancePx": 0,
+          "observedLabel": "확인하기",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "06-ledger",
+      "description": "누적관리 원장 목록",
+      "heading": "전체 규정 개정 이력",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 45,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 9160,
+        "usage": {
+          "completion_tokens": 731,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 490,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 8,
+            "engine_ttft_ms": 517,
+            "engine_ttlt_ms": 6499,
+            "pre_inference_ms": 134,
+            "service_tbt_ms": 8,
+            "service_ttft_ms": 1700,
+            "service_ttlt_ms": 7678,
+            "user_visible_ttft_ms": 1566
+          },
+          "prompt_tokens": 1409,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2140
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 1,
+        "misses": 5,
+        "notFound": 0,
+        "hitRate": 0.167,
+        "medianCenterDistancePx": 115,
+        "labelMatchRate": 0.833
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 70,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 57,
+            "y": 21
+          },
+          "centerDistancePx": 14,
+          "observedLabel": "RA · DAR",
+          "labelMatch": false,
+          "confidence": 0.96
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "RA-2026-005 변경사항 반영",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 59,
+            "y": 756,
+            "width": 163,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 141,
+            "y": 771
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 119,
+            "y": 658
+          },
+          "centerDistancePx": 115,
+          "observedLabel": "RA-2026-005 변경사항 반영",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "문서번호 검색",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 534,
+            "y": 229,
+            "width": 28,
+            "height": 28
+          },
+          "truthCenter": {
+            "x": 548,
+            "y": 243
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 467,
+            "y": 207
+          },
+          "centerDistancePx": 89,
+          "observedLabel": "문서번호 검색",
+          "labelMatch": true,
+          "confidence": 0.87
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "고시",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1272,
+            "y": 269,
+            "width": 65,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 1305,
+            "y": 284
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1100,
+            "y": 242
+          },
+          "centerDistancePx": 209,
+          "observedLabel": "고시",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "의약품 등 안전에 관한 규칙 개정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 580,
+            "y": 356,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 872,
+            "y": 372
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 597,
+            "y": 317
+          },
+          "centerDistancePx": 280,
+          "observedLabel": "의약품 등 안전에 관한 규칙 개정",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "RA-2026-005",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 408,
+            "y": 450,
+            "width": 86,
+            "height": 20
+          },
+          "truthCenter": {
+            "x": 451,
+            "y": 460
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 388,
+            "y": 393
+          },
+          "centerDistancePx": 92,
+          "observedLabel": "RA-2026-005",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "07-ledger-status-filter",
+      "description": "원장 상태 필터가 열린 화면",
+      "heading": "전체 규정 개정 이력",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 45,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 11784,
+        "usage": {
+          "completion_tokens": 1143,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 901,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 8,
+            "engine_ttft_ms": 527,
+            "engine_ttlt_ms": 9844,
+            "pre_inference_ms": 166,
+            "service_tbt_ms": 8,
+            "service_ttft_ms": 1763,
+            "service_ttlt_ms": 11077,
+            "user_visible_ttft_ms": 1597
+          },
+          "prompt_tokens": 1411,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2554
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 1,
+        "misses": 5,
+        "notFound": 0,
+        "hitRate": 0.167,
+        "medianCenterDistancePx": 115,
+        "labelMatchRate": 0.833
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 70,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 64,
+            "y": 21
+          },
+          "centerDistancePx": 8,
+          "observedLabel": "RA · DAR",
+          "labelMatch": false,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "RA-2026-005 변경사항 반영",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 59,
+            "y": 756,
+            "width": 163,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 141,
+            "y": 771
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 119,
+            "y": 658
+          },
+          "centerDistancePx": 115,
+          "observedLabel": "RA-2026-005 변경사항 반영",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "문서번호 검색",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 534,
+            "y": 229,
+            "width": 28,
+            "height": 28
+          },
+          "truthCenter": {
+            "x": 548,
+            "y": 243
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 467,
+            "y": 208
+          },
+          "centerDistancePx": 88,
+          "observedLabel": "",
+          "labelMatch": true,
+          "confidence": 0.86
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "고시",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1272,
+            "y": 269,
+            "width": 65,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 1305,
+            "y": 284
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1100,
+            "y": 243
+          },
+          "centerDistancePx": 209,
+          "observedLabel": "고시",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "의약품 등 안전에 관한 규칙 개정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 580,
+            "y": 356,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 872,
+            "y": 372
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 611,
+            "y": 317
+          },
+          "centerDistancePx": 267,
+          "observedLabel": "의약품 등 안전에 관한 규칙 개정",
+          "labelMatch": true,
+          "confidence": 0.99
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "RA-2026-005",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 408,
+            "y": 450,
+            "width": 86,
+            "height": 20
+          },
+          "truthCenter": {
+            "x": 451,
+            "y": 460
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 388,
+            "y": 392
+          },
+          "centerDistancePx": 93,
+          "observedLabel": "RA-2026-005",
+          "labelMatch": true,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "screenId": "08-ledger-agent-prompt",
+      "description": "RA 에이전트 질문이 입력된 원장 화면",
+      "heading": "전체 규정 개정 이력",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preprocessScale": 1,
+      "elementCount": 40,
+      "call": {
+        "ok": true,
+        "status": 200,
+        "elapsedMs": 11970,
+        "usage": {
+          "completion_tokens": 1242,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1024,
+            "rejected_prediction_tokens": 0
+          },
+          "latency_checkpoint": {
+            "engine_tbt_ms": 8,
+            "engine_ttft_ms": 598,
+            "engine_ttlt_ms": 10202,
+            "pre_inference_ms": 121,
+            "service_tbt_ms": 8,
+            "service_ttft_ms": 1653,
+            "service_ttlt_ms": 11253,
+            "user_visible_ttft_ms": 1532
+          },
+          "prompt_tokens": 1445,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+          },
+          "total_tokens": 2687
+        }
+      },
+      "summary": {
+        "targets": 6,
+        "hits": 1,
+        "misses": 4,
+        "notFound": 1,
+        "hitRate": 0.167,
+        "medianCenterDistancePx": 194,
+        "labelMatchRate": 0.667
+      },
+      "targets": [
+        {
+          "targetId": "T1",
+          "visibleLabel": "RADAR",
+          "controlKind": "link",
+          "truthRect": {
+            "x": 16,
+            "y": 14,
+            "width": 107,
+            "height": 24
+          },
+          "truthCenter": {
+            "x": 70,
+            "y": 26
+          },
+          "outcome": "hit",
+          "point": {
+            "x": 49,
+            "y": 21
+          },
+          "centerDistancePx": 22,
+          "observedLabel": "RA · DAR",
+          "labelMatch": false,
+          "confidence": 0.96
+        },
+        {
+          "targetId": "T2",
+          "visibleLabel": "표시할 열 설정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1295,
+            "y": 181,
+            "width": 38,
+            "height": 38
+          },
+          "truthCenter": {
+            "x": 1314,
+            "y": 200
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1122,
+            "y": 171
+          },
+          "centerDistancePx": 194,
+          "observedLabel": "",
+          "labelMatch": true,
+          "confidence": 0.9
+        },
+        {
+          "targetId": "T3",
+          "visibleLabel": "유형법률대통령령총리령부령고시훈령예규지침안내서기타국가표준",
+          "controlKind": "select",
+          "truthRect": {
+            "x": 947,
+            "y": 228,
+            "width": 67,
+            "height": 30
+          },
+          "truthCenter": {
+            "x": 981,
+            "y": 243
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 838,
+            "y": 208
+          },
+          "centerDistancePx": 147,
+          "observedLabel": "유형",
+          "labelMatch": true,
+          "confidence": 0.94
+        },
+        {
+          "targetId": "T4",
+          "visibleLabel": "개정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1152,
+            "y": 268,
+            "width": 267,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 1286,
+            "y": 284
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 1000,
+            "y": 241
+          },
+          "centerDistancePx": 289,
+          "observedLabel": "개정",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T5",
+          "visibleLabel": "의약품 등 안전에 관한 규칙 개정",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 256,
+            "y": 356,
+            "width": 583,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 548,
+            "y": 372
+          },
+          "outcome": "miss",
+          "point": {
+            "x": 320,
+            "y": 317
+          },
+          "centerDistancePx": 235,
+          "observedLabel": "의약품 등 안전에 관한 규칙 개정",
+          "labelMatch": true,
+          "confidence": 0.98
+        },
+        {
+          "targetId": "T6",
+          "visibleLabel": "2026-08-14T09:12:00+09:00",
+          "controlKind": "button",
+          "truthRect": {
+            "x": 1032,
+            "y": 400,
+            "width": 101,
+            "height": 32
+          },
+          "truthCenter": {
+            "x": 1083,
+            "y": 416
+          },
+          "outcome": "not-found",
+          "reportedFound": false,
+          "confidence": 0.99
+        }
+      ]
+    }
+  ]
+}

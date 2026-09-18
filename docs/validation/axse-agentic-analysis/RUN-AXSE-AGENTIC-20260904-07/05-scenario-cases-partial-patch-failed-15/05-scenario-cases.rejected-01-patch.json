@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "stage": "scenario-case-correction-patch",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "work_id": "WORK-AXSE-SCENARIO-CASES",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "base_artifact_hash": "sha256:2f4e847eacdc6ac15c25f3f95c5eb2e4377e126c8bb1ce940d4c52dacb9b90d1",
+  "changes": [
+    {
+      "target_ref": "CT001",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 1
+    },
+    {
+      "target_ref": "CT002",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 1
+    },
+    {
+      "target_ref": "CT003",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 1
+    },
+    {
+      "target_ref": "CT004",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 6
+    },
+    {
+      "target_ref": "CT005",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 1
+    },
+    {
+      "target_ref": "CT006",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 1
+    },
+    {
+      "target_ref": "CT007",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 1
+    },
+    {
+      "target_ref": "CT008",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT009",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT010",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT011",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT012",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 4
+    },
+    {
+      "target_ref": "CT013",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT014",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT015",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT016",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT017",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT018",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT019",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT020",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT021",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT022",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT023",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT024",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 5
+    },
+    {
+      "target_ref": "CT025",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT026",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT027",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT028",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT029",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT030",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT031",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 3
+    },
+    {
+      "target_ref": "CT032",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 2
+    },
+    {
+      "target_ref": "CT033",
+      "operation": "map-transition",
+      "case_index": 0,
+      "step_position": 2
+    },
+    {
+      "target_ref": "CT034",
+      "operation": "update-case",
+      "fields": {
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "처음 선택한 입력은 UTF-8로 디코딩되지 않아 업로드 요청이 거부된다.",
+          "다시 선택할 유효한 UTF-8 MD 또는 TXT 문서가 준비되어 있다."
+        ]
+      }
+    },
+    {
+      "target_ref": "CT035",
+      "operation": "update-case",
+      "fields": {
+        "preconditions": [
+          "아이디와 패스워드를 입력할 수 있다.",
+          "선택할 프로젝트와 처리할 MD 또는 TXT 문서가 준비되어 있다.",
+          "처음 선택한 파일의 업로드 API 요청이 오류로 실패한다.",
+          "다시 선택할 유효한 UTF-8 MD 또는 TXT 파일이 준비되어 있다."
+        ]
+      }
+    }
+  ]
+}

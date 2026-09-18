@@ -1,0 +1,30 @@
+{
+  "sceneId": "20-open-execution",
+  "cues": [
+    {
+      "text": "실패한 케이스는 같은 ID로 수행 화면에서 이어집니다",
+      "startMs": 0,
+      "endMs": 3735,
+      "box": {
+        "x0": 518,
+        "y0": 926,
+        "x1": 1403,
+        "y1": 1004
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "zoomIn",
+      "atMs": 20,
+      "scale": 1.4,
+      "ms": 600
+    },
+    {
+      "type": "zoomOut",
+      "atMs": 1876,
+      "ms": 500
+    }
+  ],
+  "elapsedMs": 6726
+}

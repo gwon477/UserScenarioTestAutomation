@@ -1,0 +1,1241 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "name": "scenarioforge-demo",
+    "size": [
+      1920,
+      1080
+    ],
+    "narration": false
+  },
+  "intro": {
+    "source": "html",
+    "template": "default",
+    "brand": "ScenarioForge",
+    "title": "소스 하나로 시나리오부터 증적까지",
+    "tagline": "사용자 시나리오 도출과 테스트 수행 데스크톱",
+    "holdMs": 2500
+  },
+  "outro": {
+    "source": "html",
+    "template": "default",
+    "brand": "ScenarioForge",
+    "title": "ScenarioForge",
+    "tagline": "도출 → 질의 → 수행 → 증적",
+    "cta": "소스 디렉터리를 연결해 시작하세요",
+    "holdMs": 3000
+  },
+  "scenes": [
+    {
+      "id": "00a-intro-goal",
+      "url": "/?preview=demo#/projects",
+      "page": "projects",
+      "waitFor": "role=heading[name=\"RA-DAR\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "분석 담당자가 소스 디렉터리 하나로 하루 일을 끝내는 흐름입니다",
+            "emphasis": "소스 디렉터리 하나로",
+            "hook": true
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"RA-DAR\"]"
+            }
+          ],
+          "holdMs": 4475
+        },
+        {
+          "subtitle": {
+            "text": "먼저 새 프로젝트를 등록하고 분석을 걸어 둡니다",
+            "emphasis": "걸어 둡니다"
+          },
+          "actions": [],
+          "holdMs": 3475
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8850
+    },
+    {
+      "id": "00b-intro-scenarios",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "분석이 끝난 프로젝트에서 업무 분류별 시나리오를 읽습니다",
+            "emphasis": "업무 분류별"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": ".sheet-gp >> nth=0"
+            }
+          ],
+          "holdMs": 4100
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8351
+    },
+    {
+      "id": "00c-intro-execution",
+      "url": "/?preview=demo#/executions/EXE-20260908-0042",
+      "page": "execution-detail",
+      "waitFor": "role=heading[name=\"테스트 수행\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "도출된 케이스를 실제 화면에 수행시켜 판정을 받습니다",
+            "emphasis": "실제 화면"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"수행 대기열\"]"
+            }
+          ],
+          "holdMs": 3850
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 7240
+    },
+    {
+      "id": "00d-intro-model",
+      "url": "/?preview=demo#/evidence/EXE-20260908-0042/EVD-0042-SCN-LEDGER-001-2",
+      "page": "evidence-detail",
+      "waitFor": "role=heading[name=\"실패 증적 상세\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "판정 근거는 증적에서 프레임과 좌표로 확인합니다",
+            "emphasis": "프레임과 좌표"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"대상 화면 캡처\"]"
+            }
+          ],
+          "holdMs": 3538
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 6558
+    },
+    {
+      "id": "00d2-intro-start",
+      "url": "/?preview=demo#/evidence/EXE-20260908-0042/EVD-0042-SCN-LEDGER-001-2",
+      "page": "evidence-detail",
+      "waitFor": "role=heading[name=\"실패 증적 상세\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "화면마다 어떤 모델 동작이 그 결과를 만들었는지 함께 설명합니다",
+            "emphasis": "모델 동작"
+          },
+          "actions": [],
+          "holdMs": 4475
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 4475
+    },
+    {
+      "id": "02-add-project",
+      "url": "/?preview=demo#/projects",
+      "page": "projects",
+      "waitFor": "role=button[name=\"프로젝트 추가\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "프로젝트를 추가하면 바로 작업대로 들어갑니다",
+            "emphasis": "작업대"
+          },
+          "actions": [
+            {
+              "type": "click",
+              "target": "role=button[name=\"프로젝트 추가\"]"
+            },
+            {
+              "type": "waitFor",
+              "target": "role=dialog"
+            }
+          ],
+          "holdMs": 3350
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 4550
+    },
+    {
+      "id": "03-llm-settings",
+      "url": "/?preview=demo#/projects",
+      "page": "projects",
+      "waitFor": "role=button[name=\"프로젝트 추가\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "분석에 쓸 모델과 API 키를 한 번만 저장합니다",
+            "emphasis": "한 번만"
+          },
+          "actions": [
+            {
+              "type": "type",
+              "target": "role=dialog >> input[type=password]",
+              "value": "ACCOUNTS.llm.apiKey",
+              "secret": true
+            },
+            {
+              "type": "click",
+              "target": "role=button[name=\"설정 저장\"]"
+            },
+            {
+              "type": "waitFor",
+              "target": "role=heading[name=\"이 설정으로 첫 단계를 실행합니다\"]"
+            }
+          ],
+          "holdMs": 3350
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 5150
+    },
+    {
+      "id": "04-pipeline",
+      "url": "/?preview=demo#/projects",
+      "page": "projects",
+      "waitFor": "role=button[name=\"프로젝트 추가\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "분석은 소스, 사실, 업무 분류, 시나리오 네 단계로 진행됩니다",
+            "emphasis": "네 단계"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "ol.pipe"
+            }
+          ],
+          "holdMs": 4288
+        },
+        {
+          "subtitle": {
+            "text": "각 단계는 검증하고 저장한 뒤 다음 단계로 넘어갑니다",
+            "emphasis": "검증하고 저장"
+          },
+          "actions": [],
+          "holdMs": 3788
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8976
+    },
+    {
+      "id": "05-start-src",
+      "url": "/?preview=demo#/projects",
+      "page": "projects",
+      "waitFor": "role=button[name=\"프로젝트 추가\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "SRC 단계 실행을 누르면 소스 구조 수집부터 시작합니다",
+            "emphasis": "SRC 단계 실행"
+          },
+          "actions": [
+            {
+              "type": "hover",
+              "target": "role=button[name=\"SRC 단계 실행\"]"
+            },
+            {
+              "type": "highlight",
+              "target": "role=button[name=\"SRC 단계 실행\"]"
+            }
+          ],
+          "holdMs": 3850
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "hover",
+          "target": "role=button[name=\"SRC 단계 실행\"]",
+          "evidence": {
+            "source": "App.tsx handleStartAnalysis; preview 는 즉시 완료 처리",
+            "screen": "실행 버튼"
+          },
+          "decision": "show",
+          "reason": "클릭하면 표본 모드가 즉시 완료를 띄워 진행 중 화면과 어긋난다. 호버로 짚고 진행 픽스처로 컷"
+        }
+      ],
+      "dwellMs": 5050
+    },
+    {
+      "id": "06-progress-rate",
+      "url": "/?preview=progress#/workspace",
+      "page": "progress",
+      "waitFor": "role=heading[name=\"WIKI 단계 수행 중\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "분석 중인 프로젝트를 열면 진행률과 수행 중인 단계가 보입니다",
+            "emphasis": "진행률"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=progressbar"
+            }
+          ],
+          "holdMs": 4350
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 5698
+    },
+    {
+      "id": "07-progress-steps",
+      "url": "/?preview=progress#/workspace",
+      "page": "progress",
+      "waitFor": "role=heading[name=\"WIKI 단계 수행 중\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "소스 스캔, 사실 추출, 업무 분류를 거쳐 시나리오를 씁니다",
+            "emphasis": "업무 분류"
+          },
+          "actions": [],
+          "holdMs": 4100
+        },
+        {
+          "subtitle": {
+            "text": "세부 단계는 열 개이고 완료된 것부터 체크됩니다",
+            "emphasis": "열 개"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=list[name=\"세부 생성 단계\"]"
+            }
+          ],
+          "holdMs": 3475
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8475
+    },
+    {
+      "id": "08-progress-time",
+      "url": "/?preview=progress#/workspace",
+      "page": "progress",
+      "waitFor": "role=heading[name=\"WIKI 단계 수행 중\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "전체 분석은 약 70분이 걸리므로 걸어 두고 다른 일을 하세요",
+            "emphasis": "약 70분"
+          },
+          "actions": [],
+          "holdMs": 4162
+        },
+        {
+          "subtitle": {
+            "text": "진행 중에도 다른 프로젝트의 이력과 증적은 그대로 봅니다",
+            "emphasis": "그대로"
+          },
+          "actions": [],
+          "holdMs": 4038
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8500
+    },
+    {
+      "id": "09-progress-done",
+      "url": "/?preview=progress#/workspace",
+      "page": "progress",
+      "waitFor": "role=heading[name=\"WIKI 단계 수행 중\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "끝나면 생성 이력에 회차로 쌓이고 목록에서 다시 열 수 있습니다",
+            "emphasis": "생성 이력"
+          },
+          "actions": [
+            {
+              "type": "hover",
+              "target": "role=button[name=\"다른 프로젝트 선택\"]"
+            }
+          ],
+          "holdMs": 4412
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 5012
+    },
+    {
+      "id": "10-open-project",
+      "url": "/?preview=demo#/projects",
+      "page": "projects",
+      "waitFor": "role=button[name=\"열기\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "분석이 끝난 프로젝트는 열기로 바로 시나리오 케이스가 열립니다",
+            "emphasis": "바로"
+          },
+          "actions": [
+            {
+              "type": "click",
+              "target": "role=button[name=\"열기\"]"
+            },
+            {
+              "type": "waitFor",
+              "target": "role=heading[name=\"사용자 시나리오 9건\"]"
+            }
+          ],
+          "holdMs": 4412
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 5612
+    },
+    {
+      "id": "11-runs",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "생성 이력 탭에는 분석 회차가 쌓입니다",
+            "emphasis": "분석 회차"
+          },
+          "actions": [
+            {
+              "type": "click",
+              "target": "role=tab[name=/생성 이력/]"
+            },
+            {
+              "type": "waitFor",
+              "target": "role=heading[name=\"생성 이력\"]"
+            }
+          ],
+          "holdMs": 2912
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8351
+    },
+    {
+      "id": "12-runs-open",
+      "url": "/?preview=demo#/runs",
+      "page": "runs",
+      "waitFor": "role=button[name=/RUN-preview-02/]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "회차를 열면 그때 도출된 시나리오가 그대로 열립니다",
+            "emphasis": "회차"
+          },
+          "actions": [
+            {
+              "type": "click",
+              "target": "role=button[name=/RUN-preview-02/]"
+            },
+            {
+              "type": "waitFor",
+              "target": "role=heading[name=\"사용자 시나리오 9건\"]"
+            }
+          ],
+          "holdMs": 3725
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 4925
+    },
+    {
+      "id": "13-sheet",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "시나리오는 업무 분류별 시트로 정리됩니다",
+            "emphasis": "업무 분류별"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": ".sheet-gp >> nth=0"
+            }
+          ],
+          "holdMs": 3100
+        },
+        {
+          "subtitle": {
+            "text": "행마다 ID, 목적, 원천 파일, 단계 수가 있습니다",
+            "emphasis": "원천 파일"
+          },
+          "actions": [],
+          "holdMs": 3475
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8351
+    },
+    {
+      "id": "13b-how-scenarios",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "이 시트는 네 단계 모델 작업의 결과입니다",
+            "emphasis": "네 단계"
+          },
+          "actions": [
+            {
+              "type": "zoom",
+              "target": ".sheet-gp >> nth=0",
+              "scale": 1.3
+            }
+          ],
+          "holdMs": 3100
+        },
+        {
+          "subtitle": {
+            "text": "SRC와 FACT가 소스 사실을 모으고 WIKI와 SCENARIO가 씁니다",
+            "emphasis": "WIKI와 SCENARIO"
+          },
+          "actions": [
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 4100
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8700
+    },
+    {
+      "id": "14-case-steps",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "케이스를 펼치면 단계와 기대 결과가 함께 보입니다",
+            "emphasis": "기대 결과"
+          },
+          "actions": [
+            {
+              "type": "zoom",
+              "target": ".sheet-rw >> nth=2",
+              "scale": 1.3
+            },
+            {
+              "type": "click",
+              "target": "role=button[name=\"3 steps\"] >> nth=1"
+            },
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 3600
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "dblclick",
+          "target": "role=button[name=\"3 steps\"] >> nth=1",
+          "evidence": {
+            "source": "ScenarioSheet.tsx aria-expanded 토글 버튼",
+            "screen": "'3 steps' 버튼"
+          },
+          "decision": "skip",
+          "reason": "펼치기는 클릭이며 더블클릭 아님"
+        }
+      ],
+      "dwellMs": 5400
+    },
+    {
+      "id": "15-sheet-scroll",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "시트를 내려도 질의 패널과 자막은 그 자리에 있습니다",
+            "emphasis": "그 자리"
+          },
+          "actions": [
+            {
+              "type": "scroll",
+              "target": ".panel-s",
+              "toRatio": 1
+            }
+          ],
+          "holdMs": 3788
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "scroll",
+          "target": ".panel-s",
+          "evidence": {
+            "source": ".panel-s overflow (scrollHeight 907 > 720)",
+            "screen": "시트 패널 내부 스크롤"
+          },
+          "decision": "show",
+          "reason": "9건이 한 화면에 안 들어간다"
+        }
+      ],
+      "dwellMs": 4388
+    },
+    {
+      "id": "16-drag-case",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "케이스를 질의 패널로 끌어 놓으면 참조로 잡힙니다",
+            "emphasis": "끌어 놓으면"
+          },
+          "actions": [
+            {
+              "type": "drag",
+              "source": ".sheet-rw >> nth=0",
+              "target": ".comp .drop",
+              "mode": "html5"
+            },
+            {
+              "type": "waitFor",
+              "target": "[aria-label=\"참조할 시나리오\"]"
+            },
+            {
+              "type": "zoom",
+              "target": "[aria-label=\"참조할 시나리오\"]",
+              "scale": 1.4
+            },
+            {
+              "type": "highlight",
+              "target": "[aria-label=\"참조할 시나리오\"]"
+            },
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 3600
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "drag",
+          "target": ".sheet-rw >> nth=0",
+          "mode": "html5",
+          "evidence": {
+            "source": "ScenarioSheet.tsx draggable + dataTransfer application/x-scenarioforge-id; ScenarioChat.tsx onDrop",
+            "screen": "행 좌측 그립, 드롭 영역 문구"
+          },
+          "decision": "show",
+          "reason": "질의가 케이스 ID 기준으로 이뤄지는 핵심 조작"
+        }
+      ],
+      "dwellMs": 6600
+    },
+    {
+      "id": "17-ask",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "질문하면 케이스의 전제와 단계를 기준으로 답합니다",
+            "emphasis": "케이스의 전제와 단계"
+          },
+          "actions": [
+            {
+              "type": "drag",
+              "source": ".sheet-rw >> nth=0",
+              "target": ".comp .drop",
+              "mode": "html5"
+            },
+            {
+              "type": "type",
+              "target": "role=textbox[name=\"시나리오 질문\"]",
+              "value": "실패할 수 있는 분기는 무엇인가요?"
+            },
+            {
+              "type": "click",
+              "target": "role=button[name=\"보내기\"]"
+            },
+            {
+              "type": "zoom",
+              "target": ".chat-s",
+              "scale": 1.4
+            },
+            {
+              "type": "waitStream",
+              "target": ".chat-s .msg >> nth=-1",
+              "until": "stable",
+              "stableMs": 1200,
+              "timeoutMs": 30000
+            },
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 3662
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "waitStream",
+          "target": ".chat-s .msg >> nth=-1",
+          "evidence": {
+            "source": "ScenarioChat.tsx streamAnswer setInterval",
+            "screen": "답변이 글자 단위로 늘어남"
+          },
+          "decision": "show",
+          "reason": "질의 응답이 제품의 핵심 경험"
+        }
+      ],
+      "dwellMs": 7262
+    },
+    {
+      "id": "18-answer",
+      "url": "/?preview=demo#/scenarios",
+      "page": "scenarios",
+      "waitFor": "role=heading[name=\"사용자 시나리오 9건\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "답변은 케이스의 전제, 단계, 원천 코드를 근거로 합니다",
+            "emphasis": "원천 코드"
+          },
+          "actions": [
+            {
+              "type": "drag",
+              "source": ".sheet-rw >> nth=0",
+              "target": ".comp .drop",
+              "mode": "html5"
+            },
+            {
+              "type": "type",
+              "target": "role=textbox[name=\"시나리오 질문\"]",
+              "value": "실패할 수 있는 분기는 무엇인가요?"
+            },
+            {
+              "type": "click",
+              "target": "role=button[name=\"보내기\"]"
+            },
+            {
+              "type": "waitStream",
+              "target": ".chat-s .msg >> nth=-1",
+              "until": "stable",
+              "stableMs": 1200,
+              "timeoutMs": 30000
+            },
+            {
+              "type": "zoom",
+              "target": ".chat-s .msg >> nth=-1",
+              "scale": 1.3
+            },
+            {
+              "type": "highlight",
+              "target": ".chat-s .msg >> nth=-1"
+            },
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 3912
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8112
+    },
+    {
+      "id": "19-executions",
+      "url": "/?preview=demo#/executions",
+      "page": "executions",
+      "waitFor": "role=heading[name=\"테스트 실행\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "테스트 실행은 회차별 케이스 판정을 보여줍니다",
+            "emphasis": "케이스 판정"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"테스트 실행\"]"
+            }
+          ],
+          "holdMs": 3412
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 6947
+    },
+    {
+      "id": "20-open-execution",
+      "url": "/?preview=demo#/executions",
+      "page": "executions",
+      "waitFor": "role=heading[name=\"테스트 실행\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "실패한 케이스는 같은 ID로 수행 화면에서 이어집니다",
+            "emphasis": "같은 ID"
+          },
+          "actions": [
+            {
+              "type": "zoom",
+              "target": "role=button[name=/SCN-LEDGER-001 규정명으로 개정 건 검색 실패/]",
+              "scale": 1.4
+            },
+            {
+              "type": "highlight",
+              "target": "role=button[name=/SCN-LEDGER-001 규정명으로 개정 건 검색 실패/]"
+            },
+            {
+              "type": "zoomOut"
+            },
+            {
+              "type": "click",
+              "target": "role=button[name=\"실행 열기\"] >> nth=0"
+            },
+            {
+              "type": "waitFor",
+              "target": "role=heading[name=\"테스트 수행\"]"
+            }
+          ],
+          "holdMs": 3725
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 6725
+    },
+    {
+      "id": "21-test-center",
+      "url": "/?preview=demo#/executions/EXE-20260908-0042",
+      "page": "execution-detail",
+      "waitFor": "role=heading[name=\"테스트 수행\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "수행 화면에는 실행 이력과 수행 대기열이 나란히 있습니다",
+            "emphasis": "수행 대기열"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"수행 대기열\"]"
+            }
+          ],
+          "holdMs": 4038
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 7240
+    },
+    {
+      "id": "22-verdicts",
+      "url": "/?preview=demo#/executions/EXE-20260908-0042",
+      "page": "execution-detail",
+      "waitFor": "role=heading[name=\"테스트 수행\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "단계마다 동의, 오탐, 미탐, 재실행 필요로 검토합니다",
+            "emphasis": "검토"
+          },
+          "actions": [
+            {
+              "type": "zoom",
+              "target": "role=button[name=/02 SCN-LEDGER-001/]",
+              "scale": 1.4
+            },
+            {
+              "type": "highlight",
+              "target": "role=button[name=\"동의\"] >> nth=0"
+            },
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 3788
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 5588
+    },
+    {
+      "id": "22b-how-execution",
+      "url": "/?preview=demo#/executions/EXE-20260908-0042",
+      "page": "execution-detail",
+      "waitFor": "role=heading[name=\"테스트 수행\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "수행은 모델에 보낸 화면 프레임을 보고 단계를 실행합니다",
+            "emphasis": "화면 프레임"
+          },
+          "actions": [],
+          "holdMs": 4038
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 4038
+    },
+    {
+      "id": "22c-how-execution-2",
+      "url": "/?preview=demo#/executions/EXE-20260908-0042",
+      "page": "execution-detail",
+      "waitFor": "role=heading[name=\"테스트 수행\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "단계마다 사유 코드, 실행 경로, 재시도와 관측 횟수를 남깁니다",
+            "emphasis": "사유 코드"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "ol.qsteps >> nth=0"
+            }
+          ],
+          "holdMs": 4350
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 4950
+    },
+    {
+      "id": "23-open-evidence",
+      "url": "/?preview=demo#/executions/EXE-20260908-0042",
+      "page": "execution-detail",
+      "waitFor": "role=heading[name=\"테스트 수행\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "단계 증적 열기로 판정 근거를 확인합니다",
+            "emphasis": "판정 근거"
+          },
+          "actions": [
+            {
+              "type": "click",
+              "target": "role=button[name=\"SCN-LEDGER-001 2단계 증적 열기\"]"
+            },
+            {
+              "type": "waitFor",
+              "target": "role=heading[name=\"실패 증적 상세\"]"
+            }
+          ],
+          "holdMs": 3038
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 4238
+    },
+    {
+      "id": "24-timeline",
+      "url": "/?preview=demo#/evidence/EXE-20260908-0042/EVD-0042-SCN-LEDGER-001-2",
+      "page": "evidence-detail",
+      "waitFor": "role=heading[name=\"실패 증적 상세\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "타임라인에서 실패 시점과 직전 화면을 오갑니다",
+            "emphasis": "실패 시점"
+          },
+          "actions": [
+            {
+              "type": "zoom",
+              "target": "role=heading[name=\"단계 타임라인\"]",
+              "scale": 1.3
+            },
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"단계 타임라인\"]"
+            },
+            {
+              "type": "click",
+              "target": "role=button[name=/실패 직전/]"
+            },
+            {
+              "type": "click",
+              "target": "role=button[name=/실패 시점/]"
+            },
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 3412
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 6558
+    },
+    {
+      "id": "25-verdict-basis",
+      "url": "/?preview=demo#/evidence/EXE-20260908-0042/EVD-0042-SCN-LEDGER-001-2",
+      "page": "evidence-detail",
+      "waitFor": "role=heading[name=\"실패 증적 상세\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "판정 근거는 원본이 아니라 모델에 전송된 프레임입니다",
+            "emphasis": "모델에 전송된 프레임"
+          },
+          "actions": [
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"판정 근거\"]"
+            }
+          ],
+          "holdMs": 3850
+        },
+        {
+          "subtitle": {
+            "text": "모델이 지목한 좌표를 그 프레임 위에 겹쳐 보여줍니다",
+            "emphasis": "좌표"
+          },
+          "actions": [],
+          "holdMs": 3788
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8538
+    },
+    {
+      "id": "26-evidence-library",
+      "url": "/?preview=demo#/evidence",
+      "page": "evidence",
+      "waitFor": "role=heading[name=\"테스트 증적\"]",
+      "transitionIn": {
+        "type": "fade",
+        "ms": 400
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "증적 탭은 실행별로 묶인 증적을 판정으로 거릅니다",
+            "emphasis": "실행별로"
+          },
+          "actions": [
+            {
+              "type": "zoom",
+              "target": "role=heading[name=\"저장된 증적\"]",
+              "scale": 1.3
+            },
+            {
+              "type": "highlight",
+              "target": "role=heading[name=\"저장된 증적\"]"
+            },
+            {
+              "type": "zoomOut"
+            }
+          ],
+          "holdMs": 3600
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 8547
+    },
+    {
+      "id": "26b-filters",
+      "url": "/?preview=demo#/evidence",
+      "page": "evidence",
+      "waitFor": "role=heading[name=\"테스트 증적\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "판정, 검토 상태, 사유 코드로 거르고",
+            "emphasis": "사유 코드"
+          },
+          "actions": [
+            {
+              "type": "click",
+              "target": "role=radio[name=\"실패\"]"
+            }
+          ],
+          "holdMs": 2788
+        },
+        {
+          "subtitle": {
+            "text": "원인 태그와 케이스 ID까지 다섯 축으로 좁힙니다",
+            "emphasis": "다섯 축"
+          },
+          "actions": [],
+          "holdMs": 3475
+        }
+      ],
+      "interactions": [],
+      "dwellMs": 7163
+    },
+    {
+      "id": "27-evidence-filter",
+      "url": "/?preview=demo#/evidence",
+      "page": "evidence",
+      "waitFor": "role=heading[name=\"테스트 증적\"]",
+      "transitionIn": {
+        "type": "cut"
+      },
+      "steps": [
+        {
+          "subtitle": {
+            "text": "목록을 내려 보고 케이스 ID로 좁힙니다",
+            "emphasis": "케이스 ID"
+          },
+          "actions": [
+            {
+              "type": "scroll",
+              "target": ".body.pad-lg",
+              "toRatio": 0.6
+            },
+            {
+              "type": "type",
+              "target": "input[placeholder=\"SCN-\"]",
+              "value": "SCN-LEDGER"
+            }
+          ],
+          "holdMs": 2912
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "scroll",
+          "target": ".body.pad-lg",
+          "evidence": {
+            "source": ".body.pad-lg 문서 스크롤",
+            "screen": "증적 목록이 화면을 넘음"
+          },
+          "decision": "show",
+          "reason": "실행별 묶음이 아래로 이어짐"
+        }
+      ],
+      "dwellMs": 4112
+    }
+  ]
+}

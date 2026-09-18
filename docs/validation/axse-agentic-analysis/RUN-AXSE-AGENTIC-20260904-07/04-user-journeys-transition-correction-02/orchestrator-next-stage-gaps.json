@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "artifact_type": "orchestrator-source-gaps",
+  "run_id": "RUN-AXSE-AGENTIC-20260904-07",
+  "source_snapshot_ref": "SS-19f2efec-21de-4298-bfdd-30b76f39b940",
+  "source_root_hash": "sha256:c19d65de32e7f75ccde82a97b70c1fe32f4f4f5eba5753e05e85c5e435a5f4e0",
+  "reviewed_artifact": {
+    "artifact_id": "04-user-journeys",
+    "content_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+    "status": "locally-validated-unregistered-probe"
+  },
+  "golden_derived": false,
+  "decision": "carry-forward-semantic-question",
+  "gaps": [
+    {
+      "gap_id": "GAP-RECOVERY-INPUT-PRECONDITION",
+      "kind": "incomplete-recovery-precondition",
+      "affected_sections": [
+        "recovery-case:prerequisites"
+      ],
+      "required_change": "복구 case를 확장할 때 UTF-8로 디코딩되지 않아 요청이 거부되는 입력과 재선택 후 성공 가능한 UTF-8 MD/TXT 입력을 구분한다. 비동기 파싱 실패의 정확한 입력 원인은 추가 원본이 입증하지 않으면 사실로 만들지 말고 unresolved로 유지한다.",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+        "SRC-frontend-src-features-upload-upload-api-f7939e13",
+        "SRC-backend-app-api-v1-tasks-d0e77ec2"
+      ]
+    }
+  ],
+  "generator_exclusions": [
+    "orchestrator-external-evaluation.md",
+    "golden dataset IDs, wording, case counts, and transition counts"
+  ]
+}

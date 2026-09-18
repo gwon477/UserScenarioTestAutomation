@@ -1,0 +1,16 @@
+{
+  "pass": false,
+  "issues": [
+    "SCENARIO_CASE_CORRECTION_ADDITION_INVALID",
+    "SCENARIO_CASE_PERSPECTIVE_MISSING:4:input-source",
+    "SCENARIO_CASE_PERSPECTIVE_MISSING:4:lifecycle-state",
+    "SCENARIO_CASE_PERSPECTIVE_MISSING:5:lifecycle-state"
+  ],
+  "failed_target_refs": [
+    "CT001",
+    "CT002",
+    "CT003",
+    "CT004"
+  ],
+  "failed_case_indexes": []
+}

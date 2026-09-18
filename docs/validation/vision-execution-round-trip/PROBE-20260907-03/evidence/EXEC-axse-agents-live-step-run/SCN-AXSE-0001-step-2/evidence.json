@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "stepId": "SCN-AXSE-0001#2",
+  "actionRef": "E-FILL-PW",
+  "verdict": "PASSED",
+  "target": {
+    "elementRef": "EL-PASSWORD",
+    "visibleLabel": "패스워드",
+    "controlKind": "password-textbox",
+    "labelUniqueOnSurface": true
+  },
+  "frameSpace": {
+    "captureSize": {
+      "width": 1440,
+      "height": 900
+    },
+    "modelSize": {
+      "width": 1229,
+      "height": 768
+    },
+    "scale": 0.8533333333333334
+  },
+  "valueRef": "EL-PASSWORD",
+  "maskedRegions": [
+    {
+      "elementRef": "#lf-password",
+      "label": "#lf-password"
+    }
+  ],
+  "proposal": {
+    "modelPoint": {
+      "x": 614,
+      "y": 430
+    },
+    "capturePoint": {
+      "x": 719,
+      "y": 504
+    },
+    "observedLabel": "패스워드",
+    "confidence": 0.99
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "outcome": "accepted"
+    }
+  ],
+  "assertions": [
+    {
+      "ref": "SCR-LOGIN",
+      "verdict": "PASSED",
+      "detail": "로그인"
+    }
+  ],
+  "observations": 2,
+  "frames": [
+    {
+      "id": "01-model-input-1",
+      "kind": "model-input",
+      "round": 1,
+      "relativePath": "frames/01-model-input-1.png",
+      "size": {
+        "width": 1229,
+        "height": 768
+      }
+    },
+    {
+      "id": "02-after-action-1",
+      "kind": "after-action",
+      "round": 1,
+      "relativePath": "frames/02-after-action-1.png",
+      "size": {
+        "width": 1229,
+        "height": 768
+      }
+    },
+    {
+      "id": "03-after-action-2",
+      "kind": "after-action",
+      "round": 2,
+      "relativePath": "frames/03-after-action-2.png",
+      "size": {
+        "width": 1229,
+        "height": 768
+      }
+    }
+  ]
+}

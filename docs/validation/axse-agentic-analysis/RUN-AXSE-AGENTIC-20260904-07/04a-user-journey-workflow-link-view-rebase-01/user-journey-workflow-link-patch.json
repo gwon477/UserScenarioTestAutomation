@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "journey_artifact_hash": "sha256:acbd14e7ae748916aba070f866f45ed35c32df30fb21223d92256663c1ef1f8b",
+  "fact_graph_artifact_hash": "sha256:e748db078bcc96ff59ff8466ba32e03fcd868c29517c84ba8b03f23cecd538bb",
+  "business_workflow_mapping_artifact_hash": "sha256:3adde8abbeded1ef99707d50f38afa9d85ed49aad0fda766f9073d87d63e80e8",
+  "milestone_links": [
+    {
+      "target_ref": "JM001",
+      "workflow_refs": [
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-d6fe005d",
+        "WF-component-loginpage-e5ed79c1",
+        "WF-component-mainpage-3762e523"
+      ]
+    },
+    {
+      "target_ref": "JM002",
+      "workflow_refs": [
+        "WF-component-mainpage-77035738",
+        "WF-component-uploadpage-833d06aa",
+        "WF-component-uploadpage-1f1eaeca",
+        "WF-component-uploadpage-6c730330"
+      ]
+    },
+    {
+      "target_ref": "JM003",
+      "workflow_refs": [
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-businesspage-c434992f",
+        "WF-component-businesspage-ce6f1e6c"
+      ]
+    },
+    {
+      "target_ref": "JM004",
+      "workflow_refs": [
+        "WF-component-businesspage-ce6f1e6c"
+      ]
+    },
+    {
+      "target_ref": "JM005",
+      "workflow_refs": [
+        "WF-component-scenariopage-f72174ff",
+        "WF-component-scenariopage-09e713d0"
+      ]
+    },
+    {
+      "target_ref": "JM006",
+      "workflow_refs": [
+        "WF-component-mainpage-2b4dbe33"
+      ]
+    },
+    {
+      "target_ref": "JM007",
+      "workflow_refs": [
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-d6fe005d",
+        "WF-component-loginpage-e5ed79c1",
+        "WF-component-mainpage-3762e523"
+      ]
+    },
+    {
+      "target_ref": "JM008",
+      "workflow_refs": [
+        "WF-component-mainpage-77035738",
+        "WF-component-uploadpage-1f1eaeca"
+      ]
+    },
+    {
+      "target_ref": "JM009",
+      "workflow_refs": [
+        "WF-component-uploadpage-1f1eaeca"
+      ]
+    },
+    {
+      "target_ref": "JM010",
+      "workflow_refs": [
+        "WF-component-uploadpage-1f1eaeca"
+      ]
+    },
+    {
+      "target_ref": "JM011",
+      "workflow_refs": [
+        "WF-component-uploadpage-833d06aa",
+        "WF-component-uploadpage-1f1eaeca",
+        "WF-component-uploadpage-6c730330",
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-businesspage-c434992f",
+        "WF-component-businesspage-ce6f1e6c"
+      ]
+    },
+    {
+      "target_ref": "JM012",
+      "workflow_refs": [
+        "WF-component-scenariopage-09e713d0"
+      ]
+    },
+    {
+      "target_ref": "JM013",
+      "workflow_refs": [
+        "WF-component-mainpage-2b4dbe33"
+      ]
+    }
+  ],
+  "unresolved": []
+}
