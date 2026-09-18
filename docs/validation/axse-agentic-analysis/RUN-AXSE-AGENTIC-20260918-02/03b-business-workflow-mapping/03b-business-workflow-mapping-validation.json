@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "workflow_count": 53,
+  "primary_classification_count": 6,
+  "cross_cutting_classification_count": 18,
+  "unresolved_count": 0,
+  "model_call_count": 1,
+  "classification_artifact_hash": "sha256:61ea726c2f8f3637c7c1eac2bf5f6e843000720bf8ede2f2af54349c60cdbc3a",
+  "fact_graph_artifact_hash": "sha256:4571a72a37d8669ed7d930dc38c184ae88a92dd594de1f5c3ca079fc973b9f08",
+  "artifact_hash": "sha256:1feb6abdd1121cc4782ae6efec9ac7072e813623a5d038f54b7ebc98cf2a3d71"
+}

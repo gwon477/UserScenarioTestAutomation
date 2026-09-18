@@ -1,0 +1,20 @@
+{
+  "pass": false,
+  "issues": [
+    {
+      "code": "FACT_SOURCE_BRANCH_REF_MISSING",
+      "path": "$.edges[edge_id=E-0037].source_branch_ref",
+      "message": "E-0037 for EL-component-mainpage-button-ts-ts-7f059f08 at frontend/src/features/main/pages/main.page.jsx:111 must identify its backend-owned source branch."
+    },
+    {
+      "code": "FACT_SOURCE_BRANCH_REF_MISSING",
+      "path": "$.edges[edge_id=E-0008].source_branch_ref",
+      "message": "E-0008 for EL-component-businesspage-button-v-2f1469b8 at frontend/src/features/main/pages/main.page.jsx:638 must identify its backend-owned source branch."
+    },
+    {
+      "code": "FACT_JOURNEY_ACTION_SELF_LOOP_ONLY",
+      "path": "$.edges[on=EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8]",
+      "message": "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8 at frontend/src/features/upload/pages/upload.page.jsx:179 is a journey action, but every normal edge returns to SCR-component-uploadpage without a stable outcome or lasting view state. Point its normal edge at the screen the handler actually reaches."
+    }
+  ]
+}

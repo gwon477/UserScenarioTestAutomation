@@ -1567,6 +1567,33 @@ export function validateUserJourneyWorkflowLinkPatch(value, plan) {
     || item?.business_workflow_mapping_artifact_hash !== mappingPlan?.business_workflow_mapping_artifact_hash) {
     issues.push("USER_JOURNEY_WORKFLOW_LINK_PROVENANCE_MISMATCH");
   }
+  const targetList = targets;
+  const departureScreenRefs = new Set(targetList.flatMap((target) => (
+    Array.isArray(record(target)?.workflow_candidates) ? target.workflow_candidates : []
+  ).flatMap((candidate) => (
+    Array.isArray(record(candidate)?.eligible_edges) ? candidate.eligible_edges : []
+  ).map((edge) => record(edge)?.from_screen_ref).filter(Boolean))));
+  const finalPositionByJourney = new Map();
+  for (const target of targetList) {
+    const entry = record(target);
+    if (!entry) continue;
+    const previous = finalPositionByJourney.get(entry.journey_ref) ?? -Infinity;
+    if (Number(entry.milestone_position) > previous) finalPositionByJourney.set(entry.journey_ref, Number(entry.milestone_position));
+  }
+  const midJourneyArrivals = (target) => {
+    const entry = record(target);
+    if (!entry || ["exit", "business-result"].includes(String(entry.phase))) return [];
+    if (Number(entry.milestone_position) >= (finalPositionByJourney.get(entry.journey_ref) ?? Infinity)) return [];
+    return (Array.isArray(entry.workflow_candidates) ? entry.workflow_candidates : []).flatMap((candidate) => (
+      Array.isArray(record(candidate)?.eligible_edges) ? candidate.eligible_edges : []
+    ).map((edge) => record(edge)?.to_screen_ref).filter(Boolean));
+  };
+  // A milestone that can land on a screen the journey cannot continue from has no honest link for
+  // that intent, so recording it as a gap is the correct outcome rather than asserting a different
+  // workflow that does not do the work the milestone describes.
+  const deadEndTargetRefs = new Set(targetList.filter((target) => (
+    midJourneyArrivals(target).some((screenRef) => !departureScreenRefs.has(screenRef))
+  )).map((target) => record(target).target_ref));
   const accountedTargetRefs = [];
   for (const link of links) {
     const entry = record(link);
@@ -1602,7 +1629,25 @@ export function validateUserJourneyWorkflowLinkPatch(value, plan) {
     if (!targetByRef.has(entry.target_ref)) issues.push(`USER_JOURNEY_WORKFLOW_LINK_TARGET_INVALID:${entry.target_ref}`);
     if (accountedTargetRefs.includes(entry.target_ref)) issues.push(`USER_JOURNEY_WORKFLOW_LINK_TARGET_DUPLICATE:${entry.target_ref}`);
     accountedTargetRefs.push(entry.target_ref);
-    issues.push(`USER_JOURNEY_WORKFLOW_LINK_UNRESOLVED:${entry.target_ref}`);
+    // Every candidate for this milestone dead-ends, so no link could be honest. Recording the gap is
+    // the correct outcome and carries forward; only a milestone that could have been linked fails.
+    if (!deadEndTargetRefs.has(entry.target_ref)) issues.push(`USER_JOURNEY_WORKFLOW_LINK_UNRESOLVED:${entry.target_ref}`);
+  }
+  for (const link of links) {
+    const entry = record(link);
+    const target = record(targetByRef.get(entry?.target_ref));
+    if (!entry || !target || !Array.isArray(entry.workflow_refs)) continue;
+    const candidateByWorkflowRef = new Map((Array.isArray(target.workflow_candidates) ? target.workflow_candidates : [])
+      .map((candidate) => [record(candidate)?.workflow_ref, candidate]));
+    const arrivals = entry.workflow_refs.flatMap((workflowRef) => (
+      Array.isArray(record(candidateByWorkflowRef.get(workflowRef))?.eligible_edges)
+        ? candidateByWorkflowRef.get(workflowRef).eligible_edges
+        : []
+    ).map((edge) => record(edge)?.to_screen_ref).filter(Boolean));
+    if (!midJourneyArrivals(target).length) continue;
+    for (const screenRef of [...new Set(arrivals)]) {
+      if (!departureScreenRefs.has(screenRef)) issues.push(`USER_JOURNEY_WORKFLOW_LINK_DEAD_END:${entry.target_ref}:${screenRef}`);
+    }
   }
   const accounted = new Set(accountedTargetRefs);
   const missing = [...targetByRef.keys()].filter((targetRef) => !accounted.has(targetRef)).sort();

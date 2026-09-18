@@ -8,6 +8,7 @@ import { DefaultResourceLoader } from "@earendil-works/pi-coding-agent";
 import { createConfiguredModelRuntime } from "../packages/pi-runtime/src/models/configured-model-runtime.ts";
 import { PiSdkDriver } from "../packages/pi-runtime/src/host/pi-sdk-driver.ts";
 import { createAnalysisArtifactTool } from "../packages/pi-runtime/src/tools/staging-tools.ts";
+import { auditJourneyWalkability } from "../packages/scenario-pipeline/src/index.ts";
 import { modelCredentialIdentity } from "../apps/desktop/src/main/security/model-credential-store.ts";
 import {
   buildBusinessWorkflowMappingPlan,
@@ -244,12 +245,14 @@ async function run() {
       const factArtifacts = factGraphArtifact.value?.artifacts;
       const mappingArtifacts = businessMappingArtifact.value?.artifacts;
       if (factArtifacts?.workflow_skeleton?.path !== "workflow-skeleton.json"
+        || factArtifacts?.fact_bundle?.path !== "fact-bundle.json"
         || factArtifacts?.guarded_path_inventory?.path !== "guarded-path-inventory.json"
         || mappingArtifacts?.workflow_classification_mapping?.path !== "workflow-classification-mapping.json") {
         throw new Error("USER_JOURNEY_WORKFLOW_LINK_INPUT_PATH_INVALID");
       }
-      const [workflowSkeleton, guardedPathInventory, workflowClassificationMapping] = await Promise.all([
+      const [workflowSkeleton, factBundle, guardedPathInventory, workflowClassificationMapping] = await Promise.all([
         readStageFile(scope.outputRoot, FACT_GRAPH_DIRECTORY, factArtifacts.workflow_skeleton.path),
+        readStageFile(scope.outputRoot, FACT_GRAPH_DIRECTORY, factArtifacts.fact_bundle.path),
         readStageFile(scope.outputRoot, FACT_GRAPH_DIRECTORY, factArtifacts.guarded_path_inventory.path),
         readStageFile(scope.outputRoot, BUSINESS_MAPPING_DIRECTORY, mappingArtifacts.workflow_classification_mapping.path),
       ]);
@@ -370,6 +373,15 @@ async function run() {
             ? applyUserJourneyWorkflowLinkCorrectionPatch(value, correctionPlan, plan)
             : value;
           linkIssues = validateUserJourneyWorkflowLinkPatch(mergedCandidate, plan);
+          if (!linkIssues.length) {
+            // A link set only counts when a scenario can actually walk it forward. Report where the
+            // walk stops so the next attempt moves that milestone instead of guessing.
+            linkIssues = auditJourneyWalkability(factBundle.value, compileUserJourneyWorkflowLinks(mergedCandidate, plan))
+              .filter((audit) => !audit.complete)
+              .map((audit) => (audit.break
+                ? `USER_JOURNEY_WORKFLOW_LINK_UNWALKABLE:${audit.journey_ref}: the journey stands at ${audit.break.at_screen} and the next linked edge ${audit.break.next_edge_ref} starts from ${audit.break.next_from_screen}, which no forward path reaches`
+                : `USER_JOURNEY_WORKFLOW_LINK_UNWALKABLE:${audit.journey_ref}: no linked edge forms a journey path`));
+          }
         } catch (error) {
           linkIssues = [error instanceof Error ? error.message : "USER_JOURNEY_WORKFLOW_LINK_PATCH_INVALID"];
         }

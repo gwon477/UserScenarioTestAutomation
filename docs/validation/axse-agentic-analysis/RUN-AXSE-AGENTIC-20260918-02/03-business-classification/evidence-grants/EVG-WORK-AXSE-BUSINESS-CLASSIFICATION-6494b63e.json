@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-6494b63e",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-BUSINESS-CLASSIFICATION",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "start_line": 1,
+      "end_line": 121,
+      "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+      "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-6494b63e"
+    }
+  ],
+  "created_at": "2026-09-18T02:14:34.788Z"
+}

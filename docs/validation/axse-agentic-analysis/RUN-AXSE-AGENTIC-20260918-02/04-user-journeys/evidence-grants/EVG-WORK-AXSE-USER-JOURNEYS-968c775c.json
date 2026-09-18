@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-968c775c",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-USER-JOURNEYS",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "evidence": [
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+      "start_line": 1,
+      "end_line": 361,
+      "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-968c775c"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-parsed-db-parsed-db-api-8aa4750b",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "frontend/src/features/parsed-db/parsed-db.api.js",
+      "start_line": 1,
+      "end_line": 53,
+      "content_hash": "sha256:5d477263ca473f2f6319ba5568f9ec0cc6c937b20e581a08940ad2dca09bc91a",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-968c775c"
+    }
+  ],
+  "created_at": "2026-09-18T03:42:30.478Z"
+}

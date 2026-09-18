@@ -31,6 +31,7 @@ import {
   compileJourneyScenarioBindings,
   compileJourneyCompleteScenarios,
   compileBusinessCatalog,
+  defaultBusinessClassificationPatch,
   compileScenarioSkeleton,
   compileScenarioSet,
   createBusinessClassificationCorrectionScope,
@@ -1238,6 +1239,15 @@ describe("deterministic generation core", () => {
 
     expect(branchRefOnly.edge_update_fields).toEqual({ 0: ["kind", "source_branch_ref"] });
 
+    const branchDuplicate = createFactCorrectionPlan(draft, rejected, [{
+      code: "FACT_SOURCE_BRANCH_DUPLICATE",
+      severity: "error" as const,
+      path: "$.edges[edge_id=E-0001].source_branch_ref",
+      message: "E-0001 duplicates backend branch normal:1 for EL-checkout-button-submit at src/Page.tsx:12.",
+    }]);
+
+    expect(branchDuplicate.remove_edge_indexes).toEqual([0]);
+
     const navigationMismatch = createFactCorrectionPlan(draft, rejected, [{
       code: "FACT_LITERAL_NAVIGATION_TARGET_MISMATCH",
       severity: "error" as const,
@@ -2342,6 +2352,145 @@ describe("shell-contained journey completion", () => {
       shell_screen_id: "SCR-component-mainpage",
       contained_screen_ids: ["SCR-component-workpage"],
     })]);
+  });
+
+  it("never walks a regression edge, so the journey path terminates without back-and-forth", () => {
+    const facts = shellFacts(true);
+    facts.screens[1].elements.push({
+      id: "EL-work-button-back", type: "button", label: "이전",
+      interaction: { action_kind: "navigate back", surface_kind: "web", target_candidates: [{ by: "test-id", value: "back" }] },
+      evidence: [evidence],
+    });
+    facts.edges.push({
+      schema_version: 2, ...identity, edge_id: "E-0004", kind: "normal",
+      from: "SCR-work", on: "EL-work-button-back", to: "SCR-shell", feedback: [], evidence: [evidence], status: "verified",
+    });
+    const withRegression = {
+      ...journeyLinks,
+      journeys: [{
+        ...journeyLinks.journeys[0],
+        milestones: [
+          journeyLinks.journeys[0].milestones[0],
+          { target_ref: "JM001b", position: 2, phase: "work", required_outcome: "normal" as const, workflow_refs: ["WF-back"], edge_refs: ["E-0004", "E-0001"], feasibility: "source-supported" as const },
+          { ...journeyLinks.journeys[0].milestones[1], position: 3 },
+          { ...journeyLinks.journeys[0].milestones[2], position: 4 },
+        ],
+      }],
+    };
+
+    const [journey] = compileJourneyCompleteScenarios(facts, withRegression);
+
+    expect(journey.path).toEqual(["E-0001", "E-0002", "E-0003"]);
+  });
+
+  it("skips a milestone transition the journey has already completed", () => {
+    const replayed = {
+      ...journeyLinks,
+      journeys: [{
+        ...journeyLinks.journeys[0],
+        milestones: [
+          journeyLinks.journeys[0].milestones[0],
+          { ...journeyLinks.journeys[0].milestones[1], edge_refs: ["E-0002", "E-0001"] },
+          journeyLinks.journeys[0].milestones[2],
+        ],
+      }],
+    };
+
+    const [journey] = compileJourneyCompleteScenarios(shellFacts(true), replayed);
+
+    expect(journey.path).toEqual(["E-0001", "E-0002", "E-0003"]);
+  });
+
+  it("does not bind a scenario to a milestone the journey walk drops", () => {
+    const facts = shellFacts(true);
+    facts.screens.push({
+      schema_version: 3, ...identity, screen_id: "SCR-settings", route: "component:SettingsPage", title: "Settings",
+      shell_screen_id: "SCR-shell", entry_guards: [], status: "verified", elements: [], apis: [], feedback: [], displays: [],
+    });
+    facts.screens[0].elements.push({
+      id: "EL-shell-button-settings", type: "button", label: "Settings",
+      interaction: { action_kind: "open settings", surface_kind: "web", target_candidates: [{ by: "test-id", value: "settings" }] },
+      evidence: [evidence],
+    });
+    facts.edges.push({
+      schema_version: 2, ...identity, edge_id: "E-0005", kind: "normal",
+      from: "SCR-shell", on: "EL-shell-button-settings", to: "SCR-settings", feedback: [], evidence: [evidence], status: "verified",
+    });
+    const wiki = compileReachableWorkflowSkeleton(facts);
+    const workflowCiting = (edgeRef: string) => wiki.workflows.find((workflow) => workflow.cites.includes(edgeRef))!.workflow;
+    const linksWithDetour = {
+      ...journeyLinks,
+      journeys: [{
+        ...journeyLinks.journeys[0],
+        milestones: [
+          { target_ref: "JM001", position: 1, phase: "entry", required_outcome: "normal" as const, workflow_refs: [workflowCiting("E-0001")], edge_refs: ["E-0001"], feasibility: "source-supported" as const },
+          { target_ref: "JM002", position: 2, phase: "work", required_outcome: "normal" as const, workflow_refs: [workflowCiting("E-0005")], edge_refs: ["E-0005"], feasibility: "source-supported" as const },
+          { target_ref: "JM003", position: 3, phase: "business-result", required_outcome: "normal" as const, workflow_refs: [workflowCiting("E-0002")], edge_refs: ["E-0002"], feasibility: "source-supported" as const },
+          { target_ref: "JM004", position: 4, phase: "exit", required_outcome: "normal" as const, workflow_refs: [workflowCiting("E-0003")], edge_refs: ["E-0003"], feasibility: "source-supported" as const },
+        ],
+      }],
+    };
+    const catalog = compileBusinessCatalog(wiki, defaultBusinessClassificationPatch(wiki));
+    const skeleton = compileScenarioSkeleton(facts, wiki, catalog);
+    const inventory = compileGuardedPathInventory(facts, []);
+
+    const bindings = compileJourneyScenarioBindings(skeleton, linksWithDetour, inventory, facts);
+    const settingsBinding = bindings.scenarios.find((binding) => binding.workflow_ref === workflowCiting("E-0005"))!;
+    const entryBinding = bindings.scenarios.find((binding) => binding.workflow_ref === workflowCiting("E-0001"))!;
+
+    expect(settingsBinding.journey_milestones).toEqual([]);
+    expect(entryBinding.journey_milestones).toEqual([{ journey_ref: "J001", milestone_position: 1, phase: "entry" }]);
+  });
+
+  it("skips a dead-end detour milestone so the journey never has to walk back", () => {
+    const facts = shellFacts(true);
+    facts.screens.push({
+      schema_version: 3, ...identity, screen_id: "SCR-settings", route: "component:SettingsPage", title: "Settings",
+      shell_screen_id: "SCR-shell", entry_guards: [], status: "verified", elements: [], apis: [], feedback: [], displays: [],
+    });
+    facts.screens[0].elements.push({
+      id: "EL-shell-button-settings", type: "button", label: "Settings",
+      interaction: { action_kind: "open settings", surface_kind: "web", target_candidates: [{ by: "test-id", value: "settings" }] },
+      evidence: [evidence],
+    });
+    facts.edges.push({
+      schema_version: 2, ...identity, edge_id: "E-0005", kind: "normal",
+      from: "SCR-shell", on: "EL-shell-button-settings", to: "SCR-settings", feedback: [], evidence: [evidence], status: "verified",
+    });
+    const withDetour = {
+      ...journeyLinks,
+      journeys: [{
+        ...journeyLinks.journeys[0],
+        milestones: [
+          journeyLinks.journeys[0].milestones[0],
+          { target_ref: "JM001c", position: 2, phase: "work", required_outcome: "normal" as const, workflow_refs: ["WF-settings"], edge_refs: ["E-0005"], feasibility: "source-supported" as const },
+          { ...journeyLinks.journeys[0].milestones[1], position: 3 },
+          { ...journeyLinks.journeys[0].milestones[2], position: 4 },
+        ],
+      }],
+    };
+
+    const [journey] = compileJourneyCompleteScenarios(facts, withDetour);
+
+    expect(journey.path).toEqual(["E-0001", "E-0002", "E-0003"]);
+  });
+
+  it("uses each edge at most once so a repeated milestone reference cannot duplicate a step", () => {
+    const repeated = {
+      ...journeyLinks,
+      journeys: [{
+        ...journeyLinks.journeys[0],
+        milestones: [
+          journeyLinks.journeys[0].milestones[0],
+          { ...journeyLinks.journeys[0].milestones[1], edge_refs: ["E-0002", "E-0002"] },
+          journeyLinks.journeys[0].milestones[2],
+        ],
+      }],
+    };
+
+    const [journey] = compileJourneyCompleteScenarios(shellFacts(true), repeated);
+
+    expect(journey.path).toEqual(["E-0001", "E-0002", "E-0003"]);
   });
 
   it("bridges a contained screen back to shell chrome so the journey reaches its evidenced exit", () => {

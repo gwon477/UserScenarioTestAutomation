@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "artifact_type": "source-survey-inventory-gap-supplement",
+  "source_snapshot_ref": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "reviewed_artifact": {
+    "artifact_id": "01-source-survey",
+    "content_hash": "sha256:614db245b9d3ca5715c4e0032469d0069d1e5019f010d3edae22ca28b252abd4",
+    "status": "locally-validated-unregistered-probe"
+  },
+  "golden_derived": false,
+  "gaps": [
+    {
+      "gap_id": "GAP-INVENTORY-0001",
+      "kind": "deterministic-inventory-not-grounded",
+      "affected_sections": [
+        "source_areas"
+      ],
+      "required_change": "Revisit the omitted interaction|route inventory records at lines 30|32|211|304|318|328|334|340 and add one source-backed area when they expose a user-facing capability; otherwise leave the gap unresolved.",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921"
+      ]
+    },
+    {
+      "gap_id": "GAP-INVENTORY-0002",
+      "kind": "deterministic-inventory-not-grounded",
+      "affected_sections": [
+        "source_areas"
+      ],
+      "required_change": "Revisit the omitted interaction|route inventory records at lines 4|12|18|30|36 and add one source-backed area when they expose a user-facing capability; otherwise leave the gap unresolved.",
+      "source_refs_to_revisit": [
+        "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1"
+      ]
+    }
+  ]
+}

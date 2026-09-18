@@ -535,6 +535,71 @@ describe("staged Pi user-journeys contract", () => {
     }, plan)).toContain("USER_JOURNEY_WORKFLOW_LINK_UNRESOLVED:JM001");
   });
 
+  it("rejects linking a mid-journey milestone to a screen the journey cannot continue from", () => {
+    const deadEndPlan = {
+      schema_version: 1,
+      journey_artifact_hash: "sha256:journey",
+      fact_graph_artifact_hash: "sha256:fact",
+      business_workflow_mapping_artifact_hash: "sha256:mapping",
+      targets: [
+        {
+          target_ref: "JM001", journey_ref: "J001", journey_kind: "normal", milestone_position: 1,
+          phase: "work", required_outcome: "normal", allowed_workflow_refs: ["WF-settings"],
+          workflow_candidates: [{ workflow_ref: "WF-settings", eligible_edges: [{ edge_ref: "E-1", from_screen_ref: "SCR-main", to_screen_ref: "SCR-settings", feasibility: "source-supported" }] }],
+        },
+        {
+          target_ref: "JM002", journey_ref: "J001", journey_kind: "normal", milestone_position: 2,
+          phase: "business-result", required_outcome: "normal", allowed_workflow_refs: ["WF-result"],
+          workflow_candidates: [{ workflow_ref: "WF-result", eligible_edges: [{ edge_ref: "E-2", from_screen_ref: "SCR-main", to_screen_ref: "SCR-result", feasibility: "source-supported" }] }],
+        },
+      ],
+    };
+    const linked = {
+      schema_version: 1,
+      journey_artifact_hash: "sha256:journey",
+      fact_graph_artifact_hash: "sha256:fact",
+      business_workflow_mapping_artifact_hash: "sha256:mapping",
+      milestone_links: [
+        { target_ref: "JM001", workflow_refs: ["WF-settings"] },
+        { target_ref: "JM002", workflow_refs: ["WF-result"] },
+      ],
+      unresolved: [],
+    };
+
+    expect(validateUserJourneyWorkflowLinkPatch(linked, deadEndPlan))
+      .toContain("USER_JOURNEY_WORKFLOW_LINK_DEAD_END:JM001:SCR-settings");
+  });
+
+  it("accepts recording a dead-end milestone as an unresolved gap instead of asserting it", () => {
+    const deadEndPlan = {
+      schema_version: 1,
+      journey_artifact_hash: "sha256:journey",
+      fact_graph_artifact_hash: "sha256:fact",
+      business_workflow_mapping_artifact_hash: "sha256:mapping",
+      targets: [
+        {
+          target_ref: "JM001", journey_ref: "J001", journey_kind: "normal", milestone_position: 1,
+          phase: "work", required_outcome: "normal", allowed_workflow_refs: ["WF-settings"],
+          workflow_candidates: [{ workflow_ref: "WF-settings", eligible_edges: [{ edge_ref: "E-1", from_screen_ref: "SCR-main", to_screen_ref: "SCR-settings", feasibility: "source-supported" }] }],
+        },
+        {
+          target_ref: "JM002", journey_ref: "J001", journey_kind: "normal", milestone_position: 2,
+          phase: "business-result", required_outcome: "normal", allowed_workflow_refs: ["WF-result"],
+          workflow_candidates: [{ workflow_ref: "WF-result", eligible_edges: [{ edge_ref: "E-2", from_screen_ref: "SCR-main", to_screen_ref: "SCR-result", feasibility: "source-supported" }] }],
+        },
+      ],
+    };
+
+    expect(validateUserJourneyWorkflowLinkPatch({
+      schema_version: 1,
+      journey_artifact_hash: "sha256:journey",
+      fact_graph_artifact_hash: "sha256:fact",
+      business_workflow_mapping_artifact_hash: "sha256:mapping",
+      milestone_links: [{ target_ref: "JM002", workflow_refs: ["WF-result"] }],
+      unresolved: [{ target_ref: "JM001", reason: "The journey cannot continue from SCR-settings." }],
+    }, deadEndPlan)).toEqual([]);
+  });
+
   it("repairs only unresolved milestone links and preserves every validated link", () => {
     const plan = {
       schema_version: 1,

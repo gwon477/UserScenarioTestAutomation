@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "base_patch_hash": "sha256:32c1da72b72d433b6fb168d3666abaf4af591b35e56e3ecdacf30892794c0ece",
+  "screen_update_fields": {
+    "S8": [
+      "title"
+    ]
+  },
+  "element_update_fields": {},
+  "api_update_fields": {},
+  "predicate_element_refs": [
+    "U15",
+    "U33",
+    "U61"
+  ],
+  "remove_predicate_keys": [],
+  "replace_edge_indexes": [
+    7,
+    36,
+    61
+  ],
+  "remove_edge_indexes": [
+    7,
+    36
+  ],
+  "replace_edge_identities": [
+    {
+      "edge_index": 7,
+      "on_element_ref": "U15"
+    },
+    {
+      "edge_index": 36,
+      "on_element_ref": "U33"
+    },
+    {
+      "edge_index": 61,
+      "on_element_ref": "U61"
+    }
+  ],
+  "edge_update_fields": {
+    "7": [
+      "kind",
+      "source_branch_ref"
+    ],
+    "36": [
+      "kind",
+      "source_branch_ref"
+    ],
+    "61": [
+      "to_screen_ref"
+    ]
+  },
+  "add_edge_element_refs": []
+}

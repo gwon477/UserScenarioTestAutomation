@@ -472,7 +472,12 @@ export function enrichSourceInteractionBehaviors(
         source_refs: [failure.sourceRef],
       });
     }
-    const outcomeEvidenced = behavior.literal_navigation_targets.length > 0 || (behavior.stable_outcomes ?? []).length > 0;
+    // The source states a user-observable result: it navigates somewhere literal, it leaves a stable
+    // outcome, or it surfaces its own failure. An unresolved backend endpoint makes the server effect
+    // uncertain; it does not erase the result the user sees.
+    const outcomeEvidenced = behavior.literal_navigation_targets.length > 0
+      || (behavior.stable_outcomes ?? []).length > 0
+      || behavior.explicit_failure;
     if (!branches.length && (!unresolved.length || outcomeEvidenced) && (behavior.journey_required || behavior.local_view_only)) branches.push({
       branch_ref: "normal:1",
       outcome: "normal",

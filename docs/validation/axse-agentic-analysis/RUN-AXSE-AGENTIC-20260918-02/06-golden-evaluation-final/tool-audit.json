@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "backend.input.validate",
+      "result": "ok",
+      "golden_hash": "sha256:c7396786ea4966a5693d2e1d7f0d36a30e692cc236669d6b21f02665ba5f7fad",
+      "candidate_hash": "sha256:e8f28332b4ade05cdea900d13c0c8052d2cac73eef8005c4b3de0c6eeefdd4bf"
+    },
+    {
+      "sequence": 2,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-taxonomy-journey-assessment",
+      "content_hash": "sha256:cbc99e0d13b70cd525b456cb11f2aa010d8bd384db04ba1022ca366b459df57e"
+    },
+    {
+      "sequence": 3,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "artifact_id": "06-golden-scenario-assessment",
+      "code": "ASSESSMENT_RESILIENCE_SCORE_MISSING:AXSE2-SCN-010",
+      "attempt": 1,
+      "content_hash": "sha256:9da69a910cac32573c086a262fea10121624a5553f382cc87370c6dc88c9d987"
+    },
+    {
+      "sequence": 4,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-scenario-assessment",
+      "content_hash": "sha256:fe3bb510f62741e9331f27200dcd35960533da0e999d14efdc226130b14e0047"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "status": "locally-validated",
+  "milestone": "required-user-journeys-satisfied",
+  "completed_assignment": "06-golden-evaluation",
+  "validated_stages": {
+    "01-source-survey": "01-source-survey.json",
+    "02-source-gap-review": "02-source-gap-review/02-source-gap-review.json",
+    "03-business-classification": "03-business-classification/03-business-classification.json",
+    "03a-fact-graph": "03a-fact-graph-corr-34/03a-fact-graph.json",
+    "03b-business-workflow-mapping": "03b-business-workflow-mapping/03b-business-workflow-mapping.json",
+    "04-user-journeys": "04-user-journeys/04-user-journeys.json",
+    "04a-user-journey-workflow-link": "04a-user-journey-workflow-link/04a-user-journey-workflow-link.json",
+    "05-scenario-cases-graph": "05-scenario-cases-graph-v5/05-scenario-cases-graph.json",
+    "06-golden-evaluation": "06-golden-evaluation-final/06-golden-evaluation.json"
+  },
+  "result": {
+    "screens": 9,
+    "elements": 63,
+    "edges": 66,
+    "scenarios": 68,
+    "edge_coverage_percent": 100,
+    "complete_journey_scenarios": 2,
+    "expected_journeys": 2,
+    "journey_bound_scenarios": 27
+  },
+  "golden_evaluation": {
+    "dataset": "docs/validation/golden/SCENARIOFORGE_GOLDEN_DATASET.md",
+    "golden_scenarios": 38,
+    "classification_recall": 1.0,
+    "workflow_recall": 0.917,
+    "required_journey_recall": 1.0,
+    "success_scenario_recall": 0.545,
+    "resilience_scenario_recall": 0.188,
+    "passed": false
+  },
+  "product_stage_acceptance": "not-attempted",
+  "model_id": "gpt-5.6-luna",
+  "report": "docs/reports/2026-09-18-complete-journey-milestone.md"
+}

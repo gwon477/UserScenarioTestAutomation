@@ -1,0 +1,1971 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "nodes": [
+    {
+      "screen_ref": "SCR-component-businesspage",
+      "title": "component:BusinessPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-component-loginformpage",
+      "title": "component:LoginFormPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-component-loginpage",
+      "title": "component:LoginPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-component-mainpage",
+      "title": "component:MainPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-component-parseddbpage",
+      "title": "component:ParsedDbPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-component-scenariopage",
+      "title": "component:ScenarioPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-component-settingspage",
+      "title": "component:SettingsPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-component-uploadpage",
+      "title": "component:UploadPage",
+      "entry_guards": [],
+      "status": "draft"
+    },
+    {
+      "screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+      "title": "main",
+      "entry_guards": [],
+      "status": "draft"
+    }
+  ],
+  "edges": [
+    {
+      "edge_ref": "E-0001",
+      "source_action_ref": "EL-component-businesspage-button-button-1b959aaf",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-flow-issue-filter-changed=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0002",
+      "source_action_ref": "EL-component-businesspage-button-root-7b5cc90c",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-category-panel=category && PRED-category-page-changed=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0003",
+      "source_action_ref": "EL-component-businesspage-button-root-8b53f325",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-checked-flows=nonempty",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0004",
+      "source_action_ref": "EL-component-businesspage-button-root-d2f35683",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-checked-flows=nonempty",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0005",
+      "source_action_ref": "EL-component-businesspage-button-root-ee5902ee",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-flow-text-view-open=false",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0006",
+      "source_action_ref": "EL-component-businesspage-button-tc-57c3dae7",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "guard": "PRED-checked-flows=nonempty && PRED-scenario-requesting=false",
+      "effect": "PRED-scenario-generation-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0007",
+      "source_action_ref": "EL-component-businesspage-button-tc-57c3dae7",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-checked-flows=nonempty && PRED-scenario-requesting=false",
+      "effect": "PRED-scenario-requesting=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0008",
+      "source_action_ref": "EL-component-businesspage-button-v-2f1469b8",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-detail-open=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0009",
+      "source_action_ref": "EL-component-businesspage-checkbox-root-2506f0f8",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-checked-flows=nonempty",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0010",
+      "source_action_ref": "EL-component-businesspage-checkbox-root-ba5e72bc",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-checked-flows=nonempty",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0011",
+      "source_action_ref": "EL-component-businesspage-checkbox-root-f484b897",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-checked-flows=nonempty",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0012",
+      "source_action_ref": "EL-component-businesspage-button-csv-csv-6c4c2394",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "guard": "PRED-exporting-csv=false",
+      "effect": "PRED-mapping-export-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0013",
+      "source_action_ref": "EL-component-businesspage-button-csv-csv-6c4c2394",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "guard": "PRED-exporting-csv=false",
+      "effect": "PRED-exporting-csv=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0014",
+      "source_action_ref": "EL-component-businesspage-button-root-1778051a",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-scenario-generation-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0015",
+      "source_action_ref": "EL-component-businesspage-button-root-1778051a",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-preset-view-open=true",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0016",
+      "source_action_ref": "EL-component-businesspage-button-root-25ad2a2c",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0017",
+      "source_action_ref": "EL-component-businesspage-button-root-36a555c2",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-preset-view-open=false && PRED-preset-generation-reset=true && PRED-preset-message-cleared=true && PRED-preset-progress-reset=true && PRED-preset-requesting-id-cleared=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0018",
+      "source_action_ref": "EL-component-businesspage-button-root-456a2904",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-context-panel=context && PRED-cube-page-changed=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0019",
+      "source_action_ref": "EL-component-businesspage-button-root-547f94d7",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-preset-view-open=false && PRED-preset-generation-reset=true && PRED-preset-message-cleared=true && PRED-preset-progress-reset=true && PRED-preset-requesting-id-cleared=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0020",
+      "source_action_ref": "EL-component-businesspage-button-root-74a73f90",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-businesspage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "effect": "PRED-flow-text-view-open=false",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0021",
+      "source_action_ref": "EL-component-loginformpage-button-root-6da22694",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-loginformpage",
+      "to_screen_ref": "SCR-component-loginformpage",
+      "effect": "PRED-login-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0022",
+      "source_action_ref": "EL-component-loginformpage-button-root-6da22694",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-loginformpage",
+      "to_screen_ref": "SCR-component-loginpage",
+      "guard": "PRED-user-id-present=true && PRED-password-present=true",
+      "effect": "PRED-login-loading=false",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0023",
+      "source_action_ref": "EL-component-loginformpage-input-root-2e21d8ec",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-loginformpage",
+      "to_screen_ref": "SCR-component-loginformpage",
+      "effect": "PRED-user-id-present=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0024",
+      "source_action_ref": "EL-component-loginformpage-input-root-cc350d8a",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-loginformpage",
+      "to_screen_ref": "SCR-component-loginformpage",
+      "effect": "PRED-password-present=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0025",
+      "source_action_ref": "EL-component-loginpage-button-button-199ada70",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-loginpage",
+      "to_screen_ref": "SCR-component-mainpage",
+      "effect": "PRED-project-selected=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0026",
+      "source_action_ref": "EL-component-loginpage-button-root-7fc3a516",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-loginpage",
+      "to_screen_ref": "SCR-component-loginpage",
+      "effect": "PRED-projects-fetch-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0027",
+      "source_action_ref": "EL-component-loginpage-button-root-7fc3a516",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-loginpage",
+      "to_screen_ref": "SCR-component-loginpage",
+      "effect": "PRED-projects-available=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0028",
+      "source_action_ref": "EL-component-loginpage-button-root-b10e4291",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-loginpage",
+      "to_screen_ref": "SCR-component-loginformpage",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0029",
+      "source_action_ref": "EL-component-mainpage-button-button-42861f4f",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-mainpage",
+      "effect": "PRED-task-bootstrap-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0030",
+      "source_action_ref": "EL-component-mainpage-button-button-42861f4f",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-mainpage",
+      "effect": "PRED-task-selected=true",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0031",
+      "source_action_ref": "EL-component-mainpage-button-root-0bae6c59",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-loginpage",
+      "effect": "PRED-session-reset=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0032",
+      "source_action_ref": "EL-component-mainpage-button-root-25ceb4be",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-uploadpage",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0033",
+      "source_action_ref": "EL-component-mainpage-button-root-4870b226",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-uploadpage",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0034",
+      "source_action_ref": "EL-component-mainpage-button-root-bcee2686",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-mainpage",
+      "effect": "PRED-task-bootstrap-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0035",
+      "source_action_ref": "EL-component-mainpage-button-root-bcee2686",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-mainpage",
+      "effect": "PRED-task-create-succeeded=true",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0036",
+      "source_action_ref": "EL-component-mainpage-button-settings-6c53b1fc",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-settingspage",
+      "effect": "PRED-settings-page-selected=true",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0037",
+      "source_action_ref": "EL-component-mainpage-button-ts-ts-7f059f08",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-mainpage",
+      "to_screen_ref": "SCR-component-mainpage",
+      "effect": "PRED-task-menu-open=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0038",
+      "source_action_ref": "EL-component-parseddbpage-button-button-bec78487",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-parseddbpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "effect": "PRED-parsed-tab-changed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0039",
+      "source_action_ref": "EL-component-parseddbpage-button-root-966c5272",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-parseddbpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "effect": "PRED-parsed-page-valid=true && PRED-parsed-cache-updated=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0040",
+      "source_action_ref": "EL-component-parseddbpage-button-root-beefb97f",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-parseddbpage",
+      "to_screen_ref": "SCR-component-uploadpage",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0041",
+      "source_action_ref": "EL-component-parseddbpage-button-root-cccee16a",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-parseddbpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "effect": "PRED-parsed-page-valid=true && PRED-parsed-cache-updated=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0042",
+      "source_action_ref": "EL-component-parseddbpage-button-root-e88717bc",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-parseddbpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "guard": "PRED-parsed-page-valid=true && PRED-parsed-total-pages-available=true",
+      "effect": "PRED-parsed-page-valid=true && PRED-parsed-cache-updated=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0043",
+      "source_action_ref": "EL-component-parseddbpage-button-root-fee689e3",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-parseddbpage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0044",
+      "source_action_ref": "EL-component-parseddbpage-input-input-c6b159ba",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-parseddbpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "effect": "PRED-parsed-query-draft=updated",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0045",
+      "source_action_ref": "EL-component-scenariopage-button-button-b6ade5a6",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-loading=false",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0046",
+      "source_action_ref": "EL-component-scenariopage-button-button-b6ade5a6",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-loading=false",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0047",
+      "source_action_ref": "EL-component-scenariopage-button-csv-csv-8dba6894",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0048",
+      "source_action_ref": "EL-component-scenariopage-button-csv-csv-8dba6894",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-active=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0049",
+      "source_action_ref": "EL-component-scenariopage-button-excel-excel-e83a36d0",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0050",
+      "source_action_ref": "EL-component-scenariopage-button-excel-excel-e83a36d0",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-active=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0051",
+      "source_action_ref": "EL-component-scenariopage-button-root-4e83beae",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "effect": "PRED-expanded-sections-visible=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0052",
+      "source_action_ref": "EL-component-scenariopage-button-root-93f714c4",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "effect": "PRED-expanded-sections-visible=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0053",
+      "source_action_ref": "EL-component-scenariopage-button-root-a53a01ca",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "effect": "PRED-expanded-sections-visible=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0054",
+      "source_action_ref": "EL-component-scenariopage-button-root-e8f38c3b",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-businesspage",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0055",
+      "source_action_ref": "EL-component-scenariopage-button-root-ff33f465",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "effect": "PRED-expanded-sections-visible=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0056",
+      "source_action_ref": "EL-component-scenariopage-input-root-e0e2ecb2",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0057",
+      "source_action_ref": "EL-component-scenariopage-input-root-e0e2ecb2",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-scenariopage",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0058",
+      "source_action_ref": "EL-component-settingspage-button-button-910f144d",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-settingspage",
+      "to_screen_ref": "SCR-component-settingspage",
+      "effect": "PRED-settings-strategy-selected=true",
+      "scope": "view",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0059",
+      "source_action_ref": "EL-component-uploadpage-button-root-07489263",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-component-uploadpage",
+      "to_screen_ref": "SCR-component-uploadpage",
+      "guard": "PRED-upload-file-present=true && PRED-upload-submitting=false",
+      "effect": "PRED-upload-parse-failed=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0060",
+      "source_action_ref": "EL-component-uploadpage-button-root-07489263",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-uploadpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "guard": "PRED-upload-file-present=true && PRED-upload-submitting=false",
+      "effect": "PRED-upload-complete=true",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0061",
+      "source_action_ref": "EL-component-uploadpage-button-root-5ee46c72",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-uploadpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "guard": "PRED-upload-complete=true && PRED-upload-submitting=false",
+      "effect": "PRED-upload-submitting=false",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0062",
+      "source_action_ref": "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-component-uploadpage",
+      "to_screen_ref": "SCR-component-parseddbpage",
+      "effect": "PRED-upload-file-present=true",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0063",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-page-valid=true && PRED-matrix-total-pages-available=true",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0064",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-page-valid=true && PRED-matrix-total-pages-available=true",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0065",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+      "branch_ref": "exception:1",
+      "outcome": "exception",
+      "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-page-valid=true",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "source-supported",
+      "status": "draft"
+    },
+    {
+      "edge_ref": "E-0066",
+      "source_action_ref": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+      "branch_ref": "normal:1",
+      "outcome": "normal",
+      "from_screen_ref": "SCR-frontend-src-features-main-pages-main-page",
+      "to_screen_ref": "SCR-component-scenariopage",
+      "guard": "PRED-matrix-page-valid=true",
+      "effect": "PRED-matrix-loading=false",
+      "scope": "journey",
+      "feasibility": "runtime-unverified",
+      "status": "draft"
+    }
+  ],
+  "workflows": [
+    {
+      "workflow_ref": "WF-component-businesspage-8d514a88",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0001"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-a4a53abb",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0012",
+        "E-0013"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0014",
+        "E-0015"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-86c2ff8c",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0016"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-0ada3322",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0017"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-e76552a4",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0018"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-d378820a",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0019"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7ec9352e",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0020"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-86dffaba",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0002"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-6d777bfb",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0003"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-bd399e7b",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0004"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8b2611d2",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0005"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-664cad1d",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0006",
+        "E-0007"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-5c765240",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0008"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8d384820",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0009"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-40d5175b",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0010"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-547a1466",
+      "entry_screen_refs": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0011"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-104bdb2f",
+      "entry_screen_refs": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "edge_refs": [
+        "E-0021"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-8dc58904",
+      "entry_screen_refs": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "edge_refs": [
+        "E-0022"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-aef66388",
+      "entry_screen_refs": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "edge_refs": [
+        "E-0023"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-5199dbef",
+      "entry_screen_refs": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "edge_refs": [
+        "E-0024"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-e5ed79c1",
+      "entry_screen_refs": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "edge_refs": [
+        "E-0025"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-f3dfe66b",
+      "entry_screen_refs": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "edge_refs": [
+        "E-0026",
+        "E-0027"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-24d62594",
+      "entry_screen_refs": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "edge_refs": [
+        "E-0028"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-c55225a4",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "edge_refs": [
+        "E-0029",
+        "E-0030"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-2b4dbe33",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "edge_refs": [
+        "E-0031"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-4e38e24f",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "edge_refs": [
+        "E-0032"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-275bc2d0",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "edge_refs": [
+        "E-0033"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-cef3c5df",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "edge_refs": [
+        "E-0034",
+        "E-0035"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-0b02b6d1",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "edge_refs": [
+        "E-0036"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-0f4d0fcd",
+      "entry_screen_refs": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "edge_refs": [
+        "E-0037"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-6771c0b3",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0038"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-69504b45",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0039"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-4a38f0de",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "edge_refs": [
+        "E-0040"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-26d6afdd",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0041"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-d00464bf",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0042"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-083f5434",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0043"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-fbf48ce7",
+      "entry_screen_refs": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0044"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-d3d27c52",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0045",
+        "E-0046"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-d3efa9f6",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0047",
+        "E-0048"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-ccd6c1bb",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0049",
+        "E-0050"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-155f546e",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0051"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-130159bc",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0052"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-ed2efd9e",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0053"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-8d4b7217",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "edge_refs": [
+        "E-0054"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-2c40057c",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0055"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-0b41140c",
+      "entry_screen_refs": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0056",
+        "E-0057"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-settingspage-695469fc",
+      "entry_screen_refs": [
+        "SCR-component-settingspage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "edge_refs": [
+        "E-0058"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-5bf664e5",
+      "entry_screen_refs": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0059",
+        "E-0060"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-5aba1e3a",
+      "entry_screen_refs": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0061"
+      ]
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-06490a15",
+      "entry_screen_refs": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "edge_refs": [
+        "E-0062"
+      ]
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-d2fcb9f4",
+      "entry_screen_refs": [
+        "SCR-frontend-src-features-main-pages-main-page"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0063",
+        "E-0064"
+      ]
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+      "entry_screen_refs": [
+        "SCR-frontend-src-features-main-pages-main-page"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "edge_refs": [
+        "E-0065",
+        "E-0066"
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "workflow_ref": "WF-component-businesspage-0ada3322",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0017"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-40d5175b",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0010"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-547a1466",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0011"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-5c765240",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0008"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-664cad1d",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0007"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-664cad1d",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0006",
+        "E-0007"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-6d777bfb",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0003"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7ec9352e",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0020"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0015"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0014"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-86c2ff8c",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0016"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-86dffaba",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0002"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8b2611d2",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0005"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8d384820",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0009"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-8d514a88",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0001"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-a4a53abb",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0013"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-a4a53abb",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0012"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-bd399e7b",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0004"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-d378820a",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0019"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-businesspage-e76552a4",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0018"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-104bdb2f",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0021"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-5199dbef",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0024"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-8dc58904",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0022"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginformpage-aef66388",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0023"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-24d62594",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0028"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-e5ed79c1",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0025"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-f3dfe66b",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0027"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-loginpage-f3dfe66b",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0026"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-0b02b6d1",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0036"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-0f4d0fcd",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0037"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-275bc2d0",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0033"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-2b4dbe33",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0031"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-4e38e24f",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0032"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-c55225a4",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0030"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-c55225a4",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0029"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-cef3c5df",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0035"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-mainpage-cef3c5df",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0034"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-083f5434",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0043"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-26d6afdd",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0041"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-4a38f0de",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0040"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-6771c0b3",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0038"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-69504b45",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0039"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-d00464bf",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0042"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-parseddbpage-fbf48ce7",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0044"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-0b41140c",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0057"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-0b41140c",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0056"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-130159bc",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0052"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-155f546e",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0051"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-2c40057c",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0055"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-8d4b7217",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0054"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-ccd6c1bb",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0050"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-ccd6c1bb",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0049"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-d3d27c52",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0046"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-d3d27c52",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0045"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-d3efa9f6",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0048"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-d3efa9f6",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0047"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-scenariopage-ed2efd9e",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0053"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-settingspage-695469fc",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0058"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-06490a15",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0062"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-5aba1e3a",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0061"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-5bf664e5",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0060"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-component-uploadpage-5bf664e5",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0059",
+        "E-0060"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0066"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0065"
+      ],
+      "feasibility": "source-supported"
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-d2fcb9f4",
+      "kind": "normal",
+      "edge_refs": [
+        "E-0064"
+      ],
+      "feasibility": "runtime-unverified"
+    },
+    {
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-d2fcb9f4",
+      "kind": "exception",
+      "edge_refs": [
+        "E-0063"
+      ],
+      "feasibility": "source-supported"
+    }
+  ],
+  "coverage": {
+    "total_obligations": 66,
+    "linked_obligations": 66,
+    "by_scope": {
+      "journey": {
+        "total": 48,
+        "linked": 48,
+        "unresolved": 0
+      },
+      "view": {
+        "total": 18,
+        "linked": 18,
+        "unresolved": 0
+      }
+    },
+    "source_supported": {
+      "total": 49,
+      "linked": 49
+    },
+    "runtime_unverified": {
+      "total": 17,
+      "linked": 17
+    }
+  },
+  "unresolved_obligations": [],
+  "unknown_edge_claims": []
+}

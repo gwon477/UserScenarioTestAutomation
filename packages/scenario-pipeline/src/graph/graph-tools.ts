@@ -609,10 +609,57 @@ export function compileScenarioSet(facts: FactBundle, wiki: WikiBundle): Scenari
   return { schema_version: 2, project_id: facts.project_id, analysis_run_id: facts.analysis_run_id, source_snapshot_id: facts.source_snapshot_id, scenarios };
 }
 
-export function compileJourneyCompleteScenarios(facts: FactBundle, journeyLinks: JourneyWorkflowLinks): ScenarioRecord[] {
+const backNavigationMarker = (value: string): boolean =>
+  /(?:^|[^a-z0-9])(?:back|previous|return|cancel)(?:$|[^a-z0-9])/i.test(value) || /이전|뒤로|되돌|취소/.test(value);
+
+/**
+ * A scenario never walks a regression edge: replaying an earlier journey stage would let a
+ * scenario run without terminating. An edge regresses when its element is a back control, or,
+ * when a journey stage map is supplied, when it lands on a screen an earlier stage already owns.
+ * Termination itself is guaranteed by using each edge at most once; the stage map additionally
+ * keeps auto-inserted connectors from walking a journey backwards.
+ */
+export function isJourneyRegressionEdge(
+  edge: FactEdge,
+  facts: FactBundle,
+  stageByScreen: ReadonlyMap<string, number> = new Map(),
+): boolean {
+  const element = facts.screens.flatMap((screen) => screen.elements).find((entry) => entry.id === edge.on);
+  if (element && (backNavigationMarker(element.interaction.action_kind) || backNavigationMarker(element.label))) return true;
+  const from = stageByScreen.get(baseScreenId(edge.from));
+  const to = stageByScreen.get(baseScreenId(edge.to));
+  return from !== undefined && to !== undefined && to < from;
+}
+
+function journeyStageByScreen(journey: JourneyWorkflowLinks["journeys"][number], facts: FactBundle): Map<string, number> {
+  const edges = new Map(facts.edges.map((edge) => [edge.edge_id, edge] as const));
+  const stages = new Map<string, number>();
+  for (const milestone of [...journey.milestones].sort((left, right) => left.position - right.position)) {
+    for (const edgeRef of milestone.edge_refs) {
+      const edge = edges.get(edgeRef);
+      if (!edge) continue;
+      for (const screen of [baseScreenId(edge.from), baseScreenId(edge.to)]) {
+        if (!stages.has(screen)) stages.set(screen, milestone.position);
+      }
+    }
+  }
+  return stages;
+}
+
+export type JourneyWalkAudit = {
+  journey_ref: string;
+  complete: boolean;
+  path: string[];
+  break?: { at_screen: string; next_edge_ref: string; next_from_screen: string };
+};
+
+/**
+ * Walks one journey's milestone edges the way a scenario runs it: forward only, each edge at most
+ * once. Reports where the walk stops so the linking stage can say which milestone cannot be reached
+ * instead of silently producing a journey nobody can run.
+ */
+function planJourneyWalk(facts: FactBundle, journey: JourneyWorkflowLinks["journeys"][number]): JourneyWalkAudit {
   const edges = new Map(facts.edges.map((edge) => [edge.edge_id, edge]));
-  const elements = new Map(facts.screens.flatMap((screen) => screen.elements.map((element) => [element.id, element] as const)));
-  const feedback = new Map(facts.screens.flatMap((screen) => screen.feedback.map((item) => [item.id, item] as const)));
   const origins = shellOriginScreens(facts);
   const normalOutgoing = new Map<string, FactEdge[]>();
   for (const edge of [...facts.edges].filter((entry) => entry.kind === "normal").sort((left, right) => left.edge_id.localeCompare(right.edge_id))) {
@@ -620,7 +667,8 @@ export function compileJourneyCompleteScenarios(facts: FactBundle, journeyLinks:
     normalOutgoing.set(from, [...(normalOutgoing.get(from) ?? []), edge]);
   }
   const reachableFrom = (screen: string): FactEdge[] => (origins.get(screen) ?? [screen]).flatMap((origin) => normalOutgoing.get(origin) ?? []);
-  const bridge = (from: string, to: string): string[] | undefined => {
+  const stageByScreen = journeyStageByScreen(journey, facts);
+  const bridge = (from: string, to: string, used: ReadonlySet<string>): string[] | undefined => {
     if (from === to) return [];
     const seen = new Set([from]);
     const queue: Array<{ screen: string; path: string[] }> = [{ screen: from, path: [] }];
@@ -628,7 +676,7 @@ export function compileJourneyCompleteScenarios(facts: FactBundle, journeyLinks:
       const { screen, path } = queue.shift()!;
       for (const edge of reachableFrom(screen)) {
         const target = baseScreenId(edge.to);
-        if (seen.has(target)) continue;
+        if (seen.has(target) || used.has(edge.edge_id) || isJourneyRegressionEdge(edge, facts, stageByScreen)) continue;
         const next = [...path, edge.edge_id];
         if (target === to) return next;
         seen.add(target);
@@ -637,32 +685,58 @@ export function compileJourneyCompleteScenarios(facts: FactBundle, journeyLinks:
     }
     return undefined;
   };
+  const ordered = [...journey.milestones].sort((left, right) => left.position - right.position);
+  const sequence: string[] = [];
+  for (const edgeRef of ordered.flatMap((milestone) => milestone.edge_refs)) {
+    if (sequence.at(-1) !== edgeRef) sequence.push(edgeRef);
+  }
+  const deadEndDetour = (edge: FactEdge, index: number): boolean => {
+    const target = baseScreenId(edge.to);
+    if (index === sequence.length - 1 || target === baseScreenId(edge.from)) return false;
+    return !sequence.slice(index + 1).some((laterRef) => {
+      const later = edges.get(laterRef);
+      return later ? (origins.get(baseScreenId(later.from)) ?? [baseScreenId(later.from)]).includes(target) : false;
+    });
+  };
+  const path: string[] = [];
+  const used = new Set<string>();
+  let screen: string | undefined;
+  for (const [index, edgeRef] of sequence.entries()) {
+    const edge = edges.get(edgeRef);
+    if (!edge) throw new Error(`JOURNEY_SCENARIO_EDGE_UNKNOWN:${journey.journey_ref}:${edgeRef}`);
+    if (used.has(edgeRef) || isJourneyRegressionEdge(edge, facts) || deadEndDetour(edge, index)) continue;
+    const from = baseScreenId(edge.from);
+    screen ??= from;
+    if (!(origins.get(screen) ?? [screen]).includes(from) && screen === baseScreenId(edge.to)) continue;
+    if (!(origins.get(screen) ?? [screen]).includes(from)) {
+      const connector = bridge(screen, from, used);
+      if (!connector) {
+        return { journey_ref: journey.journey_ref, complete: false, path, break: { at_screen: screen, next_edge_ref: edgeRef, next_from_screen: from } };
+      }
+      connector.forEach((id) => { path.push(id); used.add(id); });
+    }
+    path.push(edgeRef);
+    used.add(edgeRef);
+    screen = baseScreenId(edge.to);
+  }
+  return { journey_ref: journey.journey_ref, complete: path.length > 0, path };
+}
+
+export function auditJourneyWalkability(facts: FactBundle, journeyLinks: JourneyWorkflowLinks): JourneyWalkAudit[] {
+  return journeyLinks.journeys.map((journey) => planJourneyWalk(facts, journey));
+}
+
+export function compileJourneyCompleteScenarios(facts: FactBundle, journeyLinks: JourneyWorkflowLinks): ScenarioRecord[] {
+  const edges = new Map(facts.edges.map((edge) => [edge.edge_id, edge]));
+  const elements = new Map(facts.screens.flatMap((screen) => screen.elements.map((element) => [element.id, element] as const)));
+  const feedback = new Map(facts.screens.flatMap((screen) => screen.feedback.map((item) => [item.id, item] as const)));
 
   const scenarios: ScenarioRecord[] = [];
   for (const journey of journeyLinks.journeys) {
+    const walk = planJourneyWalk(facts, journey);
+    if (!walk.complete) continue;
     const ordered = [...journey.milestones].sort((left, right) => left.position - right.position);
-    const sequence: string[] = [];
-    for (const edgeRef of ordered.flatMap((milestone) => milestone.edge_refs)) {
-      if (sequence.at(-1) !== edgeRef) sequence.push(edgeRef);
-    }
-    const pathEdgeIds: string[] = [];
-    let screen: string | undefined;
-    let complete = true;
-    for (const edgeRef of sequence) {
-      const edge = edges.get(edgeRef);
-      if (!edge) throw new Error(`JOURNEY_SCENARIO_EDGE_UNKNOWN:${journey.journey_ref}:${edgeRef}`);
-      const from = baseScreenId(edge.from);
-      screen ??= from;
-      if (!(origins.get(screen) ?? [screen]).includes(from)) {
-        const connector = bridge(screen, from);
-        if (!connector) { complete = false; break; }
-        connector.forEach((id) => pathEdgeIds.push(id));
-      }
-      pathEdgeIds.push(edgeRef);
-      screen = baseScreenId(edge.to);
-    }
-    if (!complete || !pathEdgeIds.length) continue;
-
+    const pathEdgeIds = walk.path;
     const pathEdges = pathEdgeIds.map((id) => edges.get(id)!);
     const state = new Map<string, string>();
     const requirements = new Map<string, { text: string; predicate: string }>();
@@ -722,6 +796,7 @@ export function compileJourneyScenarioBindings(
   skeleton: ScenarioSkeleton,
   journeyLinks: JourneyWorkflowLinks,
   inventory: GuardedPathInventory,
+  facts?: FactBundle,
 ): JourneyScenarioBindings {
   const identity = [skeleton.project_id, skeleton.analysis_run_id, skeleton.source_snapshot_id];
   if ([journeyLinks, inventory].some((artifact) => [artifact.project_id, artifact.analysis_run_id, artifact.source_snapshot_id]
@@ -730,11 +805,20 @@ export function compileJourneyScenarioBindings(
   }
   const knownWorkflows = new Set(skeleton.scenarios.map((scenario) => scenario.workflow));
   const edgeFeasibility = new Map(inventory.edges.map((edge) => [edge.edge_ref, edge.feasibility]));
+  // A milestone the journey walk drops is not part of the journey a user can run, so a scenario must
+  // not be reported as belonging to it. Without facts the walk cannot be replayed and every declared
+  // milestone still binds, which keeps older callers working.
+  const walkedEdgeRefs = facts
+    ? new Map(auditJourneyWalkability(facts, journeyLinks).map((audit) => [audit.journey_ref, new Set(audit.path)]))
+    : undefined;
   const milestoneByWorkflow = new Map<string, Array<{ journey_ref: string; journey_kind: "normal" | "recovery"; milestone_position: number; phase: string }>>();
   for (const journey of journeyLinks.journeys) {
+    const walked = walkedEdgeRefs?.get(journey.journey_ref);
     for (const milestone of journey.milestones) {
+      const dropped = walked !== undefined && !milestone.edge_refs.some((edgeRef) => walked.has(edgeRef));
       for (const workflowRef of milestone.workflow_refs) {
         if (!knownWorkflows.has(workflowRef)) throw new Error(`SCENARIO_JOURNEY_BINDING_WORKFLOW_INVALID:${workflowRef}`);
+        if (dropped) continue;
         milestoneByWorkflow.set(workflowRef, [...(milestoneByWorkflow.get(workflowRef) ?? []), {
           journey_ref: journey.journey_ref,
           journey_kind: journey.kind,

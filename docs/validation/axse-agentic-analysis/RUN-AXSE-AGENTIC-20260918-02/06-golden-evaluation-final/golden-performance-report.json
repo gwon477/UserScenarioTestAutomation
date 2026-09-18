@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "report_type": "golden-evaluation-performance",
+  "run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "evaluation_policy": "success-first-v1",
+  "product_stage_acceptance": "not-attempted",
+  "evaluated_generation": {
+    "immutable": true,
+    "candidate_hash": "sha256:e8f28332b4ade05cdea900d13c0c8052d2cac73eef8005c4b3de0c6eeefdd4bf",
+    "scenario_artifact_hash": "sha256:8024f4b2b52d6d200accf30299a1637b5585cc31061ecae40a5e02ada2cdd5fd",
+    "candidate_counts": {
+      "classifications": 6,
+      "workflows": 53,
+      "journeys": 2,
+      "scenarios": 68
+    }
+  },
+  "metrics": {
+    "classification_recall": 1,
+    "workflow_recall": 0.9166666666666666,
+    "required_journey_recall": 1,
+    "success_scenario_recall": 0.5454545454545454,
+    "matched_success_scenarios": 12,
+    "total_success_scenarios": 22,
+    "resilience_scenario_recall_advisory": 0.1875,
+    "matched_resilience_scenarios": 3,
+    "total_resilience_scenarios": 16,
+    "unweighted_scenario_recall_reference": 0.39473684210526316
+  },
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "success_scenario_recall": 0.8,
+    "resilience_scenario_recall": "advisory",
+    "required_journey_recall": 1
+  },
+  "passed": false,
+  "remaining_success_golden_refs": [
+    "AXSE2-SCN-005",
+    "AXSE2-SCN-009",
+    "AXSE2-SCN-015",
+    "AXSE2-SCN-016",
+    "AXSE2-SCN-019",
+    "AXSE2-SCN-023",
+    "AXSE2-SCN-024",
+    "AXSE2-SCN-029",
+    "AXSE2-SCN-033",
+    "AXSE2-SCN-038"
+  ],
+  "work_performed": [
+    {
+      "sequence": 1,
+      "operation": "backend.input.validate",
+      "result": "ok"
+    },
+    {
+      "sequence": 2,
+      "operation": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-taxonomy-journey-assessment"
+    },
+    {
+      "sequence": 3,
+      "operation": "analysis.writeArtifact",
+      "result": "rejected",
+      "artifact_id": "06-golden-scenario-assessment"
+    },
+    {
+      "sequence": 4,
+      "operation": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "06-golden-scenario-assessment"
+    }
+  ]
+}

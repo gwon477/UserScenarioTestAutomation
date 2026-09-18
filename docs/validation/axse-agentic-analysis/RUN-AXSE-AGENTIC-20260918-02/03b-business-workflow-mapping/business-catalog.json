@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "classifications": [
+    {
+      "classification_id": "BC-0F15A2CA5711",
+      "label": "프로젝트 작업공간 진입",
+      "workflow_refs": [
+        "WF-component-loginformpage-104bdb2f",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-8dc58904",
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginpage-24d62594",
+        "WF-component-loginpage-e5ed79c1",
+        "WF-component-loginpage-f3dfe66b",
+        "WF-component-mainpage-2b4dbe33"
+      ],
+      "edge_refs": [
+        "E-0021",
+        "E-0022",
+        "E-0023",
+        "E-0024",
+        "E-0025",
+        "E-0026",
+        "E-0027",
+        "E-0028",
+        "E-0031"
+      ]
+    },
+    {
+      "classification_id": "BC-1C61B3D1728A",
+      "label": "시나리오 테스트 케이스 생성 및 추적",
+      "workflow_refs": [
+        "WF-component-businesspage-664cad1d",
+        "WF-component-businesspage-a4a53abb",
+        "WF-component-scenariopage-0b41140c",
+        "WF-component-scenariopage-130159bc",
+        "WF-component-scenariopage-155f546e",
+        "WF-component-scenariopage-2c40057c",
+        "WF-component-scenariopage-8d4b7217",
+        "WF-component-scenariopage-ccd6c1bb",
+        "WF-component-scenariopage-d3d27c52",
+        "WF-component-scenariopage-d3efa9f6",
+        "WF-component-scenariopage-ed2efd9e",
+        "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+        "WF-frontend-src-features-main-pages-main-page-d2fcb9f4"
+      ],
+      "edge_refs": [
+        "E-0006",
+        "E-0007",
+        "E-0012",
+        "E-0013",
+        "E-0045",
+        "E-0046",
+        "E-0047",
+        "E-0048",
+        "E-0049",
+        "E-0050",
+        "E-0051",
+        "E-0052",
+        "E-0053",
+        "E-0054",
+        "E-0055",
+        "E-0056",
+        "E-0057",
+        "E-0063",
+        "E-0064",
+        "E-0065",
+        "E-0066"
+      ]
+    },
+    {
+      "classification_id": "BC-373C48884CFD",
+      "label": "TS 문서 파싱 준비",
+      "workflow_refs": [
+        "WF-component-mainpage-0f4d0fcd",
+        "WF-component-mainpage-275bc2d0",
+        "WF-component-mainpage-4e38e24f",
+        "WF-component-mainpage-c55225a4",
+        "WF-component-mainpage-cef3c5df",
+        "WF-component-parseddbpage-4a38f0de",
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a",
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "edge_refs": [
+        "E-0029",
+        "E-0030",
+        "E-0032",
+        "E-0033",
+        "E-0034",
+        "E-0035",
+        "E-0037",
+        "E-0040",
+        "E-0059",
+        "E-0060",
+        "E-0061",
+        "E-0062"
+      ]
+    },
+    {
+      "classification_id": "BC-3A6BA1E7B204",
+      "label": "시나리오 생성 출력 환경설정",
+      "workflow_refs": [
+        "WF-component-businesspage-0ada3322",
+        "WF-component-businesspage-7eded949",
+        "WF-component-businesspage-d378820a",
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-settingspage-695469fc"
+      ],
+      "edge_refs": [
+        "E-0014",
+        "E-0015",
+        "E-0017",
+        "E-0019",
+        "E-0036",
+        "E-0058"
+      ]
+    },
+    {
+      "classification_id": "BC-98ABFD17068D",
+      "label": "파싱 업무흐름 검증",
+      "workflow_refs": [
+        "WF-component-businesspage-40d5175b",
+        "WF-component-businesspage-547a1466",
+        "WF-component-businesspage-5c765240",
+        "WF-component-businesspage-6d777bfb",
+        "WF-component-businesspage-7ec9352e",
+        "WF-component-businesspage-86dffaba",
+        "WF-component-businesspage-8b2611d2",
+        "WF-component-businesspage-8d384820",
+        "WF-component-businesspage-8d514a88",
+        "WF-component-businesspage-bd399e7b",
+        "WF-component-businesspage-e76552a4",
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "edge_refs": [
+        "E-0001",
+        "E-0002",
+        "E-0003",
+        "E-0004",
+        "E-0005",
+        "E-0008",
+        "E-0009",
+        "E-0010",
+        "E-0011",
+        "E-0018",
+        "E-0020",
+        "E-0043"
+      ]
+    },
+    {
+      "classification_id": "BC-D9F407DE9A7B",
+      "label": "파싱 데이터 조회 범위 제어",
+      "workflow_refs": [
+        "WF-component-businesspage-86c2ff8c",
+        "WF-component-parseddbpage-26d6afdd",
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-parseddbpage-69504b45",
+        "WF-component-parseddbpage-d00464bf",
+        "WF-component-parseddbpage-fbf48ce7"
+      ],
+      "edge_refs": [
+        "E-0016",
+        "E-0038",
+        "E-0039",
+        "E-0041",
+        "E-0042",
+        "E-0044"
+      ]
+    }
+  ]
+}

@@ -254,7 +254,7 @@ async function run() {
       const deterministicDraft = scenarioSetFromSkeleton(scenarioSkeleton);
       const draftValidation = validateScenarioSet(deterministicDraft, facts.value, wiki.value, deterministicDraft);
       if (!draftValidation.valid) throw new Error(draftValidation.issues[0].code);
-      const journeyBindings = compileJourneyScenarioBindings(scenarioSkeleton, journeyLinks.value, inventory.value);
+      const journeyBindings = compileJourneyScenarioBindings(scenarioSkeleton, journeyLinks.value, inventory.value, facts.value);
       let priorNarrationPatch;
       let priorNarratedScenarios;
       let narrationDraft = deterministicDraft;

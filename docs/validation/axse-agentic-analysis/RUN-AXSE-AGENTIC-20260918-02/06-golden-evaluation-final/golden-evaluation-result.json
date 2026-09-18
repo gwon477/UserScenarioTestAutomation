@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "model_id": "gpt-5.6-luna",
+  "evaluation_scope": "external-golden-read-only",
+  "product_stage_acceptance": "not-attempted",
+  "generation_artifact_immutable": true,
+  "thresholds": {
+    "semantic_match": 0.7,
+    "classification_recall": 0.8,
+    "workflow_recall": 0.8,
+    "success_scenario_recall": 0.8,
+    "resilience_scenario_recall": "advisory",
+    "required_journey_recall": 1
+  },
+  "counts": {
+    "golden": {
+      "classifications": 6,
+      "workflows": 12,
+      "transitions": 15,
+      "scenarios": 38,
+      "journeys": 2
+    },
+    "candidate": {
+      "classifications": 6,
+      "workflows": 53,
+      "journeys": 2,
+      "scenarios": 68
+    }
+  },
+  "taxonomy_journey": {
+    "passed": false,
+    "classificationRecall": 1,
+    "workflowRecall": 0.9166666666666666,
+    "requiredJourneyRecall": 1,
+    "criticalGaps": [
+      "AXSE2-WF-008에 해당하는 파싱 완료 문서 교체의 다시 업로드·다시 선택·취소 흐름이 독립적으로 충분히 표현되지 않았다.",
+      "AXSE2-J-001과 AXSE2-J-002 모두 골든 경로의 최종 로그아웃 단계를 exit에 포함하지 않아 필수 E2E 종료 handoff가 누락되었다.",
+      "AXSE2-J-002는 후보 워크플로에서 직접 뒷받침되지 않는 비UTF-8 파일 거부를 명시해 recovery 실패 원인에 materially ungrounded한 주장이 있다."
+    ]
+  },
+  "scenario": {
+    "passed": false,
+    "successScenarioRecall": 0.5454545454545454,
+    "matchedSuccessScenarioCount": 12,
+    "totalSuccessScenarios": 22,
+    "unmatchedSuccessScenarioIds": [
+      "AXSE2-SCN-005",
+      "AXSE2-SCN-009",
+      "AXSE2-SCN-015",
+      "AXSE2-SCN-016",
+      "AXSE2-SCN-019",
+      "AXSE2-SCN-023",
+      "AXSE2-SCN-024",
+      "AXSE2-SCN-029",
+      "AXSE2-SCN-033",
+      "AXSE2-SCN-038"
+    ],
+    "resilienceScenarioRecall": 0.1875,
+    "matchedResilienceScenarioCount": 3,
+    "totalResilienceScenarios": 16,
+    "unmatchedResilienceScenarioIds": [
+      "AXSE2-SCN-003",
+      "AXSE2-SCN-004",
+      "AXSE2-SCN-007",
+      "AXSE2-SCN-008",
+      "AXSE2-SCN-010",
+      "AXSE2-SCN-018",
+      "AXSE2-SCN-020",
+      "AXSE2-SCN-021",
+      "AXSE2-SCN-022",
+      "AXSE2-SCN-026",
+      "AXSE2-SCN-028",
+      "AXSE2-SCN-036",
+      "AXSE2-SCN-037"
+    ],
+    "assessmentIssues": []
+  },
+  "unweighted_scenario_reference": {
+    "passed": false,
+    "scenarioRecall": 0.39473684210526316,
+    "matchedScenarioCount": 15,
+    "totalGoldenScenarios": 38,
+    "unmatchedGoldenScenarioIds": [
+      "AXSE2-SCN-003",
+      "AXSE2-SCN-004",
+      "AXSE2-SCN-005",
+      "AXSE2-SCN-007",
+      "AXSE2-SCN-008",
+      "AXSE2-SCN-009",
+      "AXSE2-SCN-010",
+      "AXSE2-SCN-015",
+      "AXSE2-SCN-016",
+      "AXSE2-SCN-018",
+      "AXSE2-SCN-019",
+      "AXSE2-SCN-020",
+      "AXSE2-SCN-021",
+      "AXSE2-SCN-022",
+      "AXSE2-SCN-023",
+      "AXSE2-SCN-024",
+      "AXSE2-SCN-026",
+      "AXSE2-SCN-028",
+      "AXSE2-SCN-029",
+      "AXSE2-SCN-033",
+      "AXSE2-SCN-036",
+      "AXSE2-SCN-037",
+      "AXSE2-SCN-038"
+    ],
+    "criticalGaps": []
+  },
+  "feasibility": {
+    "source_supported_scenarios": 14,
+    "runtime_unverified_scenarios": 54,
+    "boundary_generation": "not-implemented-no-deterministic-boundary-obligation"
+  },
+  "passed": false,
+  "provenance": {
+    "golden_hash": "sha256:c7396786ea4966a5693d2e1d7f0d36a30e692cc236669d6b21f02665ba5f7fad",
+    "candidate_hash": "sha256:e8f28332b4ade05cdea900d13c0c8052d2cac73eef8005c4b3de0c6eeefdd4bf",
+    "classification_artifact_hash": "sha256:61ea726c2f8f3637c7c1eac2bf5f6e843000720bf8ede2f2af54349c60cdbc3a",
+    "fact_graph_artifact_hash": "sha256:4571a72a37d8669ed7d930dc38c184ae88a92dd594de1f5c3ca079fc973b9f08",
+    "business_workflow_mapping_artifact_hash": "sha256:1feb6abdd1121cc4782ae6efec9ac7072e813623a5d038f54b7ebc98cf2a3d71",
+    "journey_artifact_hash": "sha256:d1197eb598d7ad5c7671a8a8c32ad723322af8400f60bdccc80297be09b02696",
+    "user_journey_workflow_link_artifact_hash": "sha256:0ea56f1cc080eda1baac138f875289cadf292a6a1400f34c5f6f061d9ba5438c",
+    "scenario_artifact_hash": "sha256:8024f4b2b52d6d200accf30299a1637b5585cc31061ecae40a5e02ada2cdd5fd"
+  }
+}

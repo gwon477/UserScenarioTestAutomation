@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dea80353",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-USER-JOURNEYS",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-api-v1-projects-af57f10c",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "backend/app/api/v1/projects.py",
+      "start_line": 1,
+      "end_line": 46,
+      "content_hash": "sha256:0e9fe25d3731edad0a2e7899ed6f244e54a774e9e59b9375210bc4910d23bf33",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dea80353"
+    },
+    {
+      "source_id": "SRC-frontend-src-app-a0eba768",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "frontend/src/App.jsx",
+      "start_line": 1,
+      "end_line": 23,
+      "content_hash": "sha256:cd16062b2a6d3f9701f6b770d77e94790a90402094d86a64abcf3a639ffc757a",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dea80353"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "frontend/src/features/login/login-form.page.jsx",
+      "start_line": 1,
+      "end_line": 116,
+      "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dea80353"
+    },
+    {
+      "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "start_line": 1,
+      "end_line": 121,
+      "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dea80353"
+    },
+    {
+      "source_id": "SRC-frontend-src-store-feec9a9e",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "frontend/src/store.js",
+      "start_line": 1,
+      "end_line": 123,
+      "content_hash": "sha256:7d77adad48cb2ae4073fc988af0fb50c8ca8083345bcf7c756d2b98ae8140303",
+      "evidence_grant_id": "EVG-WORK-AXSE-USER-JOURNEYS-dea80353"
+    }
+  ],
+  "created_at": "2026-09-18T03:42:30.424Z"
+}

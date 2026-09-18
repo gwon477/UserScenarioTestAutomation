@@ -135,7 +135,7 @@ export function createFactCorrectionPlan(
           }
         });
       }
-      if (["FACT_SOURCE_BRANCH_REF_MISSING", "FACT_SOURCE_BRANCH_OUTCOME_MISMATCH", "FACT_SOURCE_BRANCH_UNSUPPORTED"].includes(issue.code)) {
+      if (["FACT_SOURCE_BRANCH_REF_MISSING", "FACT_SOURCE_BRANCH_OUTCOME_MISMATCH", "FACT_SOURCE_BRANCH_UNSUPPORTED", "FACT_SOURCE_BRANCH_DUPLICATE"].includes(issue.code)) {
         orderedEdges.forEach((edge, index) => {
           if (edge.on_element_ref === ref) {
             replaceEdgeIndexes.add(index);

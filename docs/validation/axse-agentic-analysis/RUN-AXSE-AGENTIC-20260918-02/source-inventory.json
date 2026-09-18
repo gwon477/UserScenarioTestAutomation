@@ -1,0 +1,1183 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "source_root_hash": "sha256:48c9939f0b87e06ef9132db9aba2c059c4c73d6d4168153a8b9cbf480509f838",
+  "ui_stacks": [
+    "react"
+  ],
+  "unsupported_ui_stacks": [],
+  "files": [
+    {
+      "source_ref": "SRC-backend-app-init-cdbaec5f",
+      "path": "backend/app/__init__.py",
+      "language": "py",
+      "size_bytes": 165,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-init-a90f22ea",
+      "path": "backend/app/agents/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-scenario-case-segmenter-545754ef",
+      "path": "backend/app/agents/scenario_case_segmenter.py",
+      "language": "py",
+      "size_bytes": 5103,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-scenario-generation-405a444a",
+      "path": "backend/app/agents/scenario_generation.py",
+      "language": "py",
+      "size_bytes": 1725,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-scenario-graph-0a1447c7",
+      "path": "backend/app/agents/scenario_graph.py",
+      "language": "py",
+      "size_bytes": 47862,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-scenario-prompts-8bb7dc1f",
+      "path": "backend/app/agents/scenario_prompts.py",
+      "language": "py",
+      "size_bytes": 33038,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-scenario-state-aa6cf08a",
+      "path": "backend/app/agents/scenario_state.py",
+      "language": "py",
+      "size_bytes": 3420,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-scenario-step-renderer-75653986",
+      "path": "backend/app/agents/scenario_step_renderer.py",
+      "language": "py",
+      "size_bytes": 2150,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-agents-scenario-validator-d37030b1",
+      "path": "backend/app/agents/scenario_validator.py",
+      "language": "py",
+      "size_bytes": 5718,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-init-aa4cc173",
+      "path": "backend/app/api/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-router-47ed9fbf",
+      "path": "backend/app/api/router.py",
+      "language": "py",
+      "size_bytes": 614,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-v1-init-43346677",
+      "path": "backend/app/api/v1/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-v1-auth-9d56dc7e",
+      "path": "backend/app/api/v1/auth.py",
+      "language": "py",
+      "size_bytes": 2192,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-v1-documents-52d5ce70",
+      "path": "backend/app/api/v1/documents.py",
+      "language": "py",
+      "size_bytes": 7928,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-v1-health-9a77cb47",
+      "path": "backend/app/api/v1/health.py",
+      "language": "py",
+      "size_bytes": 263,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-v1-projects-af57f10c",
+      "path": "backend/app/api/v1/projects.py",
+      "language": "py",
+      "size_bytes": 1274,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-v1-tasks-d0e77ec2",
+      "path": "backend/app/api/v1/tasks.py",
+      "language": "py",
+      "size_bytes": 7570,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-api-v1-workflows-d9740180",
+      "path": "backend/app/api/v1/workflows.py",
+      "language": "py",
+      "size_bytes": 9835,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-core-init-572d68e4",
+      "path": "backend/app/core/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-core-auth-7c627b43",
+      "path": "backend/app/core/auth.py",
+      "language": "py",
+      "size_bytes": 1232,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-core-config-c2a439a5",
+      "path": "backend/app/core/config.py",
+      "language": "py",
+      "size_bytes": 3725,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-core-observability-9824a45c",
+      "path": "backend/app/core/observability.py",
+      "language": "py",
+      "size_bytes": 3017,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-core-paths-a92e4061",
+      "path": "backend/app/core/paths.py",
+      "language": "py",
+      "size_bytes": 946,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-core-request-context-efea9401",
+      "path": "backend/app/core/request_context.py",
+      "language": "py",
+      "size_bytes": 5248,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-core-security-3b18f773",
+      "path": "backend/app/core/security.py",
+      "language": "py",
+      "size_bytes": 3414,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-db-init-5f425d11",
+      "path": "backend/app/db/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-db-init-db-e5d9c431",
+      "path": "backend/app/db/init_db.py",
+      "language": "py",
+      "size_bytes": 1380,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-db-session-3080691d",
+      "path": "backend/app/db/session.py",
+      "language": "py",
+      "size_bytes": 954,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-exporters-init-ab69c6a5",
+      "path": "backend/app/exporters/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-exporters-mapping-validation-csv-6a4f5d07",
+      "path": "backend/app/exporters/mapping_validation_csv.py",
+      "language": "py",
+      "size_bytes": 907,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-exporters-scenario-matrix-csv-c0846f48",
+      "path": "backend/app/exporters/scenario_matrix_csv.py",
+      "language": "py",
+      "size_bytes": 387,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-exporters-scenario-matrix-format-8a182121",
+      "path": "backend/app/exporters/scenario_matrix_format.py",
+      "language": "py",
+      "size_bytes": 2301,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-exporters-scenario-matrix-xlsx-b8aa5849",
+      "path": "backend/app/exporters/scenario_matrix_xlsx.py",
+      "language": "py",
+      "size_bytes": 1200,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-main-82608d38",
+      "path": "backend/app/main.py",
+      "language": "py",
+      "size_bytes": 6189,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-models-init-d5870c67",
+      "path": "backend/app/models/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-parsers-init-fb8dd591",
+      "path": "backend/app/parsers/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-parsers-axse-markdown-parser-2f78b7e0",
+      "path": "backend/app/parsers/axse_markdown_parser.py",
+      "language": "py",
+      "size_bytes": 57447,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-parsers-markdown-parser-321885bb",
+      "path": "backend/app/parsers/markdown_parser.py",
+      "language": "py",
+      "size_bytes": 1328,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-init-80e8bd18",
+      "path": "backend/app/repositories/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-agent-run-repository-2a114e66",
+      "path": "backend/app/repositories/agent_run_repository.py",
+      "language": "py",
+      "size_bytes": 11145,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-flow-context-repository-8b6d6cd7",
+      "path": "backend/app/repositories/flow_context_repository.py",
+      "language": "py",
+      "size_bytes": 8816,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-flow-scenario-repository-b7541f4a",
+      "path": "backend/app/repositories/flow_scenario_repository.py",
+      "language": "py",
+      "size_bytes": 4496,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-flow-test-case-repository-696283b9",
+      "path": "backend/app/repositories/flow_test_case_repository.py",
+      "language": "py",
+      "size_bytes": 8197,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-gen-progress-repository-4e00377a",
+      "path": "backend/app/repositories/gen_progress_repository.py",
+      "language": "py",
+      "size_bytes": 3637,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-projects-98a4df7f",
+      "path": "backend/app/repositories/projects.py",
+      "language": "py",
+      "size_bytes": 8969,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-scenario-repository-c0346a9c",
+      "path": "backend/app/repositories/scenario_repository.py",
+      "language": "py",
+      "size_bytes": 11348,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-task-repository-de16970d",
+      "path": "backend/app/repositories/task_repository.py",
+      "language": "py",
+      "size_bytes": 51618,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-repositories-workflow-repository-67f9eb29",
+      "path": "backend/app/repositories/workflow_repository.py",
+      "language": "py",
+      "size_bytes": 54858,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-scenariopipeline-init-53dd49c6",
+      "path": "backend/app/scenariopipeline/__init__.py",
+      "language": "py",
+      "size_bytes": 0,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-scenariopipeline-flow-scenario-extractor-cea327fc",
+      "path": "backend/app/scenariopipeline/flow_scenario_extractor.py",
+      "language": "py",
+      "size_bytes": 14067,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-scenariopipeline-flow-test-case-extractor-a5069739",
+      "path": "backend/app/scenariopipeline/flow_test_case_extractor.py",
+      "language": "py",
+      "size_bytes": 13446,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-schemas-init-25ab4227",
+      "path": "backend/app/schemas/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-schemas-common-d0ac160a",
+      "path": "backend/app/schemas/common.py",
+      "language": "py",
+      "size_bytes": 499,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-schemas-flow-scenario-908e4d6c",
+      "path": "backend/app/schemas/flow_scenario.py",
+      "language": "py",
+      "size_bytes": 1474,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-schemas-projects-90407093",
+      "path": "backend/app/schemas/projects.py",
+      "language": "py",
+      "size_bytes": 374,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-schemas-scenario-generation-917591af",
+      "path": "backend/app/schemas/scenario_generation.py",
+      "language": "py",
+      "size_bytes": 1928,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-schemas-tasks-5a02cdb5",
+      "path": "backend/app/schemas/tasks.py",
+      "language": "py",
+      "size_bytes": 2815,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-schemas-workflows-25aceaa8",
+      "path": "backend/app/schemas/workflows.py",
+      "language": "py",
+      "size_bytes": 5746,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-services-init-67036e9b",
+      "path": "backend/app/services/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-services-flow-scenario-service-1a04f66c",
+      "path": "backend/app/services/flow_scenario_service.py",
+      "language": "py",
+      "size_bytes": 5765,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-services-flow-test-case-service-a5c45458",
+      "path": "backend/app/services/flow_test_case_service.py",
+      "language": "py",
+      "size_bytes": 5736,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-services-project-service-ccb3ebd2",
+      "path": "backend/app/services/project_service.py",
+      "language": "py",
+      "size_bytes": 1495,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-services-scenario-generation-service-ec203d2a",
+      "path": "backend/app/services/scenario_generation_service.py",
+      "language": "py",
+      "size_bytes": 7312,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-services-task-service-1d73591d",
+      "path": "backend/app/services/task_service.py",
+      "language": "py",
+      "size_bytes": 11174,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-services-workflow-service-3f39109c",
+      "path": "backend/app/services/workflow_service.py",
+      "language": "py",
+      "size_bytes": 6375,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-app-tasks-init-bdb8a854",
+      "path": "backend/app/tasks/__init__.py",
+      "language": "py",
+      "size_bytes": 1,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-backend-run-ede0d98e",
+      "path": "backend/run.py",
+      "language": "py",
+      "size_bytes": 434,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-eslint-config-8b60be22",
+      "path": "frontend/eslint.config.js",
+      "language": "js",
+      "size_bytes": 568,
+      "imports": [
+        "@eslint/js",
+        "eslint-plugin-react-hooks",
+        "eslint-plugin-react-refresh",
+        "eslint/config",
+        "globals"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-package-da649826",
+      "path": "frontend/package.json",
+      "language": "json",
+      "size_bytes": 668,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-api-index-80f7e17c",
+      "path": "frontend/src/api/index.js",
+      "language": "js",
+      "size_bytes": 54,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-app-a0eba768",
+      "path": "frontend/src/App.jsx",
+      "language": "jsx",
+      "size_bytes": 667,
+      "imports": [
+        "./features/login/login-form.page.jsx",
+        "./features/login/login.page.jsx",
+        "./features/main/index.js",
+        "./store.js",
+        "react-redux"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-components-auth-wrapper-f89ad41a",
+      "path": "frontend/src/components/auth-wrapper.jsx",
+      "language": "jsx",
+      "size_bytes": 78,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "path": "frontend/src/features/login/login-form.page.jsx",
+      "language": "jsx",
+      "size_bytes": 3728,
+      "imports": [
+        "../../store.js",
+        "react",
+        "react-redux"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "path": "frontend/src/features/login/login.page.jsx",
+      "language": "jsx",
+      "size_bytes": 4124,
+      "imports": [
+        "../../services/index.js",
+        "../../store.js",
+        "react",
+        "react-redux"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-main-index-7a891d7b",
+      "path": "frontend/src/features/main/index.js",
+      "language": "js",
+      "size_bytes": 102,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-main-main-api-f877ad86",
+      "path": "frontend/src/features/main/main.api.js",
+      "language": "js",
+      "size_bytes": 9173,
+      "imports": [
+        "../parsed-db/index.js",
+        "../tasks/index.js",
+        "./data/mock-data.js"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "path": "frontend/src/features/main/pages/main.page.jsx",
+      "language": "jsx",
+      "size_bytes": 70328,
+      "imports": [
+        "../../../store.js",
+        "../../parsed-db/index.js",
+        "../../settings/index.js",
+        "../../shared/components/page-head.jsx",
+        "../../tasks/index.js",
+        "../../upload/index.js",
+        "../data/mock-data.js",
+        "../main.api.js",
+        "react",
+        "react-redux"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-parsed-db-index-601768bd",
+      "path": "frontend/src/features/parsed-db/index.js",
+      "language": "js",
+      "size_bytes": 109,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+      "language": "jsx",
+      "size_bytes": 12940,
+      "imports": [
+        "../../shared/components/page-head.jsx",
+        "../parsed-db.api.js",
+        "react"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-parsed-db-parsed-db-api-8aa4750b",
+      "path": "frontend/src/features/parsed-db/parsed-db.api.js",
+      "language": "js",
+      "size_bytes": 1828,
+      "imports": [
+        "../../services/auth-client.js"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-settings-index-f6531939",
+      "path": "frontend/src/features/settings/index.js",
+      "language": "js",
+      "size_bytes": 58,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "path": "frontend/src/features/settings/pages/settings.page.jsx",
+      "language": "jsx",
+      "size_bytes": 2682,
+      "imports": [
+        "../../shared/components/page-head.jsx",
+        "react"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-shared-components-auth-wrapper-7dc1d0a3",
+      "path": "frontend/src/features/shared/components/auth-wrapper.jsx",
+      "language": "jsx",
+      "size_bytes": 65,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-shared-components-page-head-74071f61",
+      "path": "frontend/src/features/shared/components/page-head.jsx",
+      "language": "jsx",
+      "size_bytes": 391,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-tasks-index-7e34c61e",
+      "path": "frontend/src/features/tasks/index.js",
+      "language": "js",
+      "size_bytes": 42,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20",
+      "path": "frontend/src/features/tasks/tasks.api.js",
+      "language": "js",
+      "size_bytes": 4470,
+      "imports": [
+        "../../services/auth-client.js"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-upload-index-1d515321",
+      "path": "frontend/src/features/upload/index.js",
+      "language": "js",
+      "size_bytes": 119,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "path": "frontend/src/features/upload/pages/upload.page.jsx",
+      "language": "jsx",
+      "size_bytes": 10105,
+      "imports": [
+        "../../shared/components/page-head.jsx",
+        "../upload.api.js",
+        "react"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-features-upload-upload-api-f7939e13",
+      "path": "frontend/src/features/upload/upload.api.js",
+      "language": "js",
+      "size_bytes": 1457,
+      "imports": [
+        "../../services/auth-client.js"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-index-41aed80f",
+      "path": "frontend/src/index.jsx",
+      "language": "jsx",
+      "size_bytes": 214,
+      "imports": [
+        "./app.jsx",
+        "react",
+        "react-dom/client"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-main-e8a2a5ac",
+      "path": "frontend/src/main.jsx",
+      "language": "jsx",
+      "size_bytes": 229,
+      "imports": [
+        "./App.jsx",
+        "./index.css",
+        "react",
+        "react-dom/client"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-services-auth-client-ca68acc1",
+      "path": "frontend/src/services/auth-client.js",
+      "language": "js",
+      "size_bytes": 840,
+      "imports": [
+        "../store.js"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-src-services-index-37920ca1",
+      "path": "frontend/src/services/index.js",
+      "language": "js",
+      "size_bytes": 73,
+      "imports": []
+    },
+    {
+      "source_ref": "SRC-frontend-src-store-feec9a9e",
+      "path": "frontend/src/store.js",
+      "language": "js",
+      "size_bytes": 2808,
+      "imports": [
+        "@reduxjs/toolkit"
+      ]
+    },
+    {
+      "source_ref": "SRC-frontend-vite-config-3ab42a14",
+      "path": "frontend/vite.config.js",
+      "language": "js",
+      "size_bytes": 328,
+      "imports": [
+        "@vitejs/plugin-react",
+        "vite"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "route": "component:LoginFormPage",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 5
+    },
+    {
+      "route": "component:LoginPage",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 6
+    },
+    {
+      "route": "component:BusinessPage",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 195
+    },
+    {
+      "route": "component:ScenarioPage",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1115
+    },
+    {
+      "route": "component:MainPage",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1435
+    },
+    {
+      "route": "component:ParsedDbPage",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 211
+    },
+    {
+      "route": "component:SettingsPage",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 4
+    },
+    {
+      "route": "component:UploadPage",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 35
+    }
+  ],
+  "apis": [
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 21
+    },
+    {
+      "method": "GET",
+      "path": "/api/projects",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 26
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "input",
+      "label": "아이디",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 78
+    },
+    {
+      "kind": "input",
+      "label": "패스워드",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 90
+    },
+    {
+      "kind": "button",
+      "label": "로그인 중… / 로그인",
+      "source_ref": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+      "line": 104
+    },
+    {
+      "kind": "button",
+      "label": "⏏ 로그아웃",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 70
+    },
+    {
+      "kind": "button",
+      "label": "조회 중… / ↺ 새로고침",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 71
+    },
+    {
+      "kind": "button",
+      "label": "button",
+      "source_ref": "SRC-frontend-src-features-login-login-page-24848ab2",
+      "line": 103
+    },
+    {
+      "kind": "button",
+      "label": "홈으로",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 98
+    },
+    {
+      "kind": "button",
+      "label": "테스트 시나리오",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 100
+    },
+    {
+      "kind": "button",
+      "label": "⏏ 로그아웃",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 104
+    },
+    {
+      "kind": "button",
+      "label": "↺ 새로고침",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 105
+    },
+    {
+      "kind": "button",
+      "label": "TS / TS 작업 없음 / ⌄",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 111
+    },
+    {
+      "kind": "button",
+      "label": "button",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 122
+    },
+    {
+      "kind": "button",
+      "label": "새로 생성",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 133
+    },
+    {
+      "kind": "button",
+      "label": "button",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 139
+    },
+    {
+      "kind": "button",
+      "label": "설정 / settings",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 151
+    },
+    {
+      "kind": "button",
+      "label": "이전",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 174
+    },
+    {
+      "kind": "button",
+      "label": "다음",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 176
+    },
+    {
+      "kind": "button",
+      "label": "이전",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 456
+    },
+    {
+      "kind": "button",
+      "label": "컨텍스트 큐브",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 460
+    },
+    {
+      "kind": "button",
+      "label": "카테고리 트리",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 461
+    },
+    {
+      "kind": "button",
+      "label": "전체 해제 / 전체 선택",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 467
+    },
+    {
+      "kind": "checkbox",
+      "label": "선택",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 481
+    },
+    {
+      "kind": "button",
+      "label": "흐름보기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 504
+    },
+    {
+      "kind": "button",
+      "label": "프리셋",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 512
+    },
+    {
+      "kind": "button",
+      "label": "전체 해제 / 전체 선택",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 530
+    },
+    {
+      "kind": "button",
+      "label": "CSV 생성 중 / CSV 내보내기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 567
+    },
+    {
+      "kind": "button",
+      "label": "요청 중 / 시나리오 · TC 도출",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 570
+    },
+    {
+      "kind": "button",
+      "label": "button",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 582
+    },
+    {
+      "kind": "button",
+      "label": "v / >",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 638
+    },
+    {
+      "kind": "checkbox",
+      "label": "선택",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 640
+    },
+    {
+      "kind": "checkbox",
+      "label": "선택",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 661
+    },
+    {
+      "kind": "button",
+      "label": "닫기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 731
+    },
+    {
+      "kind": "button",
+      "label": "닫기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 738
+    },
+    {
+      "kind": "button",
+      "label": "닫기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 867
+    },
+    {
+      "kind": "button",
+      "label": "닫기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 874
+    },
+    {
+      "kind": "button",
+      "label": "새로고침 / 결과 확인",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1033
+    },
+    {
+      "kind": "button",
+      "label": "이전",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1191
+    },
+    {
+      "kind": "button",
+      "label": "button",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1209
+    },
+    {
+      "kind": "input",
+      "label": "시나리오명 / 케이스명 검색",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1212
+    },
+    {
+      "kind": "button",
+      "label": "CSV 생성 중 / CSV 받기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1215
+    },
+    {
+      "kind": "button",
+      "label": "Excel 생성 중 / Excel 다운로드",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1218
+    },
+    {
+      "kind": "button",
+      "label": "케이스 상세 접기 / 케이스 상세 펼치기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1368
+    },
+    {
+      "kind": "button",
+      "label": "화면 접기 / 화면 개 더보기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1390
+    },
+    {
+      "kind": "button",
+      "label": "액션 접기 / 액션 개 더보기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1402
+    },
+    {
+      "kind": "button",
+      "label": "데이터 접기 / 데이터 개 더보기",
+      "source_ref": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+      "line": 1420
+    },
+    {
+      "kind": "button",
+      "label": "이전",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 30
+    },
+    {
+      "kind": "button",
+      "label": "다음",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 32
+    },
+    {
+      "kind": "button",
+      "label": "이전",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 304
+    },
+    {
+      "kind": "button",
+      "label": "button",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 318
+    },
+    {
+      "kind": "button",
+      "label": "업무 매핑",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 328
+    },
+    {
+      "kind": "input",
+      "label": "input",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 334
+    },
+    {
+      "kind": "button",
+      "label": "검색",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 340
+    },
+    {
+      "kind": "button",
+      "label": "초기화",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 12
+    },
+    {
+      "kind": "button",
+      "label": "저장",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 12
+    },
+    {
+      "kind": "button",
+      "label": "button",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 18
+    },
+    {
+      "kind": "checkbox",
+      "label": "checkbox",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 30
+    },
+    {
+      "kind": "select",
+      "label": "select",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 36
+    },
+    {
+      "kind": "button",
+      "label": "이동 중… / 다음 단계 →",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 147
+    },
+    {
+      "kind": "file",
+      "label": "OK / MD / 파싱 완료된 문서 / KB · UTF-8 / 이미 파싱이 완료된 상태입니다. / 선택됨 / 대기",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 179
+    },
+    {
+      "kind": "button",
+      "label": "다시 업로드",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 198
+    },
+    {
+      "kind": "button",
+      "label": "취소 / 다시 선택",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 208
+    },
+    {
+      "kind": "button",
+      "label": "업로드 및 파싱 시작",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 246
+    },
+    {
+      "kind": "button",
+      "label": "파싱 진행 중…",
+      "source_ref": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+      "line": 255
+    }
+  ]
+}

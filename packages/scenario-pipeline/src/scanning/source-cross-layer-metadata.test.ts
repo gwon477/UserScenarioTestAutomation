@@ -343,6 +343,28 @@ describe("evidenced business results keep a behavior resolvable", () => {
   });
 });
 
+describe("evidenced failure keeps a behavior resolvable", () => {
+  it("does not erase an action whose failure the source surfaces, when only its API client call is unresolved", async () => {
+    const root = await mkdtemp(join(tmpdir(), "scenarioforge-failure-"));
+    await mkdir(join(root, "src"), { recursive: true });
+    await writeFile(join(root, "src", "Upload.jsx"),
+      "export default function UploadPage(){\n"
+      + "  const [error, setError] = useState('');\n"
+      + "  const startParse = async () => {\n"
+      + "    try { await uploadApi.parseDocument(file); }\n"
+      + "    catch (e) { setError('파싱 중 오류가 발생했습니다.'); }\n"
+      + "  };\n"
+      + "  return <div><button onClick={startParse}>업로드 및 파싱 시작</button>{error ? <span>{error}</span> : null}</div>;\n"
+      + "}\n", "utf8");
+
+    const snapshot = await new SourceScanner().scan({ projectRoot: root, projectId: "PRJ-1", analysisRunId: "RUN-1", sourceSnapshotId: "SNAP-1", now: "2026-08-26T00:00:00.000Z" });
+    const behavior = snapshot.source_behaviors?.find((entry) => entry.explicit_failure);
+
+    expect(behavior).toBeDefined();
+    expect(behavior!.feasibility).not.toBe("unresolved");
+  });
+});
+
 describe("evidenced navigation keeps a behavior resolvable", () => {
   it("does not erase a literal screen navigation when only its backend endpoint is unresolved", async () => {
     const root = await mkdtemp(join(tmpdir(), "scenarioforge-nav-"));

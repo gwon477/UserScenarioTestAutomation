@@ -1,3 +1,4 @@
+// @scene a09385fe72d9
 // hand-written: the browser build needs window.showDirectoryPicker stubbed before '프로젝트 추가' (see demo/prelude.js)
 await registerSampleProject();
 // ---record---

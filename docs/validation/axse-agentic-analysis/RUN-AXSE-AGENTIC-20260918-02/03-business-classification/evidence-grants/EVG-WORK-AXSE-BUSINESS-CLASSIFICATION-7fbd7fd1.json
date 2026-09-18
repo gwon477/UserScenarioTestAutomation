@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-7fbd7fd1",
+  "project_id": "P-AXSE-AGENTIC",
+  "work_id": "WORK-AXSE-BUSINESS-CLASSIFICATION",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "evidence": [
+    {
+      "source_id": "SRC-backend-app-agents-scenario-validator-d37030b1",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "path": "backend/app/agents/scenario_validator.py",
+      "start_line": 1,
+      "end_line": 147,
+      "content_hash": "sha256:20716707b4027f65901715d9b91aed4d9d05a9d7e1f887e39ed60eb42cbc5bc4",
+      "evidence_grant_id": "EVG-WORK-AXSE-BUSINESS-CLASSIFICATION-7fbd7fd1"
+    }
+  ],
+  "created_at": "2026-09-18T02:14:34.822Z"
+}

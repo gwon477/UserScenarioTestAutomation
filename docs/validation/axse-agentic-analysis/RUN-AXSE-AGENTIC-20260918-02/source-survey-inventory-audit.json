@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "source_snapshot_ref": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "total_records": 73,
+  "covered_records": 59,
+  "missing_records": [
+    {
+      "kind": "route",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 211
+    },
+    {
+      "kind": "route",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 4
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 30
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 32
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 304
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 318
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 328
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 334
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "line": 340
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 12
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 12
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 18
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 30
+    },
+    {
+      "kind": "interaction",
+      "source_ref": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+      "line": 36
+    }
+  ],
+  "coverage_percent": 80.82
+}

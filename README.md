@@ -38,7 +38,7 @@
 
 ## 3. 진행 상황
 
-기준 시점 2026-09-18, 기준 run `RUN-AXSE-AGENTIC-20260918-01` ([상세 보고서](docs/reports/2026-09-18-complete-journey-milestone.md)).
+기준 시점 2026-09-18, 기준 run `RUN-AXSE-AGENTIC-20260918-02` ([상세 보고서](docs/reports/2026-09-18-complete-journey-milestone.md)).
 
 ### 생성 트랙
 
@@ -46,17 +46,31 @@ AXSE 대상에서 01~05 전 단계가 통과했고 **완결 사용자 여정 2/2
 
 | 지표 | 값 |
 | --- | --- |
-| FACT 그래프 | 화면 9, 요소 63, edge 56 |
-| 시나리오 | 58건 (정상 51, 예외 7) |
-| edge coverage | 56/56 (100%) |
+| FACT 그래프 | 화면 9, 요소 63, edge 66 |
+| 시나리오 | 68건 |
+| edge coverage | 100% |
 | 완결 여정 | 2/2, 미완결 0 |
+| 여정 연결 시나리오 | 27/68 (나머지 41건은 `journey_milestones: []`로 여정 밖 표시) |
 
 | 시나리오 | 종류 | step | 경로 |
 | --- | --- | --- | --- |
-| `SCN-JOURNEY-J001-001` | normal | 28 | loginform → login → main → upload → parsed-db → business → scenario |
-| `SCN-JOURNEY-J002-001` | exception | 22 | 동일 (업로드 실패·복구 포함) |
+| `SCN-JOURNEY-J001-001` | normal | 15 | loginform → login → main → upload → parsed-db → business → scenario |
+| `SCN-JOURNEY-J002-001` | exception | 17 | 동일 (업로드 파싱 실패 → 파일 재선택 복구 포함) |
 
-J001은 step 25~27에서 CSV·Excel을 내려받고 step 28에서 로그아웃합니다. 로그인부터 산출물 확보까지 한 경로로 이어집니다.
+로그인부터 CSV·Excel 확보까지 한 경로로 이어지고, 역행·중복 step이 없습니다.
+
+### 골든 평가 (v2 골든, 38 케이스 기준)
+
+| 지표 | 목표 | 세션 시작 | **현재** |
+| --- | --- | --- | --- |
+| 업무분류 recall | 80% | 100% | **100%** |
+| 업무흐름 recall | 80% | 90% | **91.7%** |
+| 필수 사용자 여정 | 100% | 50% | **100%** |
+| 성공 시나리오 recall | 80% | 25% | **54.5%** (12/22) |
+
+필수 사용자 여정 2/2를 처음으로 충족했습니다. 성공 recall은 목표 미달입니다.
+
+골든은 AXSE 소스를 직접 판독해 새로 작성했습니다([`docs/validation/golden`](docs/validation/golden)). 생성 결과는 참조하지 않았습니다 — 골든을 산출물에 맞추면 평가가 순환하기 때문입니다.
 
 > 모든 산출물은 `validation_scope: local-probe-contract-only`, `product_stage_acceptance: not-attempted`인 로컬 probe입니다. 제품 backend 등록은 시도하지 않았습니다.
 
@@ -66,7 +80,7 @@ AXSE·RA-DAR 두 대상에서 실제 모델 왕복으로 검증했습니다 ([�
 
 ## 4. 해결한 문제
 
-2026-09-17~18 세션에서 제품 결함 25건을 고쳤습니다. 전부 회귀 테스트를 동반합니다. 상세는 [보고서 3절](docs/reports/2026-09-18-complete-journey-milestone.md)에 있습니다.
+2026-09-17~18 세션에서 제품 결함 34건을 고쳤습니다. 전부 회귀 테스트를 동반합니다. 상세는 [보고서 3절](docs/reports/2026-09-18-complete-journey-milestone.md)에 있습니다.
 
 핵심은 **실패의 대부분이 모델 능력이 아니라 계약 쪽 문제였다**는 점입니다.
 
@@ -108,17 +122,25 @@ edge를 만들어도 위반, 안 만들어도 위반입니다. 여정 링크 단
 
 아이콘 전용 버튼의 라벨이 소실됐습니다(`title="홈으로"`, 본문 `=`인 버튼이 `=`로 기록). 또한 리터럴 화면 이동(`setPage("upload")`)이나 관측 결과(`stable_outcomes: ["downloaded"]`)가 증거로 있는 동작이, 같은 핸들러의 백엔드 호출 하나를 해석하지 못했다는 이유로 통째로 탈락했습니다. 불확실한 것은 백엔드 효과일 뿐 사용자가 보는 결과가 아니므로 `inferred`로 이월하게 고쳤습니다.
 
-### 4-7. 신규 검증 규칙 (2건)
+### 4-7. 신규 검증 규칙
 
 - `FACT_JOURNEY_ACTION_SELF_LOOP_ONLY` — 화면 이동을 자기 루프로 모델링하는 것을 거부합니다. CSV 다운로드처럼 제자리에서 결과를 남기는 정당한 종료는 통과합니다.
+- `USER_JOURNEY_WORKFLOW_LINK_UNWALKABLE` — 링크가 여정 경로를 만들지 못하면 끊기는 지점(현재 화면·다음 edge·출발 화면)을 알려줍니다.
 - 05 검증 산출물에 `journey_completion` 기록 — 완결 불가 여정을 컴파일러가 조용히 버리던 것을 드러냅니다.
+
+### 4-8. 역행 배제
+
+시나리오 테스트는 역행 경로를 다루지 않습니다. 역행을 허용하면 시나리오가 종료 없이 이어질 수 있기 때문입니다. edge 전역 1회 사용, 역행 컨트롤 제외, 막다른 우회 제외 세 규칙을 넣었습니다. J001 step 28 → 15, 중복 0, upload ↔ parsed-db 왕복 4회 → 0.
+
+경로 탐색은 `planJourneyWalk` 하나로 통일해 시나리오 컴파일·바인딩·04a 검증이 같은 판단을 씁니다. 이전에는 여정 실행 경로에 없는 단계가 바인딩에서는 여정 안으로 표시돼 산출물 안에서 두 표시가 어긋났습니다.
 
 ## 5. 해결해야 하는 문제
 
 | 항목 | 내용 |
 | --- | --- |
-| **골든 평가 미실행** | PoC 가설의 측정치입니다. 06 골든 평가를 현재 후보로 돌리지 않았습니다. 직전 측정값은 성공 시나리오 recall 50%(16/32), 목표 80% |
-| **경로 품질** | J001 step 6~16에서 upload ↔ parsed-db 왕복 4회, step 20 설정 화면 이탈, step 25·27 CSV 중복. 사람이 따라갈 여정이 아닙니다. milestone의 중복·역행 edge가 경로에 그대로 반영됩니다 |
+| **성공 recall 54.5%** | 목표 80%. 골든 38 케이스 중 12건만 의미적으로 덮습니다 |
+| **근거 없는 여정 서술** | 04가 "설정에서 … 저장한다"처럼 소스에 없는 업무를 milestone으로 씁니다. `저장`·`초기화`는 handler와 API가 없어 FACT에 edge가 0개입니다. 시나리오 케이스와 여정 실행 경로는 정확하고 서술 텍스트에만 남습니다 |
+| **종료 handoff** | 골든은 두 여정 모두 로그아웃을 exit에 포함하기를 요구하는데 후보 exit에 없습니다 |
 | **제품 등록 미시도** | 전 산출물이 로컬 probe입니다. `.scenarioforge` 제품 state는 여전히 `fact: failed`, progress 20% |
 | **단일 대상** | AXSE만 검증했습니다. RA-DAR 일반화 미확인 |
 | **수행 어댑터** | 웹만 구현. Windows·Android·iOS 없음 |
@@ -126,8 +148,8 @@ edge를 만들어도 위반, 안 만들어도 위반입니다. 여정 링크 단
 
 ### 다음 작업 순서
 
-1. 06 골든 평가를 `RUN-AXSE-AGENTIC-20260918-01`의 05 후보로 실행해 recall 측정
-2. 경로 품질 개선 — milestone edge 중복·역행 제거
+1. 04의 milestone 근거 검증 — 04가 FACT를 보지 않아 근거 없는 업무 서술을 사후 교정할 수 없습니다. 04의 입력 설계를 바꾸는 작업입니다
+2. 종료 handoff와 문서 교체 흐름 보강
 3. 제품 backend 등록 경로로 동일 결과 재현
 4. RA-DAR 일반화 확인
 
@@ -154,7 +176,7 @@ edge를 만들어도 위반, 안 만들어도 위반입니다. 여정 링크 단
 Node는 `package.json`의 engine 요구(`>=22.19.0`)를 만족해야 합니다. `node:sqlite`를 사용하므로 Node 20에서는 테스트가 실행되지 않습니다.
 
 ```sh
-npm test         # 197건
+npm test         # 277건
 npm run typecheck
 npm run build
 npm run dev      # Electron 앱

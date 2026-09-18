@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "journeys": [
+    {
+      "journey_ref": "J001",
+      "kind": "normal",
+      "title": "인증부터 검증된 시나리오와 테스트 케이스 추적성 매트릭스 활용까지의 정상 여정",
+      "feasibility": "runtime-unverified",
+      "milestones": [
+        {
+          "target_ref": "JM001",
+          "position": 1,
+          "phase": "entry",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-loginformpage-aef66388",
+            "WF-component-loginformpage-5199dbef",
+            "WF-component-loginformpage-8dc58904"
+          ],
+          "edge_refs": [
+            "E-0023",
+            "E-0024",
+            "E-0022"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM002",
+          "position": 2,
+          "phase": "entry",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-loginpage-e5ed79c1"
+          ],
+          "edge_refs": [
+            "E-0025"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM003",
+          "position": 3,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-mainpage-c55225a4",
+            "WF-component-mainpage-cef3c5df"
+          ],
+          "edge_refs": [
+            "E-0030",
+            "E-0035"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM004",
+          "position": 4,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5bf664e5"
+          ],
+          "edge_refs": [
+            "E-0062",
+            "E-0060"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM005",
+          "position": 5,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5aba1e3a"
+          ],
+          "edge_refs": [
+            "E-0062",
+            "E-0061"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM006",
+          "position": 6,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-parseddbpage-6771c0b3"
+          ],
+          "edge_refs": [
+            "E-0038"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM007",
+          "position": 7,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-parseddbpage-083f5434"
+          ],
+          "edge_refs": [
+            "E-0043"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM008",
+          "position": 8,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-mainpage-0b02b6d1"
+          ],
+          "edge_refs": [
+            "E-0036"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM009",
+          "position": 9,
+          "phase": "business-result",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-businesspage-40d5175b",
+            "WF-component-businesspage-664cad1d"
+          ],
+          "edge_refs": [
+            "E-0010",
+            "E-0007"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM010",
+          "position": 10,
+          "phase": "business-result",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-d3d27c52"
+          ],
+          "edge_refs": [
+            "E-0046"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM011",
+          "position": 11,
+          "phase": "exit",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-d3efa9f6",
+            "WF-component-scenariopage-ccd6c1bb"
+          ],
+          "edge_refs": [
+            "E-0048",
+            "E-0050"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    },
+    {
+      "journey_ref": "J002",
+      "kind": "recovery",
+      "title": "오류를 확인하고 정상 흐름에 재합류하는 인증부터 추적성 매트릭스 활용까지의 복구 여정",
+      "feasibility": "runtime-unverified",
+      "milestones": [
+        {
+          "target_ref": "JM012",
+          "position": 1,
+          "phase": "entry",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-loginformpage-aef66388",
+            "WF-component-loginformpage-5199dbef",
+            "WF-component-loginformpage-8dc58904"
+          ],
+          "edge_refs": [
+            "E-0023",
+            "E-0024",
+            "E-0022"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM013",
+          "position": 2,
+          "phase": "entry",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-loginpage-e5ed79c1"
+          ],
+          "edge_refs": [
+            "E-0025"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM014",
+          "position": 3,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-mainpage-c55225a4",
+            "WF-component-mainpage-cef3c5df"
+          ],
+          "edge_refs": [
+            "E-0030",
+            "E-0035"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM015",
+          "position": 4,
+          "phase": "failure",
+          "required_outcome": "exception",
+          "workflow_refs": [
+            "WF-component-uploadpage-5bf664e5"
+          ],
+          "edge_refs": [
+            "E-0059"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM016",
+          "position": 5,
+          "phase": "recovery",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5bf664e5"
+          ],
+          "edge_refs": [
+            "E-0062",
+            "E-0060"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM017",
+          "position": 6,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-parseddbpage-6771c0b3",
+            "WF-component-parseddbpage-083f5434"
+          ],
+          "edge_refs": [
+            "E-0038",
+            "E-0043"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "target_ref": "JM018",
+          "position": 7,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-mainpage-0b02b6d1"
+          ],
+          "edge_refs": [
+            "E-0036"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM019",
+          "position": 8,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-businesspage-40d5175b",
+            "WF-component-businesspage-664cad1d"
+          ],
+          "edge_refs": [
+            "E-0010",
+            "E-0007"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM020",
+          "position": 9,
+          "phase": "work",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-d3d27c52"
+          ],
+          "edge_refs": [
+            "E-0046"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM021",
+          "position": 10,
+          "phase": "business-result",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-0b41140c"
+          ],
+          "edge_refs": [
+            "E-0057"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "target_ref": "JM022",
+          "position": 11,
+          "phase": "exit",
+          "required_outcome": "normal",
+          "workflow_refs": [
+            "WF-component-scenariopage-d3efa9f6",
+            "WF-component-scenariopage-ccd6c1bb"
+          ],
+          "edge_refs": [
+            "E-0048",
+            "E-0050"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ]
+    }
+  ]
+}

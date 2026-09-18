@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "01-source-survey"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "orchestrator-gaps"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 9,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 10,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 11,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 12,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 13,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 14,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "permitted-source-metadata"
+    },
+    {
+      "sequence": 15,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 12000,
+      "effective_budget": 12000,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 16,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 3,
+      "resolved_ref_count": 3,
+      "requested_budget": 18000,
+      "effective_budget": 25942,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 17,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 14000,
+      "effective_budget": 14000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 18,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 3,
+      "resolved_ref_count": 3,
+      "requested_budget": 22000,
+      "effective_budget": 58683,
+      "omitted_ref_count": 1
+    },
+    {
+      "sequence": 19,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 1,
+      "requested_budget": 8000,
+      "effective_budget": 8000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 20,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review"
+    }
+  ]
+}

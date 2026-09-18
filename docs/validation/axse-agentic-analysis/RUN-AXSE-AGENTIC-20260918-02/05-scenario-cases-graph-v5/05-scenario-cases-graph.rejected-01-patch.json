@@ -1,0 +1,2290 @@
+{
+  "schema_version": 1,
+  "scenario_updates": [
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D514A88-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Apply the issue-view filter.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        },
+        {
+          "index": 4,
+          "text": "CSV export is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request the mapping-validation CSV download.",
+          "expected": "The business page remains shown; whether the CSV is downloaded is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        },
+        {
+          "index": 4,
+          "text": "CSV export is not in progress."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt the mapping-validation CSV download.",
+          "expected": "The exception path records a non-success outcome on the business page; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Open the preset generation or result view.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt to open the preset generation or result view.",
+          "expected": "The exception path records a non-success outcome on the business page; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Navigate back to the parsed database.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-0ADA3322-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the preset view.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-E76552A4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Open the context panel.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-D378820A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the flow text view.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-7EC9352E-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Open the category panel.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle all context-flow selections.",
+          "expected": "The business page remains shown and the toggle state changes; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle all category-flow selections.",
+          "expected": "The business page remains shown and the toggle state changes; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the flow text view.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        },
+        {
+          "index": 4,
+          "text": "At least one flow is selected."
+        },
+        {
+          "index": 5,
+          "text": "Scenario generation is not currently requested."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "The scenario page is shown; generation behavior is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        },
+        {
+          "index": 4,
+          "text": "At least one flow is selected."
+        },
+        {
+          "index": 5,
+          "text": "Scenario generation is not currently requested."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt scenario and test-case generation.",
+          "expected": "The recovery-role exception records a non-success outcome on the business page; runtime behavior is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Retry scenario and test-case generation.",
+          "expected": "The scenario page is shown if recovery succeeds; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-5C765240-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle the detail panel.",
+          "expected": "The business page remains shown and the panel state changes; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle flow selection.",
+          "expected": "The business page remains shown and the selection state changes; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle flow selection as a recovery action.",
+          "expected": "The business page remains shown and the selection state changes; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-BUSINESSPAGE-547A1466-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle flow selection.",
+          "expected": "The business page remains shown and the selection state changes; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form without the supplied prerequisites.",
+          "expected": "The login form remains shown and login is not successful; this source-supported exception is not a runtime execution result."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-8DC58904-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; this source-supported behavior is not a runtime execution result."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the user ID.",
+          "expected": "The login form remains shown; source support exists, but runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the password.",
+          "expected": "The login form remains shown; source support exists, but runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; source-supported behavior is not runtime execution."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Refresh the project list.",
+          "expected": "The login page remains shown; source support exists, but runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Attempt to refresh the project list.",
+          "expected": "The exception path records a non-success refresh outcome on the login page; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Log out.",
+          "expected": "The login form is shown; source-supported behavior is not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-C55225A4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Select the task.",
+          "expected": "The main page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-C55225A4-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Attempt to select the task.",
+          "expected": "The exception path records a non-success task-selection outcome on the main page; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Log out.",
+          "expected": "The login page is shown; source-supported behavior is not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate home.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Create a new task.",
+          "expected": "The main page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Attempt to create a new task.",
+          "expected": "The exception path records a non-success task-creation outcome on the main page; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "The settings page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Toggle the task menu.",
+          "expected": "The main page remains shown and the menu state changes; source-supported behavior is not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Change the parsed-data tab.",
+          "expected": "The parsed-database page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-69504B45-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to the previous database page.",
+          "expected": "The parsed-database page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate back to upload.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Search the parsed data.",
+          "expected": "The parsed-database page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-D00464BF-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        },
+        {
+          "index": 4,
+          "text": "The parsed-data page is valid."
+        },
+        {
+          "index": 5,
+          "text": "Another parsed-data page is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to the next database page.",
+          "expected": "The next parsed-data page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping as the recovery action.",
+          "expected": "The business page is shown if recovery succeeds; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-PARSEDDBPAGE-FBF48CE7-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Enter a parsed-data query.",
+          "expected": "The parsed-database page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-SETTINGSPAGE-695469FC-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "The settings page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the generation strategy.",
+          "expected": "The settings page remains shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Attempt upload and parsing.",
+          "expected": "The upload page remains shown and the failure is recorded; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Retry upload and parsing as recovery.",
+          "expected": "The parsed-database page is shown if recovery succeeds; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        },
+        {
+          "index": 2,
+          "text": "The upload is complete."
+        },
+        {
+          "index": 3,
+          "text": "No upload is currently being submitted."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to the parsed database.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-COMPONENT-UPLOADPAGE-06490A15-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "A user ID is available."
+        },
+        {
+          "index": 1,
+          "text": "A password is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the supplied parsed document.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The scenario-matrix page is valid."
+        },
+        {
+          "index": 1,
+          "text": "Another scenario-matrix page is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Go to the next scenario page.",
+          "expected": "The scenario page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The scenario-matrix page is valid."
+        },
+        {
+          "index": 1,
+          "text": "Another scenario-matrix page is available."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Attempt to go to the next scenario page.",
+          "expected": "The exception path records a non-success page change; source-supported behavior is not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The scenario-matrix page is valid."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Go to the previous scenario page.",
+          "expected": "The scenario page is shown; runtime behavior is unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-002",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "The scenario-matrix page is valid."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Attempt to go to the previous scenario page.",
+          "expected": "The exception path records a non-success page change; source-supported behavior is not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J001-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "Scenario generation is not currently requested."
+        },
+        {
+          "index": 1,
+          "text": "The scenario matrix is not loading."
+        },
+        {
+          "index": 2,
+          "text": "Scenario-matrix download is not active."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the user ID.",
+          "expected": "The login form is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Enter the password.",
+          "expected": "The login form is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Select the task.",
+          "expected": "The main page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Create a new task.",
+          "expected": "The main page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 8,
+          "action": "Select the supplied parsed document.",
+          "expected": "The parsed-database page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 9,
+          "action": "Change the parsed-data tab.",
+          "expected": "The parsed-database page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 10,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 11,
+          "action": "Toggle flow selection.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 12,
+          "action": "Request scenario and test-case generation.",
+          "expected": "The scenario page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 13,
+          "action": "Refresh the scenario matrix.",
+          "expected": "The scenario page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 14,
+          "action": "Request the scenario CSV download.",
+          "expected": "The scenario page remains shown; download behavior is runtime-unverified."
+        },
+        {
+          "n": 15,
+          "action": "Request the scenario Excel download.",
+          "expected": "The scenario page remains shown; download behavior is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_ref": "SCN-JOURNEY-J002-001",
+      "preconditions": [
+        {
+          "index": 0,
+          "text": "An upload file is available."
+        },
+        {
+          "index": 1,
+          "text": "No upload is currently being submitted."
+        },
+        {
+          "index": 2,
+          "text": "Scenario generation is not currently requested."
+        },
+        {
+          "index": 3,
+          "text": "The scenario matrix is not loading."
+        },
+        {
+          "index": 4,
+          "text": "Scenario-matrix download is not active."
+        }
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the user ID.",
+          "expected": "The login form is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 2,
+          "action": "Enter the password.",
+          "expected": "The login form is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 3,
+          "action": "Submit the login form.",
+          "expected": "The login page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the project.",
+          "expected": "The main page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 5,
+          "action": "Select the task.",
+          "expected": "The main page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 6,
+          "action": "Create a new task.",
+          "expected": "The main page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 7,
+          "action": "Open the test-scenario upload area.",
+          "expected": "The upload page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 8,
+          "action": "Attempt upload and parsing.",
+          "expected": "The upload failure is recorded and the upload page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 9,
+          "action": "Select the supplied parsed document as recovery.",
+          "expected": "The parsed-database page is shown if recovery succeeds; runtime behavior is unverified."
+        },
+        {
+          "n": 10,
+          "action": "Change the parsed-data tab.",
+          "expected": "The parsed-database page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 11,
+          "action": "Open business mapping.",
+          "expected": "The business page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 12,
+          "action": "Toggle flow selection.",
+          "expected": "The business page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 13,
+          "action": "Request scenario and test-case generation.",
+          "expected": "The scenario page is shown; runtime behavior is unverified."
+        },
+        {
+          "n": 14,
+          "action": "Refresh the scenario matrix.",
+          "expected": "The scenario page remains shown; runtime behavior is unverified."
+        },
+        {
+          "n": 15,
+          "action": "Search scenarios or cases.",
+          "expected": "The scenario page remains shown; search behavior is runtime-unverified."
+        },
+        {
+          "n": 16,
+          "action": "Request the scenario CSV download.",
+          "expected": "The scenario page remains shown; download behavior is runtime-unverified."
+        },
+        {
+          "n": 17,
+          "action": "Request the scenario Excel download.",
+          "expected": "The scenario page remains shown; download behavior is runtime-unverified."
+        }
+      ]
+    }
+  ]
+}

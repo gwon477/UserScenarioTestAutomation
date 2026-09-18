@@ -1,0 +1,4678 @@
+{
+  "schema_version": 2,
+  "project_id": "P-AXSE-AGENTIC",
+  "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+  "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+  "screens": [
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-businesspage",
+      "route": "component:BusinessPage",
+      "title": "component:BusinessPage",
+      "shell_screen_id": "SCR-component-mainpage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-businesspage-button-button-1b959aaf",
+          "type": "button",
+          "label": "button",
+          "interaction": {
+            "action_kind": "filter issue view",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "button"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-csv-csv-6c4c2394",
+          "type": "button",
+          "label": "CSV 생성 중 / CSV 내보내기",
+          "interaction": {
+            "action_kind": "download mapping validation CSV",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "CSV 생성 중 / CSV 내보내기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-1778051a",
+          "type": "button",
+          "label": "프리셋",
+          "interaction": {
+            "action_kind": "open preset generation/result view",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "프리셋"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-25ad2a2c",
+          "type": "button",
+          "label": "이전",
+          "interaction": {
+            "action_kind": "navigate to parsed database",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "이전"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-36595b84",
+          "type": "button",
+          "label": "흐름보기",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "흐름보기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-36a555c2",
+          "type": "button",
+          "label": "닫기",
+          "interaction": {
+            "action_kind": "close preset view",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "닫기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-456a2904",
+          "type": "button",
+          "label": "컨텍스트 큐브",
+          "interaction": {
+            "action_kind": "open context panel",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "컨텍스트 큐브"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-547f94d7",
+          "type": "button",
+          "label": "닫기",
+          "interaction": {
+            "action_kind": "close preset view",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "닫기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-74a73f90",
+          "type": "button",
+          "label": "닫기",
+          "interaction": {
+            "action_kind": "close flow text view",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "닫기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-7b5cc90c",
+          "type": "button",
+          "label": "카테고리 트리",
+          "interaction": {
+            "action_kind": "open category panel",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "카테고리 트리"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-8b53f325",
+          "type": "button",
+          "label": "전체 해제 / 전체 선택",
+          "interaction": {
+            "action_kind": "toggle all context flows",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "전체 해제 / 전체 선택"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-d2f35683",
+          "type": "button",
+          "label": "전체 해제 / 전체 선택",
+          "interaction": {
+            "action_kind": "toggle all category flows",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "전체 해제 / 전체 선택"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-root-ee5902ee",
+          "type": "button",
+          "label": "닫기",
+          "interaction": {
+            "action_kind": "close flow text view",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "닫기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-tc-57c3dae7",
+          "type": "button",
+          "label": "요청 중 / 시나리오 · TC 도출",
+          "interaction": {
+            "action_kind": "request scenario and test-case generation",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "요청 중 / 시나리오 · TC 도출"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-button-v-2f1469b8",
+          "type": "button",
+          "label": "v / >",
+          "interaction": {
+            "action_kind": "toggle detail panel",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "v / >"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-checkbox-root-2506f0f8",
+          "type": "checkbox",
+          "label": "선택",
+          "interaction": {
+            "action_kind": "toggle flow selection",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "checkbox",
+                "name": "선택"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-checkbox-root-ba5e72bc",
+          "type": "checkbox",
+          "label": "선택",
+          "interaction": {
+            "action_kind": "toggle flow selection",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "checkbox",
+                "name": "선택"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-businesspage-checkbox-root-f484b897",
+          "type": "checkbox",
+          "label": "선택",
+          "interaction": {
+            "action_kind": "toggle flow selection",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "checkbox",
+                "name": "선택"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-loginformpage",
+      "route": "component:LoginFormPage",
+      "title": "component:LoginFormPage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-loginformpage-button-root-6da22694",
+          "type": "button",
+          "label": "로그인 중… / 로그인",
+          "interaction": {
+            "action_kind": "submit login",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "로그인 중… / 로그인"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login-form.page.jsx",
+              "start_line": 1,
+              "end_line": 116,
+              "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-loginformpage-input-root-2e21d8ec",
+          "type": "input",
+          "label": "아이디",
+          "interaction": {
+            "action_kind": "enter user ID",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "textbox",
+                "name": "아이디"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login-form.page.jsx",
+              "start_line": 1,
+              "end_line": 116,
+              "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-loginformpage-input-root-cc350d8a",
+          "type": "input",
+          "label": "패스워드",
+          "interaction": {
+            "action_kind": "enter password",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "textbox",
+                "name": "패스워드"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login-form.page.jsx",
+              "start_line": 1,
+              "end_line": 116,
+              "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [
+        {
+          "id": "API-POST-api-auth-login",
+          "reads": [],
+          "writes": [
+            "POST /api/auth/login"
+          ],
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login-form.page.jsx",
+              "start_line": 1,
+              "end_line": 116,
+              "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-loginpage",
+      "route": "component:LoginPage",
+      "title": "component:LoginPage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-loginpage-button-button-199ada70",
+          "type": "button",
+          "label": "button",
+          "interaction": {
+            "action_kind": "select project",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "button"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login.page.jsx",
+              "start_line": 1,
+              "end_line": 121,
+              "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-loginpage-button-root-7fc3a516",
+          "type": "button",
+          "label": "조회 중… / ↺ 새로고침",
+          "interaction": {
+            "action_kind": "refresh project list",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "조회 중… / ↺ 새로고침"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login.page.jsx",
+              "start_line": 1,
+              "end_line": 121,
+              "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-loginpage-button-root-b10e4291",
+          "type": "button",
+          "label": "⏏ 로그아웃",
+          "interaction": {
+            "action_kind": "log out",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "⏏ 로그아웃"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login.page.jsx",
+              "start_line": 1,
+              "end_line": 121,
+              "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [
+        {
+          "id": "API-GET-api-projects",
+          "reads": [
+            "GET /api/projects"
+          ],
+          "writes": [],
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/login/login.page.jsx",
+              "start_line": 1,
+              "end_line": 121,
+              "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-mainpage",
+      "route": "component:MainPage",
+      "title": "component:MainPage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-mainpage-button-button-18fa77ae",
+          "type": "button",
+          "label": "button",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "button"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-button-42861f4f",
+          "type": "button",
+          "label": "button",
+          "interaction": {
+            "action_kind": "select task",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "button"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-root-0bae6c59",
+          "type": "button",
+          "label": "⏏ 로그아웃",
+          "interaction": {
+            "action_kind": "log out",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "⏏ 로그아웃"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-root-25ceb4be",
+          "type": "button",
+          "label": "테스트 시나리오",
+          "interaction": {
+            "action_kind": "navigate to upload",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "테스트 시나리오"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-root-4870b226",
+          "type": "button",
+          "label": "홈으로",
+          "interaction": {
+            "action_kind": "navigate to upload",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "홈으로"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-root-99d235ea",
+          "type": "button",
+          "label": "↺ 새로고침",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "↺ 새로고침"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-root-bcee2686",
+          "type": "button",
+          "label": "새로 생성",
+          "interaction": {
+            "action_kind": "create task",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "새로 생성"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-settings-6c53b1fc",
+          "type": "button",
+          "label": "설정 / settings",
+          "interaction": {
+            "action_kind": "navigate to settings",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "설정 / settings"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-mainpage-button-ts-ts-7f059f08",
+          "type": "button",
+          "label": "TS / TS 작업 없음 / ⌄",
+          "interaction": {
+            "action_kind": "toggle task menu",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "TS / TS 작업 없음 / ⌄"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-parseddbpage",
+      "route": "component:ParsedDbPage",
+      "title": "component:ParsedDbPage",
+      "shell_screen_id": "SCR-component-mainpage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-parseddbpage-button-button-bec78487",
+          "type": "button",
+          "label": "button",
+          "interaction": {
+            "action_kind": "change parsed-data tab",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "button"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+              "start_line": 1,
+              "end_line": 361,
+              "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-parseddbpage-button-root-966c5272",
+          "type": "button",
+          "label": "이전",
+          "interaction": {
+            "action_kind": "navigate to previous database page",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "이전"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+              "start_line": 1,
+              "end_line": 361,
+              "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-parseddbpage-button-root-beefb97f",
+          "type": "button",
+          "label": "이전",
+          "interaction": {
+            "action_kind": "navigate to upload",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "이전"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+              "start_line": 1,
+              "end_line": 361,
+              "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-parseddbpage-button-root-cccee16a",
+          "type": "button",
+          "label": "검색",
+          "interaction": {
+            "action_kind": "search parsed data",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "검색"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+              "start_line": 1,
+              "end_line": 361,
+              "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-parseddbpage-button-root-e88717bc",
+          "type": "button",
+          "label": "다음",
+          "interaction": {
+            "action_kind": "navigate to next database page",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "다음"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+              "start_line": 1,
+              "end_line": 361,
+              "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-parseddbpage-button-root-fee689e3",
+          "type": "button",
+          "label": "업무 매핑",
+          "interaction": {
+            "action_kind": "navigate to business mapping",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "업무 매핑"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+              "start_line": 1,
+              "end_line": 361,
+              "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-parseddbpage-input-input-c6b159ba",
+          "type": "input",
+          "label": "input",
+          "interaction": {
+            "action_kind": "enter parsed-data query",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "textbox",
+                "name": "input"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+              "start_line": 1,
+              "end_line": 361,
+              "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-scenariopage",
+      "route": "component:ScenarioPage",
+      "title": "component:ScenarioPage",
+      "shell_screen_id": "SCR-component-mainpage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-scenariopage-button-button-b6ade5a6",
+          "type": "button",
+          "label": "button",
+          "interaction": {
+            "action_kind": "refresh scenario matrix",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "button"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-csv-csv-8dba6894",
+          "type": "button",
+          "label": "CSV 생성 중 / CSV 받기",
+          "interaction": {
+            "action_kind": "download scenario CSV",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "CSV 생성 중 / CSV 받기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-excel-excel-e83a36d0",
+          "type": "button",
+          "label": "Excel 생성 중 / Excel 다운로드",
+          "interaction": {
+            "action_kind": "download scenario Excel",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "Excel 생성 중 / Excel 다운로드"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-root-3825b39c",
+          "type": "button",
+          "label": "새로고침 / 결과 확인",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "새로고침 / 결과 확인"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-root-4e83beae",
+          "type": "button",
+          "label": "화면 접기 / 화면 개 더보기",
+          "interaction": {
+            "action_kind": "toggle screen details",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "화면 접기 / 화면 개 더보기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-root-93f714c4",
+          "type": "button",
+          "label": "액션 접기 / 액션 개 더보기",
+          "interaction": {
+            "action_kind": "toggle action details",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "액션 접기 / 액션 개 더보기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-root-a53a01ca",
+          "type": "button",
+          "label": "데이터 접기 / 데이터 개 더보기",
+          "interaction": {
+            "action_kind": "toggle data details",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "데이터 접기 / 데이터 개 더보기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-root-e8f38c3b",
+          "type": "button",
+          "label": "이전",
+          "interaction": {
+            "action_kind": "navigate to business",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "이전"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-button-root-ff33f465",
+          "type": "button",
+          "label": "케이스 상세 접기 / 케이스 상세 펼치기",
+          "interaction": {
+            "action_kind": "toggle all case details",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "케이스 상세 접기 / 케이스 상세 펼치기"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-scenariopage-input-root-e0e2ecb2",
+          "type": "input",
+          "label": "시나리오명 / 케이스명 검색",
+          "interaction": {
+            "action_kind": "search scenario or case",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "textbox",
+                "name": "시나리오명 / 케이스명 검색"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-settingspage",
+      "route": "component:SettingsPage",
+      "title": "component:SettingsPage",
+      "shell_screen_id": "SCR-component-mainpage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-settingspage-button-button-910f144d",
+          "type": "button",
+          "label": "button",
+          "interaction": {
+            "action_kind": "select generation strategy",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "button"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/settings/pages/settings.page.jsx",
+              "start_line": 1,
+              "end_line": 44,
+              "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-settingspage-button-root-5143850f",
+          "type": "button",
+          "label": "저장",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "저장"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/settings/pages/settings.page.jsx",
+              "start_line": 1,
+              "end_line": 44,
+              "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-settingspage-button-root-f8aa61af",
+          "type": "button",
+          "label": "초기화",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "초기화"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/settings/pages/settings.page.jsx",
+              "start_line": 1,
+              "end_line": 44,
+              "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-settingspage-checkbox-checkbox-23b497b5",
+          "type": "checkbox",
+          "label": "checkbox",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "checkbox",
+                "name": "checkbox"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/settings/pages/settings.page.jsx",
+              "start_line": 1,
+              "end_line": 44,
+              "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-settingspage-select-select-7c9618e4",
+          "type": "select",
+          "label": "select",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "combobox",
+                "name": "select"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/settings/pages/settings.page.jsx",
+              "start_line": 1,
+              "end_line": 44,
+              "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-component-uploadpage",
+      "route": "component:UploadPage",
+      "title": "component:UploadPage",
+      "shell_screen_id": "SCR-component-mainpage",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-component-uploadpage-button-root-07489263",
+          "type": "button",
+          "label": "업로드 및 파싱 시작",
+          "interaction": {
+            "action_kind": "upload and start parsing",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "업로드 및 파싱 시작"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/upload/pages/upload.page.jsx",
+              "start_line": 1,
+              "end_line": 272,
+              "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-uploadpage-button-root-5ee46c72",
+          "type": "button",
+          "label": "이동 중… / 다음 단계 →",
+          "interaction": {
+            "action_kind": "navigate to parsed database",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "이동 중… / 다음 단계 →"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/upload/pages/upload.page.jsx",
+              "start_line": 1,
+              "end_line": 272,
+              "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-uploadpage-button-root-5fcbb836",
+          "type": "button",
+          "label": "다시 업로드",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "다시 업로드"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/upload/pages/upload.page.jsx",
+              "start_line": 1,
+              "end_line": 272,
+              "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-uploadpage-button-root-98a1c09c",
+          "type": "button",
+          "label": "파싱 진행 중…",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "파싱 진행 중…"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/upload/pages/upload.page.jsx",
+              "start_line": 1,
+              "end_line": 272,
+              "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-uploadpage-button-root-e481383d",
+          "type": "button",
+          "label": "취소 / 다시 선택",
+          "interaction": {
+            "action_kind": "unresolved",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "취소 / 다시 선택"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/upload/pages/upload.page.jsx",
+              "start_line": 1,
+              "end_line": 272,
+              "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8",
+          "type": "file",
+          "label": "OK / MD / 파싱 완료된 문서 / KB · UTF-8 / 이미 파싱이 완료된 상태입니다. / 선택됨 / 대기",
+          "interaction": {
+            "action_kind": "select file",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "css",
+                "value": "input[type=\"file\"]"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/upload/pages/upload.page.jsx",
+              "start_line": 1,
+              "end_line": 272,
+              "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    },
+    {
+      "schema_version": 3,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "screen_id": "SCR-frontend-src-features-main-pages-main-page",
+      "title": "main",
+      "entry_guards": [],
+      "elements": [
+        {
+          "id": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+          "type": "button",
+          "label": "다음",
+          "interaction": {
+            "action_kind": "next scenario page",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "다음"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        },
+        {
+          "id": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+          "type": "button",
+          "label": "이전",
+          "interaction": {
+            "action_kind": "previous scenario page",
+            "surface_kind": "web",
+            "target_candidates": [
+              {
+                "by": "role-name",
+                "role": "button",
+                "name": "이전"
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+              "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+              "path": "frontend/src/features/main/pages/main.page.jsx",
+              "start_line": 1,
+              "end_line": 1585,
+              "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+              "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+            }
+          ]
+        }
+      ],
+      "apis": [],
+      "feedback": [],
+      "displays": [],
+      "status": "draft"
+    }
+  ],
+  "edges": [
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0001",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-button-1b959aaf",
+      "effect": "PRED-flow-issue-filter-changed=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0002",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-7b5cc90c",
+      "effect": "PRED-category-panel=category && PRED-category-page-changed=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0003",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-8b53f325",
+      "effect": "PRED-checked-flows=nonempty",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0004",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-d2f35683",
+      "effect": "PRED-checked-flows=nonempty",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0005",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-ee5902ee",
+      "effect": "PRED-flow-text-view-open=false",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0006",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-tc-57c3dae7",
+      "guard": "PRED-checked-flows=nonempty && PRED-scenario-requesting=false",
+      "effect": "PRED-scenario-generation-failed=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0007",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-tc-57c3dae7",
+      "guard": "PRED-checked-flows=nonempty && PRED-scenario-requesting=false",
+      "effect": "PRED-scenario-requesting=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0008",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-v-2f1469b8",
+      "effect": "PRED-detail-open=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0009",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-checkbox-root-2506f0f8",
+      "effect": "PRED-checked-flows=nonempty",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0010",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-checkbox-root-ba5e72bc",
+      "effect": "PRED-checked-flows=nonempty",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0011",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-checkbox-root-f484b897",
+      "effect": "PRED-checked-flows=nonempty",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0012",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-csv-csv-6c4c2394",
+      "guard": "PRED-exporting-csv=false",
+      "effect": "PRED-mapping-export-failed=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0013",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-csv-csv-6c4c2394",
+      "guard": "PRED-exporting-csv=false",
+      "effect": "PRED-exporting-csv=false",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0014",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-1778051a",
+      "effect": "PRED-scenario-generation-failed=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0015",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-1778051a",
+      "effect": "PRED-preset-view-open=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0016",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-25ad2a2c",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0017",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-36a555c2",
+      "effect": "PRED-preset-view-open=false && PRED-preset-generation-reset=true && PRED-preset-message-cleared=true && PRED-preset-progress-reset=true && PRED-preset-requesting-id-cleared=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0018",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-456a2904",
+      "effect": "PRED-context-panel=context && PRED-cube-page-changed=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0019",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-547f94d7",
+      "effect": "PRED-preset-view-open=false && PRED-preset-generation-reset=true && PRED-preset-message-cleared=true && PRED-preset-progress-reset=true && PRED-preset-requesting-id-cleared=true",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0020",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-businesspage",
+      "on": "EL-component-businesspage-button-root-74a73f90",
+      "effect": "PRED-flow-text-view-open=false",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0021",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-loginformpage",
+      "on": "EL-component-loginformpage-button-root-6da22694",
+      "effect": "PRED-login-failed=true",
+      "to": "SCR-component-loginformpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0022",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-loginformpage",
+      "on": "EL-component-loginformpage-button-root-6da22694",
+      "guard": "PRED-user-id-present=true && PRED-password-present=true",
+      "effect": "PRED-login-loading=false",
+      "to": "SCR-component-loginpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0023",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-loginformpage",
+      "on": "EL-component-loginformpage-input-root-2e21d8ec",
+      "effect": "PRED-user-id-present=true",
+      "to": "SCR-component-loginformpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0024",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-loginformpage",
+      "on": "EL-component-loginformpage-input-root-cc350d8a",
+      "effect": "PRED-password-present=true",
+      "to": "SCR-component-loginformpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0025",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-loginpage",
+      "on": "EL-component-loginpage-button-button-199ada70",
+      "effect": "PRED-project-selected=true",
+      "to": "SCR-component-mainpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login.page.jsx",
+          "start_line": 1,
+          "end_line": 121,
+          "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0026",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-loginpage",
+      "on": "EL-component-loginpage-button-root-7fc3a516",
+      "effect": "PRED-projects-fetch-failed=true",
+      "to": "SCR-component-loginpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login.page.jsx",
+          "start_line": 1,
+          "end_line": 121,
+          "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0027",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-loginpage",
+      "on": "EL-component-loginpage-button-root-7fc3a516",
+      "effect": "PRED-projects-available=true",
+      "to": "SCR-component-loginpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login.page.jsx",
+          "start_line": 1,
+          "end_line": 121,
+          "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0028",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-loginpage",
+      "on": "EL-component-loginpage-button-root-b10e4291",
+      "to": "SCR-component-loginformpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login.page.jsx",
+          "start_line": 1,
+          "end_line": 121,
+          "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0029",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-button-42861f4f",
+      "effect": "PRED-task-bootstrap-failed=true",
+      "to": "SCR-component-mainpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0030",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-button-42861f4f",
+      "effect": "PRED-task-selected=true",
+      "to": "SCR-component-mainpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0031",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-root-0bae6c59",
+      "effect": "PRED-session-reset=true",
+      "to": "SCR-component-loginpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0032",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-root-25ceb4be",
+      "to": "SCR-component-uploadpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0033",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-root-4870b226",
+      "to": "SCR-component-uploadpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0034",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-root-bcee2686",
+      "effect": "PRED-task-bootstrap-failed=true",
+      "to": "SCR-component-mainpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0035",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-root-bcee2686",
+      "effect": "PRED-task-create-succeeded=true",
+      "to": "SCR-component-mainpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0036",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-settings-6c53b1fc",
+      "effect": "PRED-settings-page-selected=true",
+      "to": "SCR-component-settingspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0037",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-mainpage",
+      "on": "EL-component-mainpage-button-ts-ts-7f059f08",
+      "effect": "PRED-task-menu-open=true",
+      "to": "SCR-component-mainpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0038",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-parseddbpage",
+      "on": "EL-component-parseddbpage-button-button-bec78487",
+      "effect": "PRED-parsed-tab-changed=true",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0039",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-parseddbpage",
+      "on": "EL-component-parseddbpage-button-root-966c5272",
+      "effect": "PRED-parsed-page-valid=true && PRED-parsed-cache-updated=true",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0040",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-parseddbpage",
+      "on": "EL-component-parseddbpage-button-root-beefb97f",
+      "to": "SCR-component-uploadpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0041",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-parseddbpage",
+      "on": "EL-component-parseddbpage-button-root-cccee16a",
+      "effect": "PRED-parsed-page-valid=true && PRED-parsed-cache-updated=true",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0042",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-parseddbpage",
+      "on": "EL-component-parseddbpage-button-root-e88717bc",
+      "guard": "PRED-parsed-page-valid=true && PRED-parsed-total-pages-available=true",
+      "effect": "PRED-parsed-page-valid=true && PRED-parsed-cache-updated=true",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0043",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-parseddbpage",
+      "on": "EL-component-parseddbpage-button-root-fee689e3",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0044",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-parseddbpage",
+      "on": "EL-component-parseddbpage-input-input-c6b159ba",
+      "effect": "PRED-parsed-query-draft=updated",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0045",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-button-b6ade5a6",
+      "guard": "PRED-matrix-loading=false",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0046",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-button-b6ade5a6",
+      "guard": "PRED-matrix-loading=false",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0047",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-csv-csv-8dba6894",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-failed=true",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0048",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-csv-csv-8dba6894",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-active=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0049",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-excel-excel-e83a36d0",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-failed=true",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0050",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-excel-excel-e83a36d0",
+      "guard": "PRED-matrix-download-active=false",
+      "effect": "PRED-matrix-download-active=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0051",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-root-4e83beae",
+      "effect": "PRED-expanded-sections-visible=true",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0052",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-root-93f714c4",
+      "effect": "PRED-expanded-sections-visible=true",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0053",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-root-a53a01ca",
+      "effect": "PRED-expanded-sections-visible=true",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0054",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-root-e8f38c3b",
+      "to": "SCR-component-businesspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0055",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-button-root-ff33f465",
+      "effect": "PRED-expanded-sections-visible=true",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0056",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-input-root-e0e2ecb2",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0057",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-scenariopage",
+      "on": "EL-component-scenariopage-input-root-e0e2ecb2",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0058",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-settingspage",
+      "on": "EL-component-settingspage-button-button-910f144d",
+      "effect": "PRED-settings-strategy-selected=true",
+      "to": "SCR-component-settingspage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/settings/pages/settings.page.jsx",
+          "start_line": 1,
+          "end_line": 44,
+          "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0059",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-component-uploadpage",
+      "on": "EL-component-uploadpage-button-root-07489263",
+      "guard": "PRED-upload-file-present=true && PRED-upload-submitting=false",
+      "effect": "PRED-upload-parse-failed=true",
+      "to": "SCR-component-uploadpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0060",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-uploadpage",
+      "on": "EL-component-uploadpage-button-root-07489263",
+      "guard": "PRED-upload-file-present=true && PRED-upload-submitting=false",
+      "effect": "PRED-upload-complete=true",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0061",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-uploadpage",
+      "on": "EL-component-uploadpage-button-root-5ee46c72",
+      "guard": "PRED-upload-complete=true && PRED-upload-submitting=false",
+      "effect": "PRED-upload-submitting=false",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0062",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-component-uploadpage",
+      "on": "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8",
+      "effect": "PRED-upload-file-present=true",
+      "to": "SCR-component-parseddbpage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0063",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-frontend-src-features-main-pages-main-page",
+      "on": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+      "guard": "PRED-matrix-page-valid=true && PRED-matrix-total-pages-available=true",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0064",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-frontend-src-features-main-pages-main-page",
+      "on": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+      "guard": "PRED-matrix-page-valid=true && PRED-matrix-total-pages-available=true",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0065",
+      "source_branch_ref": "exception:1",
+      "kind": "exception",
+      "from": "SCR-frontend-src-features-main-pages-main-page",
+      "on": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+      "guard": "PRED-matrix-page-valid=true",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "edge_id": "E-0066",
+      "source_branch_ref": "normal:1",
+      "kind": "normal",
+      "from": "SCR-frontend-src-features-main-pages-main-page",
+      "on": "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+      "guard": "PRED-matrix-page-valid=true",
+      "effect": "PRED-matrix-loading=false",
+      "to": "SCR-component-scenariopage",
+      "feedback": [],
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ],
+      "status": "draft"
+    }
+  ],
+  "predicates": [
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-category-page-changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-category-panel",
+      "values": [
+        "category"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-checked-flows",
+      "values": [
+        "nonempty",
+        "empty"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-context-panel",
+      "values": [
+        "context"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-cube-page-changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-detail-open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-expanded-sections-visible",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-exporting-csv",
+      "values": [
+        "false",
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-flow-issue-filter-changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-flow-text-view-open",
+      "values": [
+        "false",
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-login-failed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-login-loading",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-mapping-export-failed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-matrix-download-active",
+      "values": [
+        "false",
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-matrix-download-failed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-matrix-loading",
+      "values": [
+        "false",
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-matrix-page-valid",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-matrix-total-pages-available",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-parsed-cache-updated",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-parsed-page-valid",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-parsed-query-draft",
+      "values": [
+        "updated"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-parsed-query-entered",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-parsed-tab-changed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-parsed-total-pages-available",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/parsed-db/pages/parsed-db.page.jsx",
+          "start_line": 1,
+          "end_line": 361,
+          "content_hash": "sha256:6198c1e1491de86738fef02122ab263f3f3cd2be5de303d1c7d6d95e2dbd75f1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-password-present",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-preset-generation-reset",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-preset-message-cleared",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-preset-progress-reset",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-preset-requesting-id-cleared",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-preset-view-open",
+      "values": [
+        "false",
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-project-selected",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login.page.jsx",
+          "start_line": 1,
+          "end_line": 121,
+          "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-projects-available",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login.page.jsx",
+          "start_line": 1,
+          "end_line": 121,
+          "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-projects-fetch-failed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-page-24848ab2",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login.page.jsx",
+          "start_line": 1,
+          "end_line": 121,
+          "content_hash": "sha256:e4803b982a44ad9a2dad87269a6c8396bd2e2047f16dedff0b6cef08a969531c",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-scenario-generation-failed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-scenario-requesting",
+      "values": [
+        "false",
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-session-reset",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-settings-page-selected",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-settings-strategy-selected",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/settings/pages/settings.page.jsx",
+          "start_line": 1,
+          "end_line": 44,
+          "content_hash": "sha256:d2397db2dd1109fa18bc1dd4a8716fcc534e8bef2b9f71490b63a535f2d5fdd1",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-task-bootstrap-failed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-task-create-succeeded",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-task-menu-open",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-task-selected",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-main-pages-main-page-cd6d9fb0",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/main/pages/main.page.jsx",
+          "start_line": 1,
+          "end_line": 1585,
+          "content_hash": "sha256:bf0a7a002fc0ba156e262892826c0a0d64cce4e00d19ea1e4f3d4c67605de938",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-upload-complete",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-upload-file-present",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-upload-parse-failed",
+      "values": [
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-upload-submitting",
+      "values": [
+        "false",
+        "true"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-upload-pages-upload-page-ae20378f",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/upload/pages/upload.page.jsx",
+          "start_line": 1,
+          "end_line": 272,
+          "content_hash": "sha256:c0ef15fe91001f5f1f218d25c018cdf99eb742fc1fdf16bfd8d9909419afcca0",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "project_id": "P-AXSE-AGENTIC",
+      "analysis_run_id": "RUN-AXSE-AGENTIC-20260918-02",
+      "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+      "pred_id": "PRED-user-id-present",
+      "values": [
+        "true",
+        "false"
+      ],
+      "source": "code",
+      "evidence": [
+        {
+          "source_id": "SRC-frontend-src-features-login-login-form-page-3d5b73fd",
+          "source_snapshot_id": "SS-1962006b-16f3-4aab-b5e2-83ec3050f10c",
+          "path": "frontend/src/features/login/login-form.page.jsx",
+          "start_line": 1,
+          "end_line": 116,
+          "content_hash": "sha256:8cc7886f0dce397349b98a83522c604ce5b7b11a5bac91ec59a9f458ede4a309",
+          "evidence_grant_id": "EVG-WORK-AXSE-FACT-GRAPH-d2e9dad3"
+        }
+      ]
+    }
+  ]
+}

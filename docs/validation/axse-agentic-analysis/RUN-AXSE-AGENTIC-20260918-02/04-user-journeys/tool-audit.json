@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "sequence": 1,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review"
+    },
+    {
+      "sequence": 2,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "02-source-gap-review-validation"
+    },
+    {
+      "sequence": 3,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification"
+    },
+    {
+      "sequence": 4,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "03-business-classification-validation"
+    },
+    {
+      "sequence": 5,
+      "tool": "artifact.get",
+      "result": "ok",
+      "artifact_id": "source-inventory"
+    },
+    {
+      "sequence": 6,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 5,
+      "resolved_ref_count": 5,
+      "requested_budget": 8000,
+      "effective_budget": 12601,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 7,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 5,
+      "resolved_ref_count": 5,
+      "requested_budget": 8000,
+      "effective_budget": 92268,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 8,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 5,
+      "resolved_ref_count": 5,
+      "requested_budget": 8000,
+      "effective_budget": 36787,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 9,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 4,
+      "resolved_ref_count": 4,
+      "requested_budget": 8000,
+      "effective_budget": 21666,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 10,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 2,
+      "resolved_ref_count": 2,
+      "requested_budget": 8000,
+      "effective_budget": 14768,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 11,
+      "tool": "artifact.closure",
+      "result": "ok",
+      "requested_ref_count": 1,
+      "resolved_ref_count": 1,
+      "requested_budget": 8000,
+      "effective_budget": 8000,
+      "omitted_ref_count": 0
+    },
+    {
+      "sequence": 12,
+      "tool": "analysis.writeArtifact",
+      "result": "rejected",
+      "code": "USER_JOURNEY_THREAD_ASSIGNED_MULTIPLE",
+      "validation_issues": [
+        "USER_JOURNEY_THREAD_ASSIGNED_MULTIPLE:provisional-auth-to-generated-matrix"
+      ],
+      "artifact_id": "04-user-journeys"
+    },
+    {
+      "sequence": 13,
+      "tool": "analysis.writeArtifact",
+      "result": "ok",
+      "artifact_id": "04-user-journeys"
+    }
+  ]
+}

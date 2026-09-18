@@ -1,3 +1,4 @@
+// @scene d9ed133a5b08
 // hand-written: the browser build needs window.showDirectoryPicker stubbed before '프로젝트 추가' (see demo/prelude.js)
 await page.goto('about:blank');
 await page.goto(BASE + '/?preview=demo#/projects', { waitUntil: 'networkidle' });

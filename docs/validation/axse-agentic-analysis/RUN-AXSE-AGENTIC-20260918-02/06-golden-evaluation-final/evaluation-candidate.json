@@ -1,0 +1,6546 @@
+{
+  "schema_version": 1,
+  "project_name": "axse-agents",
+  "classifications": [
+    {
+      "classification_id": "BC-0F15A2CA5711",
+      "label": "프로젝트 작업공간 진입",
+      "description": "사용자가 인증 후 프로젝트를 선택해 작업 화면으로 진입한다.",
+      "source_area_refs": [
+        "authentication-and-project-entry"
+      ],
+      "workflow_refs": [
+        "WF-component-loginformpage-104bdb2f",
+        "WF-component-loginformpage-5199dbef",
+        "WF-component-loginformpage-8dc58904",
+        "WF-component-loginformpage-aef66388",
+        "WF-component-loginpage-24d62594",
+        "WF-component-loginpage-e5ed79c1",
+        "WF-component-loginpage-f3dfe66b",
+        "WF-component-mainpage-2b4dbe33"
+      ],
+      "edge_refs": [
+        "E-0021",
+        "E-0022",
+        "E-0023",
+        "E-0024",
+        "E-0025",
+        "E-0026",
+        "E-0027",
+        "E-0028",
+        "E-0031"
+      ]
+    },
+    {
+      "classification_id": "BC-1C61B3D1728A",
+      "label": "시나리오 테스트 케이스 생성 및 추적",
+      "description": "검증된 Level 2 업무흐름을 제출해 시나리오·테스트 케이스를 생성하고 품질과 추적성 결과를 활용한다.",
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "workflow_refs": [
+        "WF-component-businesspage-664cad1d",
+        "WF-component-businesspage-a4a53abb",
+        "WF-component-scenariopage-0b41140c",
+        "WF-component-scenariopage-130159bc",
+        "WF-component-scenariopage-155f546e",
+        "WF-component-scenariopage-2c40057c",
+        "WF-component-scenariopage-8d4b7217",
+        "WF-component-scenariopage-ccd6c1bb",
+        "WF-component-scenariopage-d3d27c52",
+        "WF-component-scenariopage-d3efa9f6",
+        "WF-component-scenariopage-ed2efd9e",
+        "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+        "WF-frontend-src-features-main-pages-main-page-d2fcb9f4"
+      ],
+      "edge_refs": [
+        "E-0006",
+        "E-0007",
+        "E-0012",
+        "E-0013",
+        "E-0045",
+        "E-0046",
+        "E-0047",
+        "E-0048",
+        "E-0049",
+        "E-0050",
+        "E-0051",
+        "E-0052",
+        "E-0053",
+        "E-0054",
+        "E-0055",
+        "E-0056",
+        "E-0057",
+        "E-0063",
+        "E-0064",
+        "E-0065",
+        "E-0066"
+      ]
+    },
+    {
+      "classification_id": "BC-373C48884CFD",
+      "label": "TS 문서 파싱 준비",
+      "description": "선택된 프로젝트의 TS 작업에 MD/TXT 문서를 업로드해 구조화된 파싱 결과를 준비한다.",
+      "source_area_refs": [
+        "task-document-upload-and-parsing"
+      ],
+      "workflow_refs": [
+        "WF-component-mainpage-0f4d0fcd",
+        "WF-component-mainpage-275bc2d0",
+        "WF-component-mainpage-4e38e24f",
+        "WF-component-mainpage-c55225a4",
+        "WF-component-mainpage-cef3c5df",
+        "WF-component-parseddbpage-4a38f0de",
+        "WF-component-uploadpage-06490a15",
+        "WF-component-uploadpage-5aba1e3a",
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "edge_refs": [
+        "E-0029",
+        "E-0030",
+        "E-0032",
+        "E-0033",
+        "E-0034",
+        "E-0035",
+        "E-0037",
+        "E-0040",
+        "E-0059",
+        "E-0060",
+        "E-0061",
+        "E-0062"
+      ]
+    },
+    {
+      "classification_id": "BC-3A6BA1E7B204",
+      "label": "시나리오 생성 출력 환경설정",
+      "description": "시나리오 TC 도출 전략, 매트릭스 출력 옵션과 검증 기준을 조정한다.",
+      "source_area_refs": [
+        "settings-generation-preferences"
+      ],
+      "workflow_refs": [
+        "WF-component-businesspage-0ada3322",
+        "WF-component-businesspage-7eded949",
+        "WF-component-businesspage-d378820a",
+        "WF-component-mainpage-0b02b6d1",
+        "WF-component-settingspage-695469fc"
+      ],
+      "edge_refs": [
+        "E-0014",
+        "E-0015",
+        "E-0017",
+        "E-0019",
+        "E-0036",
+        "E-0058"
+      ]
+    },
+    {
+      "classification_id": "BC-98ABFD17068D",
+      "label": "파싱 업무흐름 검증",
+      "description": "파싱된 업무·화면·필드·이벤트와 업무흐름 매핑을 조회하고 진단해 생성 범위를 검증한다.",
+      "source_area_refs": [
+        "parsed-data-and-business-flow-validation"
+      ],
+      "workflow_refs": [
+        "WF-component-businesspage-40d5175b",
+        "WF-component-businesspage-547a1466",
+        "WF-component-businesspage-5c765240",
+        "WF-component-businesspage-6d777bfb",
+        "WF-component-businesspage-7ec9352e",
+        "WF-component-businesspage-86dffaba",
+        "WF-component-businesspage-8b2611d2",
+        "WF-component-businesspage-8d384820",
+        "WF-component-businesspage-8d514a88",
+        "WF-component-businesspage-bd399e7b",
+        "WF-component-businesspage-e76552a4",
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "edge_refs": [
+        "E-0001",
+        "E-0002",
+        "E-0003",
+        "E-0004",
+        "E-0005",
+        "E-0008",
+        "E-0009",
+        "E-0010",
+        "E-0011",
+        "E-0018",
+        "E-0020",
+        "E-0043"
+      ]
+    },
+    {
+      "classification_id": "BC-D9F407DE9A7B",
+      "label": "파싱 데이터 조회 범위 제어",
+      "description": "Parsed DB의 데이터 탭·검색어·페이지를 조작해 필요한 파싱 결과 조회 범위를 정한다.",
+      "source_area_refs": [
+        "parsed-db-navigation-and-query-controls"
+      ],
+      "workflow_refs": [
+        "WF-component-businesspage-86c2ff8c",
+        "WF-component-parseddbpage-26d6afdd",
+        "WF-component-parseddbpage-6771c0b3",
+        "WF-component-parseddbpage-69504b45",
+        "WF-component-parseddbpage-d00464bf",
+        "WF-component-parseddbpage-fbf48ce7"
+      ],
+      "edge_refs": [
+        "E-0016",
+        "E-0038",
+        "E-0039",
+        "E-0041",
+        "E-0042",
+        "E-0044"
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "workflow_id": "WF-component-businesspage-8d514a88",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "button (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-button-1b959aaf",
+        "PRED-flow-issue-filter-changed",
+        "E-0001"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-8D514A88-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Apply the issue-view filter.",
+          "final_result": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-a4a53abb",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "CSV 생성 중 / CSV 내보내기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [
+        "PRED-mapping-export-failed=true"
+      ],
+      "variation_axes": [
+        "PRED-exporting-csv"
+      ],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-csv-csv-6c4c2394",
+        "PRED-exporting-csv",
+        "PRED-mapping-export-failed",
+        "E-0012",
+        "E-0013"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-exporting-csv": "false"
+          },
+          "final_action": "Request the mapping-validation CSV.",
+          "final_result": "Business page remains shown; download is runtime-unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-exporting-csv": "false"
+          },
+          "final_action": "Attempt the mapping-validation CSV download.",
+          "final_result": "A non-success CSV outcome is recorded on the business page; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-7eded949",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "goal": "프리셋 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [
+        "PRED-scenario-generation-failed=true"
+      ],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-1778051a",
+        "PRED-preset-view-open",
+        "PRED-scenario-generation-failed",
+        "E-0014",
+        "E-0015"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Open the preset result view.",
+          "final_result": "Business page remains shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+          "kind": "exception",
+          "variation": {},
+          "final_action": "Attempt to open the preset result view.",
+          "final_result": "A non-success preset outcome is recorded on the business page; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-86c2ff8c",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "goal": "이전 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "SCR-component-parseddbpage",
+        "EL-component-businesspage-button-root-25ad2a2c",
+        "E-0016"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Navigate back to the parsed database.",
+          "final_result": "Parsed-database page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-0ada3322",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-36a555c2",
+        "PRED-preset-generation-reset",
+        "PRED-preset-message-cleared",
+        "PRED-preset-progress-reset",
+        "PRED-preset-requesting-id-cleared",
+        "PRED-preset-view-open",
+        "E-0017"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-0ADA3322-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Close the preset view.",
+          "final_result": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-e76552a4",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "컨텍스트 큐브 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-456a2904",
+        "PRED-context-panel",
+        "PRED-cube-page-changed",
+        "E-0018"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-E76552A4-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Open the context panel.",
+          "final_result": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-d378820a",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-547f94d7",
+        "PRED-preset-generation-reset",
+        "PRED-preset-message-cleared",
+        "PRED-preset-progress-reset",
+        "PRED-preset-requesting-id-cleared",
+        "PRED-preset-view-open",
+        "E-0019"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-D378820A-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Close the flow text view.",
+          "final_result": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-7ec9352e",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-74a73f90",
+        "PRED-flow-text-view-open",
+        "E-0020"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EC9352E-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Close the flow text view.",
+          "final_result": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-86dffaba",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "카테고리 트리 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-7b5cc90c",
+        "PRED-category-page-changed",
+        "PRED-category-panel",
+        "E-0002"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Open the category panel.",
+          "final_result": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-6d777bfb",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "전체 해제 / 전체 선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-8b53f325",
+        "PRED-checked-flows",
+        "E-0003"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle all context-flow selections.",
+          "final_result": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-bd399e7b",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "전체 해제 / 전체 선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-d2f35683",
+        "PRED-checked-flows",
+        "E-0004"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle all category-flow selections.",
+          "final_result": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-8b2611d2",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "닫기 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-root-ee5902ee",
+        "PRED-flow-text-view-open",
+        "E-0005"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Close the flow text view.",
+          "final_result": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-664cad1d",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "요청 중 / 시나리오 · TC 도출 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-scenario-generation-failed=true"
+      ],
+      "variation_axes": [
+        "PRED-checked-flows",
+        "PRED-scenario-requesting"
+      ],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "SCR-component-scenariopage",
+        "EL-component-businesspage-button-tc-57c3dae7",
+        "PRED-checked-flows",
+        "PRED-scenario-generation-failed",
+        "PRED-scenario-requesting",
+        "E-0006",
+        "E-0007"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-checked-flows": "nonempty",
+            "PRED-scenario-requesting": "false"
+          },
+          "final_action": "Request scenario and test-case generation.",
+          "final_result": "Scenario page is shown; generation is runtime-unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-checked-flows": "nonempty",
+            "PRED-scenario-requesting": "false"
+          },
+          "final_action": "Retry generation as recovery.",
+          "final_result": "Scenario page is shown if recovery succeeds; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-5c765240",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "v / > (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-button-v-2f1469b8",
+        "PRED-detail-open",
+        "E-0008"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-5C765240-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle the detail panel.",
+          "final_result": "Business page remains shown and panel state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-8d384820",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-checkbox-root-2506f0f8",
+        "PRED-checked-flows",
+        "E-0009"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle flow selection.",
+          "final_result": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-40d5175b",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-checkbox-root-ba5e72bc",
+        "PRED-checked-flows",
+        "E-0010"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle flow selection as recovery.",
+          "final_result": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-businesspage-547a1466",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "선택 (component:BusinessPage)",
+      "entry_screens": [
+        "SCR-component-businesspage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-parseddbpage-083f5434"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-businesspage",
+        "EL-component-businesspage-checkbox-root-f484b897",
+        "PRED-checked-flows",
+        "E-0011"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-547A1466-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle flow selection.",
+          "final_result": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-loginformpage-104bdb2f",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "로그인 중… / 로그인 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [
+        "PRED-login-failed=true"
+      ],
+      "variation_axes": [],
+      "depends_on": [],
+      "cited_graph_refs": [
+        "SCR-component-loginformpage",
+        "EL-component-loginformpage-button-root-6da22694",
+        "PRED-login-failed",
+        "E-0021"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+          "kind": "exception",
+          "variation": {},
+          "final_action": "Submit login without prerequisites.",
+          "final_result": "Login form remains shown and login is unsuccessful; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-loginformpage-8dc58904",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "로그인 중… / 로그인 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-user-id-present",
+        "PRED-password-present"
+      ],
+      "depends_on": [],
+      "cited_graph_refs": [
+        "SCR-component-loginformpage",
+        "SCR-component-loginpage",
+        "EL-component-loginformpage-button-root-6da22694",
+        "PRED-login-loading",
+        "PRED-password-present",
+        "PRED-user-id-present",
+        "E-0022"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-8DC58904-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-user-id-present": "true",
+            "PRED-password-present": "true"
+          },
+          "final_action": "Submit login.",
+          "final_result": "Login page is shown; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-loginformpage-aef66388",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "아이디 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [],
+      "cited_graph_refs": [
+        "SCR-component-loginformpage",
+        "EL-component-loginformpage-input-root-2e21d8ec",
+        "PRED-user-id-present",
+        "E-0023"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Enter the user ID.",
+          "final_result": "Login form remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-loginformpage-5199dbef",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "패스워드 (component:LoginFormPage)",
+      "entry_screens": [
+        "SCR-component-loginformpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [],
+      "cited_graph_refs": [
+        "SCR-component-loginformpage",
+        "EL-component-loginformpage-input-root-cc350d8a",
+        "PRED-password-present",
+        "E-0024"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Enter the password.",
+          "final_result": "Login form remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-loginpage-e5ed79c1",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "button (component:LoginPage)",
+      "entry_screens": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginformpage-8dc58904"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-loginpage",
+        "SCR-component-mainpage",
+        "EL-component-loginpage-button-button-199ada70",
+        "PRED-project-selected",
+        "E-0025"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Select the project.",
+          "final_result": "Main page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-loginpage-f3dfe66b",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "조회 중… / ↺ 새로고침 (component:LoginPage)",
+      "entry_screens": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "failure_terminals": [
+        "PRED-projects-fetch-failed=true"
+      ],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginformpage-8dc58904"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-loginpage",
+        "EL-component-loginpage-button-root-7fc3a516",
+        "PRED-projects-available",
+        "PRED-projects-fetch-failed",
+        "E-0026",
+        "E-0027"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Refresh the project list.",
+          "final_result": "Login page remains shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002",
+          "kind": "exception",
+          "variation": {},
+          "final_action": "Attempt to refresh the project list.",
+          "final_result": "A non-success refresh outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-loginpage-24d62594",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "⏏ 로그아웃 (component:LoginPage)",
+      "entry_screens": [
+        "SCR-component-loginpage"
+      ],
+      "success_terminal": "at(SCR-component-loginformpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginformpage-8dc58904"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-loginpage",
+        "SCR-component-loginformpage",
+        "EL-component-loginpage-button-root-b10e4291",
+        "E-0028"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Log out.",
+          "final_result": "Login form is shown; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-mainpage-c55225a4",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "button (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "failure_terminals": [
+        "PRED-task-bootstrap-failed=true"
+      ],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-mainpage",
+        "EL-component-mainpage-button-button-42861f4f",
+        "PRED-task-bootstrap-failed",
+        "PRED-task-selected",
+        "E-0029",
+        "E-0030"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-C55225A4-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Select the task.",
+          "final_result": "Main page remains shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-C55225A4-002",
+          "kind": "exception",
+          "variation": {},
+          "final_action": "Attempt to select the task.",
+          "final_result": "A non-success task-selection outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-mainpage-2b4dbe33",
+      "classification_ref": "BC-0F15A2CA5711",
+      "goal": "⏏ 로그아웃 (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-loginpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-mainpage",
+        "SCR-component-loginpage",
+        "EL-component-mainpage-button-root-0bae6c59",
+        "PRED-session-reset",
+        "E-0031"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Log out.",
+          "final_result": "Login page is shown; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-mainpage-4e38e24f",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "테스트 시나리오 (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-mainpage",
+        "SCR-component-uploadpage",
+        "EL-component-mainpage-button-root-25ceb4be",
+        "E-0032"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Open test-scenario upload.",
+          "final_result": "Upload page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-mainpage-275bc2d0",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "홈으로 (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-mainpage",
+        "SCR-component-uploadpage",
+        "EL-component-mainpage-button-root-4870b226",
+        "E-0033"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Navigate home.",
+          "final_result": "Upload page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-mainpage-cef3c5df",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "새로 생성 (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "failure_terminals": [
+        "PRED-task-bootstrap-failed=true"
+      ],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-mainpage",
+        "EL-component-mainpage-button-root-bcee2686",
+        "PRED-task-bootstrap-failed",
+        "PRED-task-create-succeeded",
+        "E-0034",
+        "E-0035"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Create a new task.",
+          "final_result": "Main page remains shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-002",
+          "kind": "exception",
+          "variation": {},
+          "final_action": "Attempt to create a new task.",
+          "final_result": "A non-success task-creation outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-mainpage-0b02b6d1",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "goal": "설정 / settings (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-mainpage",
+        "SCR-component-settingspage",
+        "EL-component-mainpage-button-settings-6c53b1fc",
+        "PRED-settings-page-selected",
+        "E-0036"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Open settings.",
+          "final_result": "Settings page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-mainpage-0f4d0fcd",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "TS / TS 작업 없음 / ⌄ (component:MainPage)",
+      "entry_screens": [
+        "SCR-component-mainpage"
+      ],
+      "success_terminal": "at(SCR-component-mainpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-loginpage-e5ed79c1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-mainpage",
+        "EL-component-mainpage-button-ts-ts-7f059f08",
+        "PRED-task-menu-open",
+        "E-0037"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle the task menu.",
+          "final_result": "Main page remains shown and menu state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-parseddbpage-6771c0b3",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "goal": "button (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-button-bec78487",
+        "PRED-parsed-tab-changed",
+        "E-0038"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Change the parsed-data tab.",
+          "final_result": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-parseddbpage-69504b45",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "goal": "이전 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-root-966c5272",
+        "PRED-parsed-cache-updated",
+        "PRED-parsed-page-valid",
+        "E-0039"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-69504B45-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Navigate to the previous database page.",
+          "final_result": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-parseddbpage-4a38f0de",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "이전 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-uploadpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-parseddbpage",
+        "SCR-component-uploadpage",
+        "EL-component-parseddbpage-button-root-beefb97f",
+        "E-0040"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Navigate back to upload.",
+          "final_result": "Upload page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-parseddbpage-26d6afdd",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "goal": "검색 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-root-cccee16a",
+        "PRED-parsed-cache-updated",
+        "PRED-parsed-page-valid",
+        "E-0041"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Search parsed data.",
+          "final_result": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-parseddbpage-d00464bf",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "goal": "다음 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-parsed-page-valid",
+        "PRED-parsed-total-pages-available"
+      ],
+      "depends_on": [
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-button-root-e88717bc",
+        "PRED-parsed-cache-updated",
+        "PRED-parsed-page-valid",
+        "PRED-parsed-total-pages-available",
+        "E-0042"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-D00464BF-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-parsed-page-valid": "true",
+            "PRED-parsed-total-pages-available": "true"
+          },
+          "final_action": "Navigate to the next database page.",
+          "final_result": "Next parsed-data page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-parseddbpage-083f5434",
+      "classification_ref": "BC-98ABFD17068D",
+      "goal": "업무 매핑 (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-parseddbpage",
+        "SCR-component-businesspage",
+        "EL-component-parseddbpage-button-root-fee689e3",
+        "E-0043"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Open business mapping as recovery.",
+          "final_result": "Business page is shown if recovery succeeds; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-parseddbpage-fbf48ce7",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "goal": "input (component:ParsedDbPage)",
+      "entry_screens": [
+        "SCR-component-parseddbpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-uploadpage-5bf664e5"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-parseddbpage",
+        "EL-component-parseddbpage-input-input-c6b159ba",
+        "PRED-parsed-query-draft",
+        "E-0044"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-FBF48CE7-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Enter a parsed-data query.",
+          "final_result": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-d3d27c52",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "button (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-matrix-loading=false"
+      ],
+      "variation_axes": [
+        "PRED-matrix-loading"
+      ],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-button-b6ade5a6",
+        "PRED-matrix-loading",
+        "E-0045",
+        "E-0046"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-matrix-loading": "false"
+          },
+          "final_action": "Refresh the scenario matrix.",
+          "final_result": "Scenario page remains shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-matrix-loading": "false"
+          },
+          "final_action": "Attempt to refresh the scenario matrix.",
+          "final_result": "A non-success refresh outcome is recorded on the scenario page; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-JOURNEY-J001-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Request scenario Excel.",
+          "final_result": "Scenario page remains shown; download runtime-unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-d3efa9f6",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "CSV 생성 중 / CSV 받기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-matrix-download-failed=true"
+      ],
+      "variation_axes": [
+        "PRED-matrix-download-active"
+      ],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-csv-csv-8dba6894",
+        "PRED-matrix-download-active",
+        "PRED-matrix-download-failed",
+        "E-0047",
+        "E-0048"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-matrix-download-active": "false"
+          },
+          "final_action": "Request the scenario CSV download.",
+          "final_result": "Scenario page remains shown; download is runtime-unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-matrix-download-active": "false"
+          },
+          "final_action": "Attempt the scenario CSV download.",
+          "final_result": "A non-success download outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-ccd6c1bb",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "Excel 생성 중 / Excel 다운로드 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-matrix-download-failed=true"
+      ],
+      "variation_axes": [
+        "PRED-matrix-download-active"
+      ],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-excel-excel-e83a36d0",
+        "PRED-matrix-download-active",
+        "PRED-matrix-download-failed",
+        "E-0049",
+        "E-0050"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-matrix-download-active": "false"
+          },
+          "final_action": "Request the scenario Excel download.",
+          "final_result": "Scenario page remains shown; download is runtime-unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-matrix-download-active": "false"
+          },
+          "final_action": "Attempt the scenario Excel download.",
+          "final_result": "A non-success download outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-155f546e",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "화면 접기 / 화면 개 더보기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-4e83beae",
+        "PRED-expanded-sections-visible",
+        "E-0051"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-155F546E-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle screen details.",
+          "final_result": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-130159bc",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "액션 접기 / 액션 개 더보기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-93f714c4",
+        "PRED-expanded-sections-visible",
+        "E-0052"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-130159BC-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle action details.",
+          "final_result": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-ed2efd9e",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "데이터 접기 / 데이터 개 더보기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-a53a01ca",
+        "PRED-expanded-sections-visible",
+        "E-0053"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-ED2EFD9E-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle data details.",
+          "final_result": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-8d4b7217",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "이전 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-businesspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "SCR-component-businesspage",
+        "EL-component-scenariopage-button-root-e8f38c3b",
+        "E-0054"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Navigate back to business.",
+          "final_result": "Business page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-2c40057c",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "케이스 상세 접기 / 케이스 상세 펼치기 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-button-root-ff33f465",
+        "PRED-expanded-sections-visible",
+        "E-0055"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-2C40057C-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Toggle all case details.",
+          "final_result": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-scenariopage-0b41140c",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "시나리오명 / 케이스명 검색 (component:ScenarioPage)",
+      "entry_screens": [
+        "SCR-component-scenariopage"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-matrix-loading=false"
+      ],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-businesspage-664cad1d"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-scenariopage",
+        "EL-component-scenariopage-input-root-e0e2ecb2",
+        "PRED-matrix-loading",
+        "E-0056",
+        "E-0057"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-0B41140C-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Search by scenario or case name.",
+          "final_result": "Scenario page remains shown; search is runtime-unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-0B41140C-002",
+          "kind": "exception",
+          "variation": {},
+          "final_action": "Attempt to search by scenario or case name.",
+          "final_result": "A non-success search outcome is recorded; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-JOURNEY-J002-001",
+          "kind": "exception",
+          "variation": {},
+          "final_action": "Request scenario Excel.",
+          "final_result": "Scenario page remains shown; download runtime-unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-settingspage-695469fc",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "goal": "button (component:SettingsPage)",
+      "entry_screens": [
+        "SCR-component-settingspage"
+      ],
+      "success_terminal": "at(SCR-component-settingspage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-mainpage-0b02b6d1"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-settingspage",
+        "EL-component-settingspage-button-button-910f144d",
+        "PRED-settings-strategy-selected",
+        "E-0058"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-SETTINGSPAGE-695469FC-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Select the generation strategy.",
+          "final_result": "Settings page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-uploadpage-5bf664e5",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "업로드 및 파싱 시작 (component:UploadPage)",
+      "entry_screens": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [
+        "PRED-upload-parse-failed=true"
+      ],
+      "variation_axes": [
+        "PRED-upload-file-present",
+        "PRED-upload-submitting"
+      ],
+      "depends_on": [
+        "WF-component-mainpage-4e38e24f"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-uploadpage",
+        "SCR-component-parseddbpage",
+        "EL-component-uploadpage-button-root-07489263",
+        "PRED-upload-complete",
+        "PRED-upload-file-present",
+        "PRED-upload-parse-failed",
+        "PRED-upload-submitting",
+        "E-0059",
+        "E-0060"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-upload-file-present": "true",
+            "PRED-upload-submitting": "false"
+          },
+          "final_action": "Start upload and parsing.",
+          "final_result": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-upload-file-present": "true",
+            "PRED-upload-submitting": "false"
+          },
+          "final_action": "Retry upload and parsing as recovery.",
+          "final_result": "Parsed-database page is shown if recovery succeeds; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-uploadpage-5aba1e3a",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "이동 중… / 다음 단계 → (component:UploadPage)",
+      "entry_screens": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [
+        "PRED-upload-complete",
+        "PRED-upload-submitting"
+      ],
+      "depends_on": [
+        "WF-component-mainpage-4e38e24f"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-uploadpage",
+        "SCR-component-parseddbpage",
+        "EL-component-uploadpage-button-root-5ee46c72",
+        "PRED-upload-complete",
+        "PRED-upload-submitting",
+        "E-0061"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-upload-complete": "true",
+            "PRED-upload-submitting": "false"
+          },
+          "final_action": "Continue to parsed database.",
+          "final_result": "Parsed-database page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-component-uploadpage-06490a15",
+      "classification_ref": "BC-373C48884CFD",
+      "goal": "OK / MD / 파싱 완료된 문서 / KB · UTF-8 / 이미 파싱이 완료된 상태입니다. / 선택됨 / 대기 (component:UploadPage)",
+      "entry_screens": [
+        "SCR-component-uploadpage"
+      ],
+      "success_terminal": "at(SCR-component-parseddbpage)",
+      "failure_terminals": [],
+      "variation_axes": [],
+      "depends_on": [
+        "WF-component-mainpage-4e38e24f"
+      ],
+      "cited_graph_refs": [
+        "SCR-component-uploadpage",
+        "SCR-component-parseddbpage",
+        "EL-component-uploadpage-file-ok-md-kb-utf-8-393d06d8",
+        "PRED-upload-file-present",
+        "E-0062"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-COMPONENT-UPLOADPAGE-06490A15-001",
+          "kind": "normal",
+          "variation": {},
+          "final_action": "Select the supplied parsed document.",
+          "final_result": "Parsed-database page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-frontend-src-features-main-pages-main-page-d2fcb9f4",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "다음 (main)",
+      "entry_screens": [
+        "SCR-frontend-src-features-main-pages-main-page"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-matrix-loading=false"
+      ],
+      "variation_axes": [
+        "PRED-matrix-page-valid",
+        "PRED-matrix-total-pages-available"
+      ],
+      "depends_on": [],
+      "cited_graph_refs": [
+        "SCR-frontend-src-features-main-pages-main-page",
+        "SCR-component-scenariopage",
+        "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-24dbba2c",
+        "PRED-matrix-loading",
+        "PRED-matrix-page-valid",
+        "PRED-matrix-total-pages-available",
+        "E-0063",
+        "E-0064"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-matrix-page-valid": "true",
+            "PRED-matrix-total-pages-available": "true"
+          },
+          "final_action": "Go to the next scenario page.",
+          "final_result": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-matrix-page-valid": "true",
+            "PRED-matrix-total-pages-available": "true"
+          },
+          "final_action": "Attempt to go to the next scenario page.",
+          "final_result": "A non-success page-change outcome is recorded; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "workflow_id": "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+      "classification_ref": "BC-1C61B3D1728A",
+      "goal": "이전 (main)",
+      "entry_screens": [
+        "SCR-frontend-src-features-main-pages-main-page"
+      ],
+      "success_terminal": "at(SCR-component-scenariopage)",
+      "failure_terminals": [
+        "PRED-matrix-loading=false"
+      ],
+      "variation_axes": [
+        "PRED-matrix-page-valid"
+      ],
+      "depends_on": [],
+      "cited_graph_refs": [
+        "SCR-frontend-src-features-main-pages-main-page",
+        "SCR-component-scenariopage",
+        "EL-src-frontend-src-features-main-pages-main-page-cd6d9fb0-button-root-8c342562",
+        "PRED-matrix-loading",
+        "PRED-matrix-page-valid",
+        "E-0065",
+        "E-0066"
+      ],
+      "scenario_summaries": [
+        {
+          "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-001",
+          "kind": "normal",
+          "variation": {
+            "PRED-matrix-page-valid": "true"
+          },
+          "final_action": "Go to the previous scenario page.",
+          "final_result": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-002",
+          "kind": "exception",
+          "variation": {
+            "PRED-matrix-page-valid": "true"
+          },
+          "final_action": "Attempt to go to the previous scenario page.",
+          "final_result": "A non-success page-change outcome is recorded; source-supported, not runtime execution."
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "journey_id": "J001",
+      "kind": "normal",
+      "title": "인증부터 검증된 시나리오와 테스트 케이스 추적성 매트릭스 활용까지의 정상 여정",
+      "persona": "인증을 완료하고 프로젝트를 선택한 프로젝트 작업 운영자",
+      "prerequisites": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트가 프로젝트 목록에 표시된다.",
+        "파싱할 UTF-8 MD 또는 TXT 문서를 준비한다."
+      ],
+      "feasibility": "runtime-unverified",
+      "milestones": [
+        {
+          "position": 1,
+          "phase": "entry",
+          "action": "로그인 화면에서 아이디와 패스워드를 입력하고 로그인을 제출한다.",
+          "observable_outcome": "인증이 성공하면 사용자 정보와 인증 상태가 세션에 저장되고 프로젝트 선택 화면이 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-entry"
+          ],
+          "workflow_refs": [
+            "WF-component-loginformpage-aef66388",
+            "WF-component-loginformpage-5199dbef",
+            "WF-component-loginformpage-8dc58904"
+          ],
+          "edge_refs": [
+            "E-0023",
+            "E-0024",
+            "E-0022"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 2,
+          "phase": "entry",
+          "action": "프로젝트 목록에서 작업할 프로젝트 카드를 선택한다.",
+          "observable_outcome": "선택된 프로젝트 식별자와 이름이 세션에 저장되고 메인 작업 화면으로 이동한다.",
+          "source_area_refs": [
+            "authentication-and-project-entry"
+          ],
+          "workflow_refs": [
+            "WF-component-loginpage-e5ed79c1"
+          ],
+          "edge_refs": [
+            "E-0025"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 3,
+          "phase": "work",
+          "action": "TS 작업 메뉴에서 기존 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "작업 목록과 선택된 작업 상태가 표시된다.",
+          "source_area_refs": [
+            "task-document-upload-and-parsing"
+          ],
+          "workflow_refs": [
+            "WF-component-mainpage-c55225a4",
+            "WF-component-mainpage-cef3c5df"
+          ],
+          "edge_refs": [
+            "E-0030",
+            "E-0035"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 4,
+          "phase": "work",
+          "action": "UTF-8 MD 또는 TXT 파일을 선택하고 업로드 및 파싱 시작을 누른다.",
+          "observable_outcome": "파일명과 크기, 선택 상태가 표시되고 업로드 및 파싱 진행 상태가 시작된다.",
+          "source_area_refs": [
+            "task-document-upload-and-parsing"
+          ],
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5bf664e5"
+          ],
+          "edge_refs": [
+            "E-0062",
+            "E-0060"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 5,
+          "phase": "work",
+          "action": "파싱 진행 상태를 확인하고 완료된 문서에서 다음 단계로 이동한다.",
+          "observable_outcome": "파싱 완료 상태와 다음 단계 이동 가능 상태가 표시된다.",
+          "source_area_refs": [
+            "task-document-upload-and-parsing"
+          ],
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5aba1e3a"
+          ],
+          "edge_refs": [
+            "E-0062",
+            "E-0061"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 6,
+          "phase": "work",
+          "action": "Parsed DB에서 업무, 화면, 필드, 이벤트 탭을 전환하고 검색과 페이지 이동을 수행한다.",
+          "observable_outcome": "페이지 크기 50의 조회 결과와 총 건수, 페이지 정보가 표시된다.",
+          "source_area_refs": [
+            "parsed-data-and-business-flow-validation",
+            "parsed-db-navigation-and-query-controls"
+          ],
+          "workflow_refs": [
+            "WF-component-parseddbpage-6771c0b3"
+          ],
+          "edge_refs": [
+            "E-0038"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 7,
+          "phase": "work",
+          "action": "화면 진단과 업무흐름 목록, 연결 화면, 매핑 검증 결과를 조회하고 업무 매핑 단계로 이동한다.",
+          "observable_outcome": "흐름 누락 화면과 업무흐름 미사용 화면의 건수 또는 이슈 없음이 표시되고 생성 범위를 확인할 수 있다.",
+          "source_area_refs": [
+            "parsed-data-and-business-flow-validation"
+          ],
+          "workflow_refs": [
+            "WF-component-parseddbpage-083f5434"
+          ],
+          "edge_refs": [
+            "E-0043"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 8,
+          "phase": "work",
+          "action": "설정에서 도출 전략, 매트릭스 출력 옵션과 검증 기준을 확인하거나 조정하고 저장한다.",
+          "observable_outcome": "선택한 생성 전략과 출력 옵션, 검증 기준 상태가 표시된다.",
+          "source_area_refs": [
+            "settings-generation-preferences"
+          ],
+          "workflow_refs": [
+            "WF-component-mainpage-0b02b6d1"
+          ],
+          "edge_refs": [
+            "E-0036"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 9,
+          "phase": "business-result",
+          "action": "검증된 Level 2 업무흐름을 선택하고 생성 요청을 제출한 뒤 요청 접수와 진행 상태를 확인한다.",
+          "observable_outcome": "유효한 선택 범위가 REQUESTED 상태로 접수되고 진행률과 업무흐름별 실행 상태가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "workflow_refs": [
+            "WF-component-businesspage-40d5175b",
+            "WF-component-businesspage-664cad1d"
+          ],
+          "edge_refs": [
+            "E-0010",
+            "E-0007"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 10,
+          "phase": "business-result",
+          "action": "생성 완료 후 품질 검증 결과와 저장된 시나리오 및 테스트 케이스의 추적성 매트릭스를 조회한다.",
+          "observable_outcome": "화면, 전이, 필드 커버리지와 구조 및 근거 검증 결과, 행별 추적성 정보가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "workflow_refs": [
+            "WF-component-scenariopage-d3d27c52"
+          ],
+          "edge_refs": [
+            "E-0046"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 11,
+          "phase": "exit",
+          "action": "추적성 매트릭스를 확인하고 CSV 또는 Excel 내보내기를 요청한다.",
+          "observable_outcome": "추적성 매트릭스 파일 다운로드가 시작된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "workflow_refs": [
+            "WF-component-scenariopage-d3efa9f6",
+            "WF-component-scenariopage-ccd6c1bb"
+          ],
+          "edge_refs": [
+            "E-0048",
+            "E-0050"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ],
+      "handoffs": [
+        {
+          "from_position": 1,
+          "to_position": 2,
+          "state": [
+            "인증된 사용자 정보와 세션 상태"
+          ]
+        },
+        {
+          "from_position": 2,
+          "to_position": 3,
+          "state": [
+            "선택된 프로젝트 식별자와 이름"
+          ]
+        },
+        {
+          "from_position": 3,
+          "to_position": 4,
+          "state": [
+            "선택된 TS 작업 상태"
+          ]
+        },
+        {
+          "from_position": 4,
+          "to_position": 5,
+          "state": [
+            "선택된 문서와 업로드 및 파싱 진행 상태"
+          ]
+        },
+        {
+          "from_position": 5,
+          "to_position": 6,
+          "state": [
+            "파싱 완료 문서와 준비된 화면, 필드, 이벤트 데이터"
+          ]
+        },
+        {
+          "from_position": 6,
+          "to_position": 7,
+          "state": [
+            "검색과 페이지 범위가 반영된 Parsed DB 조회 상태"
+          ]
+        },
+        {
+          "from_position": 7,
+          "to_position": 8,
+          "state": [
+            "업무흐름 매핑 진단과 확인된 생성 범위"
+          ]
+        },
+        {
+          "from_position": 8,
+          "to_position": 9,
+          "state": [
+            "저장된 생성 전략, 출력 옵션과 검증 기준"
+          ]
+        },
+        {
+          "from_position": 9,
+          "to_position": 10,
+          "state": [
+            "접수된 생성 요청과 실행 진행 상태"
+          ]
+        },
+        {
+          "from_position": 10,
+          "to_position": 11,
+          "state": [
+            "저장된 시나리오, 테스트 케이스와 품질 검증 결과"
+          ]
+        }
+      ],
+      "business_result": {
+        "description": "선택한 업무흐름에 대해 서버 검증과 구조·근거·커버리지 품질 검증을 거친 저장 시나리오와 테스트 케이스를 추적성 매트릭스로 조회하고 파일로 내보낸다.",
+        "milestone_position": 10,
+        "source_area_refs": [
+          "scenario-generation-and-traceability-results"
+        ]
+      },
+      "exit": {
+        "kind": "process-end",
+        "action": "추적성 매트릭스를 확인하고 CSV 또는 Excel 내보내기를 요청한다.",
+        "observable_outcome": "추적성 매트릭스 파일 다운로드가 시작된다.",
+        "milestone_position": 11
+      },
+      "recovery": null
+    },
+    {
+      "journey_id": "J002",
+      "kind": "recovery",
+      "title": "오류를 확인하고 정상 흐름에 재합류하는 인증부터 추적성 매트릭스 활용까지의 복구 여정",
+      "persona": "인증을 완료하고 프로젝트를 선택한 프로젝트 작업 운영자",
+      "prerequisites": [
+        "아이디와 패스워드를 입력할 수 있다.",
+        "선택할 프로젝트가 프로젝트 목록에 표시된다.",
+        "파싱할 UTF-8 MD 또는 TXT 문서를 준비한다."
+      ],
+      "feasibility": "runtime-unverified",
+      "milestones": [
+        {
+          "position": 1,
+          "phase": "entry",
+          "action": "로그인 화면에서 아이디와 패스워드를 입력하고 로그인을 제출한다.",
+          "observable_outcome": "인증이 성공하면 사용자 정보와 인증 상태가 세션에 저장되고 프로젝트 선택 화면이 표시된다.",
+          "source_area_refs": [
+            "authentication-and-project-entry"
+          ],
+          "workflow_refs": [
+            "WF-component-loginformpage-aef66388",
+            "WF-component-loginformpage-5199dbef",
+            "WF-component-loginformpage-8dc58904"
+          ],
+          "edge_refs": [
+            "E-0023",
+            "E-0024",
+            "E-0022"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 2,
+          "phase": "entry",
+          "action": "프로젝트 목록에서 작업할 프로젝트 카드를 선택한다.",
+          "observable_outcome": "선택된 프로젝트 식별자와 이름이 세션에 저장되고 메인 작업 화면으로 이동한다.",
+          "source_area_refs": [
+            "authentication-and-project-entry"
+          ],
+          "workflow_refs": [
+            "WF-component-loginpage-e5ed79c1"
+          ],
+          "edge_refs": [
+            "E-0025"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 3,
+          "phase": "work",
+          "action": "TS 작업 메뉴에서 기존 작업을 선택하거나 새로 생성한다.",
+          "observable_outcome": "작업 목록과 선택된 작업 상태가 표시된다.",
+          "source_area_refs": [
+            "task-document-upload-and-parsing"
+          ],
+          "workflow_refs": [
+            "WF-component-mainpage-c55225a4",
+            "WF-component-mainpage-cef3c5df"
+          ],
+          "edge_refs": [
+            "E-0030",
+            "E-0035"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 4,
+          "phase": "failure",
+          "action": "UTF-8가 아닌 파일, 파싱 실패 또는 조회 오류와 같은 진행 중 오류를 확인한다.",
+          "observable_outcome": "파일 거부, 파싱 실패 또는 조회 오류가 화면에 표시되고 정상 진행이 중단된다.",
+          "source_area_refs": [
+            "task-document-upload-and-parsing",
+            "parsed-data-and-business-flow-validation",
+            "parsed-db-navigation-and-query-controls"
+          ],
+          "workflow_refs": [
+            "WF-component-uploadpage-5bf664e5"
+          ],
+          "edge_refs": [
+            "E-0059"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 5,
+          "phase": "recovery",
+          "action": "표시된 오류에 따라 올바른 UTF-8 파일을 다시 선택해 재업로드하거나 검색 조건을 바꾸고 새로고침 또는 조회를 다시 요청한다.",
+          "observable_outcome": "재업로드 또는 재조회 요청이 시작되고 파싱 진행 상태나 조회 결과가 다시 표시된다.",
+          "source_area_refs": [
+            "task-document-upload-and-parsing",
+            "parsed-data-and-business-flow-validation",
+            "parsed-db-navigation-and-query-controls"
+          ],
+          "workflow_refs": [
+            "WF-component-uploadpage-06490a15",
+            "WF-component-uploadpage-5bf664e5"
+          ],
+          "edge_refs": [
+            "E-0062",
+            "E-0060"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 6,
+          "phase": "work",
+          "action": "파싱 완료 후 Parsed DB에서 업무, 화면, 필드, 이벤트 탭을 조회하고 업무 매핑 단계로 이동한다.",
+          "observable_outcome": "파싱 데이터와 화면 진단, 업무흐름 매핑 검증 결과가 표시된다.",
+          "source_area_refs": [
+            "task-document-upload-and-parsing",
+            "parsed-data-and-business-flow-validation",
+            "parsed-db-navigation-and-query-controls"
+          ],
+          "workflow_refs": [
+            "WF-component-parseddbpage-6771c0b3",
+            "WF-component-parseddbpage-083f5434"
+          ],
+          "edge_refs": [
+            "E-0038",
+            "E-0043"
+          ],
+          "feasibility": "source-supported"
+        },
+        {
+          "position": 7,
+          "phase": "work",
+          "action": "설정에서 도출 전략, 매트릭스 출력 옵션과 검증 기준을 확인하거나 조정하고 저장한다.",
+          "observable_outcome": "선택한 생성 전략과 출력 옵션, 검증 기준 상태가 표시된다.",
+          "source_area_refs": [
+            "settings-generation-preferences"
+          ],
+          "workflow_refs": [
+            "WF-component-mainpage-0b02b6d1"
+          ],
+          "edge_refs": [
+            "E-0036"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 8,
+          "phase": "work",
+          "action": "검증된 Level 2 업무흐름을 선택하고 생성 요청을 제출한다.",
+          "observable_outcome": "유효한 선택 범위가 요청 접수 상태로 표시되거나 선택 식별자 검증 오류가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "workflow_refs": [
+            "WF-component-businesspage-40d5175b",
+            "WF-component-businesspage-664cad1d"
+          ],
+          "edge_refs": [
+            "E-0010",
+            "E-0007"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 9,
+          "phase": "work",
+          "action": "생성 진행 상태와 에이전트 판단 이력, 품질 검증 결과를 확인한다.",
+          "observable_outcome": "진행률과 완료·진행·실패 수, 누락 화면·전이·필드 및 검증 이슈가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "workflow_refs": [
+            "WF-component-scenariopage-d3d27c52"
+          ],
+          "edge_refs": [
+            "E-0046"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 10,
+          "phase": "business-result",
+          "action": "생성 결과를 재검토한 뒤 저장된 시나리오 및 테스트 케이스의 추적성 매트릭스를 조회한다.",
+          "observable_outcome": "화면, 전이, 필드 커버리지와 구조 및 근거 검증 결과, 행별 추적성 정보가 표시된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "workflow_refs": [
+            "WF-component-scenariopage-0b41140c"
+          ],
+          "edge_refs": [
+            "E-0057"
+          ],
+          "feasibility": "runtime-unverified"
+        },
+        {
+          "position": 11,
+          "phase": "exit",
+          "action": "추적성 매트릭스를 확인하고 CSV 또는 Excel 내보내기를 요청한다.",
+          "observable_outcome": "추적성 매트릭스 파일 다운로드가 시작된다.",
+          "source_area_refs": [
+            "scenario-generation-and-traceability-results"
+          ],
+          "workflow_refs": [
+            "WF-component-scenariopage-d3efa9f6",
+            "WF-component-scenariopage-ccd6c1bb"
+          ],
+          "edge_refs": [
+            "E-0048",
+            "E-0050"
+          ],
+          "feasibility": "runtime-unverified"
+        }
+      ],
+      "handoffs": [
+        {
+          "from_position": 1,
+          "to_position": 2,
+          "state": [
+            "인증된 사용자 정보와 세션 상태"
+          ]
+        },
+        {
+          "from_position": 2,
+          "to_position": 3,
+          "state": [
+            "선택된 프로젝트 식별자와 이름"
+          ]
+        },
+        {
+          "from_position": 3,
+          "to_position": 4,
+          "state": [
+            "선택된 TS 작업 상태"
+          ]
+        },
+        {
+          "from_position": 4,
+          "to_position": 5,
+          "state": [
+            "표시된 실패 상태와 오류 메시지"
+          ]
+        },
+        {
+          "from_position": 5,
+          "to_position": 6,
+          "state": [
+            "복구 후 재업로드 또는 재조회 상태"
+          ]
+        },
+        {
+          "from_position": 6,
+          "to_position": 7,
+          "state": [
+            "업무흐름 매핑 진단과 확인된 생성 범위"
+          ]
+        },
+        {
+          "from_position": 7,
+          "to_position": 8,
+          "state": [
+            "저장된 생성 전략, 출력 옵션과 검증 기준"
+          ]
+        },
+        {
+          "from_position": 8,
+          "to_position": 9,
+          "state": [
+            "접수된 생성 요청 또는 표시된 선택 식별자 오류"
+          ]
+        },
+        {
+          "from_position": 9,
+          "to_position": 10,
+          "state": [
+            "생성 진행 및 판단 이력과 품질 검증 결과"
+          ]
+        },
+        {
+          "from_position": 10,
+          "to_position": 11,
+          "state": [
+            "저장된 시나리오, 테스트 케이스와 품질 검증 결과"
+          ]
+        }
+      ],
+      "business_result": {
+        "description": "선택한 업무흐름에 대해 서버 검증과 구조·근거·커버리지 품질 검증을 거친 저장 시나리오와 테스트 케이스를 추적성 매트릭스로 조회하고 파일로 내보낸다.",
+        "milestone_position": 10,
+        "source_area_refs": [
+          "scenario-generation-and-traceability-results"
+        ]
+      },
+      "exit": {
+        "kind": "process-end",
+        "action": "추적성 매트릭스를 확인하고 CSV 또는 Excel 내보내기를 요청한다.",
+        "observable_outcome": "추적성 매트릭스 파일 다운로드가 시작된다.",
+        "milestone_position": 11
+      },
+      "recovery": {
+        "failure_milestone_position": 4,
+        "recovery_action_position": 5,
+        "rejoin_milestone_position": 6
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-8D514A88-001",
+      "workflow_ref": "WF-component-businesspage-8d514a88",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0001"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Apply the issue-view filter.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-001",
+      "workflow_ref": "WF-component-businesspage-a4a53abb",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {
+        "PRED-exporting-csv": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "CSV export is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0013"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request the mapping-validation CSV.",
+          "expected": "Business page remains shown; download is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-A4A53ABB-002",
+      "workflow_ref": "WF-component-businesspage-a4a53abb",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {
+        "PRED-exporting-csv": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "CSV export is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0012"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt the mapping-validation CSV download.",
+          "expected": "A non-success CSV outcome is recorded on the business page; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-001",
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0015"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Open the preset result view.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EDED949-002",
+      "workflow_ref": "WF-component-businesspage-7eded949",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "kind": "exception",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0014"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt to open the preset result view.",
+          "expected": "A non-success preset outcome is recorded on the business page; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-86C2FF8C-001",
+      "workflow_ref": "WF-component-businesspage-86c2ff8c",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0016"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Navigate back to the parsed database.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-0ADA3322-001",
+      "workflow_ref": "WF-component-businesspage-0ada3322",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0017"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the preset view.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-E76552A4-001",
+      "workflow_ref": "WF-component-businesspage-e76552a4",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0018"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Open the context panel.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-D378820A-001",
+      "workflow_ref": "WF-component-businesspage-d378820a",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0019"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the flow text view.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-7EC9352E-001",
+      "workflow_ref": "WF-component-businesspage-7ec9352e",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0020"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the flow text view.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-86DFFABA-001",
+      "workflow_ref": "WF-component-businesspage-86dffaba",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0002"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Open the category panel.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-6D777BFB-001",
+      "workflow_ref": "WF-component-businesspage-6d777bfb",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0003"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle all context-flow selections.",
+          "expected": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-BD399E7B-001",
+      "workflow_ref": "WF-component-businesspage-bd399e7b",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0004"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle all category-flow selections.",
+          "expected": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-8B2611D2-001",
+      "workflow_ref": "WF-component-businesspage-8b2611d2",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0005"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Close the flow text view.",
+          "expected": "Business page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-001",
+      "workflow_ref": "WF-component-businesspage-664cad1d",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {
+        "PRED-checked-flows": "nonempty",
+        "PRED-scenario-requesting": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 9,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 8,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; generation is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-664CAD1D-002",
+      "workflow_ref": "WF-component-businesspage-664cad1d",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {
+        "PRED-checked-flows": "nonempty",
+        "PRED-scenario-requesting": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 9,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 8,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0006",
+        "E-0007"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Attempt scenario and test-case generation.",
+          "expected": "A non-success generation outcome is recorded; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Retry generation as recovery.",
+          "expected": "Scenario page is shown if recovery succeeds; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-5C765240-001",
+      "workflow_ref": "WF-component-businesspage-5c765240",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0008"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle the detail panel.",
+          "expected": "Business page remains shown and panel state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-8D384820-001",
+      "workflow_ref": "WF-component-businesspage-8d384820",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0009"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle flow selection.",
+          "expected": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-40D5175B-001",
+      "workflow_ref": "WF-component-businesspage-40d5175b",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 9,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 8,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0010"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle flow selection as recovery.",
+          "expected": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-BUSINESSPAGE-547A1466-001",
+      "workflow_ref": "WF-component-businesspage-547a1466",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0011"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Toggle flow selection.",
+          "expected": "Business page remains shown and selection state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-104BDB2F-001",
+      "workflow_ref": "WF-component-loginformpage-104bdb2f",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "exception",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": [],
+      "preconditions": [],
+      "path": [
+        "E-0021"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login without prerequisites.",
+          "expected": "Login form remains shown and login is unsuccessful; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-8DC58904-001",
+      "workflow_ref": "WF-component-loginformpage-8dc58904",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "normal",
+      "variation": {
+        "PRED-user-id-present": "true",
+        "PRED-password-present": "true"
+      },
+      "feasibility": "source-supported",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-AEF66388-001",
+      "workflow_ref": "WF-component-loginformpage-aef66388",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ],
+      "preconditions": [],
+      "path": [
+        "E-0023"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the user ID.",
+          "expected": "Login form remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINFORMPAGE-5199DBEF-001",
+      "workflow_ref": "WF-component-loginformpage-5199dbef",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 1,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 1,
+          "phase": "entry"
+        }
+      ],
+      "preconditions": [],
+      "path": [
+        "E-0024"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter the password.",
+          "expected": "Login form remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-E5ED79C1-001",
+      "workflow_ref": "WF-component-loginpage-e5ed79c1",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 2,
+          "phase": "entry"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 2,
+          "phase": "entry"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-001",
+      "workflow_ref": "WF-component-loginpage-f3dfe66b",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0027"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Refresh the project list.",
+          "expected": "Login page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-F3DFE66B-002",
+      "workflow_ref": "WF-component-loginpage-f3dfe66b",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "exception",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0026"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Attempt to refresh the project list.",
+          "expected": "A non-success refresh outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-LOGINPAGE-24D62594-001",
+      "workflow_ref": "WF-component-loginpage-24d62594",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0028"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Log out.",
+          "expected": "Login form is shown; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-C55225A4-001",
+      "workflow_ref": "WF-component-mainpage-c55225a4",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0030"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Select the task.",
+          "expected": "Main page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-C55225A4-002",
+      "workflow_ref": "WF-component-mainpage-c55225a4",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "exception",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0029"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Attempt to select the task.",
+          "expected": "A non-success task-selection outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-2B4DBE33-001",
+      "workflow_ref": "WF-component-mainpage-2b4dbe33",
+      "classification_ref": "BC-0F15A2CA5711",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0031"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Log out.",
+          "expected": "Login page is shown; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-4E38E24F-001",
+      "workflow_ref": "WF-component-mainpage-4e38e24f",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-275BC2D0-001",
+      "workflow_ref": "WF-component-mainpage-275bc2d0",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0033"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Navigate home.",
+          "expected": "Upload page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-001",
+      "workflow_ref": "WF-component-mainpage-cef3c5df",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0035"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Create a new task.",
+          "expected": "Main page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-CEF3C5DF-002",
+      "workflow_ref": "WF-component-mainpage-cef3c5df",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "exception",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 3,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 3,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0034"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Attempt to create a new task.",
+          "expected": "A non-success task-creation outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-0B02B6D1-001",
+      "workflow_ref": "WF-component-mainpage-0b02b6d1",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0036"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-MAINPAGE-0F4D0FCD-001",
+      "workflow_ref": "WF-component-mainpage-0f4d0fcd",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "source-supported",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0037"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Toggle the task menu.",
+          "expected": "Main page remains shown and menu state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-6771C0B3-001",
+      "workflow_ref": "WF-component-parseddbpage-6771c0b3",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 6,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0038"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Change the parsed-data tab.",
+          "expected": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-69504B45-001",
+      "workflow_ref": "WF-component-parseddbpage-69504b45",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0039"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to the previous database page.",
+          "expected": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-4A38F0DE-001",
+      "workflow_ref": "WF-component-parseddbpage-4a38f0de",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0040"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate back to upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-26D6AFDD-001",
+      "workflow_ref": "WF-component-parseddbpage-26d6afdd",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0041"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Search parsed data.",
+          "expected": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-D00464BF-001",
+      "workflow_ref": "WF-component-parseddbpage-d00464bf",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "kind": "normal",
+      "variation": {
+        "PRED-parsed-page-valid": "true",
+        "PRED-parsed-total-pages-available": "true"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "The parsed-data page is valid.",
+        "Another parsed-data page is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0042"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Navigate to the next database page.",
+          "expected": "Next parsed-data page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-083F5434-001",
+      "workflow_ref": "WF-component-parseddbpage-083f5434",
+      "classification_ref": "BC-98ABFD17068D",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 7,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 6,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping as recovery.",
+          "expected": "Business page is shown if recovery succeeds; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-PARSEDDBPAGE-FBF48CE7-001",
+      "workflow_ref": "WF-component-parseddbpage-fbf48ce7",
+      "classification_ref": "BC-D9F407DE9A7B",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0044"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Enter a parsed-data query.",
+          "expected": "Parsed-database page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-001",
+      "workflow_ref": "WF-component-scenariopage-d3d27c52",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {
+        "PRED-matrix-loading": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 10,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 9,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive.",
+        "The scenario matrix is not loading."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0046"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Refresh the scenario matrix.",
+          "expected": "Scenario page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3D27C52-002",
+      "workflow_ref": "WF-component-scenariopage-d3d27c52",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {
+        "PRED-matrix-loading": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 10,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 9,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive.",
+        "The scenario matrix is not loading."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0045"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Attempt to refresh the scenario matrix.",
+          "expected": "A non-success refresh outcome is recorded on the scenario page; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-001",
+      "workflow_ref": "WF-component-scenariopage-d3efa9f6",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {
+        "PRED-matrix-download-active": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 11,
+          "phase": "exit"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 11,
+          "phase": "exit"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive.",
+        "Scenario-matrix download is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0048"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Request the scenario CSV download.",
+          "expected": "Scenario page remains shown; download is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-D3EFA9F6-002",
+      "workflow_ref": "WF-component-scenariopage-d3efa9f6",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {
+        "PRED-matrix-download-active": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 11,
+          "phase": "exit"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 11,
+          "phase": "exit"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive.",
+        "Scenario-matrix download is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0047"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Attempt the scenario CSV download.",
+          "expected": "A non-success download outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-001",
+      "workflow_ref": "WF-component-scenariopage-ccd6c1bb",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {
+        "PRED-matrix-download-active": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 11,
+          "phase": "exit"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 11,
+          "phase": "exit"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive.",
+        "Scenario-matrix download is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0050"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Request the scenario Excel download.",
+          "expected": "Scenario page remains shown; download is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-CCD6C1BB-002",
+      "workflow_ref": "WF-component-scenariopage-ccd6c1bb",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {
+        "PRED-matrix-download-active": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 11,
+          "phase": "exit"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 11,
+          "phase": "exit"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive.",
+        "Scenario-matrix download is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0049"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Attempt the scenario Excel download.",
+          "expected": "A non-success download outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-155F546E-001",
+      "workflow_ref": "WF-component-scenariopage-155f546e",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0051"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle screen details.",
+          "expected": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-130159BC-001",
+      "workflow_ref": "WF-component-scenariopage-130159bc",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0052"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle action details.",
+          "expected": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-ED2EFD9E-001",
+      "workflow_ref": "WF-component-scenariopage-ed2efd9e",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0053"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle data details.",
+          "expected": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-8D4B7217-001",
+      "workflow_ref": "WF-component-scenariopage-8d4b7217",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0054"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Navigate back to business.",
+          "expected": "Business page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-2C40057C-001",
+      "workflow_ref": "WF-component-scenariopage-2c40057c",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0055"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Toggle all case details.",
+          "expected": "Scenario page remains shown and detail state changes; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-0B41140C-001",
+      "workflow_ref": "WF-component-scenariopage-0b41140c",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J002",
+          "milestone_position": 10,
+          "phase": "business-result"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0057"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Search by scenario or case name.",
+          "expected": "Scenario page remains shown; search is runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SCENARIOPAGE-0B41140C-002",
+      "workflow_ref": "WF-component-scenariopage-0b41140c",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J002",
+          "milestone_position": 10,
+          "phase": "business-result"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "At least one flow is selected.",
+        "Scenario generation is inactive."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060",
+        "E-0043",
+        "E-0007",
+        "E-0056"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Attempt to search by scenario or case name.",
+          "expected": "A non-success search outcome is recorded; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-SETTINGSPAGE-695469FC-001",
+      "workflow_ref": "WF-component-settingspage-695469fc",
+      "classification_ref": "BC-3A6BA1E7B204",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0036",
+        "E-0058"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open settings.",
+          "expected": "Settings page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the generation strategy.",
+          "expected": "Settings page remains shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-001",
+      "workflow_ref": "WF-component-uploadpage-5bf664e5",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {
+        "PRED-upload-file-present": "true",
+        "PRED-upload-submitting": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "failure",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4,
+          "phase": "failure"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "recovery"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0060"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Start upload and parsing.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-5BF664E5-002",
+      "workflow_ref": "WF-component-uploadpage-5bf664e5",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "exception",
+      "variation": {
+        "PRED-upload-file-present": "true",
+        "PRED-upload-submitting": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "failure",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 4,
+          "phase": "failure"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "recovery"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "An upload file is available.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0059",
+        "E-0060"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Attempt upload and parsing.",
+          "expected": "Upload page remains shown and the failure is recorded; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Retry upload and parsing as recovery.",
+          "expected": "Parsed-database page is shown if recovery succeeds; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-5ABA1E3A-001",
+      "workflow_ref": "WF-component-uploadpage-5aba1e3a",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {
+        "PRED-upload-complete": "true",
+        "PRED-upload-submitting": "false"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available.",
+        "The upload is complete.",
+        "No upload is being submitted."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0061"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Continue to parsed database.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-COMPONENT-UPLOADPAGE-06490A15-001",
+      "workflow_ref": "WF-component-uploadpage-06490a15",
+      "classification_ref": "BC-373C48884CFD",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 4,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J001",
+          "milestone_position": 5,
+          "phase": "work"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 5,
+          "phase": "recovery"
+        }
+      ],
+      "preconditions": [
+        "A user ID is available.",
+        "A password is available."
+      ],
+      "path": [
+        "E-0022",
+        "E-0025",
+        "E-0032",
+        "E-0062"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Select the project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select the supplied parsed document.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-001",
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-d2fcb9f4",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {
+        "PRED-matrix-page-valid": "true",
+        "PRED-matrix-total-pages-available": "true"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "The scenario-matrix page is valid.",
+        "Another matrix page is available."
+      ],
+      "path": [
+        "E-0064"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Go to the next scenario page.",
+          "expected": "Scenario page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-D2FCB9F4-002",
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-d2fcb9f4",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {
+        "PRED-matrix-page-valid": "true",
+        "PRED-matrix-total-pages-available": "true"
+      },
+      "feasibility": "source-supported",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "The scenario-matrix page is valid.",
+        "Another matrix page is available."
+      ],
+      "path": [
+        "E-0063"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Attempt to go to the next scenario page.",
+          "expected": "A non-success page-change outcome is recorded; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-001",
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {
+        "PRED-matrix-page-valid": "true"
+      },
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "The scenario-matrix page is valid."
+      ],
+      "path": [
+        "E-0066"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Go to the previous scenario page.",
+          "expected": "Scenario page is shown; runtime unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-FRONTEND-SRC-FEATURES-MAIN-PAGES-MAIN-PAGE-AD8C16C5-002",
+      "workflow_ref": "WF-frontend-src-features-main-pages-main-page-ad8c16c5",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {
+        "PRED-matrix-page-valid": "true"
+      },
+      "feasibility": "source-supported",
+      "roles": [
+        "exception"
+      ],
+      "journey_milestones": [],
+      "preconditions": [
+        "The scenario-matrix page is valid."
+      ],
+      "path": [
+        "E-0065"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Attempt to go to the previous scenario page.",
+          "expected": "A non-success page-change outcome is recorded; source-supported, not runtime execution."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-JOURNEY-J001-001",
+      "workflow_ref": "WF-component-scenariopage-d3d27c52",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "normal",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "normal",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J001",
+          "milestone_position": 10,
+          "phase": "business-result"
+        },
+        {
+          "journey_ref": "J002",
+          "milestone_position": 9,
+          "phase": "work"
+        }
+      ],
+      "preconditions": [
+        "Scenario generation is inactive.",
+        "The scenario matrix is not loading.",
+        "Matrix download is inactive."
+      ],
+      "path": [
+        "E-0023",
+        "E-0024",
+        "E-0022",
+        "E-0025",
+        "E-0030",
+        "E-0035",
+        "E-0032",
+        "E-0062",
+        "E-0038",
+        "E-0043",
+        "E-0010",
+        "E-0007",
+        "E-0046",
+        "E-0048",
+        "E-0050"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter user ID.",
+          "expected": "Login form is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Enter password.",
+          "expected": "Login form is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Select task.",
+          "expected": "Main page remains shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Create a new task.",
+          "expected": "Main page remains shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 8,
+          "action": "Select the supplied parsed document.",
+          "expected": "Parsed-database page is shown; runtime unverified."
+        },
+        {
+          "n": 9,
+          "action": "Change the parsed-data tab.",
+          "expected": "Parsed-database page remains shown; runtime unverified."
+        },
+        {
+          "n": 10,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 11,
+          "action": "Toggle flow selection.",
+          "expected": "Business page remains shown; runtime unverified."
+        },
+        {
+          "n": 12,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 13,
+          "action": "Refresh scenario matrix.",
+          "expected": "Scenario page remains shown; runtime unverified."
+        },
+        {
+          "n": 14,
+          "action": "Request scenario CSV.",
+          "expected": "Scenario page remains shown; download runtime-unverified."
+        },
+        {
+          "n": 15,
+          "action": "Request scenario Excel.",
+          "expected": "Scenario page remains shown; download runtime-unverified."
+        }
+      ]
+    },
+    {
+      "scenario_id": "SCN-JOURNEY-J002-001",
+      "workflow_ref": "WF-component-scenariopage-0b41140c",
+      "classification_ref": "BC-1C61B3D1728A",
+      "kind": "exception",
+      "variation": {},
+      "feasibility": "runtime-unverified",
+      "roles": [
+        "exception",
+        "recovery"
+      ],
+      "journey_milestones": [
+        {
+          "journey_ref": "J002",
+          "milestone_position": 10,
+          "phase": "business-result"
+        }
+      ],
+      "preconditions": [
+        "An upload file is available.",
+        "No upload is being submitted.",
+        "Scenario generation is inactive.",
+        "The scenario matrix is not loading.",
+        "Matrix download is inactive."
+      ],
+      "path": [
+        "E-0023",
+        "E-0024",
+        "E-0022",
+        "E-0025",
+        "E-0030",
+        "E-0035",
+        "E-0032",
+        "E-0059",
+        "E-0062",
+        "E-0038",
+        "E-0043",
+        "E-0010",
+        "E-0007",
+        "E-0046",
+        "E-0057",
+        "E-0048",
+        "E-0050"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "action": "Enter user ID.",
+          "expected": "Login form is shown; runtime unverified."
+        },
+        {
+          "n": 2,
+          "action": "Enter password.",
+          "expected": "Login form is shown; runtime unverified."
+        },
+        {
+          "n": 3,
+          "action": "Submit login.",
+          "expected": "Login page is shown; runtime unverified."
+        },
+        {
+          "n": 4,
+          "action": "Select project.",
+          "expected": "Main page is shown; runtime unverified."
+        },
+        {
+          "n": 5,
+          "action": "Select task.",
+          "expected": "Main page remains shown; runtime unverified."
+        },
+        {
+          "n": 6,
+          "action": "Create a new task.",
+          "expected": "Main page remains shown; runtime unverified."
+        },
+        {
+          "n": 7,
+          "action": "Open test-scenario upload.",
+          "expected": "Upload page is shown; runtime unverified."
+        },
+        {
+          "n": 8,
+          "action": "Attempt upload and parsing.",
+          "expected": "Upload failure is recorded and upload page remains shown; runtime unverified."
+        },
+        {
+          "n": 9,
+          "action": "Select the supplied parsed document as recovery.",
+          "expected": "Parsed-database page is shown if recovery succeeds; runtime unverified."
+        },
+        {
+          "n": 10,
+          "action": "Change the parsed-data tab.",
+          "expected": "Parsed-database page remains shown; runtime unverified."
+        },
+        {
+          "n": 11,
+          "action": "Open business mapping.",
+          "expected": "Business page is shown; runtime unverified."
+        },
+        {
+          "n": 12,
+          "action": "Toggle flow selection.",
+          "expected": "Business page remains shown; runtime unverified."
+        },
+        {
+          "n": 13,
+          "action": "Request scenario and test-case generation.",
+          "expected": "Scenario page is shown; runtime unverified."
+        },
+        {
+          "n": 14,
+          "action": "Refresh scenario matrix.",
+          "expected": "Scenario page remains shown; runtime unverified."
+        },
+        {
+          "n": 15,
+          "action": "Search scenarios or cases.",
+          "expected": "Scenario page remains shown; search runtime-unverified."
+        },
+        {
+          "n": 16,
+          "action": "Request scenario CSV.",
+          "expected": "Scenario page remains shown; download runtime-unverified."
+        },
+        {
+          "n": 17,
+          "action": "Request scenario Excel.",
+          "expected": "Scenario page remains shown; download runtime-unverified."
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "description": "인증 성공 이후 프로젝트와 작업에 적용되는 실제 권한 범위가 분류되지 않았다.",
+      "reason": "인증 API와 권한 오류의 서버 의미가 closure에서 확인되지 않았다.",
+      "source_area_refs": [
+        "authentication-and-project-entry"
+      ],
+      "journey_thread_refs": [
+        "provisional-auth-to-generated-matrix"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e",
+        "SRC-backend-app-core-auth-7c627b43"
+      ]
+    },
+    {
+      "description": "생성 결과의 부분 성공과 실패를 구분하는 분류 기준이 확정되지 않았다.",
+      "reason": "생성 그래프의 전체 실행 계약과 최종 판정 조건이 closure에서 확인되지 않았다.",
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "journey_thread_refs": [
+        "provisional-auth-to-generated-matrix"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-agents-scenario-graph-0a1447c7",
+        "SRC-backend-app-agents-scenario-validator-d37030b1",
+        "SRC-backend-app-agents-scenario-case-segmenter-545754ef"
+      ]
+    },
+    {
+      "description": "인증 성공 이후 프로젝트와 작업에 적용되는 실제 권한 범위는 확정되지 않았다.",
+      "reason": "인증 API와 권한 오류의 서버 계약이 제공된 closure에서 확인되지 않았다.",
+      "source_thread_refs": [
+        "provisional-auth-to-generated-matrix"
+      ],
+      "source_area_refs": [
+        "authentication-and-project-entry"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-api-v1-auth-9d56dc7e",
+        "SRC-backend-app-core-auth-7c627b43"
+      ]
+    },
+    {
+      "description": "생성 결과의 부분 성공과 실패를 구분하는 최종 판정 기준은 확정되지 않았다.",
+      "reason": "생성 그래프의 전체 실행 계약과 최종 분류 조건이 제공된 closure에서 확인되지 않았다.",
+      "source_thread_refs": [
+        "provisional-auth-to-generated-matrix"
+      ],
+      "source_area_refs": [
+        "scenario-generation-and-traceability-results"
+      ],
+      "source_refs_to_revisit": [
+        "SRC-backend-app-agents-scenario-graph-0a1447c7",
+        "SRC-backend-app-agents-scenario-validator-d37030b1",
+        "SRC-backend-app-agents-scenario-case-segmenter-545754ef"
+      ]
+    }
+  ]
+}

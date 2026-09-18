@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "validation_scope": "local-probe-contract-only",
+  "product_stage_acceptance": "not-attempted",
+  "issues": [],
+  "resolved_gap_ids": [
+    "GAP-SOURCE-0002",
+    "GAP-SOURCE-0003",
+    "GAP-INVENTORY-0001",
+    "GAP-INVENTORY-0002"
+  ],
+  "unresolved_gap_ids": [
+    "GAP-SOURCE-0001",
+    "GAP-SOURCE-0004"
+  ],
+  "cited_evidence_count": 8,
+  "correction_artifact_hash": "sha256:5b5a48425de05f657e7d952b887ac080079609f2570058e999fd7966f6a0b386",
+  "artifact_hash": "sha256:c718d1d126433c87cf23ec0c14282e3f224e3484c42703f02cb7a6f6f6f4c84a",
+  "source_tool_usage": {
+    "artifact_reads": [
+      "01-source-survey",
+      "orchestrator-gaps",
+      "source-inventory"
+    ],
+    "source_refs_read": [
+      "SRC-backend-app-api-v1-auth-9d56dc7e",
+      "SRC-backend-app-core-auth-7c627b43",
+      "SRC-backend-app-services-task-service-1d73591d",
+      "SRC-frontend-src-features-parsed-db-pages-parsed-db-page-643ca921",
+      "SRC-frontend-src-features-parsed-db-parsed-db-api-8aa4750b",
+      "SRC-backend-app-services-workflow-service-3f39109c",
+      "SRC-frontend-src-features-tasks-tasks-api-1dcb2f20",
+      "SRC-backend-app-agents-scenario-case-segmenter-545754ef",
+      "SRC-backend-app-agents-scenario-graph-0a1447c7",
+      "SRC-backend-app-agents-scenario-validator-d37030b1",
+      "SRC-frontend-src-features-settings-pages-settings-page-26fcb4a1"
+    ],
+    "closure_calls": 5,
+    "cumulative_granted_bytes": 101576,
+    "artifact_write_attempts": 1,
+    "fatal_error": null,
+    "max_closure_calls": 8,
+    "max_granted_bytes": 400000
+  }
+}
